@@ -1,0 +1,198 @@
+"use client";
+
+import React, { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Menu, X, ArrowRight } from "lucide-react";
+import { Container } from "@/components/ui/Container";
+import { navItems, siteConfig } from "@/data/siteData";
+import { cn } from "@/lib/utils";
+
+export const Navbar: React.FC = () => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const drawerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Close mobile menu on route change
+  useEffect(() => {
+    setMobileMenuOpen(false);
+  }, [pathname]);
+
+  // Handle ESC key to dismiss menu
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [mobileMenuOpen]);
+
+  // Prevent background scrolling when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [mobileMenuOpen]);
+
+  return (
+    <header
+      className={cn(
+        "sticky top-0 z-50 w-full transition-all duration-200 bg-[#F5F6F2]/95 backdrop-blur-md",
+        scrolled
+          ? "border-b border-[#14213D]/10 shadow-[0_2px_12px_-2px_rgba(20,33,61,0.06)] py-3 sm:py-3.5"
+          : "border-b border-[#14213D]/8 py-3.5 sm:py-4 lg:py-5"
+      )}
+    >
+      <Container size="default">
+        <nav className="flex items-center justify-between" aria-label="Main Navigation">
+          {/* Clickable Logo - Sole Home Trigger */}
+          <Link
+            href="/"
+            className="group flex items-center gap-0.5 text-2xl font-bold tracking-tight text-[#14213D] transition-opacity duration-200 hover:opacity-85 cursor-pointer min-h-[44px] min-w-[44px]"
+            aria-label="KreaitX — Home"
+          >
+            <span>Kreait</span>
+            <span className="text-[#B7B98A] font-black transition-transform duration-200 group-hover:translate-x-0.5">
+              X
+            </span>
+          </Link>
+
+          {/* Desktop Navigation Links */}
+          <div className="hidden lg:flex items-center gap-1 xl:gap-2">
+            {navItems.map((item) => {
+              const isActive = pathname === item.href;
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={cn(
+                    "relative px-4 py-2 text-[14px] font-medium rounded-full transition-all duration-200 min-h-[40px] flex items-center",
+                    isActive
+                      ? "text-[#14213D] font-semibold bg-[#14213D]/5"
+                      : "text-[#14213D]/75 hover:text-[#14213D] hover:bg-[#14213D]/5"
+                  )}
+                  aria-current={isActive ? "page" : undefined}
+                >
+                  <span>{item.label}</span>
+                  {isActive && (
+                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-[#B7B98A]" />
+                  )}
+                </Link>
+              );
+            })}
+          </div>
+
+          {/* Desktop Action CTA */}
+          <div className="hidden lg:flex items-center gap-3">
+            <Link
+              href="/contact"
+              className="group inline-flex items-center justify-center text-[13px] font-semibold text-[#F5F6F2] bg-[#14213D] hover:bg-[#0E172B] px-5 py-2.5 h-11 rounded-full transition-all duration-200 hover:-translate-y-0.5 shadow-sm active:scale-[0.98]"
+            >
+              <span>Let&apos;s Talk</span>
+              <ArrowRight className="ml-1.5 h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" />
+            </Link>
+          </div>
+
+          {/* Mobile Menu Trigger & Fast CTA */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <Link
+              href="/contact"
+              className="inline-flex sm:hidden text-xs font-semibold text-[#F5F6F2] bg-[#14213D] px-3.5 py-2 rounded-full min-h-[44px] items-center justify-center"
+            >
+              Talk
+            </Link>
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="inline-flex items-center justify-center p-2.5 min-h-[44px] min-w-[44px] rounded-xl text-[#14213D] hover:bg-[#14213D]/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B7B98A]"
+              aria-expanded={mobileMenuOpen}
+              aria-controls="mobile-menu-drawer"
+              aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            >
+              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
+        </nav>
+      </Container>
+
+      {/* Mobile Navigation Drawer */}
+      {mobileMenuOpen && (
+        <div
+          id="mobile-menu-drawer"
+          ref={drawerRef}
+          className="fixed inset-x-0 top-[60px] sm:top-[65px] bottom-0 z-40 flex flex-col bg-[#F5F6F2] px-6 py-6 pb-[max(2rem,env(safe-area-inset-bottom,0px))] overflow-y-auto lg:hidden border-t border-[#14213D]/10 animate-in fade-in duration-200"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Mobile Navigation Menu"
+        >
+          <div className="flex flex-col space-y-1.5">
+            <span className="text-[11px] font-semibold uppercase tracking-widest text-[#14213D]/60 px-3 pt-2">
+              Menu Navigation
+            </span>
+            {navItems.map((item) => {
+              const isActive = pathname === item.href;
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={cn(
+                    "flex items-center justify-between px-4 py-3.5 min-h-[48px] text-base rounded-xl transition-colors active:bg-[#14213D]/10",
+                    isActive
+                      ? "bg-[#14213D] text-[#F5F6F2] font-semibold"
+                      : "text-[#14213D] hover:bg-[#14213D]/5 font-medium"
+                  )}
+                >
+                  <div className="flex items-center gap-2.5">
+                    {isActive && <span className="w-2 h-2 rounded-full bg-[#B7B98A]" />}
+                    <span>{item.label}</span>
+                  </div>
+                  <ArrowRight
+                    className={cn(
+                      "h-4 w-4",
+                      isActive ? "text-[#B7B98A]" : "text-[#14213D]/40"
+                    )}
+                  />
+                </Link>
+              );
+            })}
+          </div>
+
+          <div className="mt-6 pt-6 border-t border-[#14213D]/10 flex flex-col gap-4">
+            <Link
+              href="/contact"
+              className="group inline-flex items-center justify-center text-sm font-semibold text-[#F5F6F2] bg-[#14213D] hover:bg-[#0E172B] px-6 py-3.5 min-h-[48px] rounded-full transition-all duration-200"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <span>Start a Project</span>
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
+            </Link>
+
+            <div className="mt-3 text-xs text-[#14213D]/60 space-y-1">
+              <p className="font-semibold text-[#14213D]">KreaitX Creative Technology</p>
+              <p>{siteConfig.location.formatted}</p>
+              <p className="text-[#14213D] font-medium">{siteConfig.contact.email}</p>
+            </div>
+          </div>
+        </div>
+      )}
+    </header>
+  );
+};
+
