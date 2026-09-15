@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { BrandingSection } from "@/components/sections/BrandingSection";
 import { DigitalMarketingSection } from "@/components/sections/DigitalMarketingSection";
+import { ConnectedCapabilitiesSection } from "@/components/sections/ConnectedCapabilitiesSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { servicesData } from "@/data/siteData";
 
@@ -61,7 +62,7 @@ export default function SolutionsPage() {
                   Start a Project
                 </Button>
                 <a
-                  href="#branding"
+                  href="#connected-capabilities"
                   className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-full text-xs sm:text-sm font-medium text-[#F5F6F2] bg-white/10 hover:bg-white/20 border border-[#F5F6F2]/20 backdrop-blur-md transition-all duration-200 w-full sm:w-auto"
                 >
                   Explore All 7 Services ↓
@@ -72,25 +73,8 @@ export default function SolutionsPage() {
         </Container>
       </section>
 
-      {/* Quick Navigation Anchor Bar */}
-      <section className="bg-white border-b border-[#14213D]/10 py-4 sticky top-[65px] z-30 hidden md:block shadow-sm">
-        <Container size="default">
-          <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
-            <span className="text-xs font-semibold uppercase tracking-wider text-[#14213D]/50 mr-2 shrink-0">
-              Jump to:
-            </span>
-            {servicesData.map((s) => (
-              <a
-                key={s.id}
-                href={`#${s.id}`}
-                className="px-3 py-1.5 rounded-full text-xs font-medium text-[#14213D] bg-[#F5F6F2] hover:bg-[#14213D] hover:text-[#F5F6F2] transition-all shrink-0 border border-[#14213D]/10"
-              >
-                {s.number} {s.title}
-              </a>
-            ))}
-          </div>
-        </Container>
-      </section>
+      {/* SECTION: CONNECTED CAPABILITIES (Immediately after Hero) */}
+      <ConnectedCapabilitiesSection />
 
       {/* SECTION 01: BRANDING */}
       <BrandingSection />
