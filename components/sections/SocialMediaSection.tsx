@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, FileEdit, Users, MessageSquare, BarChart2 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
@@ -43,15 +42,15 @@ export const SocialMediaSection: React.FC = () => {
     >
       <Container size="default" className="relative z-10 w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
         
-        {/* Main Editorial Card Container with Dove White (#F6F7F2) Canvas */}
-        <div className="relative rounded-[28px] sm:rounded-[32px] lg:rounded-[36px] bg-[#F6F7F2] border border-[#14213D]/08 p-6 sm:p-8 lg:p-10 xl:p-12 shadow-[0_12px_40px_-12px_rgba(20,33,61,0.05)]">
+        {/* Main Editorial Card Container with Plain Dove White (#F6F7F2) Canvas */}
+        <div className="relative rounded-[28px] sm:rounded-[32px] lg:rounded-[36px] bg-[#F6F7F2] border border-[#14213D]/08 p-6 sm:p-10 lg:p-12 xl:p-14 shadow-[0_12px_40px_-12px_rgba(20,33,61,0.05)]">
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center min-h-[520px]">
             
             {/* ---------------------------------------------------------- */}
-            {/* LEFT: NARRATIVE & PRIMARY CTA (Cols 1-4)                   */}
+            {/* LEFT: NARRATIVE & PRIMARY CTA (Cols 1-6)                   */}
             {/* ---------------------------------------------------------- */}
-            <div className="lg:col-span-4 flex flex-col justify-between h-full space-y-6 sm:space-y-7">
+            <div className="lg:col-span-6 flex flex-col justify-between h-full space-y-6 sm:space-y-8 max-w-[540px]">
               
               <div className="space-y-4 sm:space-y-5">
                 {/* Eyebrow: 03 — SOCIAL MEDIA MANAGEMENT */}
@@ -71,7 +70,7 @@ export const SocialMediaSection: React.FC = () => {
                 <Reveal delay={0.12} yOffset={16}>
                   <h2
                     id="social-media-heading"
-                    className="text-[clamp(32px,3.6vw,48px)] font-normal text-[#14213D] tracking-[-0.035em] leading-[1.08]"
+                    className="text-[clamp(36px,4.5vw,60px)] font-normal text-[#14213D] tracking-[-0.035em] leading-[1.06]"
                   >
                     Social media <br />
                     with{" "}
@@ -83,7 +82,7 @@ export const SocialMediaSection: React.FC = () => {
 
                 {/* Supporting Copy */}
                 <Reveal delay={0.18} yOffset={14}>
-                  <p className="text-sm sm:text-base text-[#14213D]/80 leading-[1.65] font-normal max-w-[380px]">
+                  <p className="text-base sm:text-[17px] text-[#14213D]/80 leading-[1.68] font-normal max-w-[460px]">
                     Consistent, creative content that builds real connections.
                   </p>
                 </Reveal>
@@ -106,7 +105,7 @@ export const SocialMediaSection: React.FC = () => {
 
               {/* Bottom Micro-Copy */}
               <Reveal delay={0.3} yOffset={10}>
-                <div className="pt-5 sm:pt-6 border-t border-[#14213D]/10 flex items-center gap-2.5">
+                <div className="pt-6 sm:pt-8 border-t border-[#14213D]/10 flex items-center gap-2.5">
                   <span className="w-3.5 h-[1.5px] bg-[#B2AD7F]" aria-hidden="true" />
                   <div className="text-[10px] font-mono tracking-[0.16em] text-[#14213D]/50 uppercase">
                     <span>REAL CONVERSATIONS</span>
@@ -119,34 +118,14 @@ export const SocialMediaSection: React.FC = () => {
             </div>
 
             {/* ---------------------------------------------------------- */}
-            {/* CENTER: SOCIAL MEDIA VISUAL ASSET (Cols 5-8)               */}
+            {/* RIGHT: DEEP NAVY CAPABILITIES PANEL (Cols 7-12)            */}
             {/* ---------------------------------------------------------- */}
-            <div className="lg:col-span-4 w-full">
-              <Reveal delay={0.15} yOffset={14}>
-                <div className="relative w-full aspect-[4/3] lg:aspect-[4/3.6] xl:aspect-[4/3.4] rounded-[22px] sm:rounded-[26px] overflow-hidden border border-[#14213D]/10 shadow-[0_8px_30px_-8px_rgba(20,33,61,0.12)] group">
-                  <Image
-                    src="/images/social-media-asset.jpg"
-                    alt="KreaitX Social Media Management and Mobile Engagement Showcase"
-                    fill
-                    priority
-                    sizes="(max-width: 1024px) 100vw, 440px"
-                    className="object-cover object-center select-none transition-transform duration-700 ease-out group-hover:scale-105"
-                  />
-                  {/* Subtle ambient light vignette */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#14213D]/20 via-transparent to-transparent pointer-events-none" />
-                </div>
-              </Reveal>
-            </div>
-
-            {/* ---------------------------------------------------------- */}
-            {/* RIGHT: DEEP NAVY CAPABILITIES PANEL (Cols 9-12)            */}
-            {/* ---------------------------------------------------------- */}
-            <div className="lg:col-span-4 w-full">
+            <div className="lg:col-span-6 w-full max-w-[580px] lg:ml-auto">
               <Reveal delay={0.22} yOffset={18}>
-                <div className="relative rounded-[22px] sm:rounded-[26px] bg-[#14213D] text-[#F7F8FC] p-6 sm:p-7 lg:p-8 border border-white/10 shadow-2xl overflow-hidden">
+                <div className="relative rounded-[22px] sm:rounded-[26px] bg-[#14213D] text-[#F7F8FC] p-6 sm:p-8 lg:p-9 border border-white/10 shadow-2xl overflow-hidden">
                   
                   {/* Ambient Light Accent */}
-                  <div className="absolute top-0 right-0 w-40 h-40 bg-[#B2AD7F]/10 rounded-full blur-3xl pointer-events-none" />
+                  <div className="absolute top-0 right-0 w-48 h-48 bg-[#B2AD7F]/10 rounded-full blur-3xl pointer-events-none" />
 
                   {/* 4 Vertical Capabilities */}
                   <div className="divide-y divide-white/10 relative z-10">
@@ -156,7 +135,7 @@ export const SocialMediaSection: React.FC = () => {
                         <Link
                           key={item.title}
                           href={item.href}
-                          className={`group flex items-center justify-between py-3.5 sm:py-4 transition-all duration-200 ${
+                          className={`group flex items-center justify-between py-4 sm:py-4.5 transition-all duration-200 ${
                             index === 0 ? "pt-0" : ""
                           } ${index === socialMediaCapabilities.length - 1 ? "pb-0" : ""}`}
                         >
@@ -187,8 +166,8 @@ export const SocialMediaSection: React.FC = () => {
                   </div>
 
                   {/* Bottom Micro Detail */}
-                  <div className="mt-5 sm:mt-6 pt-3.5 border-t border-white/10 flex items-center gap-2 relative z-10">
-                    <span className="w-4 h-[1px] bg-[#B2AD7F]" aria-hidden="true" />
+                  <div className="mt-6 sm:mt-7 pt-4 border-t border-white/10 flex items-center gap-2 relative z-10">
+                    <span className="w-5 h-[1px] bg-[#B2AD7F]" aria-hidden="true" />
                     <span className="text-[10px] font-mono tracking-[0.2em] text-[#B2AD7F] uppercase">
                       ENGAGE · GROW · BUILD COMMUNITY
                     </span>
