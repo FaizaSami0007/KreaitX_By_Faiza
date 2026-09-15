@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowDown } from "lucide-react";
+import { ArrowUpRight, ArrowDown } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 
@@ -18,15 +17,13 @@ const capabilitiesList = [
 ];
 
 export const ConnectedCapabilitiesSection: React.FC = () => {
-  const [hoveredId, setHoveredId] = useState<string | null>(null);
-
   return (
     <section
       id="connected-capabilities"
       aria-labelledby="connected-capabilities-heading"
-      className="relative bg-[#F7F8FC] text-[#14213D] py-24 sm:py-32 lg:py-40 border-b border-[#14213D]/10 overflow-hidden flex items-center justify-center min-h-[720px] lg:min-h-[820px]"
+      className="relative bg-[#F7F8FC] text-[#14213D] py-20 sm:py-28 lg:py-36 border-b border-[#14213D]/10 overflow-hidden flex items-center justify-center min-h-[680px] lg:min-h-[780px]"
     >
-      {/* Background Architectural Artwork Layer */}
+      {/* Background Architectural Artwork Layer - 100% Sharp & Unblurred */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none overflow-hidden">
         <Image
           src="/images/connected-capabilities-bg.png"
@@ -34,133 +31,94 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-right md:object-center select-none opacity-90"
+          className="object-cover object-center select-none"
         />
-        {/* Soft atmospheric gradient to ensure crisp, readable centered typography on mobile/tablet */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#F7F8FC]/95 via-[#F7F8FC]/70 to-[#F7F8FC]/30 lg:from-[#F7F8FC]/85 lg:via-[#F7F8FC]/40 lg:to-transparent" />
       </div>
 
-      <Container size="default" className="relative z-10 w-full max-w-[1280px]">
-        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+      <Container size="default" className="relative z-10 w-full max-w-[1320px]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
-          {/* Eyebrow */}
-          <Reveal delay={0.05} yOffset={10}>
-            <div className="flex flex-col items-center justify-center mb-6 sm:mb-8">
-              <span className="text-[11px] sm:text-xs font-mono font-semibold uppercase tracking-[0.2em] text-[#14213D]/70">
-                OUR CAPABILITIES
-              </span>
-              <span className="w-10 h-[1.5px] bg-[#B2AD7F] mt-3" aria-hidden="true" />
-            </div>
-          </Reveal>
+          {/* Left Column: Eyebrow, Headline, Paragraph, Service Index (Cols 1-7) */}
+          <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6 sm:space-y-7 max-w-[640px]">
+            
+            {/* Eyebrow matching reference screenshot with gold bar */}
+            <Reveal delay={0.05} yOffset={12}>
+              <div className="flex items-center gap-3">
+                <span className="w-7 h-[1.5px] bg-[#B2AD7F]" aria-hidden="true" />
+                <span className="text-[11px] sm:text-xs font-mono font-semibold uppercase tracking-[0.22em] text-[#B2AD7F]">
+                  CONNECTED CAPABILITIES
+                </span>
+              </div>
+            </Reveal>
 
-          {/* Main Statement Headline */}
-          <Reveal delay={0.12} yOffset={18}>
-            <h2
-              id="connected-capabilities-heading"
-              className="text-[clamp(38px,5.8vw,80px)] font-normal text-[#14213D] tracking-[-0.035em] leading-[1.02]"
-            >
-              Everything we build <br />
-              <span className="font-serif-italic font-normal text-[#B2AD7F]">
-                is connected.
-              </span>
-            </h2>
-          </Reveal>
+            {/* Main Statement Headline matching typography hierarchy */}
+            <Reveal delay={0.12} yOffset={18}>
+              <h2
+                id="connected-capabilities-heading"
+                className="text-[clamp(34px,4.5vw,62px)] font-normal text-[#14213D] tracking-[-0.035em] leading-[1.06]"
+              >
+                Everything we build <br />
+                <span className="font-serif-italic font-normal text-[#B2AD7F]">
+                  is connected.
+                </span>
+              </h2>
+            </Reveal>
 
-          {/* Supporting Idea Copy */}
-          <Reveal delay={0.18} yOffset={14}>
-            <p className="mt-6 sm:mt-8 text-base sm:text-lg lg:text-[19px] text-[#14213D]/75 leading-[1.68] font-normal max-w-[620px] mx-auto">
-              Strategy, creativity and technology working together to create stronger outcomes for your business.
-            </p>
-          </Reveal>
+            {/* Supporting Idea Copy */}
+            <Reveal delay={0.18} yOffset={14}>
+              <p className="text-base sm:text-lg text-[#14213D]/80 leading-[1.7] font-normal max-w-[540px]">
+                Strategy, creativity and technology working together to create stronger outcomes for your business — unifying brand narrative, cinematic production, and high-performance software under one roof.
+              </p>
+            </Reveal>
 
-          {/* ============================================================ */}
-          {/* SERVICE NAVIGATION INDEX                                     */}
-          {/* ============================================================ */}
-          <Reveal delay={0.26} yOffset={16} className="w-full mt-14 sm:mt-18 lg:mt-20">
-            {/* Desktop & Tablet: Sophisticated Flowing Index */}
-            <div className="hidden md:flex flex-wrap items-center justify-center gap-x-8 lg:gap-x-10 gap-y-6 max-w-4xl mx-auto">
-              {capabilitiesList.map((service) => {
-                const isHovered = hoveredId === service.id;
-
-                return (
-                  <a
-                    key={service.id}
-                    href={service.href}
-                    onMouseEnter={() => setHoveredId(service.id)}
-                    onMouseLeave={() => setHoveredId(null)}
-                    className="group inline-flex flex-col items-center py-2 transition-all duration-300 hover:-translate-y-1 cursor-pointer"
-                  >
-                    <div className="flex items-center gap-2">
-                      <span className="text-xs font-mono text-[#B2AD7F] opacity-70 group-hover:opacity-100">
+            {/* Interactive 7-Services Index Pills */}
+            <Reveal delay={0.24} yOffset={14}>
+              <div className="pt-1">
+                <span className="text-[10px] font-mono uppercase tracking-[0.18em] text-[#14213D]/50 block mb-3">
+                  EXPLORE ALL 7 DISCIPLINES
+                </span>
+                <div className="flex flex-wrap gap-2 sm:gap-2.5 max-w-[580px]">
+                  {capabilitiesList.map((service) => (
+                    <a
+                      key={service.id}
+                      href={service.href}
+                      className="group inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium text-[#14213D] bg-white/90 hover:bg-[#14213D] hover:text-white border border-[#14213D]/12 transition-all duration-200 shadow-2xs"
+                    >
+                      <span className="font-mono text-[10px] text-[#B2AD7F] group-hover:text-[#B2AD7F]">
                         {service.number}
                       </span>
-                      <span
-                        className={`text-sm lg:text-[15px] font-semibold tracking-[-0.01em] transition-colors duration-200 ${
-                          isHovered ? "text-[#14213D]" : "text-[#14213D]/85"
-                        }`}
-                      >
-                        {service.name}
-                      </span>
-                    </div>
+                      <span>{service.name}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
 
-                    {/* Interactive Expanding Underline + Green-Gold Dot */}
-                    <div className="flex items-center justify-center mt-2 w-full">
-                      <div
-                        className={`h-[1.5px] transition-all duration-300 ${
-                          isHovered ? "w-12 bg-[#B2AD7F]" : "w-6 bg-[#14213D]/20"
-                        }`}
-                      />
-                      <span
-                        className={`w-1.5 h-1.5 rounded-full bg-[#B2AD7F] ml-1.5 transition-all duration-300 ${
-                          isHovered ? "opacity-100 scale-100" : "opacity-0 scale-50"
-                        }`}
-                      />
-                    </div>
-                  </a>
-                );
-              })}
-            </div>
-
-            {/* Mobile: Clean Vertical List with Accessible Touch Targets */}
-            <div className="flex md:hidden flex-col w-full divide-y divide-[#14213D]/10 bg-white/70 backdrop-blur-sm rounded-2xl border border-[#14213D]/10 p-2 shadow-sm">
-              {capabilitiesList.map((service) => (
+            {/* Bottom Meta & Direct Navigation matching reference footer */}
+            <Reveal delay={0.3} yOffset={14}>
+              <div className="pt-3 flex flex-wrap items-center gap-4 sm:gap-6 border-t border-[#14213D]/12 w-full">
                 <a
-                  key={service.id}
-                  href={service.href}
-                  className="flex items-center justify-between py-3.5 px-4 text-left min-h-[46px] hover:bg-white/80 active:bg-white transition-colors"
+                  href="#branding"
+                  className="group inline-flex items-center text-xs font-mono font-semibold uppercase tracking-[0.14em] text-[#14213D] hover:text-[#0E172B] transition-colors py-1"
                 >
-                  <div className="flex items-center gap-3">
-                    <span className="text-xs font-mono font-bold text-[#B2AD7F]">
-                      {service.number}
-                    </span>
-                    <span className="text-sm font-semibold text-[#14213D]">
-                      {service.name}
-                    </span>
-                  </div>
-                  <span className="text-xs font-mono text-[#B2AD7F]">→</span>
+                  <span>Explore Our Services</span>
+                  <ArrowDown className="ml-2 h-3.5 w-3.5 text-[#B2AD7F] transition-transform duration-200 group-hover:translate-y-1" />
                 </a>
-              ))}
-            </div>
-          </Reveal>
+                <span className="text-xs text-[#14213D]/30 hidden sm:inline">•</span>
+                <span className="text-[11px] sm:text-xs font-mono tracking-wider text-[#14213D]/60 uppercase">
+                  EST. PESHAWAR × GLOBAL
+                </span>
+              </div>
+            </Reveal>
 
-          {/* ============================================================ */}
-          {/* SECTION CONTINUATION / SUBTLE CTA                            */}
-          {/* ============================================================ */}
-          <Reveal delay={0.34} yOffset={14}>
-            <div className="mt-16 sm:mt-20 flex flex-col items-center">
-              <a
-                href="#branding"
-                className="group inline-flex flex-col items-center text-xs font-mono font-semibold uppercase tracking-[0.18em] text-[#14213D]/70 hover:text-[#14213D] transition-colors"
-              >
-                <span>Explore Our Services</span>
-                <span className="w-[1px] h-8 sm:h-10 bg-[#14213D]/25 group-hover:h-14 group-hover:bg-[#B2AD7F] transition-all duration-300 my-2.5" />
-                <ArrowDown className="h-3.5 w-3.5 text-[#B2AD7F] transition-transform duration-200 group-hover:translate-y-1" />
-              </a>
-            </div>
-          </Reveal>
+          </div>
+
+          {/* Right Column: Open visual space for the circular artwork portal */}
+          <div className="hidden lg:block lg:col-span-5 min-h-[420px]" aria-hidden="true" />
 
         </div>
       </Container>
     </section>
   );
 };
+
