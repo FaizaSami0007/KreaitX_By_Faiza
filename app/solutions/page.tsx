@@ -2,11 +2,12 @@ import React from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { CheckCircle2, ArrowRight, Layers, Cpu, Sparkles } from "lucide-react";
+import { CheckCircle2, ArrowRight, Layers, Cpu } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
-import { Reveal, StaggerContainer, StaggerItem } from "@/components/ui/Reveal";
+import { Reveal } from "@/components/ui/Reveal";
+import { BrandingSection } from "@/components/sections/BrandingSection";
+import { DigitalMarketingSection } from "@/components/sections/DigitalMarketingSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { servicesData } from "@/data/siteData";
 
@@ -16,9 +17,13 @@ export const metadata: Metadata = {
 };
 
 export default function SolutionsPage() {
+  const remainingServices = servicesData.filter(
+    (s) => s.id !== "branding" && s.id !== "digital-marketing"
+  );
+
   return (
     <>
-      {/* Cinematic Services Page Hero with User-Provided Art */}
+      {/* Cinematic Services Page Hero with User-Provided Art (Preserved Exactly) */}
       <section className="relative overflow-hidden bg-[#14213D] text-[#F5F6F2] min-h-[75vh] flex items-center justify-center py-20 lg:py-28 border-b border-[#F5F6F2]/10">
         {/* User-Provided Background Image */}
         <div className="absolute inset-0 z-0">
@@ -87,11 +92,17 @@ export default function SolutionsPage() {
         </Container>
       </section>
 
-      {/* Detailed Services Catalog */}
+      {/* SECTION 01: BRANDING */}
+      <BrandingSection />
+
+      {/* SECTION 02: DIGITAL MARKETING */}
+      <DigitalMarketingSection />
+
+      {/* REMAINING SERVICES CATALOG (03 to 07) */}
       <section className="bg-[#F5F6F2] py-20 sm:py-28">
         <Container size="default">
           <div className="space-y-16 sm:space-y-24">
-            {servicesData.map((service) => (
+            {remainingServices.map((service) => (
               <div
                 key={service.id}
                 id={service.id}
@@ -138,12 +149,13 @@ export default function SolutionsPage() {
                       </span>
                       <div className="flex flex-wrap gap-2">
                         {service.relatedCapabilities.map((rel) => (
-                          <span
+                          <Link
                             key={rel}
-                            className="text-xs font-medium text-[#14213D] bg-[#F5F6F2] border border-[#14213D]/10 px-3 py-1 rounded-full"
+                            href="/solutions#branding"
+                            className="text-xs font-medium text-[#14213D] bg-[#F5F6F2] hover:bg-[#14213D] hover:text-white border border-[#14213D]/10 px-3 py-1 rounded-full transition-all duration-200"
                           >
                             + {rel}
-                          </span>
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -211,3 +223,4 @@ export default function SolutionsPage() {
     </>
   );
 }
+
