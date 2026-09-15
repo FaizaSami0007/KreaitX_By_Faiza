@@ -42,11 +42,11 @@ export const SocialMediaSection: React.FC = () => {
     >
       <Container size="default" className="relative z-10 w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
         
-        {/* Main Editorial Card Container with Swapped Deep Navy (#14213D) Canvas */}
-        <div className="relative rounded-[28px] sm:rounded-[32px] lg:rounded-[36px] bg-[#14213D] text-[#F7F8FC] border border-white/10 p-6 sm:p-10 lg:p-12 xl:p-14 shadow-[0_16px_48px_-16px_rgba(20,33,61,0.25)] overflow-hidden">
+        {/* Main Editorial Card Container with Deep Navy (#14213D) Canvas */}
+        <div className="relative rounded-[28px] sm:rounded-[32px] lg:rounded-[36px] bg-[#14213D] text-[#F7F8FC] border border-white/10 p-6 sm:p-10 lg:p-12 xl:p-14 shadow-2xl overflow-hidden">
           
-          {/* Subtle Ambient Light Glow Layer */}
-          <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#B2AD7F]/08 rounded-full blur-3xl pointer-events-none" />
+          {/* Ambient Lighting Gradient */}
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#B2AD7F]/10 rounded-full blur-3xl pointer-events-none" />
 
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center min-h-[520px]">
             
@@ -63,7 +63,7 @@ export const SocialMediaSection: React.FC = () => {
                       03
                     </span>
                     <span className="w-6 h-[1.5px] bg-[#B2AD7F]" aria-hidden="true" />
-                    <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.22em] text-[#B2AD7F]">
+                    <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.22em] text-[#F7F8FC]/70">
                       SOCIAL MEDIA MANAGEMENT
                     </span>
                   </div>
@@ -85,17 +85,17 @@ export const SocialMediaSection: React.FC = () => {
 
                 {/* Supporting Copy */}
                 <Reveal delay={0.18} yOffset={14}>
-                  <p className="text-base sm:text-[17px] text-white/80 leading-[1.68] font-normal max-w-[460px]">
+                  <p className="text-base sm:text-[17px] text-[#F7F8FC]/80 leading-[1.68] font-normal max-w-[460px]">
                     Consistent, creative content that builds real connections.
                   </p>
                 </Reveal>
 
-                {/* Primary CTA in Dove White / Ivory Pill */}
+                {/* Primary CTA in Dove White / Inverted */}
                 <Reveal delay={0.24} yOffset={14}>
                   <div className="pt-2">
                     <Link
                       href="/contact?service=social-media-management"
-                      className="group inline-flex items-center justify-between pl-6 pr-2 py-2 rounded-full text-xs sm:text-sm font-medium text-[#14213D] bg-[#F6F7F2] hover:bg-white transition-all duration-200 shadow-md hover:-translate-y-0.5 active:scale-[0.98] min-h-[46px]"
+                      className="group inline-flex items-center justify-between pl-6 pr-2 py-2 rounded-full text-xs sm:text-sm font-medium text-[#14213D] bg-white hover:bg-[#F6F7F2] transition-all duration-200 shadow-md hover:-translate-y-0.5 active:scale-[0.98] min-h-[46px]"
                     >
                       <span className="mr-3 font-semibold">Explore Social Media</span>
                       <div className="w-8 h-8 rounded-full bg-[#14213D] flex items-center justify-center text-[#B2AD7F] transition-all duration-200 group-hover:bg-[#0C182F] group-hover:translate-x-0.5 shrink-0">
@@ -108,9 +108,9 @@ export const SocialMediaSection: React.FC = () => {
 
               {/* Bottom Micro-Copy */}
               <Reveal delay={0.3} yOffset={10}>
-                <div className="pt-6 sm:pt-8 border-t border-white/10 flex items-center gap-2.5">
+                <div className="pt-6 sm:pt-8 border-t border-white/15 flex items-center gap-2.5">
                   <span className="w-3.5 h-[1.5px] bg-[#B2AD7F]" aria-hidden="true" />
-                  <div className="text-[10px] font-mono tracking-[0.16em] text-white/50 uppercase">
+                  <div className="text-[10px] font-mono tracking-[0.16em] text-[#F7F8FC]/55 uppercase">
                     <span>REAL CONVERSATIONS</span>
                     <span className="mx-1.5 opacity-40">/</span>
                     <span>STRONGER BRANDS TOMORROW</span>
@@ -121,11 +121,11 @@ export const SocialMediaSection: React.FC = () => {
             </div>
 
             {/* ---------------------------------------------------------- */}
-            {/* RIGHT: SWAPPED DOVE WHITE CAPABILITIES PANEL (Cols 7-12)    */}
+            {/* RIGHT: DOVE WHITE CAPABILITIES PANEL (Cols 7-12)           */}
             {/* ---------------------------------------------------------- */}
             <div className="lg:col-span-6 w-full max-w-[580px] lg:ml-auto">
               <Reveal delay={0.22} yOffset={18}>
-                <div className="relative rounded-[22px] sm:rounded-[26px] bg-[#F6F7F2] text-[#14213D] p-6 sm:p-8 lg:p-9 border border-[#14213D]/08 shadow-2xl overflow-hidden">
+                <div className="relative rounded-[22px] sm:rounded-[26px] bg-[#F6F7F2] text-[#14213D] p-6 sm:p-8 lg:p-9 border border-[#14213D]/10 shadow-xl overflow-hidden">
                   
                   {/* 4 Vertical Capabilities */}
                   <div className="divide-y divide-[#14213D]/10 relative z-10">
@@ -140,8 +140,8 @@ export const SocialMediaSection: React.FC = () => {
                           } ${index === socialMediaCapabilities.length - 1 ? "pb-0" : ""}`}
                         >
                           <div className="flex items-center gap-3.5 sm:gap-4">
-                            {/* Circular Warm Neutral Icon Ring */}
-                            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#14213D]/08 bg-white flex items-center justify-center text-[#B2AD7F] group-hover:border-[#B2AD7F]/50 group-hover:bg-[#FAF9F5] transition-all duration-200 shrink-0 shadow-2xs">
+                            {/* Circular Icon Ring */}
+                            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#14213D]/10 bg-white flex items-center justify-center text-[#14213D] group-hover:border-[#B2AD7F] group-hover:bg-[#FAF7F0] group-hover:text-[#B2AD7F] transition-all duration-200 shrink-0 shadow-2xs">
                               <IconComponent className="h-4 w-4 sm:h-4.5 sm:w-4.5 stroke-[1.7]" />
                             </div>
 
@@ -168,7 +168,7 @@ export const SocialMediaSection: React.FC = () => {
                   {/* Bottom Micro Detail */}
                   <div className="mt-6 sm:mt-7 pt-4 border-t border-[#14213D]/10 flex items-center gap-2 relative z-10">
                     <span className="w-5 h-[1px] bg-[#B2AD7F]" aria-hidden="true" />
-                    <span className="text-[10px] font-mono tracking-[0.2em] text-[#B2AD7F] uppercase">
+                    <span className="text-[10px] font-mono tracking-[0.2em] text-[#B2AD7F] uppercase font-semibold">
                       ENGAGE · GROW · BUILD COMMUNITY
                     </span>
                   </div>
