@@ -63,10 +63,10 @@ export const Hero: React.FC = () => {
             </div>
           </Reveal>
 
-          {/* Main Headline (Fluid clamp typography with centered editorial styling) */}
+          {/* Main Headline (Fluid clamp typography on single line) */}
           <Reveal delay={0.12} yOffset={18}>
-            <h1 className="text-[clamp(28px,6vw,56px)] font-semibold tracking-[-0.04em] leading-[1.08] text-[#F5F6F2]">
-              We Create <br className="hidden sm:inline" />
+            <h1 className="text-[clamp(28px,5.2vw,62px)] font-semibold tracking-[-0.04em] leading-[1.08] text-[#F5F6F2] whitespace-nowrap">
+              We Create{" "}
               <span className="font-serif-italic font-normal text-[#B7B98A] tracking-tight">
                 Digital
               </span>{" "}
