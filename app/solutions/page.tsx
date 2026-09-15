@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { BrandingSection } from "@/components/sections/BrandingSection";
 import { DigitalMarketingSection } from "@/components/sections/DigitalMarketingSection";
+import { SocialMediaSection } from "@/components/sections/SocialMediaSection";
 import { ConnectedCapabilitiesSection } from "@/components/sections/ConnectedCapabilitiesSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { servicesData } from "@/data/siteData";
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function SolutionsPage() {
   const remainingServices = servicesData.filter(
-    (s) => s.id !== "branding" && s.id !== "digital-marketing"
+    (s) => s.id !== "branding" && s.id !== "digital-marketing" && s.id !== "social-media-management"
   );
 
   return (
@@ -82,7 +83,10 @@ export default function SolutionsPage() {
       {/* SECTION 02: DIGITAL MARKETING */}
       <DigitalMarketingSection />
 
-      {/* REMAINING SERVICES CATALOG (03 to 07) */}
+      {/* SECTION 03: SOCIAL MEDIA MANAGEMENT */}
+      <SocialMediaSection />
+
+      {/* REMAINING SERVICES CATALOG (04 to 07) */}
       <section className="bg-[#F5F6F2] py-20 sm:py-28">
         <Container size="default">
           <div className="space-y-16 sm:space-y-24">
