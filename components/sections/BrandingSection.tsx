@@ -38,12 +38,12 @@ export const BrandingSection: React.FC = () => {
     <section
       id="branding"
       aria-labelledby="branding-heading"
-      className="scroll-mt-24 relative bg-[#F6F7F2] py-20 sm:py-28 lg:py-32 border-b border-[#14213D]/10 overflow-hidden"
+      className="scroll-mt-24 relative bg-white py-16 sm:py-24 lg:py-28 border-b border-[#14213D]/10 overflow-hidden"
     >
       <Container size="default" className="relative z-10 w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
         
-        {/* Main Editorial Container with Plain #F6F7F2 Background */}
-        <div className="relative rounded-[28px] sm:rounded-[32px] lg:rounded-[36px] bg-[#F6F7F2] border border-[#14213D]/08 p-6 sm:p-10 lg:p-12 xl:p-14">
+        {/* Main Editorial Container with Plain Dove White (#F6F7F2) Background */}
+        <div className="relative rounded-[28px] sm:rounded-[32px] lg:rounded-[36px] bg-[#F6F7F2] border border-[#14213D]/08 p-6 sm:p-10 lg:p-12 xl:p-14 shadow-[0_12px_40px_-12px_rgba(20,33,61,0.05)]">
           
           {/* Foreground Grid Composition */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center min-h-[520px]">
