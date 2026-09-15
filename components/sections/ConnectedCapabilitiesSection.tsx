@@ -34,10 +34,10 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center opacity-60 sm:opacity-75"
+          className="object-cover object-right md:object-center select-none opacity-90"
         />
-        {/* Soft atmospheric gradient to ensure crisp, readable centered typography */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#F7F8FC]/85 via-[#F7F8FC]/60 to-[#F7F8FC]/90" />
+        {/* Soft atmospheric gradient to ensure crisp, readable centered typography on mobile/tablet */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#F7F8FC]/95 via-[#F7F8FC]/70 to-[#F7F8FC]/30 lg:from-[#F7F8FC]/85 lg:via-[#F7F8FC]/40 lg:to-transparent" />
       </div>
 
       <Container size="default" className="relative z-10 w-full max-w-[1280px]">
