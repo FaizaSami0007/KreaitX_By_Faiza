@@ -146,37 +146,6 @@ export const Hero: React.FC = () => {
             </div>
           </Reveal>
 
-          {/* 6. ROUNDED HERO VIDEO / VISUAL SHOWCASE CONTAINER */}
-          <Reveal delay={0.42} yOffset={24} className="w-full mt-12 sm:mt-16">
-            <div className="relative mx-auto max-w-4xl rounded-[28px] sm:rounded-[36px] overflow-hidden border-4 sm:border-8 border-white/90 shadow-2xl bg-white group">
-              <div className="relative aspect-[16/10] sm:aspect-[16/9] w-full bg-slate-950 overflow-hidden">
-                <Image
-                  src="/images/digital-marketing-asset.jpg"
-                  alt="KreaitX Digital Product & Commercial Video Collaboration"
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 900px"
-                  className="object-cover object-center select-none transition-transform duration-700 ease-out group-hover:scale-105"
-                />
-
-                {/* Gentle Gradient Vignette */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-slate-950/20" />
-
-                {/* Interactive Center Play Button */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <button
-                    type="button"
-                    onClick={() => setVideoModalOpen(true)}
-                    className="group/btn flex h-16 w-16 sm:h-20 sm:w-20 items-center justify-center rounded-full bg-white text-slate-900 shadow-2xl transition-all duration-300 hover:scale-110 hover:bg-white active:scale-95 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-purple-500 cursor-pointer"
-                    aria-label="Play KreaitX Showreel"
-                  >
-                    <Play className="h-6 w-6 sm:h-7 sm:w-7 fill-current ml-1 text-slate-900 transition-transform group-hover/btn:scale-110" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-
         </div>
       </Container>
 
