@@ -68,27 +68,27 @@ export default function ProcessPage() {
       </section>
 
       {/* Six Stage Detailed Deep Dive */}
-      <section id="process-breakdown" className="bg-[#F5F6F2] py-20 sm:py-28 border-b border-[#14213D]/10">
+      <section id="process-breakdown" className="bg-[#F4F1E8] py-20 sm:py-28 border-b border-[#DEDCD3]">
         <Container size="default">
           <div className="space-y-12 sm:space-y-16">
             {processStages.map((stage, idx) => (
               <div
                 key={stage.number}
-                className="rounded-2xl sm:rounded-3xl bg-white border border-[#14213D]/10 p-8 sm:p-12 lg:p-14 shadow-subtle"
+                className="rounded-2xl bg-[#FAF8F2] border border-[#DEDCD3] p-8 sm:p-12 lg:p-14"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
                   {/* Left Column: Stage Identity & Narrative */}
                   <div className="lg:col-span-5 space-y-4">
                     <div className="flex items-center gap-3">
-                      <span className="font-mono text-sm font-bold text-[#F5F6F2] bg-[#14213D] px-3 py-1 rounded">
+                      <span className="font-mono text-sm font-bold text-[#F4F1E8] bg-[#14213D] px-3 py-1 rounded-md">
                         Stage {stage.number}
                       </span>
-                      <span className="text-xs font-mono uppercase text-[#14213D]/60 tracking-wider">
+                      <span className="text-xs font-mono uppercase text-[#667085] tracking-wider">
                         Phase 0{idx + 1} of 06
                       </span>
                     </div>
 
-                    <h2 className="text-3xl sm:text-4xl font-semibold text-[#14213D] tracking-tight">
+                    <h2 className="text-3xl sm:text-4xl font-normal text-[#14213D] tracking-tight">
                       {stage.title}
                     </h2>
 
@@ -96,19 +96,19 @@ export default function ProcessPage() {
                       {stage.tagline}
                     </p>
 
-                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal pt-2">
+                    <p className="text-sm sm:text-base text-[#667085] leading-relaxed font-normal pt-2">
                       {stage.description}
                     </p>
 
                     <div className="pt-4">
-                      <span className="text-xs font-mono uppercase tracking-wider text-[#14213D]/60 font-bold block mb-2">
+                      <span className="text-xs font-mono uppercase tracking-wider text-[#14213D]/70 font-bold block mb-2">
                         Key Phase Milestones
                       </span>
                       <div className="flex flex-wrap gap-2">
                         {stage.milestones.map((ms) => (
                           <span
                             key={ms}
-                            className="px-3 py-1 rounded bg-[#F5F6F2] border border-[#14213D]/10 text-xs font-medium text-[#14213D]"
+                            className="px-3 py-1 rounded-md bg-[#F4F1E8] border border-[#DEDCD3] text-xs font-medium text-[#14213D]"
                           >
                             {ms}
                           </span>
@@ -118,33 +118,33 @@ export default function ProcessPage() {
                   </div>
 
                   {/* Right Column: Collaboration Matrix */}
-                  <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 bg-[#F5F6F2] p-6 sm:p-8 rounded-2xl border border-[#14213D]/10">
+                  <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 bg-[#F4F1E8] p-6 sm:p-8 rounded-xl border border-[#DEDCD3]">
                     {/* What client provides */}
-                    <div className="rounded-xl bg-white p-6 border border-[#14213D]/10 flex flex-col justify-between">
+                    <div className="rounded-lg bg-white p-6 border border-[#DEDCD3] flex flex-col justify-between">
                       <div>
-                        <span className="text-xs font-mono uppercase tracking-wider text-slate-500 font-bold block mb-2">
+                        <span className="text-xs font-mono uppercase tracking-wider text-[#667085] font-bold block mb-2">
                           01 • What You Provide
                         </span>
-                        <p className="text-sm text-slate-700 leading-relaxed">
+                        <p className="text-sm text-[#182231] leading-relaxed">
                           {stage.clientInput}
                         </p>
                       </div>
-                      <div className="mt-4 pt-4 border-t border-slate-100 text-xs text-slate-400">
+                      <div className="mt-4 pt-4 border-t border-[#DEDCD3] text-xs text-[#667085]">
                         Input &amp; Review Touchpoint
                       </div>
                     </div>
 
                     {/* What KreaitX delivers */}
-                    <div className="rounded-xl bg-white p-6 border border-[#14213D]/10 flex flex-col justify-between">
+                    <div className="rounded-lg bg-white p-6 border border-[#DEDCD3] flex flex-col justify-between">
                       <div>
                         <span className="text-xs font-mono uppercase tracking-wider text-[#14213D] font-bold block mb-2">
                           02 • What KreaitX Delivers
                         </span>
-                        <p className="text-sm text-slate-700 leading-relaxed font-medium">
+                        <p className="text-sm text-[#182231] leading-relaxed font-medium">
                           {stage.kreaitxOutput}
                         </p>
                       </div>
-                      <div className="mt-4 pt-4 border-t border-slate-100 text-xs text-[#14213D] font-semibold">
+                      <div className="mt-4 pt-4 border-t border-[#DEDCD3] text-xs text-[#14213D] font-semibold">
                         Verified Output Document
                       </div>
                     </div>
@@ -157,7 +157,7 @@ export default function ProcessPage() {
       </section>
 
       {/* Uncertainty Reduction Section */}
-      <section className="bg-white py-20 sm:py-28 border-b border-[#14213D]/10">
+      <section className="bg-[#FAF8F2] py-20 sm:py-28 border-b border-[#DEDCD3]">
         <Container size="default">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mb-16">
@@ -176,42 +176,42 @@ export default function ProcessPage() {
 
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <StaggerItem>
-              <div className="rounded-2xl bg-[#F5F6F2] p-8 border border-[#14213D]/10 h-full">
-                <span className="h-10 w-10 rounded-full bg-[#14213D] text-[#F5F6F2] flex items-center justify-center mb-6 font-mono text-sm font-bold">
+              <div className="rounded-xl bg-[#F4F1E8] p-8 border border-[#DEDCD3] h-full">
+                <span className="h-10 w-10 rounded-lg bg-[#14213D] text-[#F4F1E8] flex items-center justify-center mb-6 font-mono text-sm font-bold">
                   01
                 </span>
-                <h3 className="text-xl font-semibold text-[#14213D] tracking-tight mb-2">
+                <h3 className="text-xl font-normal text-[#14213D] tracking-tight mb-2">
                   No Middleman Lag
                 </h3>
-                <p className="text-sm text-slate-600 leading-relaxed">
+                <p className="text-sm text-[#667085] leading-relaxed">
                   You communicate directly with the designers, directors, and developers doing the work, eliminating telephone-game misunderstandings.
                 </p>
               </div>
             </StaggerItem>
 
             <StaggerItem>
-              <div className="rounded-2xl bg-[#F5F6F2] p-8 border border-[#14213D]/10 h-full">
-                <span className="h-10 w-10 rounded-full bg-[#14213D] text-[#F5F6F2] flex items-center justify-center mb-6 font-mono text-sm font-bold">
+              <div className="rounded-xl bg-[#F4F1E8] p-8 border border-[#DEDCD3] h-full">
+                <span className="h-10 w-10 rounded-lg bg-[#14213D] text-[#F4F1E8] flex items-center justify-center mb-6 font-mono text-sm font-bold">
                   02
                 </span>
-                <h3 className="text-xl font-semibold text-[#14213D] tracking-tight mb-2">
+                <h3 className="text-xl font-normal text-[#14213D] tracking-tight mb-2">
                   Weekly Async &amp; Sync Loops
                 </h3>
-                <p className="text-sm text-slate-600 leading-relaxed">
+                <p className="text-sm text-[#667085] leading-relaxed">
                   Clear weekly loom summaries and milestone reviews give your internal stakeholders full visibility without excessive meeting fatigue.
                 </p>
               </div>
             </StaggerItem>
 
             <StaggerItem>
-              <div className="rounded-2xl bg-[#F5F6F2] p-8 border border-[#14213D]/10 h-full">
-                <span className="h-10 w-10 rounded-full bg-[#14213D] text-[#F5F6F2] flex items-center justify-center mb-6 font-mono text-sm font-bold">
+              <div className="rounded-xl bg-[#F4F1E8] p-8 border border-[#DEDCD3] h-full">
+                <span className="h-10 w-10 rounded-lg bg-[#14213D] text-[#F4F1E8] flex items-center justify-center mb-6 font-mono text-sm font-bold">
                   03
                 </span>
-                <h3 className="text-xl font-semibold text-[#14213D] tracking-tight mb-2">
+                <h3 className="text-xl font-normal text-[#14213D] tracking-tight mb-2">
                   Fixed Milestones, Clear Scopes
                 </h3>
-                <p className="text-sm text-slate-600 leading-relaxed">
+                <p className="text-sm text-[#667085] leading-relaxed">
                   Every deliverable is clearly scoped before kick-off. No surprise invoices, hidden tech debt, or unexpected scope creep.
                 </p>
               </div>

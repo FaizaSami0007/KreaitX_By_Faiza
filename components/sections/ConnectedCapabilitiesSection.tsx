@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { ArrowUpRight, ArrowDown } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 
@@ -21,7 +21,7 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
     <section
       id="connected-capabilities"
       aria-labelledby="connected-capabilities-heading"
-      className="relative bg-[#F7F8FC] text-[#14213D] py-20 sm:py-28 lg:py-36 border-b border-[#14213D]/10 overflow-hidden flex items-center justify-center min-h-[680px] lg:min-h-[780px]"
+      className="relative bg-[#F4F1E8] text-[#14213D] py-20 sm:py-28 lg:py-36 border-b border-[#DEDCD3] overflow-hidden flex items-center justify-center min-h-[680px] lg:min-h-[780px]"
     >
       {/* Background Architectural Artwork Layer - 100% Sharp & Unblurred */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none overflow-hidden">
@@ -41,7 +41,7 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
           {/* Left Column: Eyebrow, Headline, Paragraph, Service Index (Cols 1-7) */}
           <div className="lg:col-span-7 flex flex-col items-start text-left space-y-6 sm:space-y-7 max-w-[640px]">
             
-            {/* Eyebrow matching reference screenshot with gold bar */}
+            {/* Eyebrow with gold bar */}
             <Reveal delay={0.05} yOffset={12}>
               <div className="flex items-center gap-3">
                 <span className="w-7 h-[1.5px] bg-[#B2AD7F]" aria-hidden="true" />
@@ -51,7 +51,7 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
               </div>
             </Reveal>
 
-            {/* Main Statement Headline matching typography hierarchy */}
+            {/* Main Statement Headline */}
             <Reveal delay={0.12} yOffset={18}>
               <h2
                 id="connected-capabilities-heading"
@@ -66,7 +66,7 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
 
             {/* Supporting Idea Copy */}
             <Reveal delay={0.18} yOffset={14}>
-              <p className="text-base sm:text-lg text-[#14213D]/80 leading-[1.7] font-normal max-w-[540px]">
+              <p className="text-base sm:text-lg text-[#182231]/80 leading-[1.7] font-normal max-w-[540px]">
                 Strategy, creativity and technology working together to create stronger outcomes for your business — unifying brand narrative, cinematic production, and high-performance software under one roof.
               </p>
             </Reveal>
@@ -74,7 +74,7 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
             {/* Interactive 7-Services Index Pills */}
             <Reveal delay={0.24} yOffset={14}>
               <div className="pt-1">
-                <span className="text-[10px] font-mono uppercase tracking-[0.18em] text-[#14213D]/50 block mb-3">
+                <span className="text-[10px] font-mono uppercase tracking-[0.18em] text-[#667085] block mb-3">
                   EXPLORE ALL 7 DISCIPLINES
                 </span>
                 <div className="flex flex-wrap gap-2 sm:gap-2.5 max-w-[580px]">
@@ -82,7 +82,7 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
                     <a
                       key={service.id}
                       href={service.href}
-                      className="group inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-medium text-[#14213D] bg-white/90 hover:bg-[#14213D] hover:text-white border border-[#14213D]/12 transition-all duration-200 shadow-2xs"
+                      className="group inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-medium text-[#182231] bg-[#FAF8F2] hover:bg-[#14213D] hover:text-[#F4F1E8] border border-[#DEDCD3] transition-all duration-200 shadow-subtle"
                     >
                       <span className="font-mono text-[10px] text-[#B2AD7F] group-hover:text-[#B2AD7F]">
                         {service.number}
@@ -94,18 +94,18 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
               </div>
             </Reveal>
 
-            {/* Bottom Meta & Direct Navigation matching reference footer */}
+            {/* Bottom Meta & Direct Navigation */}
             <Reveal delay={0.3} yOffset={14}>
-              <div className="pt-3 flex flex-wrap items-center gap-4 sm:gap-6 border-t border-[#14213D]/12 w-full">
+              <div className="pt-3 flex flex-wrap items-center gap-4 sm:gap-6 border-t border-[#DEDCD3] w-full">
                 <a
                   href="#branding"
-                  className="group inline-flex items-center text-xs font-mono font-semibold uppercase tracking-[0.14em] text-[#14213D] hover:text-[#0E172B] transition-colors py-1"
+                  className="group inline-flex items-center text-xs font-mono font-semibold uppercase tracking-[0.14em] text-[#14213D] hover:text-[#0D182B] transition-colors py-1"
                 >
                   <span>Explore Our Services</span>
                   <ArrowDown className="ml-2 h-3.5 w-3.5 text-[#B2AD7F] transition-transform duration-200 group-hover:translate-y-1" />
                 </a>
-                <span className="text-xs text-[#14213D]/30 hidden sm:inline">•</span>
-                <span className="text-[11px] sm:text-xs font-mono tracking-wider text-[#14213D]/60 uppercase">
+                <span className="text-xs text-[#DEDCD3] hidden sm:inline">•</span>
+                <span className="text-[11px] sm:text-xs font-mono tracking-wider text-[#667085] uppercase">
                   EST. PESHAWAR × GLOBAL
                 </span>
               </div>
@@ -121,4 +121,3 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
     </section>
   );
 };
-

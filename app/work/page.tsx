@@ -73,7 +73,7 @@ export default function WorkPage() {
       </section>
 
       {/* Filter Bar */}
-      <section id="projects-feed" className="bg-white border-b border-[#14213D]/10 py-5 sticky top-[65px] z-30 shadow-sm">
+      <section id="projects-feed" className="bg-[#FAF8F2] border-b border-[#DEDCD3] py-5 sticky top-[65px] z-30 shadow-xs">
         <Container size="default">
           <div className="flex items-center justify-between gap-4 overflow-x-auto no-scrollbar">
             <div className="flex items-center gap-2">
@@ -83,10 +83,10 @@ export default function WorkPage() {
                   key={cat}
                   type="button"
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer shrink-0 ${
+                  className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all cursor-pointer shrink-0 ${
                     selectedCategory === cat
-                      ? "bg-[#14213D] text-[#F5F6F2] shadow-sm"
-                      : "bg-[#F5F6F2] text-[#14213D] hover:bg-slate-200 border border-[#14213D]/8"
+                      ? "bg-[#14213D] text-[#F4F1E8] shadow-xs"
+                      : "bg-[#F4F1E8] text-[#14213D] hover:bg-white border border-[#DEDCD3]"
                   }`}
                 >
                   {cat}
@@ -94,7 +94,7 @@ export default function WorkPage() {
               ))}
             </div>
 
-            <span className="text-xs font-mono text-slate-400 shrink-0 hidden md:block">
+            <span className="text-xs font-mono text-[#667085] shrink-0 hidden md:block">
               Showing {filteredProjects.length} Case Studies
             </span>
           </div>
@@ -102,39 +102,39 @@ export default function WorkPage() {
       </section>
 
       {/* Projects Deep Dive */}
-      <section className="bg-[#F5F6F2] py-20 sm:py-28">
+      <section className="bg-[#F4F1E8] py-20 sm:py-28">
         <Container size="default">
           <div className="space-y-16 sm:space-y-24">
             {filteredProjects.map((project, idx) => (
               <article
                 key={project.id}
                 id={project.id}
-                className="scroll-mt-32 rounded-2xl sm:rounded-3xl bg-white border border-[#14213D]/10 overflow-hidden shadow-subtle"
+                className="scroll-mt-32 rounded-2xl bg-[#FAF8F2] border border-[#DEDCD3] overflow-hidden"
               >
                 {/* Case Study Header Banner */}
-                <div className="bg-[#14213D] text-[#F5F6F2] p-8 sm:p-12 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-hero-grid opacity-30" />
+                <div className="bg-[#14213D] text-[#F4F1E8] p-8 sm:p-12 relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-[#B2AD7F]/10 rounded-full blur-3xl pointer-events-none" />
                   <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
                     <div>
                       <div className="flex items-center gap-3 mb-3">
-                        <span className="px-3 py-1 rounded bg-white/10 text-[#F5F6F2] text-xs font-mono">
+                        <span className="px-3 py-1 rounded-md bg-white/10 text-[#F4F1E8] text-xs font-mono">
                           Case Study 0{idx + 1}
                         </span>
-                        <span className="text-xs text-[#B7B98A] uppercase font-semibold tracking-wider">
+                        <span className="text-xs text-[#B2AD7F] uppercase font-semibold tracking-wider">
                           {project.industry}
                         </span>
-                        <span className="text-xs text-[#F5F6F2]/50">• {project.year}</span>
+                        <span className="text-xs text-[#F4F1E8]/50">• {project.year}</span>
                       </div>
-                      <h2 className="text-2xl sm:text-4xl font-semibold text-[#F5F6F2] tracking-tight">
+                      <h2 className="text-2xl sm:text-4xl font-normal text-[#F4F1E8] tracking-tight">
                         {project.title}
                       </h2>
                     </div>
 
                     <div className="shrink-0 text-left md:text-right">
-                      <span className="text-xs font-mono uppercase tracking-wider text-[#B7B98A] block mb-1">
+                      <span className="text-xs font-mono uppercase tracking-wider text-[#B2AD7F] block mb-1">
                         Client Partner
                       </span>
-                      <span className="text-base font-semibold text-[#F5F6F2]">
+                      <span className="text-base font-medium text-[#F4F1E8]">
                         {project.client}
                       </span>
                     </div>
@@ -150,17 +150,17 @@ export default function WorkPage() {
                         <h3 className="text-xs font-mono uppercase tracking-wider text-[#14213D] font-bold mb-2">
                           Project Summary
                         </h3>
-                        <p className="text-base sm:text-lg text-[#111111] font-medium leading-relaxed">
+                        <p className="text-base sm:text-lg text-[#182231] font-normal leading-relaxed">
                           {project.summary}
                         </p>
                       </div>
 
-                      <div className="space-y-6 pt-6 border-t border-slate-100">
+                      <div className="space-y-6 pt-6 border-t border-[#DEDCD3]">
                         <div>
-                          <h4 className="text-xs font-mono uppercase tracking-wider text-rose-800 font-bold mb-2">
+                          <h4 className="text-xs font-mono uppercase tracking-wider text-[#14213D] font-bold mb-2">
                             The Challenge
                           </h4>
-                          <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                          <p className="text-sm sm:text-base text-[#667085] leading-relaxed">
                             {project.challenge}
                           </p>
                         </div>
@@ -169,7 +169,7 @@ export default function WorkPage() {
                           <h4 className="text-xs font-mono uppercase tracking-wider text-[#14213D] font-bold mb-2">
                             The Strategy
                           </h4>
-                          <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                          <p className="text-sm sm:text-base text-[#667085] leading-relaxed">
                             {project.strategy}
                           </p>
                         </div>
@@ -178,7 +178,7 @@ export default function WorkPage() {
                           <h4 className="text-xs font-mono uppercase tracking-wider text-[#14213D] font-bold mb-2">
                             The Execution
                           </h4>
-                          <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                          <p className="text-sm sm:text-base text-[#667085] leading-relaxed">
                             {project.execution}
                           </p>
                         </div>
@@ -188,17 +188,17 @@ export default function WorkPage() {
                     {/* Right: Deliverables, Results & Impact Box */}
                     <div className="lg:col-span-5 space-y-6">
                       {/* Measured Impact Card */}
-                      <div className="rounded-2xl bg-[#F5F6F2] p-6 sm:p-8 border border-[#14213D]/10">
+                      <div className="rounded-xl bg-[#F4F1E8] p-6 sm:p-8 border border-[#DEDCD3]">
                         <span className="text-xs font-mono uppercase tracking-wider text-[#14213D] font-bold block mb-2">
                           Measured Business Impact
                         </span>
-                        <p className="text-base sm:text-lg font-semibold text-[#14213D] leading-relaxed">
+                        <p className="text-base sm:text-lg font-medium text-[#14213D] leading-relaxed">
                           {project.impact}
                         </p>
                       </div>
 
                       {/* Deliverables List */}
-                      <div className="rounded-2xl bg-white p-6 sm:p-8 border border-[#14213D]/10">
+                      <div className="rounded-xl bg-white p-6 sm:p-8 border border-[#DEDCD3]">
                         <span className="text-xs font-mono uppercase tracking-wider text-[#14213D] font-bold block mb-4">
                           Delivered Assets &amp; Systems
                         </span>
@@ -206,9 +206,9 @@ export default function WorkPage() {
                           {project.deliverables.map((del) => (
                             <li
                               key={del}
-                              className="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-slate-700"
+                              className="flex items-center gap-2.5 text-xs sm:text-sm font-medium text-[#182231]"
                             >
-                              <CheckCircle2 className="h-4 w-4 text-[#B7B98A] shrink-0" />
+                              <CheckCircle2 className="h-4 w-4 text-[#B2AD7F] shrink-0" />
                               <span>{del}</span>
                             </li>
                           ))}
@@ -216,15 +216,15 @@ export default function WorkPage() {
                       </div>
 
                       {/* Services badges */}
-                      <div className="p-4 rounded-xl bg-[#F5F6F2] border border-[#14213D]/10">
-                        <span className="text-xs font-mono uppercase tracking-wider text-slate-400 block mb-2">
+                      <div className="p-4 rounded-xl bg-[#F4F1E8] border border-[#DEDCD3]">
+                        <span className="text-xs font-mono uppercase tracking-wider text-[#667085] block mb-2">
                           Capabilities Involved
                         </span>
                         <div className="flex flex-wrap gap-1.5">
                           {project.services.map((s) => (
                             <span
                               key={s}
-                              className="text-xs font-medium text-[#14213D] bg-white border border-[#14213D]/10 px-2.5 py-1 rounded"
+                              className="text-xs font-medium text-[#14213D] bg-white border border-[#DEDCD3] px-2.5 py-1 rounded-md"
                             >
                               {s}
                             </span>

@@ -68,43 +68,43 @@ export default function InsightsPage() {
       </section>
 
       {/* Articles Stream */}
-      <section id="articles-stream" className="bg-[#F5F6F2] py-20 sm:py-28 border-b border-[#14213D]/10">
+      <section id="articles-stream" className="bg-[#F4F1E8] py-20 sm:py-28 border-b border-[#DEDCD3]">
         <Container size="default">
           <div className="space-y-16 sm:space-y-20">
             {insightsArticles.map((article, idx) => (
               <article
                 key={article.id}
                 id={article.slug}
-                className="scroll-mt-28 rounded-2xl sm:rounded-3xl bg-white border border-[#14213D]/10 p-8 sm:p-12 lg:p-14 shadow-subtle"
+                className="scroll-mt-28 rounded-2xl bg-[#FAF8F2] border border-[#DEDCD3] p-8 sm:p-12 lg:p-14"
               >
                 {/* Meta Header */}
-                <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-100">
+                <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-[#DEDCD3]">
                   <div className="flex items-center gap-3">
-                    <span className="px-3 py-1 rounded-full bg-[#14213D] text-[#F5F6F2] text-xs font-semibold">
+                    <span className="px-3 py-1 rounded-md bg-[#14213D] text-[#F4F1E8] text-xs font-semibold">
                       {article.category}
                     </span>
-                    <span className="text-xs text-slate-400 font-mono">
+                    <span className="text-xs text-[#667085] font-mono">
                       {article.publishDate}
                     </span>
                   </div>
-                  <div className="flex items-center gap-1.5 text-xs text-slate-500 font-mono">
-                    <Clock className="h-3.5 w-3.5" />
+                  <div className="flex items-center gap-1.5 text-xs text-[#667085] font-mono">
+                    <Clock className="h-3.5 w-3.5 text-[#B2AD7F]" />
                     <span>{article.readTime}</span>
                   </div>
                 </div>
 
                 {/* Article Body */}
                 <div className="mt-8 space-y-6">
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#14213D] tracking-tight leading-tight">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-[#14213D] tracking-tight leading-tight">
                     {article.title}
                   </h2>
 
-                  <p className="text-base sm:text-lg text-slate-700 font-medium leading-relaxed">
+                  <p className="text-base sm:text-lg text-[#182231]/90 font-normal leading-relaxed">
                     {article.excerpt}
                   </p>
 
                   {/* Key Takeaways Box */}
-                  <div className="rounded-2xl bg-[#F5F6F2] p-6 sm:p-8 border border-[#14213D]/10 my-8">
+                  <div className="rounded-xl bg-[#F4F1E8] p-6 sm:p-8 border border-[#DEDCD3] my-8">
                     <span className="text-xs font-mono uppercase tracking-wider text-[#14213D] font-bold block mb-3">
                       Executive Summary &amp; Core Takeaways
                     </span>
@@ -112,9 +112,9 @@ export default function InsightsPage() {
                       {article.keyTakeaways.map((takeaway) => (
                         <li
                           key={takeaway}
-                          className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700"
+                          className="flex items-start gap-2.5 text-xs sm:text-sm text-[#182231]"
                         >
-                          <CheckCircle2 className="h-4 w-4 text-[#B7B98A] shrink-0 mt-0.5" />
+                          <CheckCircle2 className="h-4 w-4 text-[#B2AD7F] shrink-0 mt-0.5" />
                           <span>{takeaway}</span>
                         </li>
                       ))}
@@ -122,7 +122,7 @@ export default function InsightsPage() {
                   </div>
 
                   {/* Essay Paragraphs */}
-                  <div className="space-y-4 pt-2 text-sm sm:text-base text-slate-600 leading-relaxed max-w-none">
+                  <div className="space-y-4 pt-2 text-sm sm:text-base text-[#667085] leading-relaxed max-w-none">
                     {article.content.map((paragraph, pIdx) => (
                       <p key={pIdx}>{paragraph}</p>
                     ))}

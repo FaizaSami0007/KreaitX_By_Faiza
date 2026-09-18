@@ -135,23 +135,23 @@ export default function ContactPage() {
       </section>
 
       {/* Main Form & Contact Information Grid */}
-      <section id="inquiry-form" className="bg-[#F5F6F2] py-16 sm:py-24">
+      <section id="inquiry-form" className="bg-[#F4F1E8] py-16 sm:py-24">
         <Container size="default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             {/* Left: Interactive Form */}
             <div className="lg:col-span-8">
-              <div className="rounded-2xl sm:rounded-3xl bg-white border border-[#14213D]/10 p-6 sm:p-10 lg:p-12 shadow-subtle">
+              <div className="rounded-2xl bg-[#FAF8F2] border border-[#DEDCD3] p-6 sm:p-10 lg:p-12">
                 {status === "success" ? (
                   <div className="text-center py-12 space-y-6">
-                    <div className="h-16 w-16 bg-[#B7B98A]/20 text-[#14213D] rounded-full flex items-center justify-center mx-auto border border-[#B7B98A]">
+                    <div className="h-16 w-16 bg-[#B2AD7F]/20 text-[#14213D] rounded-full flex items-center justify-center mx-auto border border-[#B2AD7F]">
                       <CheckCircle2 className="h-8 w-8 text-[#14213D]" />
                     </div>
 
                     <div className="space-y-2 max-w-md mx-auto">
-                      <h2 className="text-2xl sm:text-3xl font-semibold text-[#14213D] tracking-tight">
+                      <h2 className="text-2xl sm:text-3xl font-normal text-[#14213D] tracking-tight">
                         Inquiry Received
                       </h2>
-                      <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                      <p className="text-sm sm:text-base text-[#667085] leading-relaxed">
                         Thank you for reaching out to KreaitX. Our leadership team has received your project briefing and will review your requirements. You will hear from us within 24 business hours.
                       </p>
                     </div>
@@ -203,8 +203,8 @@ export default function ContactPage() {
                               onClick={() => handleServiceToggle(s.title)}
                               className={`px-3.5 py-2.5 min-h-[44px] rounded-xl text-xs font-medium transition-all duration-200 cursor-pointer border flex items-center ${
                                 isSelected
-                                  ? "bg-[#14213D] text-[#F5F6F2] border-[#14213D] shadow-sm"
-                                  : "bg-[#F5F6F2] text-[#14213D] border-[#14213D]/10 hover:border-[#14213D]/30 hover:bg-slate-100"
+                                  ? "bg-[#14213D] text-[#F4F1E8] border-[#14213D] shadow-xs"
+                                  : "bg-[#F4F1E8] text-[#14213D] border-[#DEDCD3] hover:border-[#14213D]/40 hover:bg-white"
                               }`}
                             >
                               {s.title}
@@ -215,7 +215,7 @@ export default function ContactPage() {
                     </div>
 
                     {/* Step 2: Contact Info */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-slate-100">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-[#DEDCD3]">
                       <div>
                         <label
                           htmlFor="fullName"
@@ -232,7 +232,7 @@ export default function ContactPage() {
                             setFormData({ ...formData, fullName: e.target.value })
                           }
                           placeholder="e.g. Sarah Jenkins"
-                          className="w-full min-h-[48px] rounded-xl border border-slate-200 bg-[#F5F6F2] px-4 py-3 text-sm text-[#111111] placeholder:text-slate-400 focus:bg-white focus:border-[#B7B98A] focus:outline-none transition-colors"
+                          className="w-full min-h-[48px] rounded-xl border border-[#DEDCD3] bg-[#F4F1E8] px-4 py-3 text-sm text-[#182231] placeholder:text-[#667085] focus:bg-white focus:border-[#B2AD7F] focus:outline-none transition-colors"
                         />
                       </div>
 
@@ -252,7 +252,7 @@ export default function ContactPage() {
                             setFormData({ ...formData, email: e.target.value })
                           }
                           placeholder="sarah@company.com"
-                          className="w-full min-h-[48px] rounded-xl border border-slate-200 bg-[#F5F6F2] px-4 py-3 text-sm text-[#111111] placeholder:text-slate-400 focus:bg-white focus:border-[#B7B98A] focus:outline-none transition-colors"
+                          className="w-full min-h-[48px] rounded-xl border border-[#DEDCD3] bg-[#F4F1E8] px-4 py-3 text-sm text-[#182231] placeholder:text-[#667085] focus:bg-white focus:border-[#B2AD7F] focus:outline-none transition-colors"
                         />
                       </div>
 
@@ -271,13 +271,13 @@ export default function ContactPage() {
                             setFormData({ ...formData, companyName: e.target.value })
                           }
                           placeholder="e.g. Acme Health Corp"
-                          className="w-full min-h-[48px] rounded-xl border border-slate-200 bg-[#F5F6F2] px-4 py-3 text-sm text-[#111111] placeholder:text-slate-400 focus:bg-white focus:border-[#B7B98A] focus:outline-none transition-colors"
+                          className="w-full min-h-[48px] rounded-xl border border-[#DEDCD3] bg-[#F4F1E8] px-4 py-3 text-sm text-[#182231] placeholder:text-[#667085] focus:bg-white focus:border-[#B2AD7F] focus:outline-none transition-colors"
                         />
                       </div>
                     </div>
 
                     {/* Step 3: Budget & Timeline */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-slate-100">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-[#DEDCD3]">
                       <div>
                         <label
                           htmlFor="budgetRange"
@@ -291,7 +291,7 @@ export default function ContactPage() {
                           onChange={(e) =>
                             setFormData({ ...formData, budgetRange: e.target.value })
                           }
-                          className="w-full min-h-[48px] rounded-xl border border-slate-200 bg-[#F5F6F2] px-4 py-3 text-sm text-[#111111] focus:bg-white focus:border-[#B7B98A] focus:outline-none transition-colors"
+                          className="w-full min-h-[48px] rounded-xl border border-[#DEDCD3] bg-[#F4F1E8] px-4 py-3 text-sm text-[#182231] focus:bg-white focus:border-[#B2AD7F] focus:outline-none transition-colors"
                         >
                           <option value="">Select an estimated range...</option>
                           {budgetOptions.map((opt) => (
@@ -315,7 +315,7 @@ export default function ContactPage() {
                           onChange={(e) =>
                             setFormData({ ...formData, projectTimeline: e.target.value })
                           }
-                          className="w-full min-h-[48px] rounded-xl border border-slate-200 bg-[#F5F6F2] px-4 py-3 text-sm text-[#111111] focus:bg-white focus:border-[#B7B98A] focus:outline-none transition-colors"
+                          className="w-full min-h-[48px] rounded-xl border border-[#DEDCD3] bg-[#F4F1E8] px-4 py-3 text-sm text-[#182231] focus:bg-white focus:border-[#B2AD7F] focus:outline-none transition-colors"
                         >
                           <option value="">Select expected timeline...</option>
                           {timelineOptions.map((opt) => (
@@ -328,7 +328,7 @@ export default function ContactPage() {
                     </div>
 
                     {/* Step 4: Project Details */}
-                    <div className="pt-4 border-t border-slate-100">
+                    <div className="pt-4 border-t border-[#DEDCD3]">
                       <label
                         htmlFor="projectDetails"
                         className="block text-xs font-mono uppercase tracking-wider text-[#14213D] font-bold mb-2"
@@ -344,7 +344,7 @@ export default function ContactPage() {
                           setFormData({ ...formData, projectDetails: e.target.value })
                         }
                         placeholder="Tell us about the problem you are trying to solve, target goals, audience, and any current constraints..."
-                        className="w-full rounded-xl border border-slate-200 bg-[#F5F6F2] p-4 text-sm text-[#111111] placeholder:text-slate-400 focus:bg-white focus:border-[#B7B98A] focus:outline-none transition-colors resize-y"
+                        className="w-full rounded-xl border border-[#DEDCD3] bg-[#F4F1E8] p-4 text-sm text-[#182231] placeholder:text-[#667085] focus:bg-white focus:border-[#B2AD7F] focus:outline-none transition-colors resize-y"
                       />
                     </div>
 
@@ -368,7 +368,7 @@ export default function ContactPage() {
                         )}
                       </Button>
 
-                      <span className="text-xs text-slate-500 text-center sm:text-left">
+                      <span className="text-xs text-[#667085] text-center sm:text-left">
                         Strict confidentiality guaranteed. No spam ever.
                       </span>
                     </div>
@@ -380,7 +380,7 @@ export default function ContactPage() {
             {/* Right: Direct Studio Contact & Location */}
             <div className="lg:col-span-4 space-y-8">
               {/* Studio Info Card */}
-              <div className="rounded-2xl sm:rounded-3xl bg-white border border-[#14213D]/10 p-8 shadow-subtle space-y-6">
+              <div className="rounded-2xl bg-[#FAF8F2] border border-[#DEDCD3] p-8 space-y-6">
                 <span className="text-xs font-mono uppercase tracking-wider text-[#14213D] font-bold block">
                   Studio Headquarters
                 </span>
@@ -389,18 +389,18 @@ export default function ContactPage() {
                   <div className="flex items-start gap-3">
                     <MapPin className="h-5 w-5 text-[#14213D] shrink-0 mt-0.5" />
                     <div className="text-sm">
-                      <p className="font-semibold text-[#111111]">{siteConfig.name}</p>
-                      <p className="text-slate-600">{siteConfig.location.formatted}</p>
+                      <p className="font-semibold text-[#182231]">{siteConfig.name}</p>
+                      <p className="text-[#667085]">{siteConfig.location.formatted}</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <Mail className="h-5 w-5 text-[#14213D] shrink-0 mt-0.5" />
                     <div className="text-sm">
-                      <p className="font-semibold text-[#111111]">Direct Inquiries</p>
+                      <p className="font-semibold text-[#182231]">Direct Inquiries</p>
                       <a
                         href={`mailto:${siteConfig.contact.email}`}
-                        className="text-[#14213D] underline underline-offset-2 hover:text-[#B7B98A]"
+                        className="text-[#14213D] underline underline-offset-2 hover:text-[#B2AD7F]"
                       >
                         {siteConfig.contact.email}
                       </a>
@@ -410,25 +410,25 @@ export default function ContactPage() {
                   <div className="flex items-start gap-3">
                     <Clock className="h-5 w-5 text-[#14213D] shrink-0 mt-0.5" />
                     <div className="text-sm">
-                      <p className="font-semibold text-[#111111]">Working Hours &amp; Response</p>
-                      <p className="text-slate-600">Mon – Fri: 9:00 AM – 6:00 PM PKT</p>
-                      <p className="text-xs text-slate-500 mt-1">Guaranteed reply &lt; 24 business hours</p>
+                      <p className="font-semibold text-[#182231]">Working Hours &amp; Response</p>
+                      <p className="text-[#667085]">Mon – Fri: 9:00 AM – 6:00 PM PKT</p>
+                      <p className="text-xs text-[#667085] mt-1">Guaranteed reply &lt; 24 business hours</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Consultation Note */}
-              <div className="rounded-2xl sm:rounded-3xl bg-[#14213D] text-[#F5F6F2] p-8 relative overflow-hidden">
-                <div className="absolute inset-0 bg-hero-grid opacity-30" />
+              <div className="rounded-2xl bg-[#14213D] text-[#F4F1E8] p-8 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-48 h-48 bg-[#B2AD7F]/10 rounded-full blur-3xl pointer-events-none" />
                 <div className="relative z-10 space-y-3">
-                  <span className="text-xs font-mono uppercase tracking-wider text-[#B7B98A]">
+                  <span className="text-xs font-mono uppercase tracking-wider text-[#B2AD7F]">
                     Direct Partner Access
                   </span>
-                  <h3 className="text-xl font-semibold text-[#F5F6F2] tracking-tight">
+                  <h3 className="text-xl font-normal text-[#F4F1E8] tracking-tight">
                     What happens after you submit?
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#F5F6F2]/80 leading-relaxed font-normal">
+                  <p className="text-xs sm:text-sm text-[#F4F1E8]/80 leading-relaxed font-normal">
                     Your inquiry is reviewed directly by our creative and technical leadership. If there is a strong mutual fit, we will arrange a 30-minute scoping call to map out actionable next steps.
                   </p>
                 </div>

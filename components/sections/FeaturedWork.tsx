@@ -9,7 +9,7 @@ import { projectCaseStudies } from "@/data/siteData";
 
 export const FeaturedWork: React.FC = () => {
   return (
-    <section className="bg-[#F5F6F2] py-20 sm:py-28 lg:py-32 border-b border-[#14213D]/10">
+    <section className="bg-[#F4F1E8] py-20 sm:py-28 lg:py-32 border-b border-[#DEDCD3]">
       <Container size="default">
         {/* Section Header */}
         <Reveal yOffset={16}>
@@ -40,7 +40,7 @@ export const FeaturedWork: React.FC = () => {
 
             return (
               <Reveal key={project.id} yOffset={24}>
-                <article className="rounded-2xl sm:rounded-3xl bg-white border border-[#14213D]/10 overflow-hidden shadow-subtle hover:shadow-card transition-all duration-300">
+                <article className="rounded-2xl bg-[#FAF8F2] border border-[#DEDCD3] overflow-hidden">
                   <div className="grid grid-cols-1 lg:grid-cols-12">
                     {/* Editorial Project Overview */}
                     <div
@@ -51,30 +51,30 @@ export const FeaturedWork: React.FC = () => {
                       <div>
                         {/* Meta Tags */}
                         <div className="flex flex-wrap items-center gap-2 mb-6">
-                          <span className="px-3 py-1 rounded-full bg-[#F5F6F2] border border-[#14213D]/10 text-xs font-semibold text-[#14213D]">
+                          <span className="px-3 py-1 rounded-lg bg-[#F4F1E8] border border-[#DEDCD3] text-xs font-semibold text-[#14213D]">
                             {project.industry}
                           </span>
-                          <span className="text-xs text-slate-400 font-mono">
+                          <span className="text-xs text-[#667085] font-mono">
                             {project.year}
                           </span>
                         </div>
 
                         {/* Title & Summary */}
-                        <h3 className="text-2xl sm:text-3xl font-semibold text-[#14213D] tracking-tight">
+                        <h3 className="text-2xl sm:text-3xl font-normal text-[#14213D] tracking-tight">
                           {project.title}
                         </h3>
 
-                        <p className="mt-4 text-base text-slate-600 leading-relaxed">
+                        <p className="mt-4 text-base text-[#667085] leading-relaxed">
                           {project.summary}
                         </p>
 
                         {/* Strategy / Challenge Snapshot */}
-                        <div className="mt-6 pt-6 border-t border-slate-100 space-y-3">
+                        <div className="mt-6 pt-6 border-t border-[#DEDCD3] space-y-3">
                           <div>
                             <span className="text-xs font-bold uppercase tracking-wider text-[#14213D]">
                               The Challenge:{" "}
                             </span>
-                            <span className="text-xs text-slate-600">
+                            <span className="text-xs text-[#667085]">
                               {project.challenge}
                             </span>
                           </div>
@@ -82,7 +82,7 @@ export const FeaturedWork: React.FC = () => {
                             <span className="text-xs font-bold uppercase tracking-wider text-[#14213D]">
                               The Impact:{" "}
                             </span>
-                            <span className="text-xs text-slate-700 font-medium">
+                            <span className="text-xs text-[#182231] font-medium">
                               {project.impact}
                             </span>
                           </div>
@@ -90,12 +90,12 @@ export const FeaturedWork: React.FC = () => {
                       </div>
 
                       {/* Services & Link */}
-                      <div className="mt-8 pt-6 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
+                      <div className="mt-8 pt-6 border-t border-[#DEDCD3] flex flex-wrap items-center justify-between gap-4">
                         <div className="flex flex-wrap gap-1.5">
                           {project.services.map((s) => (
                             <span
                               key={s}
-                              className="text-[11px] font-medium text-[#14213D] bg-[#F5F6F2] px-2.5 py-1 rounded border border-[#14213D]/8"
+                              className="text-[11px] font-medium text-[#14213D] bg-[#F4F1E8] px-2.5 py-1 rounded-md border border-[#DEDCD3]"
                             >
                               {s}
                             </span>
@@ -104,10 +104,10 @@ export const FeaturedWork: React.FC = () => {
 
                         <Link
                           href={`/work#${project.id}`}
-                          className="inline-flex items-center text-xs font-bold uppercase tracking-wider text-[#14213D] hover:text-[#0E172B] transition-colors"
+                          className="inline-flex items-center text-xs font-semibold uppercase tracking-wider text-[#14213D] hover:text-[#0D182B] transition-colors"
                         >
                           <span>Explore Case Study</span>
-                          <ArrowUpRight className="ml-1 h-3.5 w-3.5" />
+                          <ArrowUpRight className="ml-1 h-3.5 w-3.5 text-[#B2AD7F]" />
                         </Link>
                       </div>
                     </div>
@@ -118,34 +118,34 @@ export const FeaturedWork: React.FC = () => {
                         isReversed ? "lg:order-1" : "lg:order-2"
                       }`}
                     >
-                      {/* Architectural Blueprint Grid */}
-                      <div className="absolute inset-0 bg-hero-grid opacity-30" />
+                      {/* Ambient light glow */}
+                      <div className="absolute top-0 right-0 w-48 h-48 bg-[#B2AD7F]/10 rounded-full blur-3xl pointer-events-none" />
 
                       <div className="relative z-10 space-y-6">
-                        <div className="inline-block px-3 py-1 rounded bg-white/10 text-[#F5F6F2] text-xs font-mono">
+                        <div className="inline-block px-3 py-1 rounded-md bg-white/10 text-[#F4F1E8] text-xs font-mono">
                           Case Study Blueprint // 0{index + 1}
                         </div>
 
                         <div className="space-y-3">
-                          <p className="text-xs font-mono uppercase tracking-wider text-[#B7B98A]">
+                          <p className="text-xs font-mono uppercase tracking-wider text-[#B2AD7F]">
                             Key Deliverables &amp; Craft
                           </p>
                           <ul className="space-y-2.5">
                             {project.deliverables.map((item) => (
                               <li
                                 key={item}
-                                className="flex items-center gap-2.5 text-sm font-medium text-[#F5F6F2]"
+                                className="flex items-center gap-2.5 text-sm font-medium text-[#F4F1E8]"
                               >
-                                <CheckCircle2 className="h-4 w-4 text-[#B7B98A] shrink-0" />
+                                <CheckCircle2 className="h-4 w-4 text-[#B2AD7F] shrink-0" />
                                 <span>{item}</span>
                               </li>
                             ))}
                           </ul>
                         </div>
 
-                        <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-[#F5F6F2]/60">
+                        <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-[#F4F1E8]/60">
                           <span>Client: {project.client}</span>
-                          <span className="font-mono text-[#B7B98A]">Verified Result</span>
+                          <span className="font-mono text-[#B2AD7F]">Verified Result</span>
                         </div>
                       </div>
                     </div>

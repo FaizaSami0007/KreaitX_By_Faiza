@@ -6,8 +6,10 @@ import Link from "next/link";
 import { ArrowRight, BarChart3, Search, Megaphone, PieChart } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
+import { SectionLabel } from "@/components/ui/SectionLabel";
+import { CapabilityList, CapabilityItem } from "@/components/ui/CapabilityList";
 
-const marketingCapabilities = [
+const marketingCapabilities: CapabilityItem[] = [
   {
     title: "Strategy & Planning",
     description: "Goal-oriented campaigns that create real impact.",
@@ -39,12 +41,12 @@ export const DigitalMarketingSection: React.FC = () => {
     <section
       id="digital-marketing"
       aria-labelledby="digital-marketing-heading"
-      className="scroll-mt-24 relative bg-white py-16 sm:py-24 lg:py-28 border-b border-[#14213D]/10 overflow-hidden"
+      className="scroll-mt-24 relative bg-[#F4F1E8] py-16 sm:py-24 lg:py-28 border-b border-[#DEDCD3] overflow-hidden"
     >
       <Container size="default" className="relative z-10 w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
         
-        {/* Main Editorial Card Container with Dove White (#F6F7F2) Canvas */}
-        <div className="relative rounded-[28px] sm:rounded-[32px] lg:rounded-[36px] bg-[#F6F7F2] border border-[#14213D]/08 p-6 sm:p-8 lg:p-10 xl:p-12 shadow-[0_12px_40px_-12px_rgba(20,33,61,0.05)]">
+        {/* Main Editorial Card Container on Warm White (#FAF8F2) Canvas */}
+        <div className="relative rounded-2xl bg-[#FAF8F2] border border-[#DEDCD3] p-6 sm:p-8 lg:p-10 xl:p-12">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-10 items-center">
             
@@ -53,7 +55,7 @@ export const DigitalMarketingSection: React.FC = () => {
             {/* ---------------------------------------------------------- */}
             <div className="lg:col-span-4 xl:col-span-4 w-full">
               <Reveal delay={0.1} yOffset={14}>
-                <div className="relative w-full aspect-[4/3] lg:aspect-[4/3.6] xl:aspect-[4/3.4] rounded-[22px] sm:rounded-[26px] overflow-hidden border border-[#14213D]/10 shadow-[0_8px_30px_-8px_rgba(20,33,61,0.12)] group">
+                <div className="relative w-full aspect-[4/3] lg:aspect-[4/3.6] xl:aspect-[4/3.4] rounded-xl overflow-hidden border border-[#DEDCD3] group">
                   <Image
                     src="/images/digital-marketing-asset.jpg"
                     alt="KreaitX Digital Marketing Performance & Analytics Dashboard"
@@ -76,15 +78,7 @@ export const DigitalMarketingSection: React.FC = () => {
               <div className="space-y-4 sm:space-y-5">
                 {/* Eyebrow: 02 — DIGITAL MARKETING */}
                 <Reveal delay={0.05} yOffset={10}>
-                  <div className="flex items-center gap-3">
-                    <span className="font-serif font-normal text-sm sm:text-base text-[#14213D]">
-                      02
-                    </span>
-                    <span className="w-6 h-[1.5px] bg-[#B2AD7F]" aria-hidden="true" />
-                    <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.22em] text-[#14213D]/70">
-                      DIGITAL MARKETING
-                    </span>
-                  </div>
+                  <SectionLabel number="02" label="DIGITAL MARKETING" />
                 </Reveal>
 
                 {/* Main Heading: Marketing that delivers results. */}
@@ -103,22 +97,20 @@ export const DigitalMarketingSection: React.FC = () => {
 
                 {/* Supporting Copy */}
                 <Reveal delay={0.18} yOffset={14}>
-                  <p className="text-sm sm:text-base text-[#14213D]/80 leading-[1.65] font-normal max-w-[380px]">
+                  <p className="text-sm sm:text-base text-[#182231]/80 leading-[1.65] font-normal max-w-[380px]">
                     Data-driven strategies to increase visibility, engagement, and conversions.
                   </p>
                 </Reveal>
 
-                {/* Primary CTA with Gold Badge */}
+                {/* Primary CTA */}
                 <Reveal delay={0.24} yOffset={14}>
                   <div className="pt-2">
                     <Link
                       href="/contact?service=digital-marketing"
-                      className="group inline-flex items-center justify-between pl-6 pr-2 py-2 rounded-full text-xs sm:text-sm font-medium text-[#F7F8FC] bg-[#14213D] hover:bg-[#0C182F] transition-all duration-200 shadow-md hover:-translate-y-0.5 active:scale-[0.98] min-h-[46px]"
+                      className="group inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3 rounded-xl text-xs sm:text-sm font-medium text-[#F4F1E8] bg-[#14213D] hover:bg-[#0D182B] transition-all duration-200 hover:-translate-y-0.5 active:scale-[0.98]"
                     >
-                      <span className="mr-3">Explore Digital Marketing</span>
-                      <div className="w-8 h-8 rounded-full bg-[#B2AD7F]/30 flex items-center justify-center text-white transition-all duration-200 group-hover:bg-[#B2AD7F]/50 group-hover:translate-x-0.5 shrink-0">
-                        <ArrowRight className="h-4 w-4" />
-                      </div>
+                      <span>Explore Digital Marketing</span>
+                      <ArrowRight className="h-4 w-4 text-[#B2AD7F] transition-transform duration-200 group-hover:translate-x-1" />
                     </Link>
                   </div>
                 </Reveal>
@@ -126,9 +118,9 @@ export const DigitalMarketingSection: React.FC = () => {
 
               {/* Bottom Micro-Copy */}
               <Reveal delay={0.3} yOffset={10}>
-                <div className="pt-5 sm:pt-6 border-t border-[#14213D]/10 flex items-center gap-2.5">
+                <div className="pt-5 sm:pt-6 border-t border-[#DEDCD3] flex items-center gap-2.5">
                   <span className="w-3.5 h-[1.5px] bg-[#B2AD7F]" aria-hidden="true" />
-                  <div className="text-[10px] font-mono tracking-[0.16em] text-[#14213D]/50 uppercase">
+                  <div className="text-[10px] font-mono tracking-[0.16em] text-[#182231]/50 uppercase">
                     <span>STRATEGY TODAY</span>
                     <span className="mx-1.5 opacity-40">/</span>
                     <span>MEASURABLE GROWTH TOMORROW</span>
@@ -141,44 +133,9 @@ export const DigitalMarketingSection: React.FC = () => {
             {/* ---------------------------------------------------------- */}
             {/* RIGHT: REFINED CAPABILITIES LIST (Cols 9-12)               */}
             {/* ---------------------------------------------------------- */}
-            <div className="lg:col-span-4 xl:col-span-4 w-full pl-0 lg:pl-4 xl:pl-6 border-t lg:border-t-0 lg:border-l border-[#14213D]/10 pt-6 lg:pt-0">
+            <div className="lg:col-span-4 xl:col-span-4 w-full pl-0 lg:pl-4 xl:pl-6 border-t lg:border-t-0 lg:border-l border-[#DEDCD3] pt-6 lg:pt-0">
               <Reveal delay={0.2} yOffset={16}>
-                <div className="divide-y divide-[#14213D]/10">
-                  {marketingCapabilities.map((item, index) => {
-                    const IconComponent = item.icon;
-                    return (
-                      <Link
-                        key={item.title}
-                        href={item.href}
-                        className={`group flex items-center justify-between py-4 sm:py-4.5 transition-all duration-200 ${
-                          index === 0 ? "pt-0" : ""
-                        } ${index === marketingCapabilities.length - 1 ? "pb-0" : ""}`}
-                      >
-                        <div className="flex items-center gap-3.5 sm:gap-4">
-                          {/* Circular Warm Neutral Icon Ring */}
-                          <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full border border-[#14213D]/08 bg-white/90 flex items-center justify-center text-[#B2AD7F] group-hover:border-[#B2AD7F]/50 group-hover:bg-white transition-all duration-200 shrink-0 shadow-2xs">
-                            <IconComponent className="h-4.5 w-4.5 sm:h-5 sm:w-5 stroke-[1.7]" />
-                          </div>
-
-                          {/* Title & Subtitle */}
-                          <div className="space-y-0.5">
-                            <h3 className="text-sm sm:text-base font-semibold text-[#14213D] tracking-tight group-hover:text-[#0C182F] transition-colors">
-                              {item.title}
-                            </h3>
-                            <p className="text-xs sm:text-[13px] text-[#14213D]/65 font-normal leading-relaxed">
-                              {item.description}
-                            </p>
-                          </div>
-                        </div>
-
-                        {/* Interactive Hover Arrow */}
-                        <div className="ml-3 shrink-0 text-[#14213D]/30 group-hover:text-[#B2AD7F] group-hover:translate-x-1 transition-all duration-200">
-                          <ArrowRight className="h-4 w-4" />
-                        </div>
-                      </Link>
-                    );
-                  })}
-                </div>
+                <CapabilityList items={marketingCapabilities} theme="light" />
               </Reveal>
             </div>
 

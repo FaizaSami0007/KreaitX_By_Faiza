@@ -86,122 +86,179 @@ export default function SolutionsPage() {
       {/* SECTION 03: SOCIAL MEDIA MANAGEMENT */}
       <SocialMediaSection />
 
-      {/* REMAINING SERVICES CATALOG (04 to 07) */}
-      <section className="bg-[#F5F6F2] py-20 sm:py-28">
-        <Container size="default">
+      {/* REMAINING SERVICES CATALOG (04 to 07) — ALTERNATING EDITORIAL COMPOSITIONS */}
+      <section className="bg-[#F4F1E8] py-20 sm:py-28">
+        <Container size="default" className="w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="space-y-16 sm:space-y-24">
-            {remainingServices.map((service) => (
-              <div
-                key={service.id}
-                id={service.id}
-                className="scroll-mt-28 rounded-2xl sm:rounded-3xl bg-white border border-[#14213D]/10 p-8 sm:p-12 lg:p-14 shadow-subtle"
-              >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
-                  {/* Left: Summary & Problem Solved */}
-                  <div className="lg:col-span-6 space-y-6">
-                    <div className="flex items-center gap-3">
-                      <span className="font-mono text-xs font-bold text-[#F5F6F2] bg-[#14213D] px-2.5 py-1 rounded">
-                        {service.number}
-                      </span>
-                      <span className="text-xs font-semibold uppercase tracking-widest text-[#14213D]/70">
-                        {service.category}
-                      </span>
+            {remainingServices.map((service, idx) => {
+              const isDarkPanel = idx % 2 === 0;
+              const isReversed = idx % 2 === 1;
+
+              return (
+                <div
+                  key={service.id}
+                  id={service.id}
+                  className="scroll-mt-28 rounded-2xl bg-[#FAF8F2] border border-[#DEDCD3] p-6 sm:p-10 lg:p-12 xl:p-14"
+                >
+                  <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+                    {/* Narrative Column */}
+                    <div
+                      className={`lg:col-span-6 space-y-6 flex flex-col justify-between h-full ${
+                        isReversed ? "lg:order-2" : "lg:order-1"
+                      }`}
+                    >
+                      <div className="space-y-5">
+                        <div className="flex items-center gap-3">
+                          <span className="font-serif text-sm sm:text-base text-[#14213D]">
+                            {service.number}
+                          </span>
+                          <span className="w-6 h-[1.5px] bg-[#B2AD7F]" aria-hidden="true" />
+                          <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-[#182231]/70">
+                            {service.category}
+                          </span>
+                        </div>
+
+                        <h2 className="text-[clamp(32px,3.8vw,52px)] font-normal text-[#14213D] tracking-[-0.035em] leading-[1.06]">
+                          {service.title}
+                        </h2>
+
+                        <p className="text-base sm:text-lg font-medium text-[#14213D]/90">
+                          {service.tagline}
+                        </p>
+
+                        <p className="text-sm sm:text-base text-[#667085] leading-relaxed font-normal">
+                          {service.description}
+                        </p>
+
+                        {/* Problem Solved Box */}
+                        <div className="rounded-xl bg-[#F4F1E8] p-5 border border-[#DEDCD3]">
+                          <p className="text-xs font-mono uppercase tracking-wider text-[#14213D] font-bold mb-1.5">
+                            The Core Problem We Solve
+                          </p>
+                          <p className="text-xs sm:text-sm text-[#667085] leading-relaxed">
+                            {service.problemSolved}
+                          </p>
+                        </div>
+
+                        {/* Related capabilities */}
+                        <div className="pt-2">
+                          <span className="text-xs font-mono uppercase tracking-wider text-[#667085] block mb-2">
+                            Connected With
+                          </span>
+                          <div className="flex flex-wrap gap-2">
+                            {service.relatedCapabilities.map((rel) => (
+                              <Link
+                                key={rel}
+                                href="/solutions#branding"
+                                className="text-xs font-medium text-[#14213D] bg-[#F4F1E8] hover:bg-[#14213D] hover:text-[#F4F1E8] border border-[#DEDCD3] px-3 py-1 rounded-lg transition-all duration-200"
+                              >
+                                + {rel}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="pt-6 border-t border-[#DEDCD3]">
+                        <Button
+                          href={`/contact?service=${service.id}`}
+                          variant="primary"
+                          size="md"
+                          withArrow
+                          className="w-full sm:w-auto"
+                        >
+                          Inquire for {service.title}
+                        </Button>
+                      </div>
                     </div>
 
-                    <h2 className="text-3xl sm:text-4xl font-semibold text-[#14213D] tracking-tight">
-                      {service.title}
-                    </h2>
+                    {/* Deliverables & Workflow Column */}
+                    <div
+                      className={`lg:col-span-6 space-y-8 p-6 sm:p-8 lg:p-9 rounded-xl border flex flex-col justify-between ${
+                        isDarkPanel
+                          ? "bg-[#14213D] text-[#F4F1E8] border-white/10 shadow-lg"
+                          : "bg-[#F4F1E8] text-[#182231] border-[#DEDCD3]"
+                      } ${isReversed ? "lg:order-1" : "lg:order-2"}`}
+                    >
+                      <div>
+                        <h3
+                          className={`text-xs font-mono uppercase tracking-wider font-bold mb-4 flex items-center gap-2 ${
+                            isDarkPanel ? "text-[#B2AD7F]" : "text-[#14213D]"
+                          }`}
+                        >
+                          <Layers className="h-4 w-4 text-[#B2AD7F]" />
+                          What KreaitX Delivers
+                        </h3>
 
-                    <p className="text-base sm:text-lg font-medium text-[#14213D]/90">
-                      {service.tagline}
-                    </p>
+                        <ul className="space-y-3">
+                          {service.deliverables.map((item) => (
+                            <li
+                              key={item}
+                              className={`flex items-start gap-3 text-sm font-medium ${
+                                isDarkPanel ? "text-[#F4F1E8]/90" : "text-[#182231]/90"
+                              }`}
+                            >
+                              <CheckCircle2
+                                className={`h-4 w-4 shrink-0 mt-0.5 ${
+                                  isDarkPanel ? "text-[#B2AD7F]" : "text-[#14213D]"
+                                }`}
+                              />
+                              <span>{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
 
-                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-                      {service.description}
-                    </p>
+                      <div
+                        className={`pt-6 border-t ${
+                          isDarkPanel ? "border-white/10" : "border-[#DEDCD3]"
+                        }`}
+                      >
+                        <h3
+                          className={`text-xs font-mono uppercase tracking-wider font-bold mb-3 flex items-center gap-2 ${
+                            isDarkPanel ? "text-[#B2AD7F]" : "text-[#14213D]"
+                          }`}
+                        >
+                          <Cpu className="h-4 w-4 text-[#B2AD7F]" />
+                          Standard Workflow
+                        </h3>
+                        <ol
+                          className={`space-y-2 text-xs sm:text-sm ${
+                            isDarkPanel ? "text-[#F4F1E8]/70" : "text-[#667085]"
+                          }`}
+                        >
+                          {service.workflow.map((step, sIdx) => (
+                            <li key={step} className="flex items-center gap-2">
+                              <span
+                                className={`font-mono text-xs font-bold ${
+                                  isDarkPanel ? "text-[#B2AD7F]" : "text-[#14213D]"
+                                }`}
+                              >
+                                0{sIdx + 1}.
+                              </span>
+                              <span>{step}</span>
+                            </li>
+                          ))}
+                        </ol>
+                      </div>
 
-                    {/* Problem Solved Box */}
-                    <div className="rounded-xl bg-[#F5F6F2] p-5 border border-[#14213D]/10">
-                      <p className="text-xs font-mono uppercase tracking-wider text-rose-800 font-bold mb-1.5">
-                        The Core Problem We Solve
-                      </p>
-                      <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-                        {service.problemSolved}
-                      </p>
-                    </div>
-
-                    {/* Related capabilities */}
-                    <div className="pt-2">
-                      <span className="text-xs font-mono uppercase tracking-wider text-slate-400 block mb-2">
-                        Connected With
-                      </span>
-                      <div className="flex flex-wrap gap-2">
-                        {service.relatedCapabilities.map((rel) => (
-                          <Link
-                            key={rel}
-                            href="/solutions#branding"
-                            className="text-xs font-medium text-[#14213D] bg-[#F5F6F2] hover:bg-[#14213D] hover:text-white border border-[#14213D]/10 px-3 py-1 rounded-full transition-all duration-200"
-                          >
-                            + {rel}
-                          </Link>
-                        ))}
+                      <div
+                        className={`pt-5 border-t flex items-center justify-between text-xs ${
+                          isDarkPanel
+                            ? "border-white/10 text-[#F4F1E8]/50"
+                            : "border-[#DEDCD3] text-[#667085]"
+                        }`}
+                      >
+                        <span>Collaborative &amp; transparent delivery</span>
+                        <span className="font-mono uppercase tracking-wider text-[#B2AD7F]">
+                          {service.number} / 07
+                        </span>
                       </div>
                     </div>
                   </div>
-
-                  {/* Right: Deliverables & Workflow */}
-                  <div className="lg:col-span-6 space-y-8 bg-[#F5F6F2] p-6 sm:p-8 rounded-2xl border border-[#14213D]/10 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-xs font-mono uppercase tracking-wider text-[#14213D] font-bold mb-4 flex items-center gap-2">
-                        <Layers className="h-4 w-4 text-[#B7B98A]" />
-                        What KreaitX Delivers
-                      </h3>
-
-                      <ul className="space-y-3">
-                        {service.deliverables.map((item) => (
-                          <li
-                            key={item}
-                            className="flex items-start gap-3 text-sm text-slate-700 font-medium"
-                          >
-                            <CheckCircle2 className="h-4 w-4 text-[#14213D] shrink-0 mt-0.5" />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="pt-6 border-t border-[#14213D]/10">
-                      <h3 className="text-xs font-mono uppercase tracking-wider text-[#14213D] font-bold mb-3 flex items-center gap-2">
-                        <Cpu className="h-4 w-4 text-[#B7B98A]" />
-                        Standard Workflow
-                      </h3>
-                      <ol className="space-y-2 text-xs sm:text-sm text-slate-600">
-                        {service.workflow.map((step, sIdx) => (
-                          <li key={step} className="flex items-center gap-2">
-                            <span className="font-mono text-xs font-bold text-[#14213D]">
-                              0{sIdx + 1}.
-                            </span>
-                            <span>{step}</span>
-                          </li>
-                        ))}
-                      </ol>
-                    </div>
-
-                    <div className="pt-6 border-t border-[#14213D]/10 flex items-center justify-between">
-                      <span className="text-xs text-slate-500 font-medium">Ready to explore scope?</span>
-                      <Button
-                        href={`/contact?service=${service.id}`}
-                        variant="primary"
-                        size="sm"
-                        withArrow
-                      >
-                        Inquire for {service.title}
-                      </Button>
-                    </div>
-                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </Container>
       </section>
