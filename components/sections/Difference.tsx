@@ -103,7 +103,7 @@ export const Difference: React.FC = () => {
     <section
       id="difference"
       aria-labelledby="difference-heading"
-      className="relative bg-[#FBFBFA] text-[#14213D] py-24 sm:py-32 lg:py-36 border-b border-[#14213D]/10 overflow-hidden select-none"
+      className="relative bg-[#F4F1E8] text-[#182231] py-24 sm:py-32 lg:py-36 border-b border-[#DEDCD3] overflow-hidden select-none"
     >
       {/* Background Architectural Geometry - Top-Left & Top-Right Arcs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">

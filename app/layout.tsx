@@ -124,7 +124,7 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className="flex min-h-screen flex-col bg-[#F5F6F2] font-sans text-[#111111] antialiased"
+        className="flex min-h-screen flex-col bg-[#F4F1E8] font-sans text-[#182231] antialiased"
       >
         <Navbar />
         <main id="main-content" className="flex-1">

@@ -88,34 +88,34 @@ export default function AboutPage() {
       </section>
 
       {/* The Story & Origin */}
-      <section id="studio-story" className="bg-[#F5F6F2] py-20 sm:py-28 border-b border-[#14213D]/10">
+      <section id="studio-story" className="bg-[#F4F1E8] py-20 sm:py-28 border-b border-[#DEDCD3]">
         <Container size="default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-5">
-              <span className="text-xs font-semibold uppercase tracking-[0.12em] text-[#14213D]/60 mb-2 block">
-                The Origin
+              <span className="text-xs font-mono font-semibold uppercase tracking-[0.2em] text-[#14213D]/70 mb-3 block">
+                01 — THE ORIGIN
               </span>
-              <h2 className="text-3xl sm:text-4xl font-semibold text-[#14213D] tracking-tight leading-tight">
+              <h2 className="text-3xl sm:text-4xl font-normal text-[#14213D] tracking-tight leading-tight">
                 Creative + IT: <br />
                 The genesis of KreaitX.
               </h2>
 
-              <div className="mt-8 p-6 rounded-2xl bg-white border border-[#14213D]/10 shadow-sm space-y-3">
-                <div className="text-xs font-mono uppercase tracking-wider text-[#14213D]/50">
+              <div className="mt-8 p-6 rounded-xl bg-[#FAF8F2] border border-[#DEDCD3] space-y-3">
+                <div className="text-xs font-mono uppercase tracking-wider text-[#667085]">
                   Headquarters &amp; Origins
                 </div>
-                <div className="text-lg font-bold text-[#14213D]">
+                <div className="text-lg font-medium text-[#14213D]">
                   {siteConfig.location.formatted}
                 </div>
-                <p className="text-xs text-slate-600 leading-relaxed">
+                <p className="text-xs text-[#667085] leading-relaxed">
                   Collaborating with forward-thinking local enterprises and international clients seeking unified creative and digital solutions.
                 </p>
               </div>
             </div>
 
-            <div className="lg:col-span-7 space-y-6 text-base sm:text-lg text-slate-700 leading-relaxed">
+            <div className="lg:col-span-7 space-y-6 text-base sm:text-lg text-[#182231]/80 leading-relaxed">
               <p>
-                The name <strong className="text-[#14213D]">KreaitX</strong> is a deliberate fusion of <strong className="text-[#14213D]">Creative</strong> and <strong className="text-[#14213D]">IT</strong>. For years, businesses have been forced to choose between creative agencies that lack engineering depth and technical software houses that treat design and marketing as an afterthought.
+                The name <strong className="text-[#14213D] font-semibold">KreaitX</strong> is a deliberate fusion of <strong className="text-[#14213D] font-semibold">Creative</strong> and <strong className="text-[#14213D] font-semibold">IT</strong>. For years, businesses have been forced to choose between creative agencies that lack engineering depth and technical software houses that treat design and marketing as an afterthought.
               </p>
               <p>
                 When brand designers, cinematographers, and developers work in separate silos, the customer experience fragments. Strategy gets diluted, timelines drag out, and the end product feels disconnected.
@@ -129,7 +129,7 @@ export default function AboutPage() {
       </section>
 
       {/* Core Studio Values */}
-      <section className="bg-white py-20 sm:py-28 border-b border-[#14213D]/10">
+      <section className="bg-[#FAF8F2] py-20 sm:py-28 border-b border-[#DEDCD3]">
         <Container size="default">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mb-16">
@@ -149,15 +149,15 @@ export default function AboutPage() {
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {values.map((v, i) => (
               <StaggerItem key={v.title}>
-                <div className="rounded-2xl bg-[#F5F6F2] p-8 sm:p-10 border border-[#14213D]/10 h-full flex flex-col justify-between hover:border-[#14213D]/25 hover:bg-white hover:shadow-card transition-all duration-200">
+                <div className="rounded-2xl bg-[#F4F1E8] p-8 sm:p-10 border border-[#DEDCD3] h-full flex flex-col justify-between transition-all duration-200">
                   <div>
-                    <span className="font-mono text-xs font-bold text-[#14213D] px-2.5 py-1 rounded bg-white border border-[#14213D]/10 inline-block mb-4">
+                    <span className="font-mono text-xs font-bold text-[#14213D] px-2.5 py-1 rounded-md bg-white border border-[#DEDCD3] inline-block mb-4">
                       0{i + 1}
                     </span>
-                    <h3 className="text-xl font-semibold text-[#14213D] tracking-tight mb-3">
+                    <h3 className="text-xl font-normal text-[#14213D] tracking-tight mb-3">
                       {v.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+                    <p className="text-sm sm:text-base text-[#667085] leading-relaxed font-normal">
                       {v.description}
                     </p>
                   </div>

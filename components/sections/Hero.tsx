@@ -54,23 +54,23 @@ export const Hero: React.FC = () => {
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
           {/* Eyebrow */}
           <Reveal delay={0.05} yOffset={12}>
-            <div className="flex items-center justify-center gap-2.5 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.22em] text-[#F5F6F2]/80 mb-4 sm:mb-6">
+            <div className="flex items-center justify-center gap-2.5 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.22em] text-[#F4F1E8]/80 mb-4 sm:mb-6">
               <span>IDEAS</span>
-              <span className="text-[#B7B98A]">×</span>
+              <span className="text-[#B2AD7F]">×</span>
               <span>TECHNOLOGY</span>
-              <span className="text-[#B7B98A]">×</span>
+              <span className="text-[#B2AD7F]">×</span>
               <span>IMPACT</span>
             </div>
           </Reveal>
 
           {/* Main Headline (Fluid clamp typography on single line) */}
           <Reveal delay={0.12} yOffset={18}>
-            <h1 className="text-[clamp(28px,5.2vw,62px)] font-semibold tracking-[-0.04em] leading-[1.08] text-[#F5F6F2] whitespace-nowrap">
+            <h1 className="text-[clamp(28px,5.2vw,62px)] font-semibold tracking-[-0.04em] leading-[1.08] text-[#F4F1E8] whitespace-nowrap">
               We Create{" "}
-              <span className="font-serif-italic font-normal text-[#B7B98A] tracking-tight">
+              <span className="font-serif-italic font-normal text-[#B2AD7F] tracking-tight">
                 Digital
               </span>{" "}
-              <span className="font-serif font-normal text-[#F5F6F2]">
+              <span className="font-serif font-normal text-[#F4F1E8]">
                 Realities
               </span>
             </h1>
@@ -78,7 +78,7 @@ export const Hero: React.FC = () => {
 
           {/* Sub-headline */}
           <Reveal delay={0.2} yOffset={16}>
-            <p className="mt-4 sm:mt-6 text-[clamp(14px,1.5vw,18px)] text-[#F5F6F2]/80 font-normal leading-relaxed max-w-lg mx-auto">
+            <p className="mt-4 sm:mt-6 text-[clamp(14px,1.5vw,18px)] text-[#F4F1E8]/80 font-normal leading-relaxed max-w-lg mx-auto">
               A creative technology agency helping brands design, build and grow in a digital-first world.
             </p>
           </Reveal>
@@ -89,19 +89,19 @@ export const Hero: React.FC = () => {
               {/* Primary Button */}
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center font-semibold text-[#14213D] bg-[#F5F6F2] hover:bg-white rounded-full px-6 sm:px-7 py-3 min-h-[48px] w-full sm:w-auto text-xs sm:text-sm transition-all duration-200 hover:-translate-y-0.5 shadow-lg active:scale-[0.98]"
+                className="group inline-flex items-center justify-center font-medium text-[#14213D] bg-[#F4F1E8] hover:bg-white rounded-xl px-6 sm:px-7 py-3 min-h-[48px] w-full sm:w-auto text-xs sm:text-sm transition-all duration-200 hover:-translate-y-0.5 active:scale-[0.98]"
               >
                 <span>Start a Project</span>
-                <ArrowRight className="ml-2 h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-1" />
+                <ArrowRight className="ml-2 h-3.5 w-3.5 text-[#B2AD7F] transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
 
               {/* Secondary Button: Watch Showreel */}
               <button
                 type="button"
                 onClick={() => setVideoModalOpen(true)}
-                className="group inline-flex items-center justify-center font-medium text-[#F5F6F2] bg-white/10 hover:bg-white/15 border border-[#F5F6F2]/20 hover:border-[#F5F6F2]/40 rounded-full px-5 sm:px-6 py-3 min-h-[48px] w-full sm:w-auto text-xs sm:text-sm backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 active:scale-[0.98] cursor-pointer"
+                className="group inline-flex items-center justify-center font-medium text-[#F4F1E8] bg-white/10 hover:bg-white/15 border border-white/20 hover:border-white/40 rounded-xl px-5 sm:px-6 py-3 min-h-[48px] w-full sm:w-auto text-xs sm:text-sm backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 active:scale-[0.98] cursor-pointer"
               >
-                <span className="mr-2 flex h-5 w-5 items-center justify-center rounded-full bg-[#B7B98A] text-[#14213D] transition-transform duration-200 group-hover:scale-110">
+                <span className="mr-2 flex h-5 w-5 items-center justify-center rounded-full bg-[#B2AD7F] text-[#14213D] transition-transform duration-200 group-hover:scale-110">
                   <Play className="h-2.5 w-2.5 fill-current ml-0.5" />
                 </span>
                 <span>Watch Showreel</span>
@@ -111,30 +111,30 @@ export const Hero: React.FC = () => {
 
           {/* Bottom Row: Authentic Core Capability Pillars */}
           <Reveal delay={0.35} yOffset={16} className="w-full">
-            <div className="mt-10 sm:mt-14 pt-6 border-t border-[#F5F6F2]/15 grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-6 max-w-2xl mx-auto items-center text-center">
-              <div className="p-3.5 rounded-xl bg-white/[0.04] border border-[#F5F6F2]/10">
-                <div className="text-xs font-mono uppercase tracking-wider text-[#B7B98A] font-bold">
+            <div className="mt-10 sm:mt-14 pt-6 border-t border-white/15 grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-6 max-w-2xl mx-auto items-center text-center">
+              <div className="p-3.5 rounded-xl bg-white/[0.04] border border-white/10">
+                <div className="text-xs font-mono uppercase tracking-wider text-[#B2AD7F] font-bold">
                   Strategy &amp; Brand
                 </div>
-                <div className="text-xs text-[#F5F6F2]/80 mt-1 font-medium">
+                <div className="text-xs text-[#F4F1E8]/80 mt-1 font-medium">
                   Identity &amp; Positioning
                 </div>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-white/[0.04] border border-[#F5F6F2]/10">
-                <div className="text-xs font-mono uppercase tracking-wider text-[#B7B98A] font-bold">
+              <div className="p-3.5 rounded-xl bg-white/[0.04] border border-white/10">
+                <div className="text-xs font-mono uppercase tracking-wider text-[#B2AD7F] font-bold">
                   Cinematic Media
                 </div>
-                <div className="text-xs text-[#F5F6F2]/80 mt-1 font-medium">
+                <div className="text-xs text-[#F4F1E8]/80 mt-1 font-medium">
                   Production &amp; Motion
                 </div>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-white/[0.04] border border-[#F5F6F2]/10">
-                <div className="text-xs font-mono uppercase tracking-wider text-[#B7B98A] font-bold">
+              <div className="p-3.5 rounded-xl bg-white/[0.04] border border-white/10">
+                <div className="text-xs font-mono uppercase tracking-wider text-[#B2AD7F] font-bold">
                   Digital Engineering
                 </div>
-                <div className="text-xs text-[#F5F6F2]/80 mt-1 font-medium">
+                <div className="text-xs text-[#F4F1E8]/80 mt-1 font-medium">
                   Web &amp; Custom Platforms
                 </div>
               </div>
