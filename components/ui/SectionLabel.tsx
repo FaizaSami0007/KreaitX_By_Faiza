@@ -17,25 +17,28 @@ export const SectionLabel: React.FC<SectionLabelProps> = ({
   const isDark = theme === "dark";
 
   return (
-    <div className={cn("inline-flex items-center gap-3", className)}>
+    <div className={cn("inline-flex items-center gap-2.5", className)}>
       {number && (
         <span
           className={cn(
-            "font-serif text-sm sm:text-base font-normal",
-            isDark ? "text-[#B2AD7F]" : "text-[#14213D]"
+            "font-display text-sm sm:text-base font-bold",
+            isDark ? "text-purple-400" : "text-purple-600"
           )}
         >
           {number}
         </span>
       )}
       <span
-        className={cn("w-6 h-[1.5px]", isDark ? "bg-[#B2AD7F]/70" : "bg-[#B2AD7F]")}
+        className={cn(
+          "w-5 h-[2px] rounded-full",
+          isDark ? "bg-purple-500" : "bg-gradient-to-r from-purple-600 to-indigo-600"
+        )}
         aria-hidden="true"
       />
       <span
         className={cn(
-          "text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em]",
-          isDark ? "text-[#F4F1E8]/70" : "text-[#182231]/70"
+          "text-xs font-sans font-bold uppercase tracking-wider",
+          isDark ? "text-purple-300" : "text-purple-700"
         )}
       >
         {label}

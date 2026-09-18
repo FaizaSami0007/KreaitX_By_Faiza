@@ -2,7 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { CheckCircle2, ArrowRight, Layers, Cpu } from "lucide-react";
+import { CheckCircle2, ArrowRight, Layers, Cpu, Sparkles } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
@@ -25,8 +25,8 @@ export default function SolutionsPage() {
 
   return (
     <>
-      {/* Cinematic Services Page Hero with User-Provided Art (Preserved Exactly) */}
-      <section className="relative overflow-hidden bg-[#14213D] text-[#F5F6F2] min-h-[75vh] flex items-center justify-center py-20 lg:py-28 border-b border-[#F5F6F2]/10">
+      {/* Services Page Hero with User-Provided Art */}
+      <section className="relative overflow-hidden bg-slate-950 text-white min-h-[75vh] flex items-center justify-center py-20 lg:py-28 border-b border-slate-800">
         {/* User-Provided Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -35,36 +35,37 @@ export default function SolutionsPage() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center select-none"
+            className="object-cover object-center select-none opacity-80"
           />
-          {/* Subtle atmospheric vignette overlay for crisp text readability */}
-          <div className="absolute inset-0 bg-[#14213D]/70 via-[#14213D]/50 to-[#14213D]/80" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#14213D] via-transparent to-[#14213D]/60" />
+          {/* Soft atmospheric gradient overlays */}
+          <div className="absolute inset-0 bg-slate-950/70 via-slate-950/50 to-slate-950/80" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/60" />
         </div>
 
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
-              <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.16em] text-[#B7B98A] px-4 py-1.5 rounded-full bg-white/10 border border-[#F5F6F2]/15 mb-6 inline-block backdrop-blur-md">
-                Capabilities × Solutions Architecture
+              <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-purple-300 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 mb-6 backdrop-blur-md shadow-subtle">
+                <Sparkles className="h-3.5 w-3.5 text-cyan-400 animate-pulse" />
+                <span>Capabilities × Solutions Architecture</span>
               </span>
-              <h1 className="text-[clamp(28px,5vw,56px)] font-semibold text-[#F5F6F2] tracking-[-0.04em] leading-[1.08]">
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-[64px] font-bold text-white tracking-tight leading-[1.08]">
                 Creative &amp; digital capabilities,{" "}
-                <span className="font-serif-italic font-normal text-[#B7B98A]">
+                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
                   connected
                 </span>.
               </h1>
-              <p className="mt-6 text-[clamp(14px,1.5vw,18px)] text-[#F5F6F2]/80 leading-relaxed font-normal max-w-2xl">
+              <p className="mt-6 text-lg sm:text-xl text-slate-300 leading-relaxed font-sans font-normal max-w-2xl">
                 We organize our capabilities around your business challenges rather than isolated deliverables. Discover how each discipline integrates seamlessly into your broader growth engine.
               </p>
 
-              <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 w-full sm:w-auto">
-                <Button href="/contact" variant="white" size="md" withArrow className="w-full sm:w-auto min-h-[48px]">
+              <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+                <Button href="/contact" variant="primary" size="md" withArrow className="w-full sm:w-auto min-h-[48px]">
                   Start a Project
                 </Button>
                 <a
                   href="#connected-capabilities"
-                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-full text-xs sm:text-sm font-medium text-[#F5F6F2] bg-white/10 hover:bg-white/20 border border-[#F5F6F2]/20 backdrop-blur-md transition-all duration-200 w-full sm:w-auto"
+                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-full text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md transition-all duration-200 w-full sm:w-auto"
                 >
                   Explore All 7 Services ↓
                 </a>
@@ -86,8 +87,8 @@ export default function SolutionsPage() {
       {/* SECTION 03: SOCIAL MEDIA MANAGEMENT */}
       <SocialMediaSection />
 
-      {/* REMAINING SERVICES CATALOG (04 to 07) — ALTERNATING EDITORIAL COMPOSITIONS */}
-      <section className="bg-[#F4F1E8] py-20 sm:py-28">
+      {/* REMAINING SERVICES CATALOG (04 to 07) — SOFTY SOLUTIONS ROUNDED COMPOSITIONS */}
+      <section className="bg-slate-50/50 py-20 sm:py-28 border-b border-slate-200/80">
         <Container size="default" className="w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="space-y-16 sm:space-y-24">
             {remainingServices.map((service, idx) => {
@@ -98,7 +99,7 @@ export default function SolutionsPage() {
                 <div
                   key={service.id}
                   id={service.id}
-                  className="scroll-mt-28 rounded-2xl bg-[#FAF8F2] border border-[#DEDCD3] p-6 sm:p-10 lg:p-12 xl:p-14"
+                  className="scroll-mt-28 rounded-3xl bg-white border border-slate-200/80 shadow-card p-6 sm:p-10 lg:p-12 xl:p-14"
                 >
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
                     {/* Narrative Column */}
@@ -109,40 +110,40 @@ export default function SolutionsPage() {
                     >
                       <div className="space-y-5">
                         <div className="flex items-center gap-3">
-                          <span className="font-serif text-sm sm:text-base text-[#14213D]">
+                          <span className="font-display text-base font-bold text-purple-600">
                             {service.number}
                           </span>
-                          <span className="w-6 h-[1.5px] bg-[#B2AD7F]" aria-hidden="true" />
-                          <span className="text-[10px] sm:text-[11px] font-mono font-semibold uppercase tracking-[0.2em] text-[#182231]/70">
+                          <span className="w-6 h-[2px] bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full" aria-hidden="true" />
+                          <span className="text-xs font-sans font-bold uppercase tracking-wider text-slate-500">
                             {service.category}
                           </span>
                         </div>
 
-                        <h2 className="text-[clamp(32px,3.8vw,52px)] font-normal text-[#14213D] tracking-[-0.035em] leading-[1.06]">
+                        <h2 className="font-display text-3xl sm:text-4xl lg:text-[46px] font-bold text-slate-900 tracking-tight leading-[1.1]">
                           {service.title}
                         </h2>
 
-                        <p className="text-base sm:text-lg font-medium text-[#14213D]/90">
+                        <p className="text-base sm:text-lg font-semibold text-purple-700">
                           {service.tagline}
                         </p>
 
-                        <p className="text-sm sm:text-base text-[#667085] leading-relaxed font-normal">
+                        <p className="text-base text-slate-600 leading-relaxed font-sans font-normal">
                           {service.description}
                         </p>
 
                         {/* Problem Solved Box */}
-                        <div className="rounded-xl bg-[#F4F1E8] p-5 border border-[#DEDCD3]">
-                          <p className="text-xs font-mono uppercase tracking-wider text-[#14213D] font-bold mb-1.5">
+                        <div className="rounded-2xl bg-slate-50 p-5 border border-slate-200/60">
+                          <p className="text-xs font-sans uppercase tracking-wider text-slate-900 font-bold mb-1.5">
                             The Core Problem We Solve
                           </p>
-                          <p className="text-xs sm:text-sm text-[#667085] leading-relaxed">
+                          <p className="text-sm text-slate-600 leading-relaxed font-sans">
                             {service.problemSolved}
                           </p>
                         </div>
 
                         {/* Related capabilities */}
                         <div className="pt-2">
-                          <span className="text-xs font-mono uppercase tracking-wider text-[#667085] block mb-2">
+                          <span className="text-xs font-sans uppercase tracking-wider text-slate-500 font-bold block mb-2.5">
                             Connected With
                           </span>
                           <div className="flex flex-wrap gap-2">
@@ -150,7 +151,7 @@ export default function SolutionsPage() {
                               <Link
                                 key={rel}
                                 href="/solutions#branding"
-                                className="text-xs font-medium text-[#14213D] bg-[#F4F1E8] hover:bg-[#14213D] hover:text-[#F4F1E8] border border-[#DEDCD3] px-3 py-1 rounded-lg transition-all duration-200"
+                                className="text-xs font-medium text-slate-700 bg-slate-100 hover:bg-purple-50 hover:text-purple-700 hover:border-purple-200 border border-slate-200 px-3.5 py-1.5 rounded-full transition-all duration-200"
                               >
                                 + {rel}
                               </Link>
@@ -159,7 +160,7 @@ export default function SolutionsPage() {
                         </div>
                       </div>
 
-                      <div className="pt-6 border-t border-[#DEDCD3]">
+                      <div className="pt-6 border-t border-slate-100">
                         <Button
                           href={`/contact?service=${service.id}`}
                           variant="primary"
@@ -174,19 +175,19 @@ export default function SolutionsPage() {
 
                     {/* Deliverables & Workflow Column */}
                     <div
-                      className={`lg:col-span-6 space-y-8 p-6 sm:p-8 lg:p-9 rounded-xl border flex flex-col justify-between ${
+                      className={`lg:col-span-6 space-y-8 p-6 sm:p-8 lg:p-9 rounded-2xl border flex flex-col justify-between ${
                         isDarkPanel
-                          ? "bg-[#14213D] text-[#F4F1E8] border-white/10 shadow-lg"
-                          : "bg-[#F4F1E8] text-[#182231] border-[#DEDCD3]"
+                          ? "bg-slate-950 text-white border-slate-800 shadow-xl"
+                          : "bg-slate-50 text-slate-900 border-slate-200/80"
                       } ${isReversed ? "lg:order-1" : "lg:order-2"}`}
                     >
                       <div>
                         <h3
-                          className={`text-xs font-mono uppercase tracking-wider font-bold mb-4 flex items-center gap-2 ${
-                            isDarkPanel ? "text-[#B2AD7F]" : "text-[#14213D]"
+                          className={`text-xs font-sans uppercase tracking-widest font-bold mb-4 flex items-center gap-2 ${
+                            isDarkPanel ? "text-cyan-400" : "text-purple-700"
                           }`}
                         >
-                          <Layers className="h-4 w-4 text-[#B2AD7F]" />
+                          <Layers className="h-4 w-4 text-purple-500" />
                           What KreaitX Delivers
                         </h3>
 
@@ -195,12 +196,12 @@ export default function SolutionsPage() {
                             <li
                               key={item}
                               className={`flex items-start gap-3 text-sm font-medium ${
-                                isDarkPanel ? "text-[#F4F1E8]/90" : "text-[#182231]/90"
+                                isDarkPanel ? "text-slate-200" : "text-slate-800"
                               }`}
                             >
                               <CheckCircle2
                                 className={`h-4 w-4 shrink-0 mt-0.5 ${
-                                  isDarkPanel ? "text-[#B2AD7F]" : "text-[#14213D]"
+                                  isDarkPanel ? "text-cyan-400" : "text-purple-600"
                                 }`}
                               />
                               <span>{item}</span>
@@ -211,27 +212,27 @@ export default function SolutionsPage() {
 
                       <div
                         className={`pt-6 border-t ${
-                          isDarkPanel ? "border-white/10" : "border-[#DEDCD3]"
+                          isDarkPanel ? "border-slate-800" : "border-slate-200"
                         }`}
                       >
                         <h3
-                          className={`text-xs font-mono uppercase tracking-wider font-bold mb-3 flex items-center gap-2 ${
-                            isDarkPanel ? "text-[#B2AD7F]" : "text-[#14213D]"
+                          className={`text-xs font-sans uppercase tracking-widest font-bold mb-3 flex items-center gap-2 ${
+                            isDarkPanel ? "text-cyan-400" : "text-purple-700"
                           }`}
                         >
-                          <Cpu className="h-4 w-4 text-[#B2AD7F]" />
+                          <Cpu className="h-4 w-4 text-purple-500" />
                           Standard Workflow
                         </h3>
                         <ol
                           className={`space-y-2 text-xs sm:text-sm ${
-                            isDarkPanel ? "text-[#F4F1E8]/70" : "text-[#667085]"
+                            isDarkPanel ? "text-slate-400" : "text-slate-600"
                           }`}
                         >
                           {service.workflow.map((step, sIdx) => (
                             <li key={step} className="flex items-center gap-2">
                               <span
                                 className={`font-mono text-xs font-bold ${
-                                  isDarkPanel ? "text-[#B2AD7F]" : "text-[#14213D]"
+                                  isDarkPanel ? "text-cyan-400" : "text-purple-600"
                                 }`}
                               >
                                 0{sIdx + 1}.
@@ -245,12 +246,12 @@ export default function SolutionsPage() {
                       <div
                         className={`pt-5 border-t flex items-center justify-between text-xs ${
                           isDarkPanel
-                            ? "border-white/10 text-[#F4F1E8]/50"
-                            : "border-[#DEDCD3] text-[#667085]"
+                            ? "border-slate-800 text-slate-400"
+                            : "border-slate-200 text-slate-500"
                         }`}
                       >
                         <span>Collaborative &amp; transparent delivery</span>
-                        <span className="font-mono uppercase tracking-wider text-[#B2AD7F]">
+                        <span className="font-display font-bold uppercase tracking-wider text-purple-500">
                           {service.number} / 07
                         </span>
                       </div>
@@ -268,4 +269,3 @@ export default function SolutionsPage() {
     </>
   );
 }
-
