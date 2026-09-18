@@ -16,15 +16,15 @@ export const EditorialTrustSection: React.FC = () => {
       {/* Editorial Studio Art Background with Mountain Sunset Vista */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/editorial-positioning-theme.jpg"
+          src="/images/editorial-positioning-bg.png"
           alt="KreaitX Creative Technology Studio & Mountain Sunset Vista"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-right md:object-center select-none opacity-95"
+          className="object-cover object-right md:object-center select-none"
         />
-        {/* Atmospheric gradient for crisp typography contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-50/95 via-slate-50/80 to-transparent lg:from-slate-50/60 lg:via-transparent lg:to-transparent" />
+        {/* Atmospheric gradient for crisp typography contrast on smaller screens */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-transparent lg:from-transparent lg:via-transparent lg:to-transparent" />
       </div>
 
       <Container size="default" className="relative z-10 w-full max-w-[1280px]">
