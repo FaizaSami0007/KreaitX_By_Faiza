@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
@@ -11,6 +12,17 @@ export const CTASection: React.FC = () => {
       <Container size="default" className="relative z-10">
         <Reveal yOffset={20}>
           <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950 text-white p-10 sm:p-16 lg:p-20 shadow-2xl border border-purple-900/40">
+            {/* Authentic 3D Silk Gradient Ribbon Overlay */}
+            <div className="absolute inset-0 z-0 pointer-events-none select-none opacity-35 mix-blend-screen">
+              <Image
+                src="/images/284.png"
+                alt="Fluid 3D Gradient Silk Texture"
+                fill
+                sizes="(max-width: 1024px) 100vw, 1200px"
+                className="object-cover object-center"
+              />
+            </div>
+
             {/* Ambient colorful gradient blobs */}
             <div className="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-gradient-to-br from-pink-500/30 to-purple-600/30 blur-3xl pointer-events-none animate-blob-1" />
             <div className="absolute -bottom-24 -left-24 h-96 w-96 rounded-full bg-gradient-to-tr from-cyan-400/30 to-indigo-600/30 blur-3xl pointer-events-none animate-blob-2" />
