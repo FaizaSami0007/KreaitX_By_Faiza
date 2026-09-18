@@ -46,7 +46,7 @@ export const IdeasToImpactSection: React.FC = () => {
   return (
     <section
       aria-labelledby="ideas-to-impact-heading"
-      className="relative bg-slate-50 text-slate-900 py-20 sm:py-28 lg:py-36 border-b border-slate-200/80 overflow-hidden min-h-[820px] lg:min-h-[880px] flex items-center"
+      className="relative bg-white text-slate-900 py-20 sm:py-28 lg:py-36 border-b border-slate-200/80 overflow-hidden min-h-[820px] lg:min-h-[880px] flex items-center"
     >
       {/* Background Illustrated Artwork with Glowing Idea Bulb & Vector Circuits */}
       <div className="absolute inset-0 z-0">
@@ -58,8 +58,6 @@ export const IdeasToImpactSection: React.FC = () => {
           sizes="100vw"
           className="object-cover object-center lg:object-right select-none"
         />
-        {/* Soft atmospheric gradient for crisp typography contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/40 to-transparent lg:from-white/40 lg:via-transparent lg:to-transparent" />
       </div>
 
       <Container size="default" className="relative z-10 w-full max-w-[1280px] flex flex-col justify-between h-full space-y-16 sm:space-y-24">
