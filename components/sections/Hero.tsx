@@ -177,38 +177,6 @@ export const Hero: React.FC = () => {
             </div>
           </Reveal>
 
-          {/* 7. TRUST BAR: LOGO TICKER */}
-          <Reveal delay={0.48} yOffset={16} className="w-full mt-16 sm:mt-20">
-            <div className="flex flex-col items-center">
-              <p className="text-sm font-sans font-medium text-slate-500 mb-6">
-                More than 100+ companies trust us worldwide
-              </p>
-              
-              <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 lg:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-300">
-                <div className="flex items-center gap-2 text-slate-900 font-display font-bold text-lg sm:text-xl">
-                  <span className="h-4 w-4 rounded-full bg-purple-600" />
-                  <span>Aura</span>
-                </div>
-                <div className="flex items-center gap-2 text-slate-900 font-display font-bold text-lg sm:text-xl">
-                  <span className="h-4 w-4 rounded-md bg-indigo-600" />
-                  <span>Pera</span>
-                </div>
-                <div className="flex items-center gap-2 text-slate-900 font-display font-bold text-lg sm:text-xl">
-                  <span className="h-4 w-4 rounded-full border-2 border-cyan-500" />
-                  <span>Unicoin</span>
-                </div>
-                <div className="flex items-center gap-2 text-slate-900 font-display font-bold text-lg sm:text-xl">
-                  <span className="h-4 w-4 rounded-sm bg-pink-500" />
-                  <span>Heline</span>
-                </div>
-                <div className="flex items-center gap-2 text-slate-900 font-display font-bold text-lg sm:text-xl">
-                  <span className="h-4 w-4 rounded-full bg-purple-700" />
-                  <span>Flikbox</span>
-                </div>
-              </div>
-            </div>
-          </Reveal>
-
         </div>
       </Container>
 
