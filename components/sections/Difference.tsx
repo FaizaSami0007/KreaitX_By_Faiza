@@ -1,85 +1,72 @@
 "use client";
 
-import React, { useState } from "react";
-import { Users, Lightbulb, Target, Layers, Heart, CheckCircle2 } from "lucide-react";
+import React from "react";
+import { Users, Lightbulb, Target, Layers, Heart } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/ui/Reveal";
 
-// Clean icon for 05: Transparent Process
-const TransparentProcessIcon: React.FC<{ className?: string }> = ({ className = "h-6 w-6" }) => (
+// Clean Process Icon for 05: Transparent Process (overlapping rounded rectangles)
+const ProcessIcon: React.FC<{ className?: string }> = ({ className = "h-5 w-5" }) => (
   <svg
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
-    strokeWidth="2"
+    strokeWidth="1.75"
     strokeLinecap="round"
     strokeLinejoin="round"
     className={className}
     aria-hidden="true"
   >
-    <rect x="3" y="4" width="12" height="12" rx="2" />
-    <rect x="9" y="8" width="12" height="12" rx="2" />
+    <rect x="4" y="4" width="11" height="11" rx="2" />
+    <rect x="9" y="9" width="11" height="11" rx="2" />
   </svg>
 );
 
-interface Principle {
-  id: string;
-  number: string;
-  title: string;
-  description: string;
-  icon: React.ComponentType<{ className?: string }>;
-  color: string;
-}
-
-const principles: Principle[] = [
+const topRowPrinciples = [
   {
     id: "01",
     number: "01",
     title: "One Connected Team",
-    description: "Strategy, design and engineering working as one unified collective.",
-    icon: Users,
-    color: "from-purple-500 to-indigo-600"
+    description: "Strategy, design and engineering working as one.",
+    icon: Users
   },
   {
     id: "02",
     number: "02",
     title: "Creative + Technical",
-    description: "Designers who understand code. Engineers with an eye for refined visual aesthetics.",
-    icon: Lightbulb,
-    color: "from-indigo-500 to-cyan-500"
+    description: "Designers who understand code. Engineers with an eye for design.",
+    icon: Lightbulb
   },
   {
     id: "03",
     number: "03",
     title: "Business-Centered",
-    description: "Every creative and digital solution is built around real, measurable commercial outcomes.",
-    icon: Target,
-    color: "from-purple-600 to-pink-500"
-  },
+    description: "Every solution is built around real business outcomes.",
+    icon: Target
+  }
+];
+
+const bottomRowPrinciples = [
   {
     id: "04",
     number: "04",
     title: "End-to-End Continuity",
-    description: "From initial napkin idea to long-term digital growth, we stay committed with you.",
-    icon: Layers,
-    color: "from-cyan-500 to-blue-600"
+    description: "From initial idea to long-term growth, we stay with you.",
+    icon: Layers
   },
   {
     id: "05",
     number: "05",
     title: "Clear, Transparent Process",
-    description: "You always know what's next, why it matters, and exactly what value it delivers.",
-    icon: TransparentProcessIcon,
-    color: "from-pink-500 to-rose-500"
+    description: "You always know what's next, why it matters, and what it delivers.",
+    icon: ProcessIcon
   },
   {
     id: "06",
     number: "06",
     title: "Human Collaboration",
-    description: "We work with people, not just cold project briefs — and the partnership shows in every result.",
-    icon: Heart,
-    color: "from-purple-600 to-indigo-600"
+    description: "We work with people, not just projects — and it shows.",
+    icon: Heart
   }
 ];
 
@@ -88,74 +75,196 @@ export const Difference: React.FC = () => {
     <section
       id="difference"
       aria-labelledby="difference-heading"
-      className="relative bg-white text-slate-900 py-24 sm:py-32 border-b border-slate-200/80 overflow-hidden"
+      className="relative bg-[#FAFAF8] text-slate-900 py-24 sm:py-32 border-b border-slate-200/80 overflow-hidden"
     >
-      {/* Soft background ambient gradient */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 h-[500px] w-[600px] rounded-full bg-gradient-to-tr from-purple-100/40 via-indigo-100/30 to-cyan-100/40 blur-[100px] pointer-events-none" />
+      {/* Subtle concentric decorative arcs in the background */}
+      <div className="absolute inset-0 pointer-events-none select-none opacity-40">
+        <svg
+          className="absolute -top-24 -left-24 w-[700px] h-[700px] text-slate-200/50"
+          viewBox="0 0 700 700"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1"
+        >
+          <circle cx="350" cy="350" r="340" strokeDasharray="4 4" />
+          <circle cx="350" cy="350" r="260" />
+          <circle cx="350" cy="350" r="180" strokeDasharray="6 6" />
+        </svg>
+
+        <svg
+          className="absolute -top-24 -right-24 w-[700px] h-[700px] text-slate-200/50"
+          viewBox="0 0 700 700"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1"
+        >
+          <circle cx="350" cy="350" r="340" strokeDasharray="4 4" />
+          <circle cx="350" cy="350" r="260" />
+          <circle cx="350" cy="350" r="180" strokeDasharray="6 6" />
+        </svg>
+      </div>
 
       <Container size="default" className="relative z-10">
         {/* SECTION HEADER */}
         <Reveal yOffset={16}>
-          <SectionHeading
-            align="center"
-            eyebrow="The KreaitX Difference"
-            title={
-              <>
-                More than an agency. <br />
-                <span className="bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500 bg-clip-text text-transparent">
-                  A connected partner.
-                </span>
-              </>
-            }
-            description="We bring strategy, creativity and technical engineering together to turn ideas into meaningful outcomes — as one team."
-            className="mb-16 sm:mb-20"
-          />
+          <div className="text-center max-w-3xl mx-auto mb-20 sm:mb-24 flex flex-col items-center">
+            {/* Eyebrow */}
+            <span className="text-[11px] sm:text-xs font-sans font-bold tracking-[0.25em] uppercase text-slate-500">
+              THE KREAITX DIFFERENCE
+            </span>
+            <div className="w-8 h-[2px] bg-[#B2AD7F] mt-2 mb-8" aria-hidden="true" />
+
+            {/* Display Title */}
+            <h2
+              id="difference-heading"
+              className="font-display text-4xl sm:text-5xl lg:text-[56px] font-bold text-slate-950 tracking-tight leading-[1.08]"
+            >
+              More than an <br className="hidden sm:inline" />
+              agency. <br />
+              <span className="font-serif italic font-normal text-[#B2AD7F]">
+                A connected partner.
+              </span>
+            </h2>
+
+            {/* Description */}
+            <p className="mt-6 text-base sm:text-lg text-slate-600 font-sans font-normal leading-relaxed max-w-xl">
+              We bring strategy, creativity and technical engineering together to turn ideas into meaningful outcomes — as one team.
+            </p>
+          </div>
         </Reveal>
 
-        {/* 6 PRINCIPLES CARDS GRID */}
-        <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-          {principles.map((principle) => {
-            const IconComp = principle.icon;
-
-            return (
-              <StaggerItem key={principle.id}>
-                <div className="group h-full flex flex-col justify-between p-8 sm:p-9 rounded-3xl bg-white border border-slate-200/80 shadow-card hover:shadow-card-hover hover:border-purple-200 transition-all duration-300 relative overflow-hidden">
-                  {/* Subtle top accent */}
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-purple-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                  <div>
-                    {/* Header: Icon + Number */}
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="w-14 h-14 rounded-2xl bg-purple-50 flex items-center justify-center text-purple-600 border border-purple-100 group-hover:scale-110 group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-indigo-600 group-hover:text-white transition-all duration-300 shadow-subtle">
-                        <IconComp className="h-6 w-6 stroke-[1.75]" />
-                      </div>
-                      <span className="font-display font-bold text-xl text-slate-300 group-hover:text-purple-600 transition-colors">
-                        {principle.number}
-                      </span>
+        {/* 6 PRINCIPLES IN 2 ROWS (3 TOP, 3 BOTTOM) WITH CENTRAL CONNECTOR */}
+        <div className="max-w-5xl mx-auto space-y-12 sm:space-y-16">
+          
+          {/* TOP ROW: 01, 02, 03 */}
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12 text-left">
+            {topRowPrinciples.map((item) => {
+              const IconComp = item.icon;
+              return (
+                <StaggerItem key={item.id} className="flex flex-col items-start">
+                  {/* Number with underline + Circular Icon Badge */}
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className="text-xs font-mono font-semibold text-slate-600 pb-0.5 border-b border-slate-400">
+                      {item.number}
+                    </span>
+                    <div className="w-10 h-10 rounded-full bg-slate-100/90 border border-slate-200/80 flex items-center justify-center text-slate-700 shadow-sm transition-transform duration-300 hover:scale-105">
+                      <IconComp className="h-4 w-4 stroke-[1.75]" />
                     </div>
-
-                    {/* Title */}
-                    <h3 className="text-2xl font-display font-bold text-slate-900 tracking-tight group-hover:text-purple-700 transition-colors">
-                      {principle.title}
-                    </h3>
-
-                    {/* Description */}
-                    <p className="mt-3.5 text-base text-slate-600 leading-relaxed font-sans font-normal">
-                      {principle.description}
-                    </p>
                   </div>
 
-                  {/* Bottom Indicator */}
-                  <div className="mt-8 pt-4 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-purple-600">
-                    <CheckCircle2 className="h-4 w-4 text-purple-500" />
-                    <span>Guaranteed Working Principle</span>
+                  {/* Title */}
+                  <h3 className="text-xl sm:text-[22px] font-display font-bold text-slate-900 tracking-tight">
+                    {item.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="mt-2 text-sm sm:text-[15px] text-slate-600 leading-relaxed font-sans font-normal">
+                    {item.description}
+                  </p>
+                </StaggerItem>
+              );
+            })}
+          </StaggerContainer>
+
+          {/* CENTRAL CONNECTING DIAGRAM / DIVIDER */}
+          <Reveal yOffset={10} className="hidden md:block w-full py-4">
+            <div className="relative flex items-center justify-center w-full">
+              <svg
+                viewBox="0 0 900 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-full h-12 text-slate-300"
+              >
+                {/* Left Branching Curve */}
+                <path
+                  d="M 50 10 Q 100 24 160 24"
+                  stroke="currentColor"
+                  strokeWidth="1.2"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M 50 38 Q 100 24 160 24"
+                  stroke="currentColor"
+                  strokeWidth="1.2"
+                  strokeLinecap="round"
+                />
+
+                {/* Main Horizontal Central Line */}
+                <line
+                  x1="160"
+                  y1="24"
+                  x2="740"
+                  y2="24"
+                  stroke="currentColor"
+                  strokeWidth="1.2"
+                />
+
+                {/* Right Branching Curve */}
+                <path
+                  d="M 740 24 Q 800 24 850 10"
+                  stroke="currentColor"
+                  strokeWidth="1.2"
+                  strokeLinecap="round"
+                />
+                <path
+                  d="M 740 24 Q 800 24 850 38"
+                  stroke="currentColor"
+                  strokeWidth="1.2"
+                  strokeLinecap="round"
+                />
+
+                {/* Node Circles & Indicator Dots */}
+                <circle cx="80" cy="14" r="2" fill="#B2AD7F" />
+                <circle cx="80" cy="34" r="2" fill="#64748B" />
+                
+                <circle cx="160" cy="24" r="3.5" fill="#1E293B" />
+                
+                <line x1="450" y1="14" x2="450" y2="34" stroke="currentColor" strokeWidth="1.2" />
+                <circle cx="450" cy="14" r="2" fill="#64748B" />
+                <circle cx="450" cy="24" r="3.5" fill="#B2AD7F" />
+                <circle cx="450" cy="34" r="2" fill="#64748B" />
+
+                <circle cx="740" cy="24" r="3.5" fill="#1E293B" />
+
+                <circle cx="820" cy="14" r="2" fill="#B2AD7F" />
+                <circle cx="820" cy="34" r="2" fill="#64748B" />
+              </svg>
+            </div>
+          </Reveal>
+
+          {/* BOTTOM ROW: 04, 05, 06 */}
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12 text-left">
+            {bottomRowPrinciples.map((item) => {
+              const IconComp = item.icon;
+              return (
+                <StaggerItem key={item.id} className="flex flex-col items-start">
+                  {/* Number with underline + Circular Icon Badge */}
+                  <div className="flex items-center gap-4 mb-4">
+                    <span className="text-xs font-mono font-semibold text-slate-600 pb-0.5 border-b border-slate-400">
+                      {item.number}
+                    </span>
+                    <div className="w-10 h-10 rounded-full bg-slate-100/90 border border-slate-200/80 flex items-center justify-center text-slate-700 shadow-sm transition-transform duration-300 hover:scale-105">
+                      <IconComp className="h-4 w-4 stroke-[1.75]" />
+                    </div>
                   </div>
-                </div>
-              </StaggerItem>
-            );
-          })}
-        </StaggerContainer>
+
+                  {/* Title */}
+                  <h3 className="text-xl sm:text-[22px] font-display font-bold text-slate-900 tracking-tight">
+                    {item.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="mt-2 text-sm sm:text-[15px] text-slate-600 leading-relaxed font-sans font-normal">
+                    {item.description}
+                  </p>
+                </StaggerItem>
+              );
+            })}
+          </StaggerContainer>
+
+        </div>
       </Container>
     </section>
   );
 };
+
