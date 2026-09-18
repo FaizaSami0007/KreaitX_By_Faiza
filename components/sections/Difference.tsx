@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Users, Lightbulb, Target, Layers, Heart } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
@@ -23,6 +23,62 @@ const TransparentProcessIcon: React.FC<{ className?: string }> = ({ className = 
 );
 
 export const Difference: React.FC = () => {
+  const [activeId, setActiveId] = useState<string | null>(null);
+
+  const topPrinciples = [
+    {
+      id: "01",
+      number: "01",
+      title: "One Connected Team",
+      description: "Strategy, design and engineering working as one.",
+      icon: Users,
+      group: "left"
+    },
+    {
+      id: "02",
+      number: "02",
+      title: "Creative + Technical",
+      description: "Designers who understand code. Engineers with an eye for design.",
+      icon: Lightbulb,
+      group: "center"
+    },
+    {
+      id: "03",
+      number: "03",
+      title: "Business-Centered",
+      description: "Every solution is built around real business outcomes.",
+      icon: Target,
+      group: "right"
+    }
+  ];
+
+  const bottomPrinciples = [
+    {
+      id: "04",
+      number: "04",
+      title: "End-to-End Continuity",
+      description: "From initial idea to long-term growth, we stay with you.",
+      icon: Layers,
+      group: "left"
+    },
+    {
+      id: "05",
+      number: "05",
+      title: "Clear, Transparent Process",
+      description: "You always know what's next, why it matters, and what it delivers.",
+      icon: TransparentProcessIcon,
+      group: "center"
+    },
+    {
+      id: "06",
+      number: "06",
+      title: "Human Collaboration",
+      description: "We work with people, not just projects — and it shows.",
+      icon: Heart,
+      group: "right"
+    }
+  ];
+
   return (
     <section
       id="difference"
@@ -86,157 +142,201 @@ export const Difference: React.FC = () => {
         <div className="hidden lg:block relative py-8">
           {/* Top Row: 01, 02, 03 */}
           <div className="grid grid-cols-3 gap-12 pb-14 items-start">
-            
-            {/* 01: One Connected Team */}
-            <div className="flex flex-col transition-all duration-300 items-start text-left pr-4">
-              <div className="flex items-center gap-4 mb-4 justify-start">
-                <div className="flex flex-col items-start">
-                  <span className="font-serif text-lg font-normal text-slate-900 leading-none">01</span>
-                  <span className="w-4 h-[1px] bg-purple-500 mt-1" />
-                </div>
-                <div className="w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 bg-purple-50 border border-purple-200/80 text-purple-600 shadow-sm hover:scale-105">
-                  <Users className="h-6 w-6 stroke-[1.5]" />
-                </div>
-              </div>
-              <h3 className="text-[25px] font-sans font-bold tracking-tight text-slate-950">
-                One Connected Team
-              </h3>
-              <p className="mt-2 text-[14.5px] text-slate-600 leading-relaxed font-sans font-normal max-w-[310px]">
-                Strategy, design and engineering working as one.
-              </p>
-            </div>
+            {topPrinciples.map((item, index) => {
+              const IconComp = item.icon;
+              const isActive = activeId === item.id;
+              const isDimmed = activeId !== null && !isActive;
+              const alignClass = index === 0 ? "items-start text-left pr-4" : index === 1 ? "items-center text-center px-4" : "items-start text-left pl-6";
+              const headerJustify = index === 1 ? "justify-center" : "justify-start";
 
-            {/* 02: Creative + Technical (Centered) */}
-            <div className="flex flex-col transition-all duration-300 items-center text-center px-4">
-              <div className="flex items-center gap-4 mb-4 justify-center">
-                <div className="flex flex-col items-start">
-                  <span className="font-serif text-lg font-normal text-slate-900 leading-none">02</span>
-                  <span className="w-4 h-[1px] bg-purple-500 mt-1" />
+              return (
+                <div
+                  key={item.id}
+                  onMouseEnter={() => setActiveId(item.id)}
+                  onMouseLeave={() => setActiveId(null)}
+                  className={`flex flex-col transition-all duration-300 cursor-pointer ${alignClass} ${
+                    isDimmed ? "opacity-35 grayscale-[30%]" : "opacity-100"
+                  }`}
+                >
+                  <div className={`flex items-center gap-4 mb-4 ${headerJustify}`}>
+                    <div className="flex flex-col items-start">
+                      <span className={`font-serif text-lg leading-none transition-colors duration-200 ${isActive ? "text-purple-600 font-bold scale-105" : "text-slate-900 font-normal"}`}>
+                        {item.number}
+                      </span>
+                      <span className={`h-[1.5px] transition-all duration-300 mt-1 ${isActive ? "w-6 bg-purple-600" : "w-4 bg-purple-500/70"}`} />
+                    </div>
+                    <div
+                      className={`w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 shadow-sm ${
+                        isActive
+                          ? "bg-gradient-to-r from-purple-600 to-indigo-600 text-white scale-110 shadow-lg shadow-purple-500/30 ring-4 ring-purple-500/20 border-transparent"
+                          : "bg-purple-50/80 border border-purple-200/70 text-purple-700 hover:border-purple-300"
+                      }`}
+                    >
+                      <IconComp className="h-6 w-6 stroke-[1.5]" />
+                    </div>
+                  </div>
+                  <h3
+                    className={`text-[25px] font-sans tracking-tight transition-all duration-200 ${
+                      isActive
+                        ? "font-bold text-purple-700 scale-[1.01]"
+                        : "font-bold text-slate-950"
+                    }`}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className={`mt-2 text-[14.5px] leading-relaxed font-sans max-w-[310px] transition-colors duration-200 ${isActive ? "text-slate-900 font-medium" : "text-slate-600 font-normal"}`}>
+                    {item.description}
+                  </p>
                 </div>
-                <div className="w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 bg-indigo-50 border border-indigo-200/80 text-indigo-600 shadow-sm hover:scale-105">
-                  <Lightbulb className="h-6 w-6 stroke-[1.5]" />
-                </div>
-              </div>
-              <h3 className="text-[25px] font-sans font-bold tracking-tight text-slate-950">
-                Creative + Technical
-              </h3>
-              <p className="mt-2 text-[14.5px] text-slate-600 leading-relaxed font-sans font-normal max-w-[310px]">
-                Designers who understand code. Engineers with an eye for design.
-              </p>
-            </div>
-
-            {/* 03: Business-Centered */}
-            <div className="flex flex-col transition-all duration-300 items-start text-left pl-6">
-              <div className="flex items-center gap-4 mb-4 justify-start">
-                <div className="flex flex-col items-start">
-                  <span className="font-serif text-lg font-normal text-slate-900 leading-none">03</span>
-                  <span className="w-4 h-[1px] bg-purple-500 mt-1" />
-                </div>
-                <div className="w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 bg-cyan-50 border border-cyan-200/80 text-cyan-600 shadow-sm hover:scale-105">
-                  <Target className="h-6 w-6 stroke-[1.5]" />
-                </div>
-              </div>
-              <h3 className="text-[25px] font-sans font-bold tracking-tight text-slate-950">
-                Business-Centered
-              </h3>
-              <p className="mt-2 text-[14.5px] text-slate-600 leading-relaxed font-sans font-normal max-w-[310px]">
-                Every solution is built around real business outcomes.
-              </p>
-            </div>
-
+              );
+            })}
           </div>
 
-          {/* EXACT CENTRAL CONNECTING VECTOR (from Vercel design) */}
+          {/* EXACT CENTRAL CONNECTING VECTOR (Interactive with Active Nodes) */}
           <div className="relative w-full h-[64px] my-2" aria-hidden="true">
             <svg className="w-full h-full overflow-visible" viewBox="0 0 1200 64" fill="none" preserveAspectRatio="none">
-              {/* Central horizontal line */}
-              <line x1="200" y1="32" x2="1000" y2="32" stroke="#94a3b8" strokeWidth="1.2" strokeOpacity="0.4" />
+              {/* Central horizontal base line */}
+              <line x1="200" y1="32" x2="1000" y2="32" stroke="#94a3b8" strokeWidth="1.2" strokeOpacity="0.35" />
 
-              {/* Left Branching Curves */}
-              <path d="M 120 -24 C 120 12, 170 32, 240 32" stroke="#9333ea" strokeWidth="1.2" strokeOpacity="0.65" fill="none" />
-              <path d="M 120 88 C 120 52, 170 32, 240 32" stroke="#64748B" strokeWidth="1.2" strokeOpacity="0.4" fill="none" />
-              <circle cx="152" cy="-4" r="2.5" fill="#9333ea" />
-              <circle cx="152" cy="68" r="2.5" fill="#64748B" fillOpacity="0.5" />
+              {/* Left Branching Curves (Active on 01 or 04) */}
+              <path
+                d="M 120 -24 C 120 12, 170 32, 240 32"
+                stroke={activeId === "01" || activeId === "04" ? "#9333ea" : "#9333ea"}
+                strokeWidth={activeId === "01" || activeId === "04" ? "2" : "1.2"}
+                strokeOpacity={activeId === "01" || activeId === "04" ? "1" : "0.55"}
+                fill="none"
+                className="transition-all duration-300"
+              />
+              <path
+                d="M 120 88 C 120 52, 170 32, 240 32"
+                stroke="#64748B"
+                strokeWidth={activeId === "01" || activeId === "04" ? "2" : "1.2"}
+                strokeOpacity={activeId === "01" || activeId === "04" ? "0.8" : "0.35"}
+                fill="none"
+                className="transition-all duration-300"
+              />
+              <circle cx="152" cy="-4" r={activeId === "01" ? "4" : "2.5"} fill="#9333ea" className="transition-all duration-300" />
+              <circle cx="152" cy="68" r={activeId === "04" ? "4" : "2.5"} fill="#64748B" fillOpacity="0.5" className="transition-all duration-300" />
 
-              {/* Center Vertical Axis & Nodes */}
-              <line x1="600" y1="-24" x2="600" y2="32" stroke="#64748B" strokeWidth="1.2" strokeOpacity="0.4" />
-              <line x1="600" y1="88" x2="600" y2="32" stroke="#9333ea" strokeWidth="1.2" strokeOpacity="0.65" />
-              <circle cx="600" cy="-2" r="2.5" fill="#64748B" fillOpacity="0.5" />
-              <circle cx="600" cy="66" r="2.5" fill="#9333ea" />
+              {/* Center Vertical Axis & Nodes (Active on 02 or 05) */}
+              <line
+                x1="600"
+                y1="-24"
+                x2="600"
+                y2="32"
+                stroke="#64748B"
+                strokeWidth={activeId === "02" || activeId === "05" ? "2" : "1.2"}
+                strokeOpacity={activeId === "02" || activeId === "05" ? "0.8" : "0.35"}
+                className="transition-all duration-300"
+              />
+              <line
+                x1="600"
+                y1="88"
+                x2="600"
+                y2="32"
+                stroke="#9333ea"
+                strokeWidth={activeId === "02" || activeId === "05" ? "2" : "1.2"}
+                strokeOpacity={activeId === "02" || activeId === "05" ? "1" : "0.55"}
+                className="transition-all duration-300"
+              />
+              <circle cx="600" cy="-2" r={activeId === "02" ? "4" : "2.5"} fill="#64748B" fillOpacity="0.5" className="transition-all duration-300" />
+              <circle cx="600" cy="66" r={activeId === "05" ? "4" : "2.5"} fill="#9333ea" className="transition-all duration-300" />
 
-              {/* Right Branching Curves */}
-              <path d="M 1080 -24 C 1080 12, 1030 32, 960 32" stroke="#9333ea" strokeWidth="1.2" strokeOpacity="0.65" fill="none" />
-              <path d="M 1080 88 C 1080 52, 1030 32, 960 32" stroke="#64748B" strokeWidth="1.2" strokeOpacity="0.4" fill="none" />
-              <circle cx="1048" cy="-4" r="2.5" fill="#9333ea" />
-              <circle cx="1048" cy="68" r="2.5" fill="#64748B" fillOpacity="0.5" />
+              {/* Right Branching Curves (Active on 03 or 06) */}
+              <path
+                d="M 1080 -24 C 1080 12, 1030 32, 960 32"
+                stroke={activeId === "03" || activeId === "06" ? "#9333ea" : "#9333ea"}
+                strokeWidth={activeId === "03" || activeId === "06" ? "2" : "1.2"}
+                strokeOpacity={activeId === "03" || activeId === "06" ? "1" : "0.55"}
+                fill="none"
+                className="transition-all duration-300"
+              />
+              <path
+                d="M 1080 88 C 1080 52, 1030 32, 960 32"
+                stroke="#64748B"
+                strokeWidth={activeId === "03" || activeId === "06" ? "2" : "1.2"}
+                strokeOpacity={activeId === "03" || activeId === "06" ? "0.8" : "0.35"}
+                fill="none"
+                className="transition-all duration-300"
+              />
+              <circle cx="1048" cy="-4" r={activeId === "03" ? "4" : "2.5"} fill="#9333ea" className="transition-all duration-300" />
+              <circle cx="1048" cy="68" r={activeId === "06" ? "4" : "2.5"} fill="#64748B" fillOpacity="0.5" className="transition-all duration-300" />
 
-              {/* Main Node Dots on the horizontal line */}
-              <circle cx="240" cy="32" r="4.5" fill="#0f172a" />
-              <circle cx="600" cy="32" r="4.5" fill="#9333ea" />
-              <circle cx="960" cy="32" r="4.5" fill="#0f172a" />
+              {/* Main Junction Nodes on the horizontal line */}
+              <circle
+                cx="240"
+                cy="32"
+                r={activeId === "01" || activeId === "04" ? "6.5" : "4.5"}
+                fill={activeId === "01" || activeId === "04" ? "#9333ea" : "#0f172a"}
+                className="transition-all duration-300"
+              />
+              <circle
+                cx="600"
+                cy="32"
+                r={activeId === "02" || activeId === "05" ? "6.5" : "4.5"}
+                fill={activeId === "02" || activeId === "05" ? "#9333ea" : "#9333ea"}
+                className="transition-all duration-300"
+              />
+              <circle
+                cx="960"
+                cy="32"
+                r={activeId === "03" || activeId === "06" ? "6.5" : "4.5"}
+                fill={activeId === "03" || activeId === "06" ? "#9333ea" : "#0f172a"}
+                className="transition-all duration-300"
+              />
             </svg>
           </div>
 
           {/* Bottom Row: 04, 05, 06 */}
           <div className="grid grid-cols-3 gap-12 pt-14 items-start">
-            
-            {/* 04: End-to-End Continuity */}
-            <div className="flex flex-col transition-all duration-300 items-start text-left pr-4">
-              <div className="flex items-center gap-4 mb-4 justify-start">
-                <div className="flex flex-col items-start">
-                  <span className="font-serif text-lg font-normal text-slate-900 leading-none">04</span>
-                  <span className="w-4 h-[1px] bg-purple-500 mt-1" />
-                </div>
-                <div className="w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 bg-indigo-50 border border-indigo-200/80 text-indigo-600 shadow-sm hover:scale-105">
-                  <Layers className="h-6 w-6 stroke-[1.5]" />
-                </div>
-              </div>
-              <h3 className="text-[25px] font-sans font-bold tracking-tight text-slate-950">
-                End-to-End Continuity
-              </h3>
-              <p className="mt-2 text-[14.5px] text-slate-600 leading-relaxed font-sans font-normal max-w-[310px]">
-                From initial idea to long-term growth, we stay with you.
-              </p>
-            </div>
+            {bottomPrinciples.map((item, index) => {
+              const IconComp = item.icon;
+              const isActive = activeId === item.id;
+              const isDimmed = activeId !== null && !isActive;
+              const alignClass = index === 0 ? "items-start text-left pr-4" : index === 1 ? "items-center text-center px-4" : "items-start text-left pl-6";
+              const headerJustify = index === 1 ? "justify-center" : "justify-start";
 
-            {/* 05: Clear, Transparent Process (Centered) */}
-            <div className="flex flex-col transition-all duration-300 items-center text-center px-4">
-              <div className="flex items-center gap-4 mb-4 justify-center">
-                <div className="flex flex-col items-start">
-                  <span className="font-serif text-lg font-normal text-slate-900 leading-none">05</span>
-                  <span className="w-4 h-[1px] bg-purple-500 mt-1" />
+              return (
+                <div
+                  key={item.id}
+                  onMouseEnter={() => setActiveId(item.id)}
+                  onMouseLeave={() => setActiveId(null)}
+                  className={`flex flex-col transition-all duration-300 cursor-pointer ${alignClass} ${
+                    isDimmed ? "opacity-35 grayscale-[30%]" : "opacity-100"
+                  }`}
+                >
+                  <div className={`flex items-center gap-4 mb-4 ${headerJustify}`}>
+                    <div className="flex flex-col items-start">
+                      <span className={`font-serif text-lg leading-none transition-colors duration-200 ${isActive ? "text-purple-600 font-bold scale-105" : "text-slate-900 font-normal"}`}>
+                        {item.number}
+                      </span>
+                      <span className={`h-[1.5px] transition-all duration-300 mt-1 ${isActive ? "w-6 bg-purple-600" : "w-4 bg-purple-500/70"}`} />
+                    </div>
+                    <div
+                      className={`w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 shadow-sm ${
+                        isActive
+                          ? "bg-gradient-to-r from-purple-600 to-indigo-600 text-white scale-110 shadow-lg shadow-purple-500/30 ring-4 ring-purple-500/20 border-transparent"
+                          : "bg-purple-50/80 border border-purple-200/70 text-purple-700 hover:border-purple-300"
+                      }`}
+                    >
+                      <IconComp className="h-6 w-6 stroke-[1.5]" />
+                    </div>
+                  </div>
+                  <h3
+                    className={`text-[25px] font-sans tracking-tight transition-all duration-200 ${
+                      isActive
+                        ? "font-bold text-purple-700 scale-[1.01]"
+                        : "font-bold text-slate-950"
+                    }`}
+                  >
+                    {item.title}
+                  </h3>
+                  <p className={`mt-2 text-[14.5px] leading-relaxed font-sans max-w-[310px] transition-colors duration-200 ${isActive ? "text-slate-900 font-medium" : "text-slate-600 font-normal"}`}>
+                    {item.description}
+                  </p>
                 </div>
-                <div className="w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 bg-purple-50 border border-purple-200/80 text-purple-600 shadow-sm hover:scale-105">
-                  <TransparentProcessIcon className="h-6 w-6 stroke-[1.5]" />
-                </div>
-              </div>
-              <h3 className="text-[25px] font-sans font-bold tracking-tight text-slate-950">
-                Clear, Transparent Process
-              </h3>
-              <p className="mt-2 text-[14.5px] text-slate-600 leading-relaxed font-sans font-normal max-w-[310px]">
-                You always know what&apos;s next, why it matters, and what it delivers.
-              </p>
-            </div>
-
-            {/* 06: Human Collaboration */}
-            <div className="flex flex-col transition-all duration-300 items-start text-left pl-6">
-              <div className="flex items-center gap-4 mb-4 justify-start">
-                <div className="flex flex-col items-start">
-                  <span className="font-serif text-lg font-normal text-slate-900 leading-none">06</span>
-                  <span className="w-4 h-[1px] bg-purple-500 mt-1" />
-                </div>
-                <div className="w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 bg-pink-50 border border-pink-200/80 text-pink-600 shadow-sm hover:scale-105">
-                  <Heart className="h-6 w-6 stroke-[1.5]" />
-                </div>
-              </div>
-              <h3 className="text-[25px] font-sans font-bold tracking-tight text-slate-950">
-                Human Collaboration
-              </h3>
-              <p className="mt-2 text-[14.5px] text-slate-600 leading-relaxed font-sans font-normal max-w-[310px]">
-                We work with people, not just projects — and it shows.
-              </p>
-            </div>
-
+              );
+            })}
           </div>
         </div>
 
@@ -247,119 +347,41 @@ export const Difference: React.FC = () => {
           <div className="absolute left-[23px] sm:left-[39px] top-6 bottom-6 w-[1.5px] bg-gradient-to-b from-purple-500 via-indigo-400 to-pink-400 opacity-40" aria-hidden="true" />
           
           <div className="space-y-12 sm:space-y-14">
-            {/* 01 */}
-            <div className="relative flex items-start gap-4 sm:gap-6">
-              <div className="relative z-10 flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center bg-purple-50 border border-purple-200 text-purple-600 shadow-sm">
-                <Users className="h-5 w-5 sm:h-6 sm:w-6 stroke-[1.5]" />
-              </div>
-              <div className="flex-1 pt-1">
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="font-serif text-base font-normal text-slate-900">01</span>
-                  <span className="w-3 h-[1px] bg-purple-500" />
+            {[...topPrinciples, ...bottomPrinciples].map((item) => {
+              const IconComp = item.icon;
+              const isActive = activeId === item.id;
+              return (
+                <div
+                  key={item.id}
+                  onClick={() => setActiveId(activeId === item.id ? null : item.id)}
+                  className="relative flex items-start gap-4 sm:gap-6 cursor-pointer"
+                >
+                  <div
+                    className={`relative z-10 flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center transition-all duration-200 shadow-sm ${
+                      isActive
+                        ? "bg-gradient-to-r from-purple-600 to-indigo-600 text-white scale-110 ring-4 ring-purple-500/20"
+                        : "bg-purple-50 border border-purple-200 text-purple-700"
+                    }`}
+                  >
+                    <IconComp className="h-5 w-5 sm:h-6 sm:w-6 stroke-[1.5]" />
+                  </div>
+                  <div className="flex-1 pt-1">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className={`font-serif text-base transition-colors ${isActive ? "text-purple-600 font-bold" : "text-slate-900 font-normal"}`}>
+                        {item.number}
+                      </span>
+                      <span className={`w-3 h-[1px] ${isActive ? "bg-purple-600" : "bg-purple-500"}`} />
+                    </div>
+                    <h3 className={`text-xl sm:text-2xl font-sans font-bold tracking-tight transition-colors ${isActive ? "text-purple-700" : "text-slate-950"}`}>
+                      {item.title}
+                    </h3>
+                    <p className="mt-1.5 text-sm text-slate-600 leading-relaxed font-sans font-normal">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-xl sm:text-2xl font-sans font-bold text-slate-950 tracking-tight">
-                  One Connected Team
-                </h3>
-                <p className="mt-1.5 text-sm text-slate-600 leading-relaxed font-sans font-normal">
-                  Strategy, design and engineering working as one.
-                </p>
-              </div>
-            </div>
-
-            {/* 02 */}
-            <div className="relative flex items-start gap-4 sm:gap-6">
-              <div className="relative z-10 flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center bg-indigo-50 border border-indigo-200 text-indigo-600 shadow-sm">
-                <Lightbulb className="h-5 w-5 sm:h-6 sm:w-6 stroke-[1.5]" />
-              </div>
-              <div className="flex-1 pt-1">
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="font-serif text-base font-normal text-slate-900">02</span>
-                  <span className="w-3 h-[1px] bg-purple-500" />
-                </div>
-                <h3 className="text-xl sm:text-2xl font-sans font-bold text-slate-950 tracking-tight">
-                  Creative + Technical
-                </h3>
-                <p className="mt-1.5 text-sm text-slate-600 leading-relaxed font-sans font-normal">
-                  Designers who understand code. Engineers with an eye for design.
-                </p>
-              </div>
-            </div>
-
-            {/* 03 */}
-            <div className="relative flex items-start gap-4 sm:gap-6">
-              <div className="relative z-10 flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center bg-cyan-50 border border-cyan-200 text-cyan-600 shadow-sm">
-                <Target className="h-5 w-5 sm:h-6 sm:w-6 stroke-[1.5]" />
-              </div>
-              <div className="flex-1 pt-1">
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="font-serif text-base font-normal text-slate-900">03</span>
-                  <span className="w-3 h-[1px] bg-purple-500" />
-                </div>
-                <h3 className="text-xl sm:text-2xl font-sans font-bold text-slate-950 tracking-tight">
-                  Business-Centered
-                </h3>
-                <p className="mt-1.5 text-sm text-slate-600 leading-relaxed font-sans font-normal">
-                  Every solution is built around real business outcomes.
-                </p>
-              </div>
-            </div>
-
-            {/* 04 */}
-            <div className="relative flex items-start gap-4 sm:gap-6">
-              <div className="relative z-10 flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center bg-indigo-50 border border-indigo-200 text-indigo-600 shadow-sm">
-                <Layers className="h-5 w-5 sm:h-6 sm:w-6 stroke-[1.5]" />
-              </div>
-              <div className="flex-1 pt-1">
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="font-serif text-base font-normal text-slate-900">04</span>
-                  <span className="w-3 h-[1px] bg-purple-500" />
-                </div>
-                <h3 className="text-xl sm:text-2xl font-sans font-bold text-slate-950 tracking-tight">
-                  End-to-End Continuity
-                </h3>
-                <p className="mt-1.5 text-sm text-slate-600 leading-relaxed font-sans font-normal">
-                  From initial idea to long-term growth, we stay with you.
-                </p>
-              </div>
-            </div>
-
-            {/* 05 */}
-            <div className="relative flex items-start gap-4 sm:gap-6">
-              <div className="relative z-10 flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center bg-purple-50 border border-purple-200 text-purple-600 shadow-sm">
-                <TransparentProcessIcon className="h-5 w-5 sm:h-6 sm:w-6 stroke-[1.5]" />
-              </div>
-              <div className="flex-1 pt-1">
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="font-serif text-base font-normal text-slate-900">05</span>
-                  <span className="w-3 h-[1px] bg-purple-500" />
-                </div>
-                <h3 className="text-xl sm:text-2xl font-sans font-bold text-slate-950 tracking-tight">
-                  Clear, Transparent Process
-                </h3>
-                <p className="mt-1.5 text-sm text-slate-600 leading-relaxed font-sans font-normal">
-                  You always know what&apos;s next, why it matters, and what it delivers.
-                </p>
-              </div>
-            </div>
-
-            {/* 06 */}
-            <div className="relative flex items-start gap-4 sm:gap-6">
-              <div className="relative z-10 flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center bg-pink-50 border border-pink-200 text-pink-600 shadow-sm">
-                <Heart className="h-5 w-5 sm:h-6 sm:w-6 stroke-[1.5]" />
-              </div>
-              <div className="flex-1 pt-1">
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="font-serif text-base font-normal text-slate-900">06</span>
-                  <span className="w-3 h-[1px] bg-purple-500" />
-                </div>
-                <h3 className="text-xl sm:text-2xl font-sans font-bold text-slate-950 tracking-tight">
-                  Human Collaboration
-                </h3>
-                <p className="mt-1.5 text-sm text-slate-600 leading-relaxed font-sans font-normal">
-                  We work with people, not just projects — and it shows.
-                </p>
-              </div>
-            </div>
+              );
+            })}
           </div>
         </div>
 
