@@ -56,10 +56,10 @@ export const IdeasToImpactSection: React.FC = () => {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center select-none opacity-90"
+          className="object-cover object-center lg:object-right select-none"
         />
         {/* Soft atmospheric gradient for crisp typography contrast */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/70 to-transparent lg:from-white/60 lg:via-transparent lg:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/40 to-transparent lg:from-white/40 lg:via-transparent lg:to-transparent" />
       </div>
 
       <Container size="default" className="relative z-10 w-full max-w-[1280px] flex flex-col justify-between h-full space-y-16 sm:space-y-24">
