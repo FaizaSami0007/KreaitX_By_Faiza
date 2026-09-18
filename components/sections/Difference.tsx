@@ -155,36 +155,37 @@ export const Difference: React.FC = () => {
                   onMouseEnter={() => setActiveId(item.id)}
                   onMouseLeave={() => setActiveId(null)}
                   className={`flex flex-col transition-all duration-300 cursor-pointer ${alignClass} ${
-                    isDimmed ? "opacity-35 grayscale-[30%]" : "opacity-100"
+                    isDimmed ? "opacity-35" : "opacity-100"
                   }`}
                 >
                   <div className={`flex items-center gap-4 mb-4 ${headerJustify}`}>
                     <div className="flex flex-col items-start">
-                      <span className={`font-serif text-lg leading-none transition-colors duration-200 ${isActive ? "text-purple-600 font-bold scale-105" : "text-slate-900 font-normal"}`}>
+                      <span className={`font-serif text-lg leading-none transition-colors duration-200 ${isActive ? "text-purple-700 font-semibold" : "text-slate-900 font-normal"}`}>
                         {item.number}
                       </span>
-                      <span className={`h-[1.5px] transition-all duration-300 mt-1 ${isActive ? "w-6 bg-purple-600" : "w-4 bg-purple-500/70"}`} />
+                      <span className={`h-[1.5px] transition-all duration-300 mt-1 ${isActive ? "w-5 bg-purple-500" : "w-3.5 bg-slate-300"}`} />
                     </div>
+                    {/* Soft, light, delicate active ring badge (no harsh dark background) */}
                     <div
-                      className={`w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 shadow-sm ${
+                      className={`w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 ${
                         isActive
-                          ? "bg-gradient-to-r from-purple-600 to-indigo-600 text-white scale-110 shadow-lg shadow-purple-500/30 ring-4 ring-purple-500/20 border-transparent"
-                          : "bg-purple-50/80 border border-purple-200/70 text-purple-700 hover:border-purple-300"
+                          ? "bg-white border-2 border-purple-400 ring-4 ring-purple-100/90 text-purple-700 shadow-sm scale-105"
+                          : "bg-slate-50 border border-slate-200/80 text-slate-600 hover:border-slate-300"
                       }`}
                     >
                       <IconComp className="h-6 w-6 stroke-[1.5]" />
                     </div>
                   </div>
                   <h3
-                    className={`text-[25px] font-sans tracking-tight transition-all duration-200 ${
+                    className={`text-[25px] font-sans tracking-tight transition-colors duration-200 ${
                       isActive
-                        ? "font-bold text-purple-700 scale-[1.01]"
+                        ? "font-bold text-purple-700"
                         : "font-bold text-slate-950"
                     }`}
                   >
                     {item.title}
                   </h3>
-                  <p className={`mt-2 text-[14.5px] leading-relaxed font-sans max-w-[310px] transition-colors duration-200 ${isActive ? "text-slate-900 font-medium" : "text-slate-600 font-normal"}`}>
+                  <p className="mt-2 text-[14.5px] leading-relaxed font-sans max-w-[310px] text-slate-600 font-normal">
                     {item.description}
                   </p>
                 </div>
@@ -201,22 +202,22 @@ export const Difference: React.FC = () => {
               {/* Left Branching Curves (Active on 01 or 04) */}
               <path
                 d="M 120 -24 C 120 12, 170 32, 240 32"
-                stroke={activeId === "01" || activeId === "04" ? "#9333ea" : "#9333ea"}
-                strokeWidth={activeId === "01" || activeId === "04" ? "2" : "1.2"}
-                strokeOpacity={activeId === "01" || activeId === "04" ? "1" : "0.55"}
+                stroke="#9333ea"
+                strokeWidth={activeId === "01" || activeId === "04" ? "1.8" : "1.2"}
+                strokeOpacity={activeId === "01" || activeId === "04" ? "0.9" : "0.5"}
                 fill="none"
                 className="transition-all duration-300"
               />
               <path
                 d="M 120 88 C 120 52, 170 32, 240 32"
                 stroke="#64748B"
-                strokeWidth={activeId === "01" || activeId === "04" ? "2" : "1.2"}
-                strokeOpacity={activeId === "01" || activeId === "04" ? "0.8" : "0.35"}
+                strokeWidth={activeId === "01" || activeId === "04" ? "1.8" : "1.2"}
+                strokeOpacity={activeId === "01" || activeId === "04" ? "0.7" : "0.35"}
                 fill="none"
                 className="transition-all duration-300"
               />
-              <circle cx="152" cy="-4" r={activeId === "01" ? "4" : "2.5"} fill="#9333ea" className="transition-all duration-300" />
-              <circle cx="152" cy="68" r={activeId === "04" ? "4" : "2.5"} fill="#64748B" fillOpacity="0.5" className="transition-all duration-300" />
+              <circle cx="152" cy="-4" r={activeId === "01" ? "3.5" : "2.5"} fill="#9333ea" className="transition-all duration-300" />
+              <circle cx="152" cy="68" r={activeId === "04" ? "3.5" : "2.5"} fill="#64748B" fillOpacity="0.5" className="transition-all duration-300" />
 
               {/* Center Vertical Axis & Nodes (Active on 02 or 05) */}
               <line
@@ -225,8 +226,8 @@ export const Difference: React.FC = () => {
                 x2="600"
                 y2="32"
                 stroke="#64748B"
-                strokeWidth={activeId === "02" || activeId === "05" ? "2" : "1.2"}
-                strokeOpacity={activeId === "02" || activeId === "05" ? "0.8" : "0.35"}
+                strokeWidth={activeId === "02" || activeId === "05" ? "1.8" : "1.2"}
+                strokeOpacity={activeId === "02" || activeId === "05" ? "0.7" : "0.35"}
                 className="transition-all duration-300"
               />
               <line
@@ -235,52 +236,52 @@ export const Difference: React.FC = () => {
                 x2="600"
                 y2="32"
                 stroke="#9333ea"
-                strokeWidth={activeId === "02" || activeId === "05" ? "2" : "1.2"}
-                strokeOpacity={activeId === "02" || activeId === "05" ? "1" : "0.55"}
+                strokeWidth={activeId === "02" || activeId === "05" ? "1.8" : "1.2"}
+                strokeOpacity={activeId === "02" || activeId === "05" ? "0.9" : "0.5"}
                 className="transition-all duration-300"
               />
-              <circle cx="600" cy="-2" r={activeId === "02" ? "4" : "2.5"} fill="#64748B" fillOpacity="0.5" className="transition-all duration-300" />
-              <circle cx="600" cy="66" r={activeId === "05" ? "4" : "2.5"} fill="#9333ea" className="transition-all duration-300" />
+              <circle cx="600" cy="-2" r={activeId === "02" ? "3.5" : "2.5"} fill="#64748B" fillOpacity="0.5" className="transition-all duration-300" />
+              <circle cx="600" cy="66" r={activeId === "05" ? "3.5" : "2.5"} fill="#9333ea" className="transition-all duration-300" />
 
               {/* Right Branching Curves (Active on 03 or 06) */}
               <path
                 d="M 1080 -24 C 1080 12, 1030 32, 960 32"
-                stroke={activeId === "03" || activeId === "06" ? "#9333ea" : "#9333ea"}
-                strokeWidth={activeId === "03" || activeId === "06" ? "2" : "1.2"}
-                strokeOpacity={activeId === "03" || activeId === "06" ? "1" : "0.55"}
+                stroke="#9333ea"
+                strokeWidth={activeId === "03" || activeId === "06" ? "1.8" : "1.2"}
+                strokeOpacity={activeId === "03" || activeId === "06" ? "0.9" : "0.5"}
                 fill="none"
                 className="transition-all duration-300"
               />
               <path
                 d="M 1080 88 C 1080 52, 1030 32, 960 32"
                 stroke="#64748B"
-                strokeWidth={activeId === "03" || activeId === "06" ? "2" : "1.2"}
-                strokeOpacity={activeId === "03" || activeId === "06" ? "0.8" : "0.35"}
+                strokeWidth={activeId === "03" || activeId === "06" ? "1.8" : "1.2"}
+                strokeOpacity={activeId === "03" || activeId === "06" ? "0.7" : "0.35"}
                 fill="none"
                 className="transition-all duration-300"
               />
-              <circle cx="1048" cy="-4" r={activeId === "03" ? "4" : "2.5"} fill="#9333ea" className="transition-all duration-300" />
-              <circle cx="1048" cy="68" r={activeId === "06" ? "4" : "2.5"} fill="#64748B" fillOpacity="0.5" className="transition-all duration-300" />
+              <circle cx="1048" cy="-4" r={activeId === "03" ? "3.5" : "2.5"} fill="#9333ea" className="transition-all duration-300" />
+              <circle cx="1048" cy="68" r={activeId === "06" ? "3.5" : "2.5"} fill="#64748B" fillOpacity="0.5" className="transition-all duration-300" />
 
               {/* Main Junction Nodes on the horizontal line */}
               <circle
                 cx="240"
                 cy="32"
-                r={activeId === "01" || activeId === "04" ? "6.5" : "4.5"}
+                r={activeId === "01" || activeId === "04" ? "5.5" : "4.5"}
                 fill={activeId === "01" || activeId === "04" ? "#9333ea" : "#0f172a"}
                 className="transition-all duration-300"
               />
               <circle
                 cx="600"
                 cy="32"
-                r={activeId === "02" || activeId === "05" ? "6.5" : "4.5"}
+                r={activeId === "02" || activeId === "05" ? "5.5" : "4.5"}
                 fill={activeId === "02" || activeId === "05" ? "#9333ea" : "#9333ea"}
                 className="transition-all duration-300"
               />
               <circle
                 cx="960"
                 cy="32"
-                r={activeId === "03" || activeId === "06" ? "6.5" : "4.5"}
+                r={activeId === "03" || activeId === "06" ? "5.5" : "4.5"}
                 fill={activeId === "03" || activeId === "06" ? "#9333ea" : "#0f172a"}
                 className="transition-all duration-300"
               />
@@ -302,36 +303,37 @@ export const Difference: React.FC = () => {
                   onMouseEnter={() => setActiveId(item.id)}
                   onMouseLeave={() => setActiveId(null)}
                   className={`flex flex-col transition-all duration-300 cursor-pointer ${alignClass} ${
-                    isDimmed ? "opacity-35 grayscale-[30%]" : "opacity-100"
+                    isDimmed ? "opacity-35" : "opacity-100"
                   }`}
                 >
                   <div className={`flex items-center gap-4 mb-4 ${headerJustify}`}>
                     <div className="flex flex-col items-start">
-                      <span className={`font-serif text-lg leading-none transition-colors duration-200 ${isActive ? "text-purple-600 font-bold scale-105" : "text-slate-900 font-normal"}`}>
+                      <span className={`font-serif text-lg leading-none transition-colors duration-200 ${isActive ? "text-purple-700 font-semibold" : "text-slate-900 font-normal"}`}>
                         {item.number}
                       </span>
-                      <span className={`h-[1.5px] transition-all duration-300 mt-1 ${isActive ? "w-6 bg-purple-600" : "w-4 bg-purple-500/70"}`} />
+                      <span className={`h-[1.5px] transition-all duration-300 mt-1 ${isActive ? "w-5 bg-purple-500" : "w-3.5 bg-slate-300"}`} />
                     </div>
+                    {/* Soft, light, delicate active ring badge (no harsh dark background) */}
                     <div
-                      className={`w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 shadow-sm ${
+                      className={`w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 ${
                         isActive
-                          ? "bg-gradient-to-r from-purple-600 to-indigo-600 text-white scale-110 shadow-lg shadow-purple-500/30 ring-4 ring-purple-500/20 border-transparent"
-                          : "bg-purple-50/80 border border-purple-200/70 text-purple-700 hover:border-purple-300"
+                          ? "bg-white border-2 border-purple-400 ring-4 ring-purple-100/90 text-purple-700 shadow-sm scale-105"
+                          : "bg-slate-50 border border-slate-200/80 text-slate-600 hover:border-slate-300"
                       }`}
                     >
                       <IconComp className="h-6 w-6 stroke-[1.5]" />
                     </div>
                   </div>
                   <h3
-                    className={`text-[25px] font-sans tracking-tight transition-all duration-200 ${
+                    className={`text-[25px] font-sans tracking-tight transition-colors duration-200 ${
                       isActive
-                        ? "font-bold text-purple-700 scale-[1.01]"
+                        ? "font-bold text-purple-700"
                         : "font-bold text-slate-950"
                     }`}
                   >
                     {item.title}
                   </h3>
-                  <p className={`mt-2 text-[14.5px] leading-relaxed font-sans max-w-[310px] transition-colors duration-200 ${isActive ? "text-slate-900 font-medium" : "text-slate-600 font-normal"}`}>
+                  <p className="mt-2 text-[14.5px] leading-relaxed font-sans max-w-[310px] text-slate-600 font-normal">
                     {item.description}
                   </p>
                 </div>
@@ -357,20 +359,20 @@ export const Difference: React.FC = () => {
                   className="relative flex items-start gap-4 sm:gap-6 cursor-pointer"
                 >
                   <div
-                    className={`relative z-10 flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center transition-all duration-200 shadow-sm ${
+                    className={`relative z-10 flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center transition-all duration-200 ${
                       isActive
-                        ? "bg-gradient-to-r from-purple-600 to-indigo-600 text-white scale-110 ring-4 ring-purple-500/20"
-                        : "bg-purple-50 border border-purple-200 text-purple-700"
+                        ? "bg-white border-2 border-purple-400 ring-4 ring-purple-100 text-purple-700 shadow-sm"
+                        : "bg-slate-50 border border-slate-200 text-slate-600"
                     }`}
                   >
                     <IconComp className="h-5 w-5 sm:h-6 sm:w-6 stroke-[1.5]" />
                   </div>
                   <div className="flex-1 pt-1">
                     <div className="flex items-center gap-2 mb-1">
-                      <span className={`font-serif text-base transition-colors ${isActive ? "text-purple-600 font-bold" : "text-slate-900 font-normal"}`}>
+                      <span className={`font-serif text-base transition-colors ${isActive ? "text-purple-700 font-semibold" : "text-slate-900 font-normal"}`}>
                         {item.number}
                       </span>
-                      <span className={`w-3 h-[1px] ${isActive ? "bg-purple-600" : "bg-purple-500"}`} />
+                      <span className={`w-3 h-[1px] ${isActive ? "bg-purple-500" : "bg-slate-300"}`} />
                     </div>
                     <h3 className={`text-xl sm:text-2xl font-sans font-bold tracking-tight transition-colors ${isActive ? "text-purple-700" : "text-slate-950"}`}>
                       {item.title}
