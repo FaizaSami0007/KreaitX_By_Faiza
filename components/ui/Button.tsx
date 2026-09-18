@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "dark" | "ghost" | "white" | "outline";
+  variant?: "primary" | "secondary" | "dark" | "ghost" | "white" | "outline" | "gradient";
   size?: "sm" | "md" | "lg";
   href?: string;
   withArrow?: boolean;
@@ -34,34 +34,39 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const baseStyles =
-      "group inline-flex items-center justify-center font-medium rounded-xl transition-all duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:scale-[0.98] select-none cursor-pointer disabled:opacity-50 disabled:pointer-events-none";
+      "group inline-flex items-center justify-center font-sans font-semibold rounded-full transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:scale-[0.98] select-none cursor-pointer disabled:opacity-50 disabled:pointer-events-none";
 
     const variantStyles = {
       primary:
-        "bg-[#14213D] text-[#F4F1E8] hover:bg-[#0D182B] hover:-translate-y-0.5 shadow-subtle hover:shadow-card focus-visible:ring-[#B2AD7F]",
+        "bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white shadow-button hover:shadow-glow hover:-translate-y-0.5 focus-visible:ring-purple-500",
+      gradient:
+        "bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500 hover:from-purple-700 hover:via-indigo-700 hover:to-cyan-600 text-white shadow-button hover:shadow-glow hover:-translate-y-0.5 focus-visible:ring-purple-500",
       secondary:
-        "bg-[#FAF8F2] text-[#182231] border border-[#DEDCD3] hover:border-[#14213D] hover:bg-white hover:-translate-y-0.5 shadow-subtle focus-visible:ring-[#14213D]",
+        "bg-white text-slate-800 border border-slate-200 hover:border-slate-300 hover:bg-slate-50 hover:-translate-y-0.5 shadow-subtle focus-visible:ring-slate-400",
       outline:
-        "bg-transparent text-[#182231] border border-[#DEDCD3] hover:border-[#14213D] hover:bg-[#FAF8F2] hover:-translate-y-0.5 focus-visible:ring-[#14213D]",
+        "bg-transparent text-slate-800 border border-slate-200 hover:border-purple-300 hover:bg-purple-50/50 hover:text-purple-700 hover:-translate-y-0.5 focus-visible:ring-purple-500",
       dark:
-        "bg-[#0D182B] text-[#F4F1E8] hover:bg-[#14213D] hover:-translate-y-0.5 shadow-subtle focus-visible:ring-[#B2AD7F]",
+        "bg-slate-900 text-white hover:bg-slate-800 hover:-translate-y-0.5 shadow-md focus-visible:ring-slate-700",
       ghost:
-        "bg-transparent text-[#182231] hover:bg-[#14213D]/5 hover:-translate-y-0.5 focus-visible:ring-[#14213D]",
+        "bg-transparent text-slate-700 hover:text-purple-600 hover:bg-purple-50/60 hover:-translate-y-0.5 focus-visible:ring-purple-500",
       white:
-        "bg-white text-[#182231] hover:bg-[#FAF8F2] hover:-translate-y-0.5 shadow-subtle focus-visible:ring-white"
+        "bg-white text-slate-900 hover:bg-slate-50 hover:-translate-y-0.5 shadow-card focus-visible:ring-purple-500"
     };
 
     const sizeStyles = {
-      sm: "text-xs px-4 py-2 min-h-[40px] tracking-normal",
-      md: "text-sm px-5 py-2.5 min-h-[46px] tracking-normal",
-      lg: "text-base px-7 py-3.5 min-h-[52px] tracking-normal"
+      sm: "text-xs px-4 py-2 min-h-[38px]",
+      md: "text-sm px-6 py-2.5 min-h-[46px]",
+      lg: "text-base px-8 py-3.5 min-h-[52px]"
     };
 
     const arrowElement = withArrow && (
       <ArrowRight
         className={cn(
-          "ml-2 h-4 w-4 text-[#B2AD7F] transition-transform duration-200 ease-out group-hover:translate-x-1",
-          arrowPosition === "top-right" && "group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+          "ml-2 h-4 w-4 transition-transform duration-300 ease-out group-hover:translate-x-1.5",
+          variant === "primary" || variant === "gradient" || variant === "dark"
+            ? "text-white/90"
+            : "text-purple-600",
+          arrowPosition === "top-right" && "group-hover:-translate-y-1 group-hover:translate-x-1"
         )}
         aria-hidden="true"
       />

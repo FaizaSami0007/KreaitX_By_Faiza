@@ -3,9 +3,10 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Play, X } from "lucide-react";
+import { ArrowRight, Play, X, Sparkles } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
+import { GradientDecoration } from "@/components/ui/GradientDecoration";
 
 export const Hero: React.FC = () => {
   const [videoModalOpen, setVideoModalOpen] = useState(false);
@@ -34,115 +35,100 @@ export const Hero: React.FC = () => {
   }, [videoModalOpen]);
 
   return (
-    <section className="relative overflow-hidden bg-[#14213D] text-[#F5F6F2] min-h-[85dvh] flex items-center justify-center py-16 sm:py-20 lg:py-24">
-      {/* Dynamic User Background Image with Adaptive Aspect Handling */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/hero-bg.png"
-          alt="KreaitX Hero Background Flow"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center select-none"
-        />
-        {/* Soft atmospheric gradient overlays for perfect centered readability */}
-        <div className="absolute inset-0 bg-[#14213D]/70 via-[#14213D]/50 to-[#14213D]/80" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#14213D] via-transparent to-[#14213D]/50" />
-      </div>
+    <section className="relative overflow-hidden bg-white text-slate-900 min-h-[88dvh] flex items-center justify-center py-20 sm:py-24 lg:py-28">
+      {/* Softy Solutions Animated Fluid Gradient Blobs */}
+      <GradientDecoration variant="hero" />
 
-      <Container size="narrow" className="relative z-10 w-full">
-        <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
-          {/* Eyebrow */}
+      {/* Subtle background grid pattern */}
+      <div className="absolute inset-0 bg-grid-softy opacity-70 pointer-events-none" />
+
+      <Container size="default" className="relative z-10 w-full">
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+          {/* Eyebrow Badge */}
           <Reveal delay={0.05} yOffset={12}>
-            <div className="flex items-center justify-center gap-2.5 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.22em] text-[#F4F1E8]/80 mb-4 sm:mb-6">
-              <span>IDEAS</span>
-              <span className="text-[#B2AD7F]">×</span>
-              <span>TECHNOLOGY</span>
-              <span className="text-[#B2AD7F]">×</span>
-              <span>IMPACT</span>
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-purple-500/10 via-indigo-500/10 to-cyan-500/10 border border-purple-200/80 text-purple-700 text-xs font-semibold uppercase tracking-wider mb-6 shadow-subtle">
+              <Sparkles className="h-3.5 w-3.5 text-purple-600 animate-pulse" />
+              <span>IDEAS × TECHNOLOGY × IMPACT</span>
             </div>
           </Reveal>
 
-          {/* Main Headline (Fluid clamp typography on single line) */}
+          {/* Main Headline (Space Grotesk Display Typography) */}
           <Reveal delay={0.12} yOffset={18}>
-            <h1 className="text-[clamp(28px,5.2vw,62px)] font-semibold tracking-[-0.04em] leading-[1.08] text-[#F4F1E8] whitespace-nowrap">
+            <h1 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-bold tracking-tight leading-[1.06] text-slate-950">
               We Create{" "}
-              <span className="font-serif-italic font-normal text-[#B2AD7F] tracking-tight">
-                Digital
-              </span>{" "}
-              <span className="font-serif font-normal text-[#F4F1E8]">
-                Realities
+              <span className="bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500 bg-clip-text text-transparent">
+                Digital Realities
               </span>
             </h1>
           </Reveal>
 
           {/* Sub-headline */}
           <Reveal delay={0.2} yOffset={16}>
-            <p className="mt-4 sm:mt-6 text-[clamp(14px,1.5vw,18px)] text-[#F4F1E8]/80 font-normal leading-relaxed max-w-lg mx-auto">
+            <p className="mt-6 text-lg sm:text-xl text-slate-600 font-sans font-normal leading-relaxed max-w-2xl mx-auto">
               A creative technology agency helping brands design, build and grow in a digital-first world.
             </p>
           </Reveal>
 
-          {/* Action Buttons (Fluid stacking for mobile) */}
+          {/* Action Buttons (Dual Pill CTAs) */}
           <Reveal delay={0.28} yOffset={16}>
-            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
+            <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
               {/* Primary Button */}
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center font-medium text-[#14213D] bg-[#F4F1E8] hover:bg-white rounded-xl px-6 sm:px-7 py-3 min-h-[48px] w-full sm:w-auto text-xs sm:text-sm transition-all duration-200 hover:-translate-y-0.5 active:scale-[0.98]"
+                className="group inline-flex items-center justify-center font-sans font-semibold text-white bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500 hover:from-purple-700 hover:to-indigo-700 rounded-full px-8 py-3.5 min-h-[52px] w-full sm:w-auto text-sm sm:text-base transition-all duration-300 hover:-translate-y-0.5 shadow-button hover:shadow-glow active:scale-[0.98]"
               >
                 <span>Start a Project</span>
-                <ArrowRight className="ml-2 h-3.5 w-3.5 text-[#B2AD7F] transition-transform duration-200 group-hover:translate-x-1" />
+                <ArrowRight className="ml-2.5 h-4 w-4 text-white/90 transition-transform duration-300 group-hover:translate-x-1.5" />
               </Link>
 
               {/* Secondary Button: Watch Showreel */}
               <button
                 type="button"
                 onClick={() => setVideoModalOpen(true)}
-                className="group inline-flex items-center justify-center font-medium text-[#F4F1E8] bg-white/10 hover:bg-white/15 border border-white/20 hover:border-white/40 rounded-xl px-5 sm:px-6 py-3 min-h-[48px] w-full sm:w-auto text-xs sm:text-sm backdrop-blur-md transition-all duration-200 hover:-translate-y-0.5 active:scale-[0.98] cursor-pointer"
+                className="group inline-flex items-center justify-center font-sans font-semibold text-slate-800 bg-white hover:bg-slate-50 border border-slate-200 hover:border-purple-300 rounded-full px-7 py-3.5 min-h-[52px] w-full sm:w-auto text-sm sm:text-base shadow-subtle transition-all duration-300 hover:-translate-y-0.5 active:scale-[0.98] cursor-pointer"
               >
-                <span className="mr-2 flex h-5 w-5 items-center justify-center rounded-full bg-[#B2AD7F] text-[#14213D] transition-transform duration-200 group-hover:scale-110">
-                  <Play className="h-2.5 w-2.5 fill-current ml-0.5" />
+                <span className="mr-2.5 flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 text-purple-700 transition-transform duration-300 group-hover:scale-110">
+                  <Play className="h-3 w-3 fill-current ml-0.5" />
                 </span>
                 <span>Watch Showreel</span>
               </button>
             </div>
           </Reveal>
 
-          {/* Bottom Row: Authentic Core Capability Pillars */}
+          {/* Bottom Row: 3 Rounded Softy Feature Cards */}
           <Reveal delay={0.35} yOffset={16} className="w-full">
-            <div className="mt-10 sm:mt-14 pt-6 border-t border-white/15 grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-6 max-w-2xl mx-auto items-center text-center">
-              <div className="p-3.5 rounded-xl bg-white/[0.04] border border-white/10">
-                <div className="text-xs font-mono uppercase tracking-wider text-[#B2AD7F] font-bold">
+            <div className="mt-14 sm:mt-18 pt-8 border-t border-slate-200/80 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto items-center text-center">
+              <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-card hover:shadow-card-hover hover:border-purple-200 transition-all duration-300 group">
+                <div className="text-xs font-sans uppercase tracking-wider text-purple-600 font-bold">
                   Strategy &amp; Brand
                 </div>
-                <div className="text-xs text-[#F4F1E8]/80 mt-1 font-medium">
+                <div className="text-sm text-slate-700 mt-1 font-medium">
                   Identity &amp; Positioning
                 </div>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-white/[0.04] border border-white/10">
-                <div className="text-xs font-mono uppercase tracking-wider text-[#B2AD7F] font-bold">
+              <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-card hover:shadow-card-hover hover:border-indigo-200 transition-all duration-300 group">
+                <div className="text-xs font-sans uppercase tracking-wider text-indigo-600 font-bold">
                   Cinematic Media
                 </div>
-                <div className="text-xs text-[#F4F1E8]/80 mt-1 font-medium">
+                <div className="text-sm text-slate-700 mt-1 font-medium">
                   Production &amp; Motion
                 </div>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-white/[0.04] border border-white/10">
-                <div className="text-xs font-mono uppercase tracking-wider text-[#B2AD7F] font-bold">
+              <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-card hover:shadow-card-hover hover:border-cyan-200 transition-all duration-300 group">
+                <div className="text-xs font-sans uppercase tracking-wider text-cyan-600 font-bold">
                   Digital Engineering
                 </div>
-                <div className="text-xs text-[#F4F1E8]/80 mt-1 font-medium">
+                <div className="text-sm text-slate-700 mt-1 font-medium">
                   Web &amp; Custom Platforms
                 </div>
               </div>
             </div>
 
-            <div className="mt-5 sm:mt-6 flex items-center justify-center gap-3 text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.16em] text-[#F5F6F2]/75">
+            <div className="mt-6 flex items-center justify-center gap-3 text-xs font-semibold uppercase tracking-widest text-slate-500">
               <span>Based in Peshawar</span>
-              <span className="text-[#B7B98A]">•</span>
+              <span className="text-purple-500">•</span>
               <span>Working Globally</span>
             </div>
           </Reveal>
@@ -152,45 +138,45 @@ export const Hero: React.FC = () => {
       {/* Showreel Interactive Video Modal */}
       {videoModalOpen && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4 backdrop-blur-md animate-in fade-in duration-200"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 p-4 backdrop-blur-md animate-in fade-in duration-200"
           role="dialog"
           aria-modal="true"
           aria-label="KreaitX Showreel Video Modal"
           onClick={() => setVideoModalOpen(false)}
         >
           <div
-            className="relative w-full max-w-3xl rounded-2xl bg-[#14213D] p-5 sm:p-6 border border-[#F5F6F2]/20 shadow-2xl"
+            className="relative w-full max-w-3xl rounded-3xl bg-white p-6 border border-slate-200 shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between pb-3 sm:pb-4 border-b border-[#F5F6F2]/10">
-              <span className="text-xs font-mono uppercase tracking-wider text-[#B7B98A]">
+            <div className="flex items-center justify-between pb-4 border-b border-slate-200">
+              <span className="text-xs font-sans uppercase tracking-wider text-purple-600 font-bold">
                 KreaitX Agency Showreel // 2025
               </span>
               <button
                 type="button"
                 onClick={() => setVideoModalOpen(false)}
-                className="text-[#F5F6F2] hover:text-[#B7B98A] p-2 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg hover:bg-white/10 transition-colors"
+                className="text-slate-500 hover:text-slate-900 p-2 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-full hover:bg-slate-100 transition-colors"
                 aria-label="Close Showreel"
               >
                 <X className="h-5 w-5" />
               </button>
             </div>
 
-            <div className="mt-4 aspect-video w-full rounded-xl bg-[#0E172B] flex flex-col items-center justify-center p-6 sm:p-8 text-center border border-[#F5F6F2]/10 relative overflow-hidden">
+            <div className="mt-4 aspect-video w-full rounded-2xl bg-slate-950 flex flex-col items-center justify-center p-6 sm:p-8 text-center border border-slate-800 relative overflow-hidden">
               <Image
                 src="/images/hero-bg.png"
                 alt="Showreel Preview"
                 fill
-                className="object-cover opacity-40"
+                className="object-cover opacity-30"
               />
               <div className="relative z-10 space-y-3 max-w-md">
-                <div className="h-12 sm:h-14 w-12 sm:w-14 mx-auto rounded-full bg-[#B7B98A] text-[#14213D] flex items-center justify-center shadow-lg">
-                  <Play className="h-5 sm:h-6 w-5 sm:h-6 fill-current ml-0.5" />
+                <div className="h-14 w-14 mx-auto rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white flex items-center justify-center shadow-button">
+                  <Play className="h-6 w-6 fill-current ml-0.5" />
                 </div>
-                <h3 className="text-base sm:text-xl font-semibold text-[#F5F6F2]">
+                <h3 className="text-lg sm:text-xl font-display font-bold text-white">
                   Creative × Technology Showreel
                 </h3>
-                <p className="text-xs text-[#F5F6F2]/80 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                   Highlighting commercial cinematography, digital product engineering, and brand systems for ambitious global businesses.
                 </p>
               </div>
@@ -201,4 +187,3 @@ export const Hero: React.FC = () => {
     </section>
   );
 };
-

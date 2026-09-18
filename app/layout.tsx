@@ -1,26 +1,26 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Instrument_Serif } from "next/font/google";
+import { Space_Grotesk, Manrope } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { siteConfig } from "@/data/siteData";
 
-const inter = Inter({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-space-grotesk",
   display: "swap"
 });
 
-const instrumentSerif = Instrument_Serif({
+const manrope = Manrope({
   subsets: ["latin"],
-  weight: "400",
-  style: ["normal", "italic"],
-  variable: "--font-instrument",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-manrope",
   display: "swap"
 });
 
 export const viewport: Viewport = {
-  themeColor: "#14213D",
+  themeColor: "#FFFFFF",
   width: "device-width",
   initialScale: 1
 };
@@ -114,7 +114,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${inter.variable} ${instrumentSerif.variable} scroll-smooth`}
+      className={`${spaceGrotesk.variable} ${manrope.variable} scroll-smooth`}
     >
       <head>
         <script
@@ -124,7 +124,7 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className="flex min-h-screen flex-col bg-[#F4F1E8] font-sans text-[#182231] antialiased"
+        className="flex min-h-screen flex-col bg-white font-sans text-slate-900 antialiased selection:bg-purple-600 selection:text-white"
       >
         <Navbar />
         <main id="main-content" className="flex-1">

@@ -2,7 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { CheckCircle2, ArrowRight, HelpCircle, ShieldCheck } from "lucide-react";
+import { CheckCircle2, ArrowRight, HelpCircle, ShieldCheck, Sparkles } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
@@ -18,8 +18,8 @@ export const metadata: Metadata = {
 export default function ProcessPage() {
   return (
     <>
-      {/* Cinematic Process Page Hero with User-Provided Art */}
-      <section className="relative overflow-hidden bg-[#14213D] text-[#F5F6F2] min-h-[75vh] flex items-center justify-center py-20 lg:py-28 border-b border-[#F5F6F2]/10">
+      {/* Process Page Hero with User-Provided Art */}
+      <section className="relative overflow-hidden bg-slate-950 text-white min-h-[75vh] flex items-center justify-center py-20 lg:py-28 border-b border-slate-800">
         {/* User-Provided Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -28,36 +28,37 @@ export default function ProcessPage() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center select-none"
+            className="object-cover object-center select-none opacity-80"
           />
-          {/* Atmospheric gradient overlay for text readability */}
-          <div className="absolute inset-0 bg-[#14213D]/70 via-[#14213D]/50 to-[#14213D]/80" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#14213D] via-transparent to-[#14213D]/60" />
+          {/* Atmospheric gradient overlay */}
+          <div className="absolute inset-0 bg-slate-950/70 via-slate-950/50 to-slate-950/80" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/60" />
         </div>
 
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
-              <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.16em] text-[#B7B98A] px-4 py-1.5 rounded-full bg-white/10 border border-[#F5F6F2]/15 mb-6 inline-block backdrop-blur-md">
-                Methodology &amp; Standards
+              <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-purple-300 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 mb-6 backdrop-blur-md shadow-subtle">
+                <Sparkles className="h-3.5 w-3.5 text-cyan-400 animate-pulse" />
+                <span>Methodology &amp; Standards</span>
               </span>
-              <h1 className="text-[clamp(28px,5vw,56px)] font-semibold text-[#F5F6F2] tracking-[-0.04em] leading-[1.08]">
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-[64px] font-bold text-white tracking-tight leading-[1.08]">
                 Clear milestones.{" "}
-                <span className="font-serif-italic font-normal text-[#B7B98A]">
+                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
                   Zero ambiguity
                 </span>.
               </h1>
-              <p className="mt-6 text-[clamp(14px,1.5vw,18px)] text-[#F5F6F2]/80 leading-relaxed font-normal max-w-2xl">
+              <p className="mt-6 text-lg sm:text-xl text-slate-300 leading-relaxed font-sans font-normal max-w-2xl">
                 We believe exceptional work happens when clients understand exactly what comes next. Our six-stage process bridges strategic rigor, creative exploration, and production reliability.
               </p>
 
-              <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 w-full sm:w-auto">
-                <Button href="/contact" variant="white" size="md" withArrow className="w-full sm:w-auto min-h-[48px]">
+              <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+                <Button href="/contact" variant="primary" size="md" withArrow className="w-full sm:w-auto min-h-[48px]">
                   Start a Project
                 </Button>
                 <a
                   href="#process-breakdown"
-                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-full text-xs sm:text-sm font-medium text-[#F5F6F2] bg-white/10 hover:bg-white/20 border border-[#F5F6F2]/20 backdrop-blur-md transition-all duration-200 w-full sm:w-auto"
+                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-full text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md transition-all duration-200 w-full sm:w-auto"
                 >
                   Explore 6 Stages ↓
                 </a>
@@ -68,47 +69,47 @@ export default function ProcessPage() {
       </section>
 
       {/* Six Stage Detailed Deep Dive */}
-      <section id="process-breakdown" className="bg-[#F4F1E8] py-20 sm:py-28 border-b border-[#DEDCD3]">
+      <section id="process-breakdown" className="bg-slate-50/50 py-20 sm:py-28 border-b border-slate-200/80">
         <Container size="default">
           <div className="space-y-12 sm:space-y-16">
             {processStages.map((stage, idx) => (
               <div
                 key={stage.number}
-                className="rounded-2xl bg-[#FAF8F2] border border-[#DEDCD3] p-8 sm:p-12 lg:p-14"
+                className="rounded-3xl bg-white border border-slate-200/80 shadow-card hover:shadow-card-hover hover:border-purple-200 transition-all duration-300 p-8 sm:p-12 lg:p-14"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
                   {/* Left Column: Stage Identity & Narrative */}
                   <div className="lg:col-span-5 space-y-4">
                     <div className="flex items-center gap-3">
-                      <span className="font-mono text-sm font-bold text-[#F4F1E8] bg-[#14213D] px-3 py-1 rounded-md">
+                      <span className="font-display text-sm font-bold text-white bg-gradient-to-r from-purple-600 to-indigo-600 px-3.5 py-1 rounded-full shadow-button">
                         Stage {stage.number}
                       </span>
-                      <span className="text-xs font-mono uppercase text-[#667085] tracking-wider">
+                      <span className="text-xs font-sans uppercase text-slate-500 tracking-wider font-semibold">
                         Phase 0{idx + 1} of 06
                       </span>
                     </div>
 
-                    <h2 className="text-3xl sm:text-4xl font-normal text-[#14213D] tracking-tight">
+                    <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
                       {stage.title}
                     </h2>
 
-                    <p className="text-base font-medium text-[#14213D]/90">
+                    <p className="text-base font-semibold text-purple-700">
                       {stage.tagline}
                     </p>
 
-                    <p className="text-sm sm:text-base text-[#667085] leading-relaxed font-normal pt-2">
+                    <p className="text-base text-slate-600 leading-relaxed font-sans font-normal pt-2">
                       {stage.description}
                     </p>
 
                     <div className="pt-4">
-                      <span className="text-xs font-mono uppercase tracking-wider text-[#14213D]/70 font-bold block mb-2">
+                      <span className="text-xs font-sans uppercase tracking-wider text-slate-500 font-bold block mb-2.5">
                         Key Phase Milestones
                       </span>
                       <div className="flex flex-wrap gap-2">
                         {stage.milestones.map((ms) => (
                           <span
                             key={ms}
-                            className="px-3 py-1 rounded-md bg-[#F4F1E8] border border-[#DEDCD3] text-xs font-medium text-[#14213D]"
+                            className="px-3.5 py-1.5 rounded-full bg-purple-50/70 border border-purple-100 text-xs font-medium text-purple-800"
                           >
                             {ms}
                           </span>
@@ -118,33 +119,33 @@ export default function ProcessPage() {
                   </div>
 
                   {/* Right Column: Collaboration Matrix */}
-                  <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 bg-[#F4F1E8] p-6 sm:p-8 rounded-xl border border-[#DEDCD3]">
+                  <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200/60">
                     {/* What client provides */}
-                    <div className="rounded-lg bg-white p-6 border border-[#DEDCD3] flex flex-col justify-between">
+                    <div className="rounded-2xl bg-white p-6 border border-slate-200/80 shadow-subtle flex flex-col justify-between">
                       <div>
-                        <span className="text-xs font-mono uppercase tracking-wider text-[#667085] font-bold block mb-2">
+                        <span className="text-xs font-sans uppercase tracking-wider text-slate-500 font-bold block mb-2">
                           01 • What You Provide
                         </span>
-                        <p className="text-sm text-[#182231] leading-relaxed">
+                        <p className="text-sm text-slate-700 leading-relaxed font-sans">
                           {stage.clientInput}
                         </p>
                       </div>
-                      <div className="mt-4 pt-4 border-t border-[#DEDCD3] text-xs text-[#667085]">
+                      <div className="mt-4 pt-4 border-t border-slate-100 text-xs text-slate-500 font-medium">
                         Input &amp; Review Touchpoint
                       </div>
                     </div>
 
                     {/* What KreaitX delivers */}
-                    <div className="rounded-lg bg-white p-6 border border-[#DEDCD3] flex flex-col justify-between">
+                    <div className="rounded-2xl bg-white p-6 border border-slate-200/80 shadow-subtle flex flex-col justify-between">
                       <div>
-                        <span className="text-xs font-mono uppercase tracking-wider text-[#14213D] font-bold block mb-2">
+                        <span className="text-xs font-sans uppercase tracking-wider text-purple-700 font-bold block mb-2">
                           02 • What KreaitX Delivers
                         </span>
-                        <p className="text-sm text-[#182231] leading-relaxed font-medium">
+                        <p className="text-sm text-slate-900 leading-relaxed font-medium">
                           {stage.kreaitxOutput}
                         </p>
                       </div>
-                      <div className="mt-4 pt-4 border-t border-[#DEDCD3] text-xs text-[#14213D] font-semibold">
+                      <div className="mt-4 pt-4 border-t border-slate-100 text-xs text-purple-700 font-semibold">
                         Verified Output Document
                       </div>
                     </div>
@@ -157,7 +158,7 @@ export default function ProcessPage() {
       </section>
 
       {/* Uncertainty Reduction Section */}
-      <section className="bg-[#FAF8F2] py-20 sm:py-28 border-b border-[#DEDCD3]">
+      <section className="bg-white py-20 sm:py-28 border-b border-slate-200/80">
         <Container size="default">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mb-16">
@@ -166,7 +167,9 @@ export default function ProcessPage() {
                 title={
                   <>
                     How we make working together{" "}
-                    <span className="font-serif-italic font-normal">calm and predictable</span>.
+                    <span className="bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500 bg-clip-text text-transparent">
+                      calm and predictable
+                    </span>.
                   </>
                 }
                 description="We eliminate traditional agency friction through structured communication, weekly check-ins, and direct access to craft leads."
@@ -176,42 +179,42 @@ export default function ProcessPage() {
 
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <StaggerItem>
-              <div className="rounded-xl bg-[#F4F1E8] p-8 border border-[#DEDCD3] h-full">
-                <span className="h-10 w-10 rounded-lg bg-[#14213D] text-[#F4F1E8] flex items-center justify-center mb-6 font-mono text-sm font-bold">
+              <div className="rounded-3xl bg-slate-50 p-8 border border-slate-200/80 shadow-subtle hover:shadow-card hover:bg-white hover:border-purple-200 transition-all duration-300 h-full">
+                <span className="h-12 w-12 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white flex items-center justify-center mb-6 font-display text-base font-bold shadow-button">
                   01
                 </span>
-                <h3 className="text-xl font-normal text-[#14213D] tracking-tight mb-2">
+                <h3 className="text-2xl font-display font-bold text-slate-900 tracking-tight mb-2.5">
                   No Middleman Lag
                 </h3>
-                <p className="text-sm text-[#667085] leading-relaxed">
+                <p className="text-base text-slate-600 leading-relaxed font-sans font-normal">
                   You communicate directly with the designers, directors, and developers doing the work, eliminating telephone-game misunderstandings.
                 </p>
               </div>
             </StaggerItem>
 
             <StaggerItem>
-              <div className="rounded-xl bg-[#F4F1E8] p-8 border border-[#DEDCD3] h-full">
-                <span className="h-10 w-10 rounded-lg bg-[#14213D] text-[#F4F1E8] flex items-center justify-center mb-6 font-mono text-sm font-bold">
+              <div className="rounded-3xl bg-slate-50 p-8 border border-slate-200/80 shadow-subtle hover:shadow-card hover:bg-white hover:border-purple-200 transition-all duration-300 h-full">
+                <span className="h-12 w-12 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white flex items-center justify-center mb-6 font-display text-base font-bold shadow-button">
                   02
                 </span>
-                <h3 className="text-xl font-normal text-[#14213D] tracking-tight mb-2">
+                <h3 className="text-2xl font-display font-bold text-slate-900 tracking-tight mb-2.5">
                   Weekly Async &amp; Sync Loops
                 </h3>
-                <p className="text-sm text-[#667085] leading-relaxed">
+                <p className="text-base text-slate-600 leading-relaxed font-sans font-normal">
                   Clear weekly loom summaries and milestone reviews give your internal stakeholders full visibility without excessive meeting fatigue.
                 </p>
               </div>
             </StaggerItem>
 
             <StaggerItem>
-              <div className="rounded-xl bg-[#F4F1E8] p-8 border border-[#DEDCD3] h-full">
-                <span className="h-10 w-10 rounded-lg bg-[#14213D] text-[#F4F1E8] flex items-center justify-center mb-6 font-mono text-sm font-bold">
+              <div className="rounded-3xl bg-slate-50 p-8 border border-slate-200/80 shadow-subtle hover:shadow-card hover:bg-white hover:border-purple-200 transition-all duration-300 h-full">
+                <span className="h-12 w-12 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 text-white flex items-center justify-center mb-6 font-display text-base font-bold shadow-button">
                   03
                 </span>
-                <h3 className="text-xl font-normal text-[#14213D] tracking-tight mb-2">
+                <h3 className="text-2xl font-display font-bold text-slate-900 tracking-tight mb-2.5">
                   Fixed Milestones, Clear Scopes
                 </h3>
-                <p className="text-sm text-[#667085] leading-relaxed">
+                <p className="text-base text-slate-600 leading-relaxed font-sans font-normal">
                   Every deliverable is clearly scoped before kick-off. No surprise invoices, hidden tech debt, or unexpected scope creep.
                 </p>
               </div>
