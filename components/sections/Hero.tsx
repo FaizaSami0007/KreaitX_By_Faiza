@@ -36,18 +36,18 @@ export const Hero: React.FC = () => {
   return (
     <section className="relative overflow-hidden bg-white text-slate-900 pt-16 pb-20 sm:pt-20 sm:pb-28 lg:pt-24 lg:pb-36">
       {/* ------------------------------------------------------------- */}
-      {/* AUTHENTIC 3D SILK FLUID GRADIENT RIBBON BACKDROP              */}
+      {/* CUSTOM 3D SILK FLUID GRADIENT RIBBON BACKDROP                 */}
       {/* ------------------------------------------------------------- */}
       <div className="absolute inset-0 pointer-events-none select-none overflow-hidden z-0">
-        {/* Responsive Full-Spectrum Silk Background Artwork */}
-        <div className="relative w-full h-full min-h-[680px] sm:min-h-[820px] lg:min-h-[1000px]">
+        {/* Responsive Custom Silk Background Artwork */}
+        <div className="relative w-full h-full min-h-[680px] sm:min-h-[820px] lg:min-h-[960px]">
           <Image
-            src="/images/71-home-light-1-background-1.jpg"
-            alt="KreaitX Fluid Silk 3D Gradient Artwork"
+            src="/images/hero-custom-silk-bg.jpg"
+            alt="KreaitX Custom 3D Silk Ribbon Artwork"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-top sm:object-[center_top] select-none"
+            className="object-cover object-top sm:object-center select-none"
             quality={95}
           />
         </div>
