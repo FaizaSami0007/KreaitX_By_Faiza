@@ -39,18 +39,18 @@ export const dynamic = "force-static";
 export default function AboutPage() {
   return (
     <>
-      {/* About Page Hero with Custom 3D Silk Artwork */}
+      {/* About Page Hero with User-Selected 3D Ribbon & Crystal Diamond Artwork */}
       <section className="relative overflow-hidden bg-white text-slate-900 min-h-[680px] lg:min-h-[760px] flex items-center justify-center py-20 lg:py-28 border-b border-slate-200/80">
-        {/* Custom 3D Silk Background Image */}
+        {/* Custom 3D Silk Ribbon & Crystal Diamond Artwork */}
         <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
           <Image
-            src="/images/about-hero-custom-bg.jpg"
+            src="/images/about-hero-custom-bg.png"
             alt="KreaitX Studio Story, Philosophy & Peshawar Craftsmanship"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-top sm:object-center select-none"
-            quality={95}
+            className="object-cover object-right-top select-none"
+            quality={100}
           />
           {/* Seamless bottom fade into next section */}
           <div className="absolute inset-x-0 bottom-0 h-24 sm:h-36 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
