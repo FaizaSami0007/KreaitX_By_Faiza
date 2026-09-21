@@ -27,56 +27,90 @@ export default function ProcessPage() {
           <div className="absolute top-10 -right-20 w-[550px] h-[550px] rounded-full bg-gradient-to-bl from-cyan-400/22 via-purple-400/15 to-transparent blur-[115px] animate-blob-2" />
           <div className="absolute -bottom-20 left-10 w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-pink-400/18 via-purple-400/12 to-cyan-300/10 blur-[100px] animate-blob-3" />
 
-          {/* 2. Bespoke 3D Fluid Silk Ribbon Wave Vectors (Top & Side Margins) */}
-          <svg className="absolute inset-0 w-full h-full opacity-80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          {/* 2. Bespoke Dark 3D Fluid Silk Ribbon Wave Vectors (Deep Contrast & Rich Saturation) */}
+          <svg className="absolute inset-0 w-full h-full opacity-95" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
             <defs>
-              <linearGradient id="procSilk1" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#9333ea" stopOpacity="0.45" />
-                <stop offset="35%" stopColor="#6366f1" stopOpacity="0.4" />
-                <stop offset="70%" stopColor="#06b6d4" stopOpacity="0.4" />
-                <stop offset="100%" stopColor="#ec4899" stopOpacity="0.35" />
+              {/* Deep Dark Royal Gradient 1 */}
+              <linearGradient id="procDarkSilk1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#581c87" stopOpacity="0.95" />
+                <stop offset="30%" stopColor="#3730a3" stopOpacity="0.9" />
+                <stop offset="70%" stopColor="#0e7490" stopOpacity="0.9" />
+                <stop offset="100%" stopColor="#9d174d" stopOpacity="0.95" />
               </linearGradient>
-              <linearGradient id="procSilk2" x1="100%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#ec4899" stopOpacity="0.4" />
-                <stop offset="50%" stopColor="#a855f7" stopOpacity="0.3" />
-                <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.35" />
+
+              {/* Deep Dark Vibrant Gradient 2 */}
+              <linearGradient id="procDarkSilk2" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="#831843" stopOpacity="0.95" />
+                <stop offset="40%" stopColor="#6b21a8" stopOpacity="0.9" />
+                <stop offset="80%" stopColor="#1e40af" stopOpacity="0.9" />
+                <stop offset="100%" stopColor="#0369a1" stopOpacity="0.95" />
               </linearGradient>
-              <filter id="procGlow" x="-20%" y="-20%" width="140%" height="140%">
-                <feGaussianBlur stdDeviation="8" result="blur" />
-                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+
+              {/* Accent Deep Ribbon Gradient 3 */}
+              <linearGradient id="procDarkSilk3" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stopColor="#4c1d95" stopOpacity="0.85" />
+                <stop offset="50%" stopColor="#701a75" stopOpacity="0.85" />
+                <stop offset="100%" stopColor="#0f766e" stopOpacity="0.85" />
+              </linearGradient>
+
+              {/* Rich Drop Shadow Filter for Sculpted 3D Depth */}
+              <filter id="procDarkShadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="8" stdDeviation="12" floodColor="#1e1b4b" floodOpacity="0.25" />
               </filter>
             </defs>
 
-            {/* Top Sweeping Flowing Silk Ribbon Layer */}
+            {/* Top Primary Bold Dark Ribbon Layer */}
             <path
-              d="M -100,60 C 300,10 600,160 1000,40 C 1300,-50 1600,120 1900,30"
+              d="M -100,70 C 300,15 600,170 1000,45 C 1300,-50 1600,130 1900,35"
               fill="none"
-              stroke="url(#procSilk1)"
-              strokeWidth="4"
-              filter="url(#procGlow)"
+              stroke="url(#procDarkSilk1)"
+              strokeWidth="10"
+              strokeLinecap="round"
+              filter="url(#procDarkShadow)"
             />
             <path
-              d="M -100,90 C 320,40 580,190 980,70 C 1280,-20 1580,150 1900,60"
+              d="M -100,105 C 320,50 580,200 980,80 C 1280,-15 1580,165 1900,70"
               fill="none"
-              stroke="url(#procSilk2)"
-              strokeWidth="2"
+              stroke="url(#procDarkSilk2)"
+              strokeWidth="5"
+              strokeLinecap="round"
+              opacity="0.9"
+            />
+            <path
+              d="M -80,130 C 340,75 560,225 960,105 C 1260,10 1560,190 1900,95"
+              fill="none"
+              stroke="url(#procDarkSilk3)"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeDasharray="12 8"
               opacity="0.7"
             />
 
-            {/* Bottom-Right Sweeping Accent Ribbon Layer */}
+            {/* Bottom-Right Bold Dark Ribbon Layer */}
             <path
-              d="M 200,750 C 600,620 1000,720 1400,560 C 1650,450 1800,600 2000,520"
+              d="M 150,740 C 580,600 980,710 1380,540 C 1640,430 1800,590 2000,500"
               fill="none"
-              stroke="url(#procSilk1)"
-              strokeWidth="3.5"
-              filter="url(#procGlow)"
+              stroke="url(#procDarkSilk1)"
+              strokeWidth="9"
+              strokeLinecap="round"
+              filter="url(#procDarkShadow)"
             />
             <path
-              d="M 250,780 C 630,650 980,750 1380,590 C 1630,480 1780,630 2000,550"
+              d="M 200,775 C 610,635 960,745 1360,575 C 1620,465 1780,620 2000,535"
               fill="none"
-              stroke="url(#procSilk2)"
-              strokeWidth="1.5"
-              opacity="0.6"
+              stroke="url(#procDarkSilk2)"
+              strokeWidth="4.5"
+              strokeLinecap="round"
+              opacity="0.9"
+            />
+            <path
+              d="M 240,800 C 640,660 940,770 1340,600 C 1600,490 1760,645 2000,560"
+              fill="none"
+              stroke="url(#procDarkSilk3)"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeDasharray="10 8"
+              opacity="0.65"
             />
           </svg>
 
