@@ -18,19 +18,23 @@ export const metadata: Metadata = {
 export default function ProcessPage() {
   return (
     <>
-      {/* Process Page Hero with Custom 3D Silk Artwork */}
+      {/* Process Page Hero with Uncrowded 3D Silk Artwork (Matching Work Page Color Theme) */}
       <section className="relative overflow-hidden bg-white text-slate-900 min-h-[680px] lg:min-h-[760px] flex items-center justify-center py-20 lg:py-28 border-b border-slate-200/80">
-        {/* Custom 3D Silk Background Image */}
+        {/* Custom 3D Silk Background Image - Uncrowded, airy center with vibrant framing */}
         <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
           <Image
-            src="/images/process-hero-custom-bg.jpg"
+            src="/images/work-hero-custom-bg.jpg"
             alt="KreaitX Disciplined Creative Technology Methodology"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-top sm:object-center select-none"
+            className="object-cover object-top sm:object-center select-none opacity-90"
             quality={95}
           />
+          {/* Luminous center softening to keep text 100% readable and uncrowded */}
+          <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-white/50 to-white/95 pointer-events-none" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,white_40%,transparent_85%)] pointer-events-none" />
+
           {/* Seamless bottom fade into next section */}
           <div className="absolute inset-x-0 bottom-0 h-24 sm:h-36 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
         </div>
