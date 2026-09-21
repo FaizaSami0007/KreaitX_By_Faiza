@@ -63,64 +63,57 @@ export const IdeasToImpactSection: React.FC = () => {
 
       <Container size="default" className="relative z-10 w-full max-w-[1280px] flex flex-col justify-between h-full space-y-16 sm:space-y-24">
         
-        {/* Top / Main Editorial Content Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start pt-4">
+        {/* Top / Main Editorial Centered Content */}
+        <div className="flex flex-col items-center text-center max-w-3xl mx-auto space-y-6 sm:space-y-7 pt-4">
           
-          {/* Left Column: Eyebrow, Headline, Paragraph, CTA (Cols 1-7) */}
-          <div className="lg:col-span-7 flex flex-col items-start space-y-6 sm:space-y-7 max-w-[580px]">
-            
-            {/* Eyebrow */}
-            <Reveal delay={0.05} yOffset={12}>
-              <div className="flex items-center gap-3">
-                <span className="w-8 h-[1.5px] bg-purple-600" aria-hidden="true" />
-                <span className="text-[11px] sm:text-xs font-sans font-bold uppercase tracking-[0.2em] text-purple-600">
-                  WHAT WE DO
-                </span>
-              </div>
-            </Reveal>
+          {/* Eyebrow */}
+          <Reveal delay={0.05} yOffset={12}>
+            <div className="inline-flex items-center gap-3">
+              <span className="w-8 h-[1.5px] bg-purple-600" aria-hidden="true" />
+              <span className="text-[11px] sm:text-xs font-sans font-bold uppercase tracking-[0.2em] text-purple-600">
+                WHAT WE DO
+              </span>
+              <span className="w-8 h-[1.5px] bg-purple-600" aria-hidden="true" />
+            </div>
+          </Reveal>
 
-            {/* Display Headline */}
-            <Reveal delay={0.12} yOffset={18}>
-              <h2
-                id="ideas-to-impact-heading"
-                className="text-[clamp(48px,6vw,92px)] font-display font-bold text-slate-950 tracking-[-0.035em] leading-[0.96]"
+          {/* Display Headline */}
+          <Reveal delay={0.12} yOffset={18}>
+            <h2
+              id="ideas-to-impact-heading"
+              className="text-[clamp(44px,6vw,84px)] font-display font-bold text-slate-950 tracking-[-0.035em] leading-[1.02] text-center"
+            >
+              From ideas to{" "}
+              <span className="font-serif italic font-normal bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500 bg-clip-text text-transparent">
+                impact.
+              </span>
+            </h2>
+          </Reveal>
+
+          {/* Body Copy */}
+          <Reveal delay={0.2} yOffset={16}>
+            <p className="text-base sm:text-lg text-slate-600 leading-[1.7] font-sans font-normal max-w-2xl mx-auto text-center">
+              We blend strategy, creativity and technology to build digital experiences that look exceptional and perform even better.
+            </p>
+          </Reveal>
+
+          {/* Primary Minimal Editorial CTA */}
+          <Reveal delay={0.28} yOffset={14}>
+            <div className="pt-2 flex justify-center">
+              <Link
+                href="/solutions"
+                className="group inline-flex items-center text-sm font-sans font-semibold tracking-[0.06em] text-slate-900 hover:text-purple-600 transition-colors py-2 relative"
               >
-                From ideas <br />
-                to{" "}
-                <span className="font-serif italic font-normal bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500 bg-clip-text text-transparent">
-                  impact.
+                <span className="relative">
+                  Explore Our Services
+                  <span className="absolute left-0 -bottom-1 w-full h-[1px] bg-purple-600 origin-left transition-transform duration-300 group-hover:scale-x-110" />
                 </span>
-              </h2>
-            </Reveal>
-
-            {/* Body Copy */}
-            <Reveal delay={0.2} yOffset={16}>
-              <p className="text-base sm:text-lg text-slate-700 leading-[1.68] font-sans font-normal max-w-[500px]">
-                We blend strategy, creativity and technology to build digital experiences that look exceptional and perform even better.
-              </p>
-            </Reveal>
-
-            {/* Primary Minimal Editorial CTA */}
-            <Reveal delay={0.28} yOffset={14}>
-              <div className="pt-2">
-                <Link
-                  href="/solutions"
-                  className="group inline-flex items-center text-sm font-sans font-semibold tracking-[0.06em] text-slate-900 hover:text-purple-600 transition-colors py-2 relative"
-                >
-                  <span className="relative">
-                    Explore Our Services
-                    <span className="absolute left-0 -bottom-1 w-full h-[1px] bg-purple-600 origin-left transition-transform duration-300 group-hover:scale-x-110" />
-                  </span>
-                  <span className="ml-3 flex items-center justify-center w-7 h-7 rounded-full border border-purple-200 bg-purple-50 text-purple-600 transition-all duration-300 group-hover:border-purple-500 group-hover:bg-purple-600 group-hover:text-white group-hover:translate-x-1 shadow-sm">
-                    <ArrowRight className="h-3.5 w-3.5" />
-                  </span>
-                </Link>
-              </div>
-            </Reveal>
-          </div>
-
-          {/* Right Column: Empty negative space to let the central bulb artwork shine */}
-          <div className="hidden lg:block lg:col-span-5" aria-hidden="true" />
+                <span className="ml-3 flex items-center justify-center w-7 h-7 rounded-full border border-purple-200 bg-purple-50 text-purple-600 transition-all duration-300 group-hover:border-purple-500 group-hover:bg-purple-600 group-hover:text-white group-hover:translate-x-1 shadow-sm">
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </span>
+              </Link>
+            </div>
+          </Reveal>
         </div>
 
         {/* Bottom Four Core Pillars Layout */}
