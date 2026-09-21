@@ -36,19 +36,26 @@ export const Hero: React.FC = () => {
   return (
     <section className="relative overflow-hidden bg-white text-slate-900 pt-16 pb-24 sm:pt-20 sm:pb-32">
       {/* ------------------------------------------------------------- */}
-      {/* AUTHENTIC SOFTY FLOWING 3D SILK GRADIENT RIBBON BACKDROP      */}
+      {/* AUTHENTIC FLOWING 3D SILK GRADIENT RIBBON BACKDROP            */}
       {/* ------------------------------------------------------------- */}
-      <div className="absolute top-0 left-0 right-0 h-[1050px] pointer-events-none select-none overflow-hidden z-0">
-        <div className="relative w-full h-full">
+      <div className="absolute inset-0 pointer-events-none select-none overflow-hidden z-0">
+        {/* Ambient Top Glow Layer */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(168,85,247,0.14),rgba(255,255,255,0)_70%)]" />
+
+        {/* Responsive Background Image Container */}
+        <div className="relative w-full h-full min-h-[600px] sm:min-h-[750px] lg:min-h-[900px]">
           <Image
             src="/images/71-home-light-1-background-10.png"
-            alt="Softy Solutions Fluid Silk Ribbon"
+            alt="KreaitX Fluid Silk Ribbon Background"
             fill
             priority
             sizes="100vw"
-            className="object-contain object-top lg:object-cover select-none opacity-95"
+            className="object-cover object-top sm:object-[center_top] select-none opacity-95"
           />
         </div>
+
+        {/* Seamless bottom fade into next section */}
+        <div className="absolute inset-x-0 bottom-0 h-32 sm:h-44 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
       </div>
 
       <Container size="default" className="relative z-10 w-full">
