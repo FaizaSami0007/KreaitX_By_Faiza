@@ -48,6 +48,19 @@ export const IdeasToImpactSection: React.FC = () => {
       aria-labelledby="ideas-to-impact-heading"
       className="relative bg-white text-slate-900 py-20 sm:py-28 lg:py-32 border-b border-slate-200/80 overflow-hidden flex items-center"
     >
+      {/* Subtle Top-Right 3D Silk Ribbon Corner Accent (Section 1 Theme) */}
+      <div className="absolute inset-0 pointer-events-none select-none overflow-hidden z-0">
+        <Image
+          src="/images/ideas-corner-silk-bg.jpg"
+          alt="KreaitX Top-Right Silk Ribbon Accent"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-right-top select-none"
+          quality={95}
+        />
+      </div>
+
       <Container size="default" className="relative z-10 w-full max-w-[1280px] flex flex-col justify-between h-full space-y-16 sm:space-y-24">
         
         {/* Top / Main Editorial Content Grid */}
