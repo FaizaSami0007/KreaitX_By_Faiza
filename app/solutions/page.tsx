@@ -25,24 +25,27 @@ export default function SolutionsPage() {
 
   return (
     <>
-      {/* Services Page Hero with Custom 3D Silk Artwork */}
+      {/* Services Page Hero with Right-Anchored 3D Silk Artwork */}
       <section className="relative overflow-hidden bg-white text-slate-900 min-h-[680px] lg:min-h-[760px] flex items-center justify-center py-20 lg:py-28 border-b border-slate-200/80">
-        {/* Custom 3D Silk Background Image with Clean White Left Side & Right Corner Artwork Only */}
-        <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden bg-white">
-          <div className="absolute top-0 right-0 w-full sm:w-3/4 lg:w-3/5 h-full">
+        {/* Background: Solid pure white canvas on left, vibrant 3D silk on right */}
+        <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
+          {/* Silk Artwork anchored strictly to the right */}
+          <div className="absolute top-0 right-0 w-full sm:w-[65%] md:w-[55%] lg:w-[50%] h-full">
             <Image
               src="/images/solutions-hero-custom-bg.jpg"
               alt="KreaitX Connected Creative & Digital Solutions"
               fill
               priority
-              sizes="(max-width: 1024px) 100vw, 60vw"
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover object-right-top select-none"
               quality={95}
             />
+            {/* Left blend so the transition into white is perfectly smooth */}
+            <div className="absolute inset-y-0 left-0 w-32 sm:w-48 bg-gradient-to-r from-white to-transparent pointer-events-none" />
           </div>
 
-          {/* Solid pure white mask across the left side to completely remove any left corner design */}
-          <div className="absolute inset-y-0 left-0 w-full sm:w-3/5 lg:w-1/2 bg-gradient-to-r from-white via-white to-transparent pointer-events-none" />
+          {/* Solid pure white mask across the entire left side */}
+          <div className="absolute inset-y-0 left-0 w-full sm:w-[55%] bg-gradient-to-r from-white via-white/90 to-transparent pointer-events-none" />
 
           {/* Seamless bottom fade into next section */}
           <div className="absolute inset-x-0 bottom-0 h-24 sm:h-36 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
