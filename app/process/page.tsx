@@ -18,64 +18,73 @@ export const metadata: Metadata = {
 export default function ProcessPage() {
   return (
     <>
-      {/* Process Page Hero with Bespoke Background (Exact Work Color Palette: Purple × Indigo × Cyan × Pink) */}
+      {/* Process Page Hero with Unique Uncrowded Silk Background (Exact Work Color Theme) */}
       <section className="relative overflow-hidden bg-white text-slate-900 min-h-[680px] lg:min-h-[760px] flex items-center justify-center py-20 lg:py-28 border-b border-slate-200/80">
-        {/* Bespoke Process Background Design - Exact Work Color Theme */}
-        <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden bg-white" aria-hidden="true">
-          {/* 1. Flowing Ambient Glow Blobs in Exact Work Colors */}
-          <div className="absolute -top-28 -left-20 w-[580px] h-[580px] rounded-full bg-gradient-to-br from-purple-600/26 via-indigo-600/20 to-transparent blur-[110px] animate-blob-1" />
-          <div className="absolute -top-24 -right-20 w-[580px] h-[580px] rounded-full bg-gradient-to-bl from-cyan-400/28 via-sky-500/18 to-transparent blur-[115px] animate-blob-2" />
-          <div className="absolute -bottom-20 -left-16 w-[520px] h-[520px] rounded-full bg-gradient-to-tr from-pink-500/24 via-purple-500/16 to-transparent blur-[105px] animate-blob-3" />
-          <div className="absolute -bottom-20 -right-16 w-[540px] h-[540px] rounded-full bg-gradient-to-tl from-indigo-500/26 via-purple-600/18 to-cyan-400/14 blur-[110px]" />
+        {/* Unique Process Hero Background Design - Exact Work Color Theme, Uncrowded & Airy */}
+        <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden bg-white">
+          {/* 1. Atmospheric Ambient Color Blooms (Exact Work Hero Palette) */}
+          <div className="absolute -top-32 left-1/4 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-purple-500/22 via-indigo-500/16 to-transparent blur-[110px] animate-blob-1" />
+          <div className="absolute top-10 -right-20 w-[550px] h-[550px] rounded-full bg-gradient-to-bl from-cyan-400/22 via-purple-400/15 to-transparent blur-[115px] animate-blob-2" />
+          <div className="absolute -bottom-20 left-10 w-[500px] h-[500px] rounded-full bg-gradient-to-tr from-pink-400/18 via-purple-400/12 to-cyan-300/10 blur-[100px] animate-blob-3" />
 
-          {/* 2. Elegant Organic Flowing Wave Curves (Exact Work Gradients) */}
-          <svg className="absolute inset-0 w-full h-full opacity-60" xmlns="http://www.w3.org/2000/svg">
+          {/* 2. Bespoke 3D Fluid Silk Ribbon Wave Vectors (Top & Side Margins) */}
+          <svg className="absolute inset-0 w-full h-full opacity-80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
             <defs>
-              <linearGradient id="processExactWorkGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#9333ea" stopOpacity="0.55" />
-                <stop offset="35%" stopColor="#6366f1" stopOpacity="0.45" />
-                <stop offset="70%" stopColor="#06b6d4" stopOpacity="0.5" />
-                <stop offset="100%" stopColor="#ec4899" stopOpacity="0.45" />
+              <linearGradient id="procSilk1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#9333ea" stopOpacity="0.45" />
+                <stop offset="35%" stopColor="#6366f1" stopOpacity="0.4" />
+                <stop offset="70%" stopColor="#06b6d4" stopOpacity="0.4" />
+                <stop offset="100%" stopColor="#ec4899" stopOpacity="0.35" />
               </linearGradient>
-              <linearGradient id="processExactWorkGrad2" x1="100%" y1="100%" x2="0%" y2="0%">
-                <stop offset="0%" stopColor="#06b6d4" stopOpacity="0.4" />
-                <stop offset="50%" stopColor="#8b5cf6" stopOpacity="0.35" />
-                <stop offset="100%" stopColor="#ec4899" stopOpacity="0.3" />
+              <linearGradient id="procSilk2" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="#ec4899" stopOpacity="0.4" />
+                <stop offset="50%" stopColor="#a855f7" stopOpacity="0.3" />
+                <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.35" />
               </linearGradient>
+              <filter id="procGlow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="8" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+              </filter>
             </defs>
 
-            {/* Top framing wave curve */}
+            {/* Top Sweeping Flowing Silk Ribbon Layer */}
             <path
-              d="M -100,120 C 300,20 600,220 950,80 C 1300,-40 1500,160 1800,90"
+              d="M -100,60 C 300,10 600,160 1000,40 C 1300,-50 1600,120 1900,30"
               fill="none"
-              stroke="url(#processExactWorkGrad1)"
-              strokeWidth="2"
+              stroke="url(#procSilk1)"
+              strokeWidth="4"
+              filter="url(#procGlow)"
             />
-            {/* Soft secondary echo line */}
             <path
-              d="M -100,160 C 300,60 600,260 950,120 C 1300,0 1500,200 1800,130"
+              d="M -100,90 C 320,40 580,190 980,70 C 1280,-20 1580,150 1900,60"
               fill="none"
-              stroke="url(#processExactWorkGrad1)"
-              strokeWidth="1"
-              strokeDasharray="6 8"
-              opacity="0.5"
+              stroke="url(#procSilk2)"
+              strokeWidth="2"
+              opacity="0.7"
             />
 
-            {/* Bottom framing wave curve */}
+            {/* Bottom-Right Sweeping Accent Ribbon Layer */}
             <path
-              d="M -50,620 C 350,480 750,680 1150,540 C 1450,440 1650,600 1850,520"
+              d="M 200,750 C 600,620 1000,720 1400,560 C 1650,450 1800,600 2000,520"
               fill="none"
-              stroke="url(#processExactWorkGrad2)"
+              stroke="url(#procSilk1)"
+              strokeWidth="3.5"
+              filter="url(#procGlow)"
+            />
+            <path
+              d="M 250,780 C 630,650 980,750 1380,590 C 1630,480 1780,630 2000,550"
+              fill="none"
+              stroke="url(#procSilk2)"
               strokeWidth="1.5"
+              opacity="0.6"
             />
           </svg>
 
-          {/* 3. Luminous Central Softening to keep text 100% clear and uncrowded */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-white/50 to-white pointer-events-none" />
+          {/* 3. Luminous Center Breathing Zone (100% uncrowded text readability) */}
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,white_45%,transparent_85%)] pointer-events-none" />
 
           {/* 4. Seamless bottom fade into next section */}
-          <div className="absolute inset-x-0 bottom-0 h-24 sm:h-36 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
+          <div className="absolute inset-x-0 bottom-0 h-28 sm:h-40 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
         </div>
 
         <Container size="default" className="relative z-10 w-full text-center">
