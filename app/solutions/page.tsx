@@ -27,19 +27,23 @@ export default function SolutionsPage() {
     <>
       {/* Services Page Hero with Custom 3D Silk Artwork */}
       <section className="relative overflow-hidden bg-white text-slate-900 min-h-[680px] lg:min-h-[760px] flex items-center justify-center py-20 lg:py-28 border-b border-slate-200/80">
-        {/* Custom 3D Silk Background Image - Right Side Only */}
-        <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
-          <Image
-            src="/images/solutions-hero-custom-bg.jpg"
-            alt="KreaitX Connected Creative & Digital Solutions"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-right-top sm:object-right select-none"
-            quality={95}
-          />
-          {/* Pure white overlay covering left corner completely */}
-          <div className="absolute inset-y-0 left-0 w-full sm:w-3/5 bg-gradient-to-r from-white via-white/95 to-transparent pointer-events-none" />
+        {/* Custom 3D Silk Background Image with Clean White Left Side & Right Corner Artwork Only */}
+        <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden bg-white">
+          <div className="absolute top-0 right-0 w-full sm:w-3/4 lg:w-3/5 h-full">
+            <Image
+              src="/images/solutions-hero-custom-bg.jpg"
+              alt="KreaitX Connected Creative & Digital Solutions"
+              fill
+              priority
+              sizes="(max-width: 1024px) 100vw, 60vw"
+              className="object-cover object-right-top select-none"
+              quality={95}
+            />
+          </div>
+
+          {/* Solid pure white mask across the left side to completely remove any left corner design */}
+          <div className="absolute inset-y-0 left-0 w-full sm:w-3/5 lg:w-1/2 bg-gradient-to-r from-white via-white to-transparent pointer-events-none" />
+
           {/* Seamless bottom fade into next section */}
           <div className="absolute inset-x-0 bottom-0 h-24 sm:h-36 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
         </div>
