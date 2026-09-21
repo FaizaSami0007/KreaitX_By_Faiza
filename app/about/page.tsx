@@ -39,58 +39,20 @@ export const dynamic = "force-static";
 export default function AboutPage() {
   return (
     <>
-      {/* About Page Hero with Narrow 3D Silk Strings (Exact Color Theme) */}
+      {/* About Page Hero with Custom 3D Silk Artwork */}
       <section className="relative overflow-hidden bg-white text-slate-900 min-h-[680px] lg:min-h-[760px] flex items-center justify-center py-20 lg:py-28 border-b border-slate-200/80">
-        {/* Narrow Silk String Wave Background */}
-        <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden bg-white">
-          {/* 1. Atmospheric Ambient Color Glows (Exact Color Palette) */}
-          <div className="absolute -top-28 left-1/4 w-[560px] h-[560px] rounded-full bg-gradient-to-br from-purple-500/20 via-indigo-500/15 to-transparent blur-[110px] animate-blob-1" />
-          <div className="absolute top-10 right-10 w-[500px] h-[500px] rounded-full bg-gradient-to-bl from-cyan-400/22 via-purple-400/15 to-transparent blur-[115px] animate-blob-2" />
-          <div className="absolute -bottom-16 left-12 w-[480px] h-[480px] rounded-full bg-gradient-to-tr from-pink-400/16 via-purple-400/12 to-cyan-300/10 blur-[100px] animate-blob-3" />
-
-          {/* 2. Narrow Harmonic String Waves (Delicate, Slender Multi-Strand Curves) */}
-          <svg className="absolute inset-0 w-full h-full opacity-90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-            <defs>
-              <linearGradient id="abtNarrowStr1" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#9333ea" stopOpacity="0.85" />
-                <stop offset="35%" stopColor="#6366f1" stopOpacity="0.8" />
-                <stop offset="70%" stopColor="#06b6d4" stopOpacity="0.8" />
-                <stop offset="100%" stopColor="#ec4899" stopOpacity="0.8" />
-              </linearGradient>
-
-              <linearGradient id="abtNarrowStr2" x1="100%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stopColor="#ec4899" stopOpacity="0.85" />
-                <stop offset="40%" stopColor="#a855f7" stopOpacity="0.8" />
-                <stop offset="80%" stopColor="#3b82f6" stopOpacity="0.8" />
-                <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.85" />
-              </linearGradient>
-
-              <linearGradient id="abtNarrowStr3" x1="0%" y1="100%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#6366f1" stopOpacity="0.75" />
-                <stop offset="50%" stopColor="#8b5cf6" stopOpacity="0.75" />
-                <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.75" />
-              </linearGradient>
-            </defs>
-
-            {/* Top-Right Narrow Flowing Harmonic Strings */}
-            <path d="M 200,-50 C 600,120 1000,-20 1400,100 C 1650,180 1800,80 2000,120" fill="none" stroke="url(#abtNarrowStr1)" strokeWidth="2.5" />
-            <path d="M 220,-35 C 610,135 1010,-5 1410,115 C 1660,195 1810,95 2000,135" fill="none" stroke="url(#abtNarrowStr2)" strokeWidth="1.8" />
-            <path d="M 240,-20 C 620,150 1020,10 1420,130 C 1670,210 1820,110 2000,150" fill="none" stroke="url(#abtNarrowStr1)" strokeWidth="1.2" />
-            <path d="M 260,-5 C 630,165 1030,25 1430,145 C 1680,225 1830,125 2000,165" fill="none" stroke="url(#abtNarrowStr3)" strokeWidth="1" strokeDasharray="6 4" opacity="0.8" />
-            <path d="M 280,10 C 640,180 1040,40 1440,160 C 1690,240 1840,140 2000,180" fill="none" stroke="url(#abtNarrowStr2)" strokeWidth="0.8" />
-
-            {/* Bottom-Left Narrow Sweeping Harmonic Strings */}
-            <path d="M -100,680 C 300,540 700,720 1100,580 C 1400,480 1700,620 2000,520" fill="none" stroke="url(#abtNarrowStr1)" strokeWidth="2.5" />
-            <path d="M -80,700 C 310,560 710,740 1110,600 C 1410,500 1710,640 2000,540" fill="none" stroke="url(#abtNarrowStr2)" strokeWidth="1.8" />
-            <path d="M -60,720 C 320,580 720,760 1120,620 C 1420,520 1720,660 2000,560" fill="none" stroke="url(#abtNarrowStr3)" strokeWidth="1.2" />
-            <path d="M -40,740 C 330,600 730,780 1130,640 C 1430,540 1730,680 2000,580" fill="none" stroke="url(#abtNarrowStr1)" strokeWidth="1" strokeDasharray="6 4" opacity="0.8" />
-            <path d="M -20,760 C 340,620 740,800 1140,660 C 1440,560 1740,700 2000,600" fill="none" stroke="url(#abtNarrowStr2)" strokeWidth="0.8" />
-          </svg>
-
-          {/* 3. Luminous Center Breathing Zone */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,white_50%,transparent_85%)] pointer-events-none" />
-
-          {/* 4. Seamless bottom fade into next section */}
+        {/* Custom 3D Silk Background Image */}
+        <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
+          <Image
+            src="/images/about-hero-custom-bg.jpg"
+            alt="KreaitX Studio Story, Philosophy & Peshawar Craftsmanship"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-top sm:object-center select-none"
+            quality={95}
+          />
+          {/* Seamless bottom fade into next section */}
           <div className="absolute inset-x-0 bottom-0 h-24 sm:h-36 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
         </div>
 
