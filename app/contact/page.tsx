@@ -7,6 +7,7 @@ import { CheckCircle2, Mail, MapPin, Clock, ArrowRight, Loader2, Sparkles, Alert
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
+import { ContactHeroBg } from "@/components/ui/HeroBackgroundDesigns";
 import { servicesData, siteConfig } from "@/data/siteData";
 
 const budgetOptions = [
@@ -82,22 +83,10 @@ export default function ContactPage() {
 
   return (
     <>
-      {/* Contact Page Hero with Custom 3D Silk Artwork */}
-      <section className="relative overflow-hidden bg-white text-slate-900 min-h-[680px] lg:min-h-[760px] flex items-center justify-center py-20 lg:py-28 border-b border-slate-200/80">
-        {/* Custom 3D Silk Background Image */}
-        <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
-          <Image
-            src="/images/contact-hero-custom-bg.jpg"
-            alt="Let's Create Together — From Peshawar to a More Creative Tomorrow"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-top sm:object-center select-none"
-            quality={95}
-          />
-          {/* Seamless bottom fade into next section */}
-          <div className="absolute inset-x-0 bottom-0 h-24 sm:h-36 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
-        </div>
+      {/* Contact Page Hero with Decent & Minimal Background Design */}
+      <section className="relative overflow-hidden bg-white text-slate-900 min-h-[640px] lg:min-h-[720px] flex items-center justify-center py-20 lg:py-28 border-b border-slate-200/80">
+        {/* Bespoke Contact Hero Background */}
+        <ContactHeroBg />
 
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
