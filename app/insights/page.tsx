@@ -18,19 +18,28 @@ export const metadata: Metadata = {
 export default function InsightsPage() {
   return (
     <>
-      {/* Insights Page Hero with Custom 3D Silk Artwork */}
+      {/* Insights Page Hero with Left-Anchored 3D Silk Artwork (Clean White on Right Corner) */}
       <section className="relative overflow-hidden bg-white text-slate-900 min-h-[680px] lg:min-h-[760px] flex items-center justify-center py-20 lg:py-28 border-b border-slate-200/80">
-        {/* Custom 3D Silk Background Image */}
+        {/* Background: 3D Silk on Left side, completely clean solid white on right corner */}
         <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
-          <Image
-            src="/images/insights-hero-custom-bg.jpg"
-            alt="Insights for what's next — Ideas, Perspectives, Stories, Knowledge for a Brighter Tomorrow"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-top sm:object-center select-none"
-            quality={95}
-          />
+          {/* Silk Artwork anchored strictly to the left */}
+          <div className="absolute top-0 left-0 w-full sm:w-[65%] md:w-[55%] lg:w-[50%] h-full">
+            <Image
+              src="/images/insights-hero-custom-bg.jpg"
+              alt="Insights for what's next — Ideas, Perspectives, Stories, Knowledge for a Brighter Tomorrow"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover object-left-top select-none"
+              quality={95}
+            />
+            {/* Right blend so the transition into white is perfectly smooth */}
+            <div className="absolute inset-y-0 right-0 w-32 sm:w-48 bg-gradient-to-l from-white to-transparent pointer-events-none" />
+          </div>
+
+          {/* Solid pure white mask across the entire right side and right corner */}
+          <div className="absolute inset-y-0 right-0 w-full sm:w-[55%] bg-gradient-to-l from-white via-white/90 to-transparent pointer-events-none" />
+
           {/* Seamless bottom fade into next section */}
           <div className="absolute inset-x-0 bottom-0 h-24 sm:h-36 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
         </div>
