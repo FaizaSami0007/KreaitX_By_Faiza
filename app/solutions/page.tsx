@@ -25,37 +25,37 @@ export default function SolutionsPage() {
 
   return (
     <>
-      {/* Services Page Hero with User-Provided Art */}
-      <section className="relative overflow-hidden bg-slate-950 text-white min-h-[75vh] flex items-center justify-center py-20 lg:py-28 border-b border-slate-800">
-        {/* User-Provided Background Image */}
-        <div className="absolute inset-0 z-0">
+      {/* Services Page Hero with Custom 3D Silk Artwork */}
+      <section className="relative overflow-hidden bg-white text-slate-900 min-h-[680px] lg:min-h-[760px] flex items-center justify-center py-20 lg:py-28 border-b border-slate-200/80">
+        {/* Custom 3D Silk & Modular Capabilities Artwork */}
+        <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
           <Image
-            src="/images/services-hero-bg.png"
-            alt="Technology Drives Possibilities × Creativity Turns Ideas Into Impact"
+            src="/images/solutions-hero-custom-bg.jpg"
+            alt="KreaitX Connected Creative & Digital Solutions"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center select-none opacity-80"
+            className="object-cover object-top sm:object-center select-none"
+            quality={95}
           />
-          {/* Soft atmospheric gradient overlays */}
-          <div className="absolute inset-0 bg-slate-950/70 via-slate-950/50 to-slate-950/80" />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/60" />
+          {/* Seamless bottom fade into next section */}
+          <div className="absolute inset-x-0 bottom-0 h-24 sm:h-36 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
         </div>
 
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-purple-300 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 mb-6 backdrop-blur-md shadow-subtle">
-                <Sparkles className="h-3.5 w-3.5 text-cyan-400 animate-pulse" />
+              <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-purple-700 px-4 py-1.5 rounded-full bg-white/90 border border-slate-200/90 mb-6 backdrop-blur-md shadow-sm">
+                <Sparkles className="h-3.5 w-3.5 text-purple-600 animate-pulse" />
                 <span>Capabilities × Solutions Architecture</span>
               </span>
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-[64px] font-bold text-white tracking-tight leading-[1.08]">
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-[68px] font-bold text-slate-950 tracking-tight leading-[1.05]">
                 Creative &amp; digital capabilities,{" "}
-                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+                <span className="font-serif italic font-normal bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500 bg-clip-text text-transparent">
                   connected
                 </span>.
               </h1>
-              <p className="mt-6 text-lg sm:text-xl text-slate-300 leading-relaxed font-sans font-normal max-w-2xl">
+              <p className="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed font-sans font-normal max-w-2xl">
                 We organize our capabilities around your business challenges rather than isolated deliverables. Discover how each discipline integrates seamlessly into your broader growth engine.
               </p>
 
@@ -65,7 +65,7 @@ export default function SolutionsPage() {
                 </Button>
                 <a
                   href="#connected-capabilities"
-                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-full text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md transition-all duration-200 w-full sm:w-auto"
+                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-full text-sm font-semibold text-slate-800 bg-white hover:bg-slate-50 border border-slate-300 shadow-sm transition-all duration-200 w-full sm:w-auto hover:-translate-y-0.5"
                 >
                   Explore All 7 Services ↓
                 </a>
@@ -88,11 +88,10 @@ export default function SolutionsPage() {
       <SocialMediaSection />
 
       {/* REMAINING SERVICES CATALOG (04 to 07) — SOFTY SOLUTIONS ROUNDED COMPOSITIONS */}
-      <section className="bg-slate-50/50 py-20 sm:py-28 border-b border-slate-200/80">
+      <section className="bg-slate-50/60 py-20 sm:py-28 border-b border-slate-200/80">
         <Container size="default" className="w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
           <div className="space-y-16 sm:space-y-24">
             {remainingServices.map((service, idx) => {
-              const isDarkPanel = idx % 2 === 0;
               const isReversed = idx % 2 === 1;
 
               return (
@@ -175,19 +174,13 @@ export default function SolutionsPage() {
 
                     {/* Deliverables & Workflow Column */}
                     <div
-                      className={`lg:col-span-6 space-y-8 p-6 sm:p-8 lg:p-9 rounded-2xl border flex flex-col justify-between ${
-                        isDarkPanel
-                          ? "bg-slate-950 text-white border-slate-800 shadow-xl"
-                          : "bg-slate-50 text-slate-900 border-slate-200/80"
-                      } ${isReversed ? "lg:order-1" : "lg:order-2"}`}
+                      className={`lg:col-span-6 space-y-8 p-6 sm:p-8 lg:p-9 rounded-2xl border flex flex-col justify-between bg-slate-50/90 text-slate-900 border-slate-200/80 shadow-sm ${
+                        isReversed ? "lg:order-1" : "lg:order-2"
+                      }`}
                     >
                       <div>
-                        <h3
-                          className={`text-xs font-sans uppercase tracking-widest font-bold mb-4 flex items-center gap-2 ${
-                            isDarkPanel ? "text-cyan-400" : "text-purple-700"
-                          }`}
-                        >
-                          <Layers className="h-4 w-4 text-purple-500" />
+                        <h3 className="text-xs font-sans uppercase tracking-widest font-bold mb-4 flex items-center gap-2 text-purple-700">
+                          <Layers className="h-4 w-4 text-purple-600" />
                           What KreaitX Delivers
                         </h3>
 
@@ -195,46 +188,24 @@ export default function SolutionsPage() {
                           {service.deliverables.map((item) => (
                             <li
                               key={item}
-                              className={`flex items-start gap-3 text-sm font-medium ${
-                                isDarkPanel ? "text-slate-200" : "text-slate-800"
-                              }`}
+                              className="flex items-start gap-3 text-sm font-medium text-slate-800"
                             >
-                              <CheckCircle2
-                                className={`h-4 w-4 shrink-0 mt-0.5 ${
-                                  isDarkPanel ? "text-cyan-400" : "text-purple-600"
-                                }`}
-                              />
+                              <CheckCircle2 className="h-4 w-4 shrink-0 mt-0.5 text-purple-600" />
                               <span>{item}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
 
-                      <div
-                        className={`pt-6 border-t ${
-                          isDarkPanel ? "border-slate-800" : "border-slate-200"
-                        }`}
-                      >
-                        <h3
-                          className={`text-xs font-sans uppercase tracking-widest font-bold mb-3 flex items-center gap-2 ${
-                            isDarkPanel ? "text-cyan-400" : "text-purple-700"
-                          }`}
-                        >
-                          <Cpu className="h-4 w-4 text-purple-500" />
+                      <div className="pt-6 border-t border-slate-200/80">
+                        <h3 className="text-xs font-sans uppercase tracking-widest font-bold mb-3 flex items-center gap-2 text-purple-700">
+                          <Cpu className="h-4 w-4 text-purple-600" />
                           Standard Workflow
                         </h3>
-                        <ol
-                          className={`space-y-2 text-xs sm:text-sm ${
-                            isDarkPanel ? "text-slate-400" : "text-slate-600"
-                          }`}
-                        >
+                        <ol className="space-y-2 text-xs sm:text-sm text-slate-600">
                           {service.workflow.map((step, sIdx) => (
                             <li key={step} className="flex items-center gap-2">
-                              <span
-                                className={`font-mono text-xs font-bold ${
-                                  isDarkPanel ? "text-cyan-400" : "text-purple-600"
-                                }`}
-                              >
+                              <span className="font-mono text-xs font-bold text-purple-600">
                                 0{sIdx + 1}.
                               </span>
                               <span>{step}</span>
@@ -243,15 +214,9 @@ export default function SolutionsPage() {
                         </ol>
                       </div>
 
-                      <div
-                        className={`pt-5 border-t flex items-center justify-between text-xs ${
-                          isDarkPanel
-                            ? "border-slate-800 text-slate-400"
-                            : "border-slate-200 text-slate-500"
-                        }`}
-                      >
+                      <div className="pt-5 border-t border-slate-200/80 flex items-center justify-between text-xs text-slate-500">
                         <span>Collaborative &amp; transparent delivery</span>
-                        <span className="font-display font-bold uppercase tracking-wider text-purple-500">
+                        <span className="font-display font-bold uppercase tracking-wider text-purple-600">
                           {service.number} / 07
                         </span>
                       </div>

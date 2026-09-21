@@ -23,37 +23,37 @@ export default function WorkPage() {
 
   return (
     <>
-      {/* Work Page Hero with User-Provided Art */}
-      <section className="relative overflow-hidden bg-slate-950 text-white min-h-[75vh] flex items-center justify-center py-20 lg:py-28 border-b border-slate-800">
-        {/* User-Provided Background Image */}
-        <div className="absolute inset-0 z-0">
+      {/* Work Page Hero with Custom 3D Silk Artwork */}
+      <section className="relative overflow-hidden bg-white text-slate-900 min-h-[680px] lg:min-h-[760px] flex items-center justify-center py-20 lg:py-28 border-b border-slate-200/80">
+        {/* Custom 3D Silk & Portfolio Frame Artwork */}
+        <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
           <Image
-            src="/images/work-hero-bg.png"
-            alt="Ideas Shoot Create Deliver × Filming Editing Design Animation Marketing"
+            src="/images/work-hero-custom-bg.jpg"
+            alt="KreaitX Portfolio Case Studies & Real Projects"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center select-none opacity-80"
+            className="object-cover object-top sm:object-center select-none"
+            quality={95}
           />
-          {/* Atmospheric gradient overlay */}
-          <div className="absolute inset-0 bg-slate-950/70 via-slate-950/50 to-slate-950/80" />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-slate-950/60" />
+          {/* Seamless bottom fade into next section */}
+          <div className="absolute inset-x-0 bottom-0 h-24 sm:h-36 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
         </div>
 
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-purple-300 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 mb-6 backdrop-blur-md shadow-subtle">
-                <Sparkles className="h-3.5 w-3.5 text-cyan-400 animate-pulse" />
+              <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-purple-700 px-4 py-1.5 rounded-full bg-white/90 border border-slate-200/90 mb-6 backdrop-blur-md shadow-sm">
+                <Sparkles className="h-3.5 w-3.5 text-purple-600 animate-pulse" />
                 <span>Portfolio × Selected Case Studies</span>
               </span>
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-[64px] font-bold text-white tracking-tight leading-[1.08]">
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-[68px] font-bold text-slate-950 tracking-tight leading-[1.05]">
                 Real projects.{" "}
-                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+                <span className="font-serif italic font-normal bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500 bg-clip-text text-transparent">
                   Real business context
                 </span>.
               </h1>
-              <p className="mt-6 text-lg sm:text-xl text-slate-300 leading-relaxed font-sans font-normal max-w-2xl">
+              <p className="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed font-sans font-normal max-w-2xl">
                 Every project we undertake is grounded in a real commercial problem. Explore how we align brand strategy, cinematic media, and high-performance engineering to deliver measurable impact.
               </p>
 
@@ -63,7 +63,7 @@ export default function WorkPage() {
                 </Button>
                 <a
                   href="#projects-feed"
-                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-full text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 backdrop-blur-md transition-all duration-200 w-full sm:w-auto"
+                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-full text-sm font-semibold text-slate-800 bg-white hover:bg-slate-50 border border-slate-300 shadow-sm transition-all duration-200 w-full sm:w-auto hover:-translate-y-0.5"
                 >
                   Browse Case Studies ↓
                 </a>
