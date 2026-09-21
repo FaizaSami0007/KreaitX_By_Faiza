@@ -6,7 +6,6 @@ import { CheckCircle2, ArrowRight, Layers, Cpu, Sparkles } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
-import { SolutionsHeroBg } from "@/components/ui/HeroBackgroundDesigns";
 import { BrandingSection } from "@/components/sections/BrandingSection";
 import { DigitalMarketingSection } from "@/components/sections/DigitalMarketingSection";
 import { SocialMediaSection } from "@/components/sections/SocialMediaSection";
@@ -26,10 +25,22 @@ export default function SolutionsPage() {
 
   return (
     <>
-      {/* Services Page Hero with Decent Background Design */}
-      <section className="relative overflow-hidden bg-white text-slate-900 min-h-[640px] lg:min-h-[720px] flex items-center justify-center py-20 lg:py-28 border-b border-slate-200/80">
-        {/* Bespoke Solutions Hero Background */}
-        <SolutionsHeroBg />
+      {/* Services Page Hero with Custom 3D Silk Artwork */}
+      <section className="relative overflow-hidden bg-white text-slate-900 min-h-[680px] lg:min-h-[760px] flex items-center justify-center py-20 lg:py-28 border-b border-slate-200/80">
+        {/* Custom 3D Silk Background Image */}
+        <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
+          <Image
+            src="/images/solutions-hero-custom-bg.jpg"
+            alt="KreaitX Connected Creative & Digital Solutions"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-top sm:object-center select-none"
+            quality={95}
+          />
+          {/* Seamless bottom fade into next section */}
+          <div className="absolute inset-x-0 bottom-0 h-24 sm:h-36 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
+        </div>
 
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
