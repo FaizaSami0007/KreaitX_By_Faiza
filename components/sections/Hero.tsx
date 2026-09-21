@@ -34,28 +34,26 @@ export const Hero: React.FC = () => {
   }, [videoModalOpen]);
 
   return (
-    <section className="relative overflow-hidden bg-white text-slate-900 pt-16 pb-24 sm:pt-20 sm:pb-32">
+    <section className="relative overflow-hidden bg-white text-slate-900 pt-16 pb-20 sm:pt-20 sm:pb-28 lg:pt-24 lg:pb-36">
       {/* ------------------------------------------------------------- */}
-      {/* AUTHENTIC FLOWING 3D SILK GRADIENT RIBBON BACKDROP            */}
+      {/* AUTHENTIC 3D SILK FLUID GRADIENT RIBBON BACKDROP              */}
       {/* ------------------------------------------------------------- */}
       <div className="absolute inset-0 pointer-events-none select-none overflow-hidden z-0">
-        {/* Ambient Top Glow Layer */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(168,85,247,0.14),rgba(255,255,255,0)_70%)]" />
-
-        {/* Responsive Background Image Container */}
-        <div className="relative w-full h-full min-h-[600px] sm:min-h-[750px] lg:min-h-[900px]">
+        {/* Responsive Full-Spectrum Silk Background Artwork */}
+        <div className="relative w-full h-full min-h-[680px] sm:min-h-[820px] lg:min-h-[1000px]">
           <Image
-            src="/images/71-home-light-1-background-10.png"
-            alt="KreaitX Fluid Silk Ribbon Background"
+            src="/images/71-home-light-1-background-1.jpg"
+            alt="KreaitX Fluid Silk 3D Gradient Artwork"
             fill
             priority
             sizes="100vw"
-            className="object-cover object-top sm:object-[center_top] select-none opacity-95"
+            className="object-cover object-top sm:object-[center_top] select-none"
+            quality={95}
           />
         </div>
 
-        {/* Seamless bottom fade into next section */}
-        <div className="absolute inset-x-0 bottom-0 h-32 sm:h-44 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
+        {/* Soft bottom blend to seamlessly transition into next section */}
+        <div className="absolute inset-x-0 bottom-0 h-24 sm:h-36 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
       </div>
 
       <Container size="default" className="relative z-10 w-full">
