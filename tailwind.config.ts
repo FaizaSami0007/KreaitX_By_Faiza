@@ -29,6 +29,17 @@ const config: Config = {
           "border-subtle": "rgba(226, 232, 240, 0.8)",
           "border-focus": "#A855F7"
         },
+        brand: {
+          navy: "#003049",
+          deep: "#14213D",
+          porcelain: "#F7F8FA",
+          white: "#FFFFFF",
+          cyan: "#42C6D9",
+          steel: "#A8B3C2",
+          charcoal: "#0B0F19",
+          body: "#334155",
+          border: "#E2E8F0"
+        },
         kreaitx: {
           navy: "#003049",
           "deep-navy": "#14213D",
@@ -51,7 +62,8 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-manrope)", "Manrope", "system-ui", "-apple-system", "sans-serif"],
         display: ["var(--font-space-grotesk)", "Space Grotesk", "system-ui", "sans-serif"],
-        heading: ["var(--font-space-grotesk)", "Space Grotesk", "system-ui", "sans-serif"]
+        heading: ["var(--font-space-grotesk)", "Space Grotesk", "system-ui", "sans-serif"],
+        mono: ["var(--font-ibm-plex-mono)", "ui-monospace", "SFMono-Regular", "Menlo", "monospace"]
       },
       maxWidth: {
         "content-max": "1320px",
@@ -74,6 +86,9 @@ const config: Config = {
         subtle: "0 2px 10px rgba(0, 0, 0, 0.03)",
         card: "0 10px 30px -10px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02)",
         "card-hover": "0 20px 40px -15px rgba(124, 58, 237, 0.12), 0 0 0 1px rgba(124, 58, 237, 0.15)",
+        "brand-card": "0 10px 30px -10px rgba(0, 48, 73, 0.06), 0 4px 6px -2px rgba(0, 48, 73, 0.02)",
+        "brand-hover": "0 20px 40px -15px rgba(0, 48, 73, 0.12), 0 0 0 1px rgba(66, 198, 217, 0.25)",
+        "brand-button": "0 10px 25px -5px rgba(0, 48, 73, 0.3)",
         glow: "0 0 40px -10px rgba(147, 51, 234, 0.3)",
         "glow-cyan": "0 0 40px -10px rgba(6, 182, 212, 0.3)",
         button: "0 10px 25px -5px rgba(147, 51, 234, 0.35)"

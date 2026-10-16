@@ -6,13 +6,15 @@ interface SectionLabelProps {
   label: string;
   className?: string;
   theme?: "light" | "dark";
+  variant?: "default" | "cyan" | "navy";
 }
 
 export const SectionLabel: React.FC<SectionLabelProps> = ({
   number,
   label,
   className,
-  theme = "light"
+  theme = "light",
+  variant = "default"
 }) => {
   const isDark = theme === "dark";
 
@@ -21,8 +23,14 @@ export const SectionLabel: React.FC<SectionLabelProps> = ({
       {number && (
         <span
           className={cn(
-            "font-display text-sm sm:text-base font-bold",
-            isDark ? "text-purple-400" : "text-purple-600"
+            "font-mono text-xs sm:text-sm font-bold tracking-tight",
+            variant === "cyan"
+              ? "text-[#42C6D9]"
+              : variant === "navy"
+              ? "text-[#003049]"
+              : isDark
+              ? "text-purple-400"
+              : "text-purple-600"
           )}
         >
           {number}
@@ -31,14 +39,26 @@ export const SectionLabel: React.FC<SectionLabelProps> = ({
       <span
         className={cn(
           "w-5 h-[2px] rounded-full",
-          isDark ? "bg-purple-500" : "bg-gradient-to-r from-purple-600 to-indigo-600"
+          variant === "cyan"
+            ? "bg-[#42C6D9]"
+            : variant === "navy"
+            ? "bg-[#003049]"
+            : isDark
+            ? "bg-purple-500"
+            : "bg-gradient-to-r from-purple-600 to-indigo-600"
         )}
         aria-hidden="true"
       />
       <span
         className={cn(
-          "text-xs font-sans font-bold uppercase tracking-wider",
-          isDark ? "text-purple-300" : "text-purple-700"
+          "text-xs font-sans font-bold uppercase tracking-[0.18em]",
+          variant === "cyan"
+            ? "text-[#42C6D9]"
+            : variant === "navy"
+            ? "text-[#003049]"
+            : isDark
+            ? "text-purple-300"
+            : "text-purple-700"
         )}
       >
         {label}

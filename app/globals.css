@@ -18,6 +18,17 @@
   --color-cyan: #06B6D4;
   --color-pink: #EC4899;
   
+  --brand-navy: #003049;
+  --brand-deep: #14213D;
+  --brand-porcelain: #F7F8FA;
+  --brand-white: #FFFFFF;
+  --brand-cyan: #42C6D9;
+  --brand-steel: #A8B3C2;
+  --brand-charcoal: #0B0F19;
+  --brand-body: #334155;
+  --brand-border: #E2E8F0;
+  --brand-focus: #42C6D9;
+  
   --color-brand-navy: #003049;
   --color-brand-deep: #14213D;
   --color-brand-canvas: #F7F8FA;
@@ -25,7 +36,7 @@
   --color-brand-neutral: #A8B3C2;
   
   --border-subtle: rgba(226, 232, 240, 0.8);
-  --border-focus: #9333EA;
+  --border-focus: #42C6D9;
   
   --gradient-primary: linear-gradient(135deg, #7928CA 0%, #FF0080 50%, #0070F3 100%);
   --gradient-hero: linear-gradient(135deg, #9333EA 0%, #6366F1 50%, #06B6D4 100%);

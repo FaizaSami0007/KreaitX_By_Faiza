@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "dark" | "ghost" | "white" | "outline" | "gradient";
+  variant?: "primary" | "secondary" | "dark" | "ghost" | "white" | "outline" | "gradient" | "navy" | "cyan";
   size?: "sm" | "md" | "lg";
   href?: string;
   withArrow?: boolean;
@@ -38,19 +38,23 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variantStyles = {
       primary:
-        "bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white shadow-button hover:shadow-glow hover:-translate-y-0.5 focus-visible:ring-purple-500",
+        "bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 hover:from-purple-700 hover:to-indigo-700 text-white shadow-button hover:shadow-glow hover:-translate-y-0.5 focus-visible:ring-[#42C6D9]",
+      navy:
+        "bg-[#003049] hover:bg-[#14213D] text-white shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#42C6D9]",
+      cyan:
+        "bg-[#42C6D9] hover:bg-[#34B8CB] text-[#003049] font-bold shadow-sm hover:-translate-y-0.5 focus-visible:ring-[#003049]",
       gradient:
         "bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500 hover:from-purple-700 hover:via-indigo-700 hover:to-cyan-600 text-white shadow-button hover:shadow-glow hover:-translate-y-0.5 focus-visible:ring-purple-500",
       secondary:
-        "bg-white text-slate-800 border border-slate-200 hover:border-slate-300 hover:bg-slate-50 hover:-translate-y-0.5 shadow-subtle focus-visible:ring-slate-400",
+        "bg-white text-slate-800 border border-slate-200/90 hover:border-slate-300 hover:bg-[#F7F8FA] hover:-translate-y-0.5 shadow-subtle focus-visible:ring-[#003049]",
       outline:
-        "bg-transparent text-slate-800 border border-slate-200 hover:border-purple-300 hover:bg-purple-50/50 hover:text-purple-700 hover:-translate-y-0.5 focus-visible:ring-purple-500",
+        "bg-transparent text-slate-800 border border-slate-200 hover:border-[#42C6D9] hover:bg-[#F7F8FA] hover:text-[#003049] hover:-translate-y-0.5 focus-visible:ring-[#42C6D9]",
       dark:
-        "bg-slate-900 text-white hover:bg-slate-800 hover:-translate-y-0.5 shadow-md focus-visible:ring-slate-700",
+        "bg-[#14213D] text-white hover:bg-[#003049] hover:-translate-y-0.5 shadow-md focus-visible:ring-[#42C6D9]",
       ghost:
-        "bg-transparent text-slate-700 hover:text-purple-600 hover:bg-purple-50/60 hover:-translate-y-0.5 focus-visible:ring-purple-500",
+        "bg-transparent text-slate-700 hover:text-[#003049] hover:bg-slate-100/70 hover:-translate-y-0.5 focus-visible:ring-[#42C6D9]",
       white:
-        "bg-white text-slate-900 hover:bg-slate-50 hover:-translate-y-0.5 shadow-card focus-visible:ring-purple-500"
+        "bg-white text-slate-900 hover:bg-[#F7F8FA] hover:-translate-y-0.5 shadow-card focus-visible:ring-[#42C6D9]"
     };
 
     const sizeStyles = {
@@ -63,9 +67,11 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       <ArrowRight
         className={cn(
           "ml-2 h-4 w-4 transition-transform duration-300 ease-out group-hover:translate-x-1.5",
-          variant === "primary" || variant === "gradient" || variant === "dark"
+          variant === "primary" || variant === "gradient" || variant === "dark" || variant === "navy"
             ? "text-white/90"
-            : "text-purple-600",
+            : variant === "cyan"
+            ? "text-[#003049]"
+            : "text-[#003049] group-hover:text-[#42C6D9]",
           arrowPosition === "top-right" && "group-hover:-translate-y-1 group-hover:translate-x-1"
         )}
         aria-hidden="true"
