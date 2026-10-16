@@ -1,9 +1,12 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { siteConfig } from "@/data/siteData";
+import { trackEvent } from "@/lib/analytics";
 import { Sparkles } from "lucide-react";
 
 export const CTASection: React.FC = () => {
@@ -51,6 +54,12 @@ export const CTASection: React.FC = () => {
                   variant="cyan"
                   size="lg"
                   withArrow
+                  onClick={() =>
+                    trackEvent("service_cta_click", {
+                      cta_location: "global_cta_section",
+                      cta_text: "Start a Conversation"
+                    })
+                  }
                   className="w-full sm:w-auto font-bold min-h-[52px] shadow-lg"
                 >
                   Start a Conversation
@@ -60,6 +69,12 @@ export const CTASection: React.FC = () => {
                   href={`mailto:${siteConfig.contact.email}`}
                   variant="secondary"
                   size="lg"
+                  onClick={() =>
+                    trackEvent("direct_contact_click", {
+                      channel: "email",
+                      location: "global_cta_section"
+                    })
+                  }
                   className="w-full sm:w-auto bg-white/10 text-white border-white/20 hover:border-white/40 hover:bg-white/20 min-h-[52px]"
                 >
                   {siteConfig.contact.email}

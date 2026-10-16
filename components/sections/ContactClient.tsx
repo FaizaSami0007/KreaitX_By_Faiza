@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
+import { trackEvent } from "@/lib/analytics";
 import {
   CheckCircle2,
   Mail,
@@ -49,6 +50,22 @@ export const ContactClient: React.FC = () => {
 
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [inboundContext, setInboundContext] = useState<string | null>(null);
+
+  // Deduplication guards to prevent double-firing of events
+  const hasStartedRef = useRef(false);
+  const hasConvertedRef = useRef(false);
+
+  // Trigger form start tracking safely once per session
+  const triggerFormStart = (trigger: string) => {
+    if (!hasStartedRef.current) {
+      hasStartedRef.current = true;
+      trackEvent("lead_form_start", {
+        form_id: "studio_inquiry",
+        trigger
+      });
+    }
+  };
 
   // Handle incoming query params (?service=branding, etc.)
   useEffect(() => {
@@ -61,6 +78,7 @@ export const ContactClient: React.FC = () => {
                s.title.toLowerCase().includes(serviceParam.toLowerCase())
       );
       if (matchedService) {
+        setInboundContext(`Inquiring for: ${matchedService.title}`);
         setFormData((prev) => ({
           ...prev,
           selectedServices: prev.selectedServices.includes(matchedService.title)
@@ -71,6 +89,7 @@ export const ContactClient: React.FC = () => {
     }
 
     if (projectParam) {
+      setInboundContext(`Case Study Reference: ${projectParam}`);
       setFormData((prev) => ({
         ...prev,
         projectDetails: prev.projectDetails || `Inquiring regarding collaboration similar to the ${projectParam} case study.`
@@ -79,6 +98,7 @@ export const ContactClient: React.FC = () => {
   }, [searchParams]);
 
   const handleServiceToggle = (title: string) => {
+    triggerFormStart("service_pill_click");
     setFormData((prev) => {
       const exists = prev.selectedServices.includes(title);
       return {
@@ -92,14 +112,48 @@ export const ContactClient: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.fullName.trim() || !formData.email.trim() || !formData.projectDetails.trim()) {
+
+    // Check required fields and identify missing ones for UX analytics
+    if (!formData.fullName.trim()) {
       setStatus("error");
-      setErrorMessage("Please complete all required fields (Full Name, Work Email, and Project Details).");
+      setErrorMessage("Please provide your full name so our partners know who they are speaking with.");
+      trackEvent("lead_form_validation_error", {
+        form_id: "studio_inquiry",
+        error_field: "fullName"
+      });
+      return;
+    }
+
+    if (!formData.email.trim()) {
+      setStatus("error");
+      setErrorMessage("Please provide a valid work email address for our project response.");
+      trackEvent("lead_form_validation_error", {
+        form_id: "studio_inquiry",
+        error_field: "email"
+      });
+      return;
+    }
+
+    if (!formData.projectDetails.trim()) {
+      setStatus("error");
+      setErrorMessage("Please include a brief description of your project scope or challenge.");
+      trackEvent("lead_form_validation_error", {
+        form_id: "studio_inquiry",
+        error_field: "projectDetails"
+      });
       return;
     }
 
     setStatus("loading");
     setErrorMessage("");
+
+    // Track submission attempt
+    trackEvent("lead_form_submit_attempt", {
+      form_id: "studio_inquiry",
+      service_count: formData.selectedServices.length,
+      has_budget: Boolean(formData.budgetRange),
+      has_timeline: Boolean(formData.projectTimeline)
+    });
 
     try {
       const res = await fetch("/api/contact", {
@@ -110,7 +164,22 @@ export const ContactClient: React.FC = () => {
 
       const data = await res.json();
       if (!res.ok) {
+        trackEvent("lead_form_server_error", {
+          form_id: "studio_inquiry",
+          error_code: res.status.toString()
+        });
         throw new Error(data.error || "Failed to submit message");
+      }
+
+      // Confirmed macro conversion: fires strictly on verified HTTP 200 response
+      if (!hasConvertedRef.current) {
+        hasConvertedRef.current = true;
+        trackEvent("lead_form_success", {
+          form_id: "studio_inquiry",
+          service_count: formData.selectedServices.length,
+          budget_tier: formData.budgetRange || "Unspecified",
+          timeline: formData.projectTimeline || "Flexible"
+        });
       }
 
       setStatus("success");
@@ -243,6 +312,19 @@ export const ContactClient: React.FC = () => {
                       </div>
                     )}
 
+                    {/* Inbound Query Context Pill */}
+                    {inboundContext && (
+                      <div className="p-3.5 rounded-2xl bg-[#003049]/5 border border-[#003049]/15 flex items-center justify-between gap-3 text-xs text-[#003049]">
+                        <div className="flex items-center gap-2 font-semibold">
+                          <Sparkles className="h-4 w-4 text-[#42C6D9]" />
+                          <span>{inboundContext}</span>
+                        </div>
+                        <span className="text-[11px] text-slate-500 hidden sm:inline">
+                          Form pre-scoped
+                        </span>
+                      </div>
+                    )}
+
                     {/* Step 1: Capabilities / Services Selector */}
                     <div>
                       <label className="block text-xs font-sans font-bold uppercase tracking-wider text-slate-900 mb-3">
@@ -299,6 +381,7 @@ export const ContactClient: React.FC = () => {
                           required
                           aria-required="true"
                           value={formData.fullName}
+                          onFocus={() => triggerFormStart("input_focus")}
                           onChange={(e) =>
                             setFormData({ ...formData, fullName: e.target.value })
                           }
@@ -320,6 +403,7 @@ export const ContactClient: React.FC = () => {
                           required
                           aria-required="true"
                           value={formData.email}
+                          onFocus={() => triggerFormStart("input_focus")}
                           onChange={(e) =>
                             setFormData({ ...formData, email: e.target.value })
                           }
@@ -413,6 +497,7 @@ export const ContactClient: React.FC = () => {
                         required
                         aria-required="true"
                         value={formData.projectDetails}
+                        onFocus={() => triggerFormStart("input_focus")}
                         onChange={(e) =>
                           setFormData({ ...formData, projectDetails: e.target.value })
                         }
@@ -421,7 +506,7 @@ export const ContactClient: React.FC = () => {
                       />
                     </div>
 
-                    {/* Submit Button */}
+                    {/* Submit Button & Reassurance Signals */}
                     <div className="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
                       <Button
                         type="submit"
@@ -437,14 +522,19 @@ export const ContactClient: React.FC = () => {
                             Transmitting Inquiry...
                           </>
                         ) : (
-                          "Send Inquiry"
+                          "Send Project Inquiry"
                         )}
                       </Button>
 
-                      <span className="text-xs text-slate-500 text-center sm:text-left flex items-center gap-1.5">
-                        <ShieldCheck className="h-4 w-4 text-[#003049]" />
-                        Strict confidentiality guaranteed. No spam ever.
-                      </span>
+                      <div className="flex flex-col gap-1 sm:text-right text-center">
+                        <span className="text-xs text-slate-700 font-semibold flex items-center justify-center sm:justify-end gap-1.5">
+                          <ShieldCheck className="h-4 w-4 text-[#003049]" />
+                          Direct senior practitioner review
+                        </span>
+                        <span className="text-[11px] text-slate-500">
+                          Response within 24h • Strict NDA confidentiality • No spam
+                        </span>
+                      </div>
                     </div>
                   </form>
                 )}

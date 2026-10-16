@@ -6,6 +6,7 @@ import { Play, X } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
+import { trackEvent } from "@/lib/analytics";
 
 export const Hero: React.FC = () => {
   const [videoModalOpen, setVideoModalOpen] = useState(false);
@@ -96,6 +97,12 @@ export const Hero: React.FC = () => {
                 variant="navy"
                 size="lg"
                 withArrow
+                onClick={() =>
+                  trackEvent("service_cta_click", {
+                    cta_location: "homepage_hero",
+                    cta_text: "Start a Project"
+                  })
+                }
                 className="w-full sm:w-auto shadow-brand-button min-h-[50px] font-semibold"
               >
                 Start a Project

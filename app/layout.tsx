@@ -3,6 +3,7 @@ import { Space_Grotesk, Manrope } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { siteConfig } from "@/data/siteData";
 
 const spaceGrotesk = Space_Grotesk({
@@ -142,6 +143,7 @@ export default function RootLayout({
         suppressHydrationWarning
         className="flex min-h-screen flex-col bg-white font-sans text-slate-900 antialiased selection:bg-[#003049] selection:text-white"
       >
+        <GoogleAnalytics />
         <Navbar />
         <main id="main-content" className="flex-1">
           {children}
