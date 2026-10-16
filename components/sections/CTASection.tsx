@@ -11,9 +11,9 @@ export const CTASection: React.FC = () => {
     <section className="bg-white py-20 sm:py-28 lg:py-32 relative overflow-hidden">
       <Container size="default" className="relative z-10">
         <Reveal yOffset={20}>
-          <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950 text-white p-10 sm:p-16 lg:p-20 shadow-2xl border border-purple-900/40">
+          <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-[#003049] via-[#14213D] to-[#0B0F19] text-white p-10 sm:p-16 lg:p-20 shadow-2xl border border-[#42C6D9]/20">
             {/* Authentic 3D Silk Gradient Ribbon Overlay */}
-            <div className="absolute inset-0 z-0 pointer-events-none select-none opacity-35 mix-blend-screen">
+            <div className="absolute inset-0 z-0 pointer-events-none select-none opacity-30 mix-blend-screen">
               <Image
                 src="/images/284.png"
                 alt="Fluid 3D Gradient Silk Texture"
@@ -23,19 +23,19 @@ export const CTASection: React.FC = () => {
               />
             </div>
 
-            {/* Ambient colorful gradient blobs */}
-            <div className="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-gradient-to-br from-pink-500/30 to-purple-600/30 blur-3xl pointer-events-none animate-blob-1" />
-            <div className="absolute -bottom-24 -left-24 h-96 w-96 rounded-full bg-gradient-to-tr from-cyan-400/30 to-indigo-600/30 blur-3xl pointer-events-none animate-blob-2" />
+            {/* Ambient soft glow blobs */}
+            <div className="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-[#42C6D9]/15 blur-3xl pointer-events-none" />
+            <div className="absolute -bottom-24 -left-24 h-96 w-96 rounded-full bg-slate-700/20 blur-3xl pointer-events-none" />
 
             <div className="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-purple-300 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 mb-6 backdrop-blur-md shadow-subtle">
-                <Sparkles className="h-3.5 w-3.5 text-cyan-400 animate-pulse" />
+              <span className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-[#42C6D9] px-4 py-1.5 rounded-full bg-white/10 border border-white/20 mb-6 backdrop-blur-md shadow-subtle">
+                <Sparkles className="h-3.5 w-3.5 text-[#42C6D9] animate-pulse" />
                 <span>Next Step</span>
               </span>
 
               <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.08]">
                 Ready to build{" "}
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-300 to-pink-400 bg-clip-text text-transparent">
+                <span className="font-serif italic font-normal bg-gradient-to-r from-white via-cyan-100 to-[#42C6D9] bg-clip-text text-transparent">
                   what&apos;s next
                 </span>
                 ?
@@ -48,10 +48,10 @@ export const CTASection: React.FC = () => {
               <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
                 <Button
                   href="/contact"
-                  variant="white"
+                  variant="cyan"
                   size="lg"
                   withArrow
-                  className="w-full sm:w-auto font-bold min-h-[52px]"
+                  className="w-full sm:w-auto font-bold min-h-[52px] shadow-lg"
                 >
                   Start a Conversation
                 </Button>
@@ -66,7 +66,7 @@ export const CTASection: React.FC = () => {
                 </Button>
               </div>
 
-              <p className="mt-8 text-xs text-slate-400">
+              <p className="mt-8 text-xs font-mono text-slate-400">
                 Typical response time: within 24 business hours • Direct consultation with senior leads
               </p>
             </div>

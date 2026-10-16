@@ -14,7 +14,7 @@ const pillars = [
     description: "Insights and planning that set the right direction.",
     icon: Compass,
     framework: "Determines Direction",
-    badgeClass: "bg-purple-50 border-purple-200/80 text-purple-600"
+    badgeClass: "bg-[#F7F8FA] border-slate-200/80 text-[#003049] group-hover:border-[#42C6D9]/60 group-hover:text-[#003049]"
   },
   {
     number: "02",
@@ -22,7 +22,7 @@ const pillars = [
     description: "Ideas turned into memorable visual experiences.",
     icon: Palette,
     framework: "Creates Experience",
-    badgeClass: "bg-indigo-50 border-indigo-200/80 text-indigo-600"
+    badgeClass: "bg-[#F7F8FA] border-slate-200/80 text-[#003049] group-hover:border-[#42C6D9]/60 group-hover:text-[#003049]"
   },
   {
     number: "03",
@@ -30,7 +30,7 @@ const pillars = [
     description: "Modern, scalable and future-ready solutions.",
     icon: Code2,
     framework: "Builds Solution",
-    badgeClass: "bg-cyan-50 border-cyan-200/80 text-cyan-600"
+    badgeClass: "bg-[#F7F8FA] border-slate-200/80 text-[#003049] group-hover:border-[#42C6D9]/60 group-hover:text-[#003049]"
   },
   {
     number: "04",
@@ -38,7 +38,7 @@ const pillars = [
     description: "Measurable impact that takes you further.",
     icon: TrendingUp,
     framework: "Measures Outcome",
-    badgeClass: "bg-pink-50 border-pink-200/80 text-pink-600"
+    badgeClass: "bg-[#F7F8FA] border-slate-200/80 text-[#003049] group-hover:border-[#42C6D9]/60 group-hover:text-[#003049]"
   }
 ];
 
@@ -69,11 +69,11 @@ export const IdeasToImpactSection: React.FC = () => {
           {/* Eyebrow */}
           <Reveal delay={0.05} yOffset={12}>
             <div className="inline-flex items-center gap-3">
-              <span className="w-8 h-[1.5px] bg-purple-600" aria-hidden="true" />
-              <span className="text-[11px] sm:text-xs font-sans font-bold uppercase tracking-[0.2em] text-purple-600">
+              <span className="w-8 h-[2px] bg-[#42C6D9] rounded-full" aria-hidden="true" />
+              <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#003049]">
                 WHAT WE DO
               </span>
-              <span className="w-8 h-[1.5px] bg-purple-600" aria-hidden="true" />
+              <span className="w-8 h-[2px] bg-[#42C6D9] rounded-full" aria-hidden="true" />
             </div>
           </Reveal>
 
@@ -84,7 +84,7 @@ export const IdeasToImpactSection: React.FC = () => {
               className="text-[clamp(44px,6vw,84px)] font-display font-bold text-slate-950 tracking-[-0.035em] leading-[1.02] text-center"
             >
               From ideas to{" "}
-              <span className="font-serif italic font-normal bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500 bg-clip-text text-transparent">
+              <span className="font-serif italic font-normal bg-gradient-to-r from-[#003049] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent">
                 impact.
               </span>
             </h2>
@@ -102,13 +102,13 @@ export const IdeasToImpactSection: React.FC = () => {
             <div className="pt-2 flex justify-center">
               <Link
                 href="/solutions"
-                className="group inline-flex items-center text-sm font-sans font-semibold tracking-[0.06em] text-slate-900 hover:text-purple-600 transition-colors py-2 relative"
+                className="group inline-flex items-center text-sm font-sans font-semibold tracking-[0.06em] text-[#003049] hover:text-[#14213D] transition-colors py-2 relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9]"
               >
                 <span className="relative">
                   Explore Our Services
-                  <span className="absolute left-0 -bottom-1 w-full h-[1px] bg-purple-600 origin-left transition-transform duration-300 group-hover:scale-x-110" />
+                  <span className="absolute left-0 -bottom-1 w-full h-[1.5px] bg-[#42C6D9] origin-left transition-transform duration-300 group-hover:scale-x-110" />
                 </span>
-                <span className="ml-3 flex items-center justify-center w-7 h-7 rounded-full border border-purple-200 bg-purple-50 text-purple-600 transition-all duration-300 group-hover:border-purple-500 group-hover:bg-purple-600 group-hover:text-white group-hover:translate-x-1 shadow-sm">
+                <span className="ml-3 flex items-center justify-center w-7 h-7 rounded-full border border-slate-200 bg-[#F7F8FA] text-[#003049] transition-all duration-300 group-hover:border-[#003049] group-hover:bg-[#003049] group-hover:text-[#42C6D9] group-hover:translate-x-1 shadow-sm">
                   <ArrowRight className="h-3.5 w-3.5" />
                 </span>
               </Link>
@@ -138,16 +138,16 @@ export const IdeasToImpactSection: React.FC = () => {
                     <div>
                       {/* Top Row: Icon + Number */}
                       <div className="flex items-center justify-between mb-4 sm:mb-6">
-                        <div className={`w-10 h-10 rounded-xl border flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-1 shadow-sm ${pillar.badgeClass}`}>
+                        <div className={`w-10 h-10 rounded-xl border flex items-center justify-center transition-all duration-300 group-hover:-translate-y-1 shadow-sm ${pillar.badgeClass}`}>
                           <IconComponent className="h-5 w-5 stroke-[1.5]" />
                         </div>
-                        <span className="font-mono text-xs font-bold text-slate-400 group-hover:text-purple-600 transition-colors">
+                        <span className="font-mono text-xs font-bold text-slate-400 group-hover:text-[#003049] transition-colors">
                           {pillar.number}
                         </span>
                       </div>
 
                       {/* Title */}
-                      <h3 className="text-2xl sm:text-[26px] font-display font-bold text-slate-950 tracking-tight group-hover:text-purple-600 transition-colors duration-200">
+                      <h3 className="text-2xl sm:text-[26px] font-display font-bold text-slate-950 tracking-tight group-hover:text-[#003049] transition-colors duration-200">
                         {pillar.title}
                       </h3>
 
@@ -160,7 +160,7 @@ export const IdeasToImpactSection: React.FC = () => {
                     {/* Micro Framework Note */}
                     <div className="mt-6 pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] font-mono uppercase tracking-wider text-slate-500">
                       <span>{pillar.framework}</span>
-                      <span className="text-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                      <span className="text-[#42C6D9] opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                         →
                       </span>
                     </div>

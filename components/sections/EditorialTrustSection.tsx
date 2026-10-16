@@ -37,8 +37,8 @@ export const EditorialTrustSection: React.FC = () => {
             {/* Eyebrow with delicate rule */}
             <Reveal delay={0.05} yOffset={12}>
               <div className="flex items-center gap-3">
-                <span className="w-8 h-[1.5px] bg-purple-600" aria-hidden="true" />
-                <span className="text-[11px] sm:text-xs font-sans font-bold uppercase tracking-[0.2em] text-purple-600">
+                <span className="w-8 h-[2px] bg-[#42C6D9] rounded-full" aria-hidden="true" />
+                <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#003049]">
                   BUILT WITH AMBITIOUS TEAMS
                 </span>
               </div>
@@ -52,7 +52,7 @@ export const EditorialTrustSection: React.FC = () => {
               >
                 Ambitious ideas <br />
                 deserve a better <br />
-                <span className="font-serif italic font-normal bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500 bg-clip-text text-transparent">
+                <span className="font-serif italic font-normal bg-gradient-to-r from-[#003049] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent">
                   digital direction.
                 </span>
               </h2>
@@ -70,10 +70,10 @@ export const EditorialTrustSection: React.FC = () => {
               <div className="pt-2 flex flex-wrap items-center gap-5 sm:gap-6">
                 <Link
                   href="/about"
-                  className="group inline-flex items-center text-xs font-sans font-semibold uppercase tracking-[0.14em] text-slate-900 hover:text-purple-600 transition-colors py-1"
+                  className="group inline-flex items-center text-xs font-sans font-semibold uppercase tracking-[0.14em] text-[#003049] hover:text-[#14213D] transition-colors py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9]"
                 >
                   <span>Our Studio Philosophy</span>
-                  <ArrowUpRight className="ml-1.5 h-3.5 w-3.5 text-purple-600 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  <ArrowUpRight className="ml-1.5 h-3.5 w-3.5 text-[#42C6D9] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
                 <span className="text-xs text-slate-300 hidden sm:inline">•</span>
                 <span className="text-xs font-mono text-slate-500">
