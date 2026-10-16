@@ -177,8 +177,8 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
 
       {/* Case Study Header Hero */}
       <section className="relative overflow-hidden bg-white py-16 sm:py-24 border-b border-slate-200/80">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#42C6D9]/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#003049]/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-[#42C6D9]/15 via-[#003049]/5 to-transparent rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute -bottom-20 left-0 w-[450px] h-[450px] bg-gradient-to-tr from-[#003049]/10 via-[#42C6D9]/8 to-transparent rounded-full blur-[90px] pointer-events-none" />
 
         <Container size="default" className="relative z-10">
           <div className="max-w-4xl mx-auto space-y-8">

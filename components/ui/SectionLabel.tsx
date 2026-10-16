@@ -29,8 +29,8 @@ export const SectionLabel: React.FC<SectionLabelProps> = ({
               : variant === "navy"
               ? "text-[#003049]"
               : isDark
-              ? "text-purple-400"
-              : "text-purple-600"
+              ? "text-[#42C6D9]"
+              : "text-[#003049]"
           )}
         >
           {number}
@@ -44,8 +44,8 @@ export const SectionLabel: React.FC<SectionLabelProps> = ({
             : variant === "navy"
             ? "bg-[#003049]"
             : isDark
-            ? "bg-purple-500"
-            : "bg-gradient-to-r from-purple-600 to-indigo-600"
+            ? "bg-[#42C6D9]"
+            : "bg-[#003049]"
         )}
         aria-hidden="true"
       />
@@ -57,8 +57,8 @@ export const SectionLabel: React.FC<SectionLabelProps> = ({
             : variant === "navy"
             ? "text-[#003049]"
             : isDark
-            ? "text-purple-300"
-            : "text-purple-700"
+            ? "text-cyan-200"
+            : "text-[#003049]"
         )}
       >
         {label}

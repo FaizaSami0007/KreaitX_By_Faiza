@@ -106,7 +106,7 @@ export default function AboutPage() {
       <section className="relative overflow-hidden bg-white text-slate-900 min-h-[680px] lg:min-h-[760px] flex items-center justify-center py-20 lg:py-28 border-b border-slate-200/80">
         <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
           <Image
-            src="/images/about-hero-custom-bg.png"
+            src="/images/about-hero-custom-bg.jpg"
             alt="KreaitX Studio Story, Philosophy & Peshawar Craftsmanship"
             fill
             priority

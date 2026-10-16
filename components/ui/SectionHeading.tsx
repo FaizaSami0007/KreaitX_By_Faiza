@@ -42,8 +42,8 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
               withGradientEyebrow
                 ? isDark
                   ? "bg-[#14213D] text-[#42C6D9] border border-cyan-500/30 shadow-sm"
-                  : "bg-white text-purple-700 border border-slate-200/90 shadow-subtle"
-                : eyebrowColor || (isDark ? "text-cyan-400" : "text-purple-600")
+                  : "bg-white text-[#003049] border border-slate-200/90 shadow-subtle"
+                : eyebrowColor || (isDark ? "text-cyan-400" : "text-[#003049]")
             )}
           >
             <span className="h-1.5 w-1.5 rounded-full bg-[#42C6D9] animate-pulse" aria-hidden="true" />
