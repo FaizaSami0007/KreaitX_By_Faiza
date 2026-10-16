@@ -3,7 +3,8 @@ import { ServiceItem, ProjectCaseStudy, ProcessStage, InsightArticle, NavItem } 
 export const siteConfig = {
   name: "KreaitX",
   legalName: "KreaitX Creative Technology",
-  tagline: "Creative Technology & Digital Growth",
+  tagline: "Ideas, engineered into impact.",
+  descriptor: "Creative Technology & Digital Growth",
   positioning: "One connected creative technology partner for businesses that need ideas, execution and digital growth under one roof.",
   description: "KreaitX combines strategy, creativity and technology to help businesses build stronger brands, digital experiences and meaningful growth.",
   url: "https://kreaitx.com",

@@ -30,6 +30,11 @@ const config: Config = {
           "border-focus": "#A855F7"
         },
         kreaitx: {
+          navy: "#003049",
+          "deep-navy": "#14213D",
+          "brand-cyan": "#42C6D9",
+          "brand-neutral": "#A8B3C2",
+          "brand-canvas": "#F7F8FA",
           purple: "#9333EA",
           indigo: "#6366F1",
           cyan: "#06B6D4",

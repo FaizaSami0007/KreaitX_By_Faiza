@@ -50,7 +50,7 @@ export default function AboutPage() {
             priority
             sizes="100vw"
             className="object-cover object-right-top select-none"
-            quality={100}
+            quality={95}
           />
           {/* Seamless bottom fade into next section */}
           <div className="absolute inset-x-0 bottom-0 h-24 sm:h-36 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />

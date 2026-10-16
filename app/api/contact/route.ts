@@ -7,6 +7,14 @@ export async function POST(request: Request) {
     const body = await request.json();
     const { fullName, email, companyName, selectedServices, budgetRange, projectTimeline, projectDetails } = body;
 
+    // Anti-spam honeypot detection
+    if (body.website) {
+      return NextResponse.json(
+        { success: true, message: "Thank you for your submission." },
+        { status: 200 }
+      );
+    }
+
     // Basic server-side validation
     if (!fullName || !email || !projectDetails) {
       return NextResponse.json(
@@ -24,8 +32,29 @@ export async function POST(request: Request) {
       );
     }
 
-    // In production with RESEND_API_KEY, we could dispatch email via Resend
-    // For now, log the structured inquiry payload
+    // Dispatch email via Resend if RESEND_API_KEY is configured
+    if (process.env.RESEND_API_KEY) {
+      try {
+        await fetch("https://api.resend.com/emails", {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${process.env.RESEND_API_KEY}`,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            from: "KreaitX Inquiries <onboarding@resend.dev>",
+            to: [process.env.CONTACT_EMAIL || "contact@kreaitx.com"],
+            reply_to: email,
+            subject: `New Project Inquiry from ${fullName} (${companyName || "Independent"})`,
+            text: `Name: ${fullName}\nEmail: ${email}\nCompany: ${companyName || "N/A"}\nServices: ${(selectedServices || []).join(", ") || "General"}\nBudget: ${budgetRange || "Not Specified"}\nTimeline: ${projectTimeline || "Flexible"}\n\nProject Details:\n${projectDetails}`
+          })
+        });
+      } catch (emailErr) {
+        console.error("[Email Dispatch Error]:", emailErr);
+      }
+    }
+
+    // Structured logging for audit trail
     console.log("[KreaitX Contact Inquiry Received]:", {
       fullName,
       email,

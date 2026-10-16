@@ -84,24 +84,40 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: siteConfig.name,
-  legalName: siteConfig.legalName,
-  description: siteConfig.description,
-  url: siteConfig.url,
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: siteConfig.location.city,
-    addressRegion: "Khyber Pakhtunkhwa",
-    addressCountry: siteConfig.location.country
-  },
-  priceRange: "$$",
-  email: siteConfig.contact.email,
-  sameAs: [
-    siteConfig.social.linkedin,
-    siteConfig.social.instagram,
-    siteConfig.social.x,
-    siteConfig.social.github
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${siteConfig.url}/#website`,
+      url: siteConfig.url,
+      name: siteConfig.name,
+      description: siteConfig.description,
+      publisher: {
+        "@id": `${siteConfig.url}/#organization`
+      }
+    },
+    {
+      "@type": ["Organization", "ProfessionalService"],
+      "@id": `${siteConfig.url}/#organization`,
+      name: siteConfig.name,
+      legalName: siteConfig.legalName,
+      description: siteConfig.description,
+      url: siteConfig.url,
+      logo: `${siteConfig.url}/favicon.ico`,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: siteConfig.location.city,
+        addressRegion: "Khyber Pakhtunkhwa",
+        addressCountry: siteConfig.location.country
+      },
+      priceRange: "$$",
+      email: siteConfig.contact.email,
+      sameAs: [
+        siteConfig.social.linkedin,
+        siteConfig.social.instagram,
+        siteConfig.social.x,
+        siteConfig.social.github
+      ]
+    }
   ]
 };
 
