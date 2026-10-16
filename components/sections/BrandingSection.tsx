@@ -13,25 +13,25 @@ const brandingCapabilities: CapabilityItem[] = [
     title: "Brand Strategy",
     description: "Define. Differentiate. Grow.",
     icon: Target,
-    href: "/contact?service=branding&scope=strategy"
+    href: "/solutions/branding"
   },
   {
     title: "Visual Identity",
     description: "A cohesive visual language.",
     icon: PenTool,
-    href: "/contact?service=branding&scope=visual-identity"
+    href: "/solutions/branding"
   },
   {
     title: "Logo Systems",
     description: "Simple. Memorable. Timeless.",
     icon: Shapes,
-    href: "/contact?service=branding&scope=logo-systems"
+    href: "/solutions/branding"
   },
   {
     title: "Brand Guidelines",
     description: "Consistency across every touchpoint.",
     icon: FileText,
-    href: "/contact?service=branding&scope=guidelines"
+    href: "/solutions/branding"
   }
 ];
 
@@ -66,7 +66,7 @@ export const BrandingSection: React.FC = () => {
                   >
                     Branding <br />
                     that builds{" "}
-                    <span className="bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500 bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-[#003049] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent">
                       trust.
                     </span>
                   </h2>
@@ -81,13 +81,19 @@ export const BrandingSection: React.FC = () => {
 
                 {/* Primary CTA */}
                 <Reveal delay={0.24} yOffset={14}>
-                  <div className="pt-2">
+                  <div className="pt-2 flex flex-wrap items-center gap-3">
                     <Link
-                      href="/contact?service=branding"
-                      className="group inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full text-sm font-sans font-semibold text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 hover:-translate-y-0.5 shadow-button active:scale-[0.98]"
+                      href="/solutions/branding"
+                      className="group inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full text-sm font-sans font-semibold text-white bg-[#003049] hover:bg-[#14213D] transition-all duration-300 hover:-translate-y-0.5 shadow-brand-button active:scale-[0.98]"
                     >
                       <span>Explore Branding</span>
-                      <ArrowRight className="h-4 w-4 text-white/90 transition-transform duration-200 group-hover:translate-x-1" />
+                      <ArrowRight className="h-4 w-4 text-[#42C6D9] transition-transform duration-200 group-hover:translate-x-1" />
+                    </Link>
+                    <Link
+                      href="/contact?service=branding"
+                      className="inline-flex items-center justify-center px-5 py-3.5 rounded-full text-sm font-sans font-semibold text-slate-700 hover:text-slate-950 bg-slate-100 hover:bg-slate-200/80 transition-all duration-200"
+                    >
+                      <span>Inquire Directly</span>
                     </Link>
                   </div>
                 </Reveal>
@@ -96,10 +102,10 @@ export const BrandingSection: React.FC = () => {
               {/* Bottom Micro-Copy */}
               <Reveal delay={0.3} yOffset={10}>
                 <div className="pt-6 sm:pt-8 border-t border-slate-100 flex items-center gap-2.5">
-                  <span className="w-3.5 h-[2px] rounded-full bg-purple-600" aria-hidden="true" />
+                  <span className="w-3.5 h-[2px] rounded-full bg-[#003049]" aria-hidden="true" />
                   <div className="text-xs font-sans tracking-wider text-slate-500 uppercase font-semibold">
                     <span>IDEAS TODAY</span>
-                    <span className="mx-2 text-purple-400">•</span>
+                    <span className="mx-2 text-[#42C6D9]">•</span>
                     <span>RECOGNITION TOMORROW</span>
                   </div>
                 </div>
@@ -110,19 +116,19 @@ export const BrandingSection: React.FC = () => {
             {/* Right Column: Capabilities Panel (Cols 7-12) */}
             <div className="lg:col-span-6 w-full max-w-[580px] lg:ml-auto">
               <Reveal delay={0.26} yOffset={20}>
-                <div className="relative rounded-2xl bg-slate-950 text-white p-7 sm:p-9 border border-slate-800 shadow-xl overflow-hidden">
+                <div className="relative rounded-2xl bg-[#003049] text-white p-7 sm:p-9 border border-[#14213D] shadow-xl overflow-hidden">
                   
                   {/* Subtle ambient glow */}
-                  <div className="absolute top-0 right-0 w-48 h-48 bg-purple-500/15 rounded-full blur-3xl pointer-events-none" />
-                  <div className="absolute bottom-0 left-0 w-48 h-48 bg-cyan-500/15 rounded-full blur-3xl pointer-events-none" />
+                  <div className="absolute top-0 right-0 w-48 h-48 bg-[#42C6D9]/10 rounded-full blur-3xl pointer-events-none" />
+                  <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full blur-3xl pointer-events-none" />
 
                   {/* Vertical Capabilities List */}
                   <CapabilityList items={brandingCapabilities} theme="dark" className="relative z-10" />
 
                   {/* Card Bottom Tagline */}
-                  <div className="mt-6 sm:mt-7 pt-4 border-t border-slate-800 flex items-center gap-2 relative z-10">
-                    <span className="w-5 h-[2px] rounded-full bg-cyan-400" aria-hidden="true" />
-                    <span className="text-xs font-sans font-bold tracking-widest text-cyan-400 uppercase">
+                  <div className="mt-6 sm:mt-7 pt-4 border-t border-white/10 flex items-center gap-2 relative z-10">
+                    <span className="w-5 h-[2px] rounded-full bg-[#42C6D9]" aria-hidden="true" />
+                    <span className="text-xs font-sans font-bold tracking-widest text-[#42C6D9] uppercase">
                       BRANDS FOR A BRIGHTER TOMORROW
                     </span>
                   </div>

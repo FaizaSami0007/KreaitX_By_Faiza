@@ -44,8 +44,8 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
             
             {/* Eyebrow */}
             <Reveal delay={0.05} yOffset={12}>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-purple-50 border border-purple-200/80 text-purple-700 text-xs font-semibold uppercase tracking-wider">
-                <span className="h-1.5 w-1.5 rounded-full bg-purple-600 animate-pulse" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#F7F8FA] border border-slate-200 text-[#003049] text-xs font-mono font-bold uppercase tracking-wider">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#42C6D9] animate-pulse" />
                 <span>CONNECTED CAPABILITIES</span>
               </div>
             </Reveal>
@@ -57,7 +57,7 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
                 className="font-display text-4xl sm:text-5xl lg:text-[58px] font-bold text-slate-950 tracking-tight leading-[1.08]"
               >
                 Everything we build <br />
-                <span className="bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500 bg-clip-text text-transparent">
+                <span className="font-serif italic font-normal bg-gradient-to-r from-[#003049] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent">
                   is connected.
                 </span>
               </h2>
@@ -73,7 +73,7 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
             {/* Interactive 7-Services Index Pills */}
             <Reveal delay={0.24} yOffset={14}>
               <div className="pt-1">
-                <span className="text-xs font-sans font-bold uppercase tracking-wider text-slate-500 block mb-3">
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-slate-500 block mb-3">
                   EXPLORE ALL 7 DISCIPLINES
                 </span>
                 <div className="flex flex-wrap gap-2 sm:gap-2.5 max-w-[580px]">
@@ -81,9 +81,9 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
                     <a
                       key={service.id}
                       href={service.href}
-                      className="group inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs sm:text-sm font-sans font-medium text-slate-800 bg-white hover:bg-gradient-to-r hover:from-purple-600 hover:to-indigo-600 hover:text-white border border-slate-200/80 transition-all duration-300 shadow-subtle hover:shadow-button"
+                      className="group inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs sm:text-sm font-sans font-medium text-slate-800 bg-white hover:bg-[#003049] hover:text-white border border-slate-200/80 transition-all duration-300 shadow-subtle hover:shadow-brand-button"
                     >
-                      <span className="font-display font-bold text-xs text-purple-600 group-hover:text-purple-200">
+                      <span className="font-mono font-bold text-xs text-[#003049] group-hover:text-[#42C6D9]">
                         {service.number}
                       </span>
                       <span>{service.name}</span>
@@ -98,13 +98,13 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
               <div className="pt-4 flex flex-wrap items-center gap-4 sm:gap-6 border-t border-slate-200/80 w-full">
                 <a
                   href="#branding"
-                  className="group inline-flex items-center text-xs font-sans font-bold uppercase tracking-wider text-purple-700 hover:text-purple-800 transition-colors py-1"
+                  className="group inline-flex items-center text-xs font-sans font-bold uppercase tracking-wider text-[#003049] hover:text-[#14213D] transition-colors py-1"
                 >
                   <span>Explore Our Services</span>
-                  <ArrowDown className="ml-2 h-3.5 w-3.5 text-purple-600 transition-transform duration-200 group-hover:translate-y-1" />
+                  <ArrowDown className="ml-2 h-3.5 w-3.5 text-[#42C6D9] transition-transform duration-200 group-hover:translate-y-1" />
                 </a>
                 <span className="text-xs text-slate-300 hidden sm:inline">•</span>
-                <span className="text-xs font-sans font-semibold tracking-wider text-slate-500 uppercase">
+                <span className="text-xs font-mono font-semibold tracking-wider text-slate-500 uppercase">
                   EST. PESHAWAR × GLOBAL
                 </span>
               </div>

@@ -53,8 +53,8 @@ export const CapabilityList: React.FC<CapabilityListProps> = ({
                   className={cn(
                     "w-10 h-10 sm:w-11 sm:h-11 rounded-2xl border flex items-center justify-center shrink-0 transition-all duration-300 shadow-subtle",
                     isDark
-                      ? "border-slate-800 bg-slate-900 text-purple-400 group-hover:border-purple-500/50 group-hover:bg-purple-950/40"
-                      : "border-slate-200/80 bg-purple-50/70 text-purple-600 group-hover:border-purple-300 group-hover:bg-purple-100 group-hover:scale-105"
+                      ? "border-slate-800 bg-[#14213D] text-[#42C6D9] group-hover:border-[#42C6D9]/50 group-hover:bg-[#003049]"
+                      : "border-slate-200/80 bg-[#F7F8FA] text-[#003049] group-hover:border-[#42C6D9]/50 group-hover:bg-white group-hover:scale-105"
                   )}
                 >
                   <Icon className="h-4.5 w-4.5 sm:h-5 sm:w-5 stroke-[1.75]" />
@@ -65,8 +65,8 @@ export const CapabilityList: React.FC<CapabilityListProps> = ({
                   className={cn(
                     "text-sm sm:text-base font-display font-bold tracking-tight transition-colors",
                     isDark
-                      ? "text-white group-hover:text-purple-300"
-                      : "text-slate-900 group-hover:text-purple-700"
+                      ? "text-white group-hover:text-[#42C6D9]"
+                      : "text-slate-900 group-hover:text-[#003049]"
                   )}
                 >
                   {item.title}
@@ -87,11 +87,11 @@ export const CapabilityList: React.FC<CapabilityListProps> = ({
                 className={cn(
                   "ml-3 shrink-0 transition-all duration-300",
                   isDark
-                    ? "text-slate-500 group-hover:text-purple-400 group-hover:translate-x-1"
-                    : "text-slate-400 group-hover:text-purple-600 group-hover:translate-x-1"
+                    ? "text-slate-500 group-hover:text-[#42C6D9] group-hover:translate-x-1"
+                    : "text-slate-400 group-hover:text-[#003049] group-hover:translate-x-1"
                 )}
               >
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-4 w-4 text-[#42C6D9]" />
               </div>
             )}
           </Wrapper>

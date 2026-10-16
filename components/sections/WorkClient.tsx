@@ -43,13 +43,13 @@ export const WorkClient: React.FC = () => {
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-purple-700 px-4 py-1.5 rounded-full bg-white/90 border border-slate-200/90 mb-6 backdrop-blur-md shadow-sm">
-                <Sparkles className="h-3.5 w-3.5 text-purple-600 animate-pulse" />
+              <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#003049] px-4 py-1.5 rounded-full bg-white/95 border border-slate-200/90 mb-6 backdrop-blur-md shadow-sm">
+                <Sparkles className="h-3.5 w-3.5 text-[#42C6D9] animate-pulse" />
                 <span>Portfolio × Selected Case Studies</span>
               </span>
               <h1 className="font-display text-4xl sm:text-6xl lg:text-[68px] font-bold text-slate-950 tracking-tight leading-[1.05]">
                 Real projects.{" "}
-                <span className="font-serif italic font-normal bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500 bg-clip-text text-transparent">
+                <span className="font-serif italic font-normal bg-gradient-to-r from-[#003049] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent">
                   Real business context
                 </span>.
               </h1>
@@ -58,12 +58,12 @@ export const WorkClient: React.FC = () => {
               </p>
 
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-                <Button href="/contact" variant="primary" size="md" withArrow className="w-full sm:w-auto min-h-[48px]">
+                <Button href="/contact" variant="navy" size="md" withArrow className="w-full sm:w-auto min-h-[48px]">
                   Start a Project
                 </Button>
                 <a
                   href="#projects-feed"
-                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-full text-sm font-semibold text-slate-800 bg-white hover:bg-slate-50 border border-slate-300 shadow-sm transition-all duration-200 w-full sm:w-auto hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-full text-sm font-semibold text-slate-800 bg-white hover:bg-[#F7F8FA] border border-slate-300 shadow-sm transition-all duration-200 w-full sm:w-auto hover:-translate-y-0.5"
                 >
                   Browse Case Studies ↓
                 </a>
@@ -74,7 +74,7 @@ export const WorkClient: React.FC = () => {
       </section>
 
       {/* Filter Bar */}
-      <section id="projects-feed" className="bg-white/90 backdrop-blur-md border-b border-slate-200/80 py-4 sticky top-[65px] z-30 shadow-subtle">
+      <section id="projects-feed" className="bg-white/95 backdrop-blur-md border-b border-slate-200/80 py-4 sticky top-[65px] z-30 shadow-subtle">
         <Container size="default">
           <div className="flex items-center justify-between gap-4 overflow-x-auto no-scrollbar">
             <div className="flex items-center gap-2">
@@ -86,8 +86,8 @@ export const WorkClient: React.FC = () => {
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-4 py-2 rounded-full text-xs sm:text-sm font-sans font-semibold transition-all cursor-pointer shrink-0 ${
                     selectedCategory === cat
-                      ? "bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-button"
-                      : "bg-slate-100 text-slate-700 hover:bg-purple-50 hover:text-purple-700 border border-slate-200"
+                      ? "bg-[#003049] text-white shadow-brand-button"
+                      : "bg-[#F7F8FA] text-slate-700 hover:bg-slate-100 hover:text-[#003049] border border-slate-200"
                   }`}
                 >
                   {cat}
@@ -110,34 +110,43 @@ export const WorkClient: React.FC = () => {
               <article
                 key={project.id}
                 id={project.id}
-                className="scroll-mt-32 rounded-3xl bg-white border border-slate-200/80 shadow-card hover:shadow-card-hover hover:border-purple-200 transition-all duration-300 overflow-hidden"
+                className="scroll-mt-32 rounded-3xl bg-white border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden"
               >
                 {/* Case Study Header Banner */}
-                <div className="bg-gradient-to-r from-slate-950 via-indigo-950 to-purple-950 text-white p-8 sm:p-12 relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-purple-500/20 rounded-full blur-3xl pointer-events-none" />
+                <div className="bg-gradient-to-r from-[#003049] via-[#0B132B] to-[#14213D] text-white p-8 sm:p-12 relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-[#42C6D9]/10 rounded-full blur-3xl pointer-events-none" />
                   <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
                     <div>
                       <div className="flex items-center gap-3 mb-3">
-                        <span className="px-3.5 py-1 rounded-full bg-white/15 text-white text-xs font-mono backdrop-blur-sm border border-white/20">
+                        <span className="px-3.5 py-1 rounded-full bg-white/10 text-white text-xs font-mono backdrop-blur-sm border border-white/15">
                           Case Study 0{idx + 1}
                         </span>
-                        <span className="text-xs text-cyan-400 uppercase font-bold tracking-wider">
+                        <span className="text-xs text-[#42C6D9] uppercase font-bold tracking-wider">
                           {project.industry}
                         </span>
-                        <span className="text-xs text-slate-400">• {project.year}</span>
+                        <span className="text-xs text-slate-300">• {project.year}</span>
                       </div>
                       <h2 className="text-2xl sm:text-4xl lg:text-5xl font-display font-bold text-white tracking-tight">
                         {project.title}
                       </h2>
                     </div>
 
-                    <div className="shrink-0 text-left md:text-right">
-                      <span className="text-xs font-sans uppercase tracking-wider text-purple-300 font-bold block mb-1">
-                        Client Partner
-                      </span>
-                      <span className="text-lg font-display font-bold text-white">
-                        {project.client}
-                      </span>
+                    <div className="shrink-0 flex flex-col md:items-end justify-between gap-3">
+                      <div>
+                        <span className="text-xs font-sans uppercase tracking-wider text-[#42C6D9] font-bold block mb-1">
+                          Client Partner
+                        </span>
+                        <span className="text-lg font-display font-bold text-white">
+                          {project.client}
+                        </span>
+                      </div>
+                      <Link
+                        href={`/work/${project.slug}`}
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-sans font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 transition-all duration-200"
+                      >
+                        <span>Read Case Study</span>
+                        <ArrowRight className="h-3.5 w-3.5 text-[#42C6D9]" />
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -148,7 +157,8 @@ export const WorkClient: React.FC = () => {
                     {/* Left: Challenge, Strategy, Execution */}
                     <div className="lg:col-span-7 space-y-8">
                       <div>
-                        <h3 className="text-xs font-sans uppercase tracking-wider text-purple-700 font-bold mb-2">
+                        <h3 className="text-xs font-sans uppercase tracking-wider text-[#003049] font-bold mb-2 flex items-center gap-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#42C6D9]" />
                           Project Summary
                         </h3>
                         <p className="text-lg text-slate-800 font-sans font-normal leading-relaxed">
@@ -157,7 +167,7 @@ export const WorkClient: React.FC = () => {
                       </div>
 
                       <div className="space-y-6 pt-6 border-t border-slate-100">
-                        <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/60">
+                        <div className="p-5 rounded-2xl bg-[#F7F8FA] border border-slate-200/60">
                           <h4 className="text-xs font-sans uppercase tracking-wider text-slate-900 font-bold mb-2">
                             The Challenge
                           </h4>
@@ -166,16 +176,16 @@ export const WorkClient: React.FC = () => {
                           </p>
                         </div>
 
-                        <div className="p-5 rounded-2xl bg-purple-50/60 border border-purple-100">
-                          <h4 className="text-xs font-sans uppercase tracking-wider text-purple-900 font-bold mb-2">
+                        <div className="p-5 rounded-2xl bg-[#003049]/5 border border-[#003049]/15">
+                          <h4 className="text-xs font-sans uppercase tracking-wider text-[#003049] font-bold mb-2">
                             The Strategy
                           </h4>
-                          <p className="text-sm sm:text-base text-purple-950 leading-relaxed font-sans">
+                          <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-sans">
                             {project.strategy}
                           </p>
                         </div>
 
-                        <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/60">
+                        <div className="p-5 rounded-2xl bg-[#F7F8FA] border border-slate-200/60">
                           <h4 className="text-xs font-sans uppercase tracking-wider text-slate-900 font-bold mb-2">
                             The Execution
                           </h4>
@@ -189,11 +199,11 @@ export const WorkClient: React.FC = () => {
                     {/* Right: Deliverables, Results & Impact Box */}
                     <div className="lg:col-span-5 space-y-6">
                       {/* Measured Impact Card */}
-                      <div className="rounded-3xl bg-gradient-to-br from-purple-50 via-indigo-50 to-cyan-50 p-7 sm:p-8 border border-purple-200/80 shadow-card">
-                        <span className="text-xs font-sans uppercase tracking-wider text-purple-700 font-bold block mb-2">
+                      <div className="rounded-3xl bg-[#003049] text-white p-7 sm:p-8 border border-[#14213D] shadow-card">
+                        <span className="text-xs font-sans uppercase tracking-wider text-[#42C6D9] font-bold block mb-2">
                           Measured Business Impact
                         </span>
-                        <p className="text-xl sm:text-2xl font-display font-bold text-slate-900 leading-relaxed">
+                        <p className="text-xl sm:text-2xl font-display font-bold text-white leading-relaxed">
                           {project.impact}
                         </p>
                       </div>
@@ -209,7 +219,7 @@ export const WorkClient: React.FC = () => {
                               key={del}
                               className="flex items-center gap-2.5 text-sm font-medium text-slate-800"
                             >
-                              <CheckCircle2 className="h-4 w-4 text-purple-600 shrink-0" />
+                              <CheckCircle2 className="h-4 w-4 text-[#003049] shrink-0" />
                               <span>{del}</span>
                             </li>
                           ))}
@@ -217,20 +227,52 @@ export const WorkClient: React.FC = () => {
                       </div>
 
                       {/* Services badges */}
-                      <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80">
+                      <div className="p-5 rounded-2xl bg-[#F7F8FA] border border-slate-200/80">
                         <span className="text-xs font-sans uppercase tracking-wider text-slate-500 font-bold block mb-2.5">
                           Capabilities Involved
                         </span>
                         <div className="flex flex-wrap gap-1.5">
-                          {project.services.map((s) => (
-                            <span
-                              key={s}
-                              className="text-xs font-medium text-slate-700 bg-white border border-slate-200 px-3 py-1 rounded-full shadow-subtle"
-                            >
-                              {s}
-                            </span>
-                          ))}
+                          {project.services.map((s) => {
+                            const serviceSlugMap: Record<string, string> = {
+                              "Branding": "branding",
+                              "Digital Solutions": "digital-solutions",
+                              "Filming & Production": "filming-production",
+                              "UI/UX Design": "digital-solutions",
+                              "Graphic Design": "graphic-design",
+                              "Social Media": "social-media-management",
+                              "2D Animation": "2d-animation",
+                              "Digital Marketing": "digital-marketing"
+                            };
+                            const slug = serviceSlugMap[s];
+                            return slug ? (
+                              <Link
+                                key={s}
+                                href={`/solutions/${slug}`}
+                                className="text-xs font-medium text-slate-700 bg-white hover:bg-[#003049] hover:text-white border border-slate-200 hover:border-[#003049] px-3 py-1 rounded-full shadow-subtle transition-all duration-200"
+                              >
+                                {s}
+                              </Link>
+                            ) : (
+                              <span
+                                key={s}
+                                className="text-xs font-medium text-slate-700 bg-white border border-slate-200 px-3 py-1 rounded-full shadow-subtle"
+                              >
+                                {s}
+                              </span>
+                            );
+                          })}
                         </div>
+                      </div>
+
+                      {/* Read Full Case Study Button */}
+                      <div className="pt-2">
+                        <Link
+                          href={`/work/${project.slug}`}
+                          className="w-full group inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-sans font-semibold text-white bg-[#003049] hover:bg-[#14213D] shadow-brand-button transition-all duration-300 hover:-translate-y-0.5"
+                        >
+                          <span>Explore Dedicated Case Study</span>
+                          <ArrowRight className="h-4 w-4 text-[#42C6D9] transition-transform duration-200 group-hover:translate-x-1" />
+                        </Link>
                       </div>
                     </div>
                   </div>

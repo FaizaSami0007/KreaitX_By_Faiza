@@ -14,25 +14,25 @@ const marketingCapabilities: CapabilityItem[] = [
     title: "Strategy & Planning",
     description: "Goal-oriented campaigns that create real impact.",
     icon: BarChart3,
-    href: "/contact?service=digital-marketing&scope=strategy"
+    href: "/solutions/digital-marketing"
   },
   {
     title: "SEO & Performance",
     description: "Rank higher. Grow faster.",
     icon: Search,
-    href: "/contact?service=digital-marketing&scope=seo"
+    href: "/solutions/digital-marketing"
   },
   {
     title: "Paid Advertising",
     description: "Reach the right audience with precision.",
     icon: Megaphone,
-    href: "/contact?service=digital-marketing&scope=paid-ads"
+    href: "/solutions/digital-marketing"
   },
   {
     title: "Analytics & Reporting",
     description: "Insights that drive better decisions.",
     icon: PieChart,
-    href: "/contact?service=digital-marketing&scope=analytics"
+    href: "/solutions/digital-marketing"
   }
 ];
 
@@ -89,7 +89,7 @@ export const DigitalMarketingSection: React.FC = () => {
                   >
                     Marketing <br />
                     that delivers{" "}
-                    <span className="bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500 bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-[#003049] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent">
                       results.
                     </span>
                   </h2>
@@ -104,13 +104,19 @@ export const DigitalMarketingSection: React.FC = () => {
 
                 {/* Primary CTA */}
                 <Reveal delay={0.24} yOffset={14}>
-                  <div className="pt-2">
+                  <div className="pt-2 flex flex-wrap items-center gap-2.5">
+                    <Link
+                      href="/solutions/digital-marketing"
+                      className="group inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3 rounded-full text-xs sm:text-sm font-sans font-semibold text-white bg-[#003049] hover:bg-[#14213D] transition-all duration-300 hover:-translate-y-0.5 shadow-brand-button active:scale-[0.98]"
+                    >
+                      <span>Explore Marketing</span>
+                      <ArrowRight className="h-4 w-4 text-[#42C6D9] transition-transform duration-200 group-hover:translate-x-1" />
+                    </Link>
                     <Link
                       href="/contact?service=digital-marketing"
-                      className="group inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3 rounded-full text-xs sm:text-sm font-sans font-semibold text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 hover:-translate-y-0.5 shadow-button active:scale-[0.98]"
+                      className="inline-flex items-center justify-center px-4 py-3 rounded-full text-xs sm:text-sm font-sans font-semibold text-slate-700 hover:text-slate-950 bg-slate-100 hover:bg-slate-200/80 transition-all duration-200"
                     >
-                      <span>Explore Digital Marketing</span>
-                      <ArrowRight className="h-4 w-4 text-white/90 transition-transform duration-200 group-hover:translate-x-1" />
+                      <span>Inquire</span>
                     </Link>
                   </div>
                 </Reveal>
@@ -119,10 +125,10 @@ export const DigitalMarketingSection: React.FC = () => {
               {/* Bottom Micro-Copy */}
               <Reveal delay={0.3} yOffset={10}>
                 <div className="pt-5 sm:pt-6 border-t border-slate-100 flex items-center gap-2.5">
-                  <span className="w-3.5 h-[2px] rounded-full bg-purple-600" aria-hidden="true" />
+                  <span className="w-3.5 h-[2px] rounded-full bg-[#003049]" aria-hidden="true" />
                   <div className="text-xs font-sans tracking-wider text-slate-500 uppercase font-semibold">
                     <span>STRATEGY TODAY</span>
-                    <span className="mx-2 text-purple-400">•</span>
+                    <span className="mx-2 text-[#42C6D9]">•</span>
                     <span>MEASURABLE GROWTH TOMORROW</span>
                   </div>
                 </div>

@@ -49,6 +49,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   ];
 
+  const serviceRoutes: MetadataRoute.Sitemap = servicesData.map((service) => ({
+    url: `${baseUrl}/solutions/${service.id}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.85
+  }));
+
+  const workRoutes: MetadataRoute.Sitemap = projectCaseStudies.map((project) => ({
+    url: `${baseUrl}/work/${project.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.85
+  }));
+
   const insightRoutes: MetadataRoute.Sitemap = insightsArticles.map((article) => ({
     url: `${baseUrl}/insights#${article.slug}`,
     lastModified: new Date(),
@@ -56,12 +70,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7
   }));
 
-  const workRoutes: MetadataRoute.Sitemap = projectCaseStudies.map((project) => ({
-    url: `${baseUrl}/work#${project.id}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.8
-  }));
-
-  return [...staticRoutes, ...insightRoutes, ...workRoutes];
+  return [...staticRoutes, ...serviceRoutes, ...workRoutes, ...insightRoutes];
 }

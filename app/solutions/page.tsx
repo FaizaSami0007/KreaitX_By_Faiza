@@ -54,13 +54,13 @@ export default function SolutionsPage() {
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-purple-700 px-4 py-1.5 rounded-full bg-white/90 border border-slate-200/90 mb-6 backdrop-blur-md shadow-sm">
-                <Sparkles className="h-3.5 w-3.5 text-purple-600 animate-pulse" />
+              <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#003049] px-4 py-1.5 rounded-full bg-white/95 border border-slate-200/90 mb-6 backdrop-blur-md shadow-sm">
+                <Sparkles className="h-3.5 w-3.5 text-[#42C6D9] animate-pulse" />
                 <span>Capabilities × Solutions Architecture</span>
               </span>
               <h1 className="font-display text-4xl sm:text-6xl lg:text-[68px] font-bold text-slate-950 tracking-tight leading-[1.05]">
                 Creative &amp; digital capabilities,{" "}
-                <span className="font-serif italic font-normal bg-gradient-to-r from-purple-600 via-indigo-600 to-cyan-500 bg-clip-text text-transparent">
+                <span className="font-serif italic font-normal bg-gradient-to-r from-[#003049] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent">
                   connected
                 </span>.
               </h1>
@@ -69,12 +69,12 @@ export default function SolutionsPage() {
               </p>
 
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-                <Button href="/contact" variant="primary" size="md" withArrow className="w-full sm:w-auto min-h-[48px]">
+                <Button href="/contact" variant="navy" size="md" withArrow className="w-full sm:w-auto min-h-[48px]">
                   Start a Project
                 </Button>
                 <a
                   href="#connected-capabilities"
-                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-full text-sm font-semibold text-slate-800 bg-white hover:bg-slate-50 border border-slate-300 shadow-sm transition-all duration-200 w-full sm:w-auto hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-full text-sm font-semibold text-slate-800 bg-white hover:bg-[#F7F8FA] border border-slate-300 shadow-sm transition-all duration-200 w-full sm:w-auto hover:-translate-y-0.5"
                 >
                   Explore All 7 Services ↓
                 </a>
@@ -118,10 +118,10 @@ export default function SolutionsPage() {
                     >
                       <div className="space-y-5">
                         <div className="flex items-center gap-3">
-                          <span className="font-display text-base font-bold text-purple-600">
+                          <span className="font-display text-base font-bold text-[#003049]">
                             {service.number}
                           </span>
-                          <span className="w-6 h-[2px] bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full" aria-hidden="true" />
+                          <span className="w-6 h-[2px] bg-[#42C6D9] rounded-full" aria-hidden="true" />
                           <span className="text-xs font-sans font-bold uppercase tracking-wider text-slate-500">
                             {service.category}
                           </span>
@@ -131,7 +131,7 @@ export default function SolutionsPage() {
                           {service.title}
                         </h2>
 
-                        <p className="text-base sm:text-lg font-semibold text-purple-700">
+                        <p className="text-base sm:text-lg font-semibold text-[#003049]">
                           {service.tagline}
                         </p>
 
@@ -140,8 +140,9 @@ export default function SolutionsPage() {
                         </p>
 
                         {/* Problem Solved Box */}
-                        <div className="rounded-2xl bg-slate-50 p-5 border border-slate-200/60">
-                          <p className="text-xs font-sans uppercase tracking-wider text-slate-900 font-bold mb-1.5">
+                        <div className="rounded-2xl bg-[#F7F8FA] p-5 border border-slate-200/70">
+                          <p className="text-xs font-sans uppercase tracking-wider text-slate-900 font-bold mb-1.5 flex items-center gap-1.5">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#42C6D9]" />
                             The Core Problem We Solve
                           </p>
                           <p className="text-sm text-slate-600 leading-relaxed font-sans">
@@ -155,25 +156,37 @@ export default function SolutionsPage() {
                             Connected With
                           </span>
                           <div className="flex flex-wrap gap-2">
-                            {service.relatedCapabilities.map((rel) => (
-                              <Link
-                                key={rel}
-                                href="/solutions#branding"
-                                className="text-xs font-medium text-slate-700 bg-slate-100 hover:bg-purple-50 hover:text-purple-700 hover:border-purple-200 border border-slate-200 px-3.5 py-1.5 rounded-full transition-all duration-200"
-                              >
-                                + {rel}
-                              </Link>
-                            ))}
+                            {service.relatedCapabilities.map((rel) => {
+                              const targetService = servicesData.find((s) => s.title.toLowerCase().includes(rel.toLowerCase()) || rel.toLowerCase().includes(s.title.toLowerCase()));
+                              const targetHref = targetService ? `/solutions/${targetService.id}` : "/solutions";
+                              return (
+                                <Link
+                                  key={rel}
+                                  href={targetHref}
+                                  className="text-xs font-medium text-slate-700 bg-slate-100 hover:bg-[#003049] hover:text-white hover:border-[#003049] border border-slate-200 px-3.5 py-1.5 rounded-full transition-all duration-200"
+                                >
+                                  + {rel}
+                                </Link>
+                              );
+                            })}
                           </div>
                         </div>
                       </div>
 
-                      <div className="pt-6 border-t border-slate-100">
+                      <div className="pt-6 border-t border-slate-100 flex flex-wrap items-center gap-3">
                         <Button
-                          href={`/contact?service=${service.id}`}
-                          variant="primary"
+                          href={`/solutions/${service.id}`}
+                          variant="navy"
                           size="md"
                           withArrow
+                          className="w-full sm:w-auto"
+                        >
+                          Explore Dedicated Service
+                        </Button>
+                        <Button
+                          href={`/contact?service=${service.id}`}
+                          variant="secondary"
+                          size="md"
                           className="w-full sm:w-auto"
                         >
                           Inquire for {service.title}
@@ -183,13 +196,13 @@ export default function SolutionsPage() {
 
                     {/* Deliverables & Workflow Column */}
                     <div
-                      className={`lg:col-span-6 space-y-8 p-6 sm:p-8 lg:p-9 rounded-2xl border flex flex-col justify-between bg-slate-50/90 text-slate-900 border-slate-200/80 shadow-sm ${
+                      className={`lg:col-span-6 space-y-8 p-6 sm:p-8 lg:p-9 rounded-2xl border flex flex-col justify-between bg-[#F7F8FA] text-slate-900 border-slate-200/80 shadow-sm ${
                         isReversed ? "lg:order-1" : "lg:order-2"
                       }`}
                     >
                       <div>
-                        <h3 className="text-xs font-sans uppercase tracking-widest font-bold mb-4 flex items-center gap-2 text-purple-700">
-                          <Layers className="h-4 w-4 text-purple-600" />
+                        <h3 className="text-xs font-sans uppercase tracking-widest font-bold mb-4 flex items-center gap-2 text-[#003049]">
+                          <Layers className="h-4 w-4 text-[#42C6D9]" />
                           What KreaitX Delivers
                         </h3>
 
@@ -199,7 +212,7 @@ export default function SolutionsPage() {
                               key={item}
                               className="flex items-start gap-3 text-sm font-medium text-slate-800"
                             >
-                              <CheckCircle2 className="h-4 w-4 shrink-0 mt-0.5 text-purple-600" />
+                              <CheckCircle2 className="h-4 w-4 shrink-0 mt-0.5 text-[#003049]" />
                               <span>{item}</span>
                             </li>
                           ))}
@@ -207,14 +220,14 @@ export default function SolutionsPage() {
                       </div>
 
                       <div className="pt-6 border-t border-slate-200/80">
-                        <h3 className="text-xs font-sans uppercase tracking-widest font-bold mb-3 flex items-center gap-2 text-purple-700">
-                          <Cpu className="h-4 w-4 text-purple-600" />
+                        <h3 className="text-xs font-sans uppercase tracking-widest font-bold mb-3 flex items-center gap-2 text-[#003049]">
+                          <Cpu className="h-4 w-4 text-[#42C6D9]" />
                           Standard Workflow
                         </h3>
                         <ol className="space-y-2 text-xs sm:text-sm text-slate-600">
                           {service.workflow.map((step, sIdx) => (
                             <li key={step} className="flex items-center gap-2">
-                              <span className="font-mono text-xs font-bold text-purple-600">
+                              <span className="font-mono text-xs font-bold text-[#003049]">
                                 0{sIdx + 1}.
                               </span>
                               <span>{step}</span>
@@ -225,7 +238,7 @@ export default function SolutionsPage() {
 
                       <div className="pt-5 border-t border-slate-200/80 flex items-center justify-between text-xs text-slate-500">
                         <span>Collaborative &amp; transparent delivery</span>
-                        <span className="font-display font-bold uppercase tracking-wider text-purple-600">
+                        <span className="font-display font-bold uppercase tracking-wider text-[#003049]">
                           {service.number} / 07
                         </span>
                       </div>
