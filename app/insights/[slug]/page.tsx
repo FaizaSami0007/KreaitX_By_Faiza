@@ -8,10 +8,7 @@ import {
   Clock,
   Calendar,
   CheckCircle2,
-  ChevronRight,
-  Sparkles,
-  Share2,
-  Bookmark
+  ChevronRight
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";

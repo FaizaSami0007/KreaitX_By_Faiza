@@ -4,16 +4,12 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   ArrowRight,
-  ArrowLeft,
   CheckCircle2,
   Layers,
   Cpu,
-  Clock,
   ShieldCheck,
   HelpCircle,
-  Sparkles,
-  ChevronRight,
-  FolderKanban
+  ChevronRight
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";

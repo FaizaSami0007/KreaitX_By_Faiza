@@ -10,9 +10,7 @@ import {
   Building,
   Tag,
   TrendingUp,
-  Sparkles,
   ChevronRight,
-  Layers,
   ShieldCheck,
   Cpu
 } from "lucide-react";
@@ -20,7 +18,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { CTASection } from "@/components/sections/CTASection";
-import { projectCaseStudies, siteConfig, servicesData } from "@/data/siteData";
+import { projectCaseStudies, siteConfig } from "@/data/siteData";
 
 interface PageProps {
   params: Promise<{

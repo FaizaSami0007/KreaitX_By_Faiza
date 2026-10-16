@@ -140,7 +140,7 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className="flex min-h-screen flex-col bg-white font-sans text-slate-900 antialiased selection:bg-purple-600 selection:text-white"
+        className="flex min-h-screen flex-col bg-white font-sans text-slate-900 antialiased selection:bg-[#003049] selection:text-white"
       >
         <Navbar />
         <main id="main-content" className="flex-1">

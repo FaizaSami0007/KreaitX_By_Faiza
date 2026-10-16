@@ -2,19 +2,16 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import {
   CheckCircle2,
   Mail,
   MapPin,
   Clock,
-  ArrowRight,
   Loader2,
   Sparkles,
   AlertCircle,
-  ShieldCheck,
-  Building
+  ShieldCheck
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
@@ -117,11 +114,12 @@ export const ContactClient: React.FC = () => {
       }
 
       setStatus("success");
-    } catch (err: any) {
+    } catch (err: unknown) {
       setStatus("error");
       setErrorMessage(
-        err.message ||
-        "An unexpected network issue occurred. Please try again or email us directly at " + siteConfig.contact.email
+        err instanceof Error
+          ? err.message
+          : "An unexpected network issue occurred. Please try again or email us directly at " + siteConfig.contact.email
       );
     }
   };

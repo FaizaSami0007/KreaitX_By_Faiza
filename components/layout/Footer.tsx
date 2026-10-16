@@ -43,7 +43,7 @@ export const Footer: React.FC = () => {
               {servicesData.map((service) => (
                 <li key={service.id}>
                   <Link
-                    href={`/solutions#${service.id}`}
+                    href={`/solutions/${service.id}`}
                     className="hover:text-[#003049] hover:translate-x-0.5 transition-all duration-180 inline-block py-1"
                   >
                     {service.title}

@@ -153,7 +153,7 @@ export const InsightsClient: React.FC = () => {
             </div>
           ) : (
             <div className="space-y-16 sm:space-y-20">
-              {filteredArticles.map((article, idx) => (
+              {filteredArticles.map((article) => (
                 <article
                   key={article.id}
                   id={article.slug}

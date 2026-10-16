@@ -3,11 +3,10 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { CheckCircle2, ArrowRight, ArrowUpRight, Filter, Sparkles } from "lucide-react";
+import { CheckCircle2, ArrowRight, Filter, Sparkles } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
-import { Reveal, StaggerContainer, StaggerItem } from "@/components/ui/Reveal";
+import { Reveal } from "@/components/ui/Reveal";
 import { CTASection } from "@/components/sections/CTASection";
 import { projectCaseStudies } from "@/data/siteData";
 

@@ -33,20 +33,8 @@ export const CapabilityList: React.FC<CapabilityListProps> = ({
     >
       {items.map((item, index) => {
         const Icon = item.icon;
-        const Wrapper = item.href ? Link : "div";
-        const wrapperProps = item.href ? { href: item.href } : {};
-
-        return (
-          <Wrapper
-            key={item.title}
-            {...(wrapperProps as any)}
-            className={cn(
-              "group flex items-center justify-between py-4 transition-all duration-300",
-              item.href && "cursor-pointer",
-              index === 0 && "pt-0",
-              index === items.length - 1 && "pb-0"
-            )}
-          >
+        const itemContent = (
+          <>
             <div className="flex items-center gap-3.5 sm:gap-4">
               {Icon && (
                 <div
@@ -94,7 +82,28 @@ export const CapabilityList: React.FC<CapabilityListProps> = ({
                 <ArrowRight className="h-4 w-4 text-[#42C6D9]" />
               </div>
             )}
-          </Wrapper>
+          </>
+        );
+
+        const containerClasses = cn(
+          "group flex items-center justify-between py-4 transition-all duration-300",
+          item.href && "cursor-pointer",
+          index === 0 && "pt-0",
+          index === items.length - 1 && "pb-0"
+        );
+
+        if (item.href) {
+          return (
+            <Link key={item.title} href={item.href} className={containerClasses}>
+              {itemContent}
+            </Link>
+          );
+        }
+
+        return (
+          <div key={item.title} className={containerClasses}>
+            {itemContent}
+          </div>
         );
       })}
     </div>
