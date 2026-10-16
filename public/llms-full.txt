@@ -1,0 +1,165 @@
+# KreaitX — Complete Studio Knowledge Base & Capability Architecture
+
+> Creative Technology & Digital Growth Studio based in Peshawar, Pakistan.
+
+## 1. Brand Identity & Positioning
+- **Legal Entity**: KreaitX Creative Technology
+- **Brand Wordmark**: KreaitX (Navy `#003049`, Deep Navy `#14213D`, Cyan `#42C6D9`, Porcelain `#F7F8FA`)
+- **Brand Tagline**: Ideas, engineered into impact.
+- **Studio Mission**: To bridge the gap between creative storytelling and disciplined software engineering under one roof, eliminating the translation degradation that occurs when separate agencies handle branding, film, and code.
+- **Physical Headquarters**: Peshawar, Khyber Pakhtunkhwa, Pakistan.
+- **Client Base**: Global enterprise and regional growth businesses across North America, Europe, the Middle East, and South Asia.
+
+## 2. Seven Connected Capabilities (Detailed)
+
+### 2.1 Branding (https://kreaitx.com/solutions/branding)
+- **Category**: Identity & Strategy
+- **Core Value**: Distill purpose into a coherent visual and verbal system.
+- **Key Deliverables**:
+  - Brand Positioning & Narrative Strategy
+  - Logo Architecture & Primary/Secondary Marks
+  - Typography & Palette Tokens (Design System)
+  - Comprehensive Brand Guidelines (PDF & Web Tokenized)
+  - Business Collateral & Digital Stationery
+- **Workflow**:
+  1. Discovery & Competitor Landscape Audit
+  2. Strategic Positioning Formulation
+  3. Visual Identity Concepts & Rapid Iterations
+  4. Design System & Brand Guidelines Finalization
+
+### 2.2 Digital Marketing (https://kreaitx.com/solutions/digital-marketing)
+- **Category**: Growth & Acquisition
+- **Core Value**: Connect creative storytelling directly to measurable business outcomes.
+- **Key Deliverables**:
+  - Performance Marketing Campaign Architecture
+  - Paid Search (Google Ads) & Paid Social (Meta, LinkedIn) Management
+  - Conversion Funnel Optimization & CRO Audits
+  - Audience Segmentation & Event Tracking Setup
+  - Transparent Monthly Growth Reports
+- **Workflow**:
+  1. Channel Opportunity Audit & Unit Economics
+  2. Message-to-Audience Funnel Mapping
+  3. Multi-Format Creative Production & Live Launch
+  4. Continuous A/B Testing & ROAS Optimization
+
+### 2.3 Social Media Management (https://kreaitx.com/solutions/social-media-management)
+- **Category**: Content & Community
+- **Core Value**: Cultivate an active, loyal brand presence with continuous substance.
+- **Key Deliverables**:
+  - Content Calendar & Editorial Strategy
+  - Multi-Format Social Video & Graphic Production
+  - Community Moderation & Real-Time Engagement
+  - Metric Reporting & Algorithmic Iteration
+  - Creator & Influencer Collaboration Direction
+- **Workflow**:
+  1. Brand Voice & Content Pillar Formulation
+  2. Monthly Production Sprints
+  3. Scheduling, Distribution & Conversation Management
+  4. Performance Analytics & Strategy Refinement
+
+### 2.4 Filming & Production (https://kreaitx.com/solutions/filming-production)
+- **Category**: Visual Storytelling
+- **Core Value**: Turn complex narratives into cinematic, high-impact visual stories.
+- **Key Deliverables**:
+  - Commercial Brand Films & Digital Commercials
+  - Product Demonstration & Interactive Walkthrough Videos
+  - Documentary Case Studies & Leadership Interviews
+  - Full Color Grading, Master Audio Mixing & Foley
+  - Social Cutdowns & Multi-Ratio Exports (16:9, 9:16, 1:1)
+- **Workflow**:
+  1. Creative Scriptwriting & Visual Storyboarding
+  2. Logistics, Talent & Studio Pre-Production
+  3. 4K Principal Cinematography & Lighting
+  4. Post-Production, Scoring & Delivery
+
+### 2.5 Graphic Design (https://kreaitx.com/solutions/graphic-design)
+- **Category**: Communication Design
+- **Core Value**: Make complex ideas intuitive through purposeful visual design.
+- **Key Deliverables**:
+  - Marketing Collateral & Enterprise Sales Decks
+  - Editorial & Whitepaper Publication Layouts
+  - Custom Data Infographics & Vector Illustrations
+  - Packaging & Environmental Signage
+  - Digital Display Ad Sets
+- **Workflow**:
+  1. Content Hierarchy & Objective Assessment
+  2. Typographic Explorations & Wireframe Layouts
+  3. Detail Crafting, Color Balancing & Proofing
+  4. High-Resolution Print-Ready & Digital Packaging
+
+### 2.6 2D Animation (https://kreaitx.com/solutions/2d-animation)
+- **Category**: Motion & Explainer
+- **Core Value**: Use purposeful motion to explain, educate, and captivate.
+- **Key Deliverables**:
+  - B2B Software Explainer Animations
+  - Motion Graphics for Paid Ad Campaigns
+  - Kinetic Brand Idents & Animated Logos
+  - UI Micro-Interactions & Lottie Vectors
+  - Social Motion Graphics Toolkits
+- **Workflow**:
+  1. Concept Scripting & Voiceover Synchronization
+  2. Style Frame Design & Asset Vectorization
+  3. Keyframe Animation & Timing Choreography
+  4. Sound Synthesis, Audio Sweetening & Final Rendering
+
+### 2.7 Digital Solutions (https://kreaitx.com/solutions/digital-solutions)
+- **Category**: Engineering & Web Architecture
+- **Core Value**: Translate creative vision into robust, high-performance digital products.
+- **Key Deliverables**:
+  - Custom Next.js Full-Stack Web Applications
+  - High-Speed Marketing Platforms with Static/Dynamic Rendering
+  - Tokenized Design Systems & Component Libraries
+  - Headless CMS Integrations & API Architecture
+  - WCAG 2.2 AA Accessibility Compliance & Performance Audits
+- **Workflow**:
+  1. Information Architecture & UX Wireframing
+  2. Interactive Figma Prototyping
+  3. Modern Component Engineering (React, TypeScript, Tailwind)
+  4. Cross-Browser QA, Core Web Vitals Optimization & Deployment
+
+## 3. Verified Client Case Studies
+
+### Aurora Healthcare Platform
+- **URL**: https://kreaitx.com/work/aurora-healthcare
+- **Client**: Aurora Regional Care (Regional healthcare provider)
+- **Services**: Branding, Digital Solutions, Filming & Production, UI/UX Design
+- **Key Outcomes**:
+  - 42% reduction in patient appointment booking drop-off.
+  - Unified 4 regional medical facilities under a calm, trustworthy identity.
+  - Accessible (WCAG AA) Next.js digital experience ensuring high readability for patients of all ages.
+
+### Nordic Craft Furniture
+- **URL**: https://kreaitx.com/work/nordic-craft
+- **Client**: Nordic Atelier (Luxury timber furniture manufacturer)
+- **Services**: Filming & Production, Digital Solutions, Graphic Design, Social Media
+- **Key Outcomes**:
+  - Average web session duration doubled to 4.2 minutes.
+  - 68% increase in commercial architect and interior designer project inquiries.
+  - 4K documentary joinery cinematography paired with an editorial digital commerce interface.
+
+### Vanguard Payment Systems
+- **URL**: https://kreaitx.com/work/vanguard-fintech
+- **Client**: Vanguard Pay (Enterprise B2B payment infrastructure)
+- **Services**: Branding, 2D Animation, Digital Solutions, Digital Marketing
+- **Key Outcomes**:
+  - Shortened enterprise sales cycles by 3 weeks through self-serve explainer animations.
+  - 84% boost in developer portal engagement.
+  - Interactive API playground and geometric brand identity conveying institutional security.
+
+## 4. Six Core Studio Differentiators
+1. **One Connected Team**: No handoff friction between creatives and engineers.
+2. **Designers Who Code, Engineers Who Care**: Technical implementations preserve typographic and motion nuances.
+3. **Business-Centered**: Solving customer acquisition and trust problems over delivering empty decorative files.
+4. **End-to-End Continuity**: From discovery and branding to filming, deployment, and ongoing growth marketing.
+5. **Clear, Transparent Process**: Predictable sprints, documented milestone deliverables, and zero agency black-box jargon.
+6. **Direct Access to Practitioners**: Clients communicate directly with senior makers, eliminating telephone-game misunderstandings.
+
+## 5. Contact & Social Channels
+- **Studio Headquarters**: Peshawar, Khyber Pakhtunkhwa, Pakistan
+- **General Inquiries**: contact@kreaitx.com
+- **Project Briefs**: projects@kreaitx.com
+- **Website**: https://kreaitx.com
+- **LinkedIn**: https://linkedin.com/company/kreaitx
+- **Instagram**: https://instagram.com/kreaitx
+- **X / Twitter**: https://x.com/kreaitx
+- **GitHub**: https://github.com/kreaitx

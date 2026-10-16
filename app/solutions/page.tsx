@@ -11,11 +11,21 @@ import { DigitalMarketingSection } from "@/components/sections/DigitalMarketingS
 import { SocialMediaSection } from "@/components/sections/SocialMediaSection";
 import { ConnectedCapabilitiesSection } from "@/components/sections/ConnectedCapabilitiesSection";
 import { CTASection } from "@/components/sections/CTASection";
-import { servicesData } from "@/data/siteData";
+import { servicesData, siteConfig } from "@/data/siteData";
 
 export const metadata: Metadata = {
-  title: "Services & Connected Solutions",
-  description: "Explore KreaitX's connected capabilities: Branding, Digital Marketing, Social Media, Filming & Production, Graphic Design, 2D Animation, and Digital Solutions."
+  title: "Services & Connected Solutions — KreaitX",
+  description: "Explore KreaitX's connected capabilities: Branding, Digital Marketing, Social Media, Filming & Production, Graphic Design, 2D Animation, and Digital Solutions.",
+  alternates: {
+    canonical: `${siteConfig.url}/solutions`
+  },
+  openGraph: {
+    title: "Services & Connected Solutions — KreaitX",
+    description: "Explore KreaitX's connected capabilities: Branding, Digital Marketing, Social Media, Filming & Production, Graphic Design, 2D Animation, and Digital Solutions.",
+    url: `${siteConfig.url}/solutions`,
+    type: "website",
+    siteName: siteConfig.name
+  }
 };
 
 export default function SolutionsPage() {
@@ -23,8 +33,36 @@ export default function SolutionsPage() {
     (s) => s.id !== "branding" && s.id !== "digital-marketing" && s.id !== "social-media-management"
   );
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "KreaitX Services & Connected Solutions",
+    description: "Full spectrum of connected creative technology and digital growth capabilities.",
+    url: `${siteConfig.url}/solutions`,
+    provider: {
+      "@type": "Organization",
+      name: siteConfig.legalName,
+      url: siteConfig.url
+    },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: servicesData.map((service, idx) => ({
+        "@type": "ListItem",
+        position: idx + 1,
+        name: service.title,
+        url: `${siteConfig.url}/solutions/${service.id}`,
+        description: service.description
+      }))
+    }
+  };
+
   return (
     <>
+      {/* Schema.org CollectionPage / ItemList */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Services Page Hero with Right-Anchored 3D Silk Artwork */}
       <section className="relative overflow-hidden bg-white text-slate-900 min-h-[680px] lg:min-h-[760px] flex items-center justify-center py-20 lg:py-28 border-b border-slate-200/80">
         {/* Background: Solid pure white canvas on left, vibrant 3D silk on right */}

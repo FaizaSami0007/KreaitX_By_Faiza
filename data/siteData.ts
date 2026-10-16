@@ -7,7 +7,7 @@ export const siteConfig = {
   descriptor: "Creative Technology & Digital Growth",
   positioning: "One connected creative technology partner for businesses that need ideas, execution and digital growth under one roof.",
   description: "KreaitX combines strategy, creativity and technology to help businesses build stronger brands, digital experiences and meaningful growth.",
-  url: "https://kreaitx.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://kreaitx.com",
   location: {
     city: "Peshawar",
     country: "Pakistan",

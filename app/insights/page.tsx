@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { InsightsClient } from "@/components/sections/InsightsClient";
-import { siteConfig } from "@/data/siteData";
+import { siteConfig, insightsArticles } from "@/data/siteData";
 
 export const metadata: Metadata = {
   title: "Insights & Perspectives — KreaitX",
@@ -18,5 +18,36 @@ export const metadata: Metadata = {
 };
 
 export default function InsightsPage() {
-  return <InsightsClient />;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "KreaitX Insights & Perspectives",
+    description: "Practical essays and strategic analysis on creative technology, brand longevity, and human-centered engineering.",
+    url: `${siteConfig.url}/insights`,
+    provider: {
+      "@type": "Organization",
+      name: siteConfig.legalName,
+      url: siteConfig.url
+    },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: insightsArticles.map((article, idx) => ({
+        "@type": "ListItem",
+        position: idx + 1,
+        name: article.title,
+        url: `${siteConfig.url}/insights/${article.slug}`,
+        description: article.excerpt
+      }))
+    }
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <InsightsClient />
+    </>
+  );
 }

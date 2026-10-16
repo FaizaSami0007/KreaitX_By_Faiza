@@ -6,11 +6,21 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/ui/Reveal";
 import { CTASection } from "@/components/sections/CTASection";
-import { processStages } from "@/data/siteData";
+import { processStages, siteConfig } from "@/data/siteData";
 
 export const metadata: Metadata = {
   title: "Our Process — Disciplined Creative Technology",
-  description: "Explore KreaitX's six-stage methodology from discovery to sustainable digital growth. Clear milestones, structured client collaboration, and transparent outputs."
+  description: "Explore KreaitX's six-stage methodology from discovery to sustainable digital growth. Clear milestones, structured client collaboration, and transparent outputs.",
+  alternates: {
+    canonical: `${siteConfig.url}/process`
+  },
+  openGraph: {
+    title: "Our Process — Disciplined Creative Technology",
+    description: "Explore KreaitX's six-stage methodology from discovery to sustainable digital growth. Clear milestones, structured client collaboration, and transparent outputs.",
+    url: `${siteConfig.url}/process`,
+    type: "website",
+    siteName: siteConfig.name
+  }
 };
 
 export default function ProcessPage() {
