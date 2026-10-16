@@ -64,10 +64,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const insightRoutes: MetadataRoute.Sitemap = insightsArticles.map((article) => ({
-    url: `${baseUrl}/insights#${article.slug}`,
+    url: `${baseUrl}/insights/${article.slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly",
-    priority: 0.7
+    priority: 0.75
   }));
 
   return [...staticRoutes, ...serviceRoutes, ...workRoutes, ...insightRoutes];
