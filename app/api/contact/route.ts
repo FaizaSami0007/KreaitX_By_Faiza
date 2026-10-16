@@ -43,7 +43,7 @@ export async function POST(request: Request) {
           },
           body: JSON.stringify({
             from: "KreaitX Inquiries <onboarding@resend.dev>",
-            to: [process.env.CONTACT_EMAIL || "contact@kreaitx.com"],
+            to: [process.env.CONTACT_TO_EMAIL || process.env.CONTACT_EMAIL || "contact@kreaitx.com"],
             reply_to: email,
             subject: `New Project Inquiry from ${fullName} (${companyName || "Independent"})`,
             text: `Name: ${fullName}\nEmail: ${email}\nCompany: ${companyName || "N/A"}\nServices: ${(selectedServices || []).join(", ") || "General"}\nBudget: ${budgetRange || "Not Specified"}\nTimeline: ${projectTimeline || "Flexible"}\n\nProject Details:\n${projectDetails}`
