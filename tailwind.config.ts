@@ -9,61 +9,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        softy: {
-          purple: "#9333EA",
-          "purple-dark": "#7E22CE",
-          violet: "#8B5CF6",
-          indigo: "#6366F1",
-          cyan: "#06B6D4",
-          blue: "#3B82F6",
-          pink: "#EC4899",
-          coral: "#F43F5E",
-          canvas: "#FFFFFF",
-          surface: "#F8FAFC",
-          "surface-alt": "#F1F5F9",
-          dark: "#0B0F19",
-          "dark-card": "#111827",
-          text: "#0F172A",
-          muted: "#64748B",
-          border: "#E2E8F0",
-          "border-subtle": "rgba(226, 232, 240, 0.8)",
-          "border-focus": "#A855F7"
-        },
         brand: {
           navy: "#003049",
           deep: "#14213D",
           porcelain: "#F7F8FA",
           white: "#FFFFFF",
           cyan: "#42C6D9",
+          "cyan-hover": "#34B8CB",
           steel: "#A8B3C2",
           charcoal: "#0B0F19",
           body: "#334155",
-          border: "#E2E8F0"
-        },
-        kreaitx: {
-          navy: "#003049",
-          "deep-navy": "#14213D",
-          "brand-cyan": "#42C6D9",
-          "brand-neutral": "#A8B3C2",
-          "brand-canvas": "#F7F8FA",
-          purple: "#9333EA",
-          indigo: "#6366F1",
-          cyan: "#06B6D4",
-          pink: "#EC4899",
-          dark: "#0B0F19",
-          canvas: "#FFFFFF",
-          surface: "#F8FAFC",
-          "surface-alt": "#F1F5F9",
-          text: "#0F172A",
-          muted: "#64748B",
-          border: "#E2E8F0"
+          border: "rgba(226, 232, 240, 0.8)",
+          "border-dark": "rgba(255, 255, 255, 0.12)"
         }
       },
       fontFamily: {
         sans: ["var(--font-manrope)", "Manrope", "system-ui", "-apple-system", "sans-serif"],
         display: ["var(--font-space-grotesk)", "Space Grotesk", "system-ui", "sans-serif"],
         heading: ["var(--font-space-grotesk)", "Space Grotesk", "system-ui", "sans-serif"],
-        mono: ["var(--font-ibm-plex-mono)", "ui-monospace", "SFMono-Regular", "Menlo", "monospace"]
+        serif: ["var(--font-instrument-serif)", "Instrument Serif", "Georgia", "serif"],
+        mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"]
       },
       maxWidth: {
         "content-max": "1320px",
@@ -79,27 +44,22 @@ const config: Config = {
         pill: "9999px"
       },
       transitionTimingFunction: {
-        softy: "cubic-bezier(0.16, 1, 0.3, 1)",
-        smooth: "cubic-bezier(0.4, 0, 0.2, 1)"
+        smooth: "cubic-bezier(0.16, 1, 0.3, 1)"
       },
       boxShadow: {
         subtle: "0 2px 10px rgba(0, 0, 0, 0.03)",
         card: "0 10px 30px -10px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02)",
-        "card-hover": "0 20px 40px -15px rgba(124, 58, 237, 0.12), 0 0 0 1px rgba(124, 58, 237, 0.15)",
+        "card-hover": "0 20px 40px -15px rgba(0, 48, 73, 0.12), 0 0 0 1px rgba(66, 198, 217, 0.35)",
         "brand-card": "0 10px 30px -10px rgba(0, 48, 73, 0.06), 0 4px 6px -2px rgba(0, 48, 73, 0.02)",
         "brand-hover": "0 20px 40px -15px rgba(0, 48, 73, 0.12), 0 0 0 1px rgba(66, 198, 217, 0.25)",
-        "brand-button": "0 10px 25px -5px rgba(0, 48, 73, 0.3)",
-        glow: "0 0 40px -10px rgba(147, 51, 234, 0.3)",
-        "glow-cyan": "0 0 40px -10px rgba(6, 182, 212, 0.3)",
-        button: "0 10px 25px -5px rgba(147, 51, 234, 0.35)"
+        "brand-button": "0 10px 25px -5px rgba(0, 48, 73, 0.25)",
+        "glow-cyan": "0 0 40px -10px rgba(66, 198, 217, 0.3)"
       },
       backgroundImage: {
-        "gradient-primary": "linear-gradient(135deg, #7928CA 0%, #FF0080 50%, #0070F3 100%)",
-        "gradient-hero": "linear-gradient(135deg, #9333EA 0%, #6366F1 50%, #06B6D4 100%)",
-        "gradient-button": "linear-gradient(135deg, #9333EA 0%, #4F46E5 100%)",
-        "gradient-accent": "linear-gradient(135deg, #EC4899 0%, #8B5CF6 100%)",
-        "gradient-cyan-blue": "linear-gradient(135deg, #06B6D4 0%, #3B82F6 100%)",
-        "gradient-subtle": "linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%)"
+        "brand-gradient": "linear-gradient(135deg, #003049 0%, #14213D 60%, #003049 100%)",
+        "brand-accent": "linear-gradient(135deg, #003049 0%, #14213D 50%, #42C6D9 100%)",
+        "brand-text-dark": "linear-gradient(135deg, #003049 0%, #14213D 60%, #42C6D9 100%)",
+        "brand-text-light": "linear-gradient(135deg, #FFFFFF 0%, #E2F8FA 60%, #42C6D9 100%)"
       }
     }
   },

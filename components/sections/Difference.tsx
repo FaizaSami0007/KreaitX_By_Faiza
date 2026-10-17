@@ -1,8 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import { Users, Lightbulb, Target, Layers, Heart } from "lucide-react";
+import { Users, Lightbulb, Target, Layers, Sparkles, Heart } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 
 // Clean icon for 05: Transparent Process (overlapping rectangles)
@@ -22,371 +23,162 @@ const TransparentProcessIcon: React.FC<{ className?: string }> = ({ className = 
   </svg>
 );
 
+const principles = [
+  {
+    id: "01",
+    number: "01",
+    title: "One Connected Team",
+    description: "Strategy, design, cinema, and software engineering working as one accountable partner.",
+    icon: Users,
+    highlight: "Zero Agency Hand-offs"
+  },
+  {
+    id: "02",
+    number: "02",
+    title: "Creative + Technical",
+    description: "Designers who understand code. Engineers with a refined typographic and aesthetic eye.",
+    icon: Lightbulb,
+    highlight: "Dual Discipline"
+  },
+  {
+    id: "03",
+    number: "03",
+    title: "Business-Centered",
+    description: "Every visual asset, video sequence, and software module is anchored in commercial outcomes.",
+    icon: Target,
+    highlight: "Commercial Focus"
+  },
+  {
+    id: "04",
+    number: "04",
+    title: "End-to-End Continuity",
+    description: "From the initial discovery sprint to long-term digital growth, our senior team stays with you.",
+    icon: Layers,
+    highlight: "Full Lifecycle"
+  },
+  {
+    id: "05",
+    number: "05",
+    title: "Transparent Process",
+    description: "Clear two-week milestones, transparent deliverables, and zero agency black-box ambiguity.",
+    icon: TransparentProcessIcon,
+    highlight: "Predictable Cadence"
+  },
+  {
+    id: "06",
+    number: "06",
+    title: "Human Collaboration",
+    description: "Direct collaboration with senior practitioners. Zero account management layers or translation loss.",
+    icon: Heart,
+    highlight: "Direct Senior Access"
+  }
+];
+
 export const Difference: React.FC = () => {
   const [activeId, setActiveId] = useState<string | null>(null);
-
-  const topPrinciples = [
-    {
-      id: "01",
-      number: "01",
-      title: "One Connected Team",
-      description: "Strategy, design and engineering working as one.",
-      icon: Users,
-      group: "left"
-    },
-    {
-      id: "02",
-      number: "02",
-      title: "Creative + Technical",
-      description: "Designers who understand code. Engineers with an eye for design.",
-      icon: Lightbulb,
-      group: "center"
-    },
-    {
-      id: "03",
-      number: "03",
-      title: "Business-Centered",
-      description: "Every solution is built around real business outcomes.",
-      icon: Target,
-      group: "right"
-    }
-  ];
-
-  const bottomPrinciples = [
-    {
-      id: "04",
-      number: "04",
-      title: "End-to-End Continuity",
-      description: "From initial idea to long-term growth, we stay with you.",
-      icon: Layers,
-      group: "left"
-    },
-    {
-      id: "05",
-      number: "05",
-      title: "Clear, Transparent Process",
-      description: "You always know what's next, why it matters, and what it delivers.",
-      icon: TransparentProcessIcon,
-      group: "center"
-    },
-    {
-      id: "06",
-      number: "06",
-      title: "Human Collaboration",
-      description: "We work with people, not just projects — and it shows.",
-      icon: Heart,
-      group: "right"
-    }
-  ];
 
   return (
     <section
       id="difference"
       aria-labelledby="difference-heading"
-      className="relative bg-white text-slate-900 py-24 sm:py-32 lg:py-36 border-b border-slate-200/80 overflow-hidden select-none"
+      className="relative bg-white text-slate-900 py-20 sm:py-28 lg:py-32 border-b border-slate-200/80 overflow-hidden"
     >
-      {/* Background delicate arc circles */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
-        <svg
-          className="absolute -top-12 -left-12 w-[340px] h-[340px] sm:w-[480px] sm:h-[480px] lg:w-[600px] lg:h-[600px] opacity-30 text-[#42C6D9]/40"
-          viewBox="0 0 600 600"
-          fill="none"
-        >
-          <circle cx="0" cy="0" r="440" stroke="currentColor" strokeWidth="1" />
-          <circle cx="0" cy="0" r="560" stroke="#003049" strokeWidth="0.75" strokeOpacity="0.06" />
-        </svg>
-        <svg
-          className="absolute -top-12 -right-12 w-[340px] h-[340px] sm:w-[480px] sm:h-[480px] lg:w-[600px] lg:h-[600px] opacity-30 text-[#42C6D9]/40"
-          viewBox="0 0 600 600"
-          fill="none"
-        >
-          <circle cx="600" cy="0" r="440" stroke="currentColor" strokeWidth="1" />
-          <circle cx="600" cy="0" r="560" stroke="#003049" strokeWidth="0.75" strokeOpacity="0.06" />
-        </svg>
-      </div>
-
-      <Container size="default" className="relative z-10 max-w-[1280px]">
+      <Container size="default" className="relative z-10 w-full max-w-[1320px]">
         {/* Section Header */}
-        <div className="text-center max-w-[720px] mx-auto mb-20 sm:mb-24 lg:mb-28">
-          <Reveal delay={0.05} yOffset={10}>
-            <div className="flex flex-col items-center justify-center">
-              <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#003049]">
-                THE KREAITX DIFFERENCE
-              </span>
-              <span className="w-10 h-[2px] bg-[#42C6D9] rounded-full mt-3.5" aria-hidden="true" />
+        <Reveal yOffset={16}>
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16 sm:mb-20">
+            <SectionHeading
+              eyebrow="Studio Philosophy"
+              title={
+                <>
+                  How we operate.{" "}
+                  <span className="font-serif italic font-normal bg-gradient-to-r from-[#003049] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent">
+                    Why it matters
+                  </span>
+                  .
+                </>
+              }
+              description="A disciplined creative technology approach engineered to eliminate agency ambiguity, align creative storytelling with code, and protect commercial outcomes."
+            />
+
+            <div className="shrink-0 flex items-center gap-2 text-xs font-mono text-slate-500 bg-[#F7F8FA] px-4 py-2 rounded-full border border-slate-200">
+              <span className="w-2 h-2 rounded-full bg-[#42C6D9] animate-pulse" />
+              <span>SIX GUIDING PRINCIPLES</span>
             </div>
-          </Reveal>
+          </div>
+        </Reveal>
 
-          <Reveal delay={0.12} yOffset={16}>
-            <h2
-              id="difference-heading"
-              className="mt-6 text-[clamp(40px,5.6vw,76px)] font-display font-bold text-slate-950 tracking-[-0.035em] leading-[1.04]"
-            >
-              More than an agency. <br />
-              <span className="font-serif italic font-normal bg-gradient-to-r from-[#003049] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent">
-                A connected partner.
-              </span>
-            </h2>
-          </Reveal>
+        {/* Unified, Single-DOM Grid (Responsive from 1 col on mobile to 2 cols on tablet and 3 cols on desktop) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {principles.map((item, index) => {
+            const IconComp = item.icon;
+            const isActive = activeId === item.id;
+            const isDimmed = activeId !== null && !isActive;
 
-          <Reveal delay={0.18} yOffset={14}>
-            <p className="mt-6 text-base sm:text-lg text-slate-600 leading-[1.68] font-sans font-normal max-w-[580px] mx-auto">
-              We bring strategy, creativity and technical engineering together to turn ideas into meaningful outcomes — as one team.
-            </p>
-          </Reveal>
-        </div>
-
-        {/* ------------------------------------------------------------- */}
-        {/* DESKTOP CONNECTED 2-ROW GRID (Hidden on mobile)               */}
-        {/* ------------------------------------------------------------- */}
-        <div className="hidden lg:block relative py-8">
-          {/* Top Row: 01, 02, 03 */}
-          <div className="grid grid-cols-3 gap-12 pb-14 items-start">
-            {topPrinciples.map((item, index) => {
-              const IconComp = item.icon;
-              const isActive = activeId === item.id;
-              const isDimmed = activeId !== null && !isActive;
-              const alignClass = index === 0 ? "items-start text-left pr-4" : index === 1 ? "items-center text-center px-4" : "items-start text-left pl-6";
-              const headerJustify = index === 1 ? "justify-center" : "justify-start";
-
-              return (
+            return (
+              <Reveal key={item.id} delay={0.06 * index} yOffset={16}>
                 <div
-                  key={item.id}
+                  tabIndex={0}
                   onMouseEnter={() => setActiveId(item.id)}
                   onMouseLeave={() => setActiveId(null)}
-                  className={`flex flex-col transition-all duration-300 cursor-pointer ${alignClass} ${
-                    isDimmed ? "opacity-35" : "opacity-100"
-                  }`}
+                  onFocus={() => setActiveId(item.id)}
+                  onBlur={() => setActiveId(null)}
+                  className={`group relative h-full rounded-3xl p-7 sm:p-8 border transition-all duration-300 flex flex-col justify-between cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9] ${
+                    isActive
+                      ? "bg-white border-[#42C6D9] shadow-card-hover -translate-y-1.5 ring-2 ring-[#42C6D9]/20"
+                      : "bg-[#F7F8FA] border-slate-200/90 hover:border-slate-300 hover:bg-white shadow-subtle hover:-translate-y-1"
+                  } ${isDimmed ? "opacity-75" : "opacity-100"}`}
                 >
-                  <div className={`flex items-center gap-4 mb-4 ${headerJustify}`}>
-                    <div className="flex flex-col items-start">
-                      <span className={`font-serif text-lg leading-none transition-colors duration-200 ${isActive ? "text-[#003049] font-semibold" : "text-slate-900 font-normal"}`}>
-                        {item.number}
-                      </span>
-                      <span className={`h-[2px] rounded-full transition-all duration-300 mt-1 ${isActive ? "w-5 bg-[#42C6D9]" : "w-3.5 bg-slate-300"}`} />
+                  <div>
+                    {/* Top Row: Number + Active Badge */}
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="flex items-center gap-2">
+                        <span className="font-mono text-sm font-bold text-[#003049] px-2.5 py-0.5 rounded-full bg-white border border-slate-200 shadow-xs">
+                          {item.number}
+                        </span>
+                        <span className="text-[11px] font-mono uppercase tracking-wider text-slate-500">
+                          {item.highlight}
+                        </span>
+                      </div>
+
+                      <div
+                        className={`w-11 h-11 rounded-2xl flex items-center justify-center transition-all duration-300 ${
+                          isActive
+                            ? "bg-[#003049] text-[#42C6D9] shadow-sm rotate-3"
+                            : "bg-white text-slate-700 border border-slate-200/80 group-hover:border-[#42C6D9]/40 group-hover:text-[#003049]"
+                        }`}
+                      >
+                        <IconComp className="h-5 w-5 stroke-[1.8]" />
+                      </div>
                     </div>
-                    {/* Active ring badge with cyan accent */}
-                    <div
-                      className={`w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 ${
-                        isActive
-                          ? "bg-white border-2 border-[#42C6D9] ring-4 ring-[#42C6D9]/20 text-[#003049] shadow-sm scale-105"
-                          : "bg-[#F7F8FA] border border-slate-200/80 text-slate-600 hover:border-slate-300"
+
+                    {/* Principle Title */}
+                    <h3
+                      className={`text-xl sm:text-2xl font-display font-bold tracking-tight transition-colors duration-200 ${
+                        isActive ? "text-[#003049]" : "text-slate-900 group-hover:text-[#003049]"
                       }`}
                     >
-                      <IconComp className="h-6 w-6 stroke-[1.5]" />
-                    </div>
-                  </div>
-                  <h3
-                    className={`text-[25px] font-sans tracking-tight transition-colors duration-200 ${
-                      isActive
-                        ? "font-bold text-[#003049]"
-                        : "font-bold text-slate-950"
-                    }`}
-                  >
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-[14.5px] leading-relaxed font-sans max-w-[310px] text-slate-600 font-normal">
-                    {item.description}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* EXACT CENTRAL CONNECTING VECTOR (Interactive with Active Nodes) */}
-          <div className="relative w-full h-[64px] my-2" aria-hidden="true">
-            <svg className="w-full h-full overflow-visible" viewBox="0 0 1200 64" fill="none" preserveAspectRatio="none">
-              {/* Central horizontal base line */}
-              <line x1="200" y1="32" x2="1000" y2="32" stroke="#94a3b8" strokeWidth="1.2" strokeOpacity="0.35" />
-
-              {/* Left Branching Curves (Active on 01 or 04) */}
-              <path
-                d="M 120 -24 C 120 12, 170 32, 240 32"
-                stroke={activeId === "01" || activeId === "04" ? "#42C6D9" : "#64748B"}
-                strokeWidth={activeId === "01" || activeId === "04" ? "2" : "1.2"}
-                strokeOpacity={activeId === "01" || activeId === "04" ? "1" : "0.4"}
-                fill="none"
-                className="transition-all duration-300"
-              />
-              <path
-                d="M 120 88 C 120 52, 170 32, 240 32"
-                stroke={activeId === "01" || activeId === "04" ? "#42C6D9" : "#64748B"}
-                strokeWidth={activeId === "01" || activeId === "04" ? "2" : "1.2"}
-                strokeOpacity={activeId === "01" || activeId === "04" ? "1" : "0.4"}
-                fill="none"
-                className="transition-all duration-300"
-              />
-              <circle cx="152" cy="-4" r={activeId === "01" ? "3.5" : "2.5"} fill={activeId === "01" ? "#42C6D9" : "#64748B"} fillOpacity={activeId === "01" ? "1" : "0.5"} className="transition-all duration-300" />
-              <circle cx="152" cy="68" r={activeId === "04" ? "3.5" : "2.5"} fill={activeId === "04" ? "#42C6D9" : "#64748B"} fillOpacity={activeId === "04" ? "1" : "0.5"} className="transition-all duration-300" />
-
-              {/* Center Vertical Axis & Nodes (Active on 02 or 05) */}
-              <line
-                x1="600"
-                y1="-24"
-                x2="600"
-                y2="32"
-                stroke={activeId === "02" || activeId === "05" ? "#42C6D9" : "#64748B"}
-                strokeWidth={activeId === "02" || activeId === "05" ? "2" : "1.2"}
-                strokeOpacity={activeId === "02" || activeId === "05" ? "1" : "0.4"}
-                className="transition-all duration-300"
-              />
-              <line
-                x1="600"
-                y1="88"
-                x2="600"
-                y2="32"
-                stroke={activeId === "02" || activeId === "05" ? "#42C6D9" : "#64748B"}
-                strokeWidth={activeId === "02" || activeId === "05" ? "2" : "1.2"}
-                strokeOpacity={activeId === "02" || activeId === "05" ? "1" : "0.4"}
-                className="transition-all duration-300"
-              />
-              <circle cx="600" cy="-2" r={activeId === "02" ? "3.5" : "2.5"} fill={activeId === "02" ? "#42C6D9" : "#64748B"} fillOpacity={activeId === "02" ? "1" : "0.5"} className="transition-all duration-300" />
-              <circle cx="600" cy="66" r={activeId === "05" ? "3.5" : "2.5"} fill={activeId === "05" ? "#42C6D9" : "#64748B"} fillOpacity={activeId === "05" ? "1" : "0.5"} className="transition-all duration-300" />
-
-              {/* Right Branching Curves (Active on 03 or 06) */}
-              <path
-                d="M 1080 -24 C 1080 12, 1030 32, 960 32"
-                stroke={activeId === "03" || activeId === "06" ? "#42C6D9" : "#64748B"}
-                strokeWidth={activeId === "03" || activeId === "06" ? "2" : "1.2"}
-                strokeOpacity={activeId === "03" || activeId === "06" ? "1" : "0.4"}
-                fill="none"
-                className="transition-all duration-300"
-              />
-              <path
-                d="M 1080 88 C 1080 52, 1030 32, 960 32"
-                stroke={activeId === "03" || activeId === "06" ? "#42C6D9" : "#64748B"}
-                strokeWidth={activeId === "03" || activeId === "06" ? "2" : "1.2"}
-                strokeOpacity={activeId === "03" || activeId === "06" ? "1" : "0.4"}
-                fill="none"
-                className="transition-all duration-300"
-              />
-              <circle cx="1048" cy="-4" r={activeId === "03" ? "3.5" : "2.5"} fill={activeId === "03" ? "#42C6D9" : "#64748B"} fillOpacity={activeId === "03" ? "1" : "0.5"} className="transition-all duration-300" />
-              <circle cx="1048" cy="68" r={activeId === "06" ? "3.5" : "2.5"} fill={activeId === "06" ? "#42C6D9" : "#64748B"} fillOpacity={activeId === "06" ? "1" : "0.5"} className="transition-all duration-300" />
-
-              {/* Main Junction Nodes on the horizontal line */}
-              <circle
-                cx="240"
-                cy="32"
-                r={activeId === "01" || activeId === "04" ? "5.5" : "4.5"}
-                fill={activeId === "01" || activeId === "04" ? "#42C6D9" : "#003049"}
-                className="transition-all duration-300"
-              />
-              <circle
-                cx="600"
-                cy="32"
-                r={activeId === "02" || activeId === "05" ? "5.5" : "4.5"}
-                fill={activeId === "02" || activeId === "05" ? "#42C6D9" : "#003049"}
-                className="transition-all duration-300"
-              />
-              <circle
-                cx="960"
-                cy="32"
-                r={activeId === "03" || activeId === "06" ? "5.5" : "4.5"}
-                fill={activeId === "03" || activeId === "06" ? "#42C6D9" : "#003049"}
-                className="transition-all duration-300"
-              />
-            </svg>
-          </div>
-
-          {/* Bottom Row: 04, 05, 06 */}
-          <div className="grid grid-cols-3 gap-12 pt-14 items-start">
-            {bottomPrinciples.map((item, index) => {
-              const IconComp = item.icon;
-              const isActive = activeId === item.id;
-              const isDimmed = activeId !== null && !isActive;
-              const alignClass = index === 0 ? "items-start text-left pr-4" : index === 1 ? "items-center text-center px-4" : "items-start text-left pl-6";
-              const headerJustify = index === 1 ? "justify-center" : "justify-start";
-
-              return (
-                <div
-                  key={item.id}
-                  onMouseEnter={() => setActiveId(item.id)}
-                  onMouseLeave={() => setActiveId(null)}
-                  className={`flex flex-col transition-all duration-300 cursor-pointer ${alignClass} ${
-                    isDimmed ? "opacity-35" : "opacity-100"
-                  }`}
-                >
-                  <div className={`flex items-center gap-4 mb-4 ${headerJustify}`}>
-                    <div className="flex flex-col items-start">
-                      <span className={`font-serif text-lg leading-none transition-colors duration-200 ${isActive ? "text-[#003049] font-semibold" : "text-slate-900 font-normal"}`}>
-                        {item.number}
-                      </span>
-                      <span className={`h-[2px] rounded-full transition-all duration-300 mt-1 ${isActive ? "w-5 bg-[#42C6D9]" : "w-3.5 bg-slate-300"}`} />
-                    </div>
-                    {/* Active ring badge with cyan accent */}
-                    <div
-                      className={`w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300 ${
-                        isActive
-                          ? "bg-white border-2 border-[#42C6D9] ring-4 ring-[#42C6D9]/20 text-[#003049] shadow-sm scale-105"
-                          : "bg-[#F7F8FA] border border-slate-200/80 text-slate-600 hover:border-slate-300"
-                      }`}
-                    >
-                      <IconComp className="h-6 w-6 stroke-[1.5]" />
-                    </div>
-                  </div>
-                  <h3
-                    className={`text-[25px] font-sans tracking-tight transition-colors duration-200 ${
-                      isActive
-                        ? "font-bold text-[#003049]"
-                        : "font-bold text-slate-950"
-                    }`}
-                  >
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-[14.5px] leading-relaxed font-sans max-w-[310px] text-slate-600 font-normal">
-                    {item.description}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* ------------------------------------------------------------- */}
-        {/* MOBILE CONNECTED TIMELINE (Visible on < lg)                   */}
-        {/* ------------------------------------------------------------- */}
-        <div className="block lg:hidden relative pl-6 sm:pl-10">
-          <div className="absolute left-[23px] sm:left-[39px] top-6 bottom-6 w-[2px] bg-gradient-to-b from-[#003049] via-[#14213D] to-[#42C6D9] opacity-40" aria-hidden="true" />
-          
-          <div className="space-y-12 sm:space-y-14">
-            {[...topPrinciples, ...bottomPrinciples].map((item) => {
-              const IconComp = item.icon;
-              const isActive = activeId === item.id;
-              return (
-                <div
-                  key={item.id}
-                  onClick={() => setActiveId(activeId === item.id ? null : item.id)}
-                  className="relative flex items-start gap-4 sm:gap-6 cursor-pointer"
-                >
-                  <div
-                    className={`relative z-10 flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center transition-all duration-200 ${
-                      isActive
-                        ? "bg-white border-2 border-[#42C6D9] ring-4 ring-[#42C6D9]/20 text-[#003049] shadow-sm"
-                        : "bg-[#F7F8FA] border border-slate-200 text-slate-600"
-                    }`}
-                  >
-                    <IconComp className="h-5 w-5 sm:h-6 sm:w-6 stroke-[1.5]" />
-                  </div>
-                  <div className="flex-1 pt-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className={`font-serif text-base transition-colors ${isActive ? "text-[#003049] font-semibold" : "text-slate-900 font-normal"}`}>
-                        {item.number}
-                      </span>
-                      <span className={`w-3 h-[1.5px] ${isActive ? "bg-[#42C6D9]" : "bg-slate-300"}`} />
-                    </div>
-                    <h3 className={`text-xl sm:text-2xl font-sans font-bold tracking-tight transition-colors ${isActive ? "text-[#003049]" : "text-slate-950"}`}>
                       {item.title}
                     </h3>
-                    <p className="mt-1.5 text-sm text-slate-600 leading-relaxed font-sans font-normal">
+
+                    {/* Description */}
+                    <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed font-sans font-normal">
                       {item.description}
                     </p>
                   </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
 
+                  {/* Micro Footer Indicator */}
+                  <div className="mt-6 pt-4 border-t border-slate-200/60 flex items-center justify-between text-xs font-mono text-slate-500">
+                    <span>Working Standard</span>
+                    <span className={`font-semibold transition-colors ${isActive ? "text-[#003049]" : "text-slate-400 group-hover:text-[#003049]"}`}>
+                      KreaitX Core // 0{index + 1}
+                    </span>
+                  </div>
+                </div>
+              </Reveal>
+            );
+          })}
+        </div>
       </Container>
     </section>
   );

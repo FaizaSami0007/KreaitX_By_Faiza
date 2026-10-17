@@ -19,18 +19,21 @@ export const CTASection: React.FC<CTASectionProps> = ({
 }) => {
   const isDark = bg === "dark";
   const bgClass = isDark
-    ? "bg-[#0B0F19] border-slate-800/80"
+    ? "bg-[#003049] border-t border-[#14213D]"
     : bg === "white"
-    ? "bg-white border-slate-200/80"
-    : "bg-[#F7F8FA] border-slate-200/80";
+    ? "bg-white border-t border-slate-200/80"
+    : "bg-[#F7F8FA] border-t border-slate-200/80";
 
   return (
-    <section className={`${bgClass} py-20 sm:py-28 lg:py-32 relative border-t ${className || ""}`}>
-      <Container size="default" className="relative z-10">
+    <section className={`${bgClass} py-20 sm:py-28 lg:py-32 relative ${className || ""}`}>
+      <Container size="default" className="relative z-10 max-w-[1320px]">
         <Reveal yOffset={20}>
-          <div className="relative overflow-hidden rounded-[28px] bg-gradient-to-br from-[#003049] via-[#14213D] to-[#0B0F19] text-white p-10 sm:p-16 lg:p-20 shadow-xl border border-slate-800">
+          <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-[#003049] via-[#14213D] to-[#003049] text-white p-10 sm:p-16 lg:p-20 shadow-xl border border-white/10">
+            {/* Ambient soft glow */}
+            <div className="absolute top-0 right-0 w-80 h-80 bg-[#42C6D9]/15 rounded-full blur-3xl pointer-events-none" />
+
             <div className="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-[#42C6D9] px-4 py-1.5 rounded-full bg-white/10 border border-white/15 mb-6 shadow-subtle">
+              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#42C6D9] px-4 py-1.5 rounded-full bg-white/10 border border-white/15 mb-6 shadow-subtle">
                 <Sparkles className="h-3.5 w-3.5 text-[#42C6D9]" />
                 <span>Next Step</span>
               </span>
@@ -43,8 +46,8 @@ export const CTASection: React.FC<CTASectionProps> = ({
                 ?
               </h2>
 
-              <p className="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed font-sans font-normal max-w-2xl">
-                Tell us what you&apos;re working on. We&apos;ll help clarify the opportunity, technical scope, and practical next step.
+              <p className="mt-6 text-base sm:text-lg text-slate-200 leading-relaxed font-sans font-normal max-w-2xl">
+                Tell us what you&apos;re working on. We&apos;ll evaluate the opportunity, technical scope, and practical delivery timeline together.
               </p>
 
               <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
@@ -59,9 +62,9 @@ export const CTASection: React.FC<CTASectionProps> = ({
                       cta_text: "Start a Conversation"
                     })
                   }
-                  className="w-full sm:w-auto font-bold min-h-[52px] shadow-lg"
+                  className="w-full sm:w-auto font-bold min-h-[52px] shadow-brand-button"
                 >
-                  Start a Conversation
+                  Start a Project
                 </Button>
 
                 <Button
@@ -80,8 +83,8 @@ export const CTASection: React.FC<CTASectionProps> = ({
                 </Button>
               </div>
 
-              <p className="mt-8 text-xs font-mono text-slate-400">
-                Typical response time: within 24 business hours • Direct consultation with senior leads
+              <p className="mt-8 text-xs font-mono text-slate-300">
+                Direct consultation with senior leads • Studio location: {siteConfig.location.formatted}
               </p>
             </div>
           </div>

@@ -7,43 +7,55 @@
 
 ---
 
-## 2. Locked Color Palette
+## 2. Locked Master Color Palette
 
 | Token Name | Hex Code | Visual Ratio | Primary Purpose |
 | :--- | :--- | :--- | :--- |
-| **Dove White** | `#F5F6F2` | ~60% | Primary page backgrounds, section canvas, soft warm breathing room |
-| **Dark Blue** | `#14213D` | 25–30% | Hero backgrounds, dark feature sections, footer, primary buttons, major text |
-| **Light Green-Gold** | `#B7B98A` | 5–10% | Luxury detail: selective keyword in Instrument Serif, active nav indicators, hover details |
-| **Pure White** | `#FFFFFF` | Restrained | Cards, form fields, high-contrast surfaces |
-| **Midnight Black** | `#111111` | Accent/Contrast | High-contrast details |
+| **Brand Navy** | `#003049` | 25–35% | Primary dark hero, CTA sections, active pills, deep contrast surfaces |
+| **Deep Blue** | `#14213D` | 15–20% | Elevated dark cards, secondary button hover, structure |
+| **Porcelain** | `#F7F8FA` | ~30% | Primary light section canvas, alternate cards, soft neutral surfaces |
+| **Clean White** | `#FFFFFF` | ~25% | Card surfaces, form inputs, primary page canvas, text on dark |
+| **Cyan Accent** | `#42C6D9` | 5–8% | Selective micro-accents, active badges, status indicators, pill buttons |
+| **Steel Neutral** | `#A8B3C2` | Restrained | Metadata labels, subtle dividers, muted borders |
+| **Charcoal Dark** | `#0B0F19` | 5–10% | High-contrast footer background, deepest dark surface |
+| **Body Slate** | `#334155` | Typography | Highly legible paragraph and body reading copy |
 
-### Visual Flow Rhythm
+### Non-Negotiable Constraint: Solid Surfaces Only
+- Zero CSS `background-image` declarations.
+- Zero decorative background photos, landscapes, video backgrounds, or pseudo-element background art.
+- Restrained CSS ambient radial glows (`bg-[#42C6D9]/10 blur-3xl pointer-events-none`) for depth.
+
+### Visual Flow Rhythm (Homepage & Across Routes)
 ```
-DOVE WHITE (#F5F6F2) (Navbar)
+CLEAN WHITE (#FFFFFF) / PORCELAIN (#F7F8FA) (Header/Navbar)
         ↓
-DARK BLUE HERO (#14213D)
+BRAND NAVY HERO (#003049) / DEEP BLUE (#14213D)
         ↓
-DOVE WHITE TRUST & SERVICES (#F5F6F2)
+PORCELAIN DIFFERENTIATORS (#F7F8FA)
         ↓
-WHITE DIFFERENCE SECTION (#FFFFFF)
+CLEAN WHITE CONNECTED CAPABILITIES (#FFFFFF) / DARK NAVY (#003049)
         ↓
-DOVE WHITE FEATURED WORK (#F5F6F2)
+CLEAN WHITE INTERACTIVE ARCHITECTURE (#FFFFFF)
         ↓
-WHITE PROCESS ROADMAP (#FFFFFF)
+PORCELAIN CASE STUDY BENCHMARKS (#F7F8FA)
         ↓
-DOVE WHITE PRINCIPLES (#F5F6F2)
+CLEAN WHITE METHODOLOGY ROADMAP (#FFFFFF)
         ↓
-DARK BLUE CTA (#14213D)
+PORCELAIN STUDIO WORKING PRINCIPLES (#F7F8FA)
         ↓
-DARK BLUE FOOTER (#14213D)
+BRAND NAVY CTA SECTION (#003049)
+        ↓
+CHARCOAL FOOTER (#0B0F19)
 ```
 
 ---
 
 ## 3. Typography Scale & Hierarchy
 
-- **Primary Font**: `Inter` (sans-serif) — Navigation, body, labels, metadata, forms, buttons.
-- **Editorial Display Font**: `Instrument Serif` (serif, italic/regular) — Selective editorial emphasis on conceptual words (*"digital"*, *"connected"*, *"move forward"*, *"zero ambiguity"*, *"what's next"*), paired with Light Green-Gold (`#B7B98A`).
+- **Primary Body Sans**: `Manrope` (sans-serif, weights 400–800) — High legibility, editorial body copy, metadata, forms.
+- **Display Headings**: `Space Grotesk` (display, weights 600–700) — Confident, modern technical studio headlines.
+- **Editorial Emphasis Font**: `Instrument Serif` (serif, italic/normal, weight 400) — Distinctive editorial flair for key conceptual phrases (*"digital experiences"*, *"without the mystery"*, *"measurable impact"*).
+- **Code & Metadata**: `ui-monospace` (mono) — Service indices (`01`), milestone tags, status badges.
 
 ### Desktop Typographic Scale
 - **Hero Title**: `56–64px` / Line-height: `1.05` / Tracking: `-0.04em`

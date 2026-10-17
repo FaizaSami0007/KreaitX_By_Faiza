@@ -2,29 +2,61 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowUpRight, ShieldCheck, Sparkles, Layers } from "lucide-react";
+import { ArrowUpRight, Compass, Palette, Code2, TrendingUp, Sparkles } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
+
+const differentiators = [
+  {
+    number: "01",
+    title: "Brand Strategy & Positioning",
+    description: "Distill your core value into an unmistakable narrative and enduring visual system that commands authority.",
+    icon: Compass,
+    metric: "Direction"
+  },
+  {
+    number: "02",
+    title: "Cinematic Media & 2D Motion",
+    description: "Commercial cinematography, product showcase videos, and 2D explanatory motion that captivate attention.",
+    icon: Palette,
+    metric: "Experience"
+  },
+  {
+    number: "03",
+    title: "High-Performance Engineering",
+    description: "Sub-second Next.js web applications, accessible design architectures, and scalable full-stack platforms.",
+    icon: Code2,
+    metric: "Platform"
+  },
+  {
+    number: "04",
+    title: "Sustainable Business Growth",
+    description: "Conversion funnels, technical SEO, and data-backed analytics focused on real commercial outcomes.",
+    icon: TrendingUp,
+    metric: "Outcome"
+  }
+];
 
 export const EditorialTrustSection: React.FC = () => {
   return (
     <section
+      id="positioning"
       aria-labelledby="editorial-positioning-heading"
-      className="relative bg-white text-slate-900 py-20 sm:py-28 lg:py-32 border-b border-slate-200/80"
+      className="relative bg-[#F7F8FA] text-slate-900 py-20 sm:py-28 lg:py-32 border-b border-slate-200/80"
     >
-      <Container size="default" className="relative z-10 w-full max-w-[1280px]">
+      <Container size="default" className="relative z-10 w-full max-w-[1320px]">
         {/* Main Content Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
-          {/* Left Column: Narrative, Eyebrow & Display Typography (Cols 1-7) */}
-          <div className="lg:col-span-7 flex flex-col items-start space-y-6 sm:space-y-7 max-w-[620px]">
+          {/* Left Column: Narrative, Eyebrow & Display Typography (Cols 1-5) */}
+          <div className="lg:col-span-5 flex flex-col items-start space-y-6 sm:space-y-7">
             
             {/* Eyebrow with delicate rule */}
             <Reveal delay={0.05} yOffset={12}>
-              <div className="flex items-center gap-3">
-                <span className="w-8 h-[2px] bg-[#003049] rounded-full" aria-hidden="true" />
+              <div className="flex items-center gap-2.5">
+                <span className="w-6 h-[2px] bg-[#003049] rounded-full" aria-hidden="true" />
                 <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#003049]">
-                  BUILT WITH AMBITIOUS TEAMS
+                  WHY ONE CONNECTED PARTNER
                 </span>
               </div>
             </Reveal>
@@ -33,20 +65,20 @@ export const EditorialTrustSection: React.FC = () => {
             <Reveal delay={0.12} yOffset={18}>
               <h2
                 id="editorial-positioning-heading"
-                className="text-[clamp(36px,4.8vw,60px)] font-display font-bold text-slate-950 tracking-[-0.035em] leading-[1.06]"
+                className="text-[clamp(32px,4.2vw,56px)] font-display font-bold text-slate-950 tracking-[-0.03em] leading-[1.08]"
               >
-                Ambitious ideas <br />
-                deserve a better <br />
+                Ambitious brands need coherence,{" "}
                 <span className="font-serif italic font-normal bg-gradient-to-r from-[#003049] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent">
-                  digital direction.
+                  not disconnected silos
                 </span>
+                .
               </h2>
             </Reveal>
 
             {/* Supporting Editorial Paragraph */}
             <Reveal delay={0.2} yOffset={16}>
-              <p className="text-base sm:text-lg text-slate-700 leading-[1.7] font-sans font-normal max-w-[520px]">
-                We collaborate with ambitious businesses, creators, and organizations to turn bold ideas into meaningful digital experiences — unifying brand narrative, cinematic production, and high-performance software under one roof.
+              <p className="text-base sm:text-lg text-slate-700 leading-[1.7] font-sans font-normal">
+                When brand designers, cinematographers, and engineers work in separate silos, the customer experience fragments. KreaitX unifies the entire creative technology lifecycle under one disciplined roof in Peshawar — giving ambitious clients global caliber execution without translation loss.
               </p>
             </Reveal>
 
@@ -57,66 +89,58 @@ export const EditorialTrustSection: React.FC = () => {
                   href="/about"
                   className="group inline-flex items-center text-xs font-sans font-semibold uppercase tracking-[0.14em] text-[#003049] hover:text-[#14213D] transition-colors py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9]"
                 >
-                  <span>Our Studio Philosophy</span>
+                  <span>Our Studio Story &amp; Origins</span>
                   <ArrowUpRight className="ml-1.5 h-3.5 w-3.5 text-[#003049] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
                 <span className="text-xs text-slate-300 hidden sm:inline">•</span>
                 <span className="text-xs font-mono text-slate-500">
-                  EST. PESHAWAR × GLOBAL REACH
+                  PESHAWAR HQ × GLOBAL CLIENTS
                 </span>
               </div>
             </Reveal>
           </div>
 
-          {/* Right Column: Three Structured Manifesto Pillars */}
-          <div className="lg:col-span-5 space-y-4">
-            <Reveal delay={0.15} yOffset={16}>
-              <div className="p-6 rounded-2xl bg-[#F7F8FA] border border-slate-200/80 shadow-subtle hover:border-[#003049]/30 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-8 h-8 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[#003049] shrink-0">
-                    <Sparkles className="h-4 w-4" />
-                  </div>
-                  <h3 className="font-display text-base font-bold text-slate-900">
-                    Direct Senior Practitioners
-                  </h3>
-                </div>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pl-11">
-                  You work directly with principal designers, creative directors, and systems engineers. Zero middle layers, zero translation loss.
-                </p>
-              </div>
-            </Reveal>
+          {/* Right Column: 2x2 Structured Differentiators Grid (Cols 6-12) */}
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+            {differentiators.map((diff, index) => {
+              const Icon = diff.icon;
+              return (
+                <Reveal key={diff.number} delay={0.1 + index * 0.08} yOffset={16}>
+                  <div className="p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 shadow-card hover:shadow-card-hover hover:border-[#42C6D9]/50 transition-all duration-300 h-full flex flex-col justify-between group">
+                    <div>
+                      {/* Top Row: Index + Framework Tag */}
+                      <div className="flex items-center justify-between mb-4">
+                        <span className="text-xs font-mono font-bold text-[#003049] px-2.5 py-1 rounded-full bg-[#F7F8FA] border border-slate-200">
+                          {diff.number}
+                        </span>
+                        <span className="text-[11px] font-mono uppercase tracking-wider text-slate-600 font-medium">
+                          {diff.metric}
+                        </span>
+                      </div>
 
-            <Reveal delay={0.22} yOffset={16}>
-              <div className="p-6 rounded-2xl bg-[#F7F8FA] border border-slate-200/80 shadow-subtle hover:border-[#003049]/30 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-8 h-8 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[#003049] shrink-0">
-                    <Layers className="h-4 w-4" />
-                  </div>
-                  <h3 className="font-display text-base font-bold text-slate-900">
-                    Single-Source Cohesion
-                  </h3>
-                </div>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pl-11">
-                  Brand positioning, commercial production, and digital architecture engineered simultaneously to reinforce each other.
-                </p>
-              </div>
-            </Reveal>
+                      {/* Title with icon */}
+                      <div className="flex items-start gap-3 mb-2.5">
+                        <div className="p-2 rounded-xl bg-[#F7F8FA] text-[#003049] group-hover:bg-[#003049] group-hover:text-white transition-colors duration-200 shrink-0 mt-0.5">
+                          <Icon className="h-4 w-4 stroke-[1.8]" />
+                        </div>
+                        <h3 className="font-display text-base sm:text-lg font-bold text-slate-900 group-hover:text-[#003049] transition-colors leading-snug">
+                          {diff.title}
+                        </h3>
+                      </div>
 
-            <Reveal delay={0.29} yOffset={16}>
-              <div className="p-6 rounded-2xl bg-[#F7F8FA] border border-slate-200/80 shadow-subtle hover:border-[#003049]/30 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-8 h-8 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[#003049] shrink-0">
-                    <ShieldCheck className="h-4 w-4" />
+                      <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans pt-1">
+                        {diff.description}
+                      </p>
+                    </div>
+
+                    <div className="mt-5 pt-3.5 border-t border-slate-100 flex items-center justify-between text-[11px] font-mono text-slate-500">
+                      <span>KreaitX Core Pillar</span>
+                      <span className="text-[#003049] font-bold group-hover:text-[#42C6D9] transition-colors">Unified Delivery →</span>
+                    </div>
                   </div>
-                  <h3 className="font-display text-base font-bold text-slate-900">
-                    100% Client Ownership
-                  </h3>
-                </div>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pl-11">
-                  Every line of code, design system token, and production master file is delivered with complete intellectual property ownership.
-                </p>
-              </div>
-            </Reveal>
+                </Reveal>
+              );
+            })}
           </div>
 
         </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import { CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
@@ -9,27 +9,27 @@ import { projectCaseStudies } from "@/data/siteData";
 
 export const FeaturedWork: React.FC = () => {
   return (
-    <section className="relative overflow-hidden bg-white py-20 sm:py-28 lg:py-32 border-b border-slate-200/80">
-      {/* Background Soft Glows */}
+    <section id="work" className="relative overflow-hidden bg-[#F7F8FA] py-20 sm:py-28 lg:py-32 border-b border-slate-200/80">
+      {/* Background Soft Glows (No background images) */}
       <div className="absolute top-1/4 -right-32 h-80 w-80 rounded-full bg-[#42C6D9]/10 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 -left-32 h-80 w-80 rounded-full bg-slate-200/30 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 -left-32 h-80 w-80 rounded-full bg-slate-300/30 blur-3xl pointer-events-none" />
 
-      <Container size="default" className="relative z-10">
+      <Container size="default" className="relative z-10 max-w-[1320px]">
         {/* Section Header */}
         <Reveal yOffset={16}>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16 sm:mb-20">
             <SectionHeading
-              eyebrow="Featured Case Studies"
+              eyebrow="Selected Portfolio Benchmarks"
               title={
                 <>
-                  Real projects.{" "}
+                  Crafted with precision.{" "}
                   <span className="font-serif italic font-normal bg-gradient-to-r from-[#003049] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent">
-                    Measurable impact
+                    Engineered for outcomes
                   </span>
                   .
                 </>
               }
-              description="A selective look at how we combine branding, commercial filming, and digital product engineering to solve tangible business challenges."
+              description="A selective look at how we combine brand strategy, commercial filming, and bespoke digital platforms to solve tangible commercial challenges."
             />
 
             <div className="shrink-0">
@@ -41,41 +41,46 @@ export const FeaturedWork: React.FC = () => {
         </Reveal>
 
         {/* Styled Case Studies */}
-        <div className="space-y-12 sm:space-y-16">
+        <div className="space-y-10 sm:space-y-12">
           {projectCaseStudies.map((project, index) => {
             const isReversed = index % 2 === 1;
 
             return (
               <Reveal key={project.id} yOffset={24}>
-                <article className="group rounded-3xl bg-white border border-slate-200/80 shadow-card hover:shadow-card-hover hover:border-[#42C6D9]/50 transition-all duration-300 overflow-hidden">
+                <article className="group rounded-3xl bg-white border border-slate-200/90 shadow-card hover:shadow-card-hover hover:border-[#42C6D9]/50 transition-all duration-300 overflow-hidden">
                   <div className="grid grid-cols-1 lg:grid-cols-12">
                     {/* Project Narrative */}
                     <div
-                      className={`lg:col-span-7 p-8 sm:p-10 lg:p-12 flex flex-col justify-between ${
+                      className={`lg:col-span-7 p-7 sm:p-10 lg:p-12 flex flex-col justify-between ${
                         isReversed ? "lg:order-2" : "lg:order-1"
                       }`}
                     >
                       <div>
                         {/* Meta Tags */}
-                        <div className="flex flex-wrap items-center gap-2.5 mb-6">
-                          <span className="px-3.5 py-1 rounded-full bg-[#F7F8FA] text-[#003049] border border-slate-200/80 text-xs font-mono font-semibold uppercase tracking-wider">
+                        <div className="flex flex-wrap items-center gap-2.5 mb-5 sm:mb-6">
+                          <span className="px-3.5 py-1 rounded-full bg-[#F7F8FA] text-[#003049] border border-slate-200 text-xs font-mono font-semibold uppercase tracking-wider">
                             {project.industry}
                           </span>
                           <span className="text-xs font-mono text-slate-500 font-medium px-3 py-1 rounded-full bg-slate-100">
                             {project.year}
                           </span>
+                          <span className="text-xs font-mono text-slate-500 font-medium px-3 py-1 rounded-full bg-[#F7F8FA] border border-slate-200">
+                            Studio Benchmark
+                          </span>
                         </div>
 
                         {/* Title & Summary */}
                         <h3 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-slate-900 tracking-tight group-hover:text-[#003049] transition-colors">
-                          {project.title}
+                          <Link href={`/work/${project.slug}`}>
+                            {project.title}
+                          </Link>
                         </h3>
 
                         <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed font-sans font-normal">
                           {project.summary}
                         </p>
 
-                        {/* Challenge & Impact Cards */}
+                        {/* Challenge & Strategic Impact Cards */}
                         <div className="mt-6 pt-6 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-2 gap-4">
                           <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/60">
                             <span className="text-xs font-mono font-bold uppercase tracking-wider text-slate-900 block mb-1">
@@ -87,7 +92,7 @@ export const FeaturedWork: React.FC = () => {
                           </div>
                           <div className="p-4 rounded-2xl bg-[#F7F8FA] border border-[#42C6D9]/30">
                             <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#003049] block mb-1">
-                              The Impact
+                              Strategic Outcome
                             </span>
                             <span className="text-xs text-[#003049] font-medium leading-relaxed block">
                               {project.impact}
@@ -102,7 +107,7 @@ export const FeaturedWork: React.FC = () => {
                           {project.services.map((s) => (
                             <span
                               key={s}
-                              className="text-xs font-medium text-slate-700 bg-[#F7F8FA] border border-slate-200/60 px-3 py-1 rounded-full"
+                              className="text-xs font-medium text-slate-700 bg-[#F7F8FA] border border-slate-200/70 px-3 py-1 rounded-full"
                             >
                               {s}
                             </span>
@@ -110,7 +115,7 @@ export const FeaturedWork: React.FC = () => {
                         </div>
 
                         <Link
-                          href={`/work#${project.id}`}
+                          href={`/work/${project.slug}`}
                           className="inline-flex items-center text-sm font-semibold text-[#003049] hover:text-[#14213D] transition-colors group/link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9]"
                         >
                           <span>Explore Case Study</span>
@@ -119,9 +124,9 @@ export const FeaturedWork: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Case Study Visual Side */}
+                    {/* Case Study Blueprint Side */}
                     <div
-                      className={`lg:col-span-5 bg-gradient-to-br from-[#003049] via-[#14213D] to-[#0B0F19] p-8 sm:p-10 lg:p-12 flex flex-col justify-center relative overflow-hidden text-white ${
+                      className={`lg:col-span-5 bg-gradient-to-br from-[#003049] via-[#14213D] to-[#003049] p-7 sm:p-10 lg:p-12 flex flex-col justify-center relative overflow-hidden text-white ${
                         isReversed ? "lg:order-1" : "lg:order-2"
                       }`}
                     >
@@ -129,8 +134,9 @@ export const FeaturedWork: React.FC = () => {
                       <div className="absolute top-0 right-0 w-64 h-64 bg-[#42C6D9]/15 rounded-full blur-3xl pointer-events-none" />
 
                       <div className="relative z-10 space-y-6">
-                        <div className="inline-block px-3.5 py-1 rounded-full bg-white/10 text-white text-xs font-mono backdrop-blur-sm border border-white/20">
-                          Case Study Blueprint // 0{index + 1}
+                        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-white text-xs font-mono backdrop-blur-sm border border-white/20">
+                          <Sparkles className="h-3 w-3 text-[#42C6D9]" />
+                          <span>Case Study Blueprint // 0{index + 1}</span>
                         </div>
 
                         <div className="space-y-3.5">
@@ -150,9 +156,9 @@ export const FeaturedWork: React.FC = () => {
                           </ul>
                         </div>
 
-                        <div className="pt-4 border-t border-white/15 flex items-center justify-between text-xs text-slate-400">
-                          <span>Client: <strong className="text-white">{project.client}</strong></span>
-                          <span className="font-semibold text-[#42C6D9]">Verified Result</span>
+                        <div className="pt-4 border-t border-white/15 flex items-center justify-between text-xs text-slate-300">
+                          <span>Focus: <strong className="text-white">{project.client}</strong></span>
+                          <span className="font-semibold text-[#42C6D9]">Strategic Architecture</span>
                         </div>
                       </div>
                     </div>

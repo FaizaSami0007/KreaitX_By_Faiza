@@ -4,45 +4,31 @@
 
 :root {
   --bg-canvas: #FFFFFF;
-  --bg-surface: #F8FAFC;
+  --bg-surface: #F7F8FA;
   --bg-surface-alt: #F1F5F9;
-  --bg-dark: #0B0F19;
+  --bg-dark: #003049;
   
   --text-heading: #0B0F19;
   --text-body: #334155;
   --text-muted: #64748B;
-  
-  --color-purple: #9333EA;
-  --color-violet: #8B5CF6;
-  --color-indigo: #6366F1;
-  --color-cyan: #06B6D4;
-  --color-pink: #EC4899;
   
   --brand-navy: #003049;
   --brand-deep: #14213D;
   --brand-porcelain: #F7F8FA;
   --brand-white: #FFFFFF;
   --brand-cyan: #42C6D9;
+  --brand-cyan-hover: #34B8CB;
   --brand-steel: #A8B3C2;
   --brand-charcoal: #0B0F19;
   --brand-body: #334155;
-  --brand-border: #E2E8F0;
+  --brand-border: rgba(226, 232, 240, 0.8);
   --brand-focus: #42C6D9;
-  
-  --color-brand-navy: #003049;
-  --color-brand-deep: #14213D;
-  --color-brand-canvas: #F7F8FA;
-  --color-brand-cyan: #42C6D9;
-  --color-brand-neutral: #A8B3C2;
   
   --border-subtle: rgba(226, 232, 240, 0.8);
   --border-focus: #42C6D9;
   
-  --gradient-primary: linear-gradient(135deg, #7928CA 0%, #FF0080 50%, #0070F3 100%);
-  --gradient-hero: linear-gradient(135deg, #9333EA 0%, #6366F1 50%, #06B6D4 100%);
-  --gradient-button: linear-gradient(135deg, #9333EA 0%, #4F46E5 100%);
-  --gradient-accent: linear-gradient(135deg, #EC4899 0%, #8B5CF6 100%);
-  --gradient-cyan-blue: linear-gradient(135deg, #06B6D4 0%, #3B82F6 100%);
+  --brand-gradient: linear-gradient(135deg, #003049 0%, #14213D 60%, #003049 100%);
+  --brand-gradient-accent: linear-gradient(135deg, #003049 0%, #14213D 50%, #42C6D9 100%);
   
   --radius-sm: 8px;
   --radius-md: 12px;
@@ -51,8 +37,10 @@
   --radius-2xl: 24px;
   --radius-pill: 9999px;
   
-  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
-  --shadow-card-hover: 0 20px 40px -15px rgba(124, 58, 237, 0.12), 0 0 0 1px rgba(124, 58, 237, 0.15);
+  --shadow-subtle: 0 2px 10px rgba(0, 0, 0, 0.03);
+  --shadow-card: 0 10px 30px -10px rgba(0, 48, 73, 0.06), 0 4px 6px -2px rgba(0, 48, 73, 0.02);
+  --shadow-card-hover: 0 20px 40px -15px rgba(0, 48, 73, 0.12), 0 0 0 1px rgba(66, 198, 217, 0.35);
+  --shadow-brand-button: 0 10px 25px -5px rgba(0, 48, 73, 0.25);
   
   --safe-top: env(safe-area-inset-top, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
@@ -126,32 +114,51 @@
     -webkit-text-fill-color: transparent;
   }
 
-  /* Brand Cards */
+  /* Master Brand Card Components */
+  .brand-card,
   .softy-card {
     background: #FFFFFF;
     border: 1px solid rgba(226, 232, 240, 0.8);
     border-radius: 24px;
-    box-shadow: 0 10px 30px -10px rgba(0, 48, 73, 0.05), 0 4px 6px -2px rgba(0, 48, 73, 0.02);
+    box-shadow: 0 10px 30px -10px rgba(0, 48, 73, 0.06), 0 4px 6px -2px rgba(0, 48, 73, 0.02);
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
+  .brand-card:hover,
   .softy-card:hover {
-    box-shadow: 0 20px 40px -15px rgba(0, 48, 73, 0.1), 0 0 0 1px rgba(66, 198, 217, 0.25);
-    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -15px rgba(0, 48, 73, 0.12), 0 0 0 1px rgba(66, 198, 217, 0.35);
+    border-color: rgba(66, 198, 217, 0.4);
+    transform: translateY(-3px);
   }
 
+  .brand-card-subtle,
   .softy-card-subtle {
-    background: #F8FAFC;
+    background: #F7F8FA;
     border: 1px solid rgba(226, 232, 240, 0.8);
     border-radius: 20px;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
+  .brand-card-subtle:hover,
   .softy-card-subtle:hover {
     background: #FFFFFF;
     border-color: rgba(66, 198, 217, 0.4);
     box-shadow: 0 15px 35px -10px rgba(0, 48, 73, 0.08);
     transform: translateY(-2px);
+  }
+
+  .brand-card-dark {
+    background: #14213D;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 24px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .brand-card-dark:hover {
+    border-color: rgba(66, 198, 217, 0.5);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(66, 198, 217, 0.3);
+    transform: translateY(-3px);
   }
 
   /* Fluid typography helpers */

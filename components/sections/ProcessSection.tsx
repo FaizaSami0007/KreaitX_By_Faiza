@@ -12,13 +12,13 @@ export const ProcessSection: React.FC = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="relative overflow-hidden bg-slate-50/40 py-20 sm:py-28 lg:py-32 border-b border-slate-200/80">
-      <Container size="default">
+    <section id="process" className="relative overflow-hidden bg-white py-20 sm:py-28 lg:py-32 border-b border-slate-200/80">
+      <Container size="default" className="relative z-10 max-w-[1320px]">
         {/* Header */}
         <Reveal yOffset={16}>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16 sm:mb-20">
             <SectionHeading
-              eyebrow="Proven Methodology"
+              eyebrow="Disciplined Methodology"
               title={
                 <>
                   From idea to impact,{" "}
@@ -28,7 +28,7 @@ export const ProcessSection: React.FC = () => {
                   .
                 </>
               }
-              description="A disciplined six-stage progression designed to eliminate agency black-box ambiguity and keep strategy, design, and code aligned."
+              description="A disciplined six-stage methodology designed to eliminate agency black-box ambiguity and keep strategy, design, and code aligned throughout."
             />
 
             <div className="shrink-0">
@@ -43,136 +43,108 @@ export const ProcessSection: React.FC = () => {
           </div>
         </Reveal>
 
-        {/* Interactive Step Navigator for desktop */}
-        <div className="hidden lg:grid grid-cols-6 gap-3 mb-12">
+        {/* Interactive Step Navigator Header (Buttons that toggle active step) */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5 sm:gap-3 mb-10">
           {processStages.map((stage, idx) => (
             <button
               key={stage.number}
               type="button"
               onClick={() => setActiveStep(idx)}
-              className={`text-left p-5 rounded-2xl border transition-all duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9] ${
+              className={`text-left p-4 sm:p-5 rounded-2xl border transition-all duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9] ${
                 activeStep === idx
-                  ? "bg-white border-[#42C6D9] shadow-card-hover -translate-y-1 ring-2 ring-[#42C6D9]/20"
-                  : "bg-white/80 text-slate-700 border-slate-200/80 hover:border-slate-300 hover:bg-white"
+                  ? "bg-[#003049] text-white border-[#003049] shadow-brand-button -translate-y-1"
+                  : "bg-[#F7F8FA] text-slate-700 border-slate-200/90 hover:border-slate-300 hover:bg-white"
               }`}
             >
               <div
-                className={`text-xs font-mono font-bold mb-1.5 uppercase tracking-wider ${
-                  activeStep === idx
-                    ? "text-[#003049]"
-                    : "text-slate-400"
+                className={`text-xs font-mono font-bold mb-1 uppercase tracking-wider ${
+                  activeStep === idx ? "text-[#42C6D9]" : "text-slate-500"
                 }`}
               >
-                {stage.number}
+                Stage {stage.number}
               </div>
-              <div className="text-sm font-display font-bold text-slate-900 truncate">
+              <div className="text-sm font-display font-bold truncate">
                 {stage.title}
               </div>
             </button>
           ))}
         </div>
 
-        {/* Active Stage Highlight Box (Desktop) */}
-        <div className="hidden lg:block mb-16">
-          <div className="rounded-3xl bg-white border border-slate-200/80 p-10 lg:p-12 shadow-card">
-            <div className="grid grid-cols-12 gap-10 items-start">
-              <div className="col-span-5 space-y-4">
-                <span className="inline-block px-3.5 py-1 rounded-full bg-[#F7F8FA] text-[#003049] text-xs font-mono font-semibold uppercase tracking-wider border border-slate-200">
-                  Stage {processStages[activeStep].number} of 06
+        {/* Active Stage Detail Showcase (Single semantic DOM container for active stage) */}
+        <div className="rounded-3xl bg-[#F7F8FA] border border-slate-200/90 p-7 sm:p-10 lg:p-12 shadow-card transition-all duration-300">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+            {/* Left Narrative */}
+            <div className="lg:col-span-5 space-y-4">
+              <span className="inline-block px-3.5 py-1 rounded-full bg-white text-[#003049] text-xs font-mono font-semibold uppercase tracking-wider border border-slate-200 shadow-xs">
+                Stage {processStages[activeStep].number} of 06 // {processStages[activeStep].title}
+              </span>
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-slate-900 tracking-tight">
+                {processStages[activeStep].title}
+              </h3>
+              <p className="text-base font-semibold text-[#003049]">
+                {processStages[activeStep].tagline}
+              </p>
+              <p className="text-base text-slate-600 leading-relaxed font-sans font-normal">
+                {processStages[activeStep].description}
+              </p>
+
+              {/* Step Navigation Arrows */}
+              <div className="pt-4 flex items-center gap-3">
+                <button
+                  type="button"
+                  onClick={() => setActiveStep((prev) => (prev > 0 ? prev - 1 : processStages.length - 1))}
+                  className="px-4 py-2 rounded-full text-xs font-mono font-semibold bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 transition-colors"
+                >
+                  ← Previous Stage
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setActiveStep((prev) => (prev < processStages.length - 1 ? prev + 1 : 0))}
+                  className="px-4 py-2 rounded-full text-xs font-mono font-semibold bg-[#003049] text-white hover:bg-[#14213D] transition-colors"
+                >
+                  Next Stage →
+                </button>
+              </div>
+            </div>
+
+            {/* Right Collaboration & Deliverables Grid */}
+            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-subtle">
+              <div>
+                <span className="text-xs font-mono uppercase tracking-wider text-slate-900 font-bold block mb-2">
+                  Client Collaboration
                 </span>
-                <h3 className="text-3xl lg:text-4xl font-display font-bold text-slate-900 tracking-tight">
-                  {processStages[activeStep].title}
-                </h3>
-                <p className="text-base font-semibold text-[#003049]">
-                  {processStages[activeStep].tagline}
-                </p>
-                <p className="text-base text-slate-600 leading-relaxed font-sans font-normal">
-                  {processStages[activeStep].description}
+                <p className="text-sm text-slate-600 leading-relaxed">
+                  {processStages[activeStep].clientInput}
                 </p>
               </div>
 
-              <div className="col-span-7 grid grid-cols-2 gap-6 bg-[#F7F8FA] p-8 rounded-2xl border border-slate-200/60">
-                <div>
-                  <span className="text-xs font-mono uppercase tracking-wider text-slate-900 font-bold block mb-2">
-                    Client Collaboration
-                  </span>
-                  <p className="text-sm text-slate-600 leading-relaxed">
-                    {processStages[activeStep].clientInput}
-                  </p>
-                </div>
+              <div>
+                <span className="text-xs font-mono uppercase tracking-wider text-slate-900 font-bold block mb-2">
+                  KreaitX Deliverable
+                </span>
+                <p className="text-sm text-slate-900 leading-relaxed font-medium">
+                  {processStages[activeStep].kreaitxOutput}
+                </p>
+              </div>
 
-                <div>
-                  <span className="text-xs font-mono uppercase tracking-wider text-slate-900 font-bold block mb-2">
-                    KreaitX Deliverable
-                  </span>
-                  <p className="text-sm text-slate-900 leading-relaxed font-medium">
-                    {processStages[activeStep].kreaitxOutput}
-                  </p>
-                </div>
-
-                <div className="col-span-2 pt-5 border-t border-slate-200">
-                  <span className="text-xs font-mono uppercase tracking-wider text-slate-900 font-bold block mb-2.5">
-                    Key Milestones
-                  </span>
-                  <div className="flex flex-wrap gap-2">
-                    {processStages[activeStep].milestones.map((ms) => (
-                      <span
-                        key={ms}
-                        className="px-3 py-1 rounded-full bg-white text-xs font-medium text-slate-700 border border-slate-200 shadow-subtle flex items-center gap-1.5"
-                      >
-                        <CheckCircle2 className="h-3.5 w-3.5 text-[#42C6D9]" />
-                        {ms}
-                      </span>
-                    ))}
-                  </div>
+              <div className="sm:col-span-2 pt-5 border-t border-slate-100">
+                <span className="text-xs font-mono uppercase tracking-wider text-slate-900 font-bold block mb-2.5">
+                  Key Milestones &amp; Deliverable Checkpoints
+                </span>
+                <div className="flex flex-wrap gap-2">
+                  {processStages[activeStep].milestones.map((ms) => (
+                    <span
+                      key={ms}
+                      className="px-3 py-1 rounded-full bg-[#F7F8FA] text-xs font-medium text-slate-700 border border-slate-200 flex items-center gap-1.5"
+                    >
+                      <CheckCircle2 className="h-3.5 w-3.5 text-[#003049]" />
+                      {ms}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Mobile / Tablet Connected Vertical Timeline View */}
-        <div className="lg:hidden space-y-6">
-          {processStages.map((stage, idx) => (
-            <div
-              key={stage.number}
-              className="relative pl-8 sm:pl-10 before:absolute before:left-3.5 before:top-8 before:bottom-0 before:w-0.5 before:bg-slate-200 last:before:hidden"
-            >
-              {/* Step Circle Node */}
-              <div className="absolute left-0 top-1.5 w-7 h-7 rounded-full bg-[#003049] text-[#42C6D9] font-mono text-xs font-bold flex items-center justify-center shadow-md z-10 border border-white">
-                {idx + 1}
-              </div>
-
-              {/* Stage Card */}
-              <div className="rounded-2xl bg-white p-6 sm:p-7 border border-slate-200/80 shadow-card">
-                <div className="flex items-center justify-between gap-2 mb-2">
-                  <span className="text-xs font-mono font-semibold text-[#003049] px-2.5 py-0.5 rounded-full bg-[#F7F8FA] border border-slate-200">
-                    Stage {stage.number}
-                  </span>
-                  <span className="text-xs text-slate-500 font-semibold">{stage.tagline}</span>
-                </div>
-
-                <h3 className="text-xl font-display font-bold text-slate-900 tracking-tight">
-                  {stage.title}
-                </h3>
-
-                <p className="mt-2 text-sm text-slate-600 leading-relaxed font-sans font-normal">
-                  {stage.description}
-                </p>
-
-                <div className="mt-4 pt-4 border-t border-slate-100 space-y-2 text-xs">
-                  <div>
-                    <span className="font-bold text-slate-900">Deliverable: </span>
-                    <span className="text-slate-800 font-medium">{stage.kreaitxOutput}</span>
-                  </div>
-                  <div>
-                    <span className="font-bold text-slate-900">Milestones: </span>
-                    <span className="text-slate-600">{stage.milestones.join(" • ")}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
         </div>
       </Container>
     </section>
