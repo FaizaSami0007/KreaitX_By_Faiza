@@ -182,16 +182,17 @@ export default function AboutPage() {
       </section>
 
       {/* Core Studio Values */}
-      <section className="bg-[#F7F8FA] py-20 sm:py-28 border-b border-slate-200/80">
+      <section className="bg-[#0B0F19] py-20 sm:py-28 border-b border-slate-800 text-white">
         <Container size="default">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mb-16">
               <SectionHeading
+                theme="dark"
                 eyebrow="Our Philosophy"
                 title={
                   <>
                     Values that govern{" "}
-                    <span className="bg-gradient-to-r from-[#003049] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-white via-cyan-100 to-[#42C6D9] bg-clip-text text-transparent">
                       how we work
                     </span>.
                   </>
@@ -204,15 +205,15 @@ export default function AboutPage() {
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {values.map((v, i) => (
               <StaggerItem key={v.title}>
-                <div className="group rounded-3xl bg-white p-8 sm:p-10 border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all duration-300 h-full flex flex-col justify-between">
+                <div className="group rounded-3xl bg-[#14213D] p-8 sm:p-10 border border-slate-800 shadow-card hover:shadow-card-hover hover:border-[#42C6D9]/50 transition-all duration-300 h-full flex flex-col justify-between">
                   <div>
-                    <span className="font-mono text-xs font-bold text-[#003049] px-3.5 py-1 rounded-full bg-[#F7F8FA] border border-slate-200 inline-block mb-4">
+                    <span className="font-mono text-xs font-bold text-[#42C6D9] px-3.5 py-1 rounded-full bg-white/10 border border-white/15 inline-block mb-4">
                       Principle 0{i + 1}
                     </span>
-                    <h3 className="text-2xl font-display font-bold text-slate-900 tracking-tight mb-3 group-hover:text-[#003049] transition-colors">
+                    <h3 className="text-2xl font-display font-bold text-white tracking-tight mb-3 group-hover:text-[#42C6D9] transition-colors">
                       {v.title}
                     </h3>
-                    <p className="text-base text-slate-600 leading-relaxed font-sans font-normal">
+                    <p className="text-base text-slate-300 leading-relaxed font-sans font-normal">
                       {v.description}
                     </p>
                   </div>

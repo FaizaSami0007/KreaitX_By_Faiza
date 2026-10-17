@@ -170,17 +170,18 @@ export default function ProcessPage() {
         </Container>
       </section>
 
-      {/* Uncertainty Reduction Section */}
-      <section className="bg-white py-20 sm:py-28 border-b border-slate-200/80">
+      {/* Uncertainty Reduction Section — Dark Theme Contrast */}
+      <section className="bg-[#0B0F19] py-20 sm:py-28 border-b border-slate-800 text-white">
         <Container size="default">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mb-16">
               <SectionHeading
+                theme="dark"
                 eyebrow="Collaboration Standards"
                 title={
                   <>
                     How we make working together{" "}
-                    <span className="bg-gradient-to-r from-[#003049] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-white via-cyan-100 to-[#42C6D9] bg-clip-text text-transparent">
                       calm and predictable
                     </span>.
                   </>
@@ -192,42 +193,42 @@ export default function ProcessPage() {
 
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <StaggerItem>
-              <div className="rounded-3xl bg-slate-50 p-8 border border-slate-200/80 shadow-subtle hover:shadow-card hover:bg-white hover:border-[#42C6D9]/40 transition-all duration-300 h-full">
-                <span className="h-12 w-12 rounded-2xl bg-[#003049] text-white flex items-center justify-center mb-6 font-display text-base font-bold shadow-subtle border border-[#42C6D9]/30">
+              <div className="rounded-3xl bg-[#14213D] p-8 border border-slate-800 shadow-card hover:shadow-card-hover hover:border-[#42C6D9]/50 transition-all duration-300 h-full">
+                <span className="h-12 w-12 rounded-2xl bg-white/10 text-[#42C6D9] flex items-center justify-center mb-6 font-display text-base font-bold shadow-subtle border border-white/15">
                   01
                 </span>
-                <h3 className="text-2xl font-display font-bold text-slate-900 tracking-tight mb-2.5">
+                <h3 className="text-2xl font-display font-bold text-white tracking-tight mb-2.5">
                   No Middleman Lag
                 </h3>
-                <p className="text-base text-slate-600 leading-relaxed font-sans font-normal">
+                <p className="text-base text-slate-300 leading-relaxed font-sans font-normal">
                   You communicate directly with the designers, directors, and developers doing the work, eliminating telephone-game misunderstandings.
                 </p>
               </div>
             </StaggerItem>
 
             <StaggerItem>
-              <div className="rounded-3xl bg-slate-50 p-8 border border-slate-200/80 shadow-subtle hover:shadow-card hover:bg-white hover:border-[#42C6D9]/40 transition-all duration-300 h-full">
-                <span className="h-12 w-12 rounded-2xl bg-[#003049] text-white flex items-center justify-center mb-6 font-display text-base font-bold shadow-subtle border border-[#42C6D9]/30">
+              <div className="rounded-3xl bg-[#14213D] p-8 border border-slate-800 shadow-card hover:shadow-card-hover hover:border-[#42C6D9]/50 transition-all duration-300 h-full">
+                <span className="h-12 w-12 rounded-2xl bg-white/10 text-[#42C6D9] flex items-center justify-center mb-6 font-display text-base font-bold shadow-subtle border border-white/15">
                   02
                 </span>
-                <h3 className="text-2xl font-display font-bold text-slate-900 tracking-tight mb-2.5">
+                <h3 className="text-2xl font-display font-bold text-white tracking-tight mb-2.5">
                   Weekly Async &amp; Sync Loops
                 </h3>
-                <p className="text-base text-slate-600 leading-relaxed font-sans font-normal">
+                <p className="text-base text-slate-300 leading-relaxed font-sans font-normal">
                   Clear weekly loom summaries and milestone reviews give your internal stakeholders full visibility without excessive meeting fatigue.
                 </p>
               </div>
             </StaggerItem>
 
             <StaggerItem>
-              <div className="rounded-3xl bg-slate-50 p-8 border border-slate-200/80 shadow-subtle hover:shadow-card hover:bg-white hover:border-[#42C6D9]/40 transition-all duration-300 h-full">
-                <span className="h-12 w-12 rounded-2xl bg-[#003049] text-white flex items-center justify-center mb-6 font-display text-base font-bold shadow-subtle border border-[#42C6D9]/30">
+              <div className="rounded-3xl bg-[#14213D] p-8 border border-slate-800 shadow-card hover:shadow-card-hover hover:border-[#42C6D9]/50 transition-all duration-300 h-full">
+                <span className="h-12 w-12 rounded-2xl bg-white/10 text-[#42C6D9] flex items-center justify-center mb-6 font-display text-base font-bold shadow-subtle border border-white/15">
                   03
                 </span>
-                <h3 className="text-2xl font-display font-bold text-slate-900 tracking-tight mb-2.5">
+                <h3 className="text-2xl font-display font-bold text-white tracking-tight mb-2.5">
                   Fixed Milestones, Clear Scopes
                 </h3>
-                <p className="text-base text-slate-600 leading-relaxed font-sans font-normal">
+                <p className="text-base text-slate-300 leading-relaxed font-sans font-normal">
                   Every deliverable is clearly scoped before kick-off. No surprise invoices, hidden tech debt, or unexpected scope creep.
                 </p>
               </div>
