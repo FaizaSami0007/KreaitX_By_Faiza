@@ -14,7 +14,7 @@ export const DigitalMarketingSection: React.FC = () => {
         prefix: "Marketing that delivers",
         highlight: "measurable growth"
       }}
-      theme="dark"
+      theme="light"
     />
   );
 };

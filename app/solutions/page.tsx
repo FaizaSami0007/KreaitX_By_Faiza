@@ -33,7 +33,7 @@ const servicesConfig = [
   {
     id: "digital-marketing",
     headline: { prefix: "Marketing that delivers", highlight: "measurable growth" },
-    theme: "dark" as const
+    theme: "light" as const
   },
   {
     id: "social-media-management",
@@ -43,7 +43,7 @@ const servicesConfig = [
   {
     id: "filming-production",
     headline: { prefix: "Visual stories with", highlight: "cinematic impact" },
-    theme: "dark" as const
+    theme: "light" as const
   },
   {
     id: "graphic-design",
@@ -53,7 +53,7 @@ const servicesConfig = [
   {
     id: "2d-animation",
     headline: { prefix: "Motion animation that", highlight: "explains & captivates" },
-    theme: "dark" as const
+    theme: "light" as const
   },
   {
     id: "digital-solutions",
