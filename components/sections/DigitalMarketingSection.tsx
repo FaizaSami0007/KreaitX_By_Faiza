@@ -45,8 +45,8 @@ export const DigitalMarketingSection: React.FC = () => {
     >
       <Container size="default" className="relative z-10 w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
         
-        {/* Main Softy Card Container */}
-        <div className="relative rounded-3xl bg-white border border-slate-200/80 shadow-card p-6 sm:p-8 lg:p-10 xl:p-12">
+        {/* Main Card Container */}
+        <div className="relative rounded-3xl bg-white border border-slate-200/80 shadow-subtle p-6 sm:p-8 lg:p-10 xl:p-12">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 xl:gap-10 items-center">
             

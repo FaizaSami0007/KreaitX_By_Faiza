@@ -1,6 +1,5 @@
 import React from "react";
 import type { Metadata } from "next";
-import Image from "next/image";
 import { Sparkles } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -46,35 +45,13 @@ export default function ProcessPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Process Page Hero with Brand Silk Background */}
-      <section className="relative overflow-hidden bg-white text-slate-900 min-h-[680px] lg:min-h-[760px] flex items-center justify-center py-20 lg:py-28 border-b border-slate-200/80">
-        <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
-          {/* 3D Fluid Silk Ribbon in Brand Navy & Electric Cyan */}
-          <Image
-            src="/images/process-hero-custom-bg.jpg"
-            alt="KreaitX Disciplined Creative Technology Methodology"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-top select-none"
-            quality={95}
-          />
-          {/* Soft atmospheric ambient glow */}
-          <div className="absolute -top-24 right-1/4 w-[500px] h-[500px] rounded-full bg-[#42C6D9]/10 blur-[120px] pointer-events-none" />
-          <div className="absolute top-1/3 left-10 w-[450px] h-[450px] rounded-full bg-[#003049]/5 blur-[100px] pointer-events-none" />
-
-          {/* Luminous Center Breathing Zone */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,white_35%,transparent_80%)] pointer-events-none" />
-
-          {/* Bottom fade into next section */}
-          <div className="absolute inset-x-0 bottom-0 h-28 sm:h-40 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
-        </div>
-
+      {/* Process Page Hero — Image-Free Editorial Layout */}
+      <section className="relative bg-[#F7F8FA] text-slate-900 py-20 lg:py-28 border-b border-slate-200/80">
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#003049] px-4 py-1.5 rounded-full bg-white/90 border border-slate-200/90 mb-6 backdrop-blur-md shadow-sm">
-                <Sparkles className="h-3.5 w-3.5 text-[#42C6D9] animate-pulse" />
+              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#003049] px-4 py-1.5 rounded-full bg-white border border-slate-200 shadow-subtle mb-6">
+                <Sparkles className="h-3.5 w-3.5 text-[#003049]" />
                 <span>Methodology &amp; Standards</span>
               </span>
               <h1 className="font-display text-4xl sm:text-6xl lg:text-[68px] font-bold text-slate-950 tracking-tight leading-[1.05]">

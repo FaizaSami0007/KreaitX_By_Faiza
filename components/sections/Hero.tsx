@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import { Play, X } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
@@ -35,28 +34,7 @@ export const Hero: React.FC = () => {
   }, [videoModalOpen]);
 
   return (
-    <section className="relative overflow-hidden bg-white text-slate-900 pt-16 pb-20 sm:pt-20 sm:pb-28 lg:pt-24 lg:pb-36">
-      {/* ------------------------------------------------------------- */}
-      {/* CUSTOM 3D SILK FLUID GRADIENT RIBBON BACKDROP                 */}
-      {/* ------------------------------------------------------------- */}
-      <div className="absolute inset-0 pointer-events-none select-none overflow-hidden z-0">
-        {/* Responsive Custom Silk Background Artwork */}
-        <div className="relative w-full h-full min-h-[680px] sm:min-h-[820px] lg:min-h-[960px]">
-          <Image
-            src="/images/hero-custom-silk-bg.jpg"
-            alt="KreaitX Custom 3D Silk Ribbon Artwork"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-top sm:object-center select-none"
-            quality={95}
-          />
-        </div>
-
-        {/* Soft bottom blend to seamlessly transition into next section */}
-        <div className="absolute inset-x-0 bottom-0 h-24 sm:h-36 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
-      </div>
-
+    <section className="relative bg-[#F7F8FA] text-slate-900 pt-20 pb-20 sm:pt-24 sm:pb-28 lg:pt-32 lg:pb-36 border-b border-slate-200/80">
       <Container size="default" className="relative z-10 w-full">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           
@@ -134,10 +112,10 @@ export const Hero: React.FC = () => {
             </div>
           </Reveal>
 
-          {/* 5. THREE PILLAR FEATURE CARDS */}
-          <Reveal delay={0.34} yOffset={20} className="w-full mt-12 sm:mt-14 max-w-3xl">
+          {/* 5. THREE PILLAR FEATURE MATRIX */}
+          <Reveal delay={0.34} yOffset={20} className="w-full mt-12 sm:mt-16 max-w-3xl">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4">
-              <div className="p-4 sm:p-5 rounded-2xl bg-white/95 border border-slate-200/90 shadow-subtle backdrop-blur-md hover:border-[#42C6D9]/60 hover:shadow-card transition-all duration-200 text-left">
+              <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-subtle hover:border-[#003049]/40 hover:shadow-card transition-all duration-300 text-left">
                 <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#003049] block mb-1">
                   STRATEGY &amp; BRAND
                 </span>
@@ -146,7 +124,7 @@ export const Hero: React.FC = () => {
                 </span>
               </div>
 
-              <div className="p-4 sm:p-5 rounded-2xl bg-white/95 border border-slate-200/90 shadow-subtle backdrop-blur-md hover:border-[#42C6D9]/60 hover:shadow-card transition-all duration-200 text-left">
+              <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-subtle hover:border-[#003049]/40 hover:shadow-card transition-all duration-300 text-left">
                 <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#003049] block mb-1">
                   CINEMATIC MEDIA
                 </span>
@@ -155,7 +133,7 @@ export const Hero: React.FC = () => {
                 </span>
               </div>
 
-              <div className="p-4 sm:p-5 rounded-2xl bg-white/95 border border-slate-200/90 shadow-subtle backdrop-blur-md hover:border-[#42C6D9]/60 hover:shadow-card transition-all duration-200 text-left">
+              <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-subtle hover:border-[#003049]/40 hover:shadow-card transition-all duration-300 text-left">
                 <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#003049] block mb-1">
                   DIGITAL ENGINEERING
                 </span>
@@ -166,9 +144,9 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Micro Location / Reach Label */}
-            <div className="mt-5 text-center">
+            <div className="mt-6 text-center">
               <span className="text-[11px] font-mono font-bold tracking-[0.16em] uppercase text-slate-600">
-                BASED IN PESHAWAR <span className="text-[#42C6D9] font-bold mx-1.5">•</span> WORKING GLOBALLY
+                BASED IN PESHAWAR <span className="text-[#003049] font-bold mx-1.5">•</span> WORKING GLOBALLY
               </span>
             </div>
           </Reveal>
@@ -203,15 +181,9 @@ export const Hero: React.FC = () => {
               </button>
             </div>
 
-            <div className="mt-4 aspect-video w-full rounded-2xl bg-slate-950 flex flex-col items-center justify-center p-6 sm:p-8 text-center border border-slate-800 relative overflow-hidden">
-              <Image
-                src="/images/digital-marketing-asset.jpg"
-                alt="Showreel Preview"
-                fill
-                className="object-cover opacity-35"
-              />
+            <div className="mt-4 aspect-video w-full rounded-2xl bg-gradient-to-br from-[#003049] via-[#14213D] to-[#0B0F19] flex flex-col items-center justify-center p-6 sm:p-8 text-center border border-slate-800 relative overflow-hidden">
               <div className="relative z-10 space-y-3 max-w-md">
-                <div className="h-14 w-14 mx-auto rounded-full bg-[#003049] text-[#42C6D9] flex items-center justify-center shadow-brand-button border border-white/20">
+                <div className="h-14 w-14 mx-auto rounded-full bg-white/10 text-[#42C6D9] flex items-center justify-center border border-white/20">
                   <Play className="h-6 w-6 fill-current ml-0.5" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-display font-bold text-white">

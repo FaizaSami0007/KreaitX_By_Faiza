@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { Compass, Palette, Code2, TrendingUp, ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
@@ -14,7 +13,7 @@ const pillars = [
     description: "Insights and planning that set the right direction.",
     icon: Compass,
     framework: "Determines Direction",
-    badgeClass: "bg-[#F7F8FA] border-slate-200/80 text-[#003049] group-hover:border-[#42C6D9]/60 group-hover:text-[#003049]"
+    badgeClass: "bg-[#F7F8FA] border-slate-200/80 text-[#003049] group-hover:border-[#003049]/40 group-hover:text-[#003049]"
   },
   {
     number: "02",
@@ -22,7 +21,7 @@ const pillars = [
     description: "Ideas turned into memorable visual experiences.",
     icon: Palette,
     framework: "Creates Experience",
-    badgeClass: "bg-[#F7F8FA] border-slate-200/80 text-[#003049] group-hover:border-[#42C6D9]/60 group-hover:text-[#003049]"
+    badgeClass: "bg-[#F7F8FA] border-slate-200/80 text-[#003049] group-hover:border-[#003049]/40 group-hover:text-[#003049]"
   },
   {
     number: "03",
@@ -30,7 +29,7 @@ const pillars = [
     description: "Modern, scalable and future-ready solutions.",
     icon: Code2,
     framework: "Builds Solution",
-    badgeClass: "bg-[#F7F8FA] border-slate-200/80 text-[#003049] group-hover:border-[#42C6D9]/60 group-hover:text-[#003049]"
+    badgeClass: "bg-[#F7F8FA] border-slate-200/80 text-[#003049] group-hover:border-[#003049]/40 group-hover:text-[#003049]"
   },
   {
     number: "04",
@@ -38,7 +37,7 @@ const pillars = [
     description: "Measurable impact that takes you further.",
     icon: TrendingUp,
     framework: "Measures Outcome",
-    badgeClass: "bg-[#F7F8FA] border-slate-200/80 text-[#003049] group-hover:border-[#42C6D9]/60 group-hover:text-[#003049]"
+    badgeClass: "bg-[#F7F8FA] border-slate-200/80 text-[#003049] group-hover:border-[#003049]/40 group-hover:text-[#003049]"
   }
 ];
 
@@ -46,21 +45,8 @@ export const IdeasToImpactSection: React.FC = () => {
   return (
     <section
       aria-labelledby="ideas-to-impact-heading"
-      className="relative bg-white text-slate-900 py-20 sm:py-28 lg:py-32 border-b border-slate-200/80 overflow-hidden flex items-center"
+      className="relative bg-white text-slate-900 py-20 sm:py-28 lg:py-32 border-b border-slate-200/80 flex items-center"
     >
-      {/* Subtle Top-Right 3D Silk Ribbon Corner Accent (Section 1 Theme) */}
-      <div className="absolute inset-0 pointer-events-none select-none overflow-hidden z-0">
-        <Image
-          src="/images/ideas-corner-silk-bg.jpg"
-          alt="KreaitX Top-Right Silk Ribbon Accent"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-right-top select-none"
-          quality={95}
-        />
-      </div>
-
       <Container size="default" className="relative z-10 w-full max-w-[1280px] flex flex-col justify-between h-full space-y-16 sm:space-y-24">
         
         {/* Top / Main Editorial Centered Content */}

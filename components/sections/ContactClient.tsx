@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { trackEvent } from "@/lib/analytics";
 import {
@@ -195,26 +194,13 @@ export const ContactClient: React.FC = () => {
 
   return (
     <>
-      {/* Contact Page Hero with Custom 3D Silk Artwork */}
-      <section className="relative overflow-hidden bg-white text-slate-900 min-h-[680px] lg:min-h-[760px] flex items-center justify-center py-20 lg:py-28 border-b border-slate-200/80">
-        <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
-          <Image
-            src="/images/contact-hero-custom-bg.jpg"
-            alt="Let's Create Together — From Peshawar to a More Creative Tomorrow"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-top sm:object-center select-none"
-            quality={95}
-          />
-          <div className="absolute inset-x-0 bottom-0 h-24 sm:h-36 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
-        </div>
-
+      {/* Contact Page Hero — Image-Free Editorial Layout */}
+      <section className="relative bg-[#F7F8FA] text-slate-900 py-20 lg:py-28 border-b border-slate-200/80">
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#003049] px-4 py-1.5 rounded-full bg-white/95 border border-slate-200/90 mb-6 backdrop-blur-md shadow-sm">
-                <Sparkles className="h-3.5 w-3.5 text-[#42C6D9] animate-pulse" />
+              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#003049] px-4 py-1.5 rounded-full bg-white border border-slate-200 shadow-subtle mb-6">
+                <Sparkles className="h-3.5 w-3.5 text-[#003049]" />
                 <span>Direct Collaboration × Global Partnerships</span>
               </span>
               <h1 className="font-display text-4xl sm:text-6xl lg:text-[68px] font-bold text-slate-950 tracking-tight leading-[1.05]">

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Clock, CheckCircle2, Sparkles, Filter, BookOpen } from "lucide-react";
 import { Container } from "@/components/ui/Container";
@@ -48,26 +47,8 @@ export const InsightsClient: React.FC = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Insights Page Hero with Left-Anchored 3D Silk Artwork */}
-      <section className="relative overflow-hidden bg-white text-slate-900 min-h-[680px] lg:min-h-[760px] flex items-center justify-center py-20 lg:py-28 border-b border-slate-200/80">
-        <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
-          <div className="absolute top-0 left-0 w-full sm:w-[65%] md:w-[55%] lg:w-[50%] h-full">
-            <Image
-              src="/images/insights-hero-custom-bg.jpg"
-              alt="Insights for what's next — Ideas, Perspectives, Stories, Knowledge for a Brighter Tomorrow"
-              fill
-              priority
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover object-left-top select-none"
-              quality={95}
-            />
-            <div className="absolute inset-y-0 right-0 w-32 sm:w-48 bg-gradient-to-l from-white to-transparent pointer-events-none" />
-          </div>
-
-          <div className="absolute inset-y-0 right-0 w-full sm:w-[55%] bg-gradient-to-l from-white via-white/90 to-transparent pointer-events-none" />
-          <div className="absolute inset-x-0 bottom-0 h-24 sm:h-36 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
-        </div>
-
+      {/* Insights Page Hero — Image-Free Editorial Layout */}
+      <section className="relative bg-[#F7F8FA] text-slate-900 py-20 lg:py-28 border-b border-slate-200/80">
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">

@@ -44,8 +44,8 @@ export const BrandingSection: React.FC = () => {
     >
       <Container size="default" className="relative z-10 w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
         
-        {/* Main Softy Card Container */}
-        <div className="relative rounded-3xl bg-white border border-slate-200/80 shadow-card p-6 sm:p-10 lg:p-12 xl:p-14">
+        {/* Main Card Container */}
+        <div className="relative rounded-3xl bg-[#F7F8FA] border border-slate-200/80 shadow-subtle p-6 sm:p-10 lg:p-12 xl:p-14">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center min-h-[480px]">
             

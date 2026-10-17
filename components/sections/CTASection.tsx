@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
@@ -11,28 +10,13 @@ import { Sparkles } from "lucide-react";
 
 export const CTASection: React.FC = () => {
   return (
-    <section className="bg-white py-20 sm:py-28 lg:py-32 relative overflow-hidden">
+    <section className="bg-white py-20 sm:py-28 lg:py-32 relative">
       <Container size="default" className="relative z-10">
         <Reveal yOffset={20}>
-          <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-[#003049] via-[#14213D] to-[#0B0F19] text-white p-10 sm:p-16 lg:p-20 shadow-2xl border border-[#42C6D9]/20">
-            {/* Authentic 3D Silk Gradient Ribbon Overlay */}
-            <div className="absolute inset-0 z-0 pointer-events-none select-none opacity-30 mix-blend-screen">
-              <Image
-                src="/images/284.png"
-                alt="Fluid 3D Gradient Silk Texture"
-                fill
-                sizes="(max-width: 1024px) 100vw, 1200px"
-                className="object-cover object-center"
-              />
-            </div>
-
-            {/* Ambient soft glow blobs */}
-            <div className="absolute -top-24 -right-24 h-96 w-96 rounded-full bg-[#42C6D9]/15 blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-24 -left-24 h-96 w-96 rounded-full bg-slate-700/20 blur-3xl pointer-events-none" />
-
+          <div className="relative overflow-hidden rounded-[28px] bg-gradient-to-br from-[#003049] via-[#14213D] to-[#0B0F19] text-white p-10 sm:p-16 lg:p-20 shadow-xl border border-slate-800">
             <div className="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-[#42C6D9] px-4 py-1.5 rounded-full bg-white/10 border border-white/20 mb-6 backdrop-blur-md shadow-subtle">
-                <Sparkles className="h-3.5 w-3.5 text-[#42C6D9] animate-pulse" />
+              <span className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-[#42C6D9] px-4 py-1.5 rounded-full bg-white/10 border border-white/15 mb-6 shadow-subtle">
+                <Sparkles className="h-3.5 w-3.5 text-[#42C6D9]" />
                 <span>Next Step</span>
               </span>
 
