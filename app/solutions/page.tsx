@@ -94,12 +94,12 @@ export default function SolutionsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       
-      {/* Services Page Hero — Dark Luxury Aesthetic */}
-      <section className="relative bg-[#0B0F19] text-white py-20 lg:py-28 border-b border-slate-800 overflow-hidden">
+      {/* Services Page Hero — Prussian Navy Brand Theme */}
+      <section className="relative bg-[#003049] text-white py-20 lg:py-28 border-b border-[#14213D] overflow-hidden">
         {/* Ambient Glows */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#42C6D9]/10 via-[#003049]/30 to-transparent rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#42C6D9]/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#003049]/40 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#42C6D9]/15 via-[#14213D]/40 to-transparent rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#42C6D9]/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#14213D]/60 rounded-full blur-3xl pointer-events-none" />
 
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
@@ -114,7 +114,7 @@ export default function SolutionsPage() {
                   connected
                 </span>.
               </h1>
-              <p className="mt-6 text-lg sm:text-xl text-slate-300 leading-relaxed font-sans font-normal max-w-2xl">
+              <p className="mt-6 text-lg sm:text-xl text-slate-200 leading-relaxed font-sans font-normal max-w-2xl">
                 We organize our capabilities around your business challenges rather than isolated deliverables. Discover how each discipline integrates seamlessly into your broader growth engine.
               </p>
 

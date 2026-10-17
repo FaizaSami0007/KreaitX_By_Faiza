@@ -197,11 +197,11 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       </div>
 
       {/* Service Hero Section */}
-      <section className="relative overflow-hidden bg-[#0B0F19] text-white py-16 sm:py-24 lg:py-28 border-b border-slate-800">
+      <section className="relative overflow-hidden bg-[#003049] text-white py-16 sm:py-24 lg:py-28 border-b border-[#14213D]">
         {/* Ambient glows */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#42C6D9]/10 via-[#003049]/30 to-transparent rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#42C6D9]/5 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#003049]/40 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#42C6D9]/15 via-[#14213D]/40 to-transparent rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#42C6D9]/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#14213D]/60 rounded-full blur-3xl pointer-events-none" />
 
         <Container size="default" className="relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6">
@@ -211,7 +211,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                   {service.number}
                 </span>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#42C6D9]" />
-                <span className="text-xs font-sans font-bold uppercase tracking-wider text-slate-300">
+                <span className="text-xs font-sans font-bold uppercase tracking-wider text-slate-200">
                   {service.category}
                 </span>
               </div>
@@ -227,7 +227,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             </Reveal>
 
             <Reveal delay={0.14} yOffset={14}>
-              <p className="text-lg sm:text-xl text-slate-300 leading-relaxed font-sans font-normal max-w-2xl mx-auto">
+              <p className="text-lg sm:text-xl text-slate-200 leading-relaxed font-sans font-normal max-w-2xl mx-auto">
                 {service.description}
               </p>
             </Reveal>

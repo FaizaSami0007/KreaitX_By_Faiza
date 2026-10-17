@@ -34,11 +34,11 @@ export const Hero: React.FC = () => {
   }, [videoModalOpen]);
 
   return (
-    <section className="relative bg-[#0B0F19] text-white pt-20 pb-20 sm:pt-24 sm:pb-28 lg:pt-32 lg:pb-36 border-b border-slate-800 overflow-hidden">
+    <section className="relative bg-[#003049] text-white pt-20 pb-20 sm:pt-24 sm:pb-28 lg:pt-32 lg:pb-36 border-b border-[#14213D] overflow-hidden">
       {/* Background Soft Ambient Glows */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#42C6D9]/10 via-[#003049]/30 to-transparent rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#42C6D9]/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#003049]/40 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#42C6D9]/15 via-[#14213D]/40 to-transparent rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#42C6D9]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#14213D]/60 rounded-full blur-3xl pointer-events-none" />
 
       <Container size="default" className="relative z-10 w-full">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
@@ -120,29 +120,29 @@ export const Hero: React.FC = () => {
           {/* 5. THREE PILLAR FEATURE MATRIX */}
           <Reveal delay={0.34} yOffset={20} className="w-full mt-12 sm:mt-16 max-w-3xl">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4">
-              <div className="p-5 rounded-2xl bg-[#14213D] border border-slate-700/80 shadow-card hover:border-[#42C6D9]/50 hover:bg-[#14213D]/80 transition-all duration-300 text-left">
+              <div className="p-5 rounded-2xl bg-[#14213D] border border-white/10 shadow-card hover:border-[#42C6D9]/50 hover:bg-[#14213D]/90 transition-all duration-300 text-left">
                 <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#42C6D9] block mb-1">
                   STRATEGY &amp; BRAND
                 </span>
-                <span className="text-xs text-slate-300 font-medium block">
+                <span className="text-xs text-slate-200 font-medium block">
                   Identity &amp; Positioning
                 </span>
               </div>
 
-              <div className="p-5 rounded-2xl bg-[#14213D] border border-slate-700/80 shadow-card hover:border-[#42C6D9]/50 hover:bg-[#14213D]/80 transition-all duration-300 text-left">
+              <div className="p-5 rounded-2xl bg-[#14213D] border border-white/10 shadow-card hover:border-[#42C6D9]/50 hover:bg-[#14213D]/90 transition-all duration-300 text-left">
                 <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#42C6D9] block mb-1">
                   CINEMATIC MEDIA
                 </span>
-                <span className="text-xs text-slate-300 font-medium block">
+                <span className="text-xs text-slate-200 font-medium block">
                   Production &amp; Motion
                 </span>
               </div>
 
-              <div className="p-5 rounded-2xl bg-[#14213D] border border-slate-700/80 shadow-card hover:border-[#42C6D9]/50 hover:bg-[#14213D]/80 transition-all duration-300 text-left">
+              <div className="p-5 rounded-2xl bg-[#14213D] border border-white/10 shadow-card hover:border-[#42C6D9]/50 hover:bg-[#14213D]/90 transition-all duration-300 text-left">
                 <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#42C6D9] block mb-1">
                   DIGITAL ENGINEERING
                 </span>
-                <span className="text-xs text-slate-300 font-medium block">
+                <span className="text-xs text-slate-200 font-medium block">
                   Web &amp; Custom Platforms
                 </span>
               </div>
@@ -150,7 +150,7 @@ export const Hero: React.FC = () => {
 
             {/* Micro Location / Reach Label */}
             <div className="mt-6 text-center">
-              <span className="text-[11px] font-mono font-bold tracking-[0.16em] uppercase text-slate-400">
+              <span className="text-[11px] font-mono font-bold tracking-[0.16em] uppercase text-slate-300">
                 BASED IN PESHAWAR <span className="text-[#42C6D9] font-bold mx-1.5">•</span> WORKING GLOBALLY
               </span>
             </div>
