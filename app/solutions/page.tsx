@@ -147,8 +147,8 @@ export default function SolutionsPage() {
         );
       })}
 
-      {/* Conversion CTA */}
-      <CTASection />
+      {/* Conversion CTA — Light Background above dark Footer */}
+      <CTASection bg="light" />
     </>
   );
 }

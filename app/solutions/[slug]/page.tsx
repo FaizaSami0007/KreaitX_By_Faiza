@@ -563,8 +563,8 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         </Container>
       </section>
 
-      {/* Conversion CTA */}
-      <CTASection />
+      {/* Conversion CTA — Light Background above dark Footer */}
+      <CTASection bg="light" />
     </>
   );
 }

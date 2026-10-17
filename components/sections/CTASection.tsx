@@ -8,12 +8,27 @@ import { siteConfig } from "@/data/siteData";
 import { trackEvent } from "@/lib/analytics";
 import { Sparkles } from "lucide-react";
 
-export const CTASection: React.FC = () => {
+export interface CTASectionProps {
+  bg?: "light" | "dark" | "porcelain" | "white";
+  className?: string;
+}
+
+export const CTASection: React.FC<CTASectionProps> = ({
+  bg = "light",
+  className
+}) => {
+  const isDark = bg === "dark";
+  const bgClass = isDark
+    ? "bg-[#0B0F19] border-slate-800/80"
+    : bg === "white"
+    ? "bg-white border-slate-200/80"
+    : "bg-[#F7F8FA] border-slate-200/80";
+
   return (
-    <section className="bg-[#0B0F19] py-20 sm:py-28 lg:py-32 relative border-t border-slate-800/80">
+    <section className={`${bgClass} py-20 sm:py-28 lg:py-32 relative border-t ${className || ""}`}>
       <Container size="default" className="relative z-10">
         <Reveal yOffset={20}>
-          <div className="relative overflow-hidden rounded-[28px] bg-gradient-to-br from-[#003049] via-[#14213D] to-[#0B0F19] text-white p-10 sm:p-16 lg:p-20 shadow-xl border border-slate-700/80">
+          <div className="relative overflow-hidden rounded-[28px] bg-gradient-to-br from-[#003049] via-[#14213D] to-[#0B0F19] text-white p-10 sm:p-16 lg:p-20 shadow-xl border border-slate-800">
             <div className="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center">
               <span className="inline-flex items-center gap-2 text-xs font-mono font-semibold uppercase tracking-wider text-[#42C6D9] px-4 py-1.5 rounded-full bg-white/10 border border-white/15 mb-6 shadow-subtle">
                 <Sparkles className="h-3.5 w-3.5 text-[#42C6D9]" />
