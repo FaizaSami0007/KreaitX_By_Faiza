@@ -146,6 +146,18 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {/* Auto-unregister stale service workers from other local projects */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+                navigator.serviceWorker.getRegistrations().then(function(regs) {
+                  for (var r of regs) { r.unregister(); }
+                });
+              }
+            `
+          }}
+        />
       </head>
       <body
         suppressHydrationWarning
