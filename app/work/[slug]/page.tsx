@@ -176,66 +176,67 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
       </div>
 
       {/* Case Study Header Hero */}
-      <section className="relative overflow-hidden bg-white py-16 sm:py-24 border-b border-slate-200/80">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-[#42C6D9]/15 via-[#003049]/5 to-transparent rounded-full blur-[100px] pointer-events-none" />
-        <div className="absolute -bottom-20 left-0 w-[450px] h-[450px] bg-gradient-to-tr from-[#003049]/10 via-[#42C6D9]/8 to-transparent rounded-full blur-[90px] pointer-events-none" />
+      <section className="relative overflow-hidden bg-[#0B0F19] text-white py-16 sm:py-24 border-b border-slate-800">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#42C6D9]/10 via-[#003049]/30 to-transparent rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#42C6D9]/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#003049]/40 rounded-full blur-3xl pointer-events-none" />
 
         <Container size="default" className="relative z-10">
           <div className="max-w-4xl mx-auto space-y-8">
             <Reveal yOffset={12}>
               <div className="flex flex-wrap items-center gap-3">
-                <span className="px-3.5 py-1.5 rounded-full bg-[#003049] text-white text-xs font-mono font-semibold">
+                <span className="px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-[#42C6D9] text-xs font-mono font-semibold">
                   Case Study 0{projectIndex + 1}
                 </span>
-                <span className="px-3.5 py-1.5 rounded-full bg-[#F7F8FA] border border-slate-200 text-xs font-sans font-bold uppercase tracking-wider text-[#003049]">
+                <span className="px-3.5 py-1.5 rounded-full bg-[#14213D] border border-slate-700 text-xs font-sans font-bold uppercase tracking-wider text-slate-200">
                   {project.industry}
                 </span>
-                <span className="text-xs font-sans text-slate-500 font-medium flex items-center gap-1.5">
-                  <Calendar className="h-3.5 w-3.5 text-slate-400" />
+                <span className="text-xs font-sans text-slate-400 font-medium flex items-center gap-1.5">
+                  <Calendar className="h-3.5 w-3.5 text-[#42C6D9]" />
                   {project.year}
                 </span>
               </div>
             </Reveal>
 
             <Reveal delay={0.08} yOffset={16}>
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-[62px] font-bold text-slate-950 tracking-tight leading-[1.08]">
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-[62px] font-bold text-white tracking-tight leading-[1.08]">
                 {project.title}
               </h1>
             </Reveal>
 
             <Reveal delay={0.14} yOffset={14}>
-              <p className="text-xl sm:text-2xl text-slate-700 leading-relaxed font-sans font-normal">
+              <p className="text-xl sm:text-2xl text-slate-300 leading-relaxed font-sans font-normal">
                 {project.summary}
               </p>
             </Reveal>
 
             {/* Client & Metadata Bar */}
             <Reveal delay={0.2} yOffset={12}>
-              <div className="pt-6 border-t border-slate-200/80 grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <div className="pt-6 border-t border-slate-800 grid grid-cols-1 sm:grid-cols-3 gap-6">
                 <div>
-                  <span className="text-xs font-sans uppercase tracking-wider text-slate-500 font-bold block mb-1">
+                  <span className="text-xs font-sans uppercase tracking-wider text-slate-400 font-bold block mb-1">
                     Client Partner
                   </span>
-                  <span className="text-base font-display font-bold text-slate-900 flex items-center gap-2">
-                    <Building className="h-4 w-4 text-[#003049]" />
+                  <span className="text-base font-display font-bold text-white flex items-center gap-2">
+                    <Building className="h-4 w-4 text-[#42C6D9]" />
                     {project.client}
                   </span>
                 </div>
                 <div>
-                  <span className="text-xs font-sans uppercase tracking-wider text-slate-500 font-bold block mb-1">
+                  <span className="text-xs font-sans uppercase tracking-wider text-slate-400 font-bold block mb-1">
                     Industry Domain
                   </span>
-                  <span className="text-base font-sans font-semibold text-slate-900 flex items-center gap-2">
-                    <Tag className="h-4 w-4 text-[#003049]" />
+                  <span className="text-base font-sans font-semibold text-white flex items-center gap-2">
+                    <Tag className="h-4 w-4 text-[#42C6D9]" />
                     {project.industry}
                   </span>
                 </div>
                 <div>
-                  <span className="text-xs font-sans uppercase tracking-wider text-slate-500 font-bold block mb-1">
+                  <span className="text-xs font-sans uppercase tracking-wider text-slate-400 font-bold block mb-1">
                     Engagement Year
                   </span>
-                  <span className="text-base font-sans font-semibold text-slate-900 flex items-center gap-2">
-                    <Calendar className="h-4 w-4 text-[#003049]" />
+                  <span className="text-base font-sans font-semibold text-white flex items-center gap-2">
+                    <Calendar className="h-4 w-4 text-[#42C6D9]" />
                     {project.year}
                   </span>
                 </div>

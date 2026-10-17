@@ -34,25 +34,30 @@ export const Hero: React.FC = () => {
   }, [videoModalOpen]);
 
   return (
-    <section className="relative bg-[#F7F8FA] text-slate-900 pt-20 pb-20 sm:pt-24 sm:pb-28 lg:pt-32 lg:pb-36 border-b border-slate-200/80">
+    <section className="relative bg-[#0B0F19] text-white pt-20 pb-20 sm:pt-24 sm:pb-28 lg:pt-32 lg:pb-36 border-b border-slate-800 overflow-hidden">
+      {/* Background Soft Ambient Glows */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#42C6D9]/10 via-[#003049]/30 to-transparent rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#42C6D9]/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#003049]/40 rounded-full blur-3xl pointer-events-none" />
+
       <Container size="default" className="relative z-10 w-full">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           
           {/* 1. TOP EYEBROW BADGE */}
           <Reveal delay={0.05} yOffset={12}>
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/95 border border-slate-200/90 shadow-subtle backdrop-blur-md mb-8 hover:border-[#42C6D9]/50 transition-colors">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 shadow-subtle backdrop-blur-md mb-8 hover:border-[#42C6D9]/50 transition-colors">
               <span className="h-1.5 w-1.5 rounded-full bg-[#42C6D9] animate-pulse" aria-hidden="true" />
-              <span className="text-[11px] sm:text-xs font-mono font-bold tracking-[0.2em] text-[#003049] uppercase">
-                IDEAS <span className="text-[#42C6D9] font-normal mx-0.5">×</span> TECHNOLOGY <span className="text-[#42C6D9] font-normal mx-0.5">×</span> IMPACT
+              <span className="text-[11px] sm:text-xs font-mono font-bold tracking-[0.2em] text-[#42C6D9] uppercase">
+                IDEAS <span className="text-white/60 font-normal mx-0.5">×</span> TECHNOLOGY <span className="text-white/60 font-normal mx-0.5">×</span> IMPACT
               </span>
             </div>
           </Reveal>
 
           {/* 2. MAIN DISPLAY HEADLINE */}
           <Reveal delay={0.12} yOffset={18}>
-            <h1 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-bold text-slate-950 tracking-tight leading-[1.06]">
+            <h1 className="font-display text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-bold text-white tracking-tight leading-[1.06]">
               We turn ambitious ideas into{" "}
-              <span className="font-serif italic font-normal bg-gradient-to-r from-[#003049] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent">
+              <span className="font-serif italic font-normal bg-gradient-to-r from-white via-cyan-100 to-[#42C6D9] bg-clip-text text-transparent">
                 digital experiences
               </span>
               .
@@ -61,7 +66,7 @@ export const Hero: React.FC = () => {
 
           {/* 3. SUPPORTING COPY */}
           <Reveal delay={0.2} yOffset={16}>
-            <p className="mt-6 text-lg sm:text-xl text-slate-600 font-sans font-normal leading-relaxed max-w-2xl mx-auto">
+            <p className="mt-6 text-lg sm:text-xl text-slate-300 font-sans font-normal leading-relaxed max-w-2xl mx-auto">
               A creative technology studio helping ambitious brands design, build, and scale in a digital-first world.
             </p>
           </Reveal>
@@ -69,10 +74,10 @@ export const Hero: React.FC = () => {
           {/* 4. CONVERSION CTAs (Primary Start a Project + Secondary Explore Our Work + Showreel Trigger) */}
           <Reveal delay={0.28} yOffset={16}>
             <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 w-full sm:w-auto">
-              {/* Primary Navy Pill Button */}
+              {/* Primary Cyan Pill Button */}
               <Button
                 href="/contact"
-                variant="navy"
+                variant="cyan"
                 size="lg"
                 withArrow
                 onClick={() =>
@@ -81,18 +86,18 @@ export const Hero: React.FC = () => {
                     cta_text: "Start a Project"
                   })
                 }
-                className="w-full sm:w-auto shadow-brand-button min-h-[50px] font-semibold"
+                className="w-full sm:w-auto font-bold shadow-lg min-h-[50px]"
               >
                 Start a Project
               </Button>
 
-              {/* Secondary Porcelain Pill Button */}
+              {/* Secondary Dark Pill Button */}
               <Button
                 href="/work"
-                variant="secondary"
+                variant="dark"
                 size="lg"
                 withArrow
-                className="w-full sm:w-auto min-h-[50px] font-semibold border-slate-300"
+                className="w-full sm:w-auto min-h-[50px] font-semibold bg-white/10 text-white border border-white/20 hover:bg-white/20 hover:border-white/40"
               >
                 Explore Our Work
               </Button>
@@ -101,10 +106,10 @@ export const Hero: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setVideoModalOpen(true)}
-                className="group inline-flex items-center justify-center font-sans font-semibold text-slate-700 hover:text-[#003049] bg-white hover:bg-[#F7F8FA] border border-slate-200/90 hover:border-slate-300 rounded-full px-5 py-3 min-h-[50px] w-full sm:w-auto text-sm sm:text-base shadow-subtle transition-all duration-300 hover:-translate-y-0.5 active:scale-[0.98] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9]"
+                className="group inline-flex items-center justify-center font-sans font-semibold text-slate-200 hover:text-white bg-white/5 hover:bg-white/10 border border-white/15 hover:border-[#42C6D9]/50 rounded-full px-5 py-3 min-h-[50px] w-full sm:w-auto text-sm sm:text-base shadow-subtle transition-all duration-300 hover:-translate-y-0.5 active:scale-[0.98] cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9]"
                 aria-label="Watch KreaitX Agency Showreel"
               >
-                <span className="flex items-center justify-center h-6 w-6 rounded-full bg-[#003049] text-[#42C6D9] mr-2.5 transition-transform duration-200 group-hover:scale-105">
+                <span className="flex items-center justify-center h-6 w-6 rounded-full bg-[#42C6D9] text-[#003049] mr-2.5 transition-transform duration-200 group-hover:scale-105">
                   <Play className="h-2.5 w-2.5 fill-current ml-0.5" />
                 </span>
                 <span>Watch Showreel</span>
@@ -115,29 +120,29 @@ export const Hero: React.FC = () => {
           {/* 5. THREE PILLAR FEATURE MATRIX */}
           <Reveal delay={0.34} yOffset={20} className="w-full mt-12 sm:mt-16 max-w-3xl">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4">
-              <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-subtle hover:border-[#003049]/40 hover:shadow-card transition-all duration-300 text-left">
-                <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#003049] block mb-1">
+              <div className="p-5 rounded-2xl bg-[#14213D] border border-slate-700/80 shadow-card hover:border-[#42C6D9]/50 hover:bg-[#14213D]/80 transition-all duration-300 text-left">
+                <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#42C6D9] block mb-1">
                   STRATEGY &amp; BRAND
                 </span>
-                <span className="text-xs text-slate-600 font-medium block">
+                <span className="text-xs text-slate-300 font-medium block">
                   Identity &amp; Positioning
                 </span>
               </div>
 
-              <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-subtle hover:border-[#003049]/40 hover:shadow-card transition-all duration-300 text-left">
-                <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#003049] block mb-1">
+              <div className="p-5 rounded-2xl bg-[#14213D] border border-slate-700/80 shadow-card hover:border-[#42C6D9]/50 hover:bg-[#14213D]/80 transition-all duration-300 text-left">
+                <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#42C6D9] block mb-1">
                   CINEMATIC MEDIA
                 </span>
-                <span className="text-xs text-slate-600 font-medium block">
+                <span className="text-xs text-slate-300 font-medium block">
                   Production &amp; Motion
                 </span>
               </div>
 
-              <div className="p-5 rounded-2xl bg-white border border-slate-200/80 shadow-subtle hover:border-[#003049]/40 hover:shadow-card transition-all duration-300 text-left">
-                <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#003049] block mb-1">
+              <div className="p-5 rounded-2xl bg-[#14213D] border border-slate-700/80 shadow-card hover:border-[#42C6D9]/50 hover:bg-[#14213D]/80 transition-all duration-300 text-left">
+                <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#42C6D9] block mb-1">
                   DIGITAL ENGINEERING
                 </span>
-                <span className="text-xs text-slate-600 font-medium block">
+                <span className="text-xs text-slate-300 font-medium block">
                   Web &amp; Custom Platforms
                 </span>
               </div>
@@ -145,8 +150,8 @@ export const Hero: React.FC = () => {
 
             {/* Micro Location / Reach Label */}
             <div className="mt-6 text-center">
-              <span className="text-[11px] font-mono font-bold tracking-[0.16em] uppercase text-slate-600">
-                BASED IN PESHAWAR <span className="text-[#003049] font-bold mx-1.5">•</span> WORKING GLOBALLY
+              <span className="text-[11px] font-mono font-bold tracking-[0.16em] uppercase text-slate-400">
+                BASED IN PESHAWAR <span className="text-[#42C6D9] font-bold mx-1.5">•</span> WORKING GLOBALLY
               </span>
             </div>
           </Reveal>

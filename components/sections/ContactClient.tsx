@@ -194,35 +194,40 @@ export const ContactClient: React.FC = () => {
 
   return (
     <>
-      {/* Contact Page Hero — Image-Free Editorial Layout */}
-      <section className="relative bg-[#F7F8FA] text-slate-900 py-20 lg:py-28 border-b border-slate-200/80">
+      {/* Contact Page Hero — Dark Luxury Aesthetic */}
+      <section className="relative bg-[#0B0F19] text-white py-20 lg:py-28 border-b border-slate-800 overflow-hidden">
+        {/* Ambient Glows */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#42C6D9]/10 via-[#003049]/30 to-transparent rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#42C6D9]/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#003049]/40 rounded-full blur-3xl pointer-events-none" />
+
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#003049] px-4 py-1.5 rounded-full bg-white border border-slate-200 shadow-subtle mb-6">
-                <Sparkles className="h-3.5 w-3.5 text-[#003049]" />
+              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#42C6D9] px-4 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-md shadow-subtle mb-6 hover:border-[#42C6D9]/50 transition-colors">
+                <Sparkles className="h-3.5 w-3.5 text-[#42C6D9] animate-pulse" />
                 <span>Direct Collaboration × Global Partnerships</span>
               </span>
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-[68px] font-bold text-slate-950 tracking-tight leading-[1.05]">
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-[68px] font-bold text-white tracking-tight leading-[1.05]">
                 Let&apos;s Create{" "}
-                <span className="font-serif italic font-normal bg-gradient-to-r from-[#003049] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent">
+                <span className="font-serif italic font-normal bg-gradient-to-r from-white via-cyan-100 to-[#42C6D9] bg-clip-text text-transparent">
                   Together
                 </span>.
               </h1>
-              <p className="mt-6 text-lg sm:text-xl text-slate-600 leading-relaxed font-sans font-normal max-w-2xl">
+              <p className="mt-6 text-lg sm:text-xl text-slate-300 leading-relaxed font-sans font-normal max-w-2xl">
                 Tell us what you&apos;re building. We&apos;ll help turn your ideas into real commercial opportunities, clear technical scopes, and actionable next steps.
               </p>
 
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
                 <a
                   href="#inquiry-form"
-                  className="inline-flex items-center justify-center px-8 py-3.5 min-h-[50px] rounded-full text-sm font-semibold text-white bg-[#003049] hover:bg-[#14213D] shadow-brand-button transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto"
+                  className="inline-flex items-center justify-center px-8 py-3.5 min-h-[50px] rounded-full text-sm font-bold text-[#003049] bg-[#42C6D9] hover:bg-[#38b2c4] shadow-brand-button transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto"
                 >
                   Fill Project Brief ↓
                 </a>
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="inline-flex items-center justify-center px-6 py-3.5 min-h-[50px] rounded-full text-sm font-semibold text-slate-800 bg-white hover:bg-[#F7F8FA] border border-slate-300 shadow-sm transition-all duration-200 w-full sm:w-auto hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center px-6 py-3.5 min-h-[50px] rounded-full text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/40 shadow-sm transition-all duration-200 w-full sm:w-auto hover:-translate-y-0.5"
                 >
                   Direct Email Inquiry
                 </a>

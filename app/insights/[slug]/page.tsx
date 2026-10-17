@@ -167,22 +167,23 @@ export default async function InsightArticlePage({ params }: PageProps) {
       </div>
 
       {/* Article Header Hero */}
-      <section className="relative overflow-hidden bg-white py-16 sm:py-20 lg:py-24 border-b border-slate-200/80">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-[#42C6D9]/15 via-[#003049]/5 to-transparent rounded-full blur-[100px] pointer-events-none" />
-        <div className="absolute -bottom-20 left-0 w-[450px] h-[450px] bg-gradient-to-tr from-[#003049]/10 via-[#42C6D9]/8 to-transparent rounded-full blur-[90px] pointer-events-none" />
+      <section className="relative overflow-hidden bg-[#0B0F19] text-white py-16 sm:py-20 lg:py-24 border-b border-slate-800">
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#42C6D9]/10 via-[#003049]/30 to-transparent rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#42C6D9]/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#003049]/40 rounded-full blur-3xl pointer-events-none" />
 
         <Container size="default" className="relative z-10">
           <div className="max-w-3xl mx-auto space-y-6">
             <Reveal yOffset={12}>
               <div className="flex flex-wrap items-center gap-3">
-                <span className="px-3.5 py-1.5 rounded-full bg-[#003049]/5 text-[#003049] border border-[#003049]/15 text-xs font-semibold uppercase tracking-wider">
+                <span className="px-3.5 py-1.5 rounded-full bg-white/10 text-[#42C6D9] border border-white/15 text-xs font-semibold uppercase tracking-wider backdrop-blur-md">
                   {article.category}
                 </span>
-                <span className="text-xs font-sans text-slate-500 font-medium flex items-center gap-1.5">
-                  <Calendar className="h-3.5 w-3.5 text-slate-400" />
+                <span className="text-xs font-sans text-slate-400 font-medium flex items-center gap-1.5">
+                  <Calendar className="h-3.5 w-3.5 text-[#42C6D9]" />
                   {article.publishDate}
                 </span>
-                <span className="text-xs font-sans text-slate-500 font-medium flex items-center gap-1.5">
+                <span className="text-xs font-sans text-slate-400 font-medium flex items-center gap-1.5">
                   <Clock className="h-3.5 w-3.5 text-[#42C6D9]" />
                   {article.readTime}
                 </span>
@@ -190,27 +191,27 @@ export default async function InsightArticlePage({ params }: PageProps) {
             </Reveal>
 
             <Reveal delay={0.08} yOffset={16}>
-              <h1 className="font-display text-3xl sm:text-5xl lg:text-[52px] font-bold text-slate-950 tracking-tight leading-[1.12]">
+              <h1 className="font-display text-3xl sm:text-5xl lg:text-[52px] font-bold text-white tracking-tight leading-[1.12]">
                 {article.title}
               </h1>
             </Reveal>
 
             <Reveal delay={0.14} yOffset={14}>
-              <p className="text-lg sm:text-xl text-slate-600 leading-relaxed font-sans font-normal">
+              <p className="text-lg sm:text-xl text-slate-300 leading-relaxed font-sans font-normal">
                 {article.excerpt}
               </p>
             </Reveal>
 
             {/* Author / Studio attribution bar */}
             <Reveal delay={0.2} yOffset={12}>
-              <div className="pt-6 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <div className="pt-6 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-full bg-[#003049] text-white flex items-center justify-center font-display font-bold text-xs">
+                  <div className="w-8 h-8 rounded-full bg-white/10 border border-white/20 text-[#42C6D9] flex items-center justify-center font-display font-bold text-xs">
                     KX
                   </div>
                   <div>
-                    <span className="font-semibold text-slate-900 block">KreaitX Editorial</span>
-                    <span>Creative Technology &amp; Digital Growth</span>
+                    <span className="font-semibold text-white block">KreaitX Editorial</span>
+                    <span className="text-slate-400">Creative Technology &amp; Digital Growth</span>
                   </div>
                 </div>
                 <div className="hidden sm:block text-slate-400">

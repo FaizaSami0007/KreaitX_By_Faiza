@@ -197,36 +197,37 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       </div>
 
       {/* Service Hero Section */}
-      <section className="relative overflow-hidden bg-white py-16 sm:py-24 lg:py-28 border-b border-slate-200/80">
-        {/* Subtle decorative background gradient */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-[#42C6D9]/15 via-[#003049]/5 to-transparent rounded-full blur-[100px] pointer-events-none" />
-        <div className="absolute -bottom-20 left-0 w-[450px] h-[450px] bg-gradient-to-tr from-[#003049]/10 via-[#42C6D9]/8 to-transparent rounded-full blur-[90px] pointer-events-none" />
+      <section className="relative overflow-hidden bg-[#0B0F19] text-white py-16 sm:py-24 lg:py-28 border-b border-slate-800">
+        {/* Ambient glows */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#42C6D9]/10 via-[#003049]/30 to-transparent rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#42C6D9]/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#003049]/40 rounded-full blur-3xl pointer-events-none" />
 
         <Container size="default" className="relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <Reveal yOffset={12}>
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F7F8FA] border border-slate-200/90 shadow-subtle">
-                <span className="font-mono text-xs font-bold text-[#003049]">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-md shadow-subtle">
+                <span className="font-mono text-xs font-bold text-[#42C6D9]">
                   {service.number}
                 </span>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#42C6D9]" />
-                <span className="text-xs font-sans font-bold uppercase tracking-wider text-slate-600">
+                <span className="text-xs font-sans font-bold uppercase tracking-wider text-slate-300">
                   {service.category}
                 </span>
               </div>
             </Reveal>
 
             <Reveal delay={0.08} yOffset={16}>
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-[64px] font-bold text-slate-950 tracking-tight leading-[1.08]">
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-[64px] font-bold text-white tracking-tight leading-[1.08]">
                 {service.title}{" "}
-                <span className="block mt-2 font-serif italic font-normal text-3xl sm:text-5xl lg:text-[54px] bg-gradient-to-r from-[#003049] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent">
+                <span className="block mt-2 font-serif italic font-normal text-3xl sm:text-5xl lg:text-[54px] bg-gradient-to-r from-white via-cyan-100 to-[#42C6D9] bg-clip-text text-transparent">
                   {service.tagline}
                 </span>
               </h1>
             </Reveal>
 
             <Reveal delay={0.14} yOffset={14}>
-              <p className="text-lg sm:text-xl text-slate-600 leading-relaxed font-sans font-normal max-w-2xl mx-auto">
+              <p className="text-lg sm:text-xl text-slate-300 leading-relaxed font-sans font-normal max-w-2xl mx-auto">
                 {service.description}
               </p>
             </Reveal>
@@ -236,16 +237,16 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button
                   href={`/contact?service=${service.id}`}
-                  variant="navy"
+                  variant="cyan"
                   size="md"
                   withArrow
-                  className="w-full sm:w-auto min-h-[48px]"
+                  className="w-full sm:w-auto min-h-[48px] font-bold shadow-lg"
                 >
                   Inquire for {service.title}
                 </Button>
                 <a
                   href="#deliverables"
-                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-full text-sm font-semibold text-slate-800 bg-[#F7F8FA] hover:bg-slate-200/70 border border-slate-300 shadow-sm transition-all duration-200 w-full sm:w-auto hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-full text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/40 shadow-sm transition-all duration-200 w-full sm:w-auto hover:-translate-y-0.5"
                 >
                   View Deliverables ↓
                 </a>
@@ -255,43 +256,43 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             {/* Quick Metrics / Assurance Badges */}
             <Reveal delay={0.25} yOffset={12}>
               <div className="pt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto text-left">
-                <div className="p-4 rounded-2xl bg-[#F7F8FA] border border-slate-200/70 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#003049]/5 flex items-center justify-center shrink-0">
-                    <Layers className="h-5 w-5 text-[#003049]" />
+                <div className="p-4 rounded-2xl bg-[#14213D] border border-slate-700/80 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                    <Layers className="h-5 w-5 text-[#42C6D9]" />
                   </div>
                   <div>
-                    <span className="text-xs text-slate-500 uppercase tracking-wider font-bold block">
+                    <span className="text-xs text-slate-400 uppercase tracking-wider font-bold block">
                       Deliverables
                     </span>
-                    <span className="text-sm font-semibold text-slate-900">
+                    <span className="text-sm font-semibold text-white">
                       {service.deliverables.length} Core Systems
                     </span>
                   </div>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-[#F7F8FA] border border-slate-200/70 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#003049]/5 flex items-center justify-center shrink-0">
-                    <Cpu className="h-5 w-5 text-[#003049]" />
+                <div className="p-4 rounded-2xl bg-[#14213D] border border-slate-700/80 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                    <Cpu className="h-5 w-5 text-[#42C6D9]" />
                   </div>
                   <div>
-                    <span className="text-xs text-slate-500 uppercase tracking-wider font-bold block">
+                    <span className="text-xs text-slate-400 uppercase tracking-wider font-bold block">
                       Workflow
                     </span>
-                    <span className="text-sm font-semibold text-slate-900">
+                    <span className="text-sm font-semibold text-white">
                       4-Stage Precision
                     </span>
                   </div>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-[#F7F8FA] border border-slate-200/70 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#003049]/5 flex items-center justify-center shrink-0">
-                    <ShieldCheck className="h-5 w-5 text-[#003049]" />
+                <div className="p-4 rounded-2xl bg-[#14213D] border border-slate-700/80 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                    <ShieldCheck className="h-5 w-5 text-[#42C6D9]" />
                   </div>
                   <div>
-                    <span className="text-xs text-slate-500 uppercase tracking-wider font-bold block">
+                    <span className="text-xs text-slate-400 uppercase tracking-wider font-bold block">
                       Assurance
                     </span>
-                    <span className="text-sm font-semibold text-slate-900">
+                    <span className="text-sm font-semibold text-white">
                       Direct Senior Leads
                     </span>
                   </div>
