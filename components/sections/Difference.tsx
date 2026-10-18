@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 
-// Clean icon for 05: Transparent Process (overlapping rectangles as in SS 1)
+// Clean icon for 05: Transparent Process (overlapping rectangles)
 const TransparentProcessIcon: React.FC<{ className?: string }> = ({
   className = "h-5 w-5 stroke-[1.5]"
 }) => (
@@ -25,6 +25,7 @@ const TransparentProcessIcon: React.FC<{ className?: string }> = ({
   </svg>
 );
 
+// KreaitX Brand Color Themed Principles: Navy (#003049) & Cyan (#42C6D9)
 const principles = [
   {
     id: "01",
@@ -32,8 +33,8 @@ const principles = [
     title: "One Connected Team",
     description: "Strategy, design and engineering working as one.",
     icon: Users,
-    badgeBg: "bg-[#F7F4EA]",
-    iconColor: "text-[#706A4E]"
+    badgeBg: "bg-[#003049]/5 border border-[#003049]/15 group-hover:bg-[#003049] group-hover:border-[#003049]",
+    iconColor: "text-[#003049] group-hover:text-[#42C6D9]"
   },
   {
     id: "02",
@@ -41,8 +42,8 @@ const principles = [
     title: "Creative + Technical",
     description: "Designers who understand code. Engineers with an eye for design.",
     icon: Lightbulb,
-    badgeBg: "bg-[#E9F1F6]",
-    iconColor: "text-[#003049]"
+    badgeBg: "bg-[#42C6D9]/15 border border-[#42C6D9]/30 group-hover:bg-[#003049] group-hover:border-[#003049]",
+    iconColor: "text-[#003049] group-hover:text-[#42C6D9]"
   },
   {
     id: "03",
@@ -50,8 +51,8 @@ const principles = [
     title: "Business-Centered",
     description: "Every solution is built around real business outcomes.",
     icon: Target,
-    badgeBg: "bg-[#F7F4EA]",
-    iconColor: "text-[#706A4E]"
+    badgeBg: "bg-[#003049]/5 border border-[#003049]/15 group-hover:bg-[#003049] group-hover:border-[#003049]",
+    iconColor: "text-[#003049] group-hover:text-[#42C6D9]"
   },
   {
     id: "04",
@@ -59,8 +60,8 @@ const principles = [
     title: "End-to-End Continuity",
     description: "From discovery to deployment, our senior team stays with you.",
     icon: Layers,
-    badgeBg: "bg-[#E9F1F6]",
-    iconColor: "text-[#003049]"
+    badgeBg: "bg-[#42C6D9]/15 border border-[#42C6D9]/30 group-hover:bg-[#003049] group-hover:border-[#003049]",
+    iconColor: "text-[#003049] group-hover:text-[#42C6D9]"
   },
   {
     id: "05",
@@ -68,8 +69,8 @@ const principles = [
     title: "Transparent Process",
     description: "Clear two-week milestones, transparent deliverables, zero ambiguity.",
     icon: TransparentProcessIcon,
-    badgeBg: "bg-[#F7F4EA]",
-    iconColor: "text-[#706A4E]"
+    badgeBg: "bg-[#003049]/5 border border-[#003049]/15 group-hover:bg-[#003049] group-hover:border-[#003049]",
+    iconColor: "text-[#003049] group-hover:text-[#42C6D9]"
   },
   {
     id: "06",
@@ -77,12 +78,12 @@ const principles = [
     title: "Human Collaboration",
     description: "Direct collaboration with senior practitioners. Zero account layers.",
     icon: Heart,
-    badgeBg: "bg-[#E9F1F6]",
-    iconColor: "text-[#003049]"
+    badgeBg: "bg-[#42C6D9]/15 border border-[#42C6D9]/30 group-hover:bg-[#003049] group-hover:border-[#003049]",
+    iconColor: "text-[#003049] group-hover:text-[#42C6D9]"
   }
 ];
 
-// Central Connecting Diagram matching SS 1 reference
+// Central Connecting Diagram styled in KreaitX Prussian Navy (#003049) & Cyan (#42C6D9)
 const ConnectingTimelineGraphic: React.FC = () => (
   <div
     className="w-full my-6 lg:my-10 overflow-hidden select-none pointer-events-none hidden md:block"
@@ -101,21 +102,22 @@ const ConnectingTimelineGraphic: React.FC = () => (
       {/* LEFT CONVERGENCE (Col 1 & 4 meet at node) */}
       <path
         d="M 120 16 C 120 48, 165 60, 220 60"
-        stroke="#C4BD97"
-        strokeWidth="1.5"
+        stroke="#003049"
+        strokeWidth="1.75"
         strokeLinecap="round"
       />
       <path
         d="M 120 104 C 120 72, 165 60, 220 60"
-        stroke="#9AAAB9"
-        strokeWidth="1.5"
+        stroke="#42C6D9"
+        strokeWidth="1.75"
         strokeLinecap="round"
       />
-      {/* Left node */}
-      <circle cx="220" cy="60" r="4.5" fill="#003049" />
+      {/* Left node with cyan accent core */}
+      <circle cx="220" cy="60" r="5" fill="#003049" />
+      <circle cx="220" cy="60" r="2" fill="#42C6D9" />
       {/* Floating accent dots on left */}
-      <circle cx="150" cy="30" r="2.5" fill="#B8B28B" />
-      <circle cx="150" cy="90" r="2.5" fill="#9AAAB9" />
+      <circle cx="150" cy="30" r="2.5" fill="#003049" />
+      <circle cx="150" cy="90" r="2.5" fill="#42C6D9" />
 
       {/* CENTER INTERSECTION (Col 2 & 5) */}
       <line
@@ -123,36 +125,38 @@ const ConnectingTimelineGraphic: React.FC = () => (
         y1="26"
         x2="600"
         y2="94"
-        stroke="#B8B28B"
+        stroke="#003049"
         strokeWidth="1.5"
         strokeLinecap="round"
       />
-      <circle cx="600" cy="60" r="4.5" fill="#B8B086" />
-      <circle cx="600" cy="26" r="2.5" fill="#9AAAB9" />
-      <circle cx="600" cy="94" r="2.5" fill="#B8B28B" />
+      {/* Center Cyan node */}
+      <circle cx="600" cy="60" r="5" fill="#42C6D9" />
+      <circle cx="600" cy="26" r="2.5" fill="#003049" />
+      <circle cx="600" cy="94" r="2.5" fill="#42C6D9" />
 
       {/* RIGHT DIVERGENCE (Col 3 & 6 branch out from node) */}
-      <circle cx="980" cy="60" r="4.5" fill="#003049" />
+      <circle cx="980" cy="60" r="5" fill="#003049" />
+      <circle cx="980" cy="60" r="2" fill="#42C6D9" />
       <path
         d="M 980 60 C 1035 60, 1080 48, 1080 16"
-        stroke="#C4BD97"
-        strokeWidth="1.5"
+        stroke="#003049"
+        strokeWidth="1.75"
         strokeLinecap="round"
       />
       <path
         d="M 980 60 C 1035 60, 1080 72, 1080 104"
-        stroke="#9AAAB9"
-        strokeWidth="1.5"
+        stroke="#42C6D9"
+        strokeWidth="1.75"
         strokeLinecap="round"
       />
       {/* Floating accent dots on right */}
-      <circle cx="1050" cy="30" r="2.5" fill="#B8B28B" />
-      <circle cx="1050" cy="90" r="2.5" fill="#9AAAB9" />
+      <circle cx="1050" cy="30" r="2.5" fill="#003049" />
+      <circle cx="1050" cy="90" r="2.5" fill="#42C6D9" />
     </svg>
   </div>
 );
 
-// Individual Principle Item matching SS 1
+// Individual Principle Item with KreaitX Brand Colors
 const PrincipleItem: React.FC<{
   item: (typeof principles)[0];
   index: number;
@@ -161,16 +165,16 @@ const PrincipleItem: React.FC<{
 
   return (
     <Reveal delay={0.08 * index} yOffset={16}>
-      <div className="group flex flex-col items-start text-left">
-        {/* Top Row: Underlined Serif Number + Circular Icon Badge */}
+      <div className="group flex flex-col items-start text-left cursor-default">
+        {/* Top Row: Underlined Serif Number + Circular Icon Badge in Brand Colors */}
         <div className="flex items-center gap-4 mb-4">
-          <span className="font-serif text-2xl font-normal text-[#003049] tracking-tight pb-0.5 border-b border-[#003049]/40 leading-none">
+          <span className="font-serif text-2xl font-normal text-[#003049] tracking-tight pb-0.5 border-b-2 border-[#42C6D9] leading-none transition-colors group-hover:border-[#003049]">
             {item.number}
           </span>
           <div
-            className={`w-11 h-11 rounded-full flex items-center justify-center transition-transform duration-300 group-hover:scale-105 shadow-xs ${item.badgeBg}`}
+            className={`w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-105 shadow-xs ${item.badgeBg}`}
           >
-            <IconComp className={`h-5 w-5 ${item.iconColor}`} />
+            <IconComp className={`h-5 w-5 transition-colors duration-300 ${item.iconColor}`} />
           </div>
         </div>
 
@@ -216,14 +220,14 @@ export const Difference: React.FC = () => {
               description="A disciplined creative technology approach engineered to eliminate agency ambiguity, align creative storytelling with code, and protect commercial outcomes."
             />
 
-            <div className="shrink-0 flex items-center gap-2 text-xs font-mono text-slate-500 bg-[#F7F8FA] px-4 py-2 rounded-full border border-slate-200">
+            <div className="shrink-0 flex items-center gap-2 text-xs font-mono text-[#003049] bg-[#F7F8FA] px-4 py-2 rounded-full border border-slate-200">
               <span className="w-2 h-2 rounded-full bg-[#42C6D9] animate-pulse" />
-              <span>SIX GUIDING PRINCIPLES</span>
+              <span className="font-bold">SIX GUIDING PRINCIPLES</span>
             </div>
           </div>
         </Reveal>
 
-        {/* Desktop & Tablet Layout (matching SS 1 reference) */}
+        {/* Desktop & Tablet Layout (matching SS 1 reference with KreaitX Brand Palette) */}
         <div className="hidden md:block">
           {/* Top Row: 01, 02, 03 */}
           <div className="grid grid-cols-3 gap-8 lg:gap-14">
@@ -232,7 +236,7 @@ export const Difference: React.FC = () => {
             ))}
           </div>
 
-          {/* Central Connecting Graphic Line */}
+          {/* Central Connecting Graphic Line in Navy & Cyan */}
           <ConnectingTimelineGraphic />
 
           {/* Bottom Row: 04, 05, 06 */}
