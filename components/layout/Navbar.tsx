@@ -83,17 +83,14 @@ export const Navbar: React.FC = () => {
                     key={item.href}
                     href={item.href}
                     className={cn(
-                      "relative px-4 py-2 text-[14px] font-sans font-medium rounded-full transition-all duration-200 min-h-[40px] flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9] focus-visible:ring-offset-2",
+                      "px-3.5 py-2 text-[14px] font-sans transition-colors duration-200 min-h-[40px] flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9] rounded-md",
                       isActive
-                        ? "text-[#003049] font-semibold bg-[#F7F8FA] border border-slate-200/70 shadow-xs"
-                        : "text-slate-600 hover:text-[#003049] hover:bg-[#F7F8FA]"
+                        ? "text-[#003049] font-bold"
+                        : "text-slate-600 hover:text-[#003049] font-medium"
                     )}
                     aria-current={isActive ? "page" : undefined}
                   >
                     <span>{item.label}</span>
-                    {isActive && (
-                      <span className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-[#42C6D9]" />
-                    )}
                   </Link>
                 );
               })}
@@ -196,7 +193,6 @@ export const Navbar: React.FC = () => {
                     )}
                   >
                     <div className="flex items-center gap-3">
-                      {isActive && <span className="w-2 h-2 rounded-full bg-[#42C6D9]" />}
                       <span>{item.label}</span>
                     </div>
                     <ArrowRight
