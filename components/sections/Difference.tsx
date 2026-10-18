@@ -127,12 +127,12 @@ const ConnectingTimelineGraphic: React.FC<{ activeColumn: 1 | 2 | 3 | null }> = 
 
         {/* LEFT CONVERGENCE (Col 1: Items 01 & 04) */}
         <g
-          className={`transition-opacity duration-300 ${
+          className={`transition-all duration-300 ${
             !hasActive
-              ? "opacity-80"
+              ? "opacity-80 filter-none"
               : isCol1Active
-              ? "opacity-100"
-              : "opacity-35"
+              ? "opacity-100 filter-none"
+              : "opacity-35 blur-[0.6px]"
           }`}
         >
           <path
@@ -183,12 +183,12 @@ const ConnectingTimelineGraphic: React.FC<{ activeColumn: 1 | 2 | 3 | null }> = 
 
         {/* CENTER INTERSECTION (Col 2: Items 02 & 05) */}
         <g
-          className={`transition-opacity duration-300 ${
+          className={`transition-all duration-300 ${
             !hasActive
-              ? "opacity-80"
+              ? "opacity-80 filter-none"
               : isCol2Active
-              ? "opacity-100"
-              : "opacity-35"
+              ? "opacity-100 filter-none"
+              : "opacity-35 blur-[0.6px]"
           }`}
         >
           <line
@@ -227,12 +227,12 @@ const ConnectingTimelineGraphic: React.FC<{ activeColumn: 1 | 2 | 3 | null }> = 
 
         {/* RIGHT DIVERGENCE (Col 3: Items 03 & 06) */}
         <g
-          className={`transition-opacity duration-300 ${
+          className={`transition-all duration-300 ${
             !hasActive
-              ? "opacity-80"
+              ? "opacity-80 filter-none"
               : isCol3Active
-              ? "opacity-100"
-              : "opacity-35"
+              ? "opacity-100 filter-none"
+              : "opacity-35 blur-[0.6px]"
           }`}
         >
           <circle
@@ -334,8 +334,8 @@ const PrincipleItem: React.FC<PrincipleItemProps> = ({
             }
           }
         }}
-        className={`group flex flex-col items-start text-left cursor-pointer transition-opacity duration-300 select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9] rounded-2xl p-2 -m-2 ${
-          isMuted ? "opacity-40" : "opacity-100"
+        className={`group flex flex-col items-start text-left cursor-pointer transition-all duration-300 select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9] rounded-2xl p-2 -m-2 ${
+          isMuted ? "opacity-35 blur-[1px] grayscale-[20%]" : "opacity-100 filter-none"
         }`}
       >
         {/* Top Row: Underlined Serif Number + Circular Icon Badge in Brand Colors */}
