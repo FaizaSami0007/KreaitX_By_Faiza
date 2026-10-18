@@ -167,24 +167,24 @@ const PrincipleItem: React.FC<{
     <Reveal delay={0.08 * index} yOffset={16}>
       <div className="group flex flex-col items-start text-left cursor-default">
         {/* Top Row: Underlined Serif Number + Circular Icon Badge in Brand Colors */}
-        <div className="flex items-center gap-4 mb-4">
-          <span className="font-serif text-2xl font-normal text-[#003049] tracking-tight pb-0.5 border-b-2 border-[#42C6D9] leading-none transition-colors group-hover:border-[#003049]">
+        <div className="flex items-center gap-3.5 mb-3.5">
+          <span className="font-serif text-lg sm:text-[21px] font-normal text-[#003049] tracking-tight pb-0.5 border-b-[1.5px] border-[#42C6D9] leading-none transition-colors group-hover:border-[#003049]">
             {item.number}
           </span>
           <div
-            className={`w-11 h-11 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-105 shadow-xs ${item.badgeBg}`}
+            className={`w-9 sm:w-10 h-9 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-105 shadow-xs ${item.badgeBg}`}
           >
-            <IconComp className={`h-5 w-5 transition-colors duration-300 ${item.iconColor}`} />
+            <IconComp className={`h-4.5 w-4.5 sm:h-5 sm:w-5 transition-colors duration-300 ${item.iconColor}`} />
           </div>
         </div>
 
         {/* Title */}
-        <h3 className="text-xl sm:text-2xl font-display font-bold text-slate-900 tracking-tight mb-2.5 transition-colors duration-200 group-hover:text-[#003049]">
+        <h3 className="text-base sm:text-lg lg:text-[19px] font-display font-bold text-slate-900 tracking-tight mb-2 transition-colors duration-200 group-hover:text-[#003049]">
           {item.title}
         </h3>
 
         {/* Description */}
-        <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed font-sans font-normal max-w-[340px]">
+        <p className="text-[13px] sm:text-[14px] text-slate-600 leading-relaxed font-sans font-normal max-w-[320px]">
           {item.description}
         </p>
       </div>
@@ -207,6 +207,7 @@ export const Difference: React.FC = () => {
         <Reveal yOffset={16}>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16 sm:mb-20">
             <SectionHeading
+              className="max-w-2xl"
               eyebrow="Studio Philosophy"
               title={
                 <>
