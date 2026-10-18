@@ -416,11 +416,11 @@ export const Difference: React.FC = () => {
       className="relative bg-white text-slate-900 py-20 sm:py-28 lg:py-32 border-b border-slate-200/80 overflow-hidden"
     >
       <Container size="default" className="relative z-10 w-full max-w-[1320px]">
-        {/* Section Header */}
+        {/* Section Header (Centered) */}
         <Reveal yOffset={16}>
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16 sm:mb-20">
+          <div className="flex flex-col items-center text-center mx-auto max-w-3xl mb-14 sm:mb-20">
             <SectionHeading
-              className="max-w-2xl"
+              align="center"
               eyebrow="Studio Philosophy"
               title={
                 <>
@@ -434,9 +434,9 @@ export const Difference: React.FC = () => {
               description="A disciplined creative technology approach engineered to eliminate agency ambiguity, align creative storytelling with code, and protect commercial outcomes."
             />
 
-            <div className="shrink-0 flex items-center gap-2 text-xs font-mono text-[#003049] bg-[#F7F8FA] px-4 py-2 rounded-full border border-slate-200">
+            <div className="mt-5 inline-flex items-center gap-2 text-xs font-mono text-[#003049] bg-[#F7F8FA] px-4 py-1.5 rounded-full border border-slate-200 shadow-2xs">
               <span className="w-2 h-2 rounded-full bg-[#42C6D9] animate-pulse" />
-              <span className="font-bold">SIX GUIDING PRINCIPLES</span>
+              <span className="font-bold tracking-wider">SIX GUIDING PRINCIPLES</span>
             </div>
           </div>
         </Reveal>
