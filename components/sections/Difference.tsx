@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { Users, Lightbulb, Target, Layers, Heart } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -30,61 +30,73 @@ const principles = [
   {
     id: "01",
     number: "01",
+    column: 1 as const,
     title: "One Connected Team",
     description: "Strategy, design and engineering working as one.",
     icon: Users,
-    badgeBg: "bg-[#003049]/5 border border-[#003049]/15 group-hover:bg-[#003049] group-hover:border-[#003049]",
-    iconColor: "text-[#003049] group-hover:text-[#42C6D9]"
+    activeBadge: "bg-[#003049] text-[#42C6D9] ring-2 ring-[#42C6D9]/50 ring-offset-2 ring-offset-white shadow-md scale-110",
+    inactiveBadge: "bg-[#003049]/5 border border-[#003049]/15 text-slate-400 scale-100"
   },
   {
     id: "02",
     number: "02",
+    column: 2 as const,
     title: "Creative + Technical",
     description: "Designers who understand code. Engineers with an eye for design.",
     icon: Lightbulb,
-    badgeBg: "bg-[#42C6D9]/15 border border-[#42C6D9]/30 group-hover:bg-[#003049] group-hover:border-[#003049]",
-    iconColor: "text-[#003049] group-hover:text-[#42C6D9]"
+    activeBadge: "bg-[#003049] text-[#42C6D9] ring-2 ring-[#42C6D9]/50 ring-offset-2 ring-offset-white shadow-md scale-110",
+    inactiveBadge: "bg-[#42C6D9]/15 border border-[#42C6D9]/30 text-slate-400 scale-100"
   },
   {
     id: "03",
     number: "03",
+    column: 3 as const,
     title: "Business-Centered",
     description: "Every solution is built around real business outcomes.",
     icon: Target,
-    badgeBg: "bg-[#003049]/5 border border-[#003049]/15 group-hover:bg-[#003049] group-hover:border-[#003049]",
-    iconColor: "text-[#003049] group-hover:text-[#42C6D9]"
+    activeBadge: "bg-[#003049] text-[#42C6D9] ring-2 ring-[#42C6D9]/50 ring-offset-2 ring-offset-white shadow-md scale-110",
+    inactiveBadge: "bg-[#003049]/5 border border-[#003049]/15 text-slate-400 scale-100"
   },
   {
     id: "04",
     number: "04",
+    column: 1 as const,
     title: "End-to-End Continuity",
     description: "From discovery to deployment, our senior team stays with you.",
     icon: Layers,
-    badgeBg: "bg-[#42C6D9]/15 border border-[#42C6D9]/30 group-hover:bg-[#003049] group-hover:border-[#003049]",
-    iconColor: "text-[#003049] group-hover:text-[#42C6D9]"
+    activeBadge: "bg-[#003049] text-[#42C6D9] ring-2 ring-[#42C6D9]/50 ring-offset-2 ring-offset-white shadow-md scale-110",
+    inactiveBadge: "bg-[#42C6D9]/15 border border-[#42C6D9]/30 text-slate-400 scale-100"
   },
   {
     id: "05",
     number: "05",
+    column: 2 as const,
     title: "Transparent Process",
     description: "Clear two-week milestones, transparent deliverables, zero ambiguity.",
     icon: TransparentProcessIcon,
-    badgeBg: "bg-[#003049]/5 border border-[#003049]/15 group-hover:bg-[#003049] group-hover:border-[#003049]",
-    iconColor: "text-[#003049] group-hover:text-[#42C6D9]"
+    activeBadge: "bg-[#003049] text-[#42C6D9] ring-2 ring-[#42C6D9]/50 ring-offset-2 ring-offset-white shadow-md scale-110",
+    inactiveBadge: "bg-[#003049]/5 border border-[#003049]/15 text-slate-400 scale-100"
   },
   {
     id: "06",
     number: "06",
+    column: 3 as const,
     title: "Human Collaboration",
     description: "Direct collaboration with senior practitioners. Zero account layers.",
     icon: Heart,
-    badgeBg: "bg-[#42C6D9]/15 border border-[#42C6D9]/30 group-hover:bg-[#003049] group-hover:border-[#003049]",
-    iconColor: "text-[#003049] group-hover:text-[#42C6D9]"
+    activeBadge: "bg-[#003049] text-[#42C6D9] ring-2 ring-[#42C6D9]/50 ring-offset-2 ring-offset-white shadow-md scale-110",
+    inactiveBadge: "bg-[#42C6D9]/15 border border-[#42C6D9]/30 text-slate-400 scale-100"
   }
 ];
 
+const getColumn = (id: string): 1 | 2 | 3 => {
+  if (id === "01" || id === "04") return 1;
+  if (id === "03" || id === "06") return 3;
+  return 2;
+};
+
 // Central Connecting Diagram styled in KreaitX Prussian Navy (#003049) & Cyan (#42C6D9)
-const ConnectingTimelineGraphic: React.FC = () => (
+const ConnectingTimelineGraphic: React.FC<{ activeColumn: 1 | 2 | 3 }> = ({ activeColumn }) => (
   <div
     className="w-full my-6 lg:my-10 overflow-hidden select-none pointer-events-none hidden md:block"
     aria-hidden="true"
@@ -99,92 +111,216 @@ const ConnectingTimelineGraphic: React.FC = () => (
       {/* Central horizontal line connecting left to right */}
       <line x1="220" y1="60" x2="980" y2="60" stroke="#CBD5E1" strokeWidth="1.5" />
 
-      {/* LEFT CONVERGENCE (Col 1 & 4 meet at node) */}
-      <path
-        d="M 120 16 C 120 48, 165 60, 220 60"
-        stroke="#003049"
-        strokeWidth="1.75"
-        strokeLinecap="round"
-      />
-      <path
-        d="M 120 104 C 120 72, 165 60, 220 60"
-        stroke="#42C6D9"
-        strokeWidth="1.75"
-        strokeLinecap="round"
-      />
-      {/* Left node with cyan accent core */}
-      <circle cx="220" cy="60" r="5" fill="#003049" />
-      <circle cx="220" cy="60" r="2" fill="#42C6D9" />
-      {/* Floating accent dots on left */}
-      <circle cx="150" cy="30" r="2.5" fill="#003049" />
-      <circle cx="150" cy="90" r="2.5" fill="#42C6D9" />
+      {/* LEFT CONVERGENCE (Col 1: Items 01 & 04) */}
+      <g className={`transition-all duration-300 ${activeColumn === 1 ? "opacity-100 filter-none" : "opacity-30 blur-[0.3px]"}`}>
+        <path
+          d="M 120 16 C 120 48, 165 60, 220 60"
+          stroke="#003049"
+          strokeWidth={activeColumn === 1 ? "2.5" : "1.5"}
+          strokeLinecap="round"
+          className="transition-all duration-300"
+        />
+        <path
+          d="M 120 104 C 120 72, 165 60, 220 60"
+          stroke="#42C6D9"
+          strokeWidth={activeColumn === 1 ? "2.5" : "1.5"}
+          strokeLinecap="round"
+          className="transition-all duration-300"
+        />
+        {/* Left node with cyan accent core */}
+        <circle
+          cx="220"
+          cy="60"
+          r={activeColumn === 1 ? "6.5" : "5"}
+          fill="#003049"
+          className="transition-all duration-300"
+        />
+        <circle
+          cx="220"
+          cy="60"
+          r={activeColumn === 1 ? "3" : "2"}
+          fill="#42C6D9"
+          className="transition-all duration-300"
+        />
+        {/* Floating accent dots on left */}
+        <circle
+          cx="150"
+          cy="30"
+          r={activeColumn === 1 ? "3.5" : "2.5"}
+          fill="#003049"
+          className="transition-all duration-300"
+        />
+        <circle
+          cx="150"
+          cy="90"
+          r={activeColumn === 1 ? "3.5" : "2.5"}
+          fill="#42C6D9"
+          className="transition-all duration-300"
+        />
+      </g>
 
-      {/* CENTER INTERSECTION (Col 2 & 5) */}
-      <line
-        x1="600"
-        y1="26"
-        x2="600"
-        y2="94"
-        stroke="#003049"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-      {/* Center Cyan node */}
-      <circle cx="600" cy="60" r="5" fill="#42C6D9" />
-      <circle cx="600" cy="26" r="2.5" fill="#003049" />
-      <circle cx="600" cy="94" r="2.5" fill="#42C6D9" />
+      {/* CENTER INTERSECTION (Col 2: Items 02 & 05) */}
+      <g className={`transition-all duration-300 ${activeColumn === 2 ? "opacity-100 filter-none" : "opacity-30 blur-[0.3px]"}`}>
+        <line
+          x1="600"
+          y1="26"
+          x2="600"
+          y2="94"
+          stroke="#003049"
+          strokeWidth={activeColumn === 2 ? "2.5" : "1.5"}
+          strokeLinecap="round"
+          className="transition-all duration-300"
+        />
+        {/* Center Cyan node */}
+        <circle
+          cx="600"
+          cy="60"
+          r={activeColumn === 2 ? "7" : "5"}
+          fill="#42C6D9"
+          className="transition-all duration-300"
+        />
+        <circle
+          cx="600"
+          cy="26"
+          r={activeColumn === 2 ? "3.5" : "2.5"}
+          fill="#003049"
+          className="transition-all duration-300"
+        />
+        <circle
+          cx="600"
+          cy="94"
+          r={activeColumn === 2 ? "3.5" : "2.5"}
+          fill="#42C6D9"
+          className="transition-all duration-300"
+        />
+      </g>
 
-      {/* RIGHT DIVERGENCE (Col 3 & 6 branch out from node) */}
-      <circle cx="980" cy="60" r="5" fill="#003049" />
-      <circle cx="980" cy="60" r="2" fill="#42C6D9" />
-      <path
-        d="M 980 60 C 1035 60, 1080 48, 1080 16"
-        stroke="#003049"
-        strokeWidth="1.75"
-        strokeLinecap="round"
-      />
-      <path
-        d="M 980 60 C 1035 60, 1080 72, 1080 104"
-        stroke="#42C6D9"
-        strokeWidth="1.75"
-        strokeLinecap="round"
-      />
-      {/* Floating accent dots on right */}
-      <circle cx="1050" cy="30" r="2.5" fill="#003049" />
-      <circle cx="1050" cy="90" r="2.5" fill="#42C6D9" />
+      {/* RIGHT DIVERGENCE (Col 3: Items 03 & 06) */}
+      <g className={`transition-all duration-300 ${activeColumn === 3 ? "opacity-100 filter-none" : "opacity-30 blur-[0.3px]"}`}>
+        <circle
+          cx="980"
+          cy="60"
+          r={activeColumn === 3 ? "6.5" : "5"}
+          fill="#003049"
+          className="transition-all duration-300"
+        />
+        <circle
+          cx="980"
+          cy="60"
+          r={activeColumn === 3 ? "3" : "2"}
+          fill="#42C6D9"
+          className="transition-all duration-300"
+        />
+        <path
+          d="M 980 60 C 1035 60, 1080 48, 1080 16"
+          stroke="#003049"
+          strokeWidth={activeColumn === 3 ? "2.5" : "1.5"}
+          strokeLinecap="round"
+          className="transition-all duration-300"
+        />
+        <path
+          d="M 980 60 C 1035 60, 1080 72, 1080 104"
+          stroke="#42C6D9"
+          strokeWidth={activeColumn === 3 ? "2.5" : "1.5"}
+          strokeLinecap="round"
+          className="transition-all duration-300"
+        />
+        {/* Floating accent dots on right */}
+        <circle
+          cx="1050"
+          cy="30"
+          r={activeColumn === 3 ? "3.5" : "2.5"}
+          fill="#003049"
+          className="transition-all duration-300"
+        />
+        <circle
+          cx="1050"
+          cy="90"
+          r={activeColumn === 3 ? "3.5" : "2.5"}
+          fill="#42C6D9"
+          className="transition-all duration-300"
+        />
+      </g>
     </svg>
   </div>
 );
 
-// Individual Principle Item with KreaitX Brand Colors
-const PrincipleItem: React.FC<{
+// Individual Principle Item with Active Hover / Click State & Blur effect on others
+interface PrincipleItemProps {
   item: (typeof principles)[0];
   index: number;
-}> = ({ item, index }) => {
+  isActive: boolean;
+  onActivate: () => void;
+}
+
+const PrincipleItem: React.FC<PrincipleItemProps> = ({
+  item,
+  index,
+  isActive,
+  onActivate
+}) => {
   const IconComp = item.icon;
 
   return (
-    <Reveal delay={0.08 * index} yOffset={16}>
-      <div className="group flex flex-col items-start text-left cursor-default">
+    <Reveal delay={0.08 * (index % 3)} yOffset={16}>
+      <div
+        role="button"
+        tabIndex={0}
+        onMouseEnter={onActivate}
+        onFocus={onActivate}
+        onClick={onActivate}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            onActivate();
+          }
+        }}
+        aria-pressed={isActive}
+        className={`group flex flex-col items-start text-left cursor-pointer transition-all duration-300 select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9] rounded-2xl p-2 -m-2 ${
+          isActive
+            ? "opacity-100 filter-none"
+            : "opacity-35 blur-[0.6px] grayscale-[20%] hover:opacity-85 hover:blur-none hover:grayscale-0"
+        }`}
+      >
         {/* Top Row: Underlined Serif Number + Circular Icon Badge in Brand Colors */}
         <div className="flex items-center gap-3.5 mb-3.5">
-          <span className="font-serif text-lg sm:text-[21px] font-normal text-[#003049] tracking-tight pb-0.5 border-b-[1.5px] border-[#42C6D9] leading-none transition-colors group-hover:border-[#003049]">
+          <span
+            className={`font-serif text-lg sm:text-[21px] font-normal tracking-tight pb-0.5 leading-none transition-all duration-300 ${
+              isActive
+                ? "text-[#003049] border-b-2 border-[#42C6D9]"
+                : "text-slate-400 border-b border-slate-300/60"
+            }`}
+          >
             {item.number}
           </span>
           <div
-            className={`w-9 sm:w-10 h-9 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-105 shadow-xs ${item.badgeBg}`}
+            className={`w-9 sm:w-10 h-9 sm:h-10 rounded-full flex items-center justify-center transition-all duration-300 shadow-xs ${
+              isActive ? item.activeBadge : item.inactiveBadge
+            }`}
           >
-            <IconComp className={`h-4.5 w-4.5 sm:h-5 sm:w-5 transition-colors duration-300 ${item.iconColor}`} />
+            <IconComp
+              className={`h-4.5 w-4.5 sm:h-5 sm:w-5 transition-colors duration-300 ${
+                isActive ? "text-[#42C6D9]" : "text-slate-400"
+              }`}
+            />
           </div>
         </div>
 
         {/* Title */}
-        <h3 className="text-base sm:text-lg lg:text-[19px] font-display font-bold text-slate-900 tracking-tight mb-2 transition-colors duration-200 group-hover:text-[#003049]">
+        <h3
+          className={`text-base sm:text-lg lg:text-[19px] font-display font-bold tracking-tight mb-2 transition-colors duration-300 ${
+            isActive ? "text-[#003049]" : "text-slate-400"
+          }`}
+        >
           {item.title}
         </h3>
 
         {/* Description */}
-        <p className="text-[13px] sm:text-[14px] text-slate-600 leading-relaxed font-sans font-normal max-w-[320px]">
+        <p
+          className={`text-[13px] sm:text-[14px] leading-relaxed font-sans font-normal max-w-[320px] transition-colors duration-300 ${
+            isActive ? "text-slate-700 font-medium" : "text-slate-400"
+          }`}
+        >
           {item.description}
         </p>
       </div>
@@ -193,8 +329,10 @@ const PrincipleItem: React.FC<{
 };
 
 export const Difference: React.FC = () => {
+  const [activeId, setActiveId] = useState<string>("02");
   const topPrinciples = principles.slice(0, 3);
   const bottomPrinciples = principles.slice(3, 6);
+  const activeColumn = getColumn(activeId);
 
   return (
     <section
@@ -233,17 +371,29 @@ export const Difference: React.FC = () => {
           {/* Top Row: 01, 02, 03 */}
           <div className="grid grid-cols-3 gap-8 lg:gap-14">
             {topPrinciples.map((item, idx) => (
-              <PrincipleItem key={item.id} item={item} index={idx} />
+              <PrincipleItem
+                key={item.id}
+                item={item}
+                index={idx}
+                isActive={activeId === item.id}
+                onActivate={() => setActiveId(item.id)}
+              />
             ))}
           </div>
 
-          {/* Central Connecting Graphic Line in Navy & Cyan */}
-          <ConnectingTimelineGraphic />
+          {/* Central Connecting Graphic Line in Navy & Cyan, dynamically tracking active column */}
+          <ConnectingTimelineGraphic activeColumn={activeColumn} />
 
           {/* Bottom Row: 04, 05, 06 */}
           <div className="grid grid-cols-3 gap-8 lg:gap-14">
             {bottomPrinciples.map((item, idx) => (
-              <PrincipleItem key={item.id} item={item} index={idx + 3} />
+              <PrincipleItem
+                key={item.id}
+                item={item}
+                index={idx + 3}
+                isActive={activeId === item.id}
+                onActivate={() => setActiveId(item.id)}
+              />
             ))}
           </div>
         </div>
@@ -252,7 +402,12 @@ export const Difference: React.FC = () => {
         <div className="md:hidden space-y-10">
           {principles.map((item, idx) => (
             <div key={item.id} className="relative">
-              <PrincipleItem item={item} index={idx} />
+              <PrincipleItem
+                item={item}
+                index={idx}
+                isActive={activeId === item.id}
+                onActivate={() => setActiveId(item.id)}
+              />
               {idx < principles.length - 1 && (
                 <div className="pt-8 border-b border-slate-100" />
               )}
