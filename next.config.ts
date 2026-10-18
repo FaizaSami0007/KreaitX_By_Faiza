@@ -23,16 +23,6 @@ const securityHeaders = [
   }
 ];
 
-const devHeaders =
-  process.env.NODE_ENV === "development"
-    ? [
-        {
-          key: "Clear-Site-Data",
-          value: '"cache", "storage"'
-        }
-      ]
-    : [];
-
 const nextConfig: NextConfig = {
   images: {
     formats: ["image/avif", "image/webp"],
@@ -48,7 +38,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/:path*",
-        headers: [...securityHeaders, ...devHeaders]
+        headers: securityHeaders
       }
     ];
   }
