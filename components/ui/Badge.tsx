@@ -18,15 +18,15 @@ export const Badge: React.FC<BadgeProps> = ({
   ...props
 }) => {
   const variantStyles = {
-    default: "bg-[#F7F8FA] text-[#003049] border border-slate-200/90",
-    gradient: "bg-[#F7F8FA] text-[#003049] border border-[#42C6D9]/40",
-    outline: "bg-transparent text-slate-700 border border-slate-200",
-    purple: "bg-slate-100 text-[#003049] border border-slate-200",
-    cyan: "bg-cyan-50 text-cyan-800 border border-cyan-200/80",
-    dark: "bg-[#14213D] text-white border border-slate-800",
-    muted: "bg-slate-100 text-slate-600 border border-slate-200",
-    navy: "bg-[#003049] text-white border border-[#14213D]",
-    porcelain: "bg-[#F7F8FA] text-[#003049] border border-slate-200/90"
+    default: "bg-[#F3ECFF] text-[#6A00F4] border border-[#E9E0F2]",
+    gradient: "bg-[#FFF0D9] text-[#21113D] border border-[#FFD6A5]",
+    outline: "bg-transparent text-[#625A70] border border-[#E9E0F2]",
+    purple: "bg-[#6A00F4] text-white border border-[#6A00F4]",
+    cyan: "bg-[#FFF9F0] text-[#6A00F4] border border-[#E9E0F2]",
+    dark: "bg-[#21113D] text-[#FFD6A5] border border-white/10",
+    muted: "bg-[#FFF9F0] text-[#625A70] border border-[#E9E0F2]",
+    navy: "bg-[#21113D] text-white border border-[#390080]",
+    porcelain: "bg-[#FFF9F0] text-[#211832] border border-[#E9E0F2]"
   };
 
   const sizeStyles = {
@@ -45,7 +45,7 @@ export const Badge: React.FC<BadgeProps> = ({
       {...props}
     >
       {withDot && (
-        <span className="h-1.5 w-1.5 rounded-full bg-[#42C6D9] animate-pulse" />
+        <span className="h-1.5 w-1.5 rounded-full bg-[#6A00F4] animate-pulse" />
       )}
       {children}
     </span>

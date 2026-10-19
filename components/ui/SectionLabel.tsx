@@ -24,13 +24,7 @@ export const SectionLabel: React.FC<SectionLabelProps> = ({
         <span
           className={cn(
             "font-mono text-xs sm:text-sm font-bold tracking-tight",
-            variant === "cyan"
-              ? "text-[#42C6D9]"
-              : variant === "navy"
-              ? "text-[#003049]"
-              : isDark
-              ? "text-[#42C6D9]"
-              : "text-[#003049]"
+            variant === "cyan" || isDark ? "text-[#FFD6A5]" : "text-[#6A00F4]"
           )}
         >
           {number}
@@ -39,26 +33,14 @@ export const SectionLabel: React.FC<SectionLabelProps> = ({
       <span
         className={cn(
           "w-5 h-[2px] rounded-full",
-          variant === "cyan"
-            ? "bg-[#42C6D9]"
-            : variant === "navy"
-            ? "bg-[#003049]"
-            : isDark
-            ? "bg-[#42C6D9]"
-            : "bg-[#003049]"
+          variant === "cyan" || isDark ? "bg-[#FFD6A5]" : "bg-[#6A00F4]"
         )}
         aria-hidden="true"
       />
       <span
         className={cn(
           "text-xs font-sans font-bold uppercase tracking-[0.18em]",
-          variant === "cyan"
-            ? "text-[#42C6D9]"
-            : variant === "navy"
-            ? "text-[#003049]"
-            : isDark
-            ? "text-cyan-200"
-            : "text-[#003049]"
+          variant === "cyan" || isDark ? "text-[#FFD6A5]" : "text-[#6A00F4]"
         )}
       >
         {label}

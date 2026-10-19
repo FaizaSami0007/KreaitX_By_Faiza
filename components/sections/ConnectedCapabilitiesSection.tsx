@@ -21,7 +21,7 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
     <section
       id="connected-capabilities"
       aria-labelledby="connected-capabilities-heading"
-      className="relative bg-[#17324D] text-white py-20 sm:py-28 lg:py-32 border-b border-[#14213D]"
+      className="relative bg-[#21113D] text-white py-20 sm:py-28 lg:py-32 border-b border-white/10"
     >
       <Container size="default" className="relative z-10 w-full max-w-[1320px]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
@@ -31,8 +31,8 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
             
             {/* Eyebrow */}
             <Reveal delay={0.05} yOffset={12}>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-[#DCEEF2] text-xs font-mono font-bold uppercase tracking-wider shadow-subtle">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#DCEEF2]" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#390080]/60 border border-[#FFD6A5]/30 text-[#FFD6A5] text-xs font-mono font-bold uppercase tracking-wider shadow-subtle">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#FFD6A5]" />
                 <span>CONNECTED CAPABILITIES</span>
               </div>
             </Reveal>
@@ -44,7 +44,7 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
                 className="font-display text-4xl sm:text-5xl lg:text-[54px] font-bold text-white tracking-tight leading-[1.08]"
               >
                 Everything we build <br />
-                <span className="font-display font-bold not-italic bg-gradient-to-r from-white via-cyan-100 to-[#DCEEF2] bg-clip-text text-transparent">
+                <span className="font-display font-bold not-italic bg-gradient-to-r from-white via-[#FFD6A5] to-[#FFD6A5] bg-clip-text text-transparent">
                   is connected.
                 </span>
               </h2>
@@ -52,7 +52,7 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
 
             {/* Supporting Idea Copy */}
             <Reveal delay={0.18} yOffset={14}>
-              <p className="text-base sm:text-lg text-slate-300 leading-[1.7] font-sans font-normal">
+              <p className="text-base sm:text-lg text-[#F3ECFF]/85 leading-[1.7] font-sans font-normal">
                 Strategy, creativity, and technology working together to create stronger outcomes for your business — unifying brand narrative, cinematic production, and high-performance software under one roof.
               </p>
             </Reveal>
@@ -62,23 +62,23 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
               <div className="pt-2 flex flex-col sm:flex-row items-start sm:items-center gap-4">
                 <a
                   href="#branding"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-bold text-[#17324D] bg-[#DCEEF2] hover:bg-white shadow-sm transition-all duration-200 hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-bold text-[#21113D] bg-[#FFD6A5] hover:bg-white shadow-sm transition-all duration-200 hover:-translate-y-0.5"
                 >
                   <span>Explore 7 Disciplines</span>
-                  <ArrowDown className="h-4 w-4 text-[#17324D]" />
+                  <ArrowDown className="h-4 w-4 text-[#21113D]" />
                 </a>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#DCEEF2] hover:text-white py-2 transition-colors"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#FFD6A5] hover:text-white py-2 transition-colors"
                 >
                   <span>Discuss Your Scope</span>
-                  <ArrowRight className="h-4 w-4 text-[#DCEEF2]" />
+                  <ArrowRight className="h-4 w-4 text-[#FFD6A5]" />
                 </Link>
               </div>
             </Reveal>
 
             {/* Bottom Meta */}
-            <div className="pt-6 border-t border-white/10 w-full text-xs font-mono text-slate-400 uppercase tracking-wider">
+            <div className="pt-6 border-t border-white/10 w-full text-xs font-mono text-[#FFD6A5]/70 uppercase tracking-wider">
               Single-Source Delivery Model // Peshawar × Global
             </div>
 
@@ -90,22 +90,22 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
               <Reveal key={service.id} delay={0.08 + idx * 0.04} yOffset={12}>
                 <a
                   href={service.href}
-                  className="group flex items-center justify-between p-5 sm:p-6 rounded-2xl bg-[#14213D] border border-white/10 shadow-card hover:border-[#416779] transition-all duration-200 block"
+                  className="group flex items-center justify-between p-5 sm:p-6 rounded-2xl bg-[#180a30] border border-white/10 shadow-card hover:border-[#FFD6A5]/50 transition-all duration-200 block"
                 >
                   <div className="flex items-start sm:items-center gap-4">
-                    <span className="font-mono text-xs sm:text-sm font-bold text-[#DCEEF2] bg-white/10 border border-white/15 px-2.5 py-1 rounded-lg shrink-0">
+                    <span className="font-mono text-xs sm:text-sm font-bold text-[#FFD6A5] bg-[#390080]/60 border border-[#FFD6A5]/30 px-2.5 py-1 rounded-lg shrink-0">
                       {service.number}
                     </span>
                     <div>
-                      <h3 className="font-display text-base sm:text-lg font-bold text-white group-hover:text-[#DCEEF2] transition-colors">
+                      <h3 className="font-display text-base sm:text-lg font-bold text-white group-hover:text-[#FFD6A5] transition-colors">
                         {service.name}
                       </h3>
-                      <p className="text-xs sm:text-sm text-slate-300 font-sans mt-0.5">
+                      <p className="text-xs sm:text-sm text-[#F3ECFF]/80 font-sans mt-0.5">
                         {service.desc}
                       </p>
                     </div>
                   </div>
-                  <div className="w-8 h-8 rounded-full border border-slate-600 flex items-center justify-center text-slate-300 group-hover:border-[#DCEEF2] group-hover:bg-[#DCEEF2] group-hover:text-[#17324D] transition-all duration-200 shrink-0 ml-4">
+                  <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-[#FFD6A5] group-hover:border-[#FFD6A5] group-hover:bg-[#FFD6A5] group-hover:text-[#21113D] transition-all duration-200 shrink-0 ml-4">
                     <ArrowRight className="h-4 w-4" />
                   </div>
                 </a>

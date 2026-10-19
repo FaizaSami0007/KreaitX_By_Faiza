@@ -42,10 +42,10 @@ export const Hero: React.FC = () => {
   const [activeDiscipline, setActiveDiscipline] = useState(0);
 
   return (
-    <section className="relative bg-[#17324D] text-white pt-16 pb-20 sm:pt-20 sm:pb-28 lg:pt-28 lg:pb-32 border-b border-[#14213D] overflow-hidden">
+    <section className="relative bg-[#21113D] text-white pt-16 pb-20 sm:pt-20 sm:pb-28 lg:pt-28 lg:pb-32 border-b border-[#390080]/50 overflow-hidden">
       {/* Background Soft Ambient Accents (Strictly solid radial CSS — NO background images) */}
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#42C6D9]/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#14213D]/70 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#6A00F4]/20 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#FFD6A5]/10 rounded-full blur-3xl pointer-events-none" />
 
       <Container size="default" className="relative z-10 w-full max-w-[1360px]">
         {/* Editorial Grid Composition: Two balanced, deliberate columns */}
@@ -59,8 +59,8 @@ export const Hero: React.FC = () => {
             {/* 1. Studio Status & Eyebrow Badge */}
             <Reveal delay={0.04} yOffset={10}>
               <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 shadow-subtle mb-6 sm:mb-8">
-                <span className="h-2 w-2 rounded-full bg-[#42C6D9] animate-pulse" aria-hidden="true" />
-                <span className="text-[11px] sm:text-xs font-mono font-bold tracking-[0.18em] text-[#42C6D9] uppercase">
+                <span className="h-2 w-2 rounded-full bg-[#FFD6A5] animate-pulse" aria-hidden="true" />
+                <span className="text-[11px] sm:text-xs font-mono font-bold tracking-[0.18em] text-[#FFD6A5] uppercase">
                   KREAITX STUDIO <span className="text-white/40 font-normal mx-1">•</span> CREATIVE TECHNOLOGY
                 </span>
               </div>
@@ -70,7 +70,7 @@ export const Hero: React.FC = () => {
             <Reveal delay={0.1} yOffset={16}>
               <h1 className="font-display text-[clamp(2.5rem,5.5vw,4.75rem)] font-bold text-white tracking-[-0.03em] leading-[1.06] text-balance">
                 Creative vision.{" "}
-                <span className="font-display font-bold text-[#DCEEF2] bg-gradient-to-r from-white via-cyan-100 to-[#42C6D9] bg-clip-text text-transparent">
+                <span className="font-display font-bold text-[#FFD6A5] bg-gradient-to-r from-white via-[#FFF0D9] to-[#FFD6A5] bg-clip-text text-transparent">
                   Engineered for impact
                 </span>
                 .
@@ -119,7 +119,7 @@ export const Hero: React.FC = () => {
             <Reveal delay={0.3} yOffset={12}>
               <div className="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-white/15 w-full grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
                 <div>
-                  <span className="block text-[11px] font-mono uppercase tracking-wider text-[#42C6D9] font-bold">
+                  <span className="block text-[11px] font-mono uppercase tracking-wider text-[#FFD6A5] font-bold">
                     HQ × Reach
                   </span>
                   <span className="text-xs sm:text-sm text-slate-300 font-medium mt-0.5 block">
@@ -127,7 +127,7 @@ export const Hero: React.FC = () => {
                   </span>
                 </div>
                 <div>
-                  <span className="block text-[11px] font-mono uppercase tracking-wider text-[#42C6D9] font-bold">
+                  <span className="block text-[11px] font-mono uppercase tracking-wider text-[#FFD6A5] font-bold">
                     Engagement
                   </span>
                   <span className="text-xs sm:text-sm text-slate-300 font-medium mt-0.5 block">
@@ -135,7 +135,7 @@ export const Hero: React.FC = () => {
                   </span>
                 </div>
                 <div>
-                  <span className="block text-[11px] font-mono uppercase tracking-wider text-[#42C6D9] font-bold">
+                  <span className="block text-[11px] font-mono uppercase tracking-wider text-[#FFD6A5] font-bold">
                     Engineering
                   </span>
                   <span className="text-xs sm:text-sm text-slate-300 font-medium mt-0.5 block">
@@ -152,11 +152,11 @@ export const Hero: React.FC = () => {
           {/* ========================================================= */}
           <div className="lg:col-span-5 w-full">
             <Reveal delay={0.2} yOffset={20}>
-              <div className="rounded-3xl bg-[#14213D] border border-white/15 p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+              <div className="rounded-3xl bg-[#180a30] border border-white/15 p-6 sm:p-8 shadow-2xl relative overflow-hidden">
                 {/* Card Top Utility Bar */}
                 <div className="flex items-center justify-between pb-5 border-b border-white/10">
                   <div className="flex items-center gap-2">
-                    <span className="h-2.5 w-2.5 rounded-full bg-[#42C6D9]" aria-hidden="true" />
+                    <span className="h-2.5 w-2.5 rounded-full bg-[#FFD6A5]" aria-hidden="true" />
                     <span className="text-xs font-mono uppercase tracking-wider text-white font-bold">
                       Connected Discipline Matrix
                     </span>
@@ -178,13 +178,13 @@ export const Hero: React.FC = () => {
                         onClick={() => setActiveDiscipline(idx)}
                         className={`p-4 sm:p-5 rounded-2xl border transition-all duration-300 cursor-pointer ${
                           isSelected
-                            ? "bg-[#17324D] border-[#42C6D9]/60 shadow-brand-button"
+                            ? "bg-[#390080] border-[#FFD6A5]/60 shadow-brand-button"
                             : "bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20"
                         }`}
                       >
                         <div className="flex items-start justify-between gap-3">
                           <div className="flex items-center gap-3">
-                            <div className={`p-2 rounded-xl ${isSelected ? "bg-[#42C6D9] text-[#003049]" : "bg-white/10 text-white"}`}>
+                            <div className={`p-2 rounded-xl ${isSelected ? "bg-[#FFD6A5] text-[#21113D]" : "bg-white/10 text-white"}`}>
                               <Icon className="h-4 w-4" aria-hidden="true" />
                             </div>
                             <div>
@@ -197,7 +197,7 @@ export const Hero: React.FC = () => {
                             </div>
                           </div>
 
-                          <span className={`text-xs font-mono font-medium shrink-0 px-2.5 py-1 rounded-full ${isSelected ? "bg-[#42C6D9]/20 text-[#42C6D9]" : "bg-white/10 text-slate-300"}`}>
+                          <span className={`text-xs font-mono font-medium shrink-0 px-2.5 py-1 rounded-full ${isSelected ? "bg-[#FFD6A5]/20 text-[#FFD6A5]" : "bg-white/10 text-slate-300"}`}>
                             {item.metrics}
                           </span>
                         </div>
@@ -210,7 +210,7 @@ export const Hero: React.FC = () => {
                             <div className="space-y-1.5">
                               {item.deliverables.map((deliv) => (
                                 <div key={deliv} className="flex items-center gap-2 text-xs text-slate-300">
-                                  <CheckCircle2 className="h-3.5 w-3.5 text-[#42C6D9] shrink-0" aria-hidden="true" />
+                                  <CheckCircle2 className="h-3.5 w-3.5 text-[#FFD6A5] shrink-0" aria-hidden="true" />
                                   <span>{deliv}</span>
                                 </div>
                               ))}
@@ -229,7 +229,7 @@ export const Hero: React.FC = () => {
                   </span>
                   <Link
                     href="/solutions"
-                    className="inline-flex items-center font-semibold text-[#42C6D9] hover:text-cyan-200 transition-colors group"
+                    className="inline-flex items-center font-semibold text-[#FFD6A5] hover:text-white transition-colors group"
                   >
                     <span>View All 7 Solutions</span>
                     <ArrowUpRight className="ml-1 h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

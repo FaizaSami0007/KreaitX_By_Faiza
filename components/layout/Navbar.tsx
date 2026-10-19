@@ -54,22 +54,22 @@ export const Navbar: React.FC = () => {
     <>
       <header
         className={cn(
-          "sticky top-0 z-40 w-full transition-all duration-300 bg-white",
+          "sticky top-0 z-40 w-full transition-all duration-300 bg-[#FFF9F0]/95 backdrop-blur-md",
           scrolled
-            ? "border-b border-slate-200 shadow-sm py-3"
-            : "border-b border-slate-200/80 py-4 lg:py-4.5"
+            ? "border-b border-[#E9E0F2] shadow-sm py-3"
+            : "border-b border-[#E9E0F2]/80 py-4 lg:py-4.5"
         )}
       >
         <Container size="default">
           <nav className="flex items-center justify-between" aria-label="Main Navigation">
-            {/* Clickable Logo with Brand Cyan Accent */}
+            {/* Clickable Logo with Brand Purple Accent */}
             <Link
               href="/"
-              className="group flex items-center gap-0.5 text-2xl font-display font-bold tracking-tight text-[#17324D] transition-opacity duration-200 hover:opacity-90 cursor-pointer min-h-[44px] min-w-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#416779] focus-visible:ring-offset-2 rounded-lg px-1 items-center"
+              className="group flex items-center gap-0.5 text-2xl font-display font-bold tracking-tight text-[#211832] transition-opacity duration-200 hover:opacity-90 cursor-pointer min-h-[44px] min-w-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6A00F4] focus-visible:ring-offset-2 rounded-lg px-1 items-center"
               aria-label="KreaitX — Home"
             >
               <span>Kreait</span>
-              <span className="text-[#42C6D9] font-extrabold transition-transform duration-200 group-hover:scale-105">
+              <span className="text-[#6A00F4] font-extrabold transition-transform duration-200 group-hover:scale-105">
                 X
               </span>
             </Link>
@@ -83,16 +83,16 @@ export const Navbar: React.FC = () => {
                     key={item.href}
                     href={item.href}
                     className={cn(
-                      "relative px-4 py-2 text-[14px] font-sans transition-all duration-200 min-h-[44px] flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#416779] rounded-lg",
+                      "relative px-4 py-2 text-[14px] font-sans transition-all duration-200 min-h-[44px] flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6A00F4] rounded-lg",
                       isActive
-                        ? "text-[#17324D] font-bold"
-                        : "text-[#596A7B] hover:text-[#17324D] hover:bg-[#F4F7FA] font-medium"
+                        ? "text-[#6A00F4] font-bold"
+                        : "text-[#625A70] hover:text-[#6A00F4] hover:bg-[#F3ECFF] font-medium"
                     )}
                     aria-current={isActive ? "page" : undefined}
                   >
                     <span>{item.label}</span>
                     {isActive && (
-                      <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-[#17324D] rounded-full" aria-hidden="true" />
+                      <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-[#6A00F4] rounded-full" aria-hidden="true" />
                     )}
                   </Link>
                 );
@@ -103,10 +103,10 @@ export const Navbar: React.FC = () => {
             <div className="hidden lg:flex items-center gap-3">
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center text-[14px] font-sans font-semibold text-white bg-[#17324D] hover:bg-[#14213D] px-6 py-2.5 min-h-[44px] rounded-full transition-all duration-300 hover:-translate-y-0.5 shadow-brand-button active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#416779] focus-visible:ring-offset-2"
+                className="group inline-flex items-center justify-center text-[14px] font-sans font-semibold text-white bg-[#6A00F4] hover:bg-[#390080] px-6 py-2.5 min-h-[44px] rounded-full transition-all duration-300 hover:-translate-y-0.5 shadow-brand-button active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6A00F4] focus-visible:ring-offset-2"
               >
                 <span>Start a Project</span>
-                <ArrowRight className="ml-2 h-4 w-4 text-[#42C6D9] transition-transform duration-200 group-hover:translate-x-1" />
+                <ArrowRight className="ml-2 h-4 w-4 text-[#FFD6A5] transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
             </div>
 
@@ -114,14 +114,14 @@ export const Navbar: React.FC = () => {
             <div className="flex items-center gap-2.5 lg:hidden">
               <Link
                 href="/contact"
-                className="inline-flex sm:hidden text-xs font-semibold text-white bg-[#17324D] hover:bg-[#14213D] px-4 py-2 rounded-full min-h-[44px] items-center justify-center shadow-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#416779]"
+                className="inline-flex sm:hidden text-xs font-semibold text-white bg-[#6A00F4] hover:bg-[#390080] px-4 py-2 rounded-full min-h-[44px] items-center justify-center shadow-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6A00F4]"
               >
                 Inquire
               </Link>
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(true)}
-                className="inline-flex items-center justify-center p-2.5 min-h-[44px] min-w-[44px] rounded-full text-[#25313D] hover:bg-[#F4F7FA] border border-[#E2E8EF] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#416779] focus-visible:ring-offset-2"
+                className="inline-flex items-center justify-center p-2.5 min-h-[44px] min-w-[44px] rounded-full text-[#211832] hover:bg-[#F3ECFF] border border-[#E9E0F2] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6A00F4] focus-visible:ring-offset-2"
                 aria-expanded={mobileMenuOpen}
                 aria-controls="mobile-menu-drawer"
                 aria-label="Open navigation menu"
@@ -138,35 +138,35 @@ export const Navbar: React.FC = () => {
         <div
           id="mobile-menu-drawer"
           ref={drawerRef}
-          className="fixed inset-0 z-[100] flex flex-col bg-white lg:hidden animate-in fade-in duration-200"
+          className="fixed inset-0 z-[100] flex flex-col bg-[#FFF9F0] lg:hidden animate-in fade-in duration-200"
           role="dialog"
           aria-modal="true"
           aria-label="Mobile Navigation Menu"
         >
           {/* Top Bar matching header */}
-          <div className="flex items-center justify-between px-6 py-4 border-b border-slate-200 bg-white shrink-0">
+          <div className="flex items-center justify-between px-6 py-4 border-b border-[#E9E0F2] bg-[#FFF9F0] shrink-0">
             <Link
               href="/"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center gap-0.5 text-2xl font-display font-bold tracking-tight text-[#003049]"
+              className="flex items-center gap-0.5 text-2xl font-display font-bold tracking-tight text-[#211832]"
               aria-label="KreaitX — Home"
             >
               <span>Kreait</span>
-              <span className="text-[#42C6D9] font-extrabold">X</span>
+              <span className="text-[#6A00F4] font-extrabold">X</span>
             </Link>
 
             <div className="flex items-center gap-2">
               <Link
                 href="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="inline-flex text-xs font-semibold text-white bg-[#003049] hover:bg-[#14213D] px-3.5 py-2 rounded-full min-h-[40px] items-center justify-center shadow-subtle"
+                className="inline-flex text-xs font-semibold text-white bg-[#6A00F4] hover:bg-[#390080] px-3.5 py-2 rounded-full min-h-[40px] items-center justify-center shadow-subtle"
               >
                 Talk
               </Link>
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}
-                className="inline-flex items-center justify-center p-2 rounded-full text-slate-800 hover:bg-[#F7F8FA] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9]"
+                className="inline-flex items-center justify-center p-2 rounded-full text-[#211832] hover:bg-[#F3ECFF] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6A00F4]"
                 aria-label="Close navigation menu"
               >
                 <X className="h-6 w-6" />
@@ -177,7 +177,7 @@ export const Navbar: React.FC = () => {
           {/* Scrollable Navigation Body */}
           <div className="flex-1 overflow-y-auto px-6 py-6 pb-[max(2rem,env(safe-area-inset-bottom,0px))] flex flex-col justify-between">
             <div className="flex flex-col space-y-2">
-              <span className="text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-[#003049] px-3 pb-1">
+              <span className="text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-[#6A00F4] px-3 pb-1">
                 MENU NAVIGATION
               </span>
               
@@ -191,8 +191,8 @@ export const Navbar: React.FC = () => {
                     className={cn(
                       "flex items-center justify-between px-4 py-3.5 min-h-[50px] text-lg rounded-2xl transition-all duration-150 active:scale-[0.99]",
                       isActive
-                        ? "bg-[#F7F8FA] text-[#003049] font-semibold border border-[#42C6D9]/40"
-                        : "text-slate-800 hover:bg-slate-50 font-medium border border-slate-200/80 bg-white"
+                        ? "bg-[#F3ECFF] text-[#6A00F4] font-semibold border border-[#6A00F4]/30"
+                        : "text-[#211832] hover:bg-white font-medium border border-[#E9E0F2] bg-[#FFF9F0]"
                     )}
                   >
                     <div className="flex items-center gap-3">
@@ -201,7 +201,7 @@ export const Navbar: React.FC = () => {
                     <ArrowRight
                       className={cn(
                         "h-4 w-4 transition-transform",
-                        isActive ? "text-[#42C6D9]" : "text-slate-400"
+                        isActive ? "text-[#6A00F4]" : "text-[#625A70]"
                       )}
                     />
                   </Link>
@@ -210,20 +210,20 @@ export const Navbar: React.FC = () => {
             </div>
 
             {/* Bottom Action & Location Info */}
-            <div className="mt-8 pt-6 border-t border-slate-200 flex flex-col gap-4">
+            <div className="mt-8 pt-6 border-t border-[#E9E0F2] flex flex-col gap-4">
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center text-sm font-semibold text-white bg-[#003049] hover:bg-[#14213D] px-6 py-3.5 min-h-[48px] rounded-full transition-all duration-200 shadow-brand-button"
+                className="group inline-flex items-center justify-center text-sm font-semibold text-white bg-[#6A00F4] hover:bg-[#390080] px-6 py-3.5 min-h-[48px] rounded-full transition-all duration-200 shadow-brand-button"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span>Start a Project</span>
-                <ArrowRight className="ml-2 h-4 w-4 text-[#42C6D9] transition-transform duration-200 group-hover:translate-x-1" />
+                <ArrowRight className="ml-2 h-4 w-4 text-[#FFD6A5] transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
 
-              <div className="mt-2 text-xs text-slate-500 space-y-1">
-                <p className="font-semibold text-slate-800">KreaitX Creative Technology</p>
+              <div className="mt-2 text-xs text-[#625A70] space-y-1">
+                <p className="font-semibold text-[#211832]">KreaitX Creative Technology</p>
                 <p>{siteConfig.location.formatted}</p>
-                <p className="text-[#003049] font-medium">{siteConfig.contact.email}</p>
+                <p className="text-[#6A00F4] font-medium">{siteConfig.contact.email}</p>
               </div>
             </div>
           </div>

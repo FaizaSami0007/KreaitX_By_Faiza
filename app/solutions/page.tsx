@@ -94,27 +94,27 @@ export default function SolutionsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       
-      {/* Services Page Hero — Prussian Navy Brand Theme */}
-      <section className="relative bg-[#17324D] text-white py-20 lg:py-28 border-b border-[#14213D] overflow-hidden">
+      {/* Services Page Hero — Dark Plum & Cream Soda Brand Theme */}
+      <section className="relative bg-[#21113D] text-white py-20 lg:py-28 border-b border-white/10 overflow-hidden">
         {/* Ambient Glows */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#416779]/20 via-[#14213D]/40 to-transparent rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#416779]/15 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#14213D]/60 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#6A00F4]/25 via-[#390080]/30 to-transparent rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#6A00F4]/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#FFD6A5]/15 rounded-full blur-3xl pointer-events-none" />
 
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#DCEEF2] px-4 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-md shadow-subtle mb-6 hover:border-[#DCEEF2]/50 transition-colors">
-                <Sparkles className="h-3.5 w-3.5 text-[#DCEEF2] animate-pulse" />
+              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#FFD6A5] px-4 py-1.5 rounded-full bg-[#390080]/60 border border-[#FFD6A5]/30 backdrop-blur-md shadow-subtle mb-6 hover:border-[#FFD6A5]/50 transition-colors">
+                <Sparkles className="h-3.5 w-3.5 text-[#FFD6A5] animate-pulse" />
                 <span>Capabilities × Solutions Architecture</span>
               </span>
               <h1 className="font-display text-[clamp(2rem,4.5vw,3.75rem)] font-bold text-white tracking-tight leading-[1.08]">
                 Creative &amp; digital capabilities,{" "}
-                <span className="font-display font-bold not-italic bg-gradient-to-r from-white via-cyan-100 to-[#DCEEF2] bg-clip-text text-transparent">
+                <span className="font-display font-bold not-italic bg-gradient-to-r from-white via-[#FFD6A5] to-[#FFD6A5] bg-clip-text text-transparent">
                   connected
                 </span>.
               </h1>
-              <p className="mt-6 text-lg sm:text-xl text-slate-200 leading-relaxed font-sans font-normal max-w-2xl">
+              <p className="mt-6 text-lg sm:text-xl text-[#F3ECFF]/85 leading-relaxed font-sans font-normal max-w-2xl">
                 We organize our capabilities around your business challenges rather than isolated deliverables. Discover how each discipline integrates seamlessly into your broader growth engine.
               </p>
 
@@ -124,7 +124,7 @@ export default function SolutionsPage() {
                 </Button>
                 <a
                   href="#connected-capabilities"
-                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-full text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/40 shadow-sm transition-all duration-200 w-full sm:w-auto hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-full text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 hover:border-[#FFD6A5]/50 shadow-sm transition-all duration-200 w-full sm:w-auto hover:-translate-y-0.5"
                 >
                   Explore All 7 Services ↓
                 </a>

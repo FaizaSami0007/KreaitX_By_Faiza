@@ -21,27 +21,27 @@ export const WorkClient: React.FC = () => {
 
   return (
     <>
-      {/* Work Page Hero — Prussian Navy Brand Theme */}
-      <section className="relative bg-[#17324D] text-white py-20 lg:py-28 border-b border-[#14213D] overflow-hidden">
+      {/* Work Page Hero — Dark Plum & Cream Soda Brand Theme */}
+      <section className="relative bg-[#21113D] text-white py-20 lg:py-28 border-b border-white/10 overflow-hidden">
         {/* Ambient Glows */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#416779]/20 via-[#14213D]/40 to-transparent rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#416779]/15 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#14213D]/60 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#6A00F4]/25 via-[#390080]/30 to-transparent rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#6A00F4]/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#FFD6A5]/15 rounded-full blur-3xl pointer-events-none" />
 
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#DCEEF2] px-4 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-md shadow-subtle mb-6 hover:border-[#DCEEF2]/50 transition-colors">
-                <Sparkles className="h-3.5 w-3.5 text-[#DCEEF2] animate-pulse" />
+              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#FFD6A5] px-4 py-1.5 rounded-full bg-[#390080]/60 border border-[#FFD6A5]/30 backdrop-blur-md shadow-subtle mb-6 hover:border-[#FFD6A5]/50 transition-colors">
+                <Sparkles className="h-3.5 w-3.5 text-[#FFD6A5] animate-pulse" />
                 <span>Portfolio × Selected Case Studies</span>
               </span>
               <h1 className="font-display text-[clamp(2rem,4.5vw,3.75rem)] font-bold text-white tracking-tight leading-[1.08]">
                 Real projects.{" "}
-                <span className="font-display font-bold not-italic bg-gradient-to-r from-white via-cyan-100 to-[#DCEEF2] bg-clip-text text-transparent">
+                <span className="font-display font-bold not-italic bg-gradient-to-r from-white via-[#FFD6A5] to-[#FFD6A5] bg-clip-text text-transparent">
                   Real business context
                 </span>.
               </h1>
-              <p className="mt-6 text-lg sm:text-xl text-slate-200 leading-relaxed font-sans font-normal max-w-2xl">
+              <p className="mt-6 text-lg sm:text-xl text-[#F3ECFF]/85 leading-relaxed font-sans font-normal max-w-2xl">
                 Every project we undertake is grounded in a real commercial problem. Explore how we align brand strategy, cinematic media, and high-performance engineering to deliver measurable impact.
               </p>
 
@@ -51,7 +51,7 @@ export const WorkClient: React.FC = () => {
                 </Button>
                 <a
                   href="#projects-feed"
-                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-full text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/40 shadow-sm transition-all duration-200 w-full sm:w-auto hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-full text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 hover:border-[#FFD6A5]/50 shadow-sm transition-all duration-200 w-full sm:w-auto hover:-translate-y-0.5"
                 >
                   Browse Case Studies ↓
                 </a>
@@ -62,11 +62,11 @@ export const WorkClient: React.FC = () => {
       </section>
 
       {/* Filter Bar */}
-      <section id="projects-feed" className="bg-white border-b border-[#E2E8EF] py-4 sticky top-[65px] z-30 shadow-sm">
+      <section id="projects-feed" className="bg-[#FFF9F0] border-b border-[#E9E0F2] py-4 sticky top-[65px] z-30 shadow-xs">
         <Container size="default">
           <div className="flex items-center justify-between gap-4 overflow-x-auto no-scrollbar">
             <div className="flex items-center gap-2">
-              <Filter className="h-4 w-4 text-[#596A7B] hidden sm:block" />
+              <Filter className="h-4 w-4 text-[#625A70] hidden sm:block" />
               {categories.map((cat) => (
                 <button
                   key={cat}
@@ -74,8 +74,8 @@ export const WorkClient: React.FC = () => {
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-4 py-2 rounded-full text-xs sm:text-sm font-sans font-semibold transition-all cursor-pointer shrink-0 min-h-[40px] ${
                     selectedCategory === cat
-                      ? "bg-[#17324D] text-white shadow-brand-button"
-                      : "bg-[#F4F7FA] text-[#25313D] hover:bg-[#EDF2F6] hover:text-[#17324D] border border-[#E2E8EF]"
+                      ? "bg-[#6A00F4] text-white shadow-brand-button"
+                      : "bg-white text-[#211832] hover:bg-[#F3ECFF] hover:text-[#6A00F4] border border-[#E9E0F2]"
                   }`}
                 >
                   {cat}
@@ -83,7 +83,7 @@ export const WorkClient: React.FC = () => {
               ))}
             </div>
 
-            <span className="text-xs font-sans font-semibold text-[#596A7B] shrink-0 hidden md:block">
+            <span className="text-xs font-sans font-semibold text-[#625A70] shrink-0 hidden md:block">
               Showing {filteredProjects.length} Case Studies
             </span>
           </div>
@@ -91,24 +91,24 @@ export const WorkClient: React.FC = () => {
       </section>
 
       {/* Projects Deep Dive */}
-      <section className="bg-[#F4F7FA] py-20 sm:py-28 border-b border-[#E2E8EF]">
+      <section className="bg-[#FFF9F0] py-20 sm:py-28 border-b border-[#E9E0F2]">
         <Container size="default">
           <div className="space-y-16 sm:space-y-24">
             {filteredProjects.map((project, idx) => (
               <article
                 key={project.id}
                 id={project.id}
-                className="scroll-mt-32 rounded-3xl bg-white border border-[#E2E8EF] shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden"
+                className="scroll-mt-32 rounded-3xl bg-white border border-[#E9E0F2] shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden"
               >
                 {/* Case Study Header Banner */}
-                <div className="bg-[#17324D] text-white p-5 sm:p-10 lg:p-12 border-b border-[#14213D] relative overflow-hidden">
+                <div className="bg-[#21113D] text-white p-5 sm:p-10 lg:p-12 border-b border-white/10 relative overflow-hidden">
                   <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
                     <div>
                       <div className="flex items-center gap-3 mb-3">
-                        <span className="px-3.5 py-1 rounded-full bg-white/10 text-white text-xs font-mono backdrop-blur-sm border border-white/15">
+                        <span className="px-3.5 py-1 rounded-full bg-white/10 text-[#FFD6A5] text-xs font-mono backdrop-blur-sm border border-white/15">
                           Case Study 0{idx + 1}
                         </span>
-                        <span className="text-xs text-[#DCEEF2] uppercase font-bold tracking-wider">
+                        <span className="text-xs text-[#FFD6A5] uppercase font-bold tracking-wider">
                           {project.industry}
                         </span>
                         <span className="text-xs text-slate-300">• {project.year}</span>
@@ -120,7 +120,7 @@ export const WorkClient: React.FC = () => {
 
                     <div className="shrink-0 flex flex-col md:items-end justify-between gap-3">
                       <div>
-                        <span className="text-xs font-sans uppercase tracking-wider text-[#42C6D9] font-bold block mb-1">
+                        <span className="text-xs font-sans uppercase tracking-wider text-[#FFD6A5] font-bold block mb-1">
                           Client Partner
                         </span>
                         <span className="text-lg font-display font-bold text-white">
@@ -132,7 +132,7 @@ export const WorkClient: React.FC = () => {
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-sans font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 transition-all duration-200"
                       >
                         <span>Read Case Study</span>
-                        <ArrowRight className="h-3.5 w-3.5 text-[#42C6D9]" />
+                        <ArrowRight className="h-3.5 w-3.5 text-[#FFD6A5]" />
                       </Link>
                     </div>
                   </div>
@@ -144,39 +144,39 @@ export const WorkClient: React.FC = () => {
                     {/* Left: Challenge, Strategy, Execution */}
                     <div className="lg:col-span-7 space-y-8">
                       <div>
-                        <h3 className="text-xs font-sans uppercase tracking-wider text-[#003049] font-bold mb-2 flex items-center gap-1.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#42C6D9]" />
+                        <h3 className="text-xs font-sans uppercase tracking-wider text-[#6A00F4] font-bold mb-2 flex items-center gap-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#6A00F4]" />
                           Project Summary
                         </h3>
-                        <p className="text-lg text-slate-800 font-sans font-normal leading-relaxed">
+                        <p className="text-lg text-[#211832] font-sans font-normal leading-relaxed">
                           {project.summary}
                         </p>
                       </div>
 
-                      <div className="space-y-6 pt-6 border-t border-slate-100">
-                        <div className="p-5 rounded-2xl bg-[#F7F8FA] border border-slate-200/60">
-                          <h4 className="text-xs font-sans uppercase tracking-wider text-slate-900 font-bold mb-2">
+                      <div className="space-y-6 pt-6 border-t border-[#E9E0F2]">
+                        <div className="p-5 rounded-2xl bg-[#FFF9F0] border border-[#E9E0F2]">
+                          <h4 className="text-xs font-sans uppercase tracking-wider text-[#211832] font-bold mb-2">
                             The Challenge
                           </h4>
-                          <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-sans">
+                          <p className="text-sm sm:text-base text-[#625A70] leading-relaxed font-sans">
                             {project.challenge}
                           </p>
                         </div>
 
-                        <div className="p-5 rounded-2xl bg-[#003049]/5 border border-[#003049]/15">
-                          <h4 className="text-xs font-sans uppercase tracking-wider text-[#003049] font-bold mb-2">
+                        <div className="p-5 rounded-2xl bg-[#F3ECFF] border border-[#E9E0F2]">
+                          <h4 className="text-xs font-sans uppercase tracking-wider text-[#6A00F4] font-bold mb-2">
                             The Strategy
                           </h4>
-                          <p className="text-sm sm:text-base text-slate-800 leading-relaxed font-sans">
+                          <p className="text-sm sm:text-base text-[#211832] leading-relaxed font-sans">
                             {project.strategy}
                           </p>
                         </div>
 
-                        <div className="p-5 rounded-2xl bg-[#F7F8FA] border border-slate-200/60">
-                          <h4 className="text-xs font-sans uppercase tracking-wider text-slate-900 font-bold mb-2">
+                        <div className="p-5 rounded-2xl bg-[#FFF9F0] border border-[#E9E0F2]">
+                          <h4 className="text-xs font-sans uppercase tracking-wider text-[#211832] font-bold mb-2">
                             The Execution
                           </h4>
-                          <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-sans">
+                          <p className="text-sm sm:text-base text-[#625A70] leading-relaxed font-sans">
                             {project.execution}
                           </p>
                         </div>
@@ -186,8 +186,8 @@ export const WorkClient: React.FC = () => {
                     {/* Right: Deliverables, Results & Impact Box */}
                     <div className="lg:col-span-5 space-y-6">
                       {/* Measured Impact Card */}
-                      <div className="rounded-3xl bg-[#003049] text-white p-7 sm:p-8 border border-[#14213D] shadow-card">
-                        <span className="text-xs font-sans uppercase tracking-wider text-[#42C6D9] font-bold block mb-2">
+                      <div className="rounded-3xl bg-[#21113D] text-white p-7 sm:p-8 border border-[#FFD6A5]/25 shadow-card">
+                        <span className="text-xs font-sans uppercase tracking-wider text-[#FFD6A5] font-bold block mb-2">
                           Measured Business Impact
                         </span>
                         <p className="text-xl sm:text-2xl font-display font-bold text-white leading-relaxed">
@@ -196,17 +196,17 @@ export const WorkClient: React.FC = () => {
                       </div>
 
                       {/* Deliverables List */}
-                      <div className="rounded-3xl bg-white p-7 sm:p-8 border border-slate-200/80 shadow-card">
-                        <span className="text-xs font-sans uppercase tracking-wider text-slate-900 font-bold block mb-4">
+                      <div className="rounded-3xl bg-white p-7 sm:p-8 border border-[#E9E0F2] shadow-card">
+                        <span className="text-xs font-sans uppercase tracking-wider text-[#211832] font-bold block mb-4">
                           Delivered Assets &amp; Systems
                         </span>
                         <ul className="space-y-3">
                           {project.deliverables.map((del) => (
                             <li
                               key={del}
-                              className="flex items-center gap-2.5 text-sm font-medium text-slate-800"
+                              className="flex items-center gap-2.5 text-sm font-medium text-[#211832]"
                             >
-                              <CheckCircle2 className="h-4 w-4 text-[#003049] shrink-0" />
+                              <CheckCircle2 className="h-4 w-4 text-[#6A00F4] shrink-0" />
                               <span>{del}</span>
                             </li>
                           ))}
@@ -214,8 +214,8 @@ export const WorkClient: React.FC = () => {
                       </div>
 
                       {/* Services badges */}
-                      <div className="p-5 rounded-2xl bg-[#F7F8FA] border border-slate-200/80">
-                        <span className="text-xs font-sans uppercase tracking-wider text-slate-500 font-bold block mb-2.5">
+                      <div className="p-5 rounded-2xl bg-[#FFF9F0] border border-[#E9E0F2]">
+                        <span className="text-xs font-sans uppercase tracking-wider text-[#625A70] font-bold block mb-2.5">
                           Capabilities Involved
                         </span>
                         <div className="flex flex-wrap gap-1.5">
@@ -235,14 +235,14 @@ export const WorkClient: React.FC = () => {
                               <Link
                                 key={s}
                                 href={`/solutions/${slug}`}
-                                className="text-xs font-medium text-slate-700 bg-white hover:bg-[#003049] hover:text-white border border-slate-200 hover:border-[#003049] px-3 py-1 rounded-full shadow-subtle transition-all duration-200"
+                                className="text-xs font-medium text-[#211832] bg-white hover:bg-[#6A00F4] hover:text-white border border-[#E9E0F2] hover:border-[#6A00F4] px-3 py-1 rounded-full shadow-subtle transition-all duration-200"
                               >
                                 {s}
                               </Link>
                             ) : (
                               <span
                                 key={s}
-                                className="text-xs font-medium text-slate-700 bg-white border border-slate-200 px-3 py-1 rounded-full shadow-subtle"
+                                className="text-xs font-medium text-[#625A70] bg-white border border-[#E9E0F2] px-3 py-1 rounded-full shadow-subtle"
                               >
                                 {s}
                               </span>
@@ -255,10 +255,10 @@ export const WorkClient: React.FC = () => {
                       <div className="pt-2">
                         <Link
                           href={`/work/${project.slug}`}
-                          className="w-full group inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-sans font-semibold text-white bg-[#003049] hover:bg-[#14213D] shadow-brand-button transition-all duration-300 hover:-translate-y-0.5"
+                          className="w-full group inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full text-sm font-sans font-semibold text-white bg-[#6A00F4] hover:bg-[#390080] shadow-brand-button transition-all duration-300 hover:-translate-y-0.5"
                         >
                           <span>Explore Dedicated Case Study</span>
-                          <ArrowRight className="h-4 w-4 text-[#42C6D9] transition-transform duration-200 group-hover:translate-x-1" />
+                          <ArrowRight className="h-4 w-4 text-[#FFD6A5] transition-transform duration-200 group-hover:translate-x-1" />
                         </Link>
                       </div>
                     </div>

@@ -38,23 +38,23 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variantStyles = {
       primary:
-        "bg-[#17324D] hover:bg-[#14213D] text-white shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#416779]",
+        "bg-[#6A00F4] hover:bg-[#390080] text-white shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#6A00F4]",
       navy:
-        "bg-[#17324D] hover:bg-[#14213D] text-white shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#416779]",
+        "bg-[#6A00F4] hover:bg-[#390080] text-white shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#6A00F4]",
       cyan:
-        "bg-[#42C6D9] hover:bg-[#34B8CB] text-[#17324D] font-bold shadow-sm hover:-translate-y-0.5 focus-visible:ring-[#17324D]",
+        "bg-[#FFD6A5] hover:bg-[#FFE0B8] text-[#21113D] font-bold shadow-sm hover:-translate-y-0.5 focus-visible:ring-[#6A00F4]",
       gradient:
-        "bg-gradient-to-r from-[#17324D] via-[#14213D] to-[#42C6D9] text-white shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#416779]",
+        "bg-gradient-to-r from-[#6A00F4] via-[#390080] to-[#21113D] text-white shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#6A00F4]",
       secondary:
-        "bg-white text-[#25313D] border border-[#E2E8EF] hover:border-slate-300 hover:bg-[#F4F7FA] hover:-translate-y-0.5 shadow-subtle focus-visible:ring-[#17324D]",
+        "bg-white text-[#211832] border border-[#E9E0F2] hover:border-[#6A00F4] hover:bg-[#FFF0D9] hover:-translate-y-0.5 shadow-subtle focus-visible:ring-[#6A00F4]",
       outline:
-        "bg-transparent text-[#25313D] border border-[#E2E8EF] hover:border-[#416779] hover:bg-[#F4F7FA] hover:text-[#17324D] hover:-translate-y-0.5 focus-visible:ring-[#416779]",
+        "bg-transparent text-[#211832] border border-[#E9E0F2] hover:border-[#6A00F4] hover:bg-[#F3ECFF] hover:text-[#6A00F4] hover:-translate-y-0.5 focus-visible:ring-[#6A00F4]",
       dark:
-        "bg-[#14213D] text-white hover:bg-[#17324D] hover:-translate-y-0.5 shadow-md focus-visible:ring-[#42C6D9]",
+        "bg-[#21113D] text-white hover:bg-[#390080] hover:-translate-y-0.5 shadow-md focus-visible:ring-[#FFD6A5]",
       ghost:
-        "bg-transparent text-[#25313D] hover:text-[#17324D] hover:bg-[#EDF2F6] hover:-translate-y-0.5 focus-visible:ring-[#416779]",
+        "bg-transparent text-[#211832] hover:text-[#6A00F4] hover:bg-[#F3ECFF] hover:-translate-y-0.5 focus-visible:ring-[#6A00F4]",
       white:
-        "bg-white text-[#25313D] hover:bg-[#F4F7FA] hover:-translate-y-0.5 shadow-card focus-visible:ring-[#416779]"
+        "bg-white text-[#211832] hover:bg-[#FFF9F0] hover:-translate-y-0.5 shadow-card focus-visible:ring-[#6A00F4]"
     };
 
     const sizeStyles = {
@@ -70,8 +70,8 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           variant === "primary" || variant === "gradient" || variant === "dark" || variant === "navy"
             ? "text-white/90"
             : variant === "cyan"
-            ? "text-[#003049]"
-            : "text-[#003049] group-hover:text-[#42C6D9]",
+            ? "text-[#21113D]"
+            : "text-[#211832] group-hover:text-[#6A00F4]",
           arrowPosition === "top-right" && "group-hover:-translate-y-1 group-hover:translate-x-1"
         )}
         aria-hidden="true"

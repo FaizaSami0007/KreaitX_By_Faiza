@@ -180,37 +180,37 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       />
 
       {/* Breadcrumb Navigation Bar */}
-      <div className="bg-[#F4F7FA] border-b border-[#E2E8EF] py-3.5 text-xs font-sans text-[#596A7B]">
+      <div className="bg-[#FFF9F0] border-b border-[#E9E0F2] py-3.5 text-xs font-sans text-[#625A70]">
         <Container size="default">
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 flex-wrap">
-            <Link href="/" className="hover:text-[#17324D] transition-colors">
+            <Link href="/" className="hover:text-[#6A00F4] transition-colors">
               Home
             </Link>
-            <ChevronRight className="h-3.5 w-3.5 text-[#596A7B]" />
-            <Link href="/solutions" className="hover:text-[#17324D] transition-colors">
+            <ChevronRight className="h-3.5 w-3.5 text-[#625A70]/60" />
+            <Link href="/solutions" className="hover:text-[#6A00F4] transition-colors">
               Solutions
             </Link>
-            <ChevronRight className="h-3.5 w-3.5 text-[#596A7B]" />
-            <span className="text-[#25313D] font-semibold">{service.title}</span>
+            <ChevronRight className="h-3.5 w-3.5 text-[#625A70]/60" />
+            <span className="text-[#211832] font-semibold">{service.title}</span>
           </nav>
         </Container>
       </div>
 
       {/* Service Hero Section */}
-      <section className="relative overflow-hidden bg-[#17324D] text-white py-16 sm:py-24 lg:py-28 border-b border-[#14213D]">
+      <section className="relative overflow-hidden bg-[#21113D] text-white py-16 sm:py-24 lg:py-28 border-b border-white/10">
         {/* Ambient glows */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#416779]/20 via-[#14213D]/40 to-transparent rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#416779]/15 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#14213D]/60 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#6A00F4]/25 via-[#390080]/30 to-transparent rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#6A00F4]/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#FFD6A5]/15 rounded-full blur-3xl pointer-events-none" />
 
         <Container size="default" className="relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <Reveal yOffset={12}>
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-md shadow-subtle">
-                <span className="font-mono text-xs font-bold text-[#DCEEF2]">
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#390080]/60 border border-[#FFD6A5]/30 backdrop-blur-md shadow-subtle">
+                <span className="font-mono text-xs font-bold text-[#FFD6A5]">
                   {service.number}
                 </span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#DCEEF2]" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#FFD6A5]" />
                 <span className="text-xs font-sans font-bold uppercase tracking-wider text-slate-200">
                   {service.category}
                 </span>
@@ -220,14 +220,14 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             <Reveal delay={0.08} yOffset={16}>
               <h1 className="font-display text-4xl sm:text-6xl lg:text-[64px] font-bold text-white tracking-tight leading-[1.08]">
                 {service.title}{" "}
-                <span className="block mt-2 font-display font-bold not-italic text-3xl sm:text-5xl lg:text-[54px] bg-gradient-to-r from-white via-cyan-100 to-[#DCEEF2] bg-clip-text text-transparent">
+                <span className="block mt-2 font-display font-bold not-italic text-3xl sm:text-5xl lg:text-[54px] bg-gradient-to-r from-white via-[#FFD6A5] to-[#FFD6A5] bg-clip-text text-transparent">
                   {service.tagline}
                 </span>
               </h1>
             </Reveal>
 
             <Reveal delay={0.14} yOffset={14}>
-              <p className="text-lg sm:text-xl text-slate-200 leading-relaxed font-sans font-normal max-w-2xl mx-auto">
+              <p className="text-lg sm:text-xl text-[#F3ECFF]/85 leading-relaxed font-sans font-normal max-w-2xl mx-auto">
                 {service.description}
               </p>
             </Reveal>
@@ -246,7 +246,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                 </Button>
                 <a
                   href="#deliverables"
-                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-full text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/40 shadow-sm transition-all duration-200 w-full sm:w-auto hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-full text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/20 hover:border-[#FFD6A5]/50 shadow-sm transition-all duration-200 w-full sm:w-auto hover:-translate-y-0.5"
                 >
                   View Deliverables ↓
                 </a>
@@ -256,12 +256,12 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             {/* Quick Metrics / Assurance Badges */}
             <Reveal delay={0.25} yOffset={12}>
               <div className="pt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto text-left">
-                <div className="p-4 rounded-2xl bg-[#14213D] border border-slate-700/80 flex items-center gap-3">
+                <div className="p-4 rounded-2xl bg-[#180a30] border border-white/15 flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                    <Layers className="h-5 w-5 text-[#42C6D9]" />
+                    <Layers className="h-5 w-5 text-[#FFD6A5]" />
                   </div>
                   <div>
-                    <span className="text-xs text-slate-400 uppercase tracking-wider font-bold block">
+                    <span className="text-xs text-[#FFD6A5] uppercase tracking-wider font-bold block">
                       Deliverables
                     </span>
                     <span className="text-sm font-semibold text-white">
@@ -270,12 +270,12 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                   </div>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-[#14213D] border border-slate-700/80 flex items-center gap-3">
+                <div className="p-4 rounded-2xl bg-[#180a30] border border-white/15 flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                    <Cpu className="h-5 w-5 text-[#42C6D9]" />
+                    <Cpu className="h-5 w-5 text-[#FFD6A5]" />
                   </div>
                   <div>
-                    <span className="text-xs text-slate-400 uppercase tracking-wider font-bold block">
+                    <span className="text-xs text-[#FFD6A5] uppercase tracking-wider font-bold block">
                       Workflow
                     </span>
                     <span className="text-sm font-semibold text-white">
@@ -284,12 +284,12 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                   </div>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-[#14213D] border border-slate-700/80 flex items-center gap-3">
+                <div className="p-4 rounded-2xl bg-[#180a30] border border-white/15 flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                    <ShieldCheck className="h-5 w-5 text-[#42C6D9]" />
+                    <ShieldCheck className="h-5 w-5 text-[#FFD6A5]" />
                   </div>
                   <div>
-                    <span className="text-xs text-slate-400 uppercase tracking-wider font-bold block">
+                    <span className="text-xs text-[#FFD6A5] uppercase tracking-wider font-bold block">
                       Assurance
                     </span>
                     <span className="text-sm font-semibold text-white">
@@ -304,30 +304,30 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       </section>
 
       {/* The Core Problem We Solve */}
-      <section className="bg-[#F7F8FA] py-16 sm:py-20 border-b border-slate-200/80">
+      <section className="bg-[#FFF9F0] py-16 sm:py-20 border-b border-[#E9E0F2]">
         <Container size="default">
           <div className="max-w-4xl mx-auto">
-            <div className="rounded-3xl bg-white border border-slate-200/80 shadow-card p-8 sm:p-12 lg:p-14">
+            <div className="rounded-3xl bg-white border border-[#E9E0F2] shadow-card p-8 sm:p-12 lg:p-14">
               <div className="flex items-center gap-3 mb-6">
-                <span className="w-3 h-3 rounded-full bg-[#42C6D9]" />
-                <span className="text-xs font-sans uppercase tracking-widest font-bold text-[#003049]">
+                <span className="w-3 h-3 rounded-full bg-[#6A00F4]" />
+                <span className="text-xs font-sans uppercase tracking-widest font-bold text-[#6A00F4]">
                   Strategic Purpose &amp; Diagnosis
                 </span>
               </div>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-slate-950 tracking-tight leading-snug mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-[#211832] tracking-tight leading-snug mb-6">
                 The Core Problem We Solve
               </h2>
-              <p className="text-lg sm:text-xl text-slate-700 font-sans leading-relaxed">
+              <p className="text-lg sm:text-xl text-[#625A70] font-sans leading-relaxed">
                 {service.problemSolved}
               </p>
-              <div className="mt-8 pt-8 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-sm text-slate-500">
+              <div className="mt-8 pt-8 border-t border-[#E9E0F2] flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-sm text-[#625A70]">
                 <span>Part of KreaitX&apos;s Connected Solutions Architecture</span>
                 <Link
                   href="/solutions"
-                  className="font-semibold text-[#003049] hover:text-[#14213D] inline-flex items-center gap-1.5"
+                  className="font-semibold text-[#6A00F4] hover:text-[#390080] inline-flex items-center gap-1.5"
                 >
                   <span>View All 7 Capabilities</span>
-                  <ArrowRight className="h-4 w-4 text-[#42C6D9]" />
+                  <ArrowRight className="h-4 w-4 text-[#6A00F4]" />
                 </Link>
               </div>
             </div>
@@ -336,16 +336,16 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       </section>
 
       {/* Key Deliverables & Systems Grid */}
-      <section id="deliverables" className="scroll-mt-24 bg-white py-20 sm:py-28 border-b border-slate-200/80">
+      <section id="deliverables" className="scroll-mt-24 bg-white py-20 sm:py-28 border-b border-[#E9E0F2]">
         <Container size="default">
           <div className="max-w-3xl mb-12 sm:mb-16">
-            <span className="text-xs font-sans uppercase tracking-widest font-bold text-[#003049] block mb-3">
+            <span className="text-xs font-sans uppercase tracking-widest font-bold text-[#6A00F4] block mb-3">
               Production Scope
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-slate-950 tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-[#211832] tracking-tight leading-tight">
               What KreaitX Delivers
             </h2>
-            <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed font-sans">
+            <p className="mt-4 text-base sm:text-lg text-[#625A70] leading-relaxed font-sans">
               Every system we engineer is documented, production-ready, and optimized for sustainable in-house longevity.
             </p>
           </div>
@@ -354,25 +354,25 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             {service.deliverables.map((item, idx) => (
               <div
                 key={item}
-                className="rounded-2xl bg-[#F7F8FA] border border-slate-200/80 p-6 sm:p-7 shadow-subtle hover:shadow-card hover:border-[#42C6D9]/50 transition-all duration-300 flex flex-col justify-between"
+                className="rounded-2xl bg-[#FFF9F0] border border-[#E9E0F2] p-6 sm:p-7 shadow-subtle hover:shadow-card hover:border-[#6A00F4] transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="font-mono text-xs font-bold text-[#003049]">
+                    <span className="font-mono text-xs font-bold text-[#6A00F4]">
                       0{idx + 1}
                     </span>
-                    <CheckCircle2 className="h-5 w-5 text-[#003049]" />
+                    <CheckCircle2 className="h-5 w-5 text-[#6A00F4]" />
                   </div>
-                  <h3 className="text-lg font-display font-bold text-slate-900 mb-2">
+                  <h3 className="text-lg font-display font-bold text-[#211832] mb-2">
                     {item}
                   </h3>
-                  <p className="text-sm text-slate-600 font-sans leading-relaxed">
+                  <p className="text-sm text-[#625A70] font-sans leading-relaxed">
                     Engineered to the highest industry benchmarks, ensuring complete brand coherence and operational utility across channels.
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-slate-200/60 flex items-center justify-between text-xs text-slate-500">
+                <div className="mt-6 pt-4 border-t border-[#E9E0F2] flex items-center justify-between text-xs text-[#625A70]">
                   <span>Production-Grade</span>
-                  <span className="text-[#003049] font-semibold">Verified</span>
+                  <span className="text-[#6A00F4] font-semibold">Verified</span>
                 </div>
               </div>
             ))}
@@ -381,19 +381,19 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       </section>
 
       {/* 4-Stage Workflow Progression */}
-      <section id="process" className="bg-[#003049] text-white py-20 sm:py-28 border-b border-[#14213D] relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#42C6D9]/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl pointer-events-none" />
+      <section id="process" className="bg-[#21113D] text-white py-20 sm:py-28 border-b border-white/10 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#6A00F4]/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#FFD6A5]/10 rounded-full blur-3xl pointer-events-none" />
 
         <Container size="default" className="relative z-10">
           <div className="max-w-3xl mb-12 sm:mb-16">
-            <span className="text-xs font-sans uppercase tracking-widest font-bold text-[#42C6D9] block mb-3">
+            <span className="text-xs font-sans uppercase tracking-widest font-bold text-[#FFD6A5] block mb-3">
               Proven Methodology
             </span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white tracking-tight leading-tight">
               How We Execute {service.title}
             </h2>
-            <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed font-sans">
+            <p className="mt-4 text-base sm:text-lg text-[#F3ECFF]/85 leading-relaxed font-sans">
               A transparent, sprint-driven workflow designed to eliminate surprise handoffs and preserve creative vision.
             </p>
           </div>
@@ -406,10 +406,10 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-mono text-2xl font-bold text-[#42C6D9]">
+                    <span className="font-mono text-2xl font-bold text-[#FFD6A5]">
                       0{idx + 1}
                     </span>
-                    <span className="text-xs uppercase tracking-wider font-semibold text-slate-400">
+                    <span className="text-xs uppercase tracking-wider font-semibold text-slate-300">
                       Phase 0{idx + 1}
                     </span>
                   </div>
@@ -421,7 +421,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-white/10 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#42C6D9]" />
+                  <span className="w-2 h-2 rounded-full bg-[#FFD6A5]" />
                   <span className="text-xs text-slate-300 font-sans">
                     Milestone Documented
                   </span>
@@ -434,16 +434,16 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
       {/* Relevant Case Studies Cross-Reference (If available) */}
       {relevantCaseStudies.length > 0 && (
-        <section className="bg-white py-20 sm:py-28 border-b border-slate-200/80">
+        <section className="bg-white py-20 sm:py-28 border-b border-[#E9E0F2]">
           <Container size="default">
             <div className="max-w-3xl mb-12">
-              <span className="text-xs font-sans uppercase tracking-widest font-bold text-[#003049] block mb-3">
+              <span className="text-xs font-sans uppercase tracking-widest font-bold text-[#6A00F4] block mb-3">
                 Proven Track Record
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-slate-950 tracking-tight leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-[#211832] tracking-tight leading-tight">
                 Case Studies Featuring {service.title}
               </h2>
-              <p className="mt-4 text-base sm:text-lg text-slate-600 leading-relaxed font-sans">
+              <p className="mt-4 text-base sm:text-lg text-[#625A70] leading-relaxed font-sans">
                 Real business outcomes achieved by integrating {service.title} into client operations.
               </p>
             </div>
@@ -452,11 +452,11 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               {relevantCaseStudies.map((project) => (
                 <article
                   key={project.id}
-                  className="rounded-3xl bg-white border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between overflow-hidden"
+                  className="rounded-3xl bg-white border border-[#E9E0F2] shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between overflow-hidden"
                 >
-                  <div className="bg-[#003049] text-white p-6 sm:p-7">
+                  <div className="bg-[#21113D] text-white p-6 sm:p-7">
                     <div className="flex items-center justify-between text-xs mb-3 text-slate-300">
-                      <span className="text-[#42C6D9] uppercase font-bold tracking-wider">
+                      <span className="text-[#FFD6A5] uppercase font-bold tracking-wider">
                         {project.industry}
                       </span>
                       <span>{project.year}</span>
@@ -470,25 +470,25 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                   </div>
 
                   <div className="p-6 sm:p-7 flex flex-col justify-between flex-1 space-y-6">
-                    <p className="text-sm text-slate-600 font-sans leading-relaxed">
+                    <p className="text-sm text-[#625A70] font-sans leading-relaxed">
                       {project.summary}
                     </p>
 
-                    <div className="p-4 rounded-xl bg-[#F7F8FA] border border-slate-200/70">
-                      <span className="text-xs uppercase tracking-wider text-[#003049] font-bold block mb-1">
+                    <div className="p-4 rounded-xl bg-[#FFF9F0] border border-[#E9E0F2]">
+                      <span className="text-xs uppercase tracking-wider text-[#6A00F4] font-bold block mb-1">
                         Measured Impact
                       </span>
-                      <p className="text-sm font-display font-bold text-slate-900">
+                      <p className="text-sm font-display font-bold text-[#211832]">
                         {project.impact}
                       </p>
                     </div>
 
                     <Link
                       href={`/work/${project.slug}`}
-                      className="group inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-xs font-sans font-semibold text-white bg-[#003049] hover:bg-[#14213D] shadow-brand-button transition-all duration-200"
+                      className="group inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full text-xs font-sans font-semibold text-white bg-[#6A00F4] hover:bg-[#390080] shadow-brand-button transition-all duration-200"
                     >
                       <span>Read Full Case Study</span>
-                      <ArrowRight className="h-3.5 w-3.5 text-[#42C6D9] transition-transform duration-200 group-hover:translate-x-1" />
+                      <ArrowRight className="h-3.5 w-3.5 text-[#FFD6A5] transition-transform duration-200 group-hover:translate-x-1" />
                     </Link>
                   </div>
                 </article>
@@ -499,16 +499,16 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       )}
 
       {/* Connected Capabilities Cross-Linking */}
-      <section className="bg-[#F7F8FA] py-16 sm:py-20 border-b border-slate-200/80">
+      <section className="bg-[#FFF9F0] py-16 sm:py-20 border-b border-[#E9E0F2]">
         <Container size="default">
           <div className="max-w-3xl mx-auto text-center space-y-6">
-            <span className="text-xs font-sans uppercase tracking-widest font-bold text-[#003049] block">
+            <span className="text-xs font-sans uppercase tracking-widest font-bold text-[#6A00F4] block">
               Connected Architecture
             </span>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-slate-950 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-[#211832] tracking-tight">
               Pair {service.title} with Connected Capabilities
             </h2>
-            <p className="text-base text-slate-600 font-sans max-w-xl mx-auto">
+            <p className="text-base text-[#625A70] font-sans max-w-xl mx-auto">
               Our studio model eliminates handoff friction. Combine {service.title} with related disciplines for compounding results:
             </p>
 
@@ -519,10 +519,10 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                   <Link
                     key={rel}
                     href={`/solutions/${targetSlug}`}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-sans font-semibold text-slate-800 bg-white hover:bg-[#003049] hover:text-white border border-slate-200 hover:border-[#003049] shadow-subtle transition-all duration-200 hover:-translate-y-0.5"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-sans font-semibold text-[#211832] bg-white hover:bg-[#6A00F4] hover:text-white border border-[#E9E0F2] hover:border-[#6A00F4] shadow-subtle transition-all duration-200 hover:-translate-y-0.5"
                   >
                     <span>+ Explore {rel}</span>
-                    <ArrowRight className="h-3.5 w-3.5 text-[#42C6D9]" />
+                    <ArrowRight className="h-3.5 w-3.5 text-[#6A00F4]" />
                   </Link>
                 );
               })}
@@ -532,14 +532,14 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       </section>
 
       {/* Service FAQs */}
-      <section className="bg-white py-20 sm:py-28 border-b border-slate-200/80">
+      <section className="bg-white py-20 sm:py-28 border-b border-[#E9E0F2]">
         <Container size="default">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <span className="text-xs font-sans uppercase tracking-widest font-bold text-[#003049] block mb-3">
+              <span className="text-xs font-sans uppercase tracking-widest font-bold text-[#6A00F4] block mb-3">
                 Common Questions
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-slate-950 tracking-tight leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-[#211832] tracking-tight leading-tight">
                 Frequently Asked Questions
               </h2>
             </div>
@@ -548,13 +548,13 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               {serviceFaqs.map((faq, idx) => (
                 <div
                   key={idx}
-                  className="rounded-2xl bg-[#F7F8FA] border border-slate-200/80 p-6 sm:p-8"
+                  className="rounded-2xl bg-[#FFF9F0] border border-[#E9E0F2] p-6 sm:p-8"
                 >
-                  <h3 className="text-lg font-display font-bold text-slate-900 mb-2 flex items-start gap-2.5">
-                    <HelpCircle className="h-5 w-5 text-[#003049] shrink-0 mt-0.5" />
+                  <h3 className="text-lg font-display font-bold text-[#211832] mb-2 flex items-start gap-2.5">
+                    <HelpCircle className="h-5 w-5 text-[#6A00F4] shrink-0 mt-0.5" />
                     <span>{faq.q}</span>
                   </h3>
-                  <p className="mt-3 text-sm sm:text-base text-slate-600 font-sans leading-relaxed pl-7">
+                  <p className="mt-3 text-sm sm:text-base text-[#625A70] font-sans leading-relaxed pl-7">
                     {faq.a}
                   </p>
                 </div>

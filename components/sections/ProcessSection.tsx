@@ -12,7 +12,7 @@ export const ProcessSection: React.FC = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section id="process" className="relative overflow-hidden bg-white py-20 sm:py-28 lg:py-32 border-b border-[#E2E8EF]">
+    <section id="process" className="relative overflow-hidden bg-white py-20 sm:py-28 lg:py-32 border-b border-[#E9E0F2]">
       <Container size="default" className="relative z-10 max-w-[1320px]">
         {/* Header */}
         <Reveal yOffset={16}>
@@ -22,7 +22,7 @@ export const ProcessSection: React.FC = () => {
               title={
                 <>
                   From idea to impact,{" "}
-                  <span className="font-display font-bold text-[#416779] bg-gradient-to-r from-[#17324D] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent">
+                  <span className="font-display font-bold text-[#6A00F4] bg-gradient-to-r from-[#6A00F4] via-[#390080] to-[#6A00F4] bg-clip-text text-transparent">
                     without the mystery
                   </span>
                   .
@@ -34,10 +34,10 @@ export const ProcessSection: React.FC = () => {
             <div className="shrink-0">
               <Link
                 href="/process"
-                className="group inline-flex items-center text-sm font-semibold text-[#17324D] hover:text-[#416779] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#416779]"
+                className="group inline-flex items-center text-sm font-semibold text-[#6A00F4] hover:text-[#390080] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6A00F4]"
               >
                 <span>Read Full Process Guide</span>
-                <ArrowRight className="ml-1.5 h-4 w-4 text-[#42C6D9] transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="ml-1.5 h-4 w-4 text-[#6A00F4] transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
           </div>
@@ -50,15 +50,15 @@ export const ProcessSection: React.FC = () => {
               key={stage.number}
               type="button"
               onClick={() => setActiveStep(idx)}
-              className={`text-left p-3.5 sm:p-5 rounded-2xl border transition-all duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#416779] ${
+              className={`text-left p-3.5 sm:p-5 rounded-2xl border transition-all duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6A00F4] ${
                 activeStep === idx
-                  ? "bg-[#17324D] text-white border-[#17324D] shadow-brand-button -translate-y-1"
-                  : "bg-[#F4F7FA] text-[#25313D] border-[#E2E8EF] hover:border-slate-300 hover:bg-white"
+                  ? "bg-[#6A00F4] text-white border-[#6A00F4] shadow-md -translate-y-1"
+                  : "bg-[#FFF9F0] text-[#211832] border-[#E9E0F2] hover:border-[#6A00F4]/40 hover:bg-[#F3ECFF]"
               }`}
             >
               <div
                 className={`text-[11px] sm:text-xs font-mono font-bold mb-1 uppercase tracking-wider ${
-                  activeStep === idx ? "text-[#42C6D9]" : "text-[#596A7B]"
+                  activeStep === idx ? "text-[#FFD6A5]" : "text-[#625A70]"
                 }`}
               >
                 Stage {stage.number}
@@ -71,20 +71,20 @@ export const ProcessSection: React.FC = () => {
         </div>
 
         {/* Active Stage Detail Showcase (Single semantic DOM container for active stage) */}
-        <div className="rounded-3xl bg-[#F4F7FA] border border-[#E2E8EF] p-5 sm:p-8 lg:p-12 shadow-card transition-all duration-300">
+        <div className="rounded-3xl bg-[#FFF9F0] border border-[#E9E0F2] p-5 sm:p-8 lg:p-12 shadow-card transition-all duration-300">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             {/* Left Narrative */}
             <div className="lg:col-span-5 space-y-4">
-              <span className="inline-block px-3.5 py-1 rounded-full bg-white text-[#17324D] text-xs font-mono font-semibold uppercase tracking-wider border border-[#E2E8EF] shadow-xs">
+              <span className="inline-block px-3.5 py-1 rounded-full bg-[#F3ECFF] text-[#6A00F4] text-xs font-mono font-semibold uppercase tracking-wider border border-[#E9E0F2] shadow-xs">
                 Stage {processStages[activeStep].number} of 06 // {processStages[activeStep].title}
               </span>
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-[#17324D] tracking-tight">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-[#211832] tracking-tight">
                 {processStages[activeStep].title}
               </h3>
-              <p className="text-base font-semibold text-[#17324D]">
+              <p className="text-base font-semibold text-[#6A00F4]">
                 {processStages[activeStep].tagline}
               </p>
-              <p className="text-base text-[#596A7B] leading-relaxed font-sans font-normal">
+              <p className="text-base text-[#625A70] leading-relaxed font-sans font-normal">
                 {processStages[activeStep].description}
               </p>
 
@@ -93,14 +93,14 @@ export const ProcessSection: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setActiveStep((prev) => (prev > 0 ? prev - 1 : processStages.length - 1))}
-                  className="px-4 py-2 rounded-full text-xs font-mono font-semibold bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 transition-colors"
+                  className="px-4 py-2 rounded-full text-xs font-mono font-semibold bg-white border border-[#E9E0F2] hover:bg-[#F3ECFF] text-[#211832] transition-colors"
                 >
                   ← Previous Stage
                 </button>
                 <button
                   type="button"
                   onClick={() => setActiveStep((prev) => (prev < processStages.length - 1 ? prev + 1 : 0))}
-                  className="px-4 py-2 rounded-full text-xs font-mono font-semibold bg-[#003049] text-white hover:bg-[#14213D] transition-colors"
+                  className="px-4 py-2 rounded-full text-xs font-mono font-semibold bg-[#6A00F4] text-white hover:bg-[#390080] transition-colors shadow-xs"
                 >
                   Next Stage →
                 </button>
@@ -108,36 +108,36 @@ export const ProcessSection: React.FC = () => {
             </div>
 
             {/* Right Collaboration & Deliverables Grid */}
-            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-subtle">
+            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 bg-white p-6 sm:p-8 rounded-2xl border border-[#E9E0F2] shadow-subtle">
               <div>
-                <span className="text-xs font-mono uppercase tracking-wider text-slate-900 font-bold block mb-2">
+                <span className="text-xs font-mono uppercase tracking-wider text-[#211832] font-bold block mb-2">
                   Client Collaboration
                 </span>
-                <p className="text-sm text-slate-600 leading-relaxed">
+                <p className="text-sm text-[#625A70] leading-relaxed">
                   {processStages[activeStep].clientInput}
                 </p>
               </div>
 
               <div>
-                <span className="text-xs font-mono uppercase tracking-wider text-slate-900 font-bold block mb-2">
+                <span className="text-xs font-mono uppercase tracking-wider text-[#211832] font-bold block mb-2">
                   KreaitX Deliverable
                 </span>
-                <p className="text-sm text-slate-900 leading-relaxed font-medium">
+                <p className="text-sm text-[#211832] leading-relaxed font-medium">
                   {processStages[activeStep].kreaitxOutput}
                 </p>
               </div>
 
-              <div className="sm:col-span-2 pt-5 border-t border-slate-100">
-                <span className="text-xs font-mono uppercase tracking-wider text-slate-900 font-bold block mb-2.5">
+              <div className="sm:col-span-2 pt-5 border-t border-[#E9E0F2]">
+                <span className="text-xs font-mono uppercase tracking-wider text-[#211832] font-bold block mb-2.5">
                   Key Milestones &amp; Deliverable Checkpoints
                 </span>
                 <div className="flex flex-wrap gap-2">
                   {processStages[activeStep].milestones.map((ms) => (
                     <span
                       key={ms}
-                      className="px-3 py-1 rounded-full bg-[#F7F8FA] text-xs font-medium text-slate-700 border border-slate-200 flex items-center gap-1.5"
+                      className="px-3 py-1 rounded-full bg-[#FFF9F0] text-xs font-medium text-[#211832] border border-[#E9E0F2] flex items-center gap-1.5"
                     >
-                      <CheckCircle2 className="h-3.5 w-3.5 text-[#003049]" />
+                      <CheckCircle2 className="h-3.5 w-3.5 text-[#6A00F4]" />
                       {ms}
                     </span>
                   ))}
