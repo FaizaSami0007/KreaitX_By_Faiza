@@ -61,7 +61,7 @@ export const InsightsClient: React.FC = () => {
                 <Sparkles className="h-3.5 w-3.5 text-[#42C6D9] animate-pulse" />
                 <span>Perspectives × Field Notes</span>
               </span>
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-[68px] font-bold text-white tracking-tight leading-[1.05]">
+              <h1 className="font-display text-[clamp(2rem,4.5vw,3.75rem)] font-bold text-white tracking-tight leading-[1.08]">
                 Insights for{" "}
                 <span className="font-serif italic font-normal bg-gradient-to-r from-white via-cyan-100 to-[#42C6D9] bg-clip-text text-transparent">
                   what&apos;s next
@@ -88,7 +88,7 @@ export const InsightsClient: React.FC = () => {
       </section>
 
       {/* Filter Bar */}
-      <section id="articles-feed" className="bg-white/95 backdrop-blur-md border-b border-slate-200/80 py-4 sticky top-[65px] z-30 shadow-subtle">
+      <section id="articles-feed" className="bg-white border-b border-slate-200/80 py-4 sticky top-[65px] z-30 shadow-sm">
         <Container size="default">
           <div className="flex items-center justify-between gap-4 overflow-x-auto no-scrollbar">
             <div className="flex items-center gap-2">
@@ -99,7 +99,7 @@ export const InsightsClient: React.FC = () => {
                   type="button"
                   onClick={() => setSelectedCategory(cat)}
                   aria-pressed={selectedCategory === cat}
-                  className={`px-4 py-2 rounded-full text-xs sm:text-sm font-sans font-semibold transition-all cursor-pointer shrink-0 ${
+                  className={`px-4 py-2 rounded-full text-xs sm:text-sm font-sans font-semibold transition-all cursor-pointer shrink-0 min-h-[40px] ${
                     selectedCategory === cat
                       ? "bg-[#003049] text-white shadow-brand-button"
                       : "bg-[#F7F8FA] text-slate-700 hover:bg-slate-100 hover:text-[#003049] border border-slate-200"
@@ -132,18 +132,18 @@ export const InsightsClient: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setSelectedCategory("All Perspectives")}
-                className="px-5 py-2.5 rounded-full text-xs font-semibold text-white bg-[#003049]"
+                className="px-5 py-2.5 rounded-full text-xs font-semibold text-white bg-[#003049] min-h-[40px]"
               >
                 Reset Filter
               </button>
             </div>
           ) : (
-            <div className="space-y-16 sm:space-y-20">
+            <div className="space-y-12 sm:space-y-16">
               {filteredArticles.map((article) => (
                 <article
                   key={article.id}
                   id={article.slug}
-                  className="scroll-mt-32 rounded-3xl bg-white border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all duration-300 p-8 sm:p-12 lg:p-14 overflow-hidden"
+                  className="scroll-mt-32 rounded-3xl bg-white border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all duration-300 p-5 sm:p-10 lg:p-12 overflow-hidden"
                 >
                   {/* Meta Header */}
                   <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-slate-100">

@@ -126,13 +126,10 @@ export const FeaturedWork: React.FC = () => {
 
                     {/* Case Study Blueprint Side */}
                     <div
-                      className={`lg:col-span-5 bg-gradient-to-br from-[#003049] via-[#14213D] to-[#003049] p-5 sm:p-8 lg:p-12 flex flex-col justify-center relative overflow-hidden text-white ${
-                        isReversed ? "lg:order-1" : "lg:order-2"
+                      className={`lg:col-span-5 bg-[#14213D] p-5 sm:p-8 lg:p-12 flex flex-col justify-center relative overflow-hidden text-white border-t lg:border-t-0 ${
+                        isReversed ? "lg:order-1 lg:border-r border-white/10" : "lg:order-2 lg:border-l border-white/10"
                       }`}
                     >
-                      {/* Ambient light glow */}
-                      <div className="absolute top-0 right-0 w-64 h-64 bg-[#42C6D9]/15 rounded-full blur-3xl pointer-events-none" />
-
                       <div className="relative z-10 space-y-6">
                         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 text-white text-xs font-mono backdrop-blur-sm border border-white/20">
                           <Sparkles className="h-3 w-3 text-[#42C6D9]" />

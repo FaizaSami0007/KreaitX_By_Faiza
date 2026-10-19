@@ -35,7 +35,7 @@ export const WorkClient: React.FC = () => {
                 <Sparkles className="h-3.5 w-3.5 text-[#42C6D9] animate-pulse" />
                 <span>Portfolio × Selected Case Studies</span>
               </span>
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-[68px] font-bold text-white tracking-tight leading-[1.05]">
+              <h1 className="font-display text-[clamp(2rem,4.5vw,3.75rem)] font-bold text-white tracking-tight leading-[1.08]">
                 Real projects.{" "}
                 <span className="font-serif italic font-normal bg-gradient-to-r from-white via-cyan-100 to-[#42C6D9] bg-clip-text text-transparent">
                   Real business context
@@ -62,7 +62,7 @@ export const WorkClient: React.FC = () => {
       </section>
 
       {/* Filter Bar */}
-      <section id="projects-feed" className="bg-white/95 backdrop-blur-md border-b border-slate-200/80 py-4 sticky top-[65px] z-30 shadow-subtle">
+      <section id="projects-feed" className="bg-white border-b border-slate-200/80 py-4 sticky top-[65px] z-30 shadow-sm">
         <Container size="default">
           <div className="flex items-center justify-between gap-4 overflow-x-auto no-scrollbar">
             <div className="flex items-center gap-2">
@@ -72,7 +72,7 @@ export const WorkClient: React.FC = () => {
                   key={cat}
                   type="button"
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-4 py-2 rounded-full text-xs sm:text-sm font-sans font-semibold transition-all cursor-pointer shrink-0 ${
+                  className={`px-4 py-2 rounded-full text-xs sm:text-sm font-sans font-semibold transition-all cursor-pointer shrink-0 min-h-[40px] ${
                     selectedCategory === cat
                       ? "bg-[#003049] text-white shadow-brand-button"
                       : "bg-[#F7F8FA] text-slate-700 hover:bg-slate-100 hover:text-[#003049] border border-slate-200"
@@ -101,8 +101,7 @@ export const WorkClient: React.FC = () => {
                 className="scroll-mt-32 rounded-3xl bg-white border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden"
               >
                 {/* Case Study Header Banner */}
-                <div className="bg-gradient-to-r from-[#003049] via-[#0B132B] to-[#14213D] text-white p-8 sm:p-12 relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-64 h-64 bg-[#42C6D9]/10 rounded-full blur-3xl pointer-events-none" />
+                <div className="bg-[#003049] text-white p-5 sm:p-10 lg:p-12 border-b border-[#14213D] relative overflow-hidden">
                   <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
                     <div>
                       <div className="flex items-center gap-3 mb-3">

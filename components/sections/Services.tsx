@@ -44,10 +44,10 @@ export const Services: React.FC = () => {
           </div>
         </Reveal>
 
-        {/* Services Grid with Rounded Deep Blue Cards */}
+        {/* Services Grid with Balanced Architectural Grid */}
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
           {servicesData.map((service, index) => {
-            const isFeatured = index === 0; // Branding highlighted
+            const isFeatured = index === 0 || index === 6; // Branding and Digital Solutions lead cards
             const colSpan = isFeatured ? "md:col-span-2 lg:col-span-2" : "col-span-1";
 
             return (
@@ -79,6 +79,20 @@ export const Services: React.FC = () => {
                     <p className="mt-3.5 text-base text-slate-300 leading-relaxed font-sans font-normal">
                       {service.description}
                     </p>
+
+                    {/* Featured cards deliverable preview tags */}
+                    {isFeatured && (
+                      <div className="mt-5 flex flex-wrap gap-2 pt-2">
+                        {service.deliverables.slice(0, 3).map((d) => (
+                          <span
+                            key={d}
+                            className="text-xs font-sans font-medium px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-200"
+                          >
+                            • {d}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
 
                   {/* Bottom Deliverables & Arrow */}

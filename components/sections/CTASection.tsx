@@ -28,10 +28,7 @@ export const CTASection: React.FC<CTASectionProps> = ({
     <section className={`${bgClass} py-20 sm:py-28 lg:py-32 relative ${className || ""}`}>
       <Container size="default" className="relative z-10 max-w-[1320px]">
         <Reveal yOffset={20}>
-          <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-[#003049] via-[#14213D] to-[#003049] text-white p-6 sm:p-12 lg:p-20 shadow-xl border border-white/10">
-            {/* Ambient soft glow */}
-            <div className="absolute top-0 right-0 w-80 h-80 bg-[#42C6D9]/15 rounded-full blur-3xl pointer-events-none" />
-
+          <div className="relative overflow-hidden rounded-[32px] bg-[#14213D] text-white p-6 sm:p-12 lg:p-20 shadow-2xl border border-white/15">
             <div className="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center">
               <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#42C6D9] px-4 py-1.5 rounded-full bg-white/10 border border-white/15 mb-6 shadow-subtle">
                 <Sparkles className="h-3.5 w-3.5 text-[#42C6D9]" />

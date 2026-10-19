@@ -59,7 +59,7 @@ export default function ProcessPage() {
                 <Sparkles className="h-3.5 w-3.5 text-[#42C6D9] animate-pulse" />
                 <span>Methodology &amp; Standards</span>
               </span>
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-[68px] font-bold text-white tracking-tight leading-[1.05]">
+              <h1 className="font-display text-[clamp(2rem,4.5vw,3.75rem)] font-bold text-white tracking-tight leading-[1.08]">
                 Clear milestones.{" "}
                 <span className="font-serif italic font-normal bg-gradient-to-r from-white via-cyan-100 to-[#42C6D9] bg-clip-text text-transparent">
                   Zero ambiguity
@@ -92,7 +92,7 @@ export default function ProcessPage() {
             {processStages.map((stage, idx) => (
               <div
                 key={stage.number}
-                className="rounded-3xl bg-white border border-slate-200/80 shadow-card hover:shadow-card-hover hover:border-[#42C6D9]/50 transition-all duration-300 p-8 sm:p-12 lg:p-14"
+                className="rounded-3xl bg-white border border-slate-200/80 shadow-card hover:shadow-card-hover hover:border-[#42C6D9]/50 transition-all duration-300 p-5 sm:p-10 lg:p-14"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
                   {/* Left Column: Stage Identity & Narrative */}
