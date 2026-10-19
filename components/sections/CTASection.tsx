@@ -28,7 +28,7 @@ export const CTASection: React.FC<CTASectionProps> = ({
     <section className={`${bgClass} py-20 sm:py-28 lg:py-32 relative ${className || ""}`}>
       <Container size="default" className="relative z-10 max-w-[1320px]">
         <Reveal yOffset={20}>
-          <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-[#003049] via-[#14213D] to-[#003049] text-white p-10 sm:p-16 lg:p-20 shadow-xl border border-white/10">
+          <div className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-[#003049] via-[#14213D] to-[#003049] text-white p-6 sm:p-12 lg:p-20 shadow-xl border border-white/10">
             {/* Ambient soft glow */}
             <div className="absolute top-0 right-0 w-80 h-80 bg-[#42C6D9]/15 rounded-full blur-3xl pointer-events-none" />
 
@@ -38,7 +38,7 @@ export const CTASection: React.FC<CTASectionProps> = ({
                 <span>Next Step</span>
               </span>
 
-              <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.08]">
+              <h2 className="font-display text-[clamp(1.85rem,4.5vw,3.75rem)] font-bold text-white tracking-tight leading-[1.12]">
                 Ready to build{" "}
                 <span className="font-serif italic font-normal bg-gradient-to-r from-white via-cyan-100 to-[#42C6D9] bg-clip-text text-transparent">
                   what&apos;s next

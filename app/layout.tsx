@@ -1,23 +1,25 @@
 import type { Metadata, Viewport } from "next";
-import { Space_Grotesk, Manrope, Instrument_Serif } from "next/font/google";
+import { Manrope, Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { siteConfig } from "@/data/siteData";
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-space-grotesk",
-  display: "swap"
-});
-
 const manrope = Manrope({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["600", "700", "800"],
   variable: "--font-manrope",
-  display: "swap"
+  display: "swap",
+  fallback: ["system-ui", "-apple-system", "sans-serif"]
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-inter",
+  display: "swap",
+  fallback: ["system-ui", "-apple-system", "sans-serif"]
 });
 
 const instrumentSerif = Instrument_Serif({
@@ -25,7 +27,8 @@ const instrumentSerif = Instrument_Serif({
   weight: ["400"],
   style: ["normal", "italic"],
   variable: "--font-instrument-serif",
-  display: "swap"
+  display: "swap",
+  fallback: ["Georgia", "serif"]
 });
 
 export const viewport: Viewport = {
@@ -139,7 +142,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${spaceGrotesk.variable} ${manrope.variable} ${instrumentSerif.variable} scroll-smooth`}
+      className={`${manrope.variable} ${inter.variable} ${instrumentSerif.variable} scroll-smooth`}
     >
       <head>
         <script

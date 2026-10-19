@@ -40,7 +40,7 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
         
         {/* Main Card Container */}
         <div
-          className={`relative rounded-3xl border p-6 sm:p-10 lg:p-12 xl:p-14 transition-all duration-300 shadow-card ${
+          className={`relative rounded-3xl border p-5 sm:p-10 lg:p-12 xl:p-14 transition-all duration-300 shadow-card ${
             isDark
               ? "bg-[#14213D] border-slate-800 shadow-2xl"
               : "bg-[#F7F8FA] border-slate-200/80"
@@ -67,7 +67,7 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                 <Reveal delay={0.12} yOffset={16}>
                   <h2
                     id={`${service.id}-heading`}
-                    className={`font-display text-3xl sm:text-4xl lg:text-[46px] font-bold tracking-tight leading-[1.1] ${
+                    className={`font-display text-[clamp(26px,3.5vw,46px)] font-bold tracking-tight leading-[1.14] ${
                       isDark ? "text-white" : "text-slate-950"
                     }`}
                   >
@@ -210,7 +210,7 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
             <div className="lg:col-span-6 w-full">
               <Reveal delay={0.22} yOffset={18}>
                 <div
-                  className={`rounded-2xl p-6 sm:p-8 lg:p-9 border shadow-sm flex flex-col justify-between space-y-8 ${
+                  className={`rounded-2xl p-5 sm:p-8 lg:p-9 border shadow-sm flex flex-col justify-between space-y-8 ${
                     isDark
                       ? "bg-[#0B0F19] border-slate-700/80 text-white"
                       : "bg-white border-slate-200/80 text-slate-900"

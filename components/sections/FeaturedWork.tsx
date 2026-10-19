@@ -51,7 +51,7 @@ export const FeaturedWork: React.FC = () => {
                   <div className="grid grid-cols-1 lg:grid-cols-12">
                     {/* Project Narrative */}
                     <div
-                      className={`lg:col-span-7 p-7 sm:p-10 lg:p-12 flex flex-col justify-between ${
+                      className={`lg:col-span-7 p-5 sm:p-8 lg:p-12 flex flex-col justify-between ${
                         isReversed ? "lg:order-2" : "lg:order-1"
                       }`}
                     >
@@ -126,7 +126,7 @@ export const FeaturedWork: React.FC = () => {
 
                     {/* Case Study Blueprint Side */}
                     <div
-                      className={`lg:col-span-5 bg-gradient-to-br from-[#003049] via-[#14213D] to-[#003049] p-7 sm:p-10 lg:p-12 flex flex-col justify-center relative overflow-hidden text-white ${
+                      className={`lg:col-span-5 bg-gradient-to-br from-[#003049] via-[#14213D] to-[#003049] p-5 sm:p-8 lg:p-12 flex flex-col justify-center relative overflow-hidden text-white ${
                         isReversed ? "lg:order-1" : "lg:order-2"
                       }`}
                     >

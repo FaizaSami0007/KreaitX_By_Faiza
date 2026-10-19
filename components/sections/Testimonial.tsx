@@ -31,7 +31,7 @@ export const Testimonial: React.FC = () => {
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {trustPrinciples.map((item, idx) => (
             <StaggerItem key={item.title}>
-              <div className="group rounded-3xl bg-white p-8 sm:p-10 border border-slate-200/90 shadow-card hover:shadow-card-hover hover:border-[#42C6D9]/50 h-full flex flex-col justify-between transition-all duration-300">
+              <div className="group rounded-3xl bg-white p-5 sm:p-8 lg:p-10 border border-slate-200/90 shadow-card hover:shadow-card-hover hover:border-[#42C6D9]/50 h-full flex flex-col justify-between transition-all duration-300">
                 <div>
                   <span className="text-xs font-mono font-bold text-[#003049] px-3.5 py-1 rounded-full bg-[#F7F8FA] border border-slate-200 inline-block mb-4 uppercase tracking-wider">
                     Principle 0{idx + 1}

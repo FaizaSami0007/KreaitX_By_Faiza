@@ -54,7 +54,7 @@ export const Services: React.FC = () => {
               <StaggerItem key={service.id} className={colSpan}>
                 <Link
                   href={`/solutions/${service.id}`}
-                  className="group flex flex-col justify-between h-full rounded-3xl bg-[#14213D] p-7 sm:p-9 border border-white/10 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-card-hover hover:border-[#42C6D9]/50 relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9]"
+                  className="group flex flex-col justify-between h-full rounded-3xl bg-[#14213D] p-5 sm:p-7 lg:p-9 border border-white/10 shadow-card transition-all duration-300 hover:-translate-y-1.5 hover:shadow-card-hover hover:border-[#42C6D9]/50 relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9]"
                 >
                   {/* Subtle top card gradient border accent */}
                   <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#42C6D9]/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

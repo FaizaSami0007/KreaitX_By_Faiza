@@ -24,9 +24,9 @@ const config: Config = {
         }
       },
       fontFamily: {
-        sans: ["var(--font-manrope)", "Manrope", "system-ui", "-apple-system", "sans-serif"],
-        display: ["var(--font-space-grotesk)", "Space Grotesk", "system-ui", "sans-serif"],
-        heading: ["var(--font-space-grotesk)", "Space Grotesk", "system-ui", "sans-serif"],
+        sans: ["var(--font-inter)", "Inter", "system-ui", "-apple-system", "sans-serif"],
+        display: ["var(--font-manrope)", "Manrope", "system-ui", "sans-serif"],
+        heading: ["var(--font-manrope)", "Manrope", "system-ui", "sans-serif"],
         serif: ["var(--font-instrument-serif)", "Instrument Serif", "Georgia", "serif"],
         mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"]
       },

@@ -67,13 +67,15 @@
     overflow-x: clip;
     background-color: #FFFFFF;
     color: #0F172A;
-    font-family: var(--font-manrope), system-ui, -apple-system, sans-serif;
+    font-family: var(--font-inter), Inter, system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-space-grotesk), system-ui, -apple-system, sans-serif;
+    font-family: var(--font-manrope), Manrope, system-ui, -apple-system, sans-serif;
     color: #0B0F19;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
   }
 
   ::selection {

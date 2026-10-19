@@ -92,7 +92,7 @@ export const Hero: React.FC = () => {
 
           {/* 2. MAIN DISPLAY HEADLINE */}
           <Reveal delay={0.12} yOffset={18}>
-            <h1 className="font-display text-[clamp(2.5rem,5.8vw,4.75rem)] font-bold text-white tracking-tight leading-[1.05]">
+            <h1 className="font-display text-[clamp(2.35rem,5.5vw,4.75rem)] font-bold text-white tracking-tight leading-[1.08]">
               Creative vision.{" "}
               <span className="font-serif italic font-normal bg-gradient-to-r from-white via-cyan-100 to-[#42C6D9] bg-clip-text text-transparent">
                 Engineered for impact
@@ -103,7 +103,7 @@ export const Hero: React.FC = () => {
 
           {/* 3. SUPPORTING COPY */}
           <Reveal delay={0.2} yOffset={16}>
-            <p className="mt-6 text-lg sm:text-xl text-slate-200 font-sans font-normal leading-relaxed max-w-2xl mx-auto">
+            <p className="mt-6 text-base sm:text-lg lg:text-xl text-slate-200 font-sans font-normal leading-relaxed max-w-2xl mx-auto">
               KreaitX connects brand strategy, creative production, and digital engineering to help ambitious businesses build stronger, high-conversion digital experiences.
             </p>
           </Reveal>

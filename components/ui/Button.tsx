@@ -58,9 +58,9 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     };
 
     const sizeStyles = {
-      sm: "text-xs px-4 py-2 min-h-[38px]",
-      md: "text-sm px-6 py-2.5 min-h-[46px]",
-      lg: "text-base px-8 py-3.5 min-h-[52px]"
+      sm: "text-[14px] px-4.5 py-2 min-h-[40px]",
+      md: "text-[14px] sm:text-[15px] px-6 py-2.5 min-h-[46px]",
+      lg: "text-[15px] sm:text-[16px] px-7 sm:px-8 py-3.5 min-h-[52px]"
     };
 
     const arrowElement = withArrow && (

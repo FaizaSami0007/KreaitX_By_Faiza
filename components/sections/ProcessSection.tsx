@@ -50,20 +50,20 @@ export const ProcessSection: React.FC = () => {
               key={stage.number}
               type="button"
               onClick={() => setActiveStep(idx)}
-              className={`text-left p-4 sm:p-5 rounded-2xl border transition-all duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9] ${
+              className={`text-left p-3.5 sm:p-5 rounded-2xl border transition-all duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9] ${
                 activeStep === idx
                   ? "bg-[#003049] text-white border-[#003049] shadow-brand-button -translate-y-1"
                   : "bg-[#F7F8FA] text-slate-700 border-slate-200/90 hover:border-slate-300 hover:bg-white"
               }`}
             >
               <div
-                className={`text-xs font-mono font-bold mb-1 uppercase tracking-wider ${
+                className={`text-[11px] sm:text-xs font-mono font-bold mb-1 uppercase tracking-wider ${
                   activeStep === idx ? "text-[#42C6D9]" : "text-slate-500"
                 }`}
               >
                 Stage {stage.number}
               </div>
-              <div className="text-sm font-display font-bold truncate">
+              <div className="text-[13px] sm:text-sm font-display font-bold truncate">
                 {stage.title}
               </div>
             </button>
@@ -71,7 +71,7 @@ export const ProcessSection: React.FC = () => {
         </div>
 
         {/* Active Stage Detail Showcase (Single semantic DOM container for active stage) */}
-        <div className="rounded-3xl bg-[#F7F8FA] border border-slate-200/90 p-7 sm:p-10 lg:p-12 shadow-card transition-all duration-300">
+        <div className="rounded-3xl bg-[#F7F8FA] border border-slate-200/90 p-5 sm:p-8 lg:p-12 shadow-card transition-all duration-300">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             {/* Left Narrative */}
             <div className="lg:col-span-5 space-y-4">

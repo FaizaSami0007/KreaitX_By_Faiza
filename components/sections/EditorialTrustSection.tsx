@@ -65,7 +65,7 @@ export const EditorialTrustSection: React.FC = () => {
             <Reveal delay={0.12} yOffset={18}>
               <h2
                 id="editorial-positioning-heading"
-                className="text-[clamp(32px,4.2vw,56px)] font-display font-bold text-slate-950 tracking-[-0.03em] leading-[1.08]"
+                className="text-[clamp(28px,3.8vw,48px)] font-display font-bold text-slate-950 tracking-[-0.025em] leading-[1.12]"
               >
                 Ambitious brands need coherence,{" "}
                 <span className="font-serif italic font-normal bg-gradient-to-r from-[#003049] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent">
@@ -106,7 +106,7 @@ export const EditorialTrustSection: React.FC = () => {
               const Icon = diff.icon;
               return (
                 <Reveal key={diff.number} delay={0.1 + index * 0.08} yOffset={16}>
-                  <div className="p-6 sm:p-7 rounded-2xl bg-white border border-slate-200/90 shadow-card hover:shadow-card-hover hover:border-[#42C6D9]/50 transition-all duration-300 h-full flex flex-col justify-between group">
+                  <div className="p-5 sm:p-7 rounded-2xl bg-white border border-slate-200/90 shadow-card hover:shadow-card-hover hover:border-[#42C6D9]/50 transition-all duration-300 h-full flex flex-col justify-between group">
                     <div>
                       {/* Top Row: Index + Framework Tag */}
                       <div className="flex items-center justify-between mb-4">
