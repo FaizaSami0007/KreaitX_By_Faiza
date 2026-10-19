@@ -165,20 +165,20 @@ export default async function InsightArticlePage({ params }: PageProps) {
         </Container>
       </div>
 
-      {/* Article Header Hero */}
-      <section className="relative overflow-hidden bg-[#34312F] text-white py-16 sm:py-20 lg:py-24 border-b border-white/10">
+      {/* Article Header Hero — Porcelain #F7F5F0 Canvas */}
+      <section className="relative overflow-hidden bg-[#F7F5F0] text-[#34312F] py-16 sm:py-20 lg:py-24 border-b border-[#E5E1DA]">
         <Container size="default" className="relative z-10">
           <div className="max-w-3xl mx-auto space-y-6">
             <Reveal yOffset={12}>
               <div className="flex flex-wrap items-center gap-3">
-                <span className="px-3.5 py-1.5 rounded-md bg-white/10 text-[#FF5A1F] border border-white/15 text-xs font-semibold uppercase tracking-wider">
+                <span className="px-3.5 py-1.5 rounded-md bg-[#FFF0E8] text-[#FF5A1F] border border-[#E5E1DA] text-xs font-semibold uppercase tracking-wider">
                   {article.category}
                 </span>
-                <span className="text-xs font-sans text-white/60 font-medium flex items-center gap-1.5">
+                <span className="text-xs font-sans text-[#6B6560] font-medium flex items-center gap-1.5">
                   <Calendar className="h-3.5 w-3.5 text-[#FF5A1F]" />
                   {article.publishDate}
                 </span>
-                <span className="text-xs font-sans text-white/60 font-medium flex items-center gap-1.5">
+                <span className="text-xs font-sans text-[#6B6560] font-medium flex items-center gap-1.5">
                   <Clock className="h-3.5 w-3.5 text-[#FF5A1F]" />
                   {article.readTime}
                 </span>
@@ -186,30 +186,30 @@ export default async function InsightArticlePage({ params }: PageProps) {
             </Reveal>
 
             <Reveal delay={0.08} yOffset={16}>
-              <h1 className="font-display text-3xl sm:text-5xl lg:text-[52px] font-bold text-white tracking-tight leading-[1.12]">
+              <h1 className="font-display text-3xl sm:text-5xl lg:text-[52px] font-bold text-[#34312F] tracking-tight leading-[1.12]">
                 {article.title}
               </h1>
             </Reveal>
 
             <Reveal delay={0.14} yOffset={14}>
-              <p className="text-lg sm:text-xl text-[#E5E1DA] leading-relaxed font-sans font-normal">
+              <p className="text-lg sm:text-xl text-[#6B6560] leading-relaxed font-sans font-normal">
                 {article.excerpt}
               </p>
             </Reveal>
 
             {/* Author / Studio attribution bar */}
             <Reveal delay={0.2} yOffset={12}>
-              <div className="pt-6 border-t border-white/10 flex items-center justify-between text-xs text-white/50">
+              <div className="pt-6 border-t border-[#E5E1DA] flex items-center justify-between text-xs text-[#6B6560]">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/15 text-[#FF5A1F] flex items-center justify-center font-display font-bold text-xs">
+                  <div className="w-8 h-8 rounded-lg bg-white border border-[#E5E1DA] text-[#FF5A1F] flex items-center justify-center font-display font-bold text-xs">
                     KX
                   </div>
                   <div>
-                    <span className="font-semibold text-white block">KreaitX Editorial</span>
-                    <span className="text-white/60">Creative Technology &amp; Digital Growth</span>
+                    <span className="font-semibold text-[#34312F] block">KreaitX Editorial</span>
+                    <span className="text-[#6B6560]">Creative Technology &amp; Digital Growth</span>
                   </div>
                 </div>
-                <div className="hidden sm:block text-white/50">
+                <div className="hidden sm:block text-[#6B6560]">
                   Published in Peshawar, Pakistan
                 </div>
               </div>

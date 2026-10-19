@@ -101,22 +101,22 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* About Page Hero — Deep Warm Charcoal Canvas */}
-      <section className="relative bg-[#34312F] text-white py-20 lg:py-28 border-b border-white/10 overflow-hidden">
+      {/* About Page Hero — Porcelain Canvas */}
+      <section className="relative bg-[#F7F5F0] text-[#34312F] py-20 lg:py-28 border-b border-[#E5E1DA] overflow-hidden">
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#FF5A1F] px-3.5 py-1.5 rounded-md bg-white/5 border border-white/10 mb-6">
+              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#FF5A1F] px-3.5 py-1.5 rounded-md bg-[#FFF0E8] border border-[#E5E1DA] mb-6">
                 <span className="w-2 h-2 rounded-full bg-[#FF5A1F]" />
                 <span>Studio Story &amp; Philosophy</span>
               </span>
-              <h1 className="font-display text-[clamp(2rem,4.5vw,3.75rem)] font-bold text-white tracking-tight leading-[1.08]">
+              <h1 className="font-display text-[clamp(2rem,4.5vw,3.75rem)] font-bold text-[#34312F] tracking-tight leading-[1.08]">
                 Where creative vision meets{" "}
                 <span className="font-display font-bold text-[#FF5A1F]">
                   technical reality
                 </span>.
               </h1>
-              <p className="mt-6 text-lg sm:text-xl text-[#E5E1DA] leading-relaxed font-sans font-normal max-w-2xl">
+              <p className="mt-6 text-lg sm:text-xl text-[#6B6560] leading-relaxed font-sans font-normal max-w-2xl">
                 KreaitX was founded with a singular conviction: businesses deserve a unified partner capable of shaping their brand narrative, filming their visual story, and engineering their digital infrastructure under one roof.
               </p>
 
@@ -126,7 +126,7 @@ export default function AboutPage() {
                 </Button>
                 <a
                   href="#studio-story"
-                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-lg text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/15 transition-all duration-200 w-full sm:w-auto"
+                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-lg text-sm font-semibold text-[#34312F] bg-white hover:bg-[#F7F5F0] hover:text-[#FF5A1F] border border-[#E5E1DA] transition-all duration-200 w-full sm:w-auto shadow-2xs"
                 >
                   Discover Our Story ↓
                 </a>

@@ -194,24 +194,24 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         </Container>
       </div>
 
-      {/* Service Hero Section */}
-      <section className="relative overflow-hidden bg-[#34312F] text-white py-16 sm:py-24 lg:py-28 border-b border-white/10">
+      {/* Service Hero Section — Porcelain #F7F5F0 Canvas */}
+      <section className="relative overflow-hidden bg-[#F7F5F0] text-[#34312F] py-16 sm:py-24 lg:py-28 border-b border-[#E5E1DA]">
         <Container size="default" className="relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <Reveal yOffset={12}>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-white/5 border border-white/10">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-[#FFF0E8] border border-[#E5E1DA]">
                 <span className="font-mono text-xs font-bold text-[#FF5A1F]">
                   {service.number}
                 </span>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#FF5A1F]" />
-                <span className="text-xs font-sans font-bold uppercase tracking-wider text-white/80">
+                <span className="text-xs font-sans font-bold uppercase tracking-wider text-[#34312F]">
                   {service.category}
                 </span>
               </div>
             </Reveal>
 
             <Reveal delay={0.08} yOffset={16}>
-              <h1 className="font-display text-4xl sm:text-6xl lg:text-[64px] font-bold text-white tracking-tight leading-[1.08]">
+              <h1 className="font-display text-4xl sm:text-6xl lg:text-[64px] font-bold text-[#34312F] tracking-tight leading-[1.08]">
                 {service.title}{" "}
                 <span className="block mt-2 font-display font-bold text-3xl sm:text-5xl lg:text-[54px] text-[#FF5A1F]">
                   {service.tagline}
@@ -220,7 +220,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             </Reveal>
 
             <Reveal delay={0.14} yOffset={14}>
-              <p className="text-lg sm:text-xl text-[#E5E1DA] leading-relaxed font-sans font-normal max-w-2xl mx-auto">
+              <p className="text-lg sm:text-xl text-[#6B6560] leading-relaxed font-sans font-normal max-w-2xl mx-auto">
                 {service.description}
               </p>
             </Reveal>
@@ -239,7 +239,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                 </Button>
                 <a
                   href="#deliverables"
-                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-lg text-sm font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/15 transition-all duration-200 w-full sm:w-auto"
+                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-lg text-sm font-semibold text-[#34312F] bg-white hover:bg-[#F7F5F0] hover:text-[#FF5A1F] border border-[#E5E1DA] transition-all duration-200 w-full sm:w-auto shadow-xs"
                 >
                   View Deliverables ↓
                 </a>
@@ -249,43 +249,43 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             {/* Quick Metrics / Assurance Badges */}
             <Reveal delay={0.25} yOffset={12}>
               <div className="pt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto text-left">
-                <div className="p-4 rounded-xl bg-[#2D2A28] border border-white/10 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center shrink-0">
+                <div className="p-4 rounded-xl bg-white border border-[#E5E1DA] shadow-xs flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-[#FFF0E8] flex items-center justify-center shrink-0">
                     <Layers className="h-5 w-5 text-[#FF5A1F]" />
                   </div>
                   <div>
                     <span className="text-xs text-[#FF5A1F] uppercase tracking-wider font-bold block">
                       Deliverables
                     </span>
-                    <span className="text-sm font-semibold text-white">
+                    <span className="text-sm font-semibold text-[#34312F]">
                       {service.deliverables.length} Core Systems
                     </span>
                   </div>
                 </div>
 
-                <div className="p-4 rounded-xl bg-[#2D2A28] border border-white/10 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center shrink-0">
+                <div className="p-4 rounded-xl bg-white border border-[#E5E1DA] shadow-xs flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-[#FFF0E8] flex items-center justify-center shrink-0">
                     <Cpu className="h-5 w-5 text-[#FF5A1F]" />
                   </div>
                   <div>
                     <span className="text-xs text-[#FF5A1F] uppercase tracking-wider font-bold block">
                       Workflow
                     </span>
-                    <span className="text-sm font-semibold text-white">
+                    <span className="text-sm font-semibold text-[#34312F]">
                       4-Stage Precision
                     </span>
                   </div>
                 </div>
 
-                <div className="p-4 rounded-xl bg-[#2D2A28] border border-white/10 flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center shrink-0">
+                <div className="p-4 rounded-xl bg-white border border-[#E5E1DA] shadow-xs flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-[#FFF0E8] flex items-center justify-center shrink-0">
                     <ShieldCheck className="h-5 w-5 text-[#FF5A1F]" />
                   </div>
                   <div>
                     <span className="text-xs text-[#FF5A1F] uppercase tracking-wider font-bold block">
                       Assurance
                     </span>
-                    <span className="text-sm font-semibold text-white">
+                    <span className="text-sm font-semibold text-[#34312F]">
                       Direct Senior Leads
                     </span>
                   </div>
