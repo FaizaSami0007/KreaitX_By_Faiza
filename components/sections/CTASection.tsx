@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { siteConfig } from "@/data/siteData";
 import { trackEvent } from "@/lib/analytics";
-import { Sparkles } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 export interface CTASectionProps {
   bg?: "light" | "dark" | "porcelain" | "white";
@@ -19,35 +19,31 @@ export const CTASection: React.FC<CTASectionProps> = ({
 }) => {
   const isDark = bg === "dark";
   const bgClass = isDark
-    ? "bg-[#21113D] border-t border-white/10"
+    ? "bg-[#111111] border-t border-white/10"
     : bg === "white"
-    ? "bg-white border-t border-[#E9E0F2]"
-    : "bg-[#FFF9F0] border-t border-[#E9E0F2]";
+    ? "bg-white border-t border-[#E5E1DA]"
+    : "bg-[#F7F5F0] border-t border-[#E5E1DA]";
 
   return (
     <section className={`${bgClass} py-20 sm:py-28 lg:py-32 relative ${className || ""}`}>
       <Container size="default" className="relative z-10 max-w-[1320px]">
         <Reveal yOffset={20}>
-          <div className="relative overflow-hidden rounded-[32px] bg-[#21113D] text-white p-6 sm:p-12 lg:p-20 shadow-2xl border border-[#FFD6A5]/25">
-            {/* Ambient Purple & Cream Glows */}
-            <div className="absolute -top-24 -left-24 w-80 h-80 rounded-full bg-[#6A00F4]/30 blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-24 -right-24 w-80 h-80 rounded-full bg-[#FFD6A5]/15 blur-3xl pointer-events-none" />
-
+          <div className="relative overflow-hidden rounded-2xl bg-[#111111] text-white p-8 sm:p-14 lg:p-20 border border-white/10 shadow-xl">
             <div className="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#FFD6A5] px-4 py-1.5 rounded-full bg-[#390080]/60 border border-[#FFD6A5]/30 mb-6 shadow-subtle">
-                <Sparkles className="h-3.5 w-3.5 text-[#FFD6A5]" />
+              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#FF5A1F] px-3.5 py-1.5 rounded-md bg-white/5 border border-white/10 mb-6">
+                <span className="w-2 h-2 rounded-full bg-[#FF5A1F]" />
                 <span>Next Step</span>
               </span>
 
               <h2 className="font-display text-[clamp(1.85rem,4.5vw,3.75rem)] font-bold text-white tracking-tight leading-[1.12]">
                 Ready to build{" "}
-                <span className="font-display font-bold not-italic bg-gradient-to-r from-white via-[#FFD6A5] to-[#FFD6A5] bg-clip-text text-transparent">
+                <span className="font-display font-bold text-[#FF5A1F]">
                   what&apos;s next
                 </span>
                 ?
               </h2>
 
-              <p className="mt-6 text-base sm:text-lg text-[#F3ECFF]/85 leading-relaxed font-sans font-normal max-w-2xl">
+              <p className="mt-6 text-base sm:text-lg text-[#A19E98] leading-relaxed font-sans font-normal max-w-2xl">
                 Tell us what you&apos;re working on. We&apos;ll evaluate the opportunity, technical scope, and practical delivery timeline together.
               </p>
 
@@ -63,7 +59,7 @@ export const CTASection: React.FC<CTASectionProps> = ({
                       cta_text: "Start a Conversation"
                     })
                   }
-                  className="w-full sm:w-auto font-bold min-h-[52px] shadow-brand-button"
+                  className="w-full sm:w-auto font-bold min-h-[52px]"
                 >
                   Start a Project
                 </Button>
@@ -78,13 +74,14 @@ export const CTASection: React.FC<CTASectionProps> = ({
                       location: "global_cta_section"
                     })
                   }
-                  className="w-full sm:w-auto bg-white/10 text-white border-white/20 hover:border-[#FFD6A5]/50 hover:bg-white/20 min-h-[52px]"
+                  className="w-full sm:w-auto bg-white/5 text-white border-white/15 hover:border-white/40 hover:bg-white/10 min-h-[52px]"
                 >
-                  {siteConfig.contact.email}
+                  <span>{siteConfig.contact.email}</span>
+                  <ArrowUpRight className="ml-1.5 h-4 w-4" />
                 </Button>
               </div>
 
-              <p className="mt-8 text-xs font-mono text-[#FFD6A5]/80">
+              <p className="mt-8 text-xs font-mono text-[#A19E98]">
                 Direct consultation with senior leads • Studio location: {siteConfig.location.formatted}
               </p>
             </div>

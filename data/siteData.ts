@@ -324,7 +324,7 @@ export const projectCaseStudies: ProjectCaseStudy[] = [
     ],
     slug: "aurora-healthcare",
     featured: true,
-    accentColor: "#21113D"
+    accentColor: "#111111"
   },
   {
     id: "nordic-craft",
@@ -368,7 +368,7 @@ export const projectCaseStudies: ProjectCaseStudy[] = [
     ],
     slug: "vanguard-fintech",
     featured: true,
-    accentColor: "#21113D"
+    accentColor: "#111111"
   }
 ];
 

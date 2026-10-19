@@ -12,11 +12,8 @@ interface SectionLabelProps {
 export const SectionLabel: React.FC<SectionLabelProps> = ({
   number,
   label,
-  className,
-  theme = "light",
-  variant = "default"
+  className
 }) => {
-  const isDark = theme === "dark";
 
   return (
     <div className={cn("inline-flex items-center gap-2.5", className)}>
@@ -24,7 +21,7 @@ export const SectionLabel: React.FC<SectionLabelProps> = ({
         <span
           className={cn(
             "font-mono text-xs sm:text-sm font-bold tracking-tight",
-            variant === "cyan" || isDark ? "text-[#FFD6A5]" : "text-[#6A00F4]"
+            "text-[#FF5A1F]"
           )}
         >
           {number}
@@ -32,15 +29,15 @@ export const SectionLabel: React.FC<SectionLabelProps> = ({
       )}
       <span
         className={cn(
-          "w-5 h-[2px] rounded-full",
-          variant === "cyan" || isDark ? "bg-[#FFD6A5]" : "bg-[#6A00F4]"
+          "w-4 h-[2px] rounded-full",
+          "bg-[#FF5A1F]"
         )}
         aria-hidden="true"
       />
       <span
         className={cn(
-          "text-xs font-sans font-bold uppercase tracking-[0.18em]",
-          variant === "cyan" || isDark ? "text-[#FFD6A5]" : "text-[#6A00F4]"
+          "text-xs font-sans font-bold uppercase tracking-[0.16em]",
+          "text-[#FF5A1F]"
         )}
       >
         {label}

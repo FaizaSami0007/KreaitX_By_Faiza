@@ -35,18 +35,18 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
       )}
     >
       {eyebrow && (
-        <div className="mb-4 inline-flex items-center gap-2">
+        <div className="mb-3.5 inline-flex items-center gap-2">
           <span
             className={cn(
-              "inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-[0.16em] transition-colors",
+              "inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-semibold uppercase tracking-[0.14em] transition-colors",
               withGradientEyebrow
                 ? isDark
-                  ? "bg-[#21113D] text-[#FFD6A5] border border-[#FFD6A5]/30 shadow-sm"
-                  : "bg-[#F3ECFF] text-[#6A00F4] border border-[#E9E0F2] shadow-subtle"
-                : eyebrowColor || (isDark ? "text-[#FFD6A5]" : "text-[#6A00F4]")
+                  ? "bg-[#1a1a1a] text-white border border-white/10"
+                  : "bg-[#FFF0E8] text-[#FF5A1F] border border-[#FF5A1F]/20"
+                : eyebrowColor || (isDark ? "text-[#FF5A1F]" : "text-[#FF5A1F]")
             )}
           >
-            <span className={cn("h-1.5 w-1.5 rounded-full animate-pulse", isDark ? "bg-[#FFD6A5]" : "bg-[#6A00F4]")} aria-hidden="true" />
+            <span className={cn("h-1.5 w-1.5 rounded-full", "bg-[#FF5A1F]")} aria-hidden="true" />
             {eyebrow}
           </span>
         </div>
@@ -54,8 +54,8 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
 
       <h2
         className={cn(
-          "font-display text-[clamp(28px,3.5vw,48px)] font-bold tracking-tight leading-[1.12]",
-          isDark ? "text-white" : "text-[#211832]"
+          "font-display text-[clamp(26px,3.2vw,44px)] font-bold tracking-tight leading-[1.12]",
+          isDark ? "text-white" : "text-[#111111]"
         )}
       >
         {title}
@@ -64,8 +64,8 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
       {description && (
         <p
           className={cn(
-            "mt-4 sm:mt-5 text-base sm:text-lg leading-relaxed max-w-2xl font-sans font-normal",
-            isDark ? "text-slate-300" : "text-[#625A70]"
+            "mt-3 sm:mt-4 text-base sm:text-lg leading-relaxed max-w-2xl font-sans font-normal",
+            isDark ? "text-[#A19E98]" : "text-[#66635F]"
           )}
         >
           {description}

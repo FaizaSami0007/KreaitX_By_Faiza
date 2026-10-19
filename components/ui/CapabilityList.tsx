@@ -27,7 +27,7 @@ export const CapabilityList: React.FC<CapabilityListProps> = ({
     <div
       className={cn(
         "divide-y",
-        isDark ? "divide-white/10" : "divide-[#E9E0F2]",
+        isDark ? "divide-white/10" : "divide-[#E5E1DA]",
         className
       )}
     >
@@ -39,10 +39,10 @@ export const CapabilityList: React.FC<CapabilityListProps> = ({
               {Icon && (
                 <div
                   className={cn(
-                    "w-10 h-10 sm:w-11 sm:h-11 rounded-2xl border flex items-center justify-center shrink-0 transition-all duration-300 shadow-subtle",
+                    "w-10 h-10 sm:w-11 sm:h-11 rounded-lg border flex items-center justify-center shrink-0 transition-all duration-200 shadow-subtle",
                     isDark
-                      ? "border-white/10 bg-[#2b174d] text-[#FFD6A5] group-hover:border-[#6A00F4] group-hover:bg-[#390080]"
-                      : "border-[#E9E0F2] bg-[#F3ECFF] text-[#6A00F4] group-hover:border-[#6A00F4]/50 group-hover:bg-white group-hover:scale-105"
+                      ? "border-white/10 bg-[#1a1a1a] text-white group-hover:border-[#FF5A1F] group-hover:text-[#FF5A1F]"
+                      : "border-[#E5E1DA] bg-white text-[#111111] group-hover:border-[#111111] group-hover:text-[#FF5A1F]"
                   )}
                 >
                   <Icon className="h-4.5 w-4.5 sm:h-5 sm:w-5 stroke-[1.75]" />
@@ -53,8 +53,8 @@ export const CapabilityList: React.FC<CapabilityListProps> = ({
                   className={cn(
                     "text-sm sm:text-base font-display font-bold tracking-tight transition-colors",
                     isDark
-                      ? "text-white group-hover:text-[#FFD6A5]"
-                      : "text-[#211832] group-hover:text-[#6A00F4]"
+                      ? "text-white group-hover:text-[#FF5A1F]"
+                      : "text-[#111111] group-hover:text-[#FF5A1F]"
                   )}
                 >
                   {item.title}
@@ -62,7 +62,7 @@ export const CapabilityList: React.FC<CapabilityListProps> = ({
                 <p
                   className={cn(
                     "text-xs sm:text-[13px] font-sans font-normal leading-relaxed",
-                    isDark ? "text-slate-300" : "text-[#625A70]"
+                    isDark ? "text-[#66635F]" : "text-[#66635F]"
                   )}
                 >
                   {item.description}
@@ -73,10 +73,10 @@ export const CapabilityList: React.FC<CapabilityListProps> = ({
             {item.href && (
               <div
                 className={cn(
-                  "ml-3 shrink-0 transition-all duration-300",
+                  "ml-3 shrink-0 transition-all duration-200",
                   isDark
-                    ? "text-[#FFD6A5]/60 group-hover:text-[#FFD6A5] group-hover:translate-x-1"
-                    : "text-[#625A70] group-hover:text-[#6A00F4] group-hover:translate-x-1"
+                    ? "text-[#66635F] group-hover:text-[#FF5A1F] group-hover:translate-x-1"
+                    : "text-[#66635F] group-hover:text-[#FF5A1F] group-hover:translate-x-1"
                 )}
               >
                 <ArrowRight className="h-4 w-4" />

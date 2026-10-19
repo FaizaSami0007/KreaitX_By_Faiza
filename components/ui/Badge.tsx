@@ -18,26 +18,26 @@ export const Badge: React.FC<BadgeProps> = ({
   ...props
 }) => {
   const variantStyles = {
-    default: "bg-[#F3ECFF] text-[#6A00F4] border border-[#E9E0F2]",
-    gradient: "bg-[#FFF0D9] text-[#21113D] border border-[#FFD6A5]",
-    outline: "bg-transparent text-[#625A70] border border-[#E9E0F2]",
-    purple: "bg-[#6A00F4] text-white border border-[#6A00F4]",
-    cyan: "bg-[#FFF9F0] text-[#6A00F4] border border-[#E9E0F2]",
-    dark: "bg-[#21113D] text-[#FFD6A5] border border-white/10",
-    muted: "bg-[#FFF9F0] text-[#625A70] border border-[#E9E0F2]",
-    navy: "bg-[#21113D] text-white border border-[#390080]",
-    porcelain: "bg-[#FFF9F0] text-[#211832] border border-[#E9E0F2]"
+    default: "bg-[#FFF0E8] text-[#FF5A1F] border border-[#FF5A1F]/20",
+    gradient: "bg-[#111111] text-white border border-white/10",
+    outline: "bg-transparent text-[#66635F] border border-[#E5E1DA]",
+    purple: "bg-[#FF5A1F] text-white border border-[#FF5A1F]",
+    cyan: "bg-[#FFF0E8] text-[#FF5A1F] border border-[#FF5A1F]/30",
+    dark: "bg-[#111111] text-white border border-white/10",
+    muted: "bg-[#F7F5F0] text-[#66635F] border border-[#E5E1DA]",
+    navy: "bg-[#111111] text-white border border-white/10",
+    porcelain: "bg-[#F7F5F0] text-[#111111] border border-[#E5E1DA]"
   };
 
   const sizeStyles = {
-    sm: "text-[11px] px-3 py-1 font-semibold tracking-wide uppercase",
-    md: "text-xs px-3.5 py-1.5 font-medium tracking-normal"
+    sm: "text-[11px] px-2.5 py-0.5 font-semibold tracking-wide uppercase",
+    md: "text-xs px-3 py-1 font-medium tracking-normal"
   };
 
   return (
     <span
       className={cn(
-        "inline-flex items-center justify-center gap-1.5 rounded-full font-sans transition-colors",
+        "inline-flex items-center justify-center gap-1.5 rounded-md font-sans transition-colors",
         variantStyles[variant as keyof typeof variantStyles] || variantStyles.default,
         sizeStyles[size],
         className
@@ -45,7 +45,7 @@ export const Badge: React.FC<BadgeProps> = ({
       {...props}
     >
       {withDot && (
-        <span className="h-1.5 w-1.5 rounded-full bg-[#6A00F4] animate-pulse" />
+        <span className="h-1.5 w-1.5 rounded-full bg-[#FF5A1F]" />
       )}
       {children}
     </span>

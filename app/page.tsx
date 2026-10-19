@@ -13,9 +13,9 @@ export default function HomePage() {
     <>
       <Hero />
       <EditorialTrustSection />
+      <FeaturedWork />
       <Services />
       <Difference />
-      <FeaturedWork />
       <ProcessSection />
       <Testimonial />
       <CTASection />

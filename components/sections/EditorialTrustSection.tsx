@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowUpRight, Compass, Palette, Code2, TrendingUp, Sparkles } from "lucide-react";
+import { ArrowUpRight, Compass, Palette, Code2, TrendingUp } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 
@@ -42,7 +42,7 @@ export const EditorialTrustSection: React.FC = () => {
     <section
       id="positioning"
       aria-labelledby="editorial-positioning-heading"
-      className="relative bg-[#FFF9F0] text-[#211832] py-20 sm:py-28 lg:py-32 border-b border-[#E9E0F2]"
+      className="relative bg-[#F7F5F0] text-[#111111] py-20 sm:py-24 lg:py-28 border-b border-[#E5E1DA]"
     >
       <Container size="default" className="relative z-10 w-full max-w-[1320px]">
         {/* Main Content Layout */}
@@ -54,8 +54,8 @@ export const EditorialTrustSection: React.FC = () => {
             {/* Eyebrow with delicate rule */}
             <Reveal delay={0.05} yOffset={12}>
               <div className="flex items-center gap-2.5">
-                <span className="w-6 h-[2px] bg-[#6A00F4] rounded-full" aria-hidden="true" />
-                <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#6A00F4]">
+                <span className="w-5 h-[2px] bg-[#FF5A1F] rounded-full" aria-hidden="true" />
+                <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-[0.18em] text-[#FF5A1F]">
                   WHY ONE CONNECTED PARTNER
                 </span>
               </div>
@@ -65,10 +65,10 @@ export const EditorialTrustSection: React.FC = () => {
             <Reveal delay={0.12} yOffset={18}>
               <h2
                 id="editorial-positioning-heading"
-                className="text-[clamp(28px,3.8vw,48px)] font-display font-bold text-[#211832] tracking-[-0.025em] leading-[1.12]"
+                className="text-[clamp(28px,3.8vw,48px)] font-display font-bold text-[#111111] tracking-[-0.025em] leading-[1.12]"
               >
                 Ambitious brands need coherence,{" "}
-                <span className="font-display font-bold text-[#6A00F4] bg-gradient-to-r from-[#6A00F4] via-[#390080] to-[#6A00F4] bg-clip-text text-transparent">
+                <span className="font-display font-bold text-[#FF5A1F]">
                   not disconnected silos
                 </span>
                 .
@@ -77,7 +77,7 @@ export const EditorialTrustSection: React.FC = () => {
 
             {/* Supporting Editorial Paragraph */}
             <Reveal delay={0.2} yOffset={16}>
-              <p className="text-base sm:text-lg text-[#625A70] leading-[1.7] font-sans font-normal">
+              <p className="text-base sm:text-lg text-[#66635F] leading-[1.7] font-sans font-normal">
                 When brand designers, cinematographers, and engineers work in separate silos, the customer experience fragments. KreaitX unifies the entire creative technology lifecycle under one disciplined roof in Peshawar — giving ambitious clients global caliber execution without translation loss.
               </p>
             </Reveal>
@@ -87,13 +87,13 @@ export const EditorialTrustSection: React.FC = () => {
               <div className="pt-2 flex flex-wrap items-center gap-5 sm:gap-6">
                 <Link
                   href="/about"
-                  className="group inline-flex items-center text-xs font-sans font-semibold uppercase tracking-[0.14em] text-[#6A00F4] hover:text-[#390080] transition-colors py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#6A00F4]"
+                  className="group inline-flex items-center text-xs font-sans font-semibold uppercase tracking-[0.14em] text-[#111111] hover:text-[#FF5A1F] transition-colors py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5A1F]"
                 >
                   <span>Our Studio Story &amp; Origins</span>
-                  <ArrowUpRight className="ml-1.5 h-3.5 w-3.5 text-[#6A00F4] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  <ArrowUpRight className="ml-1.5 h-3.5 w-3.5 text-[#FF5A1F] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
-                <span className="text-xs text-slate-300 hidden sm:inline">•</span>
-                <span className="text-xs font-mono text-[#625A70]">
+                <span className="text-xs text-[#E5E1DA] hidden sm:inline">•</span>
+                <span className="text-xs font-mono text-[#66635F]">
                   PESHAWAR HQ × GLOBAL CLIENTS
                 </span>
               </div>
@@ -106,36 +106,36 @@ export const EditorialTrustSection: React.FC = () => {
               const Icon = diff.icon;
               return (
                 <Reveal key={diff.number} delay={0.1 + index * 0.08} yOffset={16}>
-                  <div className="p-5 sm:p-7 rounded-2xl bg-white border border-[#E9E0F2] shadow-card hover:shadow-card-hover hover:border-[#6A00F4]/40 transition-all duration-300 h-full flex flex-col justify-between group">
+                  <div className="p-5 sm:p-6 rounded-xl bg-white border border-[#E5E1DA] shadow-subtle hover:border-[#111111] hover:shadow-card transition-all duration-200 h-full flex flex-col justify-between group">
                     <div>
                       {/* Top Row: Index + Framework Tag */}
                       <div className="flex items-center justify-between mb-4">
-                        <span className="text-xs font-mono font-bold text-[#6A00F4] px-2.5 py-1 rounded-full bg-[#F3ECFF] border border-[#E9E0F2]">
+                        <span className="text-xs font-mono font-bold text-[#FF5A1F] px-2.5 py-0.5 rounded-md bg-[#FFF0E8] border border-[#FF5A1F]/20">
                           {diff.number}
                         </span>
-                        <span className="text-[11px] font-mono uppercase tracking-wider text-[#625A70] font-medium">
+                        <span className="text-[11px] font-mono uppercase tracking-wider text-[#66635F] font-medium">
                           {diff.metric}
                         </span>
                       </div>
 
                       {/* Title with icon */}
                       <div className="flex items-start gap-3 mb-2.5">
-                        <div className="p-2 rounded-xl bg-[#F3ECFF] text-[#6A00F4] group-hover:bg-[#6A00F4] group-hover:text-white transition-colors duration-200 shrink-0 mt-0.5">
+                        <div className="p-2 rounded-lg bg-[#F7F5F0] text-[#111111] group-hover:bg-[#FF5A1F] group-hover:text-white transition-colors duration-200 shrink-0 mt-0.5">
                           <Icon className="h-4 w-4 stroke-[1.8]" />
                         </div>
-                        <h3 className="font-display text-base sm:text-lg font-bold text-[#211832] group-hover:text-[#6A00F4] transition-colors leading-snug">
+                        <h3 className="font-display text-base sm:text-lg font-bold text-[#111111] group-hover:text-[#FF5A1F] transition-colors leading-snug">
                           {diff.title}
                         </h3>
                       </div>
 
-                      <p className="text-xs sm:text-sm text-[#625A70] leading-relaxed font-sans pt-1">
+                      <p className="text-xs sm:text-sm text-[#66635F] leading-relaxed font-sans pt-1">
                         {diff.description}
                       </p>
                     </div>
 
-                    <div className="mt-5 pt-3.5 border-t border-[#E9E0F2] flex items-center justify-between text-[11px] font-mono text-[#625A70]">
+                    <div className="mt-5 pt-3.5 border-t border-[#E5E1DA] flex items-center justify-between text-[11px] font-mono text-[#66635F]">
                       <span>KreaitX Core Pillar</span>
-                      <span className="text-[#6A00F4] font-bold group-hover:text-[#390080] transition-colors">Unified Delivery →</span>
+                      <span className="text-[#FF5A1F] font-bold">Unified Delivery →</span>
                     </div>
                   </div>
                 </Reveal>

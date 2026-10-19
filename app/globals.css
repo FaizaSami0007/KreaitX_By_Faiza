@@ -3,45 +3,39 @@
 @tailwind utilities;
 
 :root {
-  --bg-canvas: #FFF9F0;
+  --bg-canvas: #F7F5F0;
   --bg-surface: #FFFFFF;
-  --bg-surface-alt: #F3ECFF;
-  --bg-dark: #21113D;
+  --bg-surface-alt: #FFF0E8;
+  --bg-dark: #111111;
   
-  --text-heading: #211832;
-  --text-body: #211832;
-  --text-muted: #625A70;
+  --text-heading: #111111;
+  --text-body: #111111;
+  --text-muted: #66635F;
   
-  --brand-purple: #6A00F4;
-  --brand-deep: #390080;
-  --brand-plum: #21113D;
-  --brand-cream: #FFD6A5;
-  --brand-cream-soft: #FFF9F0;
-  --brand-cream-light: #FFF0D9;
-  --brand-lavender: #F3ECFF;
+  --brand-orange: #FF5A1F;
+  --brand-orange-hover: #E04812;
+  --brand-porcelain: #F7F5F0;
+  --brand-black: #111111;
   --brand-white: #FFFFFF;
-  --brand-body: #211832;
-  --brand-secondary: #625A70;
-  --brand-border: #E9E0F2;
-  --brand-focus: #6A00F4;
+  --brand-muted: #66635F;
+  --brand-border: #E5E1DA;
+  --brand-tint: #FFF0E8;
+  --brand-focus: #FF5A1F;
   
-  --border-subtle: #E9E0F2;
-  --border-focus: #6A00F4;
+  --border-subtle: #E5E1DA;
+  --border-focus: #FF5A1F;
   
-  --brand-gradient: linear-gradient(135deg, #21113D 0%, #390080 60%, #6A00F4 100%);
-  --brand-gradient-accent: linear-gradient(135deg, #6A00F4 0%, #390080 50%, #FFD6A5 100%);
-  
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-xl: 20px;
-  --radius-2xl: 24px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+  --radius-2xl: 22px;
   --radius-pill: 9999px;
   
-  --shadow-subtle: 0 2px 10px rgba(106, 0, 244, 0.04);
-  --shadow-card: 0 8px 24px -8px rgba(33, 17, 61, 0.08), 0 2px 4px -1px rgba(33, 17, 61, 0.03);
-  --shadow-card-hover: 0 16px 36px -12px rgba(106, 0, 244, 0.16), 0 0 0 1px rgba(106, 0, 244, 0.25);
-  --shadow-brand-button: 0 8px 22px -4px rgba(106, 0, 244, 0.35);
+  --shadow-subtle: 0 1px 3px rgba(17, 17, 17, 0.05), 0 1px 2px rgba(17, 17, 17, 0.03);
+  --shadow-card: 0 4px 16px -4px rgba(17, 17, 17, 0.06), 0 1px 3px -1px rgba(17, 17, 17, 0.03);
+  --shadow-card-hover: 0 12px 28px -6px rgba(17, 17, 17, 0.1), 0 0 0 1px #E5E1DA;
+  --shadow-brand-button: 0 2px 8px rgba(255, 90, 31, 0.25);
   
   --safe-top: env(safe-area-inset-top, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
@@ -55,8 +49,8 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #FFF9F0;
-    color: #211832;
+    background-color: #F7F5F0;
+    color: #111111;
     overflow-x: clip;
   }
 
@@ -66,17 +60,17 @@
     display: flex;
     flex-direction: column;
     overflow-x: clip;
-    background-color: #FFF9F0;
-    color: #211832;
+    background-color: #F7F5F0;
+    color: #111111;
     font-family: var(--font-inter), Inter, system-ui, -apple-system, sans-serif;
     font-size: 16px;
-    line-height: 1.65;
+    line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-manrope), Manrope, system-ui, -apple-system, sans-serif;
-    color: #211832;
-    letter-spacing: -0.02em;
+    color: #111111;
+    letter-spacing: -0.025em;
     font-weight: 700;
   }
 
@@ -86,15 +80,15 @@
   }
 
   ::selection {
-    background-color: #6A00F4;
+    background-color: #FF5A1F;
     color: #FFFFFF;
   }
 
   /* Accessible focus indicators */
   :focus-visible {
-    outline: 2px solid #6A00F4;
+    outline: 2px solid #FF5A1F;
     outline-offset: 3px;
-    border-radius: 6px;
+    border-radius: 4px;
   }
 
   /* Prevent iOS tap highlight gray box */
@@ -104,70 +98,54 @@
 }
 
 @layer utilities {
-  /* Brand Gradient Text */
-  .text-gradient-primary {
-    background: linear-gradient(135deg, #6A00F4 0%, #390080 50%, #FFD6A5 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  /* Clean Solid Accent utilities */
+  .text-accent {
+    color: #FF5A1F;
   }
 
-  .text-gradient-purple-pink {
-    background: linear-gradient(135deg, #6A00F4 0%, #FFD6A5 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  .text-gradient-cyan-blue {
-    background: linear-gradient(135deg, #390080 0%, #6A00F4 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-
-  /* Master Brand Card Components */
+  /* Master Minimal Portfolio Card Components */
   .brand-card,
   .softy-card {
     background: #FFFFFF;
-    border: 1px solid #E9E0F2;
-    border-radius: 24px;
-    box-shadow: 0 10px 30px -10px rgba(33, 17, 61, 0.06), 0 4px 6px -2px rgba(33, 17, 61, 0.02);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid #E5E1DA;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(17, 17, 17, 0.04);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .brand-card:hover,
   .softy-card:hover {
-    box-shadow: 0 20px 40px -15px rgba(106, 0, 244, 0.16), 0 0 0 1px rgba(106, 0, 244, 0.35);
-    border-color: rgba(106, 0, 244, 0.4);
-    transform: translateY(-3px);
+    border-color: #111111;
+    box-shadow: 0 8px 24px -6px rgba(17, 17, 17, 0.08);
+    transform: translateY(-2px);
   }
 
   .brand-card-subtle,
   .softy-card-subtle {
-    background: #FFF9F0;
-    border: 1px solid #E9E0F2;
-    border-radius: 20px;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    background: #F7F5F0;
+    border: 1px solid #E5E1DA;
+    border-radius: 14px;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .brand-card-subtle:hover,
   .softy-card-subtle:hover {
     background: #FFFFFF;
-    border-color: rgba(106, 0, 244, 0.35);
-    box-shadow: 0 15px 35px -10px rgba(106, 0, 244, 0.08);
-    transform: translateY(-2px);
+    border-color: #111111;
+    transform: translateY(-1px);
   }
 
   .brand-card-dark {
-    background: #21113D;
-    border: 1px solid rgba(255, 214, 165, 0.18);
-    border-radius: 24px;
-    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    background: #111111;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .brand-card-dark:hover {
-    border-color: rgba(255, 214, 165, 0.4);
-    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 214, 165, 0.25);
-    transform: translateY(-3px);
+    border-color: #FF5A1F;
+    transform: translateY(-2px);
   }
 
   /* Fluid typography helpers */

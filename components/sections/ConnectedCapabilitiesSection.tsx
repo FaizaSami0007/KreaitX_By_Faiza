@@ -21,91 +21,84 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
     <section
       id="connected-capabilities"
       aria-labelledby="connected-capabilities-heading"
-      className="relative bg-[#21113D] text-white py-20 sm:py-28 lg:py-32 border-b border-white/10"
+      className="relative bg-[#111111] text-white py-20 sm:py-28 lg:py-32 border-b border-white/10"
     >
       <Container size="default" className="relative z-10 w-full max-w-[1320px]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
-          {/* Left Column: Eyebrow, Headline, Paragraph, Actions (Cols 1-5) */}
+          {/* Left Column */}
           <div className="lg:col-span-5 flex flex-col items-start text-left space-y-6 sm:space-y-7 sticky top-28">
-            
-            {/* Eyebrow */}
             <Reveal delay={0.05} yOffset={12}>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#390080]/60 border border-[#FFD6A5]/30 text-[#FFD6A5] text-xs font-mono font-bold uppercase tracking-wider shadow-subtle">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#FFD6A5]" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-white/5 border border-white/10 text-[#FF5A1F] text-xs font-mono font-bold uppercase tracking-wider">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#FF5A1F]" />
                 <span>CONNECTED CAPABILITIES</span>
               </div>
             </Reveal>
 
-            {/* Main Statement Headline */}
             <Reveal delay={0.12} yOffset={18}>
               <h2
                 id="connected-capabilities-heading"
                 className="font-display text-4xl sm:text-5xl lg:text-[54px] font-bold text-white tracking-tight leading-[1.08]"
               >
                 Everything we build <br />
-                <span className="font-display font-bold not-italic bg-gradient-to-r from-white via-[#FFD6A5] to-[#FFD6A5] bg-clip-text text-transparent">
+                <span className="font-display font-bold text-[#FF5A1F]">
                   is connected.
                 </span>
               </h2>
             </Reveal>
 
-            {/* Supporting Idea Copy */}
             <Reveal delay={0.18} yOffset={14}>
-              <p className="text-base sm:text-lg text-[#F3ECFF]/85 leading-[1.7] font-sans font-normal">
+              <p className="text-base sm:text-lg text-[#A19E98] leading-[1.7] font-sans font-normal">
                 Strategy, creativity, and technology working together to create stronger outcomes for your business — unifying brand narrative, cinematic production, and high-performance software under one roof.
               </p>
             </Reveal>
 
-            {/* Primary Action */}
             <Reveal delay={0.24} yOffset={14}>
               <div className="pt-2 flex flex-col sm:flex-row items-start sm:items-center gap-4">
                 <a
                   href="#branding"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-bold text-[#21113D] bg-[#FFD6A5] hover:bg-white shadow-sm transition-all duration-200 hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-bold text-white bg-[#FF5A1F] hover:bg-[#E04812] transition-colors"
                 >
                   <span>Explore 7 Disciplines</span>
-                  <ArrowDown className="h-4 w-4 text-[#21113D]" />
+                  <ArrowDown className="h-4 w-4 text-white" />
                 </a>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#FFD6A5] hover:text-white py-2 transition-colors"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#FF5A1F] hover:text-white py-2 transition-colors"
                 >
                   <span>Discuss Your Scope</span>
-                  <ArrowRight className="h-4 w-4 text-[#FFD6A5]" />
+                  <ArrowRight className="h-4 w-4 text-[#FF5A1F]" />
                 </Link>
               </div>
             </Reveal>
 
-            {/* Bottom Meta */}
-            <div className="pt-6 border-t border-white/10 w-full text-xs font-mono text-[#FFD6A5]/70 uppercase tracking-wider">
+            <div className="pt-6 border-t border-white/10 w-full text-xs font-mono text-white/50 uppercase tracking-wider">
               Single-Source Delivery Model // Peshawar × Global
             </div>
-
           </div>
 
-          {/* Right Column: Structured 7-Capability Vertical Matrix (Cols 6-12) */}
+          {/* Right Column */}
           <div className="lg:col-span-7 space-y-3">
             {capabilitiesList.map((service, idx) => (
               <Reveal key={service.id} delay={0.08 + idx * 0.04} yOffset={12}>
                 <a
                   href={service.href}
-                  className="group flex items-center justify-between p-5 sm:p-6 rounded-2xl bg-[#180a30] border border-white/10 shadow-card hover:border-[#FFD6A5]/50 transition-all duration-200 block"
+                  className="group flex items-center justify-between p-5 sm:p-6 rounded-xl bg-[#181818] border border-white/10 hover:border-[#FF5A1F]/50 transition-all duration-150 block"
                 >
                   <div className="flex items-start sm:items-center gap-4">
-                    <span className="font-mono text-xs sm:text-sm font-bold text-[#FFD6A5] bg-[#390080]/60 border border-[#FFD6A5]/30 px-2.5 py-1 rounded-lg shrink-0">
+                    <span className="font-mono text-xs sm:text-sm font-bold text-[#FF5A1F] bg-white/5 border border-white/10 px-2.5 py-1 rounded-md shrink-0">
                       {service.number}
                     </span>
                     <div>
-                      <h3 className="font-display text-base sm:text-lg font-bold text-white group-hover:text-[#FFD6A5] transition-colors">
+                      <h3 className="font-display text-base sm:text-lg font-bold text-white group-hover:text-[#FF5A1F] transition-colors">
                         {service.name}
                       </h3>
-                      <p className="text-xs sm:text-sm text-[#F3ECFF]/80 font-sans mt-0.5">
+                      <p className="text-xs sm:text-sm text-[#A19E98] font-sans mt-0.5">
                         {service.desc}
                       </p>
                     </div>
                   </div>
-                  <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-[#FFD6A5] group-hover:border-[#FFD6A5] group-hover:bg-[#FFD6A5] group-hover:text-[#21113D] transition-all duration-200 shrink-0 ml-4">
+                  <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-[#FF5A1F] group-hover:border-[#FF5A1F] group-hover:bg-[#FF5A1F] group-hover:text-white transition-all duration-150 shrink-0 ml-4">
                     <ArrowRight className="h-4 w-4" />
                   </div>
                 </a>

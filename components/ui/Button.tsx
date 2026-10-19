@@ -34,45 +34,43 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const baseStyles =
-      "group inline-flex items-center justify-center font-sans font-semibold rounded-full transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:scale-[0.98] select-none cursor-pointer disabled:opacity-50 disabled:pointer-events-none";
+      "group inline-flex items-center justify-center font-sans font-medium rounded-lg transition-all duration-200 ease-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 active:scale-[0.98] select-none cursor-pointer disabled:opacity-50 disabled:pointer-events-none";
 
     const variantStyles = {
       primary:
-        "bg-[#6A00F4] hover:bg-[#390080] text-white shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#6A00F4]",
+        "bg-[#FF5A1F] hover:bg-[#E04812] text-white shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#FF5A1F]",
       navy:
-        "bg-[#6A00F4] hover:bg-[#390080] text-white shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#6A00F4]",
+        "bg-[#111111] hover:bg-[#252525] text-white hover:-translate-y-0.5 focus-visible:ring-[#111111]",
       cyan:
-        "bg-[#FFD6A5] hover:bg-[#FFE0B8] text-[#21113D] font-bold shadow-sm hover:-translate-y-0.5 focus-visible:ring-[#6A00F4]",
+        "bg-[#FF5A1F] hover:bg-[#E04812] text-white font-semibold shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#FF5A1F]",
       gradient:
-        "bg-gradient-to-r from-[#6A00F4] via-[#390080] to-[#21113D] text-white shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#6A00F4]",
+        "bg-[#111111] hover:bg-[#252525] text-white hover:-translate-y-0.5 focus-visible:ring-[#111111]",
       secondary:
-        "bg-white text-[#211832] border border-[#E9E0F2] hover:border-[#6A00F4] hover:bg-[#FFF0D9] hover:-translate-y-0.5 shadow-subtle focus-visible:ring-[#6A00F4]",
+        "bg-white text-[#111111] border border-[#E5E1DA] hover:border-[#111111] hover:bg-[#F7F5F0] hover:-translate-y-0.5 shadow-subtle focus-visible:ring-[#111111]",
       outline:
-        "bg-transparent text-[#211832] border border-[#E9E0F2] hover:border-[#6A00F4] hover:bg-[#F3ECFF] hover:text-[#6A00F4] hover:-translate-y-0.5 focus-visible:ring-[#6A00F4]",
+        "bg-transparent text-[#111111] border border-[#E5E1DA] hover:border-[#111111] hover:bg-white hover:-translate-y-0.5 focus-visible:ring-[#111111]",
       dark:
-        "bg-[#21113D] text-white hover:bg-[#390080] hover:-translate-y-0.5 shadow-md focus-visible:ring-[#FFD6A5]",
+        "bg-[#111111] text-white hover:bg-[#252525] hover:-translate-y-0.5 focus-visible:ring-[#111111]",
       ghost:
-        "bg-transparent text-[#211832] hover:text-[#6A00F4] hover:bg-[#F3ECFF] hover:-translate-y-0.5 focus-visible:ring-[#6A00F4]",
+        "bg-transparent text-[#111111] hover:text-[#FF5A1F] hover:bg-[#FFF0E8] focus-visible:ring-[#111111]",
       white:
-        "bg-white text-[#211832] hover:bg-[#FFF9F0] hover:-translate-y-0.5 shadow-card focus-visible:ring-[#6A00F4]"
+        "bg-white text-[#111111] border border-[#E5E1DA] hover:border-[#111111] hover:-translate-y-0.5 shadow-subtle focus-visible:ring-[#111111]"
     };
 
     const sizeStyles = {
-      sm: "text-[14px] px-4.5 py-2 min-h-[40px]",
-      md: "text-[14px] sm:text-[15px] px-6 py-2.5 min-h-[46px]",
-      lg: "text-[15px] sm:text-[16px] px-7 sm:px-8 py-3.5 min-h-[52px]"
+      sm: "text-[13px] px-3.5 py-1.5 min-h-[36px]",
+      md: "text-[14px] px-5 py-2.5 min-h-[44px]",
+      lg: "text-[15px] px-6 py-3 min-h-[48px]"
     };
 
     const arrowElement = withArrow && (
       <ArrowRight
         className={cn(
-          "ml-2 h-4 w-4 transition-transform duration-300 ease-out group-hover:translate-x-1.5",
-          variant === "primary" || variant === "gradient" || variant === "dark" || variant === "navy"
+          "ml-2 h-4 w-4 transition-transform duration-200 ease-out group-hover:translate-x-1",
+          variant === "primary" || variant === "gradient" || variant === "dark" || variant === "navy" || variant === "cyan"
             ? "text-white/90"
-            : variant === "cyan"
-            ? "text-[#21113D]"
-            : "text-[#211832] group-hover:text-[#6A00F4]",
-          arrowPosition === "top-right" && "group-hover:-translate-y-1 group-hover:translate-x-1"
+            : "text-[#111111] group-hover:text-[#FF5A1F]",
+          arrowPosition === "top-right" && "group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
         )}
         aria-hidden="true"
       />

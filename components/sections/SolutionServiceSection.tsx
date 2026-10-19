@@ -30,27 +30,25 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
     <section
       id={service.id}
       aria-labelledby={`${service.id}-heading`}
-      className={`scroll-mt-24 relative py-16 sm:py-24 lg:py-28 border-b overflow-hidden transition-colors duration-300 ${
+      className={`scroll-mt-24 relative py-16 sm:py-24 lg:py-28 border-b overflow-hidden transition-colors duration-200 ${
         isDark
-          ? "bg-[#21113D] text-white border-white/10"
-          : "bg-[#FFF9F0] text-[#211832] border-[#E9E0F2]"
+          ? "bg-[#111111] text-white border-white/10"
+          : "bg-[#F7F5F0] text-[#111111] border-[#E5E1DA]"
       }`}
     >
       <Container size="default" className="relative z-10 w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
         
         {/* Main Card Container */}
         <div
-          className={`relative rounded-3xl border p-5 sm:p-10 lg:p-12 xl:p-14 transition-all duration-300 shadow-card ${
+          className={`relative rounded-2xl border p-6 sm:p-10 lg:p-12 xl:p-14 transition-all duration-200 shadow-sm ${
             isDark
-              ? "bg-[#180a30] border-[#FFD6A5]/20 shadow-2xl"
-              : "bg-white border-[#E9E0F2]"
+              ? "bg-[#161616] border-white/10"
+              : "bg-white border-[#E5E1DA]"
           }`}
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-14 items-start">
             
-            {/* ---------------------------------------------------------- */}
-            {/* LEFT COLUMN: NARRATIVE & STRATEGY (Cols 1-6)               */}
-            {/* ---------------------------------------------------------- */}
+            {/* LEFT COLUMN: NARRATIVE & STRATEGY */}
             <div className="lg:col-span-6 space-y-6 flex flex-col justify-between h-full">
               <div className="space-y-5">
                 
@@ -68,17 +66,11 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                   <h2
                     id={`${service.id}-heading`}
                     className={`font-display text-[clamp(26px,3.5vw,46px)] font-bold tracking-tight leading-[1.14] ${
-                      isDark ? "text-white" : "text-[#211832]"
+                      isDark ? "text-white" : "text-[#111111]"
                     }`}
                   >
                     {headline.prefix}{" "}
-                    <span
-                      className={`font-display font-bold not-italic bg-clip-text text-transparent ${
-                        isDark
-                          ? "bg-gradient-to-r from-white via-[#FFD6A5] to-[#FFD6A5]"
-                          : "bg-gradient-to-r from-[#6A00F4] via-[#390080] to-[#6A00F4]"
-                      }`}
-                    >
+                    <span className="font-display font-bold text-[#FF5A1F]">
                       {headline.highlight}
                     </span>
                     .
@@ -87,11 +79,7 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
 
                 {/* Tagline Statement */}
                 <Reveal delay={0.16} yOffset={12}>
-                  <p
-                    className={`text-base sm:text-lg font-semibold ${
-                      isDark ? "text-[#FFD6A5]" : "text-[#6A00F4]"
-                    }`}
-                  >
+                  <p className="text-base sm:text-lg font-semibold text-[#FF5A1F]">
                     {service.tagline}
                   </p>
                 </Reveal>
@@ -100,7 +88,7 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                 <Reveal delay={0.2} yOffset={14}>
                   <p
                     className={`text-base leading-relaxed font-sans font-normal ${
-                      isDark ? "text-slate-200" : "text-[#625A70]"
+                      isDark ? "text-[#A19E98]" : "text-[#66635F]"
                     }`}
                   >
                     {service.description}
@@ -110,23 +98,23 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                 {/* Core Problem We Solve Box */}
                 <Reveal delay={0.24} yOffset={14}>
                   <div
-                    className={`rounded-2xl p-5 border transition-colors ${
+                    className={`rounded-xl p-5 border transition-colors ${
                       isDark
-                        ? "bg-[#21113D] border-[#FFD6A5]/20 shadow-subtle"
-                        : "bg-[#FFF9F0] border-[#E9E0F2] shadow-subtle"
+                        ? "bg-[#111111] border-white/10"
+                        : "bg-[#F7F5F0] border-[#E5E1DA]"
                     }`}
                   >
                     <p
                       className={`text-xs font-sans uppercase tracking-wider font-bold mb-1.5 flex items-center gap-2 ${
-                        isDark ? "text-[#FFD6A5]" : "text-[#211832]"
+                        isDark ? "text-white" : "text-[#111111]"
                       }`}
                     >
-                      <span className={`w-1.5 h-1.5 rounded-full ${isDark ? "bg-[#FFD6A5]" : "bg-[#6A00F4]"}`} aria-hidden="true" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#FF5A1F]" aria-hidden="true" />
                       The Core Problem We Solve
                     </p>
                     <p
                       className={`text-sm leading-relaxed font-sans ${
-                        isDark ? "text-slate-300" : "text-[#625A70]"
+                        isDark ? "text-[#A19E98]" : "text-[#66635F]"
                       }`}
                     >
                       {service.problemSolved}
@@ -139,7 +127,7 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                   <div className="pt-2">
                     <span
                       className={`text-xs font-sans uppercase tracking-wider font-bold block mb-2.5 ${
-                        isDark ? "text-slate-300" : "text-[#625A70]"
+                        isDark ? "text-white/60" : "text-[#66635F]"
                       }`}
                     >
                       Connected With
@@ -159,10 +147,10 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                           <Link
                             key={rel}
                             href={targetHref}
-                            className={`text-xs font-medium px-3.5 py-1.5 rounded-full border transition-all duration-200 ${
+                            className={`text-xs font-medium px-3.5 py-1.5 rounded-md border transition-colors duration-150 ${
                               isDark
-                                ? "text-white bg-white/10 hover:bg-[#6A00F4] hover:text-white hover:border-[#6A00F4] border-white/15"
-                                : "text-[#211832] bg-[#FFF9F0] hover:bg-[#6A00F4] hover:text-white hover:border-[#6A00F4] border-[#E9E0F2]"
+                                ? "text-white bg-white/5 hover:bg-[#111111] hover:text-[#FF5A1F] hover:border-[#FF5A1F] border-white/10"
+                                : "text-[#111111] bg-[#F7F5F0] hover:bg-[#111111] hover:text-[#FF5A1F] hover:border-[#111111] border-[#E5E1DA]"
                             }`}
                           >
                             + {rel}
@@ -178,12 +166,12 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
               <Reveal delay={0.32} yOffset={14}>
                 <div
                   className={`pt-6 border-t flex flex-wrap items-center gap-3 ${
-                    isDark ? "border-white/15" : "border-[#E9E0F2]"
+                    isDark ? "border-white/10" : "border-[#E5E1DA]"
                   }`}
                 >
                   <Button
                     href={`/solutions/${service.id}`}
-                    variant={isDark ? "cyan" : "primary"}
+                    variant="cyan"
                     size="md"
                     withArrow
                     className="w-full sm:w-auto font-bold"
@@ -192,10 +180,10 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                   </Button>
                   <Link
                     href={`/contact?service=${service.id}`}
-                    className={`inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-sans font-semibold transition-all duration-200 min-h-[46px] w-full sm:w-auto ${
+                    className={`inline-flex items-center justify-center px-5 py-2.5 rounded-lg text-sm font-sans font-semibold transition-colors duration-150 min-h-[46px] w-full sm:w-auto ${
                       isDark
-                        ? "text-white hover:text-[#FFD6A5] bg-white/10 hover:bg-white/20 border border-white/15"
-                        : "text-[#211832] hover:text-[#6A00F4] bg-[#FFF9F0] hover:bg-[#F3ECFF] border border-[#E9E0F2] shadow-xs"
+                        ? "text-white hover:text-[#FF5A1F] bg-white/5 hover:bg-white/10 border border-white/15"
+                        : "text-[#111111] hover:text-[#FF5A1F] bg-[#F7F5F0] hover:bg-white border border-[#E5E1DA]"
                     }`}
                   >
                     Inquire for {service.title}
@@ -204,26 +192,24 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
               </Reveal>
             </div>
 
-            {/* ---------------------------------------------------------- */}
-            {/* RIGHT COLUMN: SPECIFICATIONS & DELIVERABLES (Cols 7-12)   */}
-            {/* ---------------------------------------------------------- */}
+            {/* RIGHT COLUMN: SPECIFICATIONS & DELIVERABLES */}
             <div className="lg:col-span-6 w-full">
               <Reveal delay={0.22} yOffset={18}>
                 <div
-                  className={`rounded-2xl p-5 sm:p-8 lg:p-9 border shadow-sm flex flex-col justify-between space-y-8 ${
+                  className={`rounded-xl p-6 sm:p-8 lg:p-9 border shadow-xs flex flex-col justify-between space-y-8 ${
                     isDark
-                      ? "bg-[#110722] border-white/15 text-white"
-                      : "bg-[#FFF9F0] border-[#E9E0F2] text-[#211832]"
+                      ? "bg-[#111111] border-white/10 text-white"
+                      : "bg-[#F7F5F0] border-[#E5E1DA] text-[#111111]"
                   }`}
                 >
                   {/* What KreaitX Delivers */}
                   <div>
                     <h3
                       className={`text-xs font-sans uppercase tracking-widest font-bold mb-4 flex items-center gap-2 ${
-                        isDark ? "text-[#FFD6A5]" : "text-[#6A00F4]"
+                        isDark ? "text-[#FF5A1F]" : "text-[#FF5A1F]"
                       }`}
                     >
-                      <Layers className={`h-4 w-4 ${isDark ? "text-[#FFD6A5]" : "text-[#6A00F4]"}`} aria-hidden="true" />
+                      <Layers className="h-4 w-4 text-[#FF5A1F]" aria-hidden="true" />
                       What KreaitX Delivers
                     </h3>
 
@@ -232,11 +218,11 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                         <li
                           key={item}
                           className={`flex items-start gap-3 text-sm font-medium ${
-                            isDark ? "text-slate-200" : "text-[#211832]"
+                            isDark ? "text-[#A19E98]" : "text-[#111111]"
                           }`}
                         >
                           <CheckCircle2
-                            className={`h-4 w-4 shrink-0 mt-0.5 ${isDark ? "text-[#FFD6A5]" : "text-[#6A00F4]"}`}
+                            className="h-4 w-4 shrink-0 mt-0.5 text-[#FF5A1F]"
                             aria-hidden="true"
                           />
                           <span>{item}</span>
@@ -248,25 +234,23 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                   {/* Standard Workflow */}
                   <div
                     className={`pt-6 border-t ${
-                      isDark ? "border-white/15" : "border-[#E9E0F2]"
+                      isDark ? "border-white/10" : "border-[#E5E1DA]"
                     }`}
                   >
                     <h3
-                      className={`text-xs font-sans uppercase tracking-widest font-bold mb-3 flex items-center gap-2 ${
-                        isDark ? "text-[#FFD6A5]" : "text-[#6A00F4]"
-                      }`}
+                      className="text-xs font-sans uppercase tracking-widest font-bold mb-3 flex items-center gap-2 text-[#FF5A1F]"
                     >
-                      <Cpu className={`h-4 w-4 ${isDark ? "text-[#FFD6A5]" : "text-[#6A00F4]"}`} aria-hidden="true" />
+                      <Cpu className="h-4 w-4 text-[#FF5A1F]" aria-hidden="true" />
                       Standard Workflow
                     </h3>
                     <ol
                       className={`space-y-2 text-xs sm:text-sm ${
-                        isDark ? "text-slate-300" : "text-[#625A70]"
+                        isDark ? "text-[#A19E98]" : "text-[#66635F]"
                       }`}
                     >
                       {service.workflow.map((step, sIdx) => (
                         <li key={step} className="flex items-center gap-2.5">
-                          <span className={`font-mono text-xs font-bold ${isDark ? "text-[#FFD6A5]" : "text-[#6A00F4]"}`}>
+                          <span className="font-mono text-xs font-bold text-[#FF5A1F]">
                             0{sIdx + 1}.
                           </span>
                           <span>{step}</span>
@@ -279,16 +263,12 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                   <div
                     className={`pt-5 border-t flex items-center justify-between text-xs ${
                       isDark
-                        ? "border-white/15 text-slate-300"
-                        : "border-[#E9E0F2] text-[#625A70]"
+                        ? "border-white/10 text-white/50"
+                        : "border-[#E5E1DA] text-[#66635F]"
                     }`}
                   >
                     <span>Single-source collaborative delivery</span>
-                    <span
-                      className={`font-display font-bold uppercase tracking-wider ${
-                        isDark ? "text-[#FFD6A5]" : "text-[#6A00F4]"
-                      }`}
-                    >
+                    <span className="font-display font-bold uppercase tracking-wider text-[#FF5A1F]">
                       {service.number} / 07
                     </span>
                   </div>
