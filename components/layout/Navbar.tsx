@@ -65,7 +65,7 @@ export const Navbar: React.FC = () => {
             {/* Clickable Logo with Brand Cyan Accent */}
             <Link
               href="/"
-              className="group flex items-center gap-0.5 text-2xl font-display font-bold tracking-tight text-[#003049] transition-opacity duration-200 hover:opacity-90 cursor-pointer min-h-[44px] min-w-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9] focus-visible:ring-offset-2 rounded-lg px-1 items-center"
+              className="group flex items-center gap-0.5 text-2xl font-display font-bold tracking-tight text-[#17324D] transition-opacity duration-200 hover:opacity-90 cursor-pointer min-h-[44px] min-w-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#416779] focus-visible:ring-offset-2 rounded-lg px-1 items-center"
               aria-label="KreaitX — Home"
             >
               <span>Kreait</span>
@@ -83,16 +83,16 @@ export const Navbar: React.FC = () => {
                     key={item.href}
                     href={item.href}
                     className={cn(
-                      "relative px-4 py-2 text-[14px] font-sans transition-all duration-200 min-h-[44px] flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9] rounded-lg",
+                      "relative px-4 py-2 text-[14px] font-sans transition-all duration-200 min-h-[44px] flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#416779] rounded-lg",
                       isActive
-                        ? "text-[#003049] font-bold"
-                        : "text-slate-600 hover:text-[#003049] hover:bg-slate-50 font-medium"
+                        ? "text-[#17324D] font-bold"
+                        : "text-[#596A7B] hover:text-[#17324D] hover:bg-[#F4F7FA] font-medium"
                     )}
                     aria-current={isActive ? "page" : undefined}
                   >
                     <span>{item.label}</span>
                     {isActive && (
-                      <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-[#003049] rounded-full" aria-hidden="true" />
+                      <span className="absolute bottom-1 left-4 right-4 h-0.5 bg-[#17324D] rounded-full" aria-hidden="true" />
                     )}
                   </Link>
                 );
@@ -103,7 +103,7 @@ export const Navbar: React.FC = () => {
             <div className="hidden lg:flex items-center gap-3">
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center text-[14px] font-sans font-semibold text-white bg-[#003049] hover:bg-[#14213D] px-6 py-2.5 min-h-[44px] rounded-full transition-all duration-300 hover:-translate-y-0.5 shadow-brand-button active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9] focus-visible:ring-offset-2"
+                className="group inline-flex items-center justify-center text-[14px] font-sans font-semibold text-white bg-[#17324D] hover:bg-[#14213D] px-6 py-2.5 min-h-[44px] rounded-full transition-all duration-300 hover:-translate-y-0.5 shadow-brand-button active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#416779] focus-visible:ring-offset-2"
               >
                 <span>Start a Project</span>
                 <ArrowRight className="ml-2 h-4 w-4 text-[#42C6D9] transition-transform duration-200 group-hover:translate-x-1" />
@@ -114,14 +114,14 @@ export const Navbar: React.FC = () => {
             <div className="flex items-center gap-2.5 lg:hidden">
               <Link
                 href="/contact"
-                className="inline-flex sm:hidden text-xs font-semibold text-white bg-[#003049] hover:bg-[#14213D] px-4 py-2 rounded-full min-h-[44px] items-center justify-center shadow-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9]"
+                className="inline-flex sm:hidden text-xs font-semibold text-white bg-[#17324D] hover:bg-[#14213D] px-4 py-2 rounded-full min-h-[44px] items-center justify-center shadow-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#416779]"
               >
                 Inquire
               </Link>
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(true)}
-                className="inline-flex items-center justify-center p-2.5 min-h-[44px] min-w-[44px] rounded-full text-slate-800 hover:bg-[#F7F8FA] border border-slate-200/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9] focus-visible:ring-offset-2"
+                className="inline-flex items-center justify-center p-2.5 min-h-[44px] min-w-[44px] rounded-full text-[#25313D] hover:bg-[#F4F7FA] border border-[#E2E8EF] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#416779] focus-visible:ring-offset-2"
                 aria-expanded={mobileMenuOpen}
                 aria-controls="mobile-menu-drawer"
                 aria-label="Open navigation menu"

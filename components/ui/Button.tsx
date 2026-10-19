@@ -38,23 +38,23 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variantStyles = {
       primary:
-        "bg-[#003049] hover:bg-[#14213D] text-white shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#42C6D9]",
+        "bg-[#17324D] hover:bg-[#14213D] text-white shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#416779]",
       navy:
-        "bg-[#003049] hover:bg-[#14213D] text-white shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#42C6D9]",
+        "bg-[#17324D] hover:bg-[#14213D] text-white shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#416779]",
       cyan:
-        "bg-[#42C6D9] hover:bg-[#34B8CB] text-[#003049] font-bold shadow-sm hover:-translate-y-0.5 focus-visible:ring-[#003049]",
+        "bg-[#42C6D9] hover:bg-[#34B8CB] text-[#17324D] font-bold shadow-sm hover:-translate-y-0.5 focus-visible:ring-[#17324D]",
       gradient:
-        "bg-gradient-to-r from-[#003049] via-[#14213D] to-[#42C6D9] text-white shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#42C6D9]",
+        "bg-gradient-to-r from-[#17324D] via-[#14213D] to-[#42C6D9] text-white shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#416779]",
       secondary:
-        "bg-white text-slate-800 border border-slate-200/90 hover:border-slate-300 hover:bg-[#F7F8FA] hover:-translate-y-0.5 shadow-subtle focus-visible:ring-[#003049]",
+        "bg-white text-[#25313D] border border-[#E2E8EF] hover:border-slate-300 hover:bg-[#F4F7FA] hover:-translate-y-0.5 shadow-subtle focus-visible:ring-[#17324D]",
       outline:
-        "bg-transparent text-slate-800 border border-slate-200 hover:border-[#42C6D9] hover:bg-[#F7F8FA] hover:text-[#003049] hover:-translate-y-0.5 focus-visible:ring-[#42C6D9]",
+        "bg-transparent text-[#25313D] border border-[#E2E8EF] hover:border-[#416779] hover:bg-[#F4F7FA] hover:text-[#17324D] hover:-translate-y-0.5 focus-visible:ring-[#416779]",
       dark:
-        "bg-[#14213D] text-white hover:bg-[#003049] hover:-translate-y-0.5 shadow-md focus-visible:ring-[#42C6D9]",
+        "bg-[#14213D] text-white hover:bg-[#17324D] hover:-translate-y-0.5 shadow-md focus-visible:ring-[#42C6D9]",
       ghost:
-        "bg-transparent text-slate-700 hover:text-[#003049] hover:bg-slate-100/70 hover:-translate-y-0.5 focus-visible:ring-[#42C6D9]",
+        "bg-transparent text-[#25313D] hover:text-[#17324D] hover:bg-[#EDF2F6] hover:-translate-y-0.5 focus-visible:ring-[#416779]",
       white:
-        "bg-white text-slate-900 hover:bg-[#F7F8FA] hover:-translate-y-0.5 shadow-card focus-visible:ring-[#42C6D9]"
+        "bg-white text-[#25313D] hover:bg-[#F4F7FA] hover:-translate-y-0.5 shadow-card focus-visible:ring-[#416779]"
     };
 
     const sizeStyles = {

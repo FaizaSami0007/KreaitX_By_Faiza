@@ -45,7 +45,7 @@ export const IdeasToImpactSection: React.FC = () => {
   return (
     <section
       aria-labelledby="ideas-to-impact-heading"
-      className="relative bg-white text-slate-900 py-20 sm:py-28 lg:py-32 border-b border-slate-200/80 flex items-center"
+      className="relative bg-white text-[#25313D] py-20 sm:py-28 lg:py-32 border-b border-[#E2E8EF] flex items-center"
     >
       <Container size="default" className="relative z-10 w-full max-w-[1280px] flex flex-col justify-between h-full space-y-16 sm:space-y-24">
         
@@ -55,11 +55,11 @@ export const IdeasToImpactSection: React.FC = () => {
           {/* Eyebrow */}
           <Reveal delay={0.05} yOffset={12}>
             <div className="inline-flex items-center gap-3">
-              <span className="w-8 h-[2px] bg-[#42C6D9] rounded-full" aria-hidden="true" />
-              <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#003049]">
+              <span className="w-8 h-[2px] bg-[#416779] rounded-full" aria-hidden="true" />
+              <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#17324D]">
                 WHAT WE DO
               </span>
-              <span className="w-8 h-[2px] bg-[#42C6D9] rounded-full" aria-hidden="true" />
+              <span className="w-8 h-[2px] bg-[#416779] rounded-full" aria-hidden="true" />
             </div>
           </Reveal>
 
@@ -67,10 +67,10 @@ export const IdeasToImpactSection: React.FC = () => {
           <Reveal delay={0.12} yOffset={18}>
             <h2
               id="ideas-to-impact-heading"
-              className="text-[clamp(44px,6vw,84px)] font-display font-bold text-slate-950 tracking-[-0.035em] leading-[1.02] text-center"
+              className="text-[clamp(44px,6vw,84px)] font-display font-bold text-[#17324D] tracking-[-0.035em] leading-[1.02] text-center"
             >
               From ideas to{" "}
-              <span className="font-serif italic font-normal bg-gradient-to-r from-[#003049] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent">
+              <span className="font-display font-bold not-italic bg-gradient-to-r from-[#17324D] via-[#14213D] to-[#416779] bg-clip-text text-transparent">
                 impact.
               </span>
             </h2>
@@ -78,7 +78,7 @@ export const IdeasToImpactSection: React.FC = () => {
 
           {/* Body Copy */}
           <Reveal delay={0.2} yOffset={16}>
-            <p className="text-base sm:text-lg text-slate-600 leading-[1.7] font-sans font-normal max-w-2xl mx-auto text-center">
+            <p className="text-base sm:text-lg text-[#596A7B] leading-[1.7] font-sans font-normal max-w-2xl mx-auto text-center">
               We blend strategy, creativity and technology to build digital experiences that look exceptional and perform even better.
             </p>
           </Reveal>
@@ -88,13 +88,13 @@ export const IdeasToImpactSection: React.FC = () => {
             <div className="pt-2 flex justify-center">
               <Link
                 href="/solutions"
-                className="group inline-flex items-center text-sm font-sans font-semibold tracking-[0.06em] text-[#003049] hover:text-[#14213D] transition-colors py-2 relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9]"
+                className="group inline-flex items-center text-sm font-sans font-semibold tracking-[0.06em] text-[#17324D] hover:text-[#14213D] transition-colors py-2 relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#416779]"
               >
                 <span className="relative">
                   Explore Our Services
-                  <span className="absolute left-0 -bottom-1 w-full h-[1.5px] bg-[#42C6D9] origin-left transition-transform duration-300 group-hover:scale-x-110" />
+                  <span className="absolute left-0 -bottom-1 w-full h-[1.5px] bg-[#416779] origin-left transition-transform duration-300 group-hover:scale-x-110" />
                 </span>
-                <span className="ml-3 flex items-center justify-center w-7 h-7 rounded-full border border-slate-200 bg-[#F7F8FA] text-[#003049] transition-all duration-300 group-hover:border-[#003049] group-hover:bg-[#003049] group-hover:text-[#42C6D9] group-hover:translate-x-1 shadow-sm">
+                <span className="ml-3 flex items-center justify-center w-7 h-7 rounded-full border border-[#E2E8EF] bg-[#F4F7FA] text-[#17324D] transition-all duration-300 group-hover:border-[#17324D] group-hover:bg-[#17324D] group-hover:text-white group-hover:translate-x-1 shadow-sm">
                   <ArrowRight className="h-3.5 w-3.5" />
                 </span>
               </Link>
@@ -104,10 +104,10 @@ export const IdeasToImpactSection: React.FC = () => {
 
         {/* Bottom Four Core Pillars Layout */}
         <Reveal delay={0.32} yOffset={20} className="w-full">
-          <div className="pt-10 sm:pt-14 border-t border-slate-200/80">
+          <div className="pt-10 sm:pt-14 border-t border-[#E2E8EF]">
             
             {/* Pillars Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 divide-y sm:divide-y-0 lg:divide-x divide-slate-200/80">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 divide-y sm:divide-y-0 lg:divide-x divide-[#E2E8EF]">
               {pillars.map((pillar, idx) => {
                 const IconComponent = pillar.icon;
                 return (

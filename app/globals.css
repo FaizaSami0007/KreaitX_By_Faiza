@@ -4,31 +4,33 @@
 
 :root {
   --bg-canvas: #FFFFFF;
-  --bg-surface: #F7F8FA;
-  --bg-surface-alt: #F1F5F9;
-  --bg-dark: #003049;
+  --bg-surface: #F4F7FA;
+  --bg-surface-alt: #EDF2F6;
+  --bg-dark: #17324D;
   
-  --text-heading: #0B0F19;
-  --text-body: #334155;
-  --text-muted: #64748B;
+  --text-heading: #17324D;
+  --text-body: #25313D;
+  --text-muted: #596A7B;
   
-  --brand-navy: #003049;
+  --brand-navy: #17324D;
   --brand-deep: #14213D;
-  --brand-porcelain: #F7F8FA;
+  --brand-porcelain: #F4F7FA;
+  --brand-surface: #EDF2F6;
   --brand-white: #FFFFFF;
   --brand-cyan: #42C6D9;
-  --brand-cyan-hover: #34B8CB;
+  --brand-cyan-soft: #DCEEF2;
+  --brand-blue-muted: #416779;
   --brand-steel: #A8B3C2;
   --brand-charcoal: #0B0F19;
-  --brand-body: #334155;
-  --brand-border: rgba(226, 232, 240, 0.8);
-  --brand-focus: #42C6D9;
+  --brand-body: #25313D;
+  --brand-border: #E2E8EF;
+  --brand-focus: #416779;
   
-  --border-subtle: rgba(226, 232, 240, 0.8);
-  --border-focus: #42C6D9;
+  --border-subtle: #E2E8EF;
+  --border-focus: #416779;
   
-  --brand-gradient: linear-gradient(135deg, #003049 0%, #14213D 60%, #003049 100%);
-  --brand-gradient-accent: linear-gradient(135deg, #003049 0%, #14213D 50%, #42C6D9 100%);
+  --brand-gradient: linear-gradient(135deg, #17324D 0%, #14213D 60%, #17324D 100%);
+  --brand-gradient-accent: linear-gradient(135deg, #17324D 0%, #14213D 50%, #42C6D9 100%);
   
   --radius-sm: 8px;
   --radius-md: 12px;
@@ -37,10 +39,10 @@
   --radius-2xl: 24px;
   --radius-pill: 9999px;
   
-  --shadow-subtle: 0 2px 10px rgba(0, 0, 0, 0.03);
-  --shadow-card: 0 10px 30px -10px rgba(0, 48, 73, 0.06), 0 4px 6px -2px rgba(0, 48, 73, 0.02);
-  --shadow-card-hover: 0 20px 40px -15px rgba(0, 48, 73, 0.12), 0 0 0 1px rgba(66, 198, 217, 0.35);
-  --shadow-brand-button: 0 10px 25px -5px rgba(0, 48, 73, 0.25);
+  --shadow-subtle: 0 2px 10px rgba(23, 50, 77, 0.03);
+  --shadow-card: 0 8px 24px -8px rgba(23, 50, 77, 0.06), 0 2px 4px -1px rgba(23, 50, 77, 0.02);
+  --shadow-card-hover: 0 16px 32px -12px rgba(23, 50, 77, 0.1), 0 0 0 1px rgba(66, 198, 217, 0.25);
+  --shadow-brand-button: 0 8px 20px -4px rgba(23, 50, 77, 0.2);
   
   --safe-top: env(safe-area-inset-top, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
@@ -55,7 +57,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #FFFFFF;
-    color: #0F172A;
+    color: #25313D;
     overflow-x: clip;
   }
 
@@ -66,26 +68,32 @@
     flex-direction: column;
     overflow-x: clip;
     background-color: #FFFFFF;
-    color: #0F172A;
+    color: #25313D;
     font-family: var(--font-inter), Inter, system-ui, -apple-system, sans-serif;
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.65;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-manrope), Manrope, system-ui, -apple-system, sans-serif;
-    color: #0B0F19;
-    letter-spacing: -0.025em;
+    color: #17324D;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+
+  /* Strict absolute non-italic typography rule across entire website */
+  *, *::before, *::after {
+    font-style: normal !important;
   }
 
   ::selection {
-    background-color: #003049;
-    color: #42C6D9;
+    background-color: #17324D;
+    color: #FFFFFF;
   }
 
   /* Accessible focus indicators */
   :focus-visible {
-    outline: 2px solid #42C6D9;
+    outline: 2px solid #416779;
     outline-offset: 3px;
     border-radius: 6px;
   }

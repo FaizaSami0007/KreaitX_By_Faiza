@@ -8,7 +8,7 @@ import { servicesData } from "@/data/siteData";
 
 export const Services: React.FC = () => {
   return (
-    <section id="solutions" className="relative overflow-hidden bg-[#003049] py-20 sm:py-28 lg:py-32 border-b border-[#14213D] text-white">
+    <section id="solutions" className="relative overflow-hidden bg-[#17324D] py-20 sm:py-28 lg:py-32 border-b border-[#14213D] text-white">
       {/* Background Soft Ambient Accents (No background images) */}
       <div className="absolute top-10 right-0 h-96 w-96 rounded-full bg-[#42C6D9]/10 blur-3xl pointer-events-none" />
       <div className="absolute bottom-10 left-0 h-96 w-96 rounded-full bg-[#14213D]/60 blur-3xl pointer-events-none" />
@@ -23,7 +23,7 @@ export const Services: React.FC = () => {
               title={
                 <>
                   Everything your business needs to{" "}
-                  <span className="font-serif italic font-normal bg-gradient-to-r from-white via-cyan-100 to-[#42C6D9] bg-clip-text text-transparent">
+                  <span className="font-display font-bold text-[#DCEEF2] bg-gradient-to-r from-white via-cyan-100 to-[#42C6D9] bg-clip-text text-transparent">
                     move forward
                   </span>
                   .

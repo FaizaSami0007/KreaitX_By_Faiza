@@ -22,22 +22,22 @@ export const WorkClient: React.FC = () => {
   return (
     <>
       {/* Work Page Hero — Prussian Navy Brand Theme */}
-      <section className="relative bg-[#003049] text-white py-20 lg:py-28 border-b border-[#14213D] overflow-hidden">
+      <section className="relative bg-[#17324D] text-white py-20 lg:py-28 border-b border-[#14213D] overflow-hidden">
         {/* Ambient Glows */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#42C6D9]/15 via-[#14213D]/40 to-transparent rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#42C6D9]/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#416779]/20 via-[#14213D]/40 to-transparent rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#416779]/15 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#14213D]/60 rounded-full blur-3xl pointer-events-none" />
 
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#42C6D9] px-4 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-md shadow-subtle mb-6 hover:border-[#42C6D9]/50 transition-colors">
-                <Sparkles className="h-3.5 w-3.5 text-[#42C6D9] animate-pulse" />
+              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#DCEEF2] px-4 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-md shadow-subtle mb-6 hover:border-[#DCEEF2]/50 transition-colors">
+                <Sparkles className="h-3.5 w-3.5 text-[#DCEEF2] animate-pulse" />
                 <span>Portfolio × Selected Case Studies</span>
               </span>
               <h1 className="font-display text-[clamp(2rem,4.5vw,3.75rem)] font-bold text-white tracking-tight leading-[1.08]">
                 Real projects.{" "}
-                <span className="font-serif italic font-normal bg-gradient-to-r from-white via-cyan-100 to-[#42C6D9] bg-clip-text text-transparent">
+                <span className="font-display font-bold not-italic bg-gradient-to-r from-white via-cyan-100 to-[#DCEEF2] bg-clip-text text-transparent">
                   Real business context
                 </span>.
               </h1>
@@ -62,11 +62,11 @@ export const WorkClient: React.FC = () => {
       </section>
 
       {/* Filter Bar */}
-      <section id="projects-feed" className="bg-white border-b border-slate-200/80 py-4 sticky top-[65px] z-30 shadow-sm">
+      <section id="projects-feed" className="bg-white border-b border-[#E2E8EF] py-4 sticky top-[65px] z-30 shadow-sm">
         <Container size="default">
           <div className="flex items-center justify-between gap-4 overflow-x-auto no-scrollbar">
             <div className="flex items-center gap-2">
-              <Filter className="h-4 w-4 text-slate-400 hidden sm:block" />
+              <Filter className="h-4 w-4 text-[#596A7B] hidden sm:block" />
               {categories.map((cat) => (
                 <button
                   key={cat}
@@ -74,8 +74,8 @@ export const WorkClient: React.FC = () => {
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-4 py-2 rounded-full text-xs sm:text-sm font-sans font-semibold transition-all cursor-pointer shrink-0 min-h-[40px] ${
                     selectedCategory === cat
-                      ? "bg-[#003049] text-white shadow-brand-button"
-                      : "bg-[#F7F8FA] text-slate-700 hover:bg-slate-100 hover:text-[#003049] border border-slate-200"
+                      ? "bg-[#17324D] text-white shadow-brand-button"
+                      : "bg-[#F4F7FA] text-[#25313D] hover:bg-[#EDF2F6] hover:text-[#17324D] border border-[#E2E8EF]"
                   }`}
                 >
                   {cat}
@@ -83,7 +83,7 @@ export const WorkClient: React.FC = () => {
               ))}
             </div>
 
-            <span className="text-xs font-sans font-semibold text-slate-500 shrink-0 hidden md:block">
+            <span className="text-xs font-sans font-semibold text-[#596A7B] shrink-0 hidden md:block">
               Showing {filteredProjects.length} Case Studies
             </span>
           </div>
@@ -91,24 +91,24 @@ export const WorkClient: React.FC = () => {
       </section>
 
       {/* Projects Deep Dive */}
-      <section className="bg-slate-50/50 py-20 sm:py-28 border-b border-slate-200/80">
+      <section className="bg-[#F4F7FA] py-20 sm:py-28 border-b border-[#E2E8EF]">
         <Container size="default">
           <div className="space-y-16 sm:space-y-24">
             {filteredProjects.map((project, idx) => (
               <article
                 key={project.id}
                 id={project.id}
-                className="scroll-mt-32 rounded-3xl bg-white border border-slate-200/80 shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden"
+                className="scroll-mt-32 rounded-3xl bg-white border border-[#E2E8EF] shadow-card hover:shadow-card-hover transition-all duration-300 overflow-hidden"
               >
                 {/* Case Study Header Banner */}
-                <div className="bg-[#003049] text-white p-5 sm:p-10 lg:p-12 border-b border-[#14213D] relative overflow-hidden">
+                <div className="bg-[#17324D] text-white p-5 sm:p-10 lg:p-12 border-b border-[#14213D] relative overflow-hidden">
                   <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
                     <div>
                       <div className="flex items-center gap-3 mb-3">
                         <span className="px-3.5 py-1 rounded-full bg-white/10 text-white text-xs font-mono backdrop-blur-sm border border-white/15">
                           Case Study 0{idx + 1}
                         </span>
-                        <span className="text-xs text-[#42C6D9] uppercase font-bold tracking-wider">
+                        <span className="text-xs text-[#DCEEF2] uppercase font-bold tracking-wider">
                           {project.industry}
                         </span>
                         <span className="text-xs text-slate-300">• {project.year}</span>

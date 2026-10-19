@@ -31,9 +31,9 @@ export const EditorialHeading: React.FC<EditorialHeadingProps> = ({
   return (
     <Tag
       className={cn(
-        "font-normal",
+        "font-display font-semibold tracking-tight",
         sizeClasses[size],
-        isDark ? "text-white" : "text-slate-950",
+        isDark ? "text-white" : "text-[#17324D]",
         className
       )}
     >
@@ -42,10 +42,10 @@ export const EditorialHeading: React.FC<EditorialHeadingProps> = ({
           {title.split(accentWord)[0]}
           <span
             className={cn(
-              "font-serif italic font-normal",
+              "font-display font-bold not-italic",
               isDark
-                ? "bg-gradient-to-r from-white via-cyan-100 to-[#42C6D9] bg-clip-text text-transparent"
-                : "bg-gradient-to-r from-[#003049] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent"
+                ? "bg-gradient-to-r from-white via-cyan-100 to-[#DCEEF2] bg-clip-text text-transparent"
+                : "bg-gradient-to-r from-[#17324D] via-[#14213D] to-[#416779] bg-clip-text text-transparent"
             )}
           >
             {accentWord}

@@ -9,7 +9,7 @@ import { projectCaseStudies } from "@/data/siteData";
 
 export const FeaturedWork: React.FC = () => {
   return (
-    <section id="work" className="relative overflow-hidden bg-[#F7F8FA] py-20 sm:py-28 lg:py-32 border-b border-slate-200/80">
+    <section id="work" className="relative overflow-hidden bg-[#F4F7FA] py-20 sm:py-28 lg:py-32 border-b border-[#E2E8EF]">
       {/* Background Soft Glows (No background images) */}
       <div className="absolute top-1/4 -right-32 h-80 w-80 rounded-full bg-[#42C6D9]/10 blur-3xl pointer-events-none" />
       <div className="absolute bottom-1/4 -left-32 h-80 w-80 rounded-full bg-slate-300/30 blur-3xl pointer-events-none" />
@@ -23,7 +23,7 @@ export const FeaturedWork: React.FC = () => {
               title={
                 <>
                   Crafted with precision.{" "}
-                  <span className="font-serif italic font-normal bg-gradient-to-r from-[#003049] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent">
+                  <span className="font-display font-bold text-[#416779] bg-gradient-to-r from-[#17324D] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent">
                     Engineered for outcomes
                   </span>
                   .

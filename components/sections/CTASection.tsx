@@ -19,10 +19,10 @@ export const CTASection: React.FC<CTASectionProps> = ({
 }) => {
   const isDark = bg === "dark";
   const bgClass = isDark
-    ? "bg-[#003049] border-t border-[#14213D]"
+    ? "bg-[#17324D] border-t border-[#14213D]"
     : bg === "white"
-    ? "bg-white border-t border-slate-200/80"
-    : "bg-[#F7F8FA] border-t border-slate-200/80";
+    ? "bg-white border-t border-[#E2E8EF]"
+    : "bg-[#F4F7FA] border-t border-[#E2E8EF]";
 
   return (
     <section className={`${bgClass} py-20 sm:py-28 lg:py-32 relative ${className || ""}`}>
@@ -30,14 +30,14 @@ export const CTASection: React.FC<CTASectionProps> = ({
         <Reveal yOffset={20}>
           <div className="relative overflow-hidden rounded-[32px] bg-[#14213D] text-white p-6 sm:p-12 lg:p-20 shadow-2xl border border-white/15">
             <div className="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#42C6D9] px-4 py-1.5 rounded-full bg-white/10 border border-white/15 mb-6 shadow-subtle">
-                <Sparkles className="h-3.5 w-3.5 text-[#42C6D9]" />
+              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#DCEEF2] px-4 py-1.5 rounded-full bg-white/10 border border-white/15 mb-6 shadow-subtle">
+                <Sparkles className="h-3.5 w-3.5 text-[#DCEEF2]" />
                 <span>Next Step</span>
               </span>
 
               <h2 className="font-display text-[clamp(1.85rem,4.5vw,3.75rem)] font-bold text-white tracking-tight leading-[1.12]">
                 Ready to build{" "}
-                <span className="font-serif italic font-normal bg-gradient-to-r from-white via-cyan-100 to-[#42C6D9] bg-clip-text text-transparent">
+                <span className="font-display font-bold not-italic bg-gradient-to-r from-white via-cyan-100 to-[#DCEEF2] bg-clip-text text-transparent">
                   what&apos;s next
                 </span>
                 ?

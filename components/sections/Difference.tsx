@@ -341,12 +341,12 @@ const PrincipleItem: React.FC<PrincipleItemProps> = ({
         {/* Top Row: Underlined Serif Number + Circular Icon Badge in Brand Colors */}
         <div className="flex items-center gap-3.5 mb-3.5">
           <span
-            className={`font-serif text-lg sm:text-[21px] font-normal tracking-tight pb-0.5 leading-none transition-all duration-300 ${
+            className={`font-mono text-sm sm:text-base font-bold tracking-tight pb-0.5 leading-none transition-all duration-300 ${
               isHovered
-                ? "text-[#003049] border-b-2 border-[#42C6D9] font-semibold"
+                ? "text-[#17324D] border-b-2 border-[#416779]"
                 : isMuted
                 ? "text-slate-400 border-b border-slate-300/60"
-                : "text-[#003049] border-b-[1.5px] border-[#42C6D9]"
+                : "text-[#17324D] border-b-[1.5px] border-[#416779]"
             }`}
           >
             {item.number}
@@ -425,7 +425,7 @@ export const Difference: React.FC = () => {
               title={
                 <>
                   How we operate.{" "}
-                  <span className="font-serif italic font-normal bg-gradient-to-r from-[#003049] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent">
+                  <span className="font-display font-bold text-[#416779] bg-gradient-to-r from-[#17324D] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent">
                     Why it matters
                   </span>
                   .
@@ -434,7 +434,7 @@ export const Difference: React.FC = () => {
               description="A disciplined creative technology approach engineered to eliminate agency ambiguity, align creative storytelling with code, and protect commercial outcomes."
             />
 
-            <div className="mt-5 inline-flex items-center gap-2 text-xs font-mono text-[#003049] bg-[#F7F8FA] px-4 py-1.5 rounded-full border border-slate-200 shadow-2xs">
+            <div className="mt-5 inline-flex items-center gap-2 text-xs font-mono text-[#17324D] bg-[#F4F7FA] px-4 py-1.5 rounded-full border border-[#E2E8EF] shadow-2xs">
               <span className="w-2 h-2 rounded-full bg-[#42C6D9] animate-pulse" />
               <span className="font-bold tracking-wider">SIX GUIDING PRINCIPLES</span>
             </div>

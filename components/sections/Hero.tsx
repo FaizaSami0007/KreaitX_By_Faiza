@@ -42,7 +42,7 @@ export const Hero: React.FC = () => {
   const [activeDiscipline, setActiveDiscipline] = useState(0);
 
   return (
-    <section className="relative bg-[#003049] text-white pt-16 pb-20 sm:pt-20 sm:pb-28 lg:pt-28 lg:pb-32 border-b border-[#14213D] overflow-hidden">
+    <section className="relative bg-[#17324D] text-white pt-16 pb-20 sm:pt-20 sm:pb-28 lg:pt-28 lg:pb-32 border-b border-[#14213D] overflow-hidden">
       {/* Background Soft Ambient Accents (Strictly solid radial CSS — NO background images) */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#42C6D9]/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#14213D]/70 rounded-full blur-3xl pointer-events-none" />
@@ -70,7 +70,7 @@ export const Hero: React.FC = () => {
             <Reveal delay={0.1} yOffset={16}>
               <h1 className="font-display text-[clamp(2.5rem,5.5vw,4.75rem)] font-bold text-white tracking-[-0.03em] leading-[1.06] text-balance">
                 Creative vision.{" "}
-                <span className="font-serif italic font-normal bg-gradient-to-r from-white via-cyan-100 to-[#42C6D9] bg-clip-text text-transparent">
+                <span className="font-display font-bold text-[#DCEEF2] bg-gradient-to-r from-white via-cyan-100 to-[#42C6D9] bg-clip-text text-transparent">
                   Engineered for impact
                 </span>
                 .
@@ -178,7 +178,7 @@ export const Hero: React.FC = () => {
                         onClick={() => setActiveDiscipline(idx)}
                         className={`p-4 sm:p-5 rounded-2xl border transition-all duration-300 cursor-pointer ${
                           isSelected
-                            ? "bg-[#003049] border-[#42C6D9]/60 shadow-brand-button"
+                            ? "bg-[#17324D] border-[#42C6D9]/60 shadow-brand-button"
                             : "bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20"
                         }`}
                       >

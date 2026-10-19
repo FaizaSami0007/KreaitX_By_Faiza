@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Manrope, Inter, Instrument_Serif } from "next/font/google";
+import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -8,7 +8,7 @@ import { siteConfig } from "@/data/siteData";
 
 const manrope = Manrope({
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: ["500", "600", "700"],
   variable: "--font-manrope",
   display: "swap",
   fallback: ["system-ui", "-apple-system", "sans-serif"]
@@ -20,15 +20,6 @@ const inter = Inter({
   variable: "--font-inter",
   display: "swap",
   fallback: ["system-ui", "-apple-system", "sans-serif"]
-});
-
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: ["400"],
-  style: ["normal", "italic"],
-  variable: "--font-instrument-serif",
-  display: "swap",
-  fallback: ["Georgia", "serif"]
 });
 
 export const viewport: Viewport = {
@@ -142,7 +133,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${manrope.variable} ${inter.variable} ${instrumentSerif.variable} scroll-smooth`}
+      className={`${manrope.variable} ${inter.variable} scroll-smooth`}
     >
       <head>
         <script
@@ -171,7 +162,7 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className="flex min-h-screen flex-col bg-white font-sans text-slate-900 antialiased selection:bg-[#003049] selection:text-white"
+        className="flex min-h-screen flex-col bg-white font-sans text-[#25313D] antialiased selection:bg-[#17324D] selection:text-white"
       >
         <GoogleAnalytics />
         <Navbar />

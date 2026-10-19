@@ -195,22 +195,22 @@ export const ContactClient: React.FC = () => {
   return (
     <>
       {/* Contact Page Hero — Prussian Navy Brand Theme */}
-      <section className="relative bg-[#003049] text-white py-20 lg:py-28 border-b border-[#14213D] overflow-hidden">
+      <section className="relative bg-[#17324D] text-white py-20 lg:py-28 border-b border-[#14213D] overflow-hidden">
         {/* Ambient Glows */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#42C6D9]/15 via-[#14213D]/40 to-transparent rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#42C6D9]/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#416779]/20 via-[#14213D]/40 to-transparent rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#416779]/15 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#14213D]/60 rounded-full blur-3xl pointer-events-none" />
 
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#42C6D9] px-4 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-md shadow-subtle mb-6 hover:border-[#42C6D9]/50 transition-colors">
-                <Sparkles className="h-3.5 w-3.5 text-[#42C6D9] animate-pulse" />
+              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#DCEEF2] px-4 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-md shadow-subtle mb-6 hover:border-[#DCEEF2]/50 transition-colors">
+                <Sparkles className="h-3.5 w-3.5 text-[#DCEEF2] animate-pulse" />
                 <span>Direct Collaboration × Global Partnerships</span>
               </span>
               <h1 className="font-display text-[clamp(2rem,4.5vw,3.75rem)] font-bold text-white tracking-tight leading-[1.08]">
                 Let&apos;s Create{" "}
-                <span className="font-serif italic font-normal bg-gradient-to-r from-white via-cyan-100 to-[#42C6D9] bg-clip-text text-transparent">
+                <span className="font-display font-bold not-italic bg-gradient-to-r from-white via-cyan-100 to-[#DCEEF2] bg-clip-text text-transparent">
                   Together
                 </span>.
               </h1>
@@ -221,7 +221,7 @@ export const ContactClient: React.FC = () => {
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
                 <a
                   href="#inquiry-form"
-                  className="inline-flex items-center justify-center px-8 py-3.5 min-h-[50px] rounded-full text-sm font-bold text-[#003049] bg-[#42C6D9] hover:bg-[#38b2c4] shadow-brand-button transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto"
+                  className="inline-flex items-center justify-center px-8 py-3.5 min-h-[50px] rounded-full text-sm font-bold text-[#17324D] bg-[#DCEEF2] hover:bg-white shadow-brand-button transition-all duration-300 hover:-translate-y-0.5 w-full sm:w-auto"
                 >
                   Fill Project Brief ↓
                 </a>

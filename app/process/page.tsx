@@ -46,22 +46,22 @@ export default function ProcessPage() {
       />
 
       {/* Process Page Hero — Prussian Navy Brand Theme */}
-      <section className="relative bg-[#003049] text-white py-20 lg:py-28 border-b border-[#14213D] overflow-hidden">
+      <section className="relative bg-[#17324D] text-white py-20 lg:py-28 border-b border-[#14213D] overflow-hidden">
         {/* Ambient Glows */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#42C6D9]/15 via-[#14213D]/40 to-transparent rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#42C6D9]/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#416779]/20 via-[#14213D]/40 to-transparent rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#416779]/15 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#14213D]/60 rounded-full blur-3xl pointer-events-none" />
 
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#42C6D9] px-4 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-md shadow-subtle mb-6 hover:border-[#42C6D9]/50 transition-colors">
-                <Sparkles className="h-3.5 w-3.5 text-[#42C6D9] animate-pulse" />
+              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#DCEEF2] px-4 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-md shadow-subtle mb-6 hover:border-[#DCEEF2]/50 transition-colors">
+                <Sparkles className="h-3.5 w-3.5 text-[#DCEEF2] animate-pulse" />
                 <span>Methodology &amp; Standards</span>
               </span>
               <h1 className="font-display text-[clamp(2rem,4.5vw,3.75rem)] font-bold text-white tracking-tight leading-[1.08]">
                 Clear milestones.{" "}
-                <span className="font-serif italic font-normal bg-gradient-to-r from-white via-cyan-100 to-[#42C6D9] bg-clip-text text-transparent">
+                <span className="font-display font-bold not-italic bg-gradient-to-r from-white via-cyan-100 to-[#DCEEF2] bg-clip-text text-transparent">
                   Zero ambiguity
                 </span>.
               </h1>
@@ -86,35 +86,35 @@ export default function ProcessPage() {
       </section>
 
       {/* Six Stage Detailed Deep Dive */}
-      <section id="process-breakdown" className="bg-slate-50/50 py-20 sm:py-28 border-b border-slate-200/80">
+      <section id="process-breakdown" className="bg-[#F4F7FA] py-20 sm:py-28 border-b border-[#E2E8EF]">
         <Container size="default">
           <div className="space-y-12 sm:space-y-16">
             {processStages.map((stage, idx) => (
               <div
                 key={stage.number}
-                className="rounded-3xl bg-white border border-slate-200/80 shadow-card hover:shadow-card-hover hover:border-[#42C6D9]/50 transition-all duration-300 p-5 sm:p-10 lg:p-14"
+                className="rounded-3xl bg-white border border-[#E2E8EF] shadow-card hover:shadow-card-hover hover:border-[#416779]/40 transition-all duration-300 p-5 sm:p-10 lg:p-14"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
                   {/* Left Column: Stage Identity & Narrative */}
                   <div className="lg:col-span-5 space-y-4">
                     <div className="flex items-center gap-3">
-                      <span className="font-display text-sm font-bold text-white bg-[#003049] border border-[#42C6D9]/30 px-3.5 py-1 rounded-full shadow-subtle">
+                      <span className="font-display text-sm font-bold text-white bg-[#17324D] border border-white/10 px-3.5 py-1 rounded-full shadow-subtle">
                         Stage {stage.number}
                       </span>
-                      <span className="text-xs font-sans uppercase text-slate-500 tracking-wider font-semibold">
+                      <span className="text-xs font-sans uppercase text-[#596A7B] tracking-wider font-semibold">
                         Phase 0{idx + 1} of 06
                       </span>
                     </div>
 
-                    <h2 className="font-display text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
+                    <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#25313D] tracking-tight">
                       {stage.title}
                     </h2>
 
-                    <p className="text-base font-semibold text-[#003049]">
+                    <p className="text-base font-semibold text-[#17324D]">
                       {stage.tagline}
                     </p>
 
-                    <p className="text-base text-slate-600 leading-relaxed font-sans font-normal pt-2">
+                    <p className="text-base text-[#596A7B] leading-relaxed font-sans font-normal pt-2">
                       {stage.description}
                     </p>
 

@@ -10,24 +10,27 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          navy: "#003049",
+          navy: "#17324D",
           deep: "#14213D",
-          porcelain: "#F7F8FA",
+          porcelain: "#F4F7FA",
+          surface: "#EDF2F6",
           white: "#FFFFFF",
           cyan: "#42C6D9",
-          "cyan-hover": "#34B8CB",
+          "cyan-soft": "#DCEEF2",
+          "blue-muted": "#416779",
+          primary: "#25313D",
+          secondary: "#596A7B",
           steel: "#A8B3C2",
           charcoal: "#0B0F19",
-          body: "#334155",
-          border: "rgba(226, 232, 240, 0.8)",
+          body: "#25313D",
+          border: "#E2E8EF",
           "border-dark": "rgba(255, 255, 255, 0.12)"
         }
       },
       fontFamily: {
         sans: ["var(--font-inter)", "Inter", "system-ui", "-apple-system", "sans-serif"],
-        display: ["var(--font-manrope)", "Manrope", "system-ui", "sans-serif"],
-        heading: ["var(--font-manrope)", "Manrope", "system-ui", "sans-serif"],
-        serif: ["var(--font-instrument-serif)", "Instrument Serif", "Georgia", "serif"],
+        display: ["var(--font-manrope)", "Manrope", "system-ui", "-apple-system", "sans-serif"],
+        heading: ["var(--font-manrope)", "Manrope", "system-ui", "-apple-system", "sans-serif"],
         mono: ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"]
       },
       maxWidth: {

@@ -12,7 +12,7 @@ export const ProcessSection: React.FC = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section id="process" className="relative overflow-hidden bg-white py-20 sm:py-28 lg:py-32 border-b border-slate-200/80">
+    <section id="process" className="relative overflow-hidden bg-white py-20 sm:py-28 lg:py-32 border-b border-[#E2E8EF]">
       <Container size="default" className="relative z-10 max-w-[1320px]">
         {/* Header */}
         <Reveal yOffset={16}>
@@ -22,7 +22,7 @@ export const ProcessSection: React.FC = () => {
               title={
                 <>
                   From idea to impact,{" "}
-                  <span className="font-serif italic font-normal bg-gradient-to-r from-[#003049] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent">
+                  <span className="font-display font-bold text-[#416779] bg-gradient-to-r from-[#17324D] via-[#14213D] to-[#42C6D9] bg-clip-text text-transparent">
                     without the mystery
                   </span>
                   .
@@ -34,7 +34,7 @@ export const ProcessSection: React.FC = () => {
             <div className="shrink-0">
               <Link
                 href="/process"
-                className="group inline-flex items-center text-sm font-semibold text-[#003049] hover:text-[#14213D] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9]"
+                className="group inline-flex items-center text-sm font-semibold text-[#17324D] hover:text-[#416779] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#416779]"
               >
                 <span>Read Full Process Guide</span>
                 <ArrowRight className="ml-1.5 h-4 w-4 text-[#42C6D9] transition-transform group-hover:translate-x-1" />
@@ -50,15 +50,15 @@ export const ProcessSection: React.FC = () => {
               key={stage.number}
               type="button"
               onClick={() => setActiveStep(idx)}
-              className={`text-left p-3.5 sm:p-5 rounded-2xl border transition-all duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#42C6D9] ${
+              className={`text-left p-3.5 sm:p-5 rounded-2xl border transition-all duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#416779] ${
                 activeStep === idx
-                  ? "bg-[#003049] text-white border-[#003049] shadow-brand-button -translate-y-1"
-                  : "bg-[#F7F8FA] text-slate-700 border-slate-200/90 hover:border-slate-300 hover:bg-white"
+                  ? "bg-[#17324D] text-white border-[#17324D] shadow-brand-button -translate-y-1"
+                  : "bg-[#F4F7FA] text-[#25313D] border-[#E2E8EF] hover:border-slate-300 hover:bg-white"
               }`}
             >
               <div
                 className={`text-[11px] sm:text-xs font-mono font-bold mb-1 uppercase tracking-wider ${
-                  activeStep === idx ? "text-[#42C6D9]" : "text-slate-500"
+                  activeStep === idx ? "text-[#42C6D9]" : "text-[#596A7B]"
                 }`}
               >
                 Stage {stage.number}
@@ -71,20 +71,20 @@ export const ProcessSection: React.FC = () => {
         </div>
 
         {/* Active Stage Detail Showcase (Single semantic DOM container for active stage) */}
-        <div className="rounded-3xl bg-[#F7F8FA] border border-slate-200/90 p-5 sm:p-8 lg:p-12 shadow-card transition-all duration-300">
+        <div className="rounded-3xl bg-[#F4F7FA] border border-[#E2E8EF] p-5 sm:p-8 lg:p-12 shadow-card transition-all duration-300">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             {/* Left Narrative */}
             <div className="lg:col-span-5 space-y-4">
-              <span className="inline-block px-3.5 py-1 rounded-full bg-white text-[#003049] text-xs font-mono font-semibold uppercase tracking-wider border border-slate-200 shadow-xs">
+              <span className="inline-block px-3.5 py-1 rounded-full bg-white text-[#17324D] text-xs font-mono font-semibold uppercase tracking-wider border border-[#E2E8EF] shadow-xs">
                 Stage {processStages[activeStep].number} of 06 // {processStages[activeStep].title}
               </span>
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-slate-900 tracking-tight">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-[#17324D] tracking-tight">
                 {processStages[activeStep].title}
               </h3>
-              <p className="text-base font-semibold text-[#003049]">
+              <p className="text-base font-semibold text-[#17324D]">
                 {processStages[activeStep].tagline}
               </p>
-              <p className="text-base text-slate-600 leading-relaxed font-sans font-normal">
+              <p className="text-base text-[#596A7B] leading-relaxed font-sans font-normal">
                 {processStages[activeStep].description}
               </p>
 

@@ -32,8 +32,8 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
       aria-labelledby={`${service.id}-heading`}
       className={`scroll-mt-24 relative py-16 sm:py-24 lg:py-28 border-b overflow-hidden transition-colors duration-300 ${
         isDark
-          ? "bg-[#0B0F19] text-white border-slate-800"
-          : "bg-white text-slate-900 border-slate-200/80"
+          ? "bg-[#14213D] text-white border-white/10"
+          : "bg-white text-[#25313D] border-[#E2E8EF]"
       }`}
     >
       <Container size="default" className="relative z-10 w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
@@ -42,8 +42,8 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
         <div
           className={`relative rounded-3xl border p-5 sm:p-10 lg:p-12 xl:p-14 transition-all duration-300 shadow-card ${
             isDark
-              ? "bg-[#14213D] border-slate-800 shadow-2xl"
-              : "bg-[#F7F8FA] border-slate-200/80"
+              ? "bg-[#17324D] border-white/10 shadow-2xl"
+              : "bg-[#F4F7FA] border-[#E2E8EF]"
           }`}
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-14 items-start">
@@ -68,15 +68,15 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                   <h2
                     id={`${service.id}-heading`}
                     className={`font-display text-[clamp(26px,3.5vw,46px)] font-bold tracking-tight leading-[1.14] ${
-                      isDark ? "text-white" : "text-slate-950"
+                      isDark ? "text-white" : "text-[#17324D]"
                     }`}
                   >
                     {headline.prefix}{" "}
                     <span
-                      className={`font-serif italic font-normal bg-clip-text text-transparent ${
+                      className={`font-display font-bold not-italic bg-clip-text text-transparent ${
                         isDark
-                          ? "bg-gradient-to-r from-white via-cyan-100 to-[#42C6D9]"
-                          : "bg-gradient-to-r from-[#003049] via-[#14213D] to-[#42C6D9]"
+                          ? "bg-gradient-to-r from-white via-cyan-100 to-[#DCEEF2]"
+                          : "bg-gradient-to-r from-[#17324D] via-[#14213D] to-[#416779]"
                       }`}
                     >
                       {headline.highlight}
@@ -89,7 +89,7 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                 <Reveal delay={0.16} yOffset={12}>
                   <p
                     className={`text-base sm:text-lg font-semibold ${
-                      isDark ? "text-[#42C6D9]" : "text-[#003049]"
+                      isDark ? "text-[#DCEEF2]" : "text-[#17324D]"
                     }`}
                   >
                     {service.tagline}
@@ -100,7 +100,7 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                 <Reveal delay={0.2} yOffset={14}>
                   <p
                     className={`text-base leading-relaxed font-sans font-normal ${
-                      isDark ? "text-slate-300" : "text-slate-600"
+                      isDark ? "text-slate-300" : "text-[#596A7B]"
                     }`}
                   >
                     {service.description}
@@ -112,21 +112,21 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                   <div
                     className={`rounded-2xl p-5 border transition-colors ${
                       isDark
-                        ? "bg-[#0B0F19] border-slate-700/80 shadow-subtle"
-                        : "bg-white border-slate-200/80 shadow-subtle"
+                        ? "bg-[#14213D] border-white/10 shadow-subtle"
+                        : "bg-white border-[#E2E8EF] shadow-subtle"
                     }`}
                   >
                     <p
                       className={`text-xs font-sans uppercase tracking-wider font-bold mb-1.5 flex items-center gap-2 ${
-                        isDark ? "text-slate-200" : "text-slate-900"
+                        isDark ? "text-slate-200" : "text-[#17324D]"
                       }`}
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#42C6D9]" aria-hidden="true" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#416779]" aria-hidden="true" />
                       The Core Problem We Solve
                     </p>
                     <p
                       className={`text-sm leading-relaxed font-sans ${
-                        isDark ? "text-slate-300" : "text-slate-600"
+                        isDark ? "text-slate-300" : "text-[#596A7B]"
                       }`}
                     >
                       {service.problemSolved}

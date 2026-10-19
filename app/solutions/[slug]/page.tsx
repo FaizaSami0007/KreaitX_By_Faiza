@@ -180,37 +180,37 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       />
 
       {/* Breadcrumb Navigation Bar */}
-      <div className="bg-[#F7F8FA] border-b border-slate-200/80 py-3.5 text-xs font-sans text-slate-500">
+      <div className="bg-[#F4F7FA] border-b border-[#E2E8EF] py-3.5 text-xs font-sans text-[#596A7B]">
         <Container size="default">
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 flex-wrap">
-            <Link href="/" className="hover:text-[#003049] transition-colors">
+            <Link href="/" className="hover:text-[#17324D] transition-colors">
               Home
             </Link>
-            <ChevronRight className="h-3.5 w-3.5 text-slate-400" />
-            <Link href="/solutions" className="hover:text-[#003049] transition-colors">
+            <ChevronRight className="h-3.5 w-3.5 text-[#596A7B]" />
+            <Link href="/solutions" className="hover:text-[#17324D] transition-colors">
               Solutions
             </Link>
-            <ChevronRight className="h-3.5 w-3.5 text-slate-400" />
-            <span className="text-slate-900 font-semibold">{service.title}</span>
+            <ChevronRight className="h-3.5 w-3.5 text-[#596A7B]" />
+            <span className="text-[#25313D] font-semibold">{service.title}</span>
           </nav>
         </Container>
       </div>
 
       {/* Service Hero Section */}
-      <section className="relative overflow-hidden bg-[#003049] text-white py-16 sm:py-24 lg:py-28 border-b border-[#14213D]">
+      <section className="relative overflow-hidden bg-[#17324D] text-white py-16 sm:py-24 lg:py-28 border-b border-[#14213D]">
         {/* Ambient glows */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#42C6D9]/15 via-[#14213D]/40 to-transparent rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#42C6D9]/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[450px] bg-gradient-to-b from-[#416779]/20 via-[#14213D]/40 to-transparent rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-32 -right-32 w-96 h-96 bg-[#416779]/15 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-[#14213D]/60 rounded-full blur-3xl pointer-events-none" />
 
         <Container size="default" className="relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <Reveal yOffset={12}>
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 backdrop-blur-md shadow-subtle">
-                <span className="font-mono text-xs font-bold text-[#42C6D9]">
+                <span className="font-mono text-xs font-bold text-[#DCEEF2]">
                   {service.number}
                 </span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#42C6D9]" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#DCEEF2]" />
                 <span className="text-xs font-sans font-bold uppercase tracking-wider text-slate-200">
                   {service.category}
                 </span>
@@ -220,7 +220,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             <Reveal delay={0.08} yOffset={16}>
               <h1 className="font-display text-4xl sm:text-6xl lg:text-[64px] font-bold text-white tracking-tight leading-[1.08]">
                 {service.title}{" "}
-                <span className="block mt-2 font-serif italic font-normal text-3xl sm:text-5xl lg:text-[54px] bg-gradient-to-r from-white via-cyan-100 to-[#42C6D9] bg-clip-text text-transparent">
+                <span className="block mt-2 font-display font-bold not-italic text-3xl sm:text-5xl lg:text-[54px] bg-gradient-to-r from-white via-cyan-100 to-[#DCEEF2] bg-clip-text text-transparent">
                   {service.tagline}
                 </span>
               </h1>
