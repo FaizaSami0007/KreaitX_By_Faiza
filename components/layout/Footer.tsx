@@ -11,36 +11,20 @@ export const Footer: React.FC = () => {
     <footer className="bg-[#F7F5F0] text-[#34312F] pt-12 sm:pt-16 border-t border-[#E5E1DA] overflow-hidden">
       <Container size="default">
         {/* ========================================================= */}
-        {/* 1. TOP CONTACT BANNER (Inspired by reference screenshot) */}
+        {/* 1. TOP CONTACT BANNER (Sleek, low-height compact design) */}
         {/* ========================================================= */}
-        <div className="rounded-2xl bg-[#FF5A1F] text-white p-6 sm:p-8 lg:p-10 mb-12 sm:mb-16 shadow-sm">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div className="space-y-1.5 max-w-2xl">
-              <span className="inline-block text-xs font-mono font-bold uppercase tracking-[0.18em] text-white/90">
-                Start a Project
-              </span>
-              <h3 className="font-display text-2xl sm:text-3xl font-bold text-white tracking-tight leading-snug">
-                Have an upcoming product, rebrand, or marketing initiative?
-              </h3>
-              <p className="text-sm text-white/90 font-sans leading-relaxed">
-                Let&apos;s evaluate the scope together.
-              </p>
-            </div>
+        <div className="rounded-xl sm:rounded-2xl bg-[#FF5A1F] text-white py-4 sm:py-5 px-6 sm:px-8 lg:px-10 mb-10 sm:mb-14 shadow-xs">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <h3 className="font-display text-lg sm:text-xl font-bold text-white tracking-tight text-center sm:text-left">
+              Ready to start a project?
+            </h3>
 
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 w-full md:w-auto shrink-0">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-6 py-3 min-h-[46px] rounded-lg text-sm font-bold text-[#FF5A1F] bg-white hover:bg-[#F7F5F0] transition-all duration-200 shadow-xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white text-center"
-              >
-                Inquire Online →
-              </Link>
-              <a
-                href={`mailto:${siteConfig.contact.email}`}
-                className="inline-flex items-center justify-center px-5 py-3 min-h-[46px] rounded-lg text-sm font-medium text-white border border-white/40 hover:bg-white/10 transition-all duration-200 text-center"
-              >
-                {siteConfig.contact.email}
-              </a>
-            </div>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-5 py-2 rounded-lg text-sm font-bold text-[#FF5A1F] bg-white hover:bg-[#F7F5F0] transition-all duration-200 shadow-2xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white shrink-0"
+            >
+              Inquire Online →
+            </Link>
           </div>
         </div>
 
