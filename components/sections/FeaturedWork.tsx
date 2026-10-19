@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
+import { CheckCircle2, ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
@@ -29,7 +29,7 @@ export const FeaturedWork: React.FC = () => {
             />
 
             <div className="shrink-0">
-              <Button href="/work" variant="secondary" size="md" withArrow>
+              <Button href="/work" variant="cyan" size="md" withArrow className="font-bold">
                 View All Case Studies
               </Button>
             </div>
@@ -43,7 +43,7 @@ export const FeaturedWork: React.FC = () => {
 
             return (
               <Reveal key={project.id} yOffset={24}>
-                <article className="group rounded-2xl bg-white border border-[#E5E1DA] shadow-subtle hover:border-[#111111] hover:shadow-card transition-all duration-200 overflow-hidden">
+                <article className="group rounded-xl bg-white border border-[#E5E1DA] shadow-xs hover:border-[#FF5A1F] transition-all duration-200 overflow-hidden">
                   <div className="grid grid-cols-1 lg:grid-cols-12">
                     {/* Project Narrative */}
                     <div
@@ -90,7 +90,7 @@ export const FeaturedWork: React.FC = () => {
                             <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#FF5A1F] block mb-1">
                               Strategic Outcome
                             </span>
-                            <span className="text-xs text-[#111111] font-medium leading-relaxed block">
+                            <span className="text-xs text-[#111111] font-semibold leading-relaxed block">
                               {project.impact}
                             </span>
                           </div>
@@ -112,7 +112,7 @@ export const FeaturedWork: React.FC = () => {
 
                         <Link
                           href={`/work/${project.slug}`}
-                          className="inline-flex items-center text-sm font-semibold text-[#111111] hover:text-[#FF5A1F] transition-colors group/link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5A1F]"
+                          className="inline-flex items-center text-sm font-bold text-[#111111] hover:text-[#FF5A1F] transition-colors group/link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5A1F]"
                         >
                           <span>Explore Case Study</span>
                           <ArrowRight className="ml-1.5 h-4 w-4 text-[#FF5A1F] transition-transform group-hover/link:translate-x-1" />
@@ -122,13 +122,13 @@ export const FeaturedWork: React.FC = () => {
 
                     {/* Case Study Blueprint Side */}
                     <div
-                      className={`lg:col-span-5 bg-[#111111] p-6 sm:p-8 lg:p-10 flex flex-col justify-center relative overflow-hidden text-white border-t lg:border-t-0 ${
-                        isReversed ? "lg:order-1 lg:border-r border-white/10" : "lg:order-2 lg:border-l border-white/10"
+                      className={`lg:col-span-5 bg-[#FFF0E8] p-6 sm:p-8 lg:p-10 flex flex-col justify-center relative overflow-hidden text-[#111111] border-t lg:border-t-0 ${
+                        isReversed ? "lg:order-1 lg:border-r border-[#E5E1DA]" : "lg:order-2 lg:border-l border-[#E5E1DA]"
                       }`}
                     >
                       <div className="relative z-10 space-y-5">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white/10 text-white text-xs font-mono border border-white/15">
-                          <Sparkles className="h-3 w-3 text-[#FF5A1F]" />
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white text-[#111111] text-xs font-mono border border-[#E5E1DA]">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#FF5A1F]" />
                           <span>Case Study Blueprint // 0{index + 1}</span>
                         </div>
 
@@ -140,7 +140,7 @@ export const FeaturedWork: React.FC = () => {
                             {project.deliverables.map((item) => (
                               <li
                                 key={item}
-                                className="flex items-center gap-2.5 text-sm font-medium text-slate-200"
+                                className="flex items-center gap-2.5 text-sm font-medium text-[#111111]"
                               >
                                 <CheckCircle2 className="h-4 w-4 text-[#FF5A1F] shrink-0" />
                                 <span>{item}</span>
@@ -149,9 +149,9 @@ export const FeaturedWork: React.FC = () => {
                           </ul>
                         </div>
 
-                        <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs text-[#A19E98]">
-                          <span>Client: <strong className="text-white">{project.client}</strong></span>
-                          <span className="font-medium text-[#FF5A1F]">Verified Outcome</span>
+                        <div className="pt-4 border-t border-[#FF5A1F]/20 flex items-center justify-between text-xs text-[#66635F]">
+                          <span>Client: <strong className="text-[#111111]">{project.client}</strong></span>
+                          <span className="font-bold text-[#FF5A1F]">Verified Outcome</span>
                         </div>
                       </div>
                     </div>
