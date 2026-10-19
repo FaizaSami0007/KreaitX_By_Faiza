@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/Button";
 
 export default function NotFound() {
   return (
-    <div className="min-h-[70vh] flex items-center justify-center py-20 lg:py-28 bg-[#F7F5F0] text-[#111111] border-b border-[#E5E1DA]">
+    <div className="min-h-[70vh] flex items-center justify-center py-20 lg:py-28 bg-[#F7F5F0] text-[#34312F] border-b border-[#E5E1DA]">
       <Container size="default" className="text-center">
         <div className="max-w-2xl mx-auto flex flex-col items-center">
           {/* Status Badge */}
@@ -16,14 +16,14 @@ export default function NotFound() {
           </span>
 
           {/* Heading */}
-          <h1 className="font-display text-4xl sm:text-6xl font-bold text-[#111111] tracking-tight leading-[1.1]">
+          <h1 className="font-display text-4xl sm:text-6xl font-bold text-[#34312F] tracking-tight leading-[1.1]">
             Lost in digital space?{" "}
             <span className="font-display font-bold text-[#FF5A1F]">
               Let&apos;s guide you back
             </span>.
           </h1>
 
-          <p className="mt-5 text-base sm:text-lg text-[#66635F] leading-relaxed font-sans font-normal max-w-xl">
+          <p className="mt-5 text-base sm:text-lg text-[#6B6560] leading-relaxed font-sans font-normal max-w-xl">
             The link you followed may have changed, or the page might have been repositioned in our studio architecture.
           </p>
 
@@ -45,9 +45,9 @@ export default function NotFound() {
             >
               <div className="flex items-center justify-between mb-2">
                 <span className="text-xs font-mono uppercase tracking-wider text-[#FF5A1F] font-bold">Solutions</span>
-                <ArrowRight className="h-4 w-4 text-[#66635F] group-hover:text-[#FF5A1F] group-hover:translate-x-1 transition-all" />
+                <ArrowRight className="h-4 w-4 text-[#6B6560] group-hover:text-[#FF5A1F] group-hover:translate-x-1 transition-all" />
               </div>
-              <p className="text-xs text-[#66635F]">Explore our connected creative and technical capabilities.</p>
+              <p className="text-xs text-[#6B6560]">Explore our connected creative and technical capabilities.</p>
             </Link>
 
             <Link
@@ -56,9 +56,9 @@ export default function NotFound() {
             >
               <div className="flex items-center justify-between mb-2">
                 <span className="text-xs font-mono uppercase tracking-wider text-[#FF5A1F] font-bold">Case Studies</span>
-                <ArrowRight className="h-4 w-4 text-[#66635F] group-hover:text-[#FF5A1F] group-hover:translate-x-1 transition-all" />
+                <ArrowRight className="h-4 w-4 text-[#6B6560] group-hover:text-[#FF5A1F] group-hover:translate-x-1 transition-all" />
               </div>
-              <p className="text-xs text-[#66635F]">Review verified client outcomes and design artifacts.</p>
+              <p className="text-xs text-[#6B6560]">Review verified client outcomes and design artifacts.</p>
             </Link>
 
             <Link
@@ -67,9 +67,9 @@ export default function NotFound() {
             >
               <div className="flex items-center justify-between mb-2">
                 <span className="text-xs font-mono uppercase tracking-wider text-[#FF5A1F] font-bold">Methodology</span>
-                <ArrowRight className="h-4 w-4 text-[#66635F] group-hover:text-[#FF5A1F] group-hover:translate-x-1 transition-all" />
+                <ArrowRight className="h-4 w-4 text-[#6B6560] group-hover:text-[#FF5A1F] group-hover:translate-x-1 transition-all" />
               </div>
-              <p className="text-xs text-[#66635F]">Understand our six-stage process from discovery to launch.</p>
+              <p className="text-xs text-[#6B6560]">Understand our six-stage process from discovery to launch.</p>
             </Link>
           </div>
         </div>

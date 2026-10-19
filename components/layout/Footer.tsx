@@ -7,14 +7,14 @@ export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#111111] text-[#A19E98] pt-16 sm:pt-20 pb-[max(3rem,env(safe-area-inset-bottom,0px))] border-t border-white/10">
+    <footer className="bg-[#34312F] text-[#E5E1DA] pt-16 sm:pt-20 pb-[max(3rem,env(safe-area-inset-bottom,0px))] border-t border-white/10">
       <Container size="default">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-14 sm:pb-16 border-b border-white/10">
           {/* Brand Col */}
           <div className="lg:col-span-4 space-y-4">
             <Link
               href="/"
-              className="inline-flex items-center text-2xl font-display font-bold tracking-tight text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5A1F] group min-h-[44px]"
+              className="inline-flex items-center text-2xl font-display font-bold tracking-tight text-[#F7F5F0] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5A1F] group min-h-[44px]"
               aria-label="KreaitX — Home"
             >
               <span>Kreait</span>
@@ -23,12 +23,12 @@ export const Footer: React.FC = () => {
               </span>
             </Link>
 
-            <p className="text-sm text-[#A19E98] leading-relaxed max-w-sm font-sans">
+            <p className="text-sm text-[#E5E1DA]/80 leading-relaxed max-w-sm font-sans">
               One connected creative technology partner for businesses that need ideas, execution, and digital growth under one roof.
             </p>
 
-            <div className="pt-2 text-xs text-[#A19E98] space-y-1 font-sans">
-              <p className="font-semibold text-white">Location &amp; Studio</p>
+            <div className="pt-2 text-xs text-[#E5E1DA]/80 space-y-1 font-sans">
+              <p className="font-semibold text-[#F7F5F0]">Location &amp; Studio</p>
               <p>{siteConfig.location.formatted}</p>
               <p>Timezone: {siteConfig.location.timezone}</p>
             </div>
@@ -39,7 +39,7 @@ export const Footer: React.FC = () => {
             <p className="text-xs font-mono font-bold uppercase tracking-[0.16em] text-[#FF5A1F]">
               Solutions
             </p>
-            <ul className="space-y-2.5 text-sm text-slate-300 font-sans">
+            <ul className="space-y-2.5 text-sm text-[#F7F5F0] font-sans">
               {servicesData.map((service) => (
                 <li key={service.id}>
                   <Link
@@ -58,7 +58,7 @@ export const Footer: React.FC = () => {
             <p className="text-xs font-mono font-bold uppercase tracking-[0.16em] text-[#FF5A1F]">
               Company
             </p>
-            <ul className="space-y-2.5 text-sm text-slate-300 font-sans">
+            <ul className="space-y-2.5 text-sm text-[#F7F5F0] font-sans">
               <li>
                 <Link href="/about" className="hover:text-[#FF5A1F] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
                   About KreaitX
@@ -92,13 +92,13 @@ export const Footer: React.FC = () => {
             <p className="text-xs font-mono font-bold uppercase tracking-[0.16em] text-[#FF5A1F]">
               Start a Project
             </p>
-            <p className="text-sm text-[#A19E98] leading-relaxed font-sans">
+            <p className="text-sm text-[#E5E1DA]/80 leading-relaxed font-sans">
               Have an upcoming product, rebrand, or marketing initiative? Let&apos;s evaluate the scope together.
             </p>
             <div className="pt-1">
               <a
                 href={`mailto:${siteConfig.contact.email}`}
-                className="inline-block text-sm font-medium text-white underline underline-offset-4 hover:text-[#FF5A1F] transition-colors py-0.5"
+                className="inline-block text-sm font-medium text-[#F7F5F0] underline underline-offset-4 hover:text-[#FF5A1F] transition-colors py-0.5"
               >
                 {siteConfig.contact.email}
               </a>
@@ -115,11 +115,11 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#66635F]">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#E5E1DA]/70">
           <p>© {currentYear} KreaitX Creative Technology. All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <span className="text-[#66635F]">Peshawar × Global</span>
-            <Link href="/contact" className="hover:text-white transition-colors py-1">
+            <span>Peshawar × Global</span>
+            <Link href="/contact" className="hover:text-[#F7F5F0] transition-colors py-1">
               Privacy &amp; Working Terms
             </Link>
           </div>

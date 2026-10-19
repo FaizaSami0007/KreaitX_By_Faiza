@@ -7,7 +7,7 @@ import { CheckCircle2 } from "lucide-react";
 
 export const Testimonial: React.FC = () => {
   return (
-    <section id="principles" className="relative overflow-hidden bg-[#F7F5F0] py-20 sm:py-28 lg:py-32 border-b border-[#E5E1DA] text-[#111111]">
+    <section id="principles" className="relative overflow-hidden bg-[#F7F5F0] py-20 sm:py-28 lg:py-32 border-b border-[#E5E1DA] text-[#34312F]">
       <Container size="default" className="max-w-[1320px]">
         <Reveal yOffset={16}>
           <div className="max-w-3xl mb-16 sm:mb-20">
@@ -36,16 +36,16 @@ export const Testimonial: React.FC = () => {
                   <span className="text-xs font-mono font-bold text-[#FF5A1F] px-3 py-1 rounded-md bg-[#FFF0E8] border border-[#E5E1DA] inline-block mb-4 uppercase tracking-wider">
                     Principle 0{idx + 1}
                   </span>
-                  <h3 className="text-2xl font-display font-bold text-[#111111] tracking-tight mb-3 group-hover:text-[#FF5A1F] transition-colors">
+                  <h3 className="text-2xl font-display font-bold text-[#34312F] tracking-tight mb-3 group-hover:text-[#FF5A1F] transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-base text-[#66635F] leading-relaxed font-sans font-normal">
+                  <p className="text-base text-[#6B6560] leading-relaxed font-sans font-normal">
                     {item.description}
                   </p>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-[#E5E1DA] flex items-center justify-between text-xs sm:text-sm text-[#66635F]">
-                  <span className="font-medium text-[#111111]">Studio Standard</span>
+                <div className="mt-8 pt-6 border-t border-[#E5E1DA] flex items-center justify-between text-xs sm:text-sm text-[#6B6560]">
+                  <span className="font-medium text-[#34312F]">Studio Standard</span>
                   <span className="inline-flex items-center gap-1.5 text-[#FF5A1F] font-semibold">
                     <CheckCircle2 className="h-4 w-4 text-[#FF5A1F]" />
                     KreaitX Practice

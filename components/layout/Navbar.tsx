@@ -65,7 +65,7 @@ export const Navbar: React.FC = () => {
             {/* Clickable Logo with Brand Neon Orange Accent */}
             <Link
               href="/"
-              className="group flex items-center gap-0.5 text-2xl font-display font-bold tracking-tight text-[#111111] transition-opacity duration-200 hover:opacity-90 cursor-pointer min-h-[44px] min-w-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5A1F] focus-visible:ring-offset-2 rounded-md px-1 items-center"
+              className="group flex items-center gap-0.5 text-2xl font-display font-bold tracking-tight text-[#34312F] transition-opacity duration-200 hover:opacity-90 cursor-pointer min-h-[44px] min-w-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5A1F] focus-visible:ring-offset-2 rounded-md px-1 items-center"
               aria-label="KreaitX — Home"
             >
               <span>Kreait</span>
@@ -86,7 +86,7 @@ export const Navbar: React.FC = () => {
                       "relative px-3.5 py-2 text-[14px] font-sans transition-all duration-180 min-h-[40px] flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5A1F] rounded-md",
                       isActive
                         ? "text-[#FF5A1F] font-semibold"
-                        : "text-[#66635F] hover:text-[#111111] hover:bg-[#FFF0E8]/70 font-medium"
+                        : "text-[#6B6560] hover:text-[#34312F] hover:bg-[#FFF0E8]/70 font-medium"
                     )}
                     aria-current={isActive ? "page" : undefined}
                   >
@@ -103,7 +103,7 @@ export const Navbar: React.FC = () => {
             <div className="hidden lg:flex items-center gap-3">
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center text-[14px] font-sans font-medium text-white bg-[#111111] hover:bg-[#FF5A1F] px-5 py-2.5 min-h-[42px] rounded-lg transition-all duration-200 shadow-subtle active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5A1F] focus-visible:ring-offset-2"
+                className="group inline-flex items-center justify-center text-[14px] font-sans font-medium text-white bg-[#34312F] hover:bg-[#FF5A1F] px-5 py-2.5 min-h-[42px] rounded-lg transition-all duration-200 shadow-subtle active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5A1F] focus-visible:ring-offset-2"
               >
                 <span>Start a Project</span>
                 <ArrowRight className="ml-2 h-4 w-4 text-white/90 transition-transform duration-200 group-hover:translate-x-1" />
@@ -114,14 +114,14 @@ export const Navbar: React.FC = () => {
             <div className="flex items-center gap-2.5 lg:hidden">
               <Link
                 href="/contact"
-                className="inline-flex sm:hidden text-xs font-semibold text-white bg-[#111111] hover:bg-[#FF5A1F] px-3.5 py-2 rounded-md min-h-[40px] items-center justify-center shadow-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5A1F]"
+                className="inline-flex sm:hidden text-xs font-semibold text-white bg-[#34312F] hover:bg-[#FF5A1F] px-3.5 py-2 rounded-md min-h-[40px] items-center justify-center shadow-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5A1F]"
               >
                 Inquire
               </Link>
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(true)}
-                className="inline-flex items-center justify-center p-2 min-h-[40px] min-w-[40px] rounded-md text-[#111111] hover:bg-white border border-[#E5E1DA] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5A1F] focus-visible:ring-offset-2"
+                className="inline-flex items-center justify-center p-2 min-h-[40px] min-w-[40px] rounded-md text-[#34312F] hover:bg-white border border-[#E5E1DA] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5A1F] focus-visible:ring-offset-2"
                 aria-expanded={mobileMenuOpen}
                 aria-controls="mobile-menu-drawer"
                 aria-label="Open navigation menu"
@@ -148,7 +148,7 @@ export const Navbar: React.FC = () => {
             <Link
               href="/"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center gap-0.5 text-2xl font-display font-bold tracking-tight text-[#111111]"
+              className="flex items-center gap-0.5 text-2xl font-display font-bold tracking-tight text-[#34312F]"
               aria-label="KreaitX — Home"
             >
               <span>Kreait</span>
@@ -159,14 +159,14 @@ export const Navbar: React.FC = () => {
               <Link
                 href="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="inline-flex text-xs font-semibold text-white bg-[#111111] hover:bg-[#FF5A1F] px-3.5 py-2 rounded-md min-h-[38px] items-center justify-center shadow-subtle"
+                className="inline-flex text-xs font-semibold text-white bg-[#34312F] hover:bg-[#FF5A1F] px-3.5 py-2 rounded-md min-h-[38px] items-center justify-center shadow-subtle"
               >
                 Talk
               </Link>
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-[#111111] hover:bg-white border border-[#E5E1DA] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5A1F]"
+                className="inline-flex items-center justify-center p-2 rounded-md text-[#34312F] hover:bg-white border border-[#E5E1DA] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5A1F]"
                 aria-label="Close navigation menu"
               >
                 <X className="h-5 w-5" />
@@ -192,7 +192,7 @@ export const Navbar: React.FC = () => {
                       "flex items-center justify-between px-4 py-3 min-h-[46px] text-base rounded-lg transition-all duration-150 active:scale-[0.99]",
                       isActive
                         ? "bg-[#FFF0E8] text-[#FF5A1F] font-semibold border border-[#FF5A1F]/30"
-                        : "text-[#111111] hover:bg-white font-medium border border-[#E5E1DA] bg-white"
+                        : "text-[#34312F] hover:bg-white font-medium border border-[#E5E1DA] bg-white"
                     )}
                   >
                     <div className="flex items-center gap-3">
@@ -201,7 +201,7 @@ export const Navbar: React.FC = () => {
                     <ArrowRight
                       className={cn(
                         "h-4 w-4 transition-transform",
-                        isActive ? "text-[#FF5A1F]" : "text-[#66635F]"
+                        isActive ? "text-[#FF5A1F]" : "text-[#6B6560]"
                       )}
                     />
                   </Link>
@@ -213,15 +213,15 @@ export const Navbar: React.FC = () => {
             <div className="mt-8 pt-6 border-t border-[#E5E1DA] flex flex-col gap-4">
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center text-sm font-semibold text-white bg-[#111111] hover:bg-[#FF5A1F] px-6 py-3 min-h-[46px] rounded-lg transition-all duration-200 shadow-subtle"
+                className="group inline-flex items-center justify-center text-sm font-semibold text-white bg-[#34312F] hover:bg-[#FF5A1F] px-6 py-3 min-h-[46px] rounded-lg transition-all duration-200 shadow-subtle"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span>Start a Project</span>
                 <ArrowRight className="ml-2 h-4 w-4 text-white/90 transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
 
-              <div className="mt-2 text-xs text-[#66635F] space-y-1">
-                <p className="font-semibold text-[#111111]">KreaitX Creative Technology</p>
+              <div className="mt-2 text-xs text-[#6B6560] space-y-1">
+                <p className="font-semibold text-[#34312F]">KreaitX Creative Technology</p>
                 <p>{siteConfig.location.formatted}</p>
                 <p className="text-[#FF5A1F] font-medium">{siteConfig.contact.email}</p>
               </div>

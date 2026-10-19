@@ -57,32 +57,32 @@ export const FeaturedWork: React.FC = () => {
                           <span className="px-2.5 py-0.5 rounded-md bg-[#FFF0E8] text-[#FF5A1F] border border-[#FF5A1F]/20 text-xs font-mono font-semibold uppercase tracking-wider">
                             {project.industry}
                           </span>
-                          <span className="text-xs font-mono text-[#66635F] font-medium px-2.5 py-0.5 rounded-md bg-[#F7F5F0] border border-[#E5E1DA]">
+                          <span className="text-xs font-mono text-[#6B6560] font-medium px-2.5 py-0.5 rounded-md bg-[#F7F5F0] border border-[#E5E1DA]">
                             {project.year}
                           </span>
-                          <span className="text-xs font-mono text-[#66635F] font-medium px-2.5 py-0.5 rounded-md bg-[#F7F5F0] border border-[#E5E1DA]">
+                          <span className="text-xs font-mono text-[#6B6560] font-medium px-2.5 py-0.5 rounded-md bg-[#F7F5F0] border border-[#E5E1DA]">
                             Benchmark 0{index + 1}
                           </span>
                         </div>
 
                         {/* Title & Summary */}
-                        <h3 className="text-2xl sm:text-3xl lg:text-[34px] font-display font-bold text-[#111111] tracking-tight group-hover:text-[#FF5A1F] transition-colors">
+                        <h3 className="text-2xl sm:text-3xl lg:text-[34px] font-display font-bold text-[#34312F] tracking-tight group-hover:text-[#FF5A1F] transition-colors">
                           <Link href={`/work/${project.slug}`}>
                             {project.title}
                           </Link>
                         </h3>
 
-                        <p className="mt-3.5 text-base sm:text-lg text-[#66635F] leading-relaxed font-sans font-normal">
+                        <p className="mt-3.5 text-base sm:text-lg text-[#6B6560] leading-relaxed font-sans font-normal">
                           {project.summary}
                         </p>
 
                         {/* Challenge & Strategic Impact Cards */}
                         <div className="mt-6 pt-5 border-t border-[#E5E1DA] grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                           <div className="p-3.5 rounded-lg bg-[#F7F5F0] border border-[#E5E1DA]">
-                            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#111111] block mb-1">
+                            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#34312F] block mb-1">
                               The Challenge
                             </span>
-                            <span className="text-xs text-[#66635F] leading-relaxed block">
+                            <span className="text-xs text-[#6B6560] leading-relaxed block">
                               {project.challenge}
                             </span>
                           </div>
@@ -90,7 +90,7 @@ export const FeaturedWork: React.FC = () => {
                             <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#FF5A1F] block mb-1">
                               Strategic Outcome
                             </span>
-                            <span className="text-xs text-[#111111] font-semibold leading-relaxed block">
+                            <span className="text-xs text-[#34312F] font-semibold leading-relaxed block">
                               {project.impact}
                             </span>
                           </div>
@@ -103,7 +103,7 @@ export const FeaturedWork: React.FC = () => {
                           {project.services.map((s) => (
                             <span
                               key={s}
-                              className="text-xs font-medium text-[#66635F] bg-[#F7F5F0] border border-[#E5E1DA] px-2.5 py-0.5 rounded-md"
+                              className="text-xs font-medium text-[#6B6560] bg-[#F7F5F0] border border-[#E5E1DA] px-2.5 py-0.5 rounded-md"
                             >
                               {s}
                             </span>
@@ -112,22 +112,22 @@ export const FeaturedWork: React.FC = () => {
 
                         <Link
                           href={`/work/${project.slug}`}
-                          className="inline-flex items-center text-sm font-bold text-[#111111] hover:text-[#FF5A1F] transition-colors group/link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5A1F]"
+                          className="inline-flex items-center text-sm font-bold text-[#34312F] hover:text-[#FF5A1F] transition-colors group/link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5A1F]"
                         >
                           <span>Explore Case Study</span>
-                          <ArrowRight className="ml-1.5 h-4 w-4 text-[#FF5A1F] transition-transform group-hover/link:translate-x-1" />
+                          <ArrowRight className="ml-1.5 h-4 w-4 text-[#FF5A1F] transition-transform group/link:translate-x-1" />
                         </Link>
                       </div>
                     </div>
 
                     {/* Case Study Blueprint Side */}
                     <div
-                      className={`lg:col-span-5 bg-[#FFF0E8] p-6 sm:p-8 lg:p-10 flex flex-col justify-center relative overflow-hidden text-[#111111] border-t lg:border-t-0 ${
+                      className={`lg:col-span-5 bg-[#FFF0E8] p-6 sm:p-8 lg:p-10 flex flex-col justify-center relative overflow-hidden text-[#34312F] border-t lg:border-t-0 ${
                         isReversed ? "lg:order-1 lg:border-r border-[#E5E1DA]" : "lg:order-2 lg:border-l border-[#E5E1DA]"
                       }`}
                     >
                       <div className="relative z-10 space-y-5">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white text-[#111111] text-xs font-mono border border-[#E5E1DA]">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white text-[#34312F] text-xs font-mono border border-[#E5E1DA]">
                           <span className="w-1.5 h-1.5 rounded-full bg-[#FF5A1F]" />
                           <span>Case Study Blueprint // 0{index + 1}</span>
                         </div>
@@ -140,7 +140,7 @@ export const FeaturedWork: React.FC = () => {
                             {project.deliverables.map((item) => (
                               <li
                                 key={item}
-                                className="flex items-center gap-2.5 text-sm font-medium text-[#111111]"
+                                className="flex items-center gap-2.5 text-sm font-medium text-[#34312F]"
                               >
                                 <CheckCircle2 className="h-4 w-4 text-[#FF5A1F] shrink-0" />
                                 <span>{item}</span>
@@ -149,8 +149,8 @@ export const FeaturedWork: React.FC = () => {
                           </ul>
                         </div>
 
-                        <div className="pt-4 border-t border-[#FF5A1F]/20 flex items-center justify-between text-xs text-[#66635F]">
-                          <span>Client: <strong className="text-[#111111]">{project.client}</strong></span>
+                        <div className="pt-4 border-t border-[#FF5A1F]/20 flex items-center justify-between text-xs text-[#6B6560]">
+                          <span>Client: <strong className="text-[#34312F]">{project.client}</strong></span>
                           <span className="font-bold text-[#FF5A1F]">Verified Outcome</span>
                         </div>
                       </div>

@@ -42,7 +42,7 @@ export const Hero: React.FC = () => {
   const [activeDiscipline, setActiveDiscipline] = useState(0);
 
   return (
-    <section className="relative bg-[#F7F5F0] text-[#111111] pt-16 pb-20 sm:pt-20 sm:pb-24 lg:pt-24 lg:pb-28 border-b border-[#E5E1DA] overflow-hidden">
+    <section className="relative bg-[#F7F5F0] text-[#34312F] pt-16 pb-20 sm:pt-20 sm:pb-24 lg:pt-24 lg:pb-28 border-b border-[#E5E1DA] overflow-hidden">
       <Container size="default" className="relative z-10 w-full max-w-[1360px]">
         {/* Editorial Grid Composition: Two balanced, deliberate columns */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 xl:gap-16 items-center">
@@ -56,15 +56,15 @@ export const Hero: React.FC = () => {
             <Reveal delay={0.04} yOffset={10}>
               <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-md bg-[#FFF0E8] border border-[#E5E1DA] mb-6 sm:mb-8">
                 <span className="h-2 w-2 rounded-full bg-[#FF5A1F]" aria-hidden="true" />
-                <span className="text-[11px] sm:text-xs font-mono font-bold tracking-[0.16em] text-[#111111] uppercase">
-                  KREAITX STUDIO <span className="text-[#66635F] mx-1">•</span> <span className="text-[#FF5A1F]">CREATIVE TECHNOLOGY</span>
+                <span className="text-[11px] sm:text-xs font-mono font-bold tracking-[0.16em] text-[#34312F] uppercase">
+                  KREAITX STUDIO <span className="text-[#6B6560] mx-1">•</span> <span className="text-[#FF5A1F]">CREATIVE TECHNOLOGY</span>
                 </span>
               </div>
             </Reveal>
 
             {/* 2. Main Display Headline */}
             <Reveal delay={0.1} yOffset={16}>
-              <h1 className="font-display text-[clamp(2.5rem,5.5vw,4.75rem)] font-bold text-[#111111] tracking-[-0.03em] leading-[1.06] text-balance">
+              <h1 className="font-display text-[clamp(2.5rem,5.5vw,4.75rem)] font-bold text-[#34312F] tracking-[-0.03em] leading-[1.06] text-balance">
                 Creative vision.{" "}
                 <span className="font-display font-bold text-[#FF5A1F]">
                   Engineered for impact
@@ -75,7 +75,7 @@ export const Hero: React.FC = () => {
 
             {/* 3. Purpose-Driven Supporting Message */}
             <Reveal delay={0.18} yOffset={14}>
-              <p className="mt-6 text-base sm:text-lg lg:text-xl text-[#66635F] font-sans font-normal leading-[1.65] max-w-xl">
+              <p className="mt-6 text-base sm:text-lg lg:text-xl text-[#6B6560] font-sans font-normal leading-[1.65] max-w-xl">
                 We bring brand strategy, creative production and digital engineering together to build meaningful digital experiences and help ambitious businesses grow.
               </p>
             </Reveal>
@@ -104,7 +104,7 @@ export const Hero: React.FC = () => {
                   variant="outline"
                   size="lg"
                   withArrow
-                  className="min-h-[50px] font-semibold bg-white text-[#111111] border border-[#E5E1DA] hover:border-[#111111] hover:text-[#FF5A1F] text-[15px]"
+                  className="min-h-[50px] font-semibold bg-white text-[#34312F] border border-[#E5E1DA] hover:border-[#34312F] hover:text-[#FF5A1F] text-[15px]"
                 >
                   Explore Selected Work
                 </Button>
@@ -118,7 +118,7 @@ export const Hero: React.FC = () => {
                   <span className="block text-[11px] font-mono uppercase tracking-wider text-[#FF5A1F] font-bold">
                     HQ × Reach
                   </span>
-                  <span className="text-xs sm:text-sm text-[#66635F] font-medium mt-0.5 block">
+                  <span className="text-xs sm:text-sm text-[#6B6560] font-medium mt-0.5 block">
                     Peshawar to Global
                   </span>
                 </div>
@@ -126,7 +126,7 @@ export const Hero: React.FC = () => {
                   <span className="block text-[11px] font-mono uppercase tracking-wider text-[#FF5A1F] font-bold">
                     Engagement
                   </span>
-                  <span className="text-xs sm:text-sm text-[#66635F] font-medium mt-0.5 block">
+                  <span className="text-xs sm:text-sm text-[#6B6560] font-medium mt-0.5 block">
                     100% Senior Leads
                   </span>
                 </div>
@@ -134,7 +134,7 @@ export const Hero: React.FC = () => {
                   <span className="block text-[11px] font-mono uppercase tracking-wider text-[#FF5A1F] font-bold">
                     Engineering
                   </span>
-                  <span className="text-xs sm:text-sm text-[#66635F] font-medium mt-0.5 block">
+                  <span className="text-xs sm:text-sm text-[#6B6560] font-medium mt-0.5 block">
                     Sub-second Next.js
                   </span>
                 </div>
@@ -153,11 +153,11 @@ export const Hero: React.FC = () => {
                 <div className="flex items-center justify-between pb-4 border-b border-[#E5E1DA]">
                   <div className="flex items-center gap-2">
                     <span className="h-2 w-2 rounded-full bg-[#FF5A1F]" aria-hidden="true" />
-                    <span className="text-xs font-mono uppercase tracking-wider text-[#111111] font-bold">
+                    <span className="text-xs font-mono uppercase tracking-wider text-[#34312F] font-bold">
                       Connected Discipline Matrix
                     </span>
                   </div>
-                  <span className="text-[11px] font-mono text-[#66635F]">
+                  <span className="text-[11px] font-mono text-[#6B6560]">
                     3 Core Pillars
                   </span>
                 </div>
@@ -175,37 +175,37 @@ export const Hero: React.FC = () => {
                         className={`p-4 rounded-xl border transition-all duration-200 cursor-pointer ${
                           isSelected
                             ? "bg-[#FFF0E8] border-[#FF5A1F]"
-                            : "bg-[#F7F5F0] border-[#E5E1DA] hover:border-[#111111]/30 hover:bg-white"
+                            : "bg-[#F7F5F0] border-[#E5E1DA] hover:border-[#34312F]/30 hover:bg-white"
                         }`}
                       >
                         <div className="flex items-start justify-between gap-3">
                           <div className="flex items-center gap-3">
-                            <div className={`p-2 rounded-lg ${isSelected ? "bg-[#FF5A1F] text-white" : "bg-white text-[#111111] border border-[#E5E1DA]"}`}>
+                            <div className={`p-2 rounded-lg ${isSelected ? "bg-[#FF5A1F] text-white" : "bg-white text-[#34312F] border border-[#E5E1DA]"}`}>
                               <Icon className="h-4 w-4" aria-hidden="true" />
                             </div>
                             <div>
-                              <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#66635F] block">
+                              <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#6B6560] block">
                                 Stage {item.number}
                               </span>
-                              <h3 className="text-sm sm:text-base font-display font-bold text-[#111111]">
+                              <h3 className="text-sm sm:text-base font-display font-bold text-[#34312F]">
                                 {item.label}
                               </h3>
                             </div>
                           </div>
 
-                          <span className={`text-xs font-mono font-medium shrink-0 px-2.5 py-0.5 rounded-md ${isSelected ? "bg-[#FF5A1F] text-white font-bold" : "bg-white text-[#66635F] border border-[#E5E1DA]"}`}>
+                          <span className={`text-xs font-mono font-medium shrink-0 px-2.5 py-0.5 rounded-md ${isSelected ? "bg-[#FF5A1F] text-white font-bold" : "bg-white text-[#6B6560] border border-[#E5E1DA]"}`}>
                             {item.metrics}
                           </span>
                         </div>
 
                         {isSelected && (
                           <div className="mt-3.5 pt-3 border-t border-[#FF5A1F]/20 animate-in fade-in duration-200">
-                            <p className="text-xs sm:text-sm text-[#66635F] leading-relaxed font-sans mb-3">
+                            <p className="text-xs sm:text-sm text-[#6B6560] leading-relaxed font-sans mb-3">
                               {item.detail}
                             </p>
                             <div className="space-y-1.5">
                               {item.deliverables.map((deliv) => (
-                                <div key={deliv} className="flex items-center gap-2 text-xs text-[#111111]">
+                                <div key={deliv} className="flex items-center gap-2 text-xs text-[#34312F]">
                                   <CheckCircle2 className="h-3.5 w-3.5 text-[#FF5A1F] shrink-0" aria-hidden="true" />
                                   <span>{deliv}</span>
                                 </div>
@@ -220,12 +220,12 @@ export const Hero: React.FC = () => {
 
                 {/* Card Bottom CTA Link */}
                 <div className="mt-5 pt-4 border-t border-[#E5E1DA] flex items-center justify-between text-xs sm:text-sm">
-                  <span className="text-[#66635F] font-sans">
+                  <span className="text-[#6B6560] font-sans">
                     Zero agency silos. One connected team.
                   </span>
                   <Link
                     href="/solutions"
-                    className="inline-flex items-center font-bold text-[#111111] hover:text-[#FF5A1F] transition-colors group"
+                    className="inline-flex items-center font-bold text-[#34312F] hover:text-[#FF5A1F] transition-colors group"
                   >
                     <span>View All Solutions</span>
                     <ArrowUpRight className="ml-1 h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-[#FF5A1F]" />

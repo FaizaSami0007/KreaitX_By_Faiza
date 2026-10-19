@@ -8,7 +8,7 @@ import { servicesData } from "@/data/siteData";
 
 export const Services: React.FC = () => {
   return (
-    <section id="solutions" className="relative overflow-hidden bg-[#F7F5F0] py-20 sm:py-24 lg:py-28 border-b border-[#E5E1DA] text-[#111111]">
+    <section id="solutions" className="relative overflow-hidden bg-[#F7F5F0] py-20 sm:py-24 lg:py-28 border-b border-[#E5E1DA] text-[#34312F]">
       <Container size="default" className="relative z-10">
         {/* Section Header */}
         <Reveal yOffset={16}>
@@ -31,7 +31,7 @@ export const Services: React.FC = () => {
             <div className="shrink-0">
               <Link
                 href="/solutions"
-                className="group inline-flex items-center text-sm font-sans font-bold text-[#111111] hover:text-[#FF5A1F] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5A1F]"
+                className="group inline-flex items-center text-sm font-sans font-bold text-[#34312F] hover:text-[#FF5A1F] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5A1F]"
               >
                 <span>View All Capabilities</span>
                 <ArrowRight className="ml-1.5 h-4 w-4 text-[#FF5A1F] transition-transform group-hover:translate-x-1" />
@@ -54,22 +54,22 @@ export const Services: React.FC = () => {
                 >
                   <div>
                     {/* Top Row: Category + Number */}
-                    <div className="flex items-center justify-between text-xs font-sans text-[#66635F] mb-5">
+                    <div className="flex items-center justify-between text-xs font-sans text-[#6B6560] mb-5">
                       <span className="px-2.5 py-0.5 rounded-md bg-[#FFF0E8] text-[#FF5A1F] border border-[#E5E1DA] font-mono font-semibold uppercase tracking-wider text-[11px]">
                         {service.category}
                       </span>
-                      <span className="font-display font-bold text-base text-[#111111] group-hover:text-[#FF5A1F] transition-colors">
+                      <span className="font-display font-bold text-base text-[#34312F] group-hover:text-[#FF5A1F] transition-colors">
                         {service.number}
                       </span>
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-xl sm:text-2xl font-display font-bold text-[#111111] tracking-tight group-hover:text-[#FF5A1F] transition-colors">
+                    <h3 className="text-xl sm:text-2xl font-display font-bold text-[#34312F] tracking-tight group-hover:text-[#FF5A1F] transition-colors">
                       {service.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="mt-3 text-sm sm:text-base text-[#66635F] leading-relaxed font-sans font-normal">
+                    <p className="mt-3 text-sm sm:text-base text-[#6B6560] leading-relaxed font-sans font-normal">
                       {service.description}
                     </p>
 
@@ -79,7 +79,7 @@ export const Services: React.FC = () => {
                         {service.deliverables.slice(0, 3).map((d) => (
                           <span
                             key={d}
-                            className="text-xs font-sans font-medium px-2.5 py-0.5 rounded-md bg-[#F7F5F0] border border-[#E5E1DA] text-[#111111]"
+                            className="text-xs font-sans font-medium px-2.5 py-0.5 rounded-md bg-[#F7F5F0] border border-[#E5E1DA] text-[#34312F]"
                           >
                             • {d}
                           </span>
@@ -89,11 +89,11 @@ export const Services: React.FC = () => {
                   </div>
 
                   {/* Bottom Deliverables & Arrow */}
-                  <div className="mt-7 pt-4 border-t border-[#E5E1DA] flex items-center justify-between text-xs sm:text-sm text-[#66635F]">
-                    <span className="font-medium text-[#111111]">
+                  <div className="mt-7 pt-4 border-t border-[#E5E1DA] flex items-center justify-between text-xs sm:text-sm text-[#6B6560]">
+                    <span className="font-medium text-[#34312F]">
                       {service.deliverables.length} Deliverables
                     </span>
-                    <span className="inline-flex items-center font-bold text-[#111111] group-hover:text-[#FF5A1F] transition-all duration-200">
+                    <span className="inline-flex items-center font-bold text-[#34312F] group-hover:text-[#FF5A1F] transition-all duration-200">
                       Explore Service
                       <ArrowUpRight className="ml-1 h-3.5 w-3.5 text-[#FF5A1F] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </span>

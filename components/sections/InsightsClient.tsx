@@ -47,8 +47,8 @@ export const InsightsClient: React.FC = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Insights Page Hero — Dark Black Canvas */}
-      <section className="relative bg-[#111111] text-white py-20 lg:py-28 border-b border-white/10 overflow-hidden">
+      {/* Insights Page Hero — Deep Warm Charcoal Canvas */}
+      <section className="relative bg-[#34312F] text-white py-20 lg:py-28 border-b border-white/10 overflow-hidden">
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
@@ -62,7 +62,7 @@ export const InsightsClient: React.FC = () => {
                   what&apos;s next
                 </span>.
               </h1>
-              <p className="mt-6 text-lg sm:text-xl text-[#A19E98] leading-relaxed font-sans font-normal max-w-2xl">
+              <p className="mt-6 text-lg sm:text-xl text-[#E5E1DA] leading-relaxed font-sans font-normal max-w-2xl">
                 Ideas, strategies and field-tested perspectives at the intersection of brand creativity, modern software engineering, and real-world commercial impact.
               </p>
 
@@ -87,7 +87,7 @@ export const InsightsClient: React.FC = () => {
         <Container size="default">
           <div className="flex items-center justify-between gap-4 overflow-x-auto no-scrollbar">
             <div className="flex items-center gap-2">
-              <Filter className="h-4 w-4 text-[#66635F] hidden sm:block" />
+              <Filter className="h-4 w-4 text-[#6B6560] hidden sm:block" />
               {categories.map((cat) => (
                 <button
                   key={cat}
@@ -96,8 +96,8 @@ export const InsightsClient: React.FC = () => {
                   aria-pressed={selectedCategory === cat}
                   className={`px-4 py-2 rounded-md text-xs sm:text-sm font-sans font-semibold transition-all cursor-pointer shrink-0 min-h-[40px] ${
                     selectedCategory === cat
-                      ? "bg-[#111111] text-white shadow-sm"
-                      : "bg-white text-[#111111] hover:border-[#111111]/30 border border-[#E5E1DA]"
+                      ? "bg-[#34312F] text-white shadow-sm"
+                      : "bg-white text-[#34312F] hover:border-[#34312F]/30 border border-[#E5E1DA]"
                   }`}
                 >
                   {cat}
@@ -105,7 +105,7 @@ export const InsightsClient: React.FC = () => {
               ))}
             </div>
 
-            <span className="text-xs font-sans font-semibold text-[#66635F] shrink-0 hidden md:block">
+            <span className="text-xs font-sans font-semibold text-[#6B6560] shrink-0 hidden md:block">
               Showing {filteredArticles.length} Essays
             </span>
           </div>
@@ -117,17 +117,17 @@ export const InsightsClient: React.FC = () => {
         <Container size="default">
           {filteredArticles.length === 0 ? (
             <div className="text-center py-16 bg-white rounded-xl border border-[#E5E1DA] p-8 max-w-lg mx-auto">
-              <BookOpen className="h-10 w-10 text-[#66635F] mx-auto mb-4" />
-              <h3 className="text-lg font-display font-bold text-[#111111] mb-2">
+              <BookOpen className="h-10 w-10 text-[#6B6560] mx-auto mb-4" />
+              <h3 className="text-lg font-display font-bold text-[#34312F] mb-2">
                 No essays found
               </h3>
-              <p className="text-sm text-[#66635F] mb-6 font-sans">
+              <p className="text-sm text-[#6B6560] mb-6 font-sans">
                 We couldn&apos;t find any articles under the &ldquo;{selectedCategory}&rdquo; category.
               </p>
               <button
                 type="button"
                 onClick={() => setSelectedCategory("All Perspectives")}
-                className="px-5 py-2.5 rounded-lg text-xs font-semibold text-white bg-[#111111] hover:bg-[#FF5A1F] min-h-[40px] transition-colors"
+                className="px-5 py-2.5 rounded-lg text-xs font-semibold text-white bg-[#34312F] hover:bg-[#FF5A1F] min-h-[40px] transition-colors"
               >
                 Reset Filter
               </button>
@@ -146,11 +146,11 @@ export const InsightsClient: React.FC = () => {
                       <span className="px-3 py-1 rounded-md bg-[#FFF0E8] text-[#FF5A1F] border border-[#E5E1DA] text-xs font-semibold uppercase tracking-wider">
                         {article.category}
                       </span>
-                      <span className="text-xs text-[#66635F] font-medium">
+                      <span className="text-xs text-[#6B6560] font-medium">
                         {article.publishDate}
                       </span>
                     </div>
-                    <div className="flex items-center gap-1.5 text-xs text-[#66635F] font-medium">
+                    <div className="flex items-center gap-1.5 text-xs text-[#6B6560] font-medium">
                       <Clock className="h-3.5 w-3.5 text-[#FF5A1F]" />
                       <span>{article.readTime}</span>
                     </div>
@@ -158,7 +158,7 @@ export const InsightsClient: React.FC = () => {
 
                   {/* Article Body */}
                   <div className="mt-8 space-y-6">
-                    <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#111111] tracking-tight leading-tight">
+                    <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#34312F] tracking-tight leading-tight">
                       <Link
                         href={`/insights/${article.slug}`}
                         className="hover:text-[#FF5A1F] transition-colors"
@@ -167,7 +167,7 @@ export const InsightsClient: React.FC = () => {
                       </Link>
                     </h2>
 
-                    <p className="text-lg text-[#66635F] font-sans font-normal leading-relaxed">
+                    <p className="text-lg text-[#6B6560] font-sans font-normal leading-relaxed">
                       {article.excerpt}
                     </p>
 
@@ -181,7 +181,7 @@ export const InsightsClient: React.FC = () => {
                         {article.keyTakeaways.map((takeaway) => (
                           <li
                             key={takeaway}
-                            className="flex items-start gap-2.5 text-sm text-[#111111] font-medium"
+                            className="flex items-start gap-2.5 text-sm text-[#34312F] font-medium"
                           >
                             <CheckCircle2 className="h-4 w-4 text-[#FF5A1F] shrink-0 mt-0.5" />
                             <span>{takeaway}</span>
@@ -192,12 +192,12 @@ export const InsightsClient: React.FC = () => {
 
                     {/* Excerpt preview & Read Full Article Button */}
                     <div className="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                      <span className="text-xs text-[#66635F] font-sans">
+                      <span className="text-xs text-[#6B6560] font-sans">
                         Full analysis available with structured takeaways
                       </span>
                       <Link
                         href={`/insights/${article.slug}`}
-                        className="group inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-sans font-semibold text-white bg-[#111111] hover:bg-[#FF5A1F] transition-colors duration-200"
+                        className="group inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-sans font-semibold text-white bg-[#34312F] hover:bg-[#FF5A1F] transition-colors duration-200"
                       >
                         <span>Read Full Essay</span>
                         <ArrowRight className="h-4 w-4 text-[#FF5A1F] group-hover:text-white transition-colors duration-200" />

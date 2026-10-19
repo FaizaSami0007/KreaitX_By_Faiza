@@ -54,7 +54,7 @@ CHARCOAL FOOTER (#0B0F19)
 
 - **Primary Body Sans**: `Manrope` (sans-serif, weights 400–800) — High legibility, editorial body copy, metadata, forms.
 - **Display Headings**: `Space Grotesk` (display, weights 600–700) — Confident, modern technical studio headlines.
-- **Editorial Emphasis Font**: `Instrument Serif` (serif, italic/normal, weight 400) — Distinctive editorial flair for key conceptual phrases (*"digital experiences"*, *"without the mystery"*, *"measurable impact"*).
+- **Editorial Emphasis Font**: `Manrope` / `Inter` (sans-serif, strict non-italic, weights 500–800) — Distinctive editorial flair for key conceptual phrases ("digital experiences", "without the mystery", "measurable impact").
 - **Code & Metadata**: `ui-monospace` (mono) — Service indices (`01`), milestone tags, status badges.
 
 ### Desktop Typographic Scale
@@ -62,7 +62,7 @@ CHARCOAL FOOTER (#0B0F19)
 - **H1 (Inner Pages)**: `52–60px` / Line-height: `1.06` / Tracking: `-0.04em`
 - **H2 (Sections)**: `40–52px` / Line-height: `1.06` / Tracking: `-0.04em`
 - **H3 (Cards / Steps)**: `20–28px` / Line-height: `1.2`
-- **Body Copy**: `16–18px` / Line-height: `1.65` / Text color: `#5A6578` (Muted) or `#111111`
+- **Body Copy**: `16–18px` / Line-height: `1.65` / Text color: `#6B6560` (Warm Gray) or `#34312F` (Deep Warm Charcoal)
 - **Small Body / Meta**: `13–14px`
 - **Eyebrow**: `11–13px` / Uppercase / Letter spacing: `0.12em`
 
@@ -84,9 +84,9 @@ CHARCOAL FOOTER (#0B0F19)
 ## 5. UI Components
 
 ### Buttons
-- **Primary**: Dark Blue background (`#14213D`), Dove White text (`#F5F6F2`), subtle `translateY(-2px)` on hover, arrow `translateX(4px)`.
-- **Secondary**: Dove White background (`#F5F6F2`), Dark Blue border (`#14213D/20`), Dark Blue text.
-- **Dark**: Midnight background (`#111111`), Dove White text.
+- **Primary**: Neon Orange background (`#FF5A1F`), White text, subtle `translateY(-2px)` on hover.
+- **Secondary**: Porcelain background (`#F7F5F0`), Soft Border (`#E5E1DA`), Deep Warm Charcoal text (`#34312F`).
+- **Dark**: Deep Warm Charcoal background (`#34312F`), Porcelain text (`#F7F5F0`).
 - **White**: Solid White background, Dark Blue text for dark hero and CTA sections.
 - **Radius**: `rounded-full` (44–52px height).
 

@@ -41,8 +41,8 @@ export const CapabilityList: React.FC<CapabilityListProps> = ({
                   className={cn(
                     "w-10 h-10 sm:w-11 sm:h-11 rounded-lg border flex items-center justify-center shrink-0 transition-all duration-200 shadow-subtle",
                     isDark
-                      ? "border-white/10 bg-[#1a1a1a] text-white group-hover:border-[#FF5A1F] group-hover:text-[#FF5A1F]"
-                      : "border-[#E5E1DA] bg-white text-[#111111] group-hover:border-[#111111] group-hover:text-[#FF5A1F]"
+                      ? "border-white/10 bg-[#252220] text-white group-hover:border-[#FF5A1F] group-hover:text-[#FF5A1F]"
+                      : "border-[#E5E1DA] bg-white text-[#34312F] group-hover:border-[#34312F] group-hover:text-[#FF5A1F]"
                   )}
                 >
                   <Icon className="h-4.5 w-4.5 sm:h-5 sm:w-5 stroke-[1.75]" />
@@ -54,7 +54,7 @@ export const CapabilityList: React.FC<CapabilityListProps> = ({
                     "text-sm sm:text-base font-display font-bold tracking-tight transition-colors",
                     isDark
                       ? "text-white group-hover:text-[#FF5A1F]"
-                      : "text-[#111111] group-hover:text-[#FF5A1F]"
+                      : "text-[#34312F] group-hover:text-[#FF5A1F]"
                   )}
                 >
                   {item.title}
@@ -62,7 +62,7 @@ export const CapabilityList: React.FC<CapabilityListProps> = ({
                 <p
                   className={cn(
                     "text-xs sm:text-[13px] font-sans font-normal leading-relaxed",
-                    isDark ? "text-[#66635F]" : "text-[#66635F]"
+                    isDark ? "text-[#E5E1DA]/80" : "text-[#6B6560]"
                   )}
                 >
                   {item.description}
@@ -75,8 +75,8 @@ export const CapabilityList: React.FC<CapabilityListProps> = ({
                 className={cn(
                   "ml-3 shrink-0 transition-all duration-200",
                   isDark
-                    ? "text-[#66635F] group-hover:text-[#FF5A1F] group-hover:translate-x-1"
-                    : "text-[#66635F] group-hover:text-[#FF5A1F] group-hover:translate-x-1"
+                    ? "text-[#E5E1DA]/70 group-hover:text-[#FF5A1F] group-hover:translate-x-1"
+                    : "text-[#6B6560] group-hover:text-[#FF5A1F] group-hover:translate-x-1"
                 )}
               >
                 <ArrowRight className="h-4 w-4" />

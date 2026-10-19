@@ -19,14 +19,14 @@ export const Badge: React.FC<BadgeProps> = ({
 }) => {
   const variantStyles = {
     default: "bg-[#FFF0E8] text-[#FF5A1F] border border-[#FF5A1F]/20",
-    gradient: "bg-[#111111] text-white border border-white/10",
-    outline: "bg-transparent text-[#66635F] border border-[#E5E1DA]",
+    gradient: "bg-[#34312F] text-white border border-white/10",
+    outline: "bg-transparent text-[#6B6560] border border-[#E5E1DA]",
     purple: "bg-[#FF5A1F] text-white border border-[#FF5A1F]",
     cyan: "bg-[#FFF0E8] text-[#FF5A1F] border border-[#FF5A1F]/30",
-    dark: "bg-[#111111] text-white border border-white/10",
-    muted: "bg-[#F7F5F0] text-[#66635F] border border-[#E5E1DA]",
-    navy: "bg-[#111111] text-white border border-white/10",
-    porcelain: "bg-[#F7F5F0] text-[#111111] border border-[#E5E1DA]"
+    dark: "bg-[#34312F] text-white border border-white/10",
+    muted: "bg-[#F7F5F0] text-[#6B6560] border border-[#E5E1DA]",
+    navy: "bg-[#34312F] text-white border border-white/10",
+    porcelain: "bg-[#F7F5F0] text-[#34312F] border border-[#E5E1DA]"
   };
 
   const sizeStyles = {

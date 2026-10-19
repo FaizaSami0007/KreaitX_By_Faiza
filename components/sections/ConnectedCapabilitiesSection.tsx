@@ -21,7 +21,7 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
     <section
       id="connected-capabilities"
       aria-labelledby="connected-capabilities-heading"
-      className="relative bg-[#111111] text-white py-20 sm:py-28 lg:py-32 border-b border-white/10"
+      className="relative bg-[#34312F] text-white py-20 sm:py-28 lg:py-32 border-b border-white/10"
     >
       <Container size="default" className="relative z-10 w-full max-w-[1320px]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
@@ -48,7 +48,7 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
             </Reveal>
 
             <Reveal delay={0.18} yOffset={14}>
-              <p className="text-base sm:text-lg text-[#A19E98] leading-[1.7] font-sans font-normal">
+              <p className="text-base sm:text-lg text-[#E5E1DA] leading-[1.7] font-sans font-normal">
                 Strategy, creativity, and technology working together to create stronger outcomes for your business — unifying brand narrative, cinematic production, and high-performance software under one roof.
               </p>
             </Reveal>
@@ -83,7 +83,7 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
               <Reveal key={service.id} delay={0.08 + idx * 0.04} yOffset={12}>
                 <a
                   href={service.href}
-                  className="group flex items-center justify-between p-5 sm:p-6 rounded-xl bg-[#181818] border border-white/10 hover:border-[#FF5A1F]/50 transition-all duration-150 block"
+                  className="group flex items-center justify-between p-5 sm:p-6 rounded-xl bg-[#2D2A28] border border-white/10 hover:border-[#FF5A1F]/50 transition-all duration-150 block"
                 >
                   <div className="flex items-start sm:items-center gap-4">
                     <span className="font-mono text-xs sm:text-sm font-bold text-[#FF5A1F] bg-white/5 border border-white/10 px-2.5 py-1 rounded-md shrink-0">
@@ -93,7 +93,7 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
                       <h3 className="font-display text-base sm:text-lg font-bold text-white group-hover:text-[#FF5A1F] transition-colors">
                         {service.name}
                       </h3>
-                      <p className="text-xs sm:text-sm text-[#A19E98] font-sans mt-0.5">
+                      <p className="text-xs sm:text-sm text-[#E5E1DA] font-sans mt-0.5">
                         {service.desc}
                       </p>
                     </div>

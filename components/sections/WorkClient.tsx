@@ -21,8 +21,8 @@ export const WorkClient: React.FC = () => {
 
   return (
     <>
-      {/* Work Page Hero — Dark Black Canvas */}
-      <section className="relative bg-[#111111] text-white py-20 lg:py-28 border-b border-white/10 overflow-hidden">
+      {/* Work Page Hero — Deep Warm Charcoal Canvas */}
+      <section className="relative bg-[#34312F] text-white py-20 lg:py-28 border-b border-white/10 overflow-hidden">
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
@@ -36,7 +36,7 @@ export const WorkClient: React.FC = () => {
                   Real business context
                 </span>.
               </h1>
-              <p className="mt-6 text-lg sm:text-xl text-[#A19E98] leading-relaxed font-sans font-normal max-w-2xl">
+              <p className="mt-6 text-lg sm:text-xl text-[#E5E1DA] leading-relaxed font-sans font-normal max-w-2xl">
                 Every project we undertake is grounded in a real commercial problem. Explore how we align brand strategy, cinematic media, and high-performance engineering to deliver measurable impact.
               </p>
 
@@ -61,7 +61,7 @@ export const WorkClient: React.FC = () => {
         <Container size="default">
           <div className="flex items-center justify-between gap-4 overflow-x-auto no-scrollbar">
             <div className="flex items-center gap-2">
-              <Filter className="h-4 w-4 text-[#66635F] hidden sm:block" />
+              <Filter className="h-4 w-4 text-[#6B6560] hidden sm:block" />
               {categories.map((cat) => (
                 <button
                   key={cat}
@@ -69,8 +69,8 @@ export const WorkClient: React.FC = () => {
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-4 py-2 rounded-md text-xs sm:text-sm font-sans font-semibold transition-all cursor-pointer shrink-0 min-h-[40px] ${
                     selectedCategory === cat
-                      ? "bg-[#111111] text-white shadow-sm"
-                      : "bg-white text-[#111111] hover:bg-white hover:text-[#FF5A1F] border border-[#E5E1DA]"
+                      ? "bg-[#34312F] text-white shadow-sm"
+                      : "bg-white text-[#34312F] hover:bg-white hover:text-[#FF5A1F] border border-[#E5E1DA]"
                   }`}
                 >
                   {cat}
@@ -78,7 +78,7 @@ export const WorkClient: React.FC = () => {
               ))}
             </div>
 
-            <span className="text-xs font-sans font-semibold text-[#66635F] shrink-0 hidden md:block">
+            <span className="text-xs font-sans font-semibold text-[#6B6560] shrink-0 hidden md:block">
               Showing {filteredProjects.length} Case Studies
             </span>
           </div>
@@ -96,7 +96,7 @@ export const WorkClient: React.FC = () => {
                 className="scroll-mt-32 rounded-xl bg-white border border-[#E5E1DA] shadow-sm transition-all duration-200 overflow-hidden"
               >
                 {/* Case Study Header Banner */}
-                <div className="bg-[#111111] text-white p-6 sm:p-10 lg:p-12 border-b border-white/10 relative overflow-hidden">
+                <div className="bg-[#34312F] text-white p-6 sm:p-10 lg:p-12 border-b border-white/10 relative overflow-hidden">
                   <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
                     <div>
                       <div className="flex items-center gap-3 mb-3">
@@ -143,17 +143,17 @@ export const WorkClient: React.FC = () => {
                           <span className="w-1.5 h-1.5 rounded-full bg-[#FF5A1F]" />
                           Project Summary
                         </h3>
-                        <p className="text-lg text-[#111111] font-sans font-normal leading-relaxed">
+                        <p className="text-lg text-[#34312F] font-sans font-normal leading-relaxed">
                           {project.summary}
                         </p>
                       </div>
 
                       <div className="space-y-6 pt-6 border-t border-[#E5E1DA]">
                         <div className="p-5 rounded-lg bg-[#F7F5F0] border border-[#E5E1DA]">
-                          <h4 className="text-xs font-sans uppercase tracking-wider text-[#111111] font-bold mb-2">
+                          <h4 className="text-xs font-sans uppercase tracking-wider text-[#34312F] font-bold mb-2">
                             The Challenge
                           </h4>
-                          <p className="text-sm sm:text-base text-[#66635F] leading-relaxed font-sans">
+                          <p className="text-sm sm:text-base text-[#6B6560] leading-relaxed font-sans">
                             {project.challenge}
                           </p>
                         </div>
@@ -162,16 +162,16 @@ export const WorkClient: React.FC = () => {
                           <h4 className="text-xs font-sans uppercase tracking-wider text-[#FF5A1F] font-bold mb-2">
                             The Strategy
                           </h4>
-                          <p className="text-sm sm:text-base text-[#111111] leading-relaxed font-sans">
+                          <p className="text-sm sm:text-base text-[#34312F] leading-relaxed font-sans">
                             {project.strategy}
                           </p>
                         </div>
 
                         <div className="p-5 rounded-lg bg-[#F7F5F0] border border-[#E5E1DA]">
-                          <h4 className="text-xs font-sans uppercase tracking-wider text-[#111111] font-bold mb-2">
+                          <h4 className="text-xs font-sans uppercase tracking-wider text-[#34312F] font-bold mb-2">
                             The Execution
                           </h4>
-                          <p className="text-sm sm:text-base text-[#66635F] leading-relaxed font-sans">
+                          <p className="text-sm sm:text-base text-[#6B6560] leading-relaxed font-sans">
                             {project.execution}
                           </p>
                         </div>
@@ -181,7 +181,7 @@ export const WorkClient: React.FC = () => {
                     {/* Right: Deliverables, Results & Impact Box */}
                     <div className="lg:col-span-5 space-y-6">
                       {/* Measured Impact Card */}
-                      <div className="rounded-xl bg-[#111111] text-white p-7 sm:p-8 border border-white/10 shadow-sm">
+                      <div className="rounded-xl bg-[#34312F] text-white p-7 sm:p-8 border border-white/10 shadow-sm">
                         <span className="text-xs font-sans uppercase tracking-wider text-[#FF5A1F] font-bold block mb-2">
                           Measured Business Impact
                         </span>
@@ -192,14 +192,14 @@ export const WorkClient: React.FC = () => {
 
                       {/* Deliverables List */}
                       <div className="rounded-xl bg-white p-7 sm:p-8 border border-[#E5E1DA] shadow-xs">
-                        <span className="text-xs font-sans uppercase tracking-wider text-[#111111] font-bold block mb-4">
+                        <span className="text-xs font-sans uppercase tracking-wider text-[#34312F] font-bold block mb-4">
                           Delivered Assets &amp; Systems
                         </span>
                         <ul className="space-y-3">
                           {project.deliverables.map((del) => (
                             <li
                               key={del}
-                              className="flex items-center gap-2.5 text-sm font-medium text-[#111111]"
+                              className="flex items-center gap-2.5 text-sm font-medium text-[#34312F]"
                             >
                               <CheckCircle2 className="h-4 w-4 text-[#FF5A1F] shrink-0" />
                               <span>{del}</span>
@@ -210,7 +210,7 @@ export const WorkClient: React.FC = () => {
 
                       {/* Services badges */}
                       <div className="p-5 rounded-lg bg-[#F7F5F0] border border-[#E5E1DA]">
-                        <span className="text-xs font-sans uppercase tracking-wider text-[#66635F] font-bold block mb-2.5">
+                        <span className="text-xs font-sans uppercase tracking-wider text-[#6B6560] font-bold block mb-2.5">
                           Capabilities Involved
                         </span>
                         <div className="flex flex-wrap gap-1.5">
@@ -230,14 +230,14 @@ export const WorkClient: React.FC = () => {
                               <Link
                                 key={s}
                                 href={`/solutions/${slug}`}
-                                className="text-xs font-medium text-[#111111] bg-white hover:bg-[#111111] hover:text-[#FF5A1F] border border-[#E5E1DA] px-3 py-1 rounded-md shadow-2xs transition-colors duration-150"
+                                className="text-xs font-medium text-[#34312F] bg-white hover:bg-[#34312F] hover:text-[#FF5A1F] border border-[#E5E1DA] px-3 py-1 rounded-md shadow-2xs transition-colors duration-150"
                               >
                                 {s}
                               </Link>
                             ) : (
                               <span
                                 key={s}
-                                className="text-xs font-medium text-[#66635F] bg-white border border-[#E5E1DA] px-3 py-1 rounded-md shadow-2xs"
+                                className="text-xs font-medium text-[#6B6560] bg-white border border-[#E5E1DA] px-3 py-1 rounded-md shadow-2xs"
                               >
                                 {s}
                               </span>
@@ -250,7 +250,7 @@ export const WorkClient: React.FC = () => {
                       <div className="pt-2">
                         <Link
                           href={`/work/${project.slug}`}
-                          className="w-full group inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg text-sm font-sans font-semibold text-white bg-[#111111] hover:bg-[#FF5A1F] shadow-sm transition-colors duration-200"
+                          className="w-full group inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg text-sm font-sans font-semibold text-white bg-[#34312F] hover:bg-[#FF5A1F] shadow-sm transition-colors duration-200"
                         >
                           <span>Explore Dedicated Case Study</span>
                           <ArrowRight className="h-4 w-4 text-[#FF5A1F] group-hover:text-white transition-colors duration-200" />

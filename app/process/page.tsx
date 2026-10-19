@@ -44,8 +44,8 @@ export default function ProcessPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Process Page Hero — Dark Black Canvas */}
-      <section className="relative bg-[#111111] text-white py-20 lg:py-28 border-b border-white/10 overflow-hidden">
+      {/* Process Page Hero — Deep Warm Charcoal Canvas */}
+      <section className="relative bg-[#34312F] text-white py-20 lg:py-28 border-b border-white/10 overflow-hidden">
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
@@ -59,7 +59,7 @@ export default function ProcessPage() {
                   Zero ambiguity
                 </span>.
               </h1>
-              <p className="mt-6 text-lg sm:text-xl text-[#A19E98] leading-relaxed font-sans font-normal max-w-2xl">
+              <p className="mt-6 text-lg sm:text-xl text-[#E5E1DA] leading-relaxed font-sans font-normal max-w-2xl">
                 We believe exceptional work happens when clients understand exactly what comes next. Our six-stage process bridges strategic rigor, creative exploration, and production reliability.
               </p>
 
@@ -95,12 +95,12 @@ export default function ProcessPage() {
                       <span className="font-display text-sm font-bold text-[#FF5A1F] bg-[#FFF0E8] border border-[#E5E1DA] px-3 py-1 rounded-md">
                         Stage {stage.number}
                       </span>
-                      <span className="text-xs font-sans uppercase text-[#66635F] tracking-wider font-semibold">
+                      <span className="text-xs font-sans uppercase text-[#6B6560] tracking-wider font-semibold">
                         Phase 0{idx + 1} of 06
                       </span>
                     </div>
 
-                    <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#111111] tracking-tight">
+                    <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#34312F] tracking-tight">
                       {stage.title}
                     </h2>
 
@@ -108,19 +108,19 @@ export default function ProcessPage() {
                       {stage.tagline}
                     </p>
 
-                    <p className="text-base text-[#66635F] leading-relaxed font-sans font-normal pt-2">
+                    <p className="text-base text-[#6B6560] leading-relaxed font-sans font-normal pt-2">
                       {stage.description}
                     </p>
 
                     <div className="pt-4">
-                      <span className="text-xs font-sans uppercase tracking-wider text-[#66635F] font-bold block mb-2.5">
+                      <span className="text-xs font-sans uppercase tracking-wider text-[#6B6560] font-bold block mb-2.5">
                         Key Phase Milestones
                       </span>
                       <div className="flex flex-wrap gap-2">
                         {stage.milestones.map((ms) => (
                           <span
                             key={ms}
-                            className="px-3.5 py-1.5 rounded-md bg-[#F7F5F0] border border-[#E5E1DA] text-xs font-medium text-[#111111] hover:border-[#FF5A1F] transition-colors"
+                            className="px-3.5 py-1.5 rounded-md bg-[#F7F5F0] border border-[#E5E1DA] text-xs font-medium text-[#34312F] hover:border-[#FF5A1F] transition-colors"
                           >
                             {ms}
                           </span>
@@ -134,14 +134,14 @@ export default function ProcessPage() {
                     {/* What client provides */}
                     <div className="rounded-lg bg-white p-6 border border-[#E5E1DA] shadow-2xs flex flex-col justify-between">
                       <div>
-                        <span className="text-xs font-sans uppercase tracking-wider text-[#66635F] font-bold block mb-2">
+                        <span className="text-xs font-sans uppercase tracking-wider text-[#6B6560] font-bold block mb-2">
                           01 • What You Provide
                         </span>
-                        <p className="text-sm text-[#66635F] leading-relaxed font-sans">
+                        <p className="text-sm text-[#6B6560] leading-relaxed font-sans">
                           {stage.clientInput}
                         </p>
                       </div>
-                      <div className="mt-4 pt-4 border-t border-[#E5E1DA] text-xs text-[#66635F] font-medium">
+                      <div className="mt-4 pt-4 border-t border-[#E5E1DA] text-xs text-[#6B6560] font-medium">
                         Input &amp; Review Touchpoint
                       </div>
                     </div>
@@ -152,7 +152,7 @@ export default function ProcessPage() {
                         <span className="text-xs font-sans uppercase tracking-wider text-[#FF5A1F] font-bold block mb-2">
                           02 • What KreaitX Delivers
                         </span>
-                        <p className="text-sm text-[#111111] leading-relaxed font-medium">
+                        <p className="text-sm text-[#34312F] leading-relaxed font-medium">
                           {stage.kreaitxOutput}
                         </p>
                       </div>
@@ -170,7 +170,7 @@ export default function ProcessPage() {
       </section>
 
       {/* Uncertainty Reduction Section — Dark Theme Contrast */}
-      <section className="bg-[#111111] py-20 sm:py-28 border-b border-white/10 text-white">
+      <section className="bg-[#34312F] py-20 sm:py-28 border-b border-white/10 text-white">
         <Container size="default">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mb-16">
@@ -192,42 +192,42 @@ export default function ProcessPage() {
 
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <StaggerItem>
-              <div className="rounded-xl bg-[#181818] p-8 border border-white/10 hover:border-[#FF5A1F]/50 transition-colors h-full">
+              <div className="rounded-xl bg-[#2D2A28] p-8 border border-white/10 hover:border-[#FF5A1F]/50 transition-colors h-full">
                 <span className="h-10 w-10 rounded-lg bg-white/5 text-[#FF5A1F] flex items-center justify-center mb-6 font-display text-sm font-bold border border-white/10">
                   01
                 </span>
                 <h3 className="text-2xl font-display font-bold text-white tracking-tight mb-2.5">
                   No Middleman Lag
                 </h3>
-                <p className="text-base text-[#A19E98] leading-relaxed font-sans font-normal">
+                <p className="text-base text-[#E5E1DA] leading-relaxed font-sans font-normal">
                   You communicate directly with the designers, directors, and developers doing the work, eliminating telephone-game misunderstandings.
                 </p>
               </div>
             </StaggerItem>
 
             <StaggerItem>
-              <div className="rounded-xl bg-[#181818] p-8 border border-white/10 hover:border-[#FF5A1F]/50 transition-colors h-full">
+              <div className="rounded-xl bg-[#2D2A28] p-8 border border-white/10 hover:border-[#FF5A1F]/50 transition-colors h-full">
                 <span className="h-10 w-10 rounded-lg bg-white/5 text-[#FF5A1F] flex items-center justify-center mb-6 font-display text-sm font-bold border border-white/10">
                   02
                 </span>
                 <h3 className="text-2xl font-display font-bold text-white tracking-tight mb-2.5">
                   Weekly Async &amp; Sync Loops
                 </h3>
-                <p className="text-base text-[#A19E98] leading-relaxed font-sans font-normal">
+                <p className="text-base text-[#E5E1DA] leading-relaxed font-sans font-normal">
                   Clear weekly loom summaries and milestone reviews give your internal stakeholders full visibility without excessive meeting fatigue.
                 </p>
               </div>
             </StaggerItem>
 
             <StaggerItem>
-              <div className="rounded-xl bg-[#181818] p-8 border border-white/10 hover:border-[#FF5A1F]/50 transition-colors h-full">
+              <div className="rounded-xl bg-[#2D2A28] p-8 border border-white/10 hover:border-[#FF5A1F]/50 transition-colors h-full">
                 <span className="h-10 w-10 rounded-lg bg-white/5 text-[#FF5A1F] flex items-center justify-center mb-6 font-display text-sm font-bold border border-white/10">
                   03
                 </span>
                 <h3 className="text-2xl font-display font-bold text-white tracking-tight mb-2.5">
                   Fixed Milestones, Clear Scopes
                 </h3>
-                <p className="text-base text-[#A19E98] leading-relaxed font-sans font-normal">
+                <p className="text-base text-[#E5E1DA] leading-relaxed font-sans font-normal">
                   Every deliverable is clearly scoped before kick-off. No surprise invoices, hidden tech debt, or unexpected scope creep.
                 </p>
               </div>

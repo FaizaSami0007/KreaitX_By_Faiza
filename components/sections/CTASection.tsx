@@ -19,7 +19,7 @@ export const CTASection: React.FC<CTASectionProps> = ({
 }) => {
   const isDark = bg === "dark";
   const bgClass = isDark
-    ? "bg-[#111111] border-t border-white/10"
+    ? "bg-[#34312F] border-t border-white/10"
     : bg === "white"
     ? "bg-white border-t border-[#E5E1DA]"
     : "bg-[#F7F5F0] border-t border-[#E5E1DA]";
@@ -28,7 +28,7 @@ export const CTASection: React.FC<CTASectionProps> = ({
     <section className={`${bgClass} py-20 sm:py-28 lg:py-32 relative ${className || ""}`}>
       <Container size="default" className="relative z-10 max-w-[1320px]">
         <Reveal yOffset={20}>
-          <div className="relative overflow-hidden rounded-2xl bg-[#111111] text-white p-8 sm:p-14 lg:p-20 border border-white/10 shadow-xl">
+          <div className="relative overflow-hidden rounded-2xl bg-[#34312F] text-white p-8 sm:p-14 lg:p-20 border border-white/10 shadow-xl">
             <div className="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center">
               <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#FF5A1F] px-3.5 py-1.5 rounded-md bg-white/5 border border-white/10 mb-6">
                 <span className="w-2 h-2 rounded-full bg-[#FF5A1F]" />
@@ -43,7 +43,7 @@ export const CTASection: React.FC<CTASectionProps> = ({
                 ?
               </h2>
 
-              <p className="mt-6 text-base sm:text-lg text-[#A19E98] leading-relaxed font-sans font-normal max-w-2xl">
+              <p className="mt-6 text-base sm:text-lg text-[#E5E1DA] leading-relaxed font-sans font-normal max-w-2xl">
                 Tell us what you&apos;re working on. We&apos;ll evaluate the opportunity, technical scope, and practical delivery timeline together.
               </p>
 
@@ -81,7 +81,7 @@ export const CTASection: React.FC<CTASectionProps> = ({
                 </Button>
               </div>
 
-              <p className="mt-8 text-xs font-mono text-[#A19E98]">
+              <p className="mt-8 text-xs font-mono text-[#E5E1DA]">
                 Direct consultation with senior leads • Studio location: {siteConfig.location.formatted}
               </p>
             </div>

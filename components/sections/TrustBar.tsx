@@ -20,7 +20,7 @@ export const TrustBar: React.FC = () => {
               <p className="text-xs font-sans font-bold uppercase tracking-wider text-[#FF5A1F] mb-1">
                 Ecosystem Breadth
               </p>
-              <h2 className="text-xl sm:text-2xl font-display font-bold text-[#111111] tracking-tight">
+              <h2 className="text-xl sm:text-2xl font-display font-bold text-[#34312F] tracking-tight">
                 Built for ambitious businesses across diverse industries.
               </h2>
             </div>
@@ -29,7 +29,7 @@ export const TrustBar: React.FC = () => {
               {sectors.map((sector) => (
                 <span
                   key={sector}
-                  className="inline-flex items-center px-3.5 py-1.5 rounded-md bg-white text-xs sm:text-sm font-sans font-medium text-[#111111] border border-[#E5E1DA] shadow-xs hover:border-[#FF5A1F] hover:text-[#FF5A1F] transition-colors"
+                  className="inline-flex items-center px-3.5 py-1.5 rounded-md bg-white text-xs sm:text-sm font-sans font-medium text-[#34312F] border border-[#E5E1DA] shadow-xs hover:border-[#FF5A1F] hover:text-[#FF5A1F] transition-colors"
                 >
                   <span className="h-1.5 w-1.5 rounded-full bg-[#FF5A1F] mr-2" />
                   {sector}

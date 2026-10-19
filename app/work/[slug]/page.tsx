@@ -159,24 +159,24 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
       />
 
       {/* Breadcrumb Navigation Bar */}
-      <div className="bg-[#F7F5F0] border-b border-[#E5E1DA] py-3.5 text-xs font-sans text-[#66635F]">
+      <div className="bg-[#F7F5F0] border-b border-[#E5E1DA] py-3.5 text-xs font-sans text-[#6B6560]">
         <Container size="default">
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 flex-wrap">
             <Link href="/" className="hover:text-[#FF5A1F] transition-colors">
               Home
             </Link>
-            <ChevronRight className="h-3.5 w-3.5 text-[#66635F]/60" />
+            <ChevronRight className="h-3.5 w-3.5 text-[#6B6560]/60" />
             <Link href="/work" className="hover:text-[#FF5A1F] transition-colors">
               Work
             </Link>
-            <ChevronRight className="h-3.5 w-3.5 text-[#66635F]/60" />
-            <span className="text-[#111111] font-semibold">{project.title}</span>
+            <ChevronRight className="h-3.5 w-3.5 text-[#6B6560]/60" />
+            <span className="text-[#34312F] font-semibold">{project.title}</span>
           </nav>
         </Container>
       </div>
 
       {/* Case Study Header Hero */}
-      <section className="relative overflow-hidden bg-[#111111] text-white py-16 sm:py-24 border-b border-white/10">
+      <section className="relative overflow-hidden bg-[#34312F] text-white py-16 sm:py-24 border-b border-white/10">
         <Container size="default" className="relative z-10">
           <div className="max-w-4xl mx-auto space-y-8">
             <Reveal yOffset={12}>
@@ -201,7 +201,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
             </Reveal>
 
             <Reveal delay={0.14} yOffset={14}>
-              <p className="text-xl sm:text-2xl text-[#A19E98] leading-relaxed font-sans font-normal">
+              <p className="text-xl sm:text-2xl text-[#E5E1DA] leading-relaxed font-sans font-normal">
                 {project.summary}
               </p>
             </Reveal>
@@ -243,7 +243,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
       </section>
 
       {/* Measured Business Impact Showcase */}
-      <section className="bg-[#111111] text-white py-14 sm:py-16 border-b border-white/10 relative overflow-hidden">
+      <section className="bg-[#34312F] text-white py-14 sm:py-16 border-b border-white/10 relative overflow-hidden">
         <Container size="default" className="relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="rounded-xl bg-white/5 border border-white/10 p-8 sm:p-12 flex flex-col md:flex-row md:items-center justify-between gap-8">
@@ -255,7 +255,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
                 <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight">
                   Measured Business Impact
                 </h2>
-                <p className="text-xl sm:text-2xl font-sans font-normal text-[#A19E98] leading-relaxed">
+                <p className="text-xl sm:text-2xl font-sans font-normal text-[#E5E1DA] leading-relaxed">
                   {project.impact}
                 </p>
               </div>
@@ -284,7 +284,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
               <span className="text-xs font-sans uppercase tracking-widest font-bold text-[#FF5A1F] block mb-2">
                 Problem &amp; Strategic Hypothesis
               </span>
-              <h2 className="text-3xl sm:text-4xl font-display font-bold text-[#111111] tracking-tight">
+              <h2 className="text-3xl sm:text-4xl font-display font-bold text-[#34312F] tracking-tight">
                 Challenge vs. Strategic Direction
               </h2>
             </div>
@@ -294,19 +294,19 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
               <div className="rounded-xl bg-white border border-[#E5E1DA] shadow-xs p-8 sm:p-10 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#111111]" />
-                    <span className="text-xs font-sans uppercase tracking-widest font-bold text-[#66635F]">
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#34312F]" />
+                    <span className="text-xs font-sans uppercase tracking-widest font-bold text-[#6B6560]">
                       The Initial Bottleneck
                     </span>
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-display font-bold text-[#111111] mb-4">
+                  <h3 className="text-xl sm:text-2xl font-display font-bold text-[#34312F] mb-4">
                     The Challenge
                   </h3>
-                  <p className="text-base text-[#66635F] font-sans leading-relaxed">
+                  <p className="text-base text-[#6B6560] font-sans leading-relaxed">
                     {project.challenge}
                   </p>
                 </div>
-                <div className="mt-8 pt-4 border-t border-[#E5E1DA] text-xs text-[#66635F]/70 font-sans">
+                <div className="mt-8 pt-4 border-t border-[#E5E1DA] text-xs text-[#6B6560]/70 font-sans">
                   Identified during initial discovery sprint
                 </div>
               </div>
@@ -320,10 +320,10 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
                       KreaitX Architectural Blueprint
                     </span>
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-display font-bold text-[#111111] mb-4">
+                  <h3 className="text-xl sm:text-2xl font-display font-bold text-[#34312F] mb-4">
                     The Strategy
                   </h3>
-                  <p className="text-base text-[#66635F] font-sans leading-relaxed">
+                  <p className="text-base text-[#6B6560] font-sans leading-relaxed">
                     {project.strategy}
                   </p>
                 </div>
@@ -344,13 +344,13 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
               <span className="text-xs font-sans uppercase tracking-widest font-bold text-[#FF5A1F] block">
                 Technical &amp; Creative Execution
               </span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-[#111111] tracking-tight leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-[#34312F] tracking-tight leading-tight">
                 How We Brought the Solution to Life
               </h2>
             </div>
 
             <div className="rounded-xl bg-[#F7F5F0] border border-[#E5E1DA] p-8 sm:p-12">
-              <p className="text-lg sm:text-xl text-[#111111] font-sans leading-relaxed">
+              <p className="text-lg sm:text-xl text-[#34312F] font-sans leading-relaxed">
                 {project.execution}
               </p>
 
@@ -358,10 +358,10 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
                 <div className="flex items-start gap-3">
                   <ShieldCheck className="h-5 w-5 text-[#FF5A1F] shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold text-[#111111] block">
+                    <span className="font-semibold text-[#34312F] block">
                       Production Fidelity
                     </span>
-                    <span className="text-[#66635F] text-xs leading-relaxed">
+                    <span className="text-[#6B6560] text-xs leading-relaxed">
                       Zero compromise between the design mockups and live production systems.
                     </span>
                   </div>
@@ -370,10 +370,10 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
                 <div className="flex items-start gap-3">
                   <Cpu className="h-5 w-5 text-[#FF5A1F] shrink-0 mt-0.5" />
                   <div>
-                    <span className="font-semibold text-[#111111] block">
+                    <span className="font-semibold text-[#34312F] block">
                       Enterprise Reliability
                     </span>
-                    <span className="text-[#66635F] text-xs leading-relaxed">
+                    <span className="text-[#6B6560] text-xs leading-relaxed">
                       Engineered for high-traffic stability, accessibility, and fast load speeds.
                     </span>
                   </div>
@@ -392,10 +392,10 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
               <span className="text-xs font-sans uppercase tracking-widest font-bold text-[#FF5A1F] block mb-3">
                 Final Deliverables
               </span>
-              <h2 className="text-3xl sm:text-4xl font-display font-bold text-[#111111] tracking-tight">
+              <h2 className="text-3xl sm:text-4xl font-display font-bold text-[#34312F] tracking-tight">
                 Delivered Assets &amp; Systems
               </h2>
-              <p className="mt-3 text-[#66635F] font-sans">
+              <p className="mt-3 text-[#6B6560] font-sans">
                 The tangible, production-ready deliverables transitioned to {project.client}&apos;s internal team:
               </p>
             </div>
@@ -407,14 +407,14 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
                   className="rounded-lg bg-white border border-[#E5E1DA] p-5 shadow-2xs flex items-center gap-3.5"
                 >
                   <CheckCircle2 className="h-5 w-5 text-[#FF5A1F] shrink-0" />
-                  <span className="text-sm font-semibold text-[#111111]">{del}</span>
+                  <span className="text-sm font-semibold text-[#34312F]">{del}</span>
                 </div>
               ))}
             </div>
 
             {/* Linked Capabilities Tags */}
             <div className="pt-6 border-t border-[#E5E1DA]">
-              <span className="text-xs font-sans uppercase tracking-wider text-[#66635F] font-bold block mb-3">
+              <span className="text-xs font-sans uppercase tracking-wider text-[#6B6560] font-bold block mb-3">
                 KreaitX Capabilities Engaged on This Project
               </span>
               <div className="flex flex-wrap gap-2">
@@ -424,7 +424,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
                     <Link
                       key={s}
                       href={`/solutions/${slug}`}
-                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-md text-xs font-sans font-semibold text-[#111111] bg-white hover:bg-[#111111] hover:text-[#FF5A1F] border border-[#E5E1DA] shadow-2xs transition-colors duration-150"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-md text-xs font-sans font-semibold text-[#34312F] bg-white hover:bg-[#34312F] hover:text-[#FF5A1F] border border-[#E5E1DA] shadow-2xs transition-colors duration-150"
                     >
                       <span>{s}</span>
                       <ArrowRight className="h-3 w-3" />
@@ -445,14 +445,14 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
               href={`/work/${prevProject.slug}`}
               className="group flex items-center gap-3 text-left w-full sm:w-auto p-4 rounded-xl hover:bg-[#F7F5F0] border border-transparent hover:border-[#E5E1DA] transition-all duration-150"
             >
-              <div className="w-10 h-10 rounded-lg bg-[#F7F5F0] text-[#111111] group-hover:bg-[#111111] group-hover:text-[#FF5A1F] flex items-center justify-center shrink-0 transition-colors">
+              <div className="w-10 h-10 rounded-lg bg-[#F7F5F0] text-[#34312F] group-hover:bg-[#34312F] group-hover:text-[#FF5A1F] flex items-center justify-center shrink-0 transition-colors">
                 <ArrowLeft className="h-4 w-4" />
               </div>
               <div>
-                <span className="text-xs uppercase tracking-wider font-semibold text-[#66635F] block">
+                <span className="text-xs uppercase tracking-wider font-semibold text-[#6B6560] block">
                   Previous Project
                 </span>
-                <span className="text-sm font-display font-bold text-[#111111] group-hover:text-[#FF5A1F] transition-colors">
+                <span className="text-sm font-display font-bold text-[#34312F] group-hover:text-[#FF5A1F] transition-colors">
                   {prevProject.title}
                 </span>
               </div>
@@ -460,7 +460,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
 
             <Link
               href="/work"
-              className="px-5 py-2.5 rounded-lg text-xs font-sans font-semibold text-[#66635F] hover:text-[#111111] bg-[#F7F5F0] hover:bg-white transition-all border border-[#E5E1DA]"
+              className="px-5 py-2.5 rounded-lg text-xs font-sans font-semibold text-[#6B6560] hover:text-[#34312F] bg-[#F7F5F0] hover:bg-white transition-all border border-[#E5E1DA]"
             >
               All Case Studies
             </Link>
@@ -470,14 +470,14 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
               className="group flex items-center gap-3 text-right w-full sm:w-auto justify-end p-4 rounded-xl hover:bg-[#F7F5F0] border border-transparent hover:border-[#E5E1DA] transition-all duration-150"
             >
               <div>
-                <span className="text-xs uppercase tracking-wider font-semibold text-[#66635F] block">
+                <span className="text-xs uppercase tracking-wider font-semibold text-[#6B6560] block">
                   Next Project
                 </span>
-                <span className="text-sm font-display font-bold text-[#111111] group-hover:text-[#FF5A1F] transition-colors">
+                <span className="text-sm font-display font-bold text-[#34312F] group-hover:text-[#FF5A1F] transition-colors">
                   {nextProject.title}
                 </span>
               </div>
-              <div className="w-10 h-10 rounded-lg bg-[#F7F5F0] text-[#111111] group-hover:bg-[#111111] group-hover:text-[#FF5A1F] flex items-center justify-center shrink-0 transition-colors">
+              <div className="w-10 h-10 rounded-lg bg-[#F7F5F0] text-[#34312F] group-hover:bg-[#34312F] group-hover:text-[#FF5A1F] flex items-center justify-center shrink-0 transition-colors">
                 <ArrowRight className="h-4 w-4" />
               </div>
             </Link>

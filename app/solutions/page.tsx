@@ -93,8 +93,8 @@ export default function SolutionsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       
-      {/* Services Page Hero — Dark Black Canvas */}
-      <section className="relative bg-[#111111] text-white py-20 lg:py-28 border-b border-white/10 overflow-hidden">
+      {/* Services Page Hero — Deep Warm Charcoal Canvas */}
+      <section className="relative bg-[#34312F] text-white py-20 lg:py-28 border-b border-white/10 overflow-hidden">
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
@@ -108,7 +108,7 @@ export default function SolutionsPage() {
                   connected
                 </span>.
               </h1>
-              <p className="mt-6 text-lg sm:text-xl text-[#A19E98] leading-relaxed font-sans font-normal max-w-2xl">
+              <p className="mt-6 text-lg sm:text-xl text-[#E5E1DA] leading-relaxed font-sans font-normal max-w-2xl">
                 We organize our capabilities around your business challenges rather than isolated deliverables. Discover how each discipline integrates seamlessly into your broader growth engine.
               </p>
 
