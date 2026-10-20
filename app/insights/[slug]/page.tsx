@@ -150,11 +150,11 @@ export default async function InsightArticlePage({ params }: PageProps) {
       <div className="bg-[#F7F5F0] border-b border-[#E5E1DA] py-3.5 text-xs font-sans text-[#6B6560]">
         <Container size="default">
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 flex-wrap">
-            <Link href="/" className="hover:text-[#CA6702] transition-colors">
+            <Link href="/" className="hover:text-[#EC5D17] transition-colors">
               Home
             </Link>
             <ChevronRight className="h-3.5 w-3.5 text-[#6B6560]/60" />
-            <Link href="/insights" className="hover:text-[#CA6702] transition-colors">
+            <Link href="/insights" className="hover:text-[#EC5D17] transition-colors">
               Insights
             </Link>
             <ChevronRight className="h-3.5 w-3.5 text-[#6B6560]/60" />
@@ -171,15 +171,15 @@ export default async function InsightArticlePage({ params }: PageProps) {
           <div className="max-w-3xl mx-auto space-y-6">
             <Reveal yOffset={12}>
               <div className="flex flex-wrap items-center gap-3">
-                <span className="px-3.5 py-1.5 rounded-md bg-[#FFF0E0] text-[#CA6702] border border-[#E5E1DA] text-xs font-semibold uppercase tracking-wider">
+                <span className="px-3.5 py-1.5 rounded-md bg-[#FFF0E8] text-[#EC5D17] border border-[#E5E1DA] text-xs font-semibold uppercase tracking-wider">
                   {article.category}
                 </span>
                 <span className="text-xs font-sans text-[#6B6560] font-medium flex items-center gap-1.5">
-                  <Calendar className="h-3.5 w-3.5 text-[#CA6702]" />
+                  <Calendar className="h-3.5 w-3.5 text-[#EC5D17]" />
                   {article.publishDate}
                 </span>
                 <span className="text-xs font-sans text-[#6B6560] font-medium flex items-center gap-1.5">
-                  <Clock className="h-3.5 w-3.5 text-[#CA6702]" />
+                  <Clock className="h-3.5 w-3.5 text-[#EC5D17]" />
                   {article.readTime}
                 </span>
               </div>
@@ -201,7 +201,7 @@ export default async function InsightArticlePage({ params }: PageProps) {
             <Reveal delay={0.2} yOffset={12}>
               <div className="pt-6 border-t border-[#E5E1DA] flex items-center justify-between text-xs text-[#6B6560]">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-lg bg-white border border-[#E5E1DA] text-[#CA6702] flex items-center justify-center font-display font-bold text-xs">
+                  <div className="w-8 h-8 rounded-lg bg-white border border-[#E5E1DA] text-[#EC5D17] flex items-center justify-center font-display font-bold text-xs">
                     KX
                   </div>
                   <div>
@@ -224,8 +224,8 @@ export default async function InsightArticlePage({ params }: PageProps) {
           <div className="max-w-3xl mx-auto space-y-10">
             {/* Key Takeaways Callout Box */}
             <div className="rounded-xl bg-[#F7F5F0] border border-[#E5E1DA] p-7 sm:p-9 shadow-2xs">
-              <span className="text-xs font-sans uppercase tracking-wider text-[#CA6702] font-bold block mb-4 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#CA6702]" />
+              <span className="text-xs font-sans uppercase tracking-wider text-[#EC5D17] font-bold block mb-4 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#EC5D17]" />
                 Executive Summary &amp; Core Takeaways
               </span>
               <ul className="space-y-3.5">
@@ -234,7 +234,7 @@ export default async function InsightArticlePage({ params }: PageProps) {
                     key={takeaway}
                     className="flex items-start gap-3 text-sm sm:text-base text-[#34312F] font-medium"
                   >
-                    <CheckCircle2 className="h-5 w-5 text-[#CA6702] shrink-0 mt-0.5" />
+                    <CheckCircle2 className="h-5 w-5 text-[#EC5D17] shrink-0 mt-0.5" />
                     <span className="leading-relaxed">{takeaway}</span>
                   </li>
                 ))}
@@ -282,16 +282,16 @@ export default async function InsightArticlePage({ params }: PageProps) {
           <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
             <Link
               href={`/insights/${prevArticle.slug}`}
-              className="group flex items-center gap-3 text-left w-full sm:w-auto p-4 rounded-xl bg-white hover:border-[#CA6702] border border-[#E5E1DA] transition-colors shadow-2xs"
+              className="group flex items-center gap-3 text-left w-full sm:w-auto p-4 rounded-xl bg-white hover:border-[#EC5D17] border border-[#E5E1DA] transition-colors shadow-2xs"
             >
-              <div className="w-9 h-9 rounded-lg bg-[#F7F5F0] text-[#34312F] group-hover:bg-[#34312F] group-hover:text-[#CA6702] flex items-center justify-center shrink-0 transition-colors">
+              <div className="w-9 h-9 rounded-lg bg-[#F7F5F0] text-[#34312F] group-hover:bg-[#34312F] group-hover:text-[#EC5D17] flex items-center justify-center shrink-0 transition-colors">
                 <ArrowLeft className="h-4 w-4" />
               </div>
               <div>
                 <span className="text-xs uppercase tracking-wider font-semibold text-[#6B6560] block">
                   Previous Essay
                 </span>
-                <span className="text-xs sm:text-sm font-display font-bold text-[#34312F] group-hover:text-[#CA6702] transition-colors truncate max-w-[200px] block">
+                <span className="text-xs sm:text-sm font-display font-bold text-[#34312F] group-hover:text-[#EC5D17] transition-colors truncate max-w-[200px] block">
                   {prevArticle.title}
                 </span>
               </div>
@@ -306,17 +306,17 @@ export default async function InsightArticlePage({ params }: PageProps) {
 
             <Link
               href={`/insights/${nextArticle.slug}`}
-              className="group flex items-center gap-3 text-right w-full sm:w-auto justify-end p-4 rounded-xl bg-white hover:border-[#CA6702] border border-[#E5E1DA] transition-colors shadow-2xs"
+              className="group flex items-center gap-3 text-right w-full sm:w-auto justify-end p-4 rounded-xl bg-white hover:border-[#EC5D17] border border-[#E5E1DA] transition-colors shadow-2xs"
             >
               <div>
                 <span className="text-xs uppercase tracking-wider font-semibold text-[#6B6560] block">
                   Next Essay
                 </span>
-                <span className="text-xs sm:text-sm font-display font-bold text-[#34312F] group-hover:text-[#CA6702] transition-colors truncate max-w-[200px] block">
+                <span className="text-xs sm:text-sm font-display font-bold text-[#34312F] group-hover:text-[#EC5D17] transition-colors truncate max-w-[200px] block">
                   {nextArticle.title}
                 </span>
               </div>
-              <div className="w-9 h-9 rounded-lg bg-[#F7F5F0] text-[#34312F] group-hover:bg-[#34312F] group-hover:text-[#CA6702] flex items-center justify-center shrink-0 transition-colors">
+              <div className="w-9 h-9 rounded-lg bg-[#F7F5F0] text-[#34312F] group-hover:bg-[#34312F] group-hover:text-[#EC5D17] flex items-center justify-center shrink-0 transition-colors">
                 <ArrowRight className="h-4 w-4" />
               </div>
             </Link>

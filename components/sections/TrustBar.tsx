@@ -17,7 +17,7 @@ export const TrustBar: React.FC = () => {
         <Reveal yOffset={12}>
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div className="max-w-md">
-              <p className="text-xs font-sans font-bold uppercase tracking-wider text-[#CA6702] mb-1">
+              <p className="text-xs font-sans font-bold uppercase tracking-wider text-[#EC5D17] mb-1">
                 Ecosystem Breadth
               </p>
               <h2 className="text-xl sm:text-2xl font-display font-bold text-[#34312F] tracking-tight">
@@ -29,9 +29,9 @@ export const TrustBar: React.FC = () => {
               {sectors.map((sector) => (
                 <span
                   key={sector}
-                  className="inline-flex items-center px-3.5 py-1.5 rounded-md bg-white text-xs sm:text-sm font-sans font-medium text-[#34312F] border border-[#E5E1DA] shadow-xs hover:border-[#CA6702] hover:text-[#CA6702] transition-colors"
+                  className="inline-flex items-center px-3.5 py-1.5 rounded-md bg-white text-xs sm:text-sm font-sans font-medium text-[#34312F] border border-[#E5E1DA] shadow-xs hover:border-[#EC5D17] hover:text-[#EC5D17] transition-colors"
                 >
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#CA6702] mr-2" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#EC5D17] mr-2" />
                   {sector}
                 </span>
               ))}

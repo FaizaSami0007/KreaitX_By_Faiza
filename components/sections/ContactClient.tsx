@@ -180,13 +180,13 @@ export const ContactClient: React.FC = () => {
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#CA6702] px-3.5 py-1.5 rounded-md bg-[#FFF0E0] border border-[#E5E1DA] mb-6">
-                <span className="w-2 h-2 rounded-full bg-[#CA6702]" />
+              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#EC5D17] px-3.5 py-1.5 rounded-md bg-[#FFF0E8] border border-[#E5E1DA] mb-6">
+                <span className="w-2 h-2 rounded-full bg-[#EC5D17]" />
                 <span>Direct Collaboration × Global Partnerships</span>
               </span>
               <h1 className="font-display text-[clamp(2rem,4.5vw,3.75rem)] font-bold text-[#34312F] tracking-tight leading-[1.08]">
                 Let&apos;s Create{" "}
-                <span className="font-display font-bold text-[#CA6702]">
+                <span className="font-display font-bold text-[#EC5D17]">
                   Together
                 </span>.
               </h1>
@@ -197,13 +197,13 @@ export const ContactClient: React.FC = () => {
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
                 <a
                   href="#inquiry-form"
-                  className="inline-flex items-center justify-center px-8 py-3.5 min-h-[50px] rounded-lg text-sm font-bold text-white bg-[#CA6702] hover:bg-[#B25902] transition-colors w-full sm:w-auto"
+                  className="inline-flex items-center justify-center px-8 py-3.5 min-h-[50px] rounded-lg text-sm font-bold text-white bg-[#EC5D17] hover:bg-[#D44D0D] transition-colors w-full sm:w-auto"
                 >
                   Fill Project Brief ↓
                 </a>
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="inline-flex items-center justify-center px-6 py-3.5 min-h-[50px] rounded-lg text-sm font-semibold text-[#34312F] bg-white hover:bg-[#F7F5F0] hover:text-[#CA6702] border border-[#E5E1DA] transition-colors w-full sm:w-auto shadow-2xs"
+                  className="inline-flex items-center justify-center px-6 py-3.5 min-h-[50px] rounded-lg text-sm font-semibold text-[#34312F] bg-white hover:bg-[#F7F5F0] hover:text-[#EC5D17] border border-[#E5E1DA] transition-colors w-full sm:w-auto shadow-2xs"
                 >
                   Direct Email Inquiry
                 </a>
@@ -222,8 +222,8 @@ export const ContactClient: React.FC = () => {
               <div className="rounded-xl bg-white border border-[#E5E1DA] shadow-sm p-6 sm:p-10 lg:p-12">
                 {status === "success" ? (
                   <div className="text-center py-12 space-y-6">
-                    <div className="h-16 w-16 bg-[#FFF0E0] text-[#CA6702] rounded-full flex items-center justify-center mx-auto border border-[#E5E1DA]">
-                      <CheckCircle2 className="h-8 w-8 text-[#CA6702]" />
+                    <div className="h-16 w-16 bg-[#FFF0E8] text-[#EC5D17] rounded-full flex items-center justify-center mx-auto border border-[#E5E1DA]">
+                      <CheckCircle2 className="h-8 w-8 text-[#EC5D17]" />
                     </div>
 
                     <div className="space-y-2 max-w-md mx-auto">
@@ -281,9 +281,9 @@ export const ContactClient: React.FC = () => {
 
                     {/* Inbound Query Context Pill */}
                     {inboundContext && (
-                      <div className="p-3.5 rounded-lg bg-[#FFF0E0] border border-[#E5E1DA] flex items-center justify-between gap-3 text-xs text-[#CA6702]">
+                      <div className="p-3.5 rounded-lg bg-[#FFF0E8] border border-[#E5E1DA] flex items-center justify-between gap-3 text-xs text-[#EC5D17]">
                         <div className="flex items-center gap-2 font-semibold">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#CA6702]" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#EC5D17]" />
                           <span>{inboundContext}</span>
                         </div>
                         <span className="text-[11px] text-[#6B6560] hidden sm:inline">
@@ -308,7 +308,7 @@ export const ContactClient: React.FC = () => {
                               aria-pressed={isSelected}
                               className={`px-3.5 py-2 min-h-[40px] rounded-lg text-xs font-semibold transition-colors cursor-pointer border flex items-center ${
                                 isSelected
-                                  ? "bg-[#34312F] text-[#CA6702] border-[#34312F] shadow-xs"
+                                  ? "bg-[#34312F] text-[#EC5D17] border-[#34312F] shadow-xs"
                                   : "bg-[#F7F5F0] text-[#34312F] border-[#E5E1DA] hover:border-[#34312F]/30 hover:bg-white"
                               }`}
                             >
@@ -353,7 +353,7 @@ export const ContactClient: React.FC = () => {
                             setFormData({ ...formData, fullName: e.target.value })
                           }
                           placeholder="e.g. Sarah Jenkins"
-                          className="w-full min-h-[46px] rounded-lg border border-[#E5E1DA] bg-[#F7F5F0] px-4 py-2.5 text-sm text-[#34312F] placeholder:text-[#6B6560]/60 focus:bg-white focus:border-[#CA6702] focus:ring-1 focus:ring-[#CA6702] focus:outline-none transition-colors"
+                          className="w-full min-h-[46px] rounded-lg border border-[#E5E1DA] bg-[#F7F5F0] px-4 py-2.5 text-sm text-[#34312F] placeholder:text-[#6B6560]/60 focus:bg-white focus:border-[#EC5D17] focus:ring-1 focus:ring-[#EC5D17] focus:outline-none transition-colors"
                         />
                       </div>
 
@@ -375,7 +375,7 @@ export const ContactClient: React.FC = () => {
                             setFormData({ ...formData, email: e.target.value })
                           }
                           placeholder="sarah@company.com"
-                          className="w-full min-h-[46px] rounded-lg border border-[#E5E1DA] bg-[#F7F5F0] px-4 py-2.5 text-sm text-[#34312F] placeholder:text-[#6B6560]/60 focus:bg-white focus:border-[#CA6702] focus:ring-1 focus:ring-[#CA6702] focus:outline-none transition-colors"
+                          className="w-full min-h-[46px] rounded-lg border border-[#E5E1DA] bg-[#F7F5F0] px-4 py-2.5 text-sm text-[#34312F] placeholder:text-[#6B6560]/60 focus:bg-white focus:border-[#EC5D17] focus:ring-1 focus:ring-[#EC5D17] focus:outline-none transition-colors"
                         />
                       </div>
 
@@ -394,7 +394,7 @@ export const ContactClient: React.FC = () => {
                             setFormData({ ...formData, companyName: e.target.value })
                           }
                           placeholder="e.g. Acme Health Corp"
-                          className="w-full min-h-[46px] rounded-lg border border-[#E5E1DA] bg-[#F7F5F0] px-4 py-2.5 text-sm text-[#34312F] placeholder:text-[#6B6560]/60 focus:bg-white focus:border-[#CA6702] focus:ring-1 focus:ring-[#CA6702] focus:outline-none transition-colors"
+                          className="w-full min-h-[46px] rounded-lg border border-[#E5E1DA] bg-[#F7F5F0] px-4 py-2.5 text-sm text-[#34312F] placeholder:text-[#6B6560]/60 focus:bg-white focus:border-[#EC5D17] focus:ring-1 focus:ring-[#EC5D17] focus:outline-none transition-colors"
                         />
                       </div>
                     </div>
@@ -414,7 +414,7 @@ export const ContactClient: React.FC = () => {
                           onChange={(e) =>
                             setFormData({ ...formData, budgetRange: e.target.value })
                           }
-                          className="w-full min-h-[46px] rounded-lg border border-[#E5E1DA] bg-[#F7F5F0] px-4 py-2.5 text-sm text-[#34312F] focus:bg-white focus:border-[#CA6702] focus:ring-1 focus:ring-[#CA6702] focus:outline-none transition-colors"
+                          className="w-full min-h-[46px] rounded-lg border border-[#E5E1DA] bg-[#F7F5F0] px-4 py-2.5 text-sm text-[#34312F] focus:bg-white focus:border-[#EC5D17] focus:ring-1 focus:ring-[#EC5D17] focus:outline-none transition-colors"
                         >
                           <option value="">Select an estimated range...</option>
                           {budgetOptions.map((opt) => (
@@ -438,7 +438,7 @@ export const ContactClient: React.FC = () => {
                           onChange={(e) =>
                             setFormData({ ...formData, projectTimeline: e.target.value })
                           }
-                          className="w-full min-h-[46px] rounded-lg border border-[#E5E1DA] bg-[#F7F5F0] px-4 py-2.5 text-sm text-[#34312F] focus:bg-white focus:border-[#CA6702] focus:ring-1 focus:ring-[#CA6702] focus:outline-none transition-colors"
+                          className="w-full min-h-[46px] rounded-lg border border-[#E5E1DA] bg-[#F7F5F0] px-4 py-2.5 text-sm text-[#34312F] focus:bg-white focus:border-[#EC5D17] focus:ring-1 focus:ring-[#EC5D17] focus:outline-none transition-colors"
                         >
                           <option value="">Select expected timeline...</option>
                           {timelineOptions.map((opt) => (
@@ -469,7 +469,7 @@ export const ContactClient: React.FC = () => {
                           setFormData({ ...formData, projectDetails: e.target.value })
                         }
                         placeholder="Tell us about the challenge you are trying to solve, target audience, and desired business outcomes..."
-                        className="w-full rounded-lg border border-[#E5E1DA] bg-[#F7F5F0] p-4 text-sm text-[#34312F] placeholder:text-[#6B6560]/60 focus:bg-white focus:border-[#CA6702] focus:ring-1 focus:ring-[#CA6702] focus:outline-none transition-colors resize-y"
+                        className="w-full rounded-lg border border-[#E5E1DA] bg-[#F7F5F0] p-4 text-sm text-[#34312F] placeholder:text-[#6B6560]/60 focus:bg-white focus:border-[#EC5D17] focus:ring-1 focus:ring-[#EC5D17] focus:outline-none transition-colors resize-y"
                       />
                     </div>
 
@@ -495,7 +495,7 @@ export const ContactClient: React.FC = () => {
 
                       <div className="flex flex-col gap-1 sm:text-right text-center">
                         <span className="text-xs text-[#34312F] font-semibold flex items-center justify-center sm:justify-end gap-1.5">
-                          <ShieldCheck className="h-4 w-4 text-[#CA6702]" />
+                          <ShieldCheck className="h-4 w-4 text-[#EC5D17]" />
                           Direct senior practitioner review
                         </span>
                         <span className="text-[11px] text-[#6B6560]">
@@ -512,14 +512,14 @@ export const ContactClient: React.FC = () => {
             <div className="lg:col-span-4 space-y-8">
               {/* Studio Info Card */}
               <div className="rounded-xl bg-white border border-[#E5E1DA] shadow-xs p-8 space-y-6">
-                <span className="text-xs font-sans font-bold uppercase tracking-wider text-[#CA6702] block flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#CA6702]" />
+                <span className="text-xs font-sans font-bold uppercase tracking-wider text-[#EC5D17] block flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#EC5D17]" />
                   Studio Headquarters
                 </span>
 
                 <div className="space-y-5">
                   <div className="flex items-start gap-3">
-                    <MapPin className="h-5 w-5 text-[#CA6702] shrink-0 mt-0.5" />
+                    <MapPin className="h-5 w-5 text-[#EC5D17] shrink-0 mt-0.5" />
                     <div className="text-sm">
                       <p className="font-semibold text-[#34312F]">{siteConfig.name}</p>
                       <p className="text-[#6B6560]">{siteConfig.location.formatted}</p>
@@ -527,12 +527,12 @@ export const ContactClient: React.FC = () => {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <Mail className="h-5 w-5 text-[#CA6702] shrink-0 mt-0.5" />
+                    <Mail className="h-5 w-5 text-[#EC5D17] shrink-0 mt-0.5" />
                     <div className="text-sm">
                       <p className="font-semibold text-[#34312F]">Direct Inquiries</p>
                       <a
                         href={`mailto:${siteConfig.contact.email}`}
-                        className="text-[#34312F] underline underline-offset-2 hover:text-[#CA6702] font-medium"
+                        className="text-[#34312F] underline underline-offset-2 hover:text-[#EC5D17] font-medium"
                       >
                         {siteConfig.contact.email}
                       </a>
@@ -540,7 +540,7 @@ export const ContactClient: React.FC = () => {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <Clock className="h-5 w-5 text-[#CA6702] shrink-0 mt-0.5" />
+                    <Clock className="h-5 w-5 text-[#EC5D17] shrink-0 mt-0.5" />
                     <div className="text-sm">
                       <p className="font-semibold text-[#34312F]">Working Hours &amp; Response</p>
                       <p className="text-[#6B6560]">Mon – Fri: 9:00 AM – 6:00 PM PKT</p>
@@ -553,7 +553,7 @@ export const ContactClient: React.FC = () => {
               {/* Consultation Note */}
               <div className="rounded-xl bg-[#34312F] text-white p-8 relative overflow-hidden shadow-sm border border-white/10">
                 <div className="relative z-10 space-y-3">
-                  <span className="text-xs font-mono uppercase tracking-widest text-[#CA6702] font-bold">
+                  <span className="text-xs font-mono uppercase tracking-widest text-[#EC5D17] font-bold">
                     Direct Partner Access
                   </span>
                   <h3 className="text-xl font-display font-bold text-white tracking-tight">

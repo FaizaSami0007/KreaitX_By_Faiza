@@ -41,8 +41,8 @@ export const CapabilityList: React.FC<CapabilityListProps> = ({
                   className={cn(
                     "w-10 h-10 sm:w-11 sm:h-11 rounded-lg border flex items-center justify-center shrink-0 transition-all duration-200 shadow-subtle",
                     isDark
-                      ? "border-white/10 bg-[#252220] text-white group-hover:border-[#CA6702] group-hover:text-[#CA6702]"
-                      : "border-[#E5E1DA] bg-white text-[#34312F] group-hover:border-[#34312F] group-hover:text-[#CA6702]"
+                      ? "border-white/10 bg-[#252220] text-white group-hover:border-[#EC5D17] group-hover:text-[#EC5D17]"
+                      : "border-[#E5E1DA] bg-white text-[#34312F] group-hover:border-[#34312F] group-hover:text-[#EC5D17]"
                   )}
                 >
                   <Icon className="h-4.5 w-4.5 sm:h-5 sm:w-5 stroke-[1.75]" />
@@ -53,8 +53,8 @@ export const CapabilityList: React.FC<CapabilityListProps> = ({
                   className={cn(
                     "text-sm sm:text-base font-display font-bold tracking-tight transition-colors",
                     isDark
-                      ? "text-white group-hover:text-[#CA6702]"
-                      : "text-[#34312F] group-hover:text-[#CA6702]"
+                      ? "text-white group-hover:text-[#EC5D17]"
+                      : "text-[#34312F] group-hover:text-[#EC5D17]"
                   )}
                 >
                   {item.title}
@@ -75,8 +75,8 @@ export const CapabilityList: React.FC<CapabilityListProps> = ({
                 className={cn(
                   "ml-3 shrink-0 transition-all duration-200",
                   isDark
-                    ? "text-[#E5E1DA]/70 group-hover:text-[#CA6702] group-hover:translate-x-1"
-                    : "text-[#6B6560] group-hover:text-[#CA6702] group-hover:translate-x-1"
+                    ? "text-[#E5E1DA]/70 group-hover:text-[#EC5D17] group-hover:translate-x-1"
+                    : "text-[#6B6560] group-hover:text-[#EC5D17] group-hover:translate-x-1"
                 )}
               >
                 <ArrowRight className="h-4 w-4" />

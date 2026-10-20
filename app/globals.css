@@ -5,29 +5,29 @@
 :root {
   --bg-canvas: #F7F5F0;
   --bg-surface: #FFFFFF;
-  --bg-surface-alt: #FFF0E0;
+  --bg-surface-alt: #FFF0E8;
   --bg-dark: #34312F;
   
   --text-heading: #34312F;
   --text-body: #34312F;
   --text-muted: #6B6560;
   
-  --brand-orange: #CA6702;
-  --brand-amber: #CA6702;
-  --brand-terracotta: #CA6702;
-  --brand-orange-hover: #B25902;
-  --brand-amber-hover: #B25902;
+  --brand-orange: #EC5D17;
+  --brand-amber: #EC5D17;
+  --brand-terracotta: #EC5D17;
+  --brand-orange-hover: #D44D0D;
+  --brand-amber-hover: #D44D0D;
   --brand-porcelain: #F7F5F0;
   --brand-charcoal: #34312F;
   --brand-black: #34312F;
   --brand-white: #FFFFFF;
   --brand-muted: #6B6560;
   --brand-border: #E5E1DA;
-  --brand-tint: #FFF0E0;
-  --brand-focus: #CA6702;
+  --brand-tint: #FFF0E8;
+  --brand-focus: #EC5D17;
   
   --border-subtle: #E5E1DA;
-  --border-focus: #CA6702;
+  --border-focus: #EC5D17;
   
   --radius-sm: 6px;
   --radius-md: 10px;
@@ -39,7 +39,7 @@
   --shadow-subtle: 0 1px 3px rgba(52, 49, 47, 0.05), 0 1px 2px rgba(52, 49, 47, 0.03);
   --shadow-card: 0 4px 16px -4px rgba(52, 49, 47, 0.06), 0 1px 3px -1px rgba(52, 49, 47, 0.03);
   --shadow-card-hover: 0 12px 28px -6px rgba(52, 49, 47, 0.1), 0 0 0 1px #E5E1DA;
-  --shadow-brand-button: 0 2px 8px rgba(202, 103, 2, 0.25);
+  --shadow-brand-button: 0 2px 8px rgba(236, 93, 23, 0.25);
   
   --safe-top: env(safe-area-inset-top, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
@@ -84,13 +84,13 @@
   }
 
   ::selection {
-    background-color: #CA6702;
+    background-color: #EC5D17;
     color: #FFFFFF;
   }
 
   /* Accessible focus indicators */
   :focus-visible {
-    outline: 2px solid #CA6702;
+    outline: 2px solid #EC5D17;
     outline-offset: 3px;
     border-radius: 4px;
   }
@@ -104,7 +104,7 @@
 @layer utilities {
   /* Clean Solid Accent utilities */
   .text-accent {
-    color: #CA6702;
+    color: #EC5D17;
   }
 
   /* Master Minimal Portfolio Card Components */
@@ -148,7 +148,7 @@
   }
 
   .brand-card-dark:hover {
-    border-color: #CA6702;
+    border-color: #EC5D17;
     transform: translateY(-2px);
   }
 

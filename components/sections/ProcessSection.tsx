@@ -22,7 +22,7 @@ export const ProcessSection: React.FC = () => {
               title={
                 <>
                   From idea to impact,{" "}
-                  <span className="font-display font-bold text-[#CA6702]">
+                  <span className="font-display font-bold text-[#EC5D17]">
                     without the mystery
                   </span>
                   .
@@ -34,10 +34,10 @@ export const ProcessSection: React.FC = () => {
             <div className="shrink-0">
               <Link
                 href="/process"
-                className="group inline-flex items-center text-sm font-semibold text-[#34312F] hover:text-[#CA6702] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#CA6702]"
+                className="group inline-flex items-center text-sm font-semibold text-[#34312F] hover:text-[#EC5D17] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#EC5D17]"
               >
                 <span>Read Full Process Guide</span>
-                <ArrowRight className="ml-1.5 h-4 w-4 text-[#CA6702] transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="ml-1.5 h-4 w-4 text-[#EC5D17] transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
           </div>
@@ -50,7 +50,7 @@ export const ProcessSection: React.FC = () => {
               key={stage.number}
               type="button"
               onClick={() => setActiveStep(idx)}
-              className={`text-left p-3.5 sm:p-5 rounded-xl border transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#CA6702] ${
+              className={`text-left p-3.5 sm:p-5 rounded-xl border transition-all duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#EC5D17] ${
                 activeStep === idx
                   ? "bg-[#34312F] text-white border-[#34312F] shadow-sm -translate-y-0.5"
                   : "bg-white text-[#34312F] border-[#E5E1DA] hover:border-[#34312F]/30 hover:bg-[#F7F5F0]"
@@ -58,7 +58,7 @@ export const ProcessSection: React.FC = () => {
             >
               <div
                 className={`text-[11px] sm:text-xs font-mono font-bold mb-1 uppercase tracking-wider ${
-                  activeStep === idx ? "text-[#CA6702]" : "text-[#6B6560]"
+                  activeStep === idx ? "text-[#EC5D17]" : "text-[#6B6560]"
                 }`}
               >
                 Stage {stage.number}
@@ -75,13 +75,13 @@ export const ProcessSection: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             {/* Left Narrative */}
             <div className="lg:col-span-5 space-y-4">
-              <span className="inline-block px-3 py-1 rounded-md bg-[#FFF0E0] text-[#CA6702] text-xs font-mono font-semibold uppercase tracking-wider border border-[#E5E1DA]">
+              <span className="inline-block px-3 py-1 rounded-md bg-[#FFF0E8] text-[#EC5D17] text-xs font-mono font-semibold uppercase tracking-wider border border-[#E5E1DA]">
                 Stage {processStages[activeStep].number} of 06 // {processStages[activeStep].title}
               </span>
               <h3 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-[#34312F] tracking-tight">
                 {processStages[activeStep].title}
               </h3>
-              <p className="text-base font-semibold text-[#CA6702]">
+              <p className="text-base font-semibold text-[#EC5D17]">
                 {processStages[activeStep].tagline}
               </p>
               <p className="text-base text-[#6B6560] leading-relaxed font-sans font-normal">
@@ -100,7 +100,7 @@ export const ProcessSection: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => setActiveStep((prev) => (prev < processStages.length - 1 ? prev + 1 : 0))}
-                  className="px-4 py-2 rounded-lg text-xs font-mono font-semibold bg-[#34312F] text-white hover:bg-[#CA6702] transition-colors shadow-sm"
+                  className="px-4 py-2 rounded-lg text-xs font-mono font-semibold bg-[#34312F] text-white hover:bg-[#EC5D17] transition-colors shadow-sm"
                 >
                   Next Stage →
                 </button>
@@ -137,7 +137,7 @@ export const ProcessSection: React.FC = () => {
                       key={ms}
                       className="px-3 py-1 rounded-md bg-white text-xs font-medium text-[#34312F] border border-[#E5E1DA] flex items-center gap-1.5"
                     >
-                      <CheckCircle2 className="h-3.5 w-3.5 text-[#CA6702]" />
+                      <CheckCircle2 className="h-3.5 w-3.5 text-[#EC5D17]" />
                       {ms}
                     </span>
                   ))}

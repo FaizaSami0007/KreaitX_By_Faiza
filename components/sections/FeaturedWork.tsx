@@ -19,7 +19,7 @@ export const FeaturedWork: React.FC = () => {
               title={
                 <>
                   Crafted with precision.{" "}
-                  <span className="font-display font-bold text-[#CA6702]">
+                  <span className="font-display font-bold text-[#EC5D17]">
                     Engineered for outcomes
                   </span>
                   .
@@ -43,7 +43,7 @@ export const FeaturedWork: React.FC = () => {
 
             return (
               <Reveal key={project.id} yOffset={24}>
-                <article className="group rounded-xl bg-white border border-[#E5E1DA] shadow-xs hover:border-[#CA6702] transition-all duration-200 overflow-hidden">
+                <article className="group rounded-xl bg-white border border-[#E5E1DA] shadow-xs hover:border-[#EC5D17] transition-all duration-200 overflow-hidden">
                   <div className="grid grid-cols-1 lg:grid-cols-12">
                     {/* Project Narrative */}
                     <div
@@ -54,7 +54,7 @@ export const FeaturedWork: React.FC = () => {
                       <div>
                         {/* Meta Tags */}
                         <div className="flex flex-wrap items-center gap-2 mb-4 sm:mb-5">
-                          <span className="px-2.5 py-0.5 rounded-md bg-[#FFF0E0] text-[#CA6702] border border-[#CA6702]/20 text-xs font-mono font-semibold uppercase tracking-wider">
+                          <span className="px-2.5 py-0.5 rounded-md bg-[#FFF0E8] text-[#EC5D17] border border-[#EC5D17]/20 text-xs font-mono font-semibold uppercase tracking-wider">
                             {project.industry}
                           </span>
                           <span className="text-xs font-mono text-[#6B6560] font-medium px-2.5 py-0.5 rounded-md bg-[#F7F5F0] border border-[#E5E1DA]">
@@ -66,7 +66,7 @@ export const FeaturedWork: React.FC = () => {
                         </div>
 
                         {/* Title & Summary */}
-                        <h3 className="text-2xl sm:text-3xl lg:text-[34px] font-display font-bold text-[#34312F] tracking-tight group-hover:text-[#CA6702] transition-colors">
+                        <h3 className="text-2xl sm:text-3xl lg:text-[34px] font-display font-bold text-[#34312F] tracking-tight group-hover:text-[#EC5D17] transition-colors">
                           <Link href={`/work/${project.slug}`}>
                             {project.title}
                           </Link>
@@ -86,8 +86,8 @@ export const FeaturedWork: React.FC = () => {
                               {project.challenge}
                             </span>
                           </div>
-                          <div className="p-3.5 rounded-lg bg-[#FFF0E0] border border-[#CA6702]/20">
-                            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#CA6702] block mb-1">
+                          <div className="p-3.5 rounded-lg bg-[#FFF0E8] border border-[#EC5D17]/20">
+                            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#EC5D17] block mb-1">
                               Strategic Outcome
                             </span>
                             <span className="text-xs text-[#34312F] font-semibold leading-relaxed block">
@@ -112,28 +112,28 @@ export const FeaturedWork: React.FC = () => {
 
                         <Link
                           href={`/work/${project.slug}`}
-                          className="inline-flex items-center text-sm font-bold text-[#34312F] hover:text-[#CA6702] transition-colors group/link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#CA6702]"
+                          className="inline-flex items-center text-sm font-bold text-[#34312F] hover:text-[#EC5D17] transition-colors group/link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#EC5D17]"
                         >
                           <span>Explore Case Study</span>
-                          <ArrowRight className="ml-1.5 h-4 w-4 text-[#CA6702] transition-transform group/link:translate-x-1" />
+                          <ArrowRight className="ml-1.5 h-4 w-4 text-[#EC5D17] transition-transform group/link:translate-x-1" />
                         </Link>
                       </div>
                     </div>
 
                     {/* Case Study Blueprint Side */}
                     <div
-                      className={`lg:col-span-5 bg-[#FFF0E0] p-6 sm:p-8 lg:p-10 flex flex-col justify-center relative overflow-hidden text-[#34312F] border-t lg:border-t-0 ${
+                      className={`lg:col-span-5 bg-[#FFF0E8] p-6 sm:p-8 lg:p-10 flex flex-col justify-center relative overflow-hidden text-[#34312F] border-t lg:border-t-0 ${
                         isReversed ? "lg:order-1 lg:border-r border-[#E5E1DA]" : "lg:order-2 lg:border-l border-[#E5E1DA]"
                       }`}
                     >
                       <div className="relative z-10 space-y-5">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white text-[#34312F] text-xs font-mono border border-[#E5E1DA]">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#CA6702]" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#EC5D17]" />
                           <span>Case Study Blueprint // 0{index + 1}</span>
                         </div>
 
                         <div className="space-y-3">
-                          <p className="text-xs font-mono uppercase tracking-wider text-[#CA6702] font-bold">
+                          <p className="text-xs font-mono uppercase tracking-wider text-[#EC5D17] font-bold">
                             Key Deliverables &amp; Craft
                           </p>
                           <ul className="space-y-2.5">
@@ -142,16 +142,16 @@ export const FeaturedWork: React.FC = () => {
                                 key={item}
                                 className="flex items-center gap-2.5 text-sm font-medium text-[#34312F]"
                               >
-                                <CheckCircle2 className="h-4 w-4 text-[#CA6702] shrink-0" />
+                                <CheckCircle2 className="h-4 w-4 text-[#EC5D17] shrink-0" />
                                 <span>{item}</span>
                               </li>
                             ))}
                           </ul>
                         </div>
 
-                        <div className="pt-4 border-t border-[#CA6702]/20 flex items-center justify-between text-xs text-[#6B6560]">
+                        <div className="pt-4 border-t border-[#EC5D17]/20 flex items-center justify-between text-xs text-[#6B6560]">
                           <span>Client: <strong className="text-[#34312F]">{project.client}</strong></span>
-                          <span className="font-bold text-[#CA6702]">Verified Outcome</span>
+                          <span className="font-bold text-[#EC5D17]">Verified Outcome</span>
                         </div>
                       </div>
                     </div>

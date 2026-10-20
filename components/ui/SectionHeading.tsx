@@ -42,11 +42,11 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
               withGradientEyebrow
                 ? isDark
                   ? "bg-[#252220] text-white border border-white/10"
-                  : "bg-[#FFF0E0] text-[#CA6702] border border-[#CA6702]/20"
-                : eyebrowColor || (isDark ? "text-[#CA6702]" : "text-[#CA6702]")
+                  : "bg-[#FFF0E8] text-[#EC5D17] border border-[#EC5D17]/20"
+                : eyebrowColor || (isDark ? "text-[#EC5D17]" : "text-[#EC5D17]")
             )}
           >
-            <span className={cn("h-1.5 w-1.5 rounded-full", "bg-[#CA6702]")} aria-hidden="true" />
+            <span className={cn("h-1.5 w-1.5 rounded-full", "bg-[#EC5D17]")} aria-hidden="true" />
             {eyebrow}
           </span>
         </div>

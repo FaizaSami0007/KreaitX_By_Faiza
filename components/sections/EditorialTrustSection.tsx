@@ -54,8 +54,8 @@ export const EditorialTrustSection: React.FC = () => {
             {/* Eyebrow with delicate rule */}
             <Reveal delay={0.05} yOffset={12}>
               <div className="flex items-center gap-2.5">
-                <span className="w-5 h-[2px] bg-[#CA6702] rounded-full" aria-hidden="true" />
-                <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-[0.18em] text-[#CA6702]">
+                <span className="w-5 h-[2px] bg-[#EC5D17] rounded-full" aria-hidden="true" />
+                <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-[0.18em] text-[#EC5D17]">
                   WHY ONE CONNECTED PARTNER
                 </span>
               </div>
@@ -68,7 +68,7 @@ export const EditorialTrustSection: React.FC = () => {
                 className="text-[clamp(28px,3.8vw,48px)] font-display font-bold text-[#34312F] tracking-[-0.025em] leading-[1.12]"
               >
                 Ambitious brands need coherence,{" "}
-                <span className="font-display font-bold text-[#CA6702]">
+                <span className="font-display font-bold text-[#EC5D17]">
                   not disconnected silos
                 </span>
                 .
@@ -87,10 +87,10 @@ export const EditorialTrustSection: React.FC = () => {
               <div className="pt-2 flex flex-wrap items-center gap-5 sm:gap-6">
                 <Link
                   href="/about"
-                  className="group inline-flex items-center text-xs font-sans font-semibold uppercase tracking-[0.14em] text-[#34312F] hover:text-[#CA6702] transition-colors py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#CA6702]"
+                  className="group inline-flex items-center text-xs font-sans font-semibold uppercase tracking-[0.14em] text-[#34312F] hover:text-[#EC5D17] transition-colors py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#EC5D17]"
                 >
                   <span>Our Studio Story &amp; Origins</span>
-                  <ArrowUpRight className="ml-1.5 h-3.5 w-3.5 text-[#CA6702] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  <ArrowUpRight className="ml-1.5 h-3.5 w-3.5 text-[#EC5D17] transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </Link>
                 <span className="text-xs text-[#E5E1DA] hidden sm:inline">•</span>
                 <span className="text-xs font-mono text-[#6B6560]">
@@ -110,7 +110,7 @@ export const EditorialTrustSection: React.FC = () => {
                     <div>
                       {/* Top Row: Index + Framework Tag */}
                       <div className="flex items-center justify-between mb-4">
-                        <span className="text-xs font-mono font-bold text-[#CA6702] px-2.5 py-0.5 rounded-md bg-[#FFF0E0] border border-[#CA6702]/20">
+                        <span className="text-xs font-mono font-bold text-[#EC5D17] px-2.5 py-0.5 rounded-md bg-[#FFF0E8] border border-[#EC5D17]/20">
                           {diff.number}
                         </span>
                         <span className="text-[11px] font-mono uppercase tracking-wider text-[#6B6560] font-medium">
@@ -120,10 +120,10 @@ export const EditorialTrustSection: React.FC = () => {
 
                       {/* Title with icon */}
                       <div className="flex items-start gap-3 mb-2.5">
-                        <div className="p-2 rounded-lg bg-[#F7F5F0] text-[#34312F] group-hover:bg-[#CA6702] group-hover:text-white transition-colors duration-200 shrink-0 mt-0.5">
+                        <div className="p-2 rounded-lg bg-[#F7F5F0] text-[#34312F] group-hover:bg-[#EC5D17] group-hover:text-white transition-colors duration-200 shrink-0 mt-0.5">
                           <Icon className="h-4 w-4 stroke-[1.8]" />
                         </div>
-                        <h3 className="font-display text-base sm:text-lg font-bold text-[#34312F] group-hover:text-[#CA6702] transition-colors leading-snug">
+                        <h3 className="font-display text-base sm:text-lg font-bold text-[#34312F] group-hover:text-[#EC5D17] transition-colors leading-snug">
                           {diff.title}
                         </h3>
                       </div>
@@ -135,7 +135,7 @@ export const EditorialTrustSection: React.FC = () => {
 
                     <div className="mt-5 pt-3.5 border-t border-[#E5E1DA] flex items-center justify-between text-[11px] font-mono text-[#6B6560]">
                       <span>KreaitX Core Pillar</span>
-                      <span className="text-[#CA6702] font-bold">Unified Delivery →</span>
+                      <span className="text-[#EC5D17] font-bold">Unified Delivery →</span>
                     </div>
                   </div>
                 </Reveal>

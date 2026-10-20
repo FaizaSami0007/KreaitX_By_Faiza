@@ -29,8 +29,8 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
           {/* Left Column */}
           <div className="lg:col-span-5 flex flex-col items-start text-left space-y-6 sm:space-y-7 sticky top-28">
             <Reveal delay={0.05} yOffset={12}>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-white/5 border border-white/10 text-[#CA6702] text-xs font-mono font-bold uppercase tracking-wider">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#CA6702]" />
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-white/5 border border-white/10 text-[#EC5D17] text-xs font-mono font-bold uppercase tracking-wider">
+                <span className="h-1.5 w-1.5 rounded-full bg-[#EC5D17]" />
                 <span>CONNECTED CAPABILITIES</span>
               </div>
             </Reveal>
@@ -41,7 +41,7 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
                 className="font-display text-4xl sm:text-5xl lg:text-[54px] font-bold text-white tracking-tight leading-[1.08]"
               >
                 Everything we build <br />
-                <span className="font-display font-bold text-[#CA6702]">
+                <span className="font-display font-bold text-[#EC5D17]">
                   is connected.
                 </span>
               </h2>
@@ -57,17 +57,17 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
               <div className="pt-2 flex flex-col sm:flex-row items-start sm:items-center gap-4">
                 <a
                   href="#branding"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-bold text-white bg-[#CA6702] hover:bg-[#B25902] transition-colors"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-bold text-white bg-[#EC5D17] hover:bg-[#D44D0D] transition-colors"
                 >
                   <span>Explore 7 Disciplines</span>
                   <ArrowDown className="h-4 w-4 text-white" />
                 </a>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#CA6702] hover:text-white py-2 transition-colors"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#EC5D17] hover:text-white py-2 transition-colors"
                 >
                   <span>Discuss Your Scope</span>
-                  <ArrowRight className="h-4 w-4 text-[#CA6702]" />
+                  <ArrowRight className="h-4 w-4 text-[#EC5D17]" />
                 </Link>
               </div>
             </Reveal>
@@ -83,14 +83,14 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
               <Reveal key={service.id} delay={0.08 + idx * 0.04} yOffset={12}>
                 <a
                   href={service.href}
-                  className="group flex items-center justify-between p-5 sm:p-6 rounded-xl bg-[#2D2A28] border border-white/10 hover:border-[#CA6702]/50 transition-all duration-150 block"
+                  className="group flex items-center justify-between p-5 sm:p-6 rounded-xl bg-[#2D2A28] border border-white/10 hover:border-[#EC5D17]/50 transition-all duration-150 block"
                 >
                   <div className="flex items-start sm:items-center gap-4">
-                    <span className="font-mono text-xs sm:text-sm font-bold text-[#CA6702] bg-white/5 border border-white/10 px-2.5 py-1 rounded-md shrink-0">
+                    <span className="font-mono text-xs sm:text-sm font-bold text-[#EC5D17] bg-white/5 border border-white/10 px-2.5 py-1 rounded-md shrink-0">
                       {service.number}
                     </span>
                     <div>
-                      <h3 className="font-display text-base sm:text-lg font-bold text-white group-hover:text-[#CA6702] transition-colors">
+                      <h3 className="font-display text-base sm:text-lg font-bold text-white group-hover:text-[#EC5D17] transition-colors">
                         {service.name}
                       </h3>
                       <p className="text-xs sm:text-sm text-[#E5E1DA] font-sans mt-0.5">
@@ -98,7 +98,8 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-[#CA6702] group-hover:border-[#CA6702] group-hover:bg-[#CA6702] group-hover:text-white transition-all duration-150 shrink-0 ml-4">
+
+                  <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-[#EC5D17] group-hover:border-[#EC5D17] group-hover:bg-[#EC5D17] group-hover:text-white transition-all duration-150 shrink-0 ml-4">
                     <ArrowRight className="h-4 w-4" />
                   </div>
                 </a>
