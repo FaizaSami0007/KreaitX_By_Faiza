@@ -175,8 +175,8 @@ export const ContactClient: React.FC = () => {
 
   return (
     <>
-      {/* Contact Hero — Porcelain Canvas */}
-      <section className="relative bg-[#F7F5F0] text-[#34312F] py-20 lg:py-28 border-b border-[#E5E1DA] overflow-hidden">
+      {/* Contact Hero — Pure White Canvas */}
+      <section className="relative bg-white text-[#34312F] py-20 lg:py-28 border-b border-[#E5E1DA] overflow-hidden">
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
