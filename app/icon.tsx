@@ -24,11 +24,11 @@ export default function Icon() {
           color: "#FFFFFF",
           fontWeight: 800,
           borderRadius: 8,
-          border: "1px solid rgba(255, 90, 31, 0.4)",
+          border: "1px solid rgba(231, 111, 81, 0.4)",
         }}
       >
         <span style={{ color: "#FFFFFF" }}>K</span>
-        <span style={{ color: "#FF5A1F" }}>X</span>
+        <span style={{ color: "#E76F51" }}>X</span>
       </div>
     ),
     {

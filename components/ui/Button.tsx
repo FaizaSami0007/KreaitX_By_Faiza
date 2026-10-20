@@ -38,11 +38,11 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variantStyles = {
       primary:
-        "bg-[#FF5A1F] hover:bg-[#E04812] text-white shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#FF5A1F]",
+        "bg-[#E76F51] hover:bg-[#D45A3C] text-white shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#E76F51]",
       navy:
         "bg-[#34312F] hover:bg-[#433E3B] text-white hover:-translate-y-0.5 focus-visible:ring-[#34312F]",
       cyan:
-        "bg-[#FF5A1F] hover:bg-[#E04812] text-white font-semibold shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#FF5A1F]",
+        "bg-[#E76F51] hover:bg-[#D45A3C] text-white font-semibold shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#E76F51]",
       gradient:
         "bg-[#34312F] hover:bg-[#433E3B] text-white hover:-translate-y-0.5 focus-visible:ring-[#34312F]",
       secondary:
@@ -52,7 +52,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       dark:
         "bg-[#34312F] text-white hover:bg-[#433E3B] hover:-translate-y-0.5 focus-visible:ring-[#34312F]",
       ghost:
-        "bg-transparent text-[#34312F] hover:text-[#FF5A1F] hover:bg-[#FFF0E8] focus-visible:ring-[#34312F]",
+        "bg-transparent text-[#34312F] hover:text-[#E76F51] hover:bg-[#FBE9E3] focus-visible:ring-[#34312F]",
       white:
         "bg-white text-[#34312F] border border-[#E5E1DA] hover:border-[#34312F] hover:-translate-y-0.5 shadow-subtle focus-visible:ring-[#34312F]"
     };
@@ -69,7 +69,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           "ml-2 h-4 w-4 transition-transform duration-200 ease-out group-hover:translate-x-1",
           variant === "primary" || variant === "gradient" || variant === "dark" || variant === "navy" || variant === "cyan"
             ? "text-white/90"
-            : "text-[#34312F] group-hover:text-[#FF5A1F]",
+            : "text-[#34312F] group-hover:text-[#E76F51]",
           arrowPosition === "top-right" && "group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
         )}
         aria-hidden="true"

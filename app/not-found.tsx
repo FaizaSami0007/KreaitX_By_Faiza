@@ -10,15 +10,15 @@ export default function NotFound() {
       <Container size="default" className="text-center">
         <div className="max-w-2xl mx-auto flex flex-col items-center">
           {/* Status Badge */}
-          <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#FF5A1F] px-3.5 py-1.5 rounded-md bg-[#FFF0E8] border border-[#E5E1DA] mb-6 shadow-2xs">
-            <Compass className="h-3.5 w-3.5 text-[#FF5A1F]" />
+          <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#E76F51] px-3.5 py-1.5 rounded-md bg-[#FBE9E3] border border-[#E5E1DA] mb-6 shadow-2xs">
+            <Compass className="h-3.5 w-3.5 text-[#E76F51]" />
             <span>404 • Destination Not Found</span>
           </span>
 
           {/* Heading */}
           <h1 className="font-display text-4xl sm:text-6xl font-bold text-[#34312F] tracking-tight leading-[1.1]">
             Lost in digital space?{" "}
-            <span className="font-display font-bold text-[#FF5A1F]">
+            <span className="font-display font-bold text-[#E76F51]">
               Let&apos;s guide you back
             </span>.
           </h1>
@@ -41,33 +41,33 @@ export default function NotFound() {
           <div className="mt-14 w-full pt-10 border-t border-[#E5E1DA] grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
             <Link
               href="/solutions"
-              className="group p-5 rounded-xl bg-white border border-[#E5E1DA] hover:border-[#FF5A1F] transition-colors"
+              className="group p-5 rounded-xl bg-white border border-[#E5E1DA] hover:border-[#E76F51] transition-colors"
             >
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs font-mono uppercase tracking-wider text-[#FF5A1F] font-bold">Solutions</span>
-                <ArrowRight className="h-4 w-4 text-[#6B6560] group-hover:text-[#FF5A1F] group-hover:translate-x-1 transition-all" />
+                <span className="text-xs font-mono uppercase tracking-wider text-[#E76F51] font-bold">Solutions</span>
+                <ArrowRight className="h-4 w-4 text-[#6B6560] group-hover:text-[#E76F51] group-hover:translate-x-1 transition-all" />
               </div>
               <p className="text-xs text-[#6B6560]">Explore our connected creative and technical capabilities.</p>
             </Link>
 
             <Link
               href="/work"
-              className="group p-5 rounded-xl bg-white border border-[#E5E1DA] hover:border-[#FF5A1F] transition-colors"
+              className="group p-5 rounded-xl bg-white border border-[#E5E1DA] hover:border-[#E76F51] transition-colors"
             >
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs font-mono uppercase tracking-wider text-[#FF5A1F] font-bold">Case Studies</span>
-                <ArrowRight className="h-4 w-4 text-[#6B6560] group-hover:text-[#FF5A1F] group-hover:translate-x-1 transition-all" />
+                <span className="text-xs font-mono uppercase tracking-wider text-[#E76F51] font-bold">Case Studies</span>
+                <ArrowRight className="h-4 w-4 text-[#6B6560] group-hover:text-[#E76F51] group-hover:translate-x-1 transition-all" />
               </div>
               <p className="text-xs text-[#6B6560]">Review verified client outcomes and design artifacts.</p>
             </Link>
 
             <Link
               href="/process"
-              className="group p-5 rounded-xl bg-white border border-[#E5E1DA] hover:border-[#FF5A1F] transition-colors"
+              className="group p-5 rounded-xl bg-white border border-[#E5E1DA] hover:border-[#E76F51] transition-colors"
             >
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs font-mono uppercase tracking-wider text-[#FF5A1F] font-bold">Methodology</span>
-                <ArrowRight className="h-4 w-4 text-[#6B6560] group-hover:text-[#FF5A1F] group-hover:translate-x-1 transition-all" />
+                <span className="text-xs font-mono uppercase tracking-wider text-[#E76F51] font-bold">Methodology</span>
+                <ArrowRight className="h-4 w-4 text-[#6B6560] group-hover:text-[#E76F51] group-hover:translate-x-1 transition-all" />
               </div>
               <p className="text-xs text-[#6B6560]">Understand our six-stage process from discovery to launch.</p>
             </Link>

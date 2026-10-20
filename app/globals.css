@@ -5,26 +5,27 @@
 :root {
   --bg-canvas: #F7F5F0;
   --bg-surface: #FFFFFF;
-  --bg-surface-alt: #FFF0E8;
+  --bg-surface-alt: #FBE9E3;
   --bg-dark: #34312F;
   
   --text-heading: #34312F;
   --text-body: #34312F;
   --text-muted: #6B6560;
   
-  --brand-orange: #FF5A1F;
-  --brand-orange-hover: #E04812;
+  --brand-orange: #E76F51;
+  --brand-terracotta: #E76F51;
+  --brand-orange-hover: #D45A3C;
   --brand-porcelain: #F7F5F0;
   --brand-charcoal: #34312F;
   --brand-black: #34312F;
   --brand-white: #FFFFFF;
   --brand-muted: #6B6560;
   --brand-border: #E5E1DA;
-  --brand-tint: #FFF0E8;
-  --brand-focus: #FF5A1F;
+  --brand-tint: #FBE9E3;
+  --brand-focus: #E76F51;
   
   --border-subtle: #E5E1DA;
-  --border-focus: #FF5A1F;
+  --border-focus: #E76F51;
   
   --radius-sm: 6px;
   --radius-md: 10px;
@@ -36,7 +37,7 @@
   --shadow-subtle: 0 1px 3px rgba(52, 49, 47, 0.05), 0 1px 2px rgba(52, 49, 47, 0.03);
   --shadow-card: 0 4px 16px -4px rgba(52, 49, 47, 0.06), 0 1px 3px -1px rgba(52, 49, 47, 0.03);
   --shadow-card-hover: 0 12px 28px -6px rgba(52, 49, 47, 0.1), 0 0 0 1px #E5E1DA;
-  --shadow-brand-button: 0 2px 8px rgba(255, 90, 31, 0.25);
+  --shadow-brand-button: 0 2px 8px rgba(231, 111, 81, 0.25);
   
   --safe-top: env(safe-area-inset-top, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
@@ -81,13 +82,13 @@
   }
 
   ::selection {
-    background-color: #FF5A1F;
+    background-color: #E76F51;
     color: #FFFFFF;
   }
 
   /* Accessible focus indicators */
   :focus-visible {
-    outline: 2px solid #FF5A1F;
+    outline: 2px solid #E76F51;
     outline-offset: 3px;
     border-radius: 4px;
   }
@@ -101,7 +102,7 @@
 @layer utilities {
   /* Clean Solid Accent utilities */
   .text-accent {
-    color: #FF5A1F;
+    color: #E76F51;
   }
 
   /* Master Minimal Portfolio Card Components */
@@ -145,7 +146,7 @@
   }
 
   .brand-card-dark:hover {
-    border-color: #FF5A1F;
+    border-color: #E76F51;
     transform: translateY(-2px);
   }
 

@@ -10,8 +10,10 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          orange: "#FF5A1F",
-          "orange-hover": "#E04812",
+          orange: "#E76F51",
+          terracotta: "#E76F51",
+          "orange-hover": "#D45A3C",
+          "terracotta-hover": "#D45A3C",
           porcelain: "#F7F5F0",
           charcoal: "#34312F",
           "warm-charcoal": "#34312F",
@@ -21,28 +23,29 @@ const config: Config = {
           gray: "#6B6560",
           "warm-gray": "#6B6560",
           border: "#E5E1DA",
-          tint: "#FFF0E8",
+          tint: "#FBE9E3",
+          "pale-terracotta": "#FBE9E3",
           // Semantic mappings
           primary: "#34312F",
           secondary: "#6B6560",
-          accent: "#FF5A1F",
+          accent: "#E76F51",
           canvas: "#F7F5F0",
           surface: "#FFFFFF",
-          "surface-alt": "#FFF0E8",
+          "surface-alt": "#FBE9E3",
           dark: "#34312F",
           "border-dark": "rgba(255, 255, 255, 0.12)",
           // Aliases for component continuity
-          purple: "#FF5A1F",
+          purple: "#E76F51",
           "purple-deep": "#34312F",
           plum: "#34312F",
           cream: "#F7F5F0",
           "cream-soft": "#F7F5F0",
-          "cream-light": "#FFF0E8",
+          "cream-light": "#FBE9E3",
           lavender: "#FFFFFF",
           navy: "#34312F",
           deep: "#34312F",
-          cyan: "#FF5A1F",
-          "cyan-soft": "#FFF0E8",
+          cyan: "#E76F51",
+          "cyan-soft": "#FBE9E3",
           "blue-muted": "#6B6560",
           body: "#34312F",
           steel: "#6B6560"
@@ -76,7 +79,7 @@ const config: Config = {
         "card-hover": "0 12px 28px -6px rgba(17, 17, 17, 0.1), 0 0 0 1px #E5E1DA",
         "brand-card": "0 4px 16px -4px rgba(17, 17, 17, 0.06)",
         "brand-hover": "0 12px 28px -6px rgba(17, 17, 17, 0.1)",
-        "brand-button": "0 2px 8px rgba(255, 90, 31, 0.25)"
+        "brand-button": "0 2px 8px rgba(231, 111, 81, 0.25)"
       }
     }
   },

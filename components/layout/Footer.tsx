@@ -13,7 +13,7 @@ export const Footer: React.FC = () => {
         {/* ========================================================= */}
         {/* 1. TOP CONTACT BANNER (Compact, low-height sleek strip)  */}
         {/* ========================================================= */}
-        <div className="rounded-xl bg-[#FF5A1F] text-white py-3 sm:py-3.5 px-5 sm:px-8 mb-8 sm:mb-10 shadow-xs">
+        <div className="rounded-xl bg-[#E76F51] text-white py-3 sm:py-3.5 px-5 sm:px-8 mb-8 sm:mb-10 shadow-xs">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
             <h3 className="font-display text-base sm:text-lg font-bold text-white tracking-tight">
               Ready to start a project?
@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
 
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-4 py-1.5 rounded-lg text-xs font-bold text-[#FF5A1F] bg-white hover:bg-[#F7F5F0] transition-all duration-200 shadow-2xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white shrink-0"
+              className="inline-flex items-center justify-center px-4 py-1.5 rounded-lg text-xs font-bold text-[#E76F51] bg-white hover:bg-[#F7F5F0] transition-all duration-200 shadow-2xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white shrink-0"
             >
               Inquire Online →
             </Link>
@@ -36,11 +36,11 @@ export const Footer: React.FC = () => {
           <div className="col-span-2 lg:col-span-4 space-y-3">
             <Link
               href="/"
-              className="inline-flex items-center text-xl font-display font-bold tracking-tight text-[#34312F] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5A1F] group"
+              className="inline-flex items-center text-xl font-display font-bold tracking-tight text-[#34312F] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E76F51] group"
               aria-label="KreaitX — Home"
             >
               <span>Kreait</span>
-              <span className="text-[#FF5A1F] font-extrabold transition-transform duration-200 group-hover:scale-105">
+              <span className="text-[#E76F51] font-extrabold transition-transform duration-200 group-hover:scale-105">
                 X
               </span>
             </Link>
@@ -56,7 +56,7 @@ export const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="KreaitX on LinkedIn"
-                className="w-7 h-7 rounded-full bg-white border border-[#E5E1DA] text-[#34312F] hover:text-white hover:bg-[#FF5A1F] hover:border-[#FF5A1F] transition-all duration-200 flex items-center justify-center shadow-2xs"
+                className="w-7 h-7 rounded-full bg-white border border-[#E5E1DA] text-[#34312F] hover:text-white hover:bg-[#E76F51] hover:border-[#E76F51] transition-all duration-200 flex items-center justify-center shadow-2xs"
               >
                 <Linkedin className="h-3.5 w-3.5" />
               </a>
@@ -65,7 +65,7 @@ export const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="KreaitX on Instagram"
-                className="w-7 h-7 rounded-full bg-white border border-[#E5E1DA] text-[#34312F] hover:text-white hover:bg-[#FF5A1F] hover:border-[#FF5A1F] transition-all duration-200 flex items-center justify-center shadow-2xs"
+                className="w-7 h-7 rounded-full bg-white border border-[#E5E1DA] text-[#34312F] hover:text-white hover:bg-[#E76F51] hover:border-[#E76F51] transition-all duration-200 flex items-center justify-center shadow-2xs"
               >
                 <Instagram className="h-3.5 w-3.5" />
               </a>
@@ -74,7 +74,7 @@ export const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="KreaitX on X"
-                className="w-7 h-7 rounded-full bg-white border border-[#E5E1DA] text-[#34312F] hover:text-white hover:bg-[#FF5A1F] hover:border-[#FF5A1F] transition-all duration-200 flex items-center justify-center shadow-2xs"
+                className="w-7 h-7 rounded-full bg-white border border-[#E5E1DA] text-[#34312F] hover:text-white hover:bg-[#E76F51] hover:border-[#E76F51] transition-all duration-200 flex items-center justify-center shadow-2xs"
               >
                 <Twitter className="h-3.5 w-3.5" />
               </a>
@@ -83,7 +83,7 @@ export const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="KreaitX on GitHub"
-                className="w-7 h-7 rounded-full bg-white border border-[#E5E1DA] text-[#34312F] hover:text-white hover:bg-[#FF5A1F] hover:border-[#FF5A1F] transition-all duration-200 flex items-center justify-center shadow-2xs"
+                className="w-7 h-7 rounded-full bg-white border border-[#E5E1DA] text-[#34312F] hover:text-white hover:bg-[#E76F51] hover:border-[#E76F51] transition-all duration-200 flex items-center justify-center shadow-2xs"
               >
                 <Github className="h-3.5 w-3.5" />
               </a>
@@ -92,7 +92,7 @@ export const Footer: React.FC = () => {
 
           {/* Solutions Col */}
           <div className="col-span-1 lg:col-span-3 space-y-2.5">
-            <p className="text-xs font-mono font-bold uppercase tracking-[0.16em] text-[#FF5A1F]">
+            <p className="text-xs font-mono font-bold uppercase tracking-[0.16em] text-[#E76F51]">
               Solutions
             </p>
             <ul className="space-y-1.5 text-xs font-sans">
@@ -100,7 +100,7 @@ export const Footer: React.FC = () => {
                 <li key={service.id}>
                   <Link
                     href={`/solutions/${service.id}`}
-                    className="text-[#6B6560] hover:text-[#FF5A1F] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5"
+                    className="text-[#6B6560] hover:text-[#E76F51] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5"
                   >
                     {service.title}
                   </Link>
@@ -111,32 +111,32 @@ export const Footer: React.FC = () => {
 
           {/* Company Col */}
           <div className="col-span-1 lg:col-span-2 space-y-2.5">
-            <p className="text-xs font-mono font-bold uppercase tracking-[0.16em] text-[#FF5A1F]">
+            <p className="text-xs font-mono font-bold uppercase tracking-[0.16em] text-[#E76F51]">
               Company
             </p>
             <ul className="space-y-1.5 text-xs font-sans">
               <li>
-                <Link href="/about" className="text-[#6B6560] hover:text-[#FF5A1F] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
+                <Link href="/about" className="text-[#6B6560] hover:text-[#E76F51] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/work" className="text-[#6B6560] hover:text-[#FF5A1F] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
+                <Link href="/work" className="text-[#6B6560] hover:text-[#E76F51] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
                   Work
                 </Link>
               </li>
               <li>
-                <Link href="/process" className="text-[#6B6560] hover:text-[#FF5A1F] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
+                <Link href="/process" className="text-[#6B6560] hover:text-[#E76F51] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
                   Process
                 </Link>
               </li>
               <li>
-                <Link href="/insights" className="text-[#6B6560] hover:text-[#FF5A1F] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
+                <Link href="/insights" className="text-[#6B6560] hover:text-[#E76F51] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
                   Insights
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-[#6B6560] hover:text-[#FF5A1F] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
+                <Link href="/contact" className="text-[#6B6560] hover:text-[#E76F51] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
                   Contact
                 </Link>
               </li>
@@ -145,14 +145,14 @@ export const Footer: React.FC = () => {
 
           {/* Connect Col */}
           <div className="col-span-2 lg:col-span-3 space-y-2.5">
-            <p className="text-xs font-mono font-bold uppercase tracking-[0.16em] text-[#FF5A1F]">
+            <p className="text-xs font-mono font-bold uppercase tracking-[0.16em] text-[#E76F51]">
               Connect
             </p>
             <div className="text-xs font-sans space-y-1 text-[#6B6560]">
               <p>
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="font-medium text-[#34312F] underline underline-offset-4 hover:text-[#FF5A1F] transition-colors"
+                  className="font-medium text-[#34312F] underline underline-offset-4 hover:text-[#E76F51] transition-colors"
                 >
                   {siteConfig.contact.email}
                 </a>
@@ -169,7 +169,7 @@ export const Footer: React.FC = () => {
       {/* ========================================================================= */}
       <div className="w-full overflow-hidden leading-none -mb-px">
         <svg
-          className="w-full h-5 sm:h-7 text-[#FF5A1F] block"
+          className="w-full h-5 sm:h-7 text-[#E76F51] block"
           viewBox="0 0 1440 32"
           fill="currentColor"
           preserveAspectRatio="none"
@@ -179,7 +179,7 @@ export const Footer: React.FC = () => {
         </svg>
       </div>
 
-      <div className="bg-[#FF5A1F] text-white py-2.5 pb-[max(1.25rem,env(safe-area-inset-bottom,0px))]">
+      <div className="bg-[#E76F51] text-white py-2.5 pb-[max(1.25rem,env(safe-area-inset-bottom,0px))]">
         <Container size="default">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] sm:text-xs text-white/95 text-center sm:text-left font-sans">
             <p>© {currentYear} KreaitX. All rights reserved.</p>

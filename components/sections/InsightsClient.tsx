@@ -52,13 +52,13 @@ export const InsightsClient: React.FC = () => {
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#FF5A1F] px-3.5 py-1.5 rounded-md bg-[#FFF0E8] border border-[#E5E1DA] mb-6">
-                <span className="w-2 h-2 rounded-full bg-[#FF5A1F]" />
+              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#E76F51] px-3.5 py-1.5 rounded-md bg-[#FBE9E3] border border-[#E5E1DA] mb-6">
+                <span className="w-2 h-2 rounded-full bg-[#E76F51]" />
                 <span>Perspectives × Field Notes</span>
               </span>
               <h1 className="font-display text-[clamp(2rem,4.5vw,3.75rem)] font-bold text-[#34312F] tracking-tight leading-[1.08]">
                 Insights for{" "}
-                <span className="font-display font-bold text-[#FF5A1F]">
+                <span className="font-display font-bold text-[#E76F51]">
                   what&apos;s next
                 </span>.
               </h1>
@@ -72,7 +72,7 @@ export const InsightsClient: React.FC = () => {
                 </Button>
                 <a
                   href="#articles-feed"
-                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-lg text-sm font-semibold text-[#34312F] bg-white hover:bg-[#F7F5F0] hover:text-[#FF5A1F] border border-[#E5E1DA] transition-all duration-200 w-full sm:w-auto shadow-xs"
+                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-lg text-sm font-semibold text-[#34312F] bg-white hover:bg-[#F7F5F0] hover:text-[#E76F51] border border-[#E5E1DA] transition-all duration-200 w-full sm:w-auto shadow-xs"
                 >
                   Read Perspectives ↓
                 </a>
@@ -127,7 +127,7 @@ export const InsightsClient: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setSelectedCategory("All Perspectives")}
-                className="px-5 py-2.5 rounded-lg text-xs font-semibold text-white bg-[#34312F] hover:bg-[#FF5A1F] min-h-[40px] transition-colors"
+                className="px-5 py-2.5 rounded-lg text-xs font-semibold text-white bg-[#34312F] hover:bg-[#E76F51] min-h-[40px] transition-colors"
               >
                 Reset Filter
               </button>
@@ -138,12 +138,12 @@ export const InsightsClient: React.FC = () => {
                 <article
                   key={article.id}
                   id={article.slug}
-                  className="scroll-mt-32 rounded-xl bg-white border border-[#E5E1DA] shadow-xs hover:border-[#FF5A1F] transition-all duration-200 p-6 sm:p-10 lg:p-12 overflow-hidden"
+                  className="scroll-mt-32 rounded-xl bg-white border border-[#E5E1DA] shadow-xs hover:border-[#E76F51] transition-all duration-200 p-6 sm:p-10 lg:p-12 overflow-hidden"
                 >
                   {/* Meta Header */}
                   <div className="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-[#E5E1DA]">
                     <div className="flex items-center gap-3">
-                      <span className="px-3 py-1 rounded-md bg-[#FFF0E8] text-[#FF5A1F] border border-[#E5E1DA] text-xs font-semibold uppercase tracking-wider">
+                      <span className="px-3 py-1 rounded-md bg-[#FBE9E3] text-[#E76F51] border border-[#E5E1DA] text-xs font-semibold uppercase tracking-wider">
                         {article.category}
                       </span>
                       <span className="text-xs text-[#6B6560] font-medium">
@@ -151,7 +151,7 @@ export const InsightsClient: React.FC = () => {
                       </span>
                     </div>
                     <div className="flex items-center gap-1.5 text-xs text-[#6B6560] font-medium">
-                      <Clock className="h-3.5 w-3.5 text-[#FF5A1F]" />
+                      <Clock className="h-3.5 w-3.5 text-[#E76F51]" />
                       <span>{article.readTime}</span>
                     </div>
                   </div>
@@ -161,7 +161,7 @@ export const InsightsClient: React.FC = () => {
                     <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#34312F] tracking-tight leading-tight">
                       <Link
                         href={`/insights/${article.slug}`}
-                        className="hover:text-[#FF5A1F] transition-colors"
+                        className="hover:text-[#E76F51] transition-colors"
                       >
                         {article.title}
                       </Link>
@@ -173,8 +173,8 @@ export const InsightsClient: React.FC = () => {
 
                     {/* Key Takeaways Box */}
                     <div className="rounded-xl bg-[#F7F5F0] p-6 sm:p-8 border border-[#E5E1DA] my-8">
-                      <span className="text-xs font-sans uppercase tracking-wider text-[#FF5A1F] font-bold block mb-3 flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-[#FF5A1F]" />
+                      <span className="text-xs font-sans uppercase tracking-wider text-[#E76F51] font-bold block mb-3 flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-[#E76F51]" />
                         Executive Summary &amp; Core Takeaways
                       </span>
                       <ul className="space-y-2.5">
@@ -183,7 +183,7 @@ export const InsightsClient: React.FC = () => {
                             key={takeaway}
                             className="flex items-start gap-2.5 text-sm text-[#34312F] font-medium"
                           >
-                            <CheckCircle2 className="h-4 w-4 text-[#FF5A1F] shrink-0 mt-0.5" />
+                            <CheckCircle2 className="h-4 w-4 text-[#E76F51] shrink-0 mt-0.5" />
                             <span>{takeaway}</span>
                           </li>
                         ))}
@@ -197,10 +197,10 @@ export const InsightsClient: React.FC = () => {
                       </span>
                       <Link
                         href={`/insights/${article.slug}`}
-                        className="group inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-sans font-semibold text-white bg-[#34312F] hover:bg-[#FF5A1F] transition-colors duration-200"
+                        className="group inline-flex items-center gap-2 px-6 py-3 rounded-lg text-sm font-sans font-semibold text-white bg-[#34312F] hover:bg-[#E76F51] transition-colors duration-200"
                       >
                         <span>Read Full Essay</span>
-                        <ArrowRight className="h-4 w-4 text-[#FF5A1F] group-hover:text-white transition-colors duration-200" />
+                        <ArrowRight className="h-4 w-4 text-[#E76F51] group-hover:text-white transition-colors duration-200" />
                       </Link>
                     </div>
                   </div>

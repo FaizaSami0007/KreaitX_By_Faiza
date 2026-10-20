@@ -18,11 +18,11 @@ export const Badge: React.FC<BadgeProps> = ({
   ...props
 }) => {
   const variantStyles = {
-    default: "bg-[#FFF0E8] text-[#FF5A1F] border border-[#FF5A1F]/20",
+    default: "bg-[#FBE9E3] text-[#E76F51] border border-[#E76F51]/20",
     gradient: "bg-[#34312F] text-white border border-white/10",
     outline: "bg-transparent text-[#6B6560] border border-[#E5E1DA]",
-    purple: "bg-[#FF5A1F] text-white border border-[#FF5A1F]",
-    cyan: "bg-[#FFF0E8] text-[#FF5A1F] border border-[#FF5A1F]/30",
+    purple: "bg-[#E76F51] text-white border border-[#E76F51]",
+    cyan: "bg-[#FBE9E3] text-[#E76F51] border border-[#E76F51]/30",
     dark: "bg-[#34312F] text-white border border-white/10",
     muted: "bg-[#F7F5F0] text-[#6B6560] border border-[#E5E1DA]",
     navy: "bg-[#34312F] text-white border border-white/10",
@@ -45,7 +45,7 @@ export const Badge: React.FC<BadgeProps> = ({
       {...props}
     >
       {withDot && (
-        <span className="h-1.5 w-1.5 rounded-full bg-[#FF5A1F]" />
+        <span className="h-1.5 w-1.5 rounded-full bg-[#E76F51]" />
       )}
       {children}
     </span>

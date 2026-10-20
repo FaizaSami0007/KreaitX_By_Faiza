@@ -30,14 +30,14 @@ export const CTASection: React.FC<CTASectionProps> = ({
         <Reveal yOffset={20}>
           <div className="relative overflow-hidden rounded-2xl bg-[#34312F] text-white p-8 sm:p-14 lg:p-20 border border-white/10 shadow-xl">
             <div className="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#FF5A1F] px-3.5 py-1.5 rounded-md bg-white/5 border border-white/10 mb-6">
-                <span className="w-2 h-2 rounded-full bg-[#FF5A1F]" />
+              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#E76F51] px-3.5 py-1.5 rounded-md bg-white/5 border border-white/10 mb-6">
+                <span className="w-2 h-2 rounded-full bg-[#E76F51]" />
                 <span>Next Step</span>
               </span>
 
               <h2 className="font-display text-[clamp(1.85rem,4.5vw,3.75rem)] font-bold text-white tracking-tight leading-[1.12]">
                 Ready to build{" "}
-                <span className="font-display font-bold text-[#FF5A1F]">
+                <span className="font-display font-bold text-[#E76F51]">
                   what&apos;s next
                 </span>
                 ?

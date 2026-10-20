@@ -7,13 +7,13 @@ Core narrative:
 **Ideas → Strategy → Creativity → Technology → Impact**
 
 ## Locked color system
-- Neon Orange: `#FF5A1F` — Primary brand color, important accents, selected backgrounds, calls to action
+- Terracotta: `#E76F51` — Primary brand color, important accents, selected backgrounds, calls to action
 - Porcelain: `#F7F5F0` — Main page background and calm content surfaces
 - Deep Warm Charcoal: `#34312F` — Primary text, headings, footer, and important dark interface elements
 - Warm Gray: `#6B6560` — Secondary text and muted labels
 - Soft Border: `#E5E1DA` — Borders and subtle dividers
 - Pure White: `#FFFFFF` — Selective card surfaces where additional separation is needed
-- Pale Orange: `#FFF0E8` — Restrained orange-tinted surfaces and subtle highlights
+- Pale Terracotta: `#FBE9E3` — Restrained terracotta-tinted surfaces and subtle highlights
 
 Do not add random gradients, neon colors or excessive glassmorphism.
 

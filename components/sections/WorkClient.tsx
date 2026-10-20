@@ -26,13 +26,13 @@ export const WorkClient: React.FC = () => {
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#FF5A1F] px-3.5 py-1.5 rounded-md bg-[#FFF0E8] border border-[#E5E1DA] mb-6">
-                <span className="w-2 h-2 rounded-full bg-[#FF5A1F]" />
+              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#E76F51] px-3.5 py-1.5 rounded-md bg-[#FBE9E3] border border-[#E5E1DA] mb-6">
+                <span className="w-2 h-2 rounded-full bg-[#E76F51]" />
                 <span>Portfolio × Selected Case Studies</span>
               </span>
               <h1 className="font-display text-[clamp(2rem,4.5vw,3.75rem)] font-bold text-[#34312F] tracking-tight leading-[1.08]">
                 Real projects.{" "}
-                <span className="font-display font-bold text-[#FF5A1F]">
+                <span className="font-display font-bold text-[#E76F51]">
                   Real business context
                 </span>.
               </h1>
@@ -46,7 +46,7 @@ export const WorkClient: React.FC = () => {
                 </Button>
                 <a
                   href="#projects-feed"
-                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-lg text-sm font-semibold text-[#34312F] bg-white hover:bg-[#F7F5F0] hover:text-[#FF5A1F] border border-[#E5E1DA] transition-all duration-200 w-full sm:w-auto shadow-xs"
+                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-lg text-sm font-semibold text-[#34312F] bg-white hover:bg-[#F7F5F0] hover:text-[#E76F51] border border-[#E5E1DA] transition-all duration-200 w-full sm:w-auto shadow-xs"
                 >
                   Browse Case Studies ↓
                 </a>
@@ -70,7 +70,7 @@ export const WorkClient: React.FC = () => {
                   className={`px-4 py-2 rounded-md text-xs sm:text-sm font-sans font-semibold transition-all cursor-pointer shrink-0 min-h-[40px] ${
                     selectedCategory === cat
                       ? "bg-[#34312F] text-white shadow-sm"
-                      : "bg-white text-[#34312F] hover:bg-white hover:text-[#FF5A1F] border border-[#E5E1DA]"
+                      : "bg-white text-[#34312F] hover:bg-white hover:text-[#E76F51] border border-[#E5E1DA]"
                   }`}
                 >
                   {cat}
@@ -100,10 +100,10 @@ export const WorkClient: React.FC = () => {
                   <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
                     <div>
                       <div className="flex items-center gap-3 mb-3">
-                        <span className="px-3 py-1 rounded-md bg-white/10 text-[#FF5A1F] text-xs font-mono border border-white/15">
+                        <span className="px-3 py-1 rounded-md bg-white/10 text-[#E76F51] text-xs font-mono border border-white/15">
                           Case Study 0{idx + 1}
                         </span>
-                        <span className="text-xs text-[#FF5A1F] uppercase font-bold tracking-wider">
+                        <span className="text-xs text-[#E76F51] uppercase font-bold tracking-wider">
                           {project.industry}
                         </span>
                         <span className="text-xs text-white/50">• {project.year}</span>
@@ -115,7 +115,7 @@ export const WorkClient: React.FC = () => {
 
                     <div className="shrink-0 flex flex-col md:items-end justify-between gap-3">
                       <div>
-                        <span className="text-xs font-sans uppercase tracking-wider text-[#FF5A1F] font-bold block mb-1">
+                        <span className="text-xs font-sans uppercase tracking-wider text-[#E76F51] font-bold block mb-1">
                           Client Partner
                         </span>
                         <span className="text-lg font-display font-bold text-white">
@@ -124,7 +124,7 @@ export const WorkClient: React.FC = () => {
                       </div>
                       <Link
                         href={`/work/${project.slug}`}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-sans font-semibold text-white bg-white/10 hover:bg-[#FF5A1F] border border-white/20 transition-all duration-200"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-sans font-semibold text-white bg-white/10 hover:bg-[#E76F51] border border-white/20 transition-all duration-200"
                       >
                         <span>Read Case Study</span>
                         <ArrowRight className="h-3.5 w-3.5" />
@@ -139,8 +139,8 @@ export const WorkClient: React.FC = () => {
                     {/* Left: Challenge, Strategy, Execution */}
                     <div className="lg:col-span-7 space-y-8">
                       <div>
-                        <h3 className="text-xs font-sans uppercase tracking-wider text-[#FF5A1F] font-bold mb-2 flex items-center gap-1.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#FF5A1F]" />
+                        <h3 className="text-xs font-sans uppercase tracking-wider text-[#E76F51] font-bold mb-2 flex items-center gap-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#E76F51]" />
                           Project Summary
                         </h3>
                         <p className="text-lg text-[#34312F] font-sans font-normal leading-relaxed">
@@ -158,8 +158,8 @@ export const WorkClient: React.FC = () => {
                           </p>
                         </div>
 
-                        <div className="p-5 rounded-lg bg-[#FFF0E8] border border-[#E5E1DA]">
-                          <h4 className="text-xs font-sans uppercase tracking-wider text-[#FF5A1F] font-bold mb-2">
+                        <div className="p-5 rounded-lg bg-[#FBE9E3] border border-[#E5E1DA]">
+                          <h4 className="text-xs font-sans uppercase tracking-wider text-[#E76F51] font-bold mb-2">
                             The Strategy
                           </h4>
                           <p className="text-sm sm:text-base text-[#34312F] leading-relaxed font-sans">
@@ -182,7 +182,7 @@ export const WorkClient: React.FC = () => {
                     <div className="lg:col-span-5 space-y-6">
                       {/* Measured Impact Card */}
                       <div className="rounded-xl bg-[#34312F] text-white p-7 sm:p-8 border border-white/10 shadow-sm">
-                        <span className="text-xs font-sans uppercase tracking-wider text-[#FF5A1F] font-bold block mb-2">
+                        <span className="text-xs font-sans uppercase tracking-wider text-[#E76F51] font-bold block mb-2">
                           Measured Business Impact
                         </span>
                         <p className="text-xl sm:text-2xl font-display font-bold text-white leading-relaxed">
@@ -201,7 +201,7 @@ export const WorkClient: React.FC = () => {
                               key={del}
                               className="flex items-center gap-2.5 text-sm font-medium text-[#34312F]"
                             >
-                              <CheckCircle2 className="h-4 w-4 text-[#FF5A1F] shrink-0" />
+                              <CheckCircle2 className="h-4 w-4 text-[#E76F51] shrink-0" />
                               <span>{del}</span>
                             </li>
                           ))}
@@ -230,7 +230,7 @@ export const WorkClient: React.FC = () => {
                               <Link
                                 key={s}
                                 href={`/solutions/${slug}`}
-                                className="text-xs font-medium text-[#34312F] bg-white hover:bg-[#34312F] hover:text-[#FF5A1F] border border-[#E5E1DA] px-3 py-1 rounded-md shadow-2xs transition-colors duration-150"
+                                className="text-xs font-medium text-[#34312F] bg-white hover:bg-[#34312F] hover:text-[#E76F51] border border-[#E5E1DA] px-3 py-1 rounded-md shadow-2xs transition-colors duration-150"
                               >
                                 {s}
                               </Link>
@@ -250,10 +250,10 @@ export const WorkClient: React.FC = () => {
                       <div className="pt-2">
                         <Link
                           href={`/work/${project.slug}`}
-                          className="w-full group inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg text-sm font-sans font-semibold text-white bg-[#34312F] hover:bg-[#FF5A1F] shadow-sm transition-colors duration-200"
+                          className="w-full group inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg text-sm font-sans font-semibold text-white bg-[#34312F] hover:bg-[#E76F51] shadow-sm transition-colors duration-200"
                         >
                           <span>Explore Dedicated Case Study</span>
-                          <ArrowRight className="h-4 w-4 text-[#FF5A1F] group-hover:text-white transition-colors duration-200" />
+                          <ArrowRight className="h-4 w-4 text-[#E76F51] group-hover:text-white transition-colors duration-200" />
                         </Link>
                       </div>
                     </div>
