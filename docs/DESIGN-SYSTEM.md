@@ -7,95 +7,80 @@
 
 ---
 
-## 2. Locked Master Color Palette
+# KreaitX Design System Foundation
 
-| Token Name | Hex Code | Visual Ratio | Primary Purpose |
-| :--- | :--- | :--- | :--- |
-| **Brand Navy** | `#003049` | 25–35% | Primary dark hero, CTA sections, active pills, deep contrast surfaces |
-| **Deep Blue** | `#14213D` | 15–20% | Elevated dark cards, secondary button hover, structure |
-| **Porcelain** | `#F7F8FA` | ~30% | Primary light section canvas, alternate cards, soft neutral surfaces |
-| **Clean White** | `#FFFFFF` | ~25% | Card surfaces, form inputs, primary page canvas, text on dark |
-| **Cyan Accent** | `#42C6D9` | 5–8% | Selective micro-accents, active badges, status indicators, pill buttons |
-| **Steel Neutral** | `#A8B3C2` | Restrained | Metadata labels, subtle dividers, muted borders |
-| **Charcoal Dark** | `#0B0F19` | 5–10% | High-contrast footer background, deepest dark surface |
-| **Body Slate** | `#334155` | Typography | Highly legible paragraph and body reading copy |
+## 1. Brand Identity & Purpose
+- **Brand Name**: KreaitX (Creative + IT)
+- **Positioning**: One connected creative technology partner for businesses that need ideas, execution, and digital growth under one roof.
+- **Location**: Peshawar, Khyber Pakhtunkhwa, Pakistan.
 
-### Non-Negotiable Constraint: Solid Surfaces Only
-- Zero CSS `background-image` declarations.
-- Zero decorative background photos, landscapes, video backgrounds, or pseudo-element background art.
-- Restrained CSS ambient radial glows (`bg-[#42C6D9]/10 blur-3xl pointer-events-none`) for depth.
+---
+
+## 2. Client-Approved Master Color Palette
+
+| Token Name | HEX | Target Distribution | Intended Use |
+| :--- | :--- | :---: | :--- |
+| **Pure White** | `#FFFFFF` | 55% | Main page backgrounds, clean content areas, and breathing space |
+| **Pale Peach** | `#FCEDE6` | 22% | Soft section backgrounds, subtle panels, and selected content surfaces |
+| **Vibrant Orange** | `#EC5D17` | 4% | Brand accents, primary CTA buttons, highlighted words, and selected interactive elements |
+| **Dark Grey** | `#333333` | 5% | Secondary dark surfaces, headings, and interface elements where appropriate |
+| **Light Gray** | `#E8DFD8` | 5% | Subtle borders, dividers, and separation between components |
+| **Dark Black** | `#111111` | 5% | Primarily text and footer only, as explicitly requested by the client |
+| **Supporting Neutral** | `#666666` | 4% | Restrained neutral variations and accessible supporting body text |
+
+### Color Application Rules
+- **Pure White (`#FFFFFF`)**: Primary canvas for a clean, spacious appearance. Major content areas remain visually uncluttered.
+- **Pale Peach (`#FCEDE6`)**: Alternating section canvas, subtle badges, interactive highlights.
+- **Vibrant Orange (`#EC5D17`)**: High-impact brand accent for primary buttons, highlighted text, and active indicators. Used selectively.
+- **Dark Grey (`#333333`)**: Secondary dark cards, headings, and interface accents.
+- **Light Gray (`#E8DFD8`)**: Subtle 1px borders and separators. Never heavy or noisy.
+- **Dark Black (`#111111`)**: Strictly restricted to body/heading text and footer background. Never used as a large hero background.
+- **Supporting Neutral (`#666666`)**: Secondary body copy, metadata, and timestamps.
 
 ### Visual Flow Rhythm (Homepage & Across Routes)
 ```
-CLEAN WHITE (#FFFFFF) / PORCELAIN (#F7F8FA) (Header/Navbar)
+PURE WHITE (#FFFFFF) (Header/Navbar)
         ↓
-BRAND NAVY HERO (#003049) / DEEP BLUE (#14213D)
+PURE WHITE HERO (#FFFFFF)
         ↓
-PORCELAIN DIFFERENTIATORS (#F7F8FA)
+PALE PEACH TRUST BAR (#FCEDE6)
         ↓
-CLEAN WHITE CONNECTED CAPABILITIES (#FFFFFF) / DARK NAVY (#003049)
+PURE WHITE SERVICES (#FFFFFF)
         ↓
-CLEAN WHITE INTERACTIVE ARCHITECTURE (#FFFFFF)
+PALE PEACH DIFFERENCE / STUDIO ARCHITECTURE (#FCEDE6)
         ↓
-PORCELAIN CASE STUDY BENCHMARKS (#F7F8FA)
+PURE WHITE FEATURED WORK (#FFFFFF)
         ↓
-CLEAN WHITE METHODOLOGY ROADMAP (#FFFFFF)
+PALE PEACH PROCESS (#FCEDE6)
         ↓
-PORCELAIN STUDIO WORKING PRINCIPLES (#F7F8FA)
+PURE WHITE TESTIMONIAL (#FFFFFF)
         ↓
-BRAND NAVY CTA SECTION (#003049)
+PURE WHITE CANVAS WITH PALE PEACH CARD CTA SECTION (#FCEDE6)
         ↓
-CHARCOAL FOOTER (#0B0F19)
+DARK BLACK FOOTER (#111111)
 ```
 
 ---
 
 ## 3. Typography Scale & Hierarchy
 
-- **Primary Body Sans**: `Manrope` (sans-serif, weights 400–800) — High legibility, editorial body copy, metadata, forms.
-- **Display Headings**: `Space Grotesk` (display, weights 600–700) — Confident, modern technical studio headlines.
-- **Editorial Emphasis Font**: `Manrope` / `Inter` (sans-serif, strict non-italic, weights 500–800) — Distinctive editorial flair for key conceptual phrases ("digital experiences", "without the mystery", "measurable impact").
+- **Headings**: `Manrope` (sans-serif, weights 600–800) — Confident, modern headlines.
+- **Body**: `Inter` (sans-serif, weights 400–600) — High legibility reading copy.
 - **Code & Metadata**: `ui-monospace` (mono) — Service indices (`01`), milestone tags, status badges.
-
-### Desktop Typographic Scale
-- **Hero Title**: `56–64px` / Line-height: `1.05` / Tracking: `-0.04em`
-- **H1 (Inner Pages)**: `52–60px` / Line-height: `1.06` / Tracking: `-0.04em`
-- **H2 (Sections)**: `40–52px` / Line-height: `1.06` / Tracking: `-0.04em`
-- **H3 (Cards / Steps)**: `20–28px` / Line-height: `1.2`
-- **Body Copy**: `16–18px` / Line-height: `1.65` / Text color: `#6B6560` (Warm Gray) or `#34312F` (Deep Warm Charcoal)
-- **Small Body / Meta**: `13–14px`
-- **Eyebrow**: `11–13px` / Uppercase / Letter spacing: `0.12em`
+- **Strict Rule**: Zero italic text anywhere across the entire website interface (`* { font-style: normal !important; }`).
 
 ---
 
-## 4. Spacing System (8px Baseline)
-- `8px` (`p-2`)
-- `16px` (`p-4`)
-- `24px` (`p-6`)
-- `32px` (`p-8`)
-- `48px` (`p-12`)
-- `64px` (`py-16`)
-- `80px` (`py-20`)
-- `112px` (`py-28`)
-- `128px` (`py-32`)
-
----
-
-## 5. UI Components
+## 4. UI Components
 
 ### Buttons
-- **Primary**: Primary Orange background (`#EC5D17`), White text, subtle `translateY(-2px)` on hover.
-- **Secondary**: Porcelain background (`#F7F5F0`), Soft Border (`#E5E1DA`), Deep Warm Charcoal text (`#34312F`).
-- **Dark**: Deep Warm Charcoal background (`#34312F`), Porcelain text (`#F7F5F0`).
-- **White**: Solid White background, Dark Blue text for dark hero and CTA sections.
-- **Radius**: `rounded-full` (44–52px height).
+- **Primary**: Vibrant Orange background (`#EC5D17`), hover (`#D44D0D`), White text.
+- **Secondary**: Pure White background (`#FFFFFF`), Light Gray border (`#E8DFD8`), Dark Black text (`#111111`), hover Pale Peach (`#FCEDE6`).
+- **Dark**: Dark Black background (`#111111`), White text, hover Vibrant Orange (`#EC5D17`).
 
-### Cards
-- **Border**: `rgba(20, 33, 61, 0.10)` on light, `rgba(245, 246, 242, 0.12)` on dark
-- **Radius**: `16–24px` (`rounded-2xl` / `rounded-3xl`)
-- **Shadow**: Clean ambient elevation (`shadow-subtle` / `shadow-card`), zero harsh neon glows.
+### Cards & Surfaces
+- **Border**: Light Gray (`#E8DFD8`).
+- **Radius**: `rounded-xl` or `rounded-2xl`.
+- **Shadow**: Clean subtle elevation (`shadow-xs` / `shadow-subtle`), zero exaggerated glows.
 
-### Motion Principles
-- Global transition timing: `cubic-bezier(0.22, 1, 0.36, 1)`
-- Staggered entrances: `500–650ms` duration, `translateY(20px) → translateY(0)`
 - Strict respect for `prefers-reduced-motion: reduce`.

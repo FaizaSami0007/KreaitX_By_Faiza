@@ -21,7 +21,7 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
     <section
       id="connected-capabilities"
       aria-labelledby="connected-capabilities-heading"
-      className="relative bg-[#34312F] text-white py-20 sm:py-28 lg:py-32 border-b border-white/10"
+      className="relative bg-[#FCEDE6] text-[#111111] py-20 sm:py-28 lg:py-32 border-b border-[#E8DFD8]"
     >
       <Container size="default" className="relative z-10 w-full max-w-[1320px]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
@@ -29,7 +29,7 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
           {/* Left Column */}
           <div className="lg:col-span-5 flex flex-col items-start text-left space-y-6 sm:space-y-7 sticky top-28">
             <Reveal delay={0.05} yOffset={12}>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-white/5 border border-white/10 text-[#EC5D17] text-xs font-mono font-bold uppercase tracking-wider">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-white border border-[#E8DFD8] text-[#EC5D17] text-xs font-mono font-bold uppercase tracking-wider shadow-2xs">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#EC5D17]" />
                 <span>CONNECTED CAPABILITIES</span>
               </div>
@@ -38,7 +38,7 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
             <Reveal delay={0.12} yOffset={18}>
               <h2
                 id="connected-capabilities-heading"
-                className="font-display text-4xl sm:text-5xl lg:text-[54px] font-bold text-white tracking-tight leading-[1.08]"
+                className="font-display text-4xl sm:text-5xl lg:text-[54px] font-bold text-[#111111] tracking-tight leading-[1.08]"
               >
                 Everything we build <br />
                 <span className="font-display font-bold text-[#EC5D17]">
@@ -48,7 +48,7 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
             </Reveal>
 
             <Reveal delay={0.18} yOffset={14}>
-              <p className="text-base sm:text-lg text-[#E5E1DA] leading-[1.7] font-sans font-normal">
+              <p className="text-base sm:text-lg text-[#666666] leading-[1.7] font-sans font-normal">
                 Strategy, creativity, and technology working together to create stronger outcomes for your business — unifying brand narrative, cinematic production, and high-performance software under one roof.
               </p>
             </Reveal>
@@ -64,7 +64,7 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
                 </a>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#EC5D17] hover:text-white py-2 transition-colors"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#111111] hover:text-[#EC5D17] py-2 transition-colors"
                 >
                   <span>Discuss Your Scope</span>
                   <ArrowRight className="h-4 w-4 text-[#EC5D17]" />
@@ -72,7 +72,7 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
               </div>
             </Reveal>
 
-            <div className="pt-6 border-t border-white/10 w-full text-xs font-mono text-white/50 uppercase tracking-wider">
+            <div className="pt-6 border-t border-[#E8DFD8] w-full text-xs font-mono text-[#666666] uppercase tracking-wider">
               Single-Source Delivery Model // Peshawar × Global
             </div>
           </div>
@@ -83,23 +83,23 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
               <Reveal key={service.id} delay={0.08 + idx * 0.04} yOffset={12}>
                 <a
                   href={service.href}
-                  className="group flex items-center justify-between p-5 sm:p-6 rounded-xl bg-[#2D2A28] border border-white/10 hover:border-[#EC5D17]/50 transition-all duration-150 block"
+                  className="group flex items-center justify-between p-5 sm:p-6 rounded-xl bg-white border border-[#E8DFD8] hover:border-[#EC5D17] shadow-xs transition-all duration-150 block"
                 >
                   <div className="flex items-start sm:items-center gap-4">
-                    <span className="font-mono text-xs sm:text-sm font-bold text-[#EC5D17] bg-white/5 border border-white/10 px-2.5 py-1 rounded-md shrink-0">
+                    <span className="font-mono text-xs sm:text-sm font-bold text-[#EC5D17] bg-[#FCEDE6] border border-[#E8DFD8] px-2.5 py-1 rounded-md shrink-0">
                       {service.number}
                     </span>
                     <div>
-                      <h3 className="font-display text-base sm:text-lg font-bold text-white group-hover:text-[#EC5D17] transition-colors">
+                      <h3 className="font-display text-base sm:text-lg font-bold text-[#111111] group-hover:text-[#EC5D17] transition-colors">
                         {service.name}
                       </h3>
-                      <p className="text-xs sm:text-sm text-[#E5E1DA] font-sans mt-0.5">
+                      <p className="text-xs sm:text-sm text-[#666666] font-sans mt-0.5">
                         {service.desc}
                       </p>
                     </div>
                   </div>
 
-                  <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-[#EC5D17] group-hover:border-[#EC5D17] group-hover:bg-[#EC5D17] group-hover:text-white transition-all duration-150 shrink-0 ml-4">
+                  <div className="w-8 h-8 rounded-full border border-[#E8DFD8] flex items-center justify-center text-[#EC5D17] group-hover:border-[#EC5D17] group-hover:bg-[#EC5D17] group-hover:text-white transition-all duration-150 shrink-0 ml-4">
                     <ArrowRight className="h-4 w-4" />
                   </div>
                 </a>

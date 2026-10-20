@@ -40,21 +40,21 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       primary:
         "bg-[#EC5D17] hover:bg-[#D44D0D] text-white shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#EC5D17]",
       navy:
-        "bg-[#34312F] hover:bg-[#433E3B] text-white hover:-translate-y-0.5 focus-visible:ring-[#34312F]",
+        "bg-[#111111] hover:bg-[#222222] text-white hover:-translate-y-0.5 focus-visible:ring-[#111111]",
       cyan:
         "bg-[#EC5D17] hover:bg-[#D44D0D] text-white font-semibold shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#EC5D17]",
       gradient:
-        "bg-[#34312F] hover:bg-[#433E3B] text-white hover:-translate-y-0.5 focus-visible:ring-[#34312F]",
+        "bg-[#111111] hover:bg-[#222222] text-white hover:-translate-y-0.5 focus-visible:ring-[#111111]",
       secondary:
-        "bg-white text-[#34312F] border border-[#E5E1DA] hover:border-[#34312F] hover:bg-[#F7F5F0] hover:-translate-y-0.5 shadow-subtle focus-visible:ring-[#34312F]",
+        "bg-white text-[#111111] border border-[#E8DFD8] hover:border-[#111111] hover:bg-[#FCEDE6] hover:-translate-y-0.5 shadow-subtle focus-visible:ring-[#111111]",
       outline:
-        "bg-transparent text-[#34312F] border border-[#E5E1DA] hover:border-[#34312F] hover:bg-white hover:-translate-y-0.5 focus-visible:ring-[#34312F]",
+        "bg-transparent text-[#111111] border border-[#E8DFD8] hover:border-[#111111] hover:bg-white hover:-translate-y-0.5 focus-visible:ring-[#111111]",
       dark:
-        "bg-[#34312F] text-white hover:bg-[#433E3B] hover:-translate-y-0.5 focus-visible:ring-[#34312F]",
+        "bg-[#111111] text-white hover:bg-[#222222] hover:-translate-y-0.5 focus-visible:ring-[#111111]",
       ghost:
-        "bg-transparent text-[#34312F] hover:text-[#EC5D17] hover:bg-[#FFF0E8] focus-visible:ring-[#34312F]",
+        "bg-transparent text-[#111111] hover:text-[#EC5D17] hover:bg-[#FCEDE6] focus-visible:ring-[#111111]",
       white:
-        "bg-white text-[#34312F] border border-[#E5E1DA] hover:border-[#34312F] hover:-translate-y-0.5 shadow-subtle focus-visible:ring-[#34312F]"
+        "bg-white text-[#111111] border border-[#E8DFD8] hover:border-[#111111] hover:-translate-y-0.5 shadow-subtle focus-visible:ring-[#111111]"
     };
 
     const sizeStyles = {
@@ -69,7 +69,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           "ml-2 h-4 w-4 transition-transform duration-200 ease-out group-hover:translate-x-1",
           variant === "primary" || variant === "gradient" || variant === "dark" || variant === "navy" || variant === "cyan"
             ? "text-white/90"
-            : "text-[#34312F] group-hover:text-[#EC5D17]",
+            : "text-[#111111] group-hover:text-[#EC5D17]",
           arrowPosition === "top-right" && "group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
         )}
         aria-hidden="true"

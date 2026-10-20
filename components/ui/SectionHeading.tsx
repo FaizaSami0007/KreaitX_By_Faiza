@@ -41,8 +41,8 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
               "inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-semibold uppercase tracking-[0.14em] transition-colors",
               withGradientEyebrow
                 ? isDark
-                  ? "bg-[#252220] text-white border border-white/10"
-                  : "bg-[#FFF0E8] text-[#EC5D17] border border-[#EC5D17]/20"
+                  ? "bg-[#111111] text-white border border-white/10"
+                  : "bg-[#FCEDE6] text-[#EC5D17] border border-[#EC5D17]/20"
                 : eyebrowColor || (isDark ? "text-[#EC5D17]" : "text-[#EC5D17]")
             )}
           >
@@ -55,7 +55,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
       <h2
         className={cn(
           "font-display text-[clamp(26px,3.2vw,44px)] font-bold tracking-tight leading-[1.12]",
-          isDark ? "text-white" : "text-[#34312F]"
+          isDark ? "text-white" : "text-[#111111]"
         )}
       >
         {title}
@@ -65,7 +65,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
         <p
           className={cn(
             "mt-3 sm:mt-4 text-base sm:text-lg leading-relaxed max-w-2xl font-sans font-normal",
-            isDark ? "text-[#E5E1DA]" : "text-[#6B6560]"
+            isDark ? "text-[#E8DFD8]" : "text-[#666666]"
           )}
         >
           {description}

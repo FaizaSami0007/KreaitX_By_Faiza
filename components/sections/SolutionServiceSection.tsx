@@ -32,8 +32,8 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
       aria-labelledby={`${service.id}-heading`}
       className={`scroll-mt-24 relative py-16 sm:py-24 lg:py-28 border-b overflow-hidden transition-colors duration-200 ${
         isDark
-          ? "bg-[#34312F] text-white border-white/10"
-          : "bg-[#F7F5F0] text-[#34312F] border-[#E5E1DA]"
+          ? "bg-[#111111] text-white border-white/10"
+          : "bg-white text-[#111111] border-[#E8DFD8]"
       }`}
     >
       <Container size="default" className="relative z-10 w-full max-w-[1400px] px-4 sm:px-6 lg:px-8">
@@ -42,8 +42,8 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
         <div
           className={`relative rounded-2xl border p-6 sm:p-10 lg:p-12 xl:p-14 transition-all duration-200 shadow-sm ${
             isDark
-              ? "bg-[#2D2A28] border-white/10"
-              : "bg-white border-[#E5E1DA]"
+              ? "bg-[#111111] border-white/10"
+              : "bg-white border-[#E8DFD8]"
           }`}
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-14 items-start">
@@ -66,7 +66,7 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                   <h2
                     id={`${service.id}-heading`}
                     className={`font-display text-[clamp(26px,3.5vw,46px)] font-bold tracking-tight leading-[1.14] ${
-                      isDark ? "text-white" : "text-[#34312F]"
+                      isDark ? "text-white" : "text-[#111111]"
                     }`}
                   >
                     {headline.prefix}{" "}
@@ -88,7 +88,7 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                 <Reveal delay={0.2} yOffset={14}>
                   <p
                     className={`text-base leading-relaxed font-sans font-normal ${
-                      isDark ? "text-[#E5E1DA]" : "text-[#6B6560]"
+                      isDark ? "text-[#E8DFD8]" : "text-[#666666]"
                     }`}
                   >
                     {service.description}
@@ -100,13 +100,13 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                   <div
                     className={`rounded-xl p-5 border transition-colors ${
                       isDark
-                        ? "bg-[#34312F] border-white/10"
-                        : "bg-[#F7F5F0] border-[#E5E1DA]"
+                        ? "bg-white/5 border-white/10"
+                        : "bg-[#FCEDE6]/50 border-[#E8DFD8]"
                     }`}
                   >
                     <p
                       className={`text-xs font-sans uppercase tracking-wider font-bold mb-1.5 flex items-center gap-2 ${
-                        isDark ? "text-white" : "text-[#34312F]"
+                        isDark ? "text-white" : "text-[#111111]"
                       }`}
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-[#EC5D17]" aria-hidden="true" />
@@ -114,7 +114,7 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                     </p>
                     <p
                       className={`text-sm leading-relaxed font-sans ${
-                        isDark ? "text-[#E5E1DA]" : "text-[#6B6560]"
+                        isDark ? "text-[#E8DFD8]" : "text-[#666666]"
                       }`}
                     >
                       {service.problemSolved}
@@ -127,7 +127,7 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                   <div className="pt-2">
                     <span
                       className={`text-xs font-sans uppercase tracking-wider font-bold block mb-2.5 ${
-                        isDark ? "text-white/60" : "text-[#6B6560]"
+                        isDark ? "text-white/60" : "text-[#666666]"
                       }`}
                     >
                       Connected With
@@ -149,8 +149,8 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                             href={targetHref}
                             className={`text-xs font-medium px-3.5 py-1.5 rounded-md border transition-colors duration-150 ${
                               isDark
-                                ? "text-white bg-white/5 hover:bg-[#34312F] hover:text-[#EC5D17] hover:border-[#EC5D17] border-white/10"
-                                : "text-[#34312F] bg-[#F7F5F0] hover:bg-[#34312F] hover:text-[#EC5D17] hover:border-[#34312F] border-[#E5E1DA]"
+                                ? "text-white bg-white/5 hover:bg-white/10 hover:text-[#EC5D17] hover:border-[#EC5D17] border-white/10"
+                                : "text-[#111111] bg-[#FCEDE6] hover:bg-[#111111] hover:text-[#EC5D17] hover:border-[#111111] border-[#E8DFD8]"
                             }`}
                           >
                             + {rel}
@@ -166,12 +166,12 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
               <Reveal delay={0.32} yOffset={14}>
                 <div
                   className={`pt-6 border-t flex flex-wrap items-center gap-3 ${
-                    isDark ? "border-white/10" : "border-[#E5E1DA]"
+                    isDark ? "border-white/10" : "border-[#E8DFD8]"
                   }`}
                 >
                   <Button
                     href={`/solutions/${service.id}`}
-                    variant="cyan"
+                    variant="primary"
                     size="md"
                     withArrow
                     className="w-full sm:w-auto font-bold"
@@ -183,7 +183,7 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                     className={`inline-flex items-center justify-center px-5 py-2.5 rounded-lg text-sm font-sans font-semibold transition-colors duration-150 min-h-[46px] w-full sm:w-auto ${
                       isDark
                         ? "text-white hover:text-[#EC5D17] bg-white/5 hover:bg-white/10 border border-white/15"
-                        : "text-[#34312F] hover:text-[#EC5D17] bg-[#F7F5F0] hover:bg-white border border-[#E5E1DA]"
+                        : "text-[#111111] hover:text-[#EC5D17] bg-[#FCEDE6] hover:bg-white border border-[#E8DFD8]"
                     }`}
                   >
                     Inquire for {service.title}
@@ -198,16 +198,14 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                 <div
                   className={`rounded-xl p-6 sm:p-8 lg:p-9 border shadow-xs flex flex-col justify-between space-y-8 ${
                     isDark
-                      ? "bg-[#34312F] border-white/10 text-white"
-                      : "bg-[#F7F5F0] border-[#E5E1DA] text-[#34312F]"
+                      ? "bg-white/5 border-white/10 text-white"
+                      : "bg-[#FCEDE6]/30 border-[#E8DFD8] text-[#111111]"
                   }`}
                 >
                   {/* What KreaitX Delivers */}
                   <div>
                     <h3
-                      className={`text-xs font-sans uppercase tracking-widest font-bold mb-4 flex items-center gap-2 ${
-                        isDark ? "text-[#EC5D17]" : "text-[#EC5D17]"
-                      }`}
+                      className="text-xs font-sans uppercase tracking-widest font-bold mb-4 flex items-center gap-2 text-[#EC5D17]"
                     >
                       <Layers className="h-4 w-4 text-[#EC5D17]" aria-hidden="true" />
                       What KreaitX Delivers
@@ -218,7 +216,7 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                         <li
                           key={item}
                           className={`flex items-start gap-3 text-sm font-medium ${
-                            isDark ? "text-[#E5E1DA]" : "text-[#34312F]"
+                            isDark ? "text-[#E8DFD8]" : "text-[#111111]"
                           }`}
                         >
                           <CheckCircle2
@@ -234,7 +232,7 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                   {/* Standard Workflow */}
                   <div
                     className={`pt-6 border-t ${
-                      isDark ? "border-white/10" : "border-[#E5E1DA]"
+                      isDark ? "border-white/10" : "border-[#E8DFD8]"
                     }`}
                   >
                     <h3
@@ -245,7 +243,7 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                     </h3>
                     <ol
                       className={`space-y-2 text-xs sm:text-sm ${
-                        isDark ? "text-[#E5E1DA]" : "text-[#6B6560]"
+                        isDark ? "text-[#E8DFD8]" : "text-[#666666]"
                       }`}
                     >
                       {service.workflow.map((step, sIdx) => (
@@ -264,7 +262,7 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                     className={`pt-5 border-t flex items-center justify-between text-xs ${
                       isDark
                         ? "border-white/10 text-white/50"
-                        : "border-[#E5E1DA] text-[#6B6560]"
+                        : "border-[#E8DFD8] text-[#666666]"
                     }`}
                   >
                     <span>Single-source collaborative delivery</span>

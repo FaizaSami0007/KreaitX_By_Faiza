@@ -33,7 +33,7 @@ export const EditorialHeading: React.FC<EditorialHeadingProps> = ({
       className={cn(
         "font-display font-semibold tracking-tight",
         sizeClasses[size],
-        isDark ? "text-white" : "text-[#34312F]",
+        isDark ? "text-white" : "text-[#111111]",
         className
       )}
     >

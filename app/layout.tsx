@@ -23,7 +23,7 @@ const inter = Inter({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#F7F5F0",
+  themeColor: "#FFFFFF",
   width: "device-width",
   initialScale: 1
 };
@@ -162,7 +162,7 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className="flex min-h-screen flex-col bg-[#F7F5F0] font-sans text-[#34312F] antialiased selection:bg-[#EC5D17] selection:text-white"
+        className="flex min-h-screen flex-col bg-white font-sans text-[#111111] antialiased selection:bg-[#EC5D17] selection:text-white"
       >
         <GoogleAnalytics />
         <Navbar />

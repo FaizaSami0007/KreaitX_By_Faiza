@@ -9,33 +9,35 @@ import { trackEvent } from "@/lib/analytics";
 import { ArrowUpRight } from "lucide-react";
 
 export interface CTASectionProps {
-  bg?: "light" | "dark" | "porcelain" | "white";
+  bg?: "light" | "dark" | "porcelain" | "white" | "peach";
   className?: string;
 }
 
 export const CTASection: React.FC<CTASectionProps> = ({
-  bg = "light",
+  bg = "white",
   className
 }) => {
-  const isDark = bg === "dark";
-  const bgClass = isDark
-    ? "bg-[#34312F] border-t border-white/10"
-    : bg === "white"
-    ? "bg-white border-t border-[#E5E1DA]"
-    : "bg-[#F7F5F0] border-t border-[#E5E1DA]";
+  const isPeach = bg === "peach";
+  const bgClass = isPeach
+    ? "bg-[#FCEDE6] border-t border-[#E8DFD8]"
+    : "bg-white border-t border-[#E8DFD8]";
+
+  const cardClass = isPeach
+    ? "bg-white text-[#111111] border border-[#E8DFD8]"
+    : "bg-[#FCEDE6] text-[#111111] border border-[#E8DFD8]";
 
   return (
     <section className={`${bgClass} py-20 sm:py-28 lg:py-32 relative ${className || ""}`}>
       <Container size="default" className="relative z-10 max-w-[1320px]">
         <Reveal yOffset={20}>
-          <div className="relative overflow-hidden rounded-2xl bg-[#34312F] text-white p-8 sm:p-14 lg:p-20 border border-white/10 shadow-xl">
+          <div className={`relative overflow-hidden rounded-2xl p-8 sm:p-14 lg:p-20 shadow-sm ${cardClass}`}>
             <div className="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#EC5D17] px-3.5 py-1.5 rounded-md bg-white/5 border border-white/10 mb-6">
+              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#EC5D17] px-3.5 py-1.5 rounded-md bg-white border border-[#E8DFD8] mb-6 shadow-2xs">
                 <span className="w-2 h-2 rounded-full bg-[#EC5D17]" />
                 <span>Next Step</span>
               </span>
 
-              <h2 className="font-display text-[clamp(1.85rem,4.5vw,3.75rem)] font-bold text-white tracking-tight leading-[1.12]">
+              <h2 className="font-display text-[clamp(1.85rem,4.5vw,3.75rem)] font-bold text-[#111111] tracking-tight leading-[1.12]">
                 Ready to build{" "}
                 <span className="font-display font-bold text-[#EC5D17]">
                   what&apos;s next
@@ -43,14 +45,14 @@ export const CTASection: React.FC<CTASectionProps> = ({
                 ?
               </h2>
 
-              <p className="mt-6 text-base sm:text-lg text-[#E5E1DA] leading-relaxed font-sans font-normal max-w-2xl">
+              <p className="mt-6 text-base sm:text-lg text-[#666666] leading-relaxed font-sans font-normal max-w-2xl">
                 Tell us what you&apos;re working on. We&apos;ll evaluate the opportunity, technical scope, and practical delivery timeline together.
               </p>
 
               <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
                 <Button
                   href="/contact"
-                  variant="cyan"
+                  variant="primary"
                   size="lg"
                   withArrow
                   onClick={() =>
@@ -74,14 +76,14 @@ export const CTASection: React.FC<CTASectionProps> = ({
                       location: "global_cta_section"
                     })
                   }
-                  className="w-full sm:w-auto bg-white/5 text-white border-white/15 hover:border-white/40 hover:bg-white/10 min-h-[52px]"
+                  className="w-full sm:w-auto bg-white text-[#111111] border-[#E8DFD8] hover:border-[#111111] hover:bg-white min-h-[52px]"
                 >
                   <span>{siteConfig.contact.email}</span>
-                  <ArrowUpRight className="ml-1.5 h-4 w-4" />
+                  <ArrowUpRight className="ml-1.5 h-4 w-4 text-[#111111]" />
                 </Button>
               </div>
 
-              <p className="mt-8 text-xs font-mono text-[#E5E1DA]">
+              <p className="mt-8 text-xs font-mono text-[#666666]">
                 Direct consultation with senior leads • Studio location: {siteConfig.location.formatted}
               </p>
             </div>

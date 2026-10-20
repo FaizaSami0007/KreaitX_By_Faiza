@@ -25,7 +25,7 @@ const TransparentProcessIcon: React.FC<{ className?: string }> = ({
   </svg>
 );
 
-// KreaitX Minimal Principles: Brand Orange (#EC5D17), Porcelain (#F7F5F0), Deep Warm Charcoal (#34312F)
+// KreaitX Minimal Principles: Brand Orange (#EC5D17), Pale Peach (#FCEDE6), Dark Black (#111111)
 const principles = [
   {
     id: "01",
@@ -34,8 +34,8 @@ const principles = [
     title: "One Connected Team",
     description: "Strategy, design and engineering working as one.",
     icon: Users,
-    defaultBadge: "bg-[#FFF0E8] border border-[#E5E1DA] text-[#EC5D17]",
-    hoverBadge: "bg-[#34312F] text-[#EC5D17] ring-2 ring-[#EC5D17]/30 shadow-sm"
+    defaultBadge: "bg-white border border-[#E8DFD8] text-[#EC5D17]",
+    hoverBadge: "bg-[#111111] text-[#EC5D17] ring-2 ring-[#EC5D17]/30 shadow-sm"
   },
   {
     id: "02",
@@ -44,8 +44,8 @@ const principles = [
     title: "Creative + Technical",
     description: "Designers who understand code. Engineers with an eye for design.",
     icon: Lightbulb,
-    defaultBadge: "bg-[#FFF0E8] border border-[#E5E1DA] text-[#EC5D17]",
-    hoverBadge: "bg-[#34312F] text-[#EC5D17] ring-2 ring-[#EC5D17]/30 shadow-sm"
+    defaultBadge: "bg-white border border-[#E8DFD8] text-[#EC5D17]",
+    hoverBadge: "bg-[#111111] text-[#EC5D17] ring-2 ring-[#EC5D17]/30 shadow-sm"
   },
   {
     id: "03",
@@ -54,8 +54,8 @@ const principles = [
     title: "Business-Centered",
     description: "Every solution is built around real business outcomes.",
     icon: Target,
-    defaultBadge: "bg-[#FFF0E8] border border-[#E5E1DA] text-[#EC5D17]",
-    hoverBadge: "bg-[#34312F] text-[#EC5D17] ring-2 ring-[#EC5D17]/30 shadow-sm"
+    defaultBadge: "bg-white border border-[#E8DFD8] text-[#EC5D17]",
+    hoverBadge: "bg-[#111111] text-[#EC5D17] ring-2 ring-[#EC5D17]/30 shadow-sm"
   },
   {
     id: "04",
@@ -64,8 +64,8 @@ const principles = [
     title: "End-to-End Continuity",
     description: "From discovery to deployment, our senior team stays with you.",
     icon: Layers,
-    defaultBadge: "bg-[#FFF0E8] border border-[#E5E1DA] text-[#EC5D17]",
-    hoverBadge: "bg-[#34312F] text-[#EC5D17] ring-2 ring-[#EC5D17]/30 shadow-sm"
+    defaultBadge: "bg-white border border-[#E8DFD8] text-[#EC5D17]",
+    hoverBadge: "bg-[#111111] text-[#EC5D17] ring-2 ring-[#EC5D17]/30 shadow-sm"
   },
   {
     id: "05",
@@ -74,8 +74,8 @@ const principles = [
     title: "Transparent Process",
     description: "Clear two-week milestones, transparent deliverables, zero ambiguity.",
     icon: TransparentProcessIcon,
-    defaultBadge: "bg-[#FFF0E8] border border-[#E5E1DA] text-[#EC5D17]",
-    hoverBadge: "bg-[#34312F] text-[#EC5D17] ring-2 ring-[#EC5D17]/30 shadow-sm"
+    defaultBadge: "bg-white border border-[#E8DFD8] text-[#EC5D17]",
+    hoverBadge: "bg-[#111111] text-[#EC5D17] ring-2 ring-[#EC5D17]/30 shadow-sm"
   },
   {
     id: "06",
@@ -84,8 +84,8 @@ const principles = [
     title: "Human Collaboration",
     description: "Direct collaboration with senior practitioners. Zero account layers.",
     icon: Heart,
-    defaultBadge: "bg-[#FFF0E8] border border-[#E5E1DA] text-[#EC5D17]",
-    hoverBadge: "bg-[#34312F] text-[#EC5D17] ring-2 ring-[#EC5D17]/30 shadow-sm"
+    defaultBadge: "bg-white border border-[#E8DFD8] text-[#EC5D17]",
+    hoverBadge: "bg-[#111111] text-[#EC5D17] ring-2 ring-[#EC5D17]/30 shadow-sm"
   }
 ];
 
@@ -120,7 +120,7 @@ const ConnectingTimelineGraphic: React.FC<{ activeColumn: 1 | 2 | 3 | null }> = 
           y1="60"
           x2="980"
           y2="60"
-          stroke="#E5E1DA"
+          stroke="#E8DFD8"
           strokeWidth="1.5"
           className="transition-opacity duration-300"
         />
@@ -144,7 +144,7 @@ const ConnectingTimelineGraphic: React.FC<{ activeColumn: 1 | 2 | 3 | null }> = 
           />
           <path
             d="M 120 104 C 120 72, 165 60, 220 60"
-            stroke="#34312F"
+            stroke="#111111"
             strokeWidth={isCol1Active ? "2.5" : "1.5"}
             strokeLinecap="round"
             className="transition-all duration-300"
@@ -154,7 +154,7 @@ const ConnectingTimelineGraphic: React.FC<{ activeColumn: 1 | 2 | 3 | null }> = 
             cx="220"
             cy="60"
             r={isCol1Active ? "6.5" : "5"}
-            fill="#34312F"
+            fill="#111111"
             className="transition-all duration-300"
           />
           <circle
@@ -176,7 +176,7 @@ const ConnectingTimelineGraphic: React.FC<{ activeColumn: 1 | 2 | 3 | null }> = 
             cx="150"
             cy="90"
             r={isCol1Active ? "3.5" : "2.5"}
-            fill="#34312F"
+            fill="#111111"
             className="transition-all duration-300"
           />
         </g>
@@ -213,7 +213,7 @@ const ConnectingTimelineGraphic: React.FC<{ activeColumn: 1 | 2 | 3 | null }> = 
             cx="600"
             cy="26"
             r={isCol2Active ? "3.5" : "2.5"}
-            fill="#34312F"
+            fill="#111111"
             className="transition-all duration-300"
           />
           <circle
@@ -239,7 +239,7 @@ const ConnectingTimelineGraphic: React.FC<{ activeColumn: 1 | 2 | 3 | null }> = 
             cx="980"
             cy="60"
             r={isCol3Active ? "6.5" : "5"}
-            fill="#34312F"
+            fill="#111111"
             className="transition-all duration-300"
           />
           <circle
@@ -258,7 +258,7 @@ const ConnectingTimelineGraphic: React.FC<{ activeColumn: 1 | 2 | 3 | null }> = 
           />
           <path
             d="M 980 60 C 1035 60, 1080 72, 1080 104"
-            stroke="#34312F"
+            stroke="#111111"
             strokeWidth={isCol3Active ? "2.5" : "1.5"}
             strokeLinecap="round"
             className="transition-all duration-300"
@@ -275,7 +275,7 @@ const ConnectingTimelineGraphic: React.FC<{ activeColumn: 1 | 2 | 3 | null }> = 
             cx="1050"
             cy="90"
             r={isCol3Active ? "3.5" : "2.5"}
-            fill="#34312F"
+            fill="#111111"
             className="transition-all duration-300"
           />
         </g>
@@ -342,8 +342,8 @@ const PrincipleItem: React.FC<PrincipleItemProps> = ({
               isHovered
                 ? "text-[#EC5D17] border-b-2 border-[#EC5D17]"
                 : isMuted
-                ? "text-[#6B6560]/60 border-b border-[#E5E1DA]"
-                : "text-[#34312F] border-b-[1.5px] border-[#EC5D17]/40"
+                ? "text-[#666666]/60 border-b border-[#E8DFD8]"
+                : "text-[#111111] border-b-[1.5px] border-[#EC5D17]/40"
             }`}
           >
             {item.number}
@@ -354,7 +354,7 @@ const PrincipleItem: React.FC<PrincipleItemProps> = ({
               isHovered
                 ? item.hoverBadge
                 : isMuted
-                ? "bg-white text-[#6B6560] border border-[#E5E1DA]"
+                ? "bg-white text-[#666666] border border-[#E8DFD8]"
                 : item.defaultBadge
             }`}
           >
@@ -363,7 +363,7 @@ const PrincipleItem: React.FC<PrincipleItemProps> = ({
                 isHovered
                   ? "text-[#EC5D17]"
                   : isMuted
-                  ? "text-[#6B6560]"
+                  ? "text-[#666666]"
                   : "text-inherit"
               }`}
             />
@@ -376,8 +376,8 @@ const PrincipleItem: React.FC<PrincipleItemProps> = ({
             isHovered
               ? "text-[#EC5D17]"
               : isMuted
-              ? "text-[#6B6560]"
-              : "text-[#34312F]"
+              ? "text-[#666666]"
+              : "text-[#111111]"
           }`}
         >
           {item.title}
@@ -387,10 +387,10 @@ const PrincipleItem: React.FC<PrincipleItemProps> = ({
         <p
           className={`text-[13px] sm:text-[14px] leading-relaxed font-sans font-normal max-w-[320px] transition-colors duration-300 ${
             isHovered
-              ? "text-[#34312F] font-medium"
+              ? "text-[#111111] font-medium"
               : isMuted
-              ? "text-[#6B6560]/70"
-              : "text-[#6B6560]"
+              ? "text-[#666666]/70"
+              : "text-[#666666]"
           }`}
         >
           {item.description}
@@ -411,7 +411,7 @@ export const Difference: React.FC = () => {
     <section
       id="difference"
       aria-labelledby="difference-heading"
-      className="relative bg-[#F7F5F0] text-[#34312F] py-20 sm:py-28 lg:py-32 border-b border-[#E5E1DA] overflow-hidden"
+      className="relative bg-[#FCEDE6] text-[#111111] py-20 sm:py-28 lg:py-32 border-b border-[#E8DFD8] overflow-hidden"
     >
       <Container size="default" className="relative z-10 w-full max-w-[1320px]">
         {/* Section Header (Centered) */}
@@ -432,7 +432,7 @@ export const Difference: React.FC = () => {
               description="A disciplined creative technology approach engineered to eliminate agency ambiguity, align creative storytelling with code, and protect commercial outcomes."
             />
 
-            <div className="mt-5 inline-flex items-center gap-2 text-xs font-mono text-[#EC5D17] bg-[#FFF0E8] px-4 py-1.5 rounded-md border border-[#E5E1DA]">
+            <div className="mt-5 inline-flex items-center gap-2 text-xs font-mono text-[#EC5D17] bg-white px-4 py-1.5 rounded-md border border-[#E8DFD8]">
               <span className="w-2 h-2 rounded-full bg-[#EC5D17]" />
               <span className="font-bold tracking-wider">SIX GUIDING PRINCIPLES</span>
             </div>
@@ -494,7 +494,7 @@ export const Difference: React.FC = () => {
                 onHoverEnd={() => setHoveredId(null)}
               />
               {idx < principles.length - 1 && (
-                <div className="pt-8 border-b border-[#E5E1DA]" />
+                <div className="pt-8 border-b border-[#E8DFD8]" />
               )}
             </div>
           ))}

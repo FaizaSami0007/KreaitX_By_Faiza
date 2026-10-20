@@ -7,7 +7,7 @@ import { CheckCircle2 } from "lucide-react";
 
 export const Testimonial: React.FC = () => {
   return (
-    <section id="principles" className="relative overflow-hidden bg-[#F7F5F0] py-20 sm:py-28 lg:py-32 border-b border-[#E5E1DA] text-[#34312F]">
+    <section id="principles" className="relative overflow-hidden bg-white py-20 sm:py-28 lg:py-32 border-b border-[#E8DFD8] text-[#111111]">
       <Container size="default" className="max-w-[1320px]">
         <Reveal yOffset={16}>
           <div className="max-w-3xl mb-16 sm:mb-20">
@@ -31,21 +31,21 @@ export const Testimonial: React.FC = () => {
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {trustPrinciples.map((item, idx) => (
             <StaggerItem key={item.title}>
-              <div className="group rounded-xl bg-white p-6 sm:p-8 lg:p-10 border border-[#E5E1DA] shadow-sm hover:border-[#EC5D17] h-full flex flex-col justify-between transition-all duration-200">
+              <div className="group rounded-xl bg-white p-6 sm:p-8 lg:p-10 border border-[#E8DFD8] shadow-sm hover:border-[#EC5D17] h-full flex flex-col justify-between transition-all duration-200">
                 <div>
-                  <span className="text-xs font-mono font-bold text-[#EC5D17] px-3 py-1 rounded-md bg-[#FFF0E8] border border-[#E5E1DA] inline-block mb-4 uppercase tracking-wider">
+                  <span className="text-xs font-mono font-bold text-[#EC5D17] px-3 py-1 rounded-md bg-[#FCEDE6] border border-[#E8DFD8] inline-block mb-4 uppercase tracking-wider">
                     Principle 0{idx + 1}
                   </span>
-                  <h3 className="text-2xl font-display font-bold text-[#34312F] tracking-tight mb-3 group-hover:text-[#EC5D17] transition-colors">
+                  <h3 className="text-2xl font-display font-bold text-[#111111] tracking-tight mb-3 group-hover:text-[#EC5D17] transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-base text-[#6B6560] leading-relaxed font-sans font-normal">
+                  <p className="text-base text-[#666666] leading-relaxed font-sans font-normal">
                     {item.description}
                   </p>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-[#E5E1DA] flex items-center justify-between text-xs sm:text-sm text-[#6B6560]">
-                  <span className="font-medium text-[#34312F]">Studio Standard</span>
+                <div className="mt-8 pt-6 border-t border-[#E8DFD8] flex items-center justify-between text-xs sm:text-sm text-[#666666]">
+                  <span className="font-medium text-[#111111]">Studio Standard</span>
                   <span className="inline-flex items-center gap-1.5 text-[#EC5D17] font-semibold">
                     <CheckCircle2 className="h-4 w-4 text-[#EC5D17]" />
                     KreaitX Practice

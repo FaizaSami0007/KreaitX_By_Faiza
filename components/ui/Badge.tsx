@@ -18,15 +18,15 @@ export const Badge: React.FC<BadgeProps> = ({
   ...props
 }) => {
   const variantStyles = {
-    default: "bg-[#FFF0E8] text-[#EC5D17] border border-[#EC5D17]/20",
-    gradient: "bg-[#34312F] text-white border border-white/10",
-    outline: "bg-transparent text-[#6B6560] border border-[#E5E1DA]",
+    default: "bg-[#FCEDE6] text-[#EC5D17] border border-[#EC5D17]/20",
+    gradient: "bg-[#111111] text-white border border-white/10",
+    outline: "bg-transparent text-[#666666] border border-[#E8DFD8]",
     purple: "bg-[#EC5D17] text-white border border-[#EC5D17]",
-    cyan: "bg-[#FFF0E8] text-[#EC5D17] border border-[#EC5D17]/30",
-    dark: "bg-[#34312F] text-white border border-white/10",
-    muted: "bg-[#F7F5F0] text-[#6B6560] border border-[#E5E1DA]",
-    navy: "bg-[#34312F] text-white border border-white/10",
-    porcelain: "bg-[#F7F5F0] text-[#34312F] border border-[#E5E1DA]"
+    cyan: "bg-[#FCEDE6] text-[#EC5D17] border border-[#EC5D17]/30",
+    dark: "bg-[#111111] text-white border border-white/10",
+    muted: "bg-[#FCEDE6] text-[#666666] border border-[#E8DFD8]",
+    navy: "bg-[#111111] text-white border border-white/10",
+    porcelain: "bg-[#FCEDE6] text-[#111111] border border-[#E8DFD8]"
   };
 
   const sizeStyles = {
