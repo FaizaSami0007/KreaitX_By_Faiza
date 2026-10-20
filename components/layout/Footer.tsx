@@ -2,22 +2,15 @@
 
 import React from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Linkedin, Instagram, Twitter, Github } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { servicesData, siteConfig } from "@/data/siteData";
 
 export const Footer: React.FC = () => {
-  const pathname = usePathname();
-  const isContactPage = pathname === "/contact" || pathname?.startsWith("/contact");
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer
-      className={`text-[#34312F] pt-8 sm:pt-10 border-t border-[#E5E1DA] overflow-hidden transition-colors duration-200 ${
-        isContactPage ? "bg-[#FDF5F0]" : "bg-[#F7F5F0]"
-      }`}
-    >
+    <footer className="text-[#34312F] pt-8 sm:pt-10 border-t border-[#E5E1DA] overflow-hidden transition-colors duration-200 bg-[#FDF5F0]">
       <Container size="default">
         {/* ========================================================= */}
         {/* 1. TOP CONTACT BANNER (Compact, low-height sleek strip)  */}
