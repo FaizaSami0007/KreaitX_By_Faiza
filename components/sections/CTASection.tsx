@@ -30,7 +30,7 @@ export const CTASection: React.FC<CTASectionProps> = ({
     <section className={`${bgClass} py-20 sm:py-28 lg:py-32 relative ${className || ""}`}>
       <Container size="default" className="relative z-10 max-w-[1320px]">
         <Reveal yOffset={20}>
-          <div className={`relative overflow-hidden rounded-2xl p-8 sm:p-14 lg:p-20 shadow-sm ${cardClass}`}>
+          <div className={`relative overflow-hidden rounded-2xl p-6 sm:p-14 lg:p-20 shadow-sm ${cardClass}`}>
             <div className="relative z-10 max-w-3xl mx-auto text-center flex flex-col items-center">
               <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#EC5D17] px-3.5 py-1.5 rounded-md bg-white border border-[#E8DFD8] mb-6 shadow-2xs">
                 <span className="w-2 h-2 rounded-full bg-[#EC5D17]" />
@@ -49,7 +49,7 @@ export const CTASection: React.FC<CTASectionProps> = ({
                 Tell us what you&apos;re working on. We&apos;ll evaluate the opportunity, technical scope, and practical delivery timeline together.
               </p>
 
-              <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+              <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3.5 sm:gap-4 w-full sm:w-auto max-w-full">
                 <Button
                   href="/contact"
                   variant="primary"
@@ -61,7 +61,7 @@ export const CTASection: React.FC<CTASectionProps> = ({
                       cta_text: "Start a Conversation"
                     })
                   }
-                  className="w-full sm:w-auto font-bold min-h-[52px]"
+                  className="w-full sm:w-auto font-bold min-h-[52px] px-6 sm:px-7 whitespace-nowrap justify-center shadow-brand-button"
                 >
                   Start a Project
                 </Button>
@@ -76,10 +76,15 @@ export const CTASection: React.FC<CTASectionProps> = ({
                       location: "global_cta_section"
                     })
                   }
-                  className="w-full sm:w-auto bg-white text-[#111111] border-[#E8DFD8] hover:border-[#111111] hover:bg-white min-h-[52px]"
+                  className="w-full sm:w-auto bg-white text-[#111111] border-[#E8DFD8] hover:border-[#111111] hover:bg-white min-h-[52px] px-5 sm:px-7 whitespace-nowrap justify-center shadow-subtle [&>span]:inline-flex [&>span]:items-center [&>span]:justify-center"
                 >
-                  <span>{siteConfig.contact.email}</span>
-                  <ArrowUpRight className="ml-1.5 h-4 w-4 text-[#111111]" />
+                  <span className="inline-flex items-center justify-center gap-2 whitespace-nowrap">
+                    <span>{siteConfig.contact.email}</span>
+                    <ArrowUpRight
+                      className="h-4 w-4 shrink-0 text-[#111111] transition-transform duration-200 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                      aria-hidden="true"
+                    />
+                  </span>
                 </Button>
               </div>
 
