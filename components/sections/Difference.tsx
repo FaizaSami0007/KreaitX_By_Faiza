@@ -411,12 +411,12 @@ export const Difference: React.FC = () => {
     <section
       id="difference"
       aria-labelledby="difference-heading"
-      className="relative bg-white text-[#111111] py-20 sm:py-28 lg:py-32 border-b border-[#E8DFD8] overflow-hidden"
+      className="relative bg-white text-[#111111] min-h-screen flex flex-col justify-center py-16 sm:py-20 lg:py-24 border-b border-[#E8DFD8] overflow-hidden"
     >
-      <Container size="default" className="relative z-10 w-full max-w-[1320px]">
+      <Container size="default" className="relative z-10 w-full max-w-[1320px] my-auto">
         {/* Section Header (Centered) */}
         <Reveal yOffset={16}>
-          <div className="flex flex-col items-center text-center mx-auto max-w-3xl mb-14 sm:mb-20">
+          <div className="flex flex-col items-center text-center mx-auto max-w-3xl mb-10 sm:mb-14 lg:mb-16">
             <SectionHeading
               align="center"
               eyebrow="Studio Philosophy"
