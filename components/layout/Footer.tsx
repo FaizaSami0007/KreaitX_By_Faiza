@@ -10,25 +10,8 @@ export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="text-[#34312F] pt-8 sm:pt-10 border-t border-[#E5E1DA] overflow-hidden transition-colors duration-200 bg-[#FDF5F0]">
+    <footer className="text-[#34312F] pt-10 sm:pt-14 border-t border-[#E5E1DA] overflow-hidden transition-colors duration-200 bg-[#FDF5F0]">
       <Container size="default">
-        {/* ========================================================= */}
-        {/* 1. TOP CONTACT BANNER (Compact, low-height sleek strip)  */}
-        {/* ========================================================= */}
-        <div className="rounded-xl bg-[#EC5D17] text-white py-3 sm:py-3.5 px-5 sm:px-8 mb-8 sm:mb-10 shadow-xs">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
-            <h3 className="font-display text-base sm:text-lg font-bold text-white tracking-tight">
-              Ready to start a project?
-            </h3>
-
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-4 py-1.5 rounded-lg text-xs font-bold text-[#EC5D17] bg-white hover:bg-[#F7F5F0] transition-all duration-200 shadow-2xs focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white shrink-0"
-            >
-              Inquire Online →
-            </Link>
-          </div>
-        </div>
 
         {/* ========================================================= */}
         {/* 2. MAIN FOOTER CONTENT COLUMNS (Compact, clean spacing)   */}
