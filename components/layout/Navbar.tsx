@@ -54,7 +54,7 @@ export const Navbar: React.FC = () => {
     <>
       <header
         className={cn(
-          "sticky top-0 z-40 w-full transition-all duration-200 bg-[#F7F5F0]/95 backdrop-blur-md",
+          "sticky top-0 z-40 w-full transition-all duration-200 bg-white/95 backdrop-blur-md",
           scrolled
             ? "border-b border-[#E5E1DA] shadow-sm py-3"
             : "border-b border-[#E5E1DA]/80 py-4"
@@ -138,13 +138,13 @@ export const Navbar: React.FC = () => {
         <div
           id="mobile-menu-drawer"
           ref={drawerRef}
-          className="fixed inset-0 z-[100] flex flex-col bg-[#F7F5F0] lg:hidden animate-in fade-in duration-200"
+          className="fixed inset-0 z-[100] flex flex-col bg-white lg:hidden animate-in fade-in duration-200"
           role="dialog"
           aria-modal="true"
           aria-label="Mobile Navigation Menu"
         >
           {/* Top Bar matching header */}
-          <div className="flex items-center justify-between px-6 py-4 border-b border-[#E5E1DA] bg-[#F7F5F0] shrink-0">
+          <div className="flex items-center justify-between px-6 py-4 border-b border-[#E5E1DA] bg-white shrink-0">
             <Link
               href="/"
               onClick={() => setMobileMenuOpen(false)}
