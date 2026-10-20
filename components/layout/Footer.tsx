@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
   return (
     <footer
       className={`text-[#34312F] pt-8 sm:pt-10 border-t border-[#E5E1DA] overflow-hidden transition-colors duration-200 ${
-        isContactPage ? "bg-[#FCEDE6]" : "bg-[#F7F5F0]"
+        isContactPage ? "bg-[#FDF5F0]" : "bg-[#F7F5F0]"
       }`}
     >
       <Container size="default">
