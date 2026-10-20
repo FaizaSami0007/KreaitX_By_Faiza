@@ -137,7 +137,7 @@ export const Footer: React.FC = () => {
               <p>
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="font-medium text-[#34312F] underline underline-offset-4 hover:text-[#EC5D17] transition-colors"
+                  className="font-medium text-[#34312F] hover:text-[#EC5D17] transition-colors no-underline"
                 >
                   {siteConfig.contact.email}
                 </a>
