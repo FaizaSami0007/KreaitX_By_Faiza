@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { siteConfig } from "@/data/siteData";
 import { trackEvent } from "@/lib/analytics";
-import { ArrowUpRight } from "lucide-react";
 
 export interface CTASectionProps {
   bg?: "light" | "dark" | "porcelain" | "white" | "peach";
@@ -70,21 +69,17 @@ export const CTASection: React.FC<CTASectionProps> = ({
                   href={`mailto:${siteConfig.contact.email}`}
                   variant="secondary"
                   size="lg"
+                  withArrow
+                  arrowPosition="top-right"
                   onClick={() =>
                     trackEvent("direct_contact_click", {
                       channel: "email",
                       location: "global_cta_section"
                     })
                   }
-                  className="w-full sm:w-auto bg-white text-[#111111] border-[#E8DFD8] hover:border-[#111111] hover:bg-white min-h-[52px] px-5 sm:px-7 whitespace-nowrap justify-center shadow-subtle [&>span]:inline-flex [&>span]:items-center [&>span]:justify-center"
+                  className="w-full sm:w-auto bg-white text-[#111111] border-[#E8DFD8] hover:border-[#111111] hover:bg-white min-h-[52px] px-6 sm:px-7 whitespace-nowrap justify-center shadow-subtle"
                 >
-                  <span className="inline-flex items-center justify-center gap-2 whitespace-nowrap">
-                    <span>{siteConfig.contact.email}</span>
-                    <ArrowUpRight
-                      className="h-4 w-4 shrink-0 text-[#111111] transition-transform duration-200 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                      aria-hidden="true"
-                    />
-                  </span>
+                  {siteConfig.contact.email}
                 </Button>
               </div>
 

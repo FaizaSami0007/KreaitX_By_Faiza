@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -64,22 +64,33 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     };
 
     const arrowElement = withArrow && (
-      <ArrowRight
-        className={cn(
-          "ml-2 h-4 w-4 transition-transform duration-200 ease-out group-hover:translate-x-1",
-          variant === "primary" || variant === "gradient" || variant === "dark" || variant === "navy" || variant === "cyan"
-            ? "text-white/90"
-            : "text-[#111111] group-hover:text-[#EC5D17]",
-          arrowPosition === "top-right" && "group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-        )}
-        aria-hidden="true"
-      />
+      arrowPosition === "top-right" ? (
+        <ArrowUpRight
+          className={cn(
+            "ml-2 h-4 w-4 shrink-0 transition-transform duration-200 ease-out group-hover:translate-x-0.5 group-hover:-translate-y-0.5",
+            variant === "primary" || variant === "gradient" || variant === "dark" || variant === "navy" || variant === "cyan"
+              ? "text-white/90"
+              : "text-[#111111] group-hover:text-[#EC5D17]"
+          )}
+          aria-hidden="true"
+        />
+      ) : (
+        <ArrowRight
+          className={cn(
+            "ml-2 h-4 w-4 shrink-0 transition-transform duration-200 ease-out group-hover:translate-x-1",
+            variant === "primary" || variant === "gradient" || variant === "dark" || variant === "navy" || variant === "cyan"
+              ? "text-white/90"
+              : "text-[#111111] group-hover:text-[#EC5D17]"
+          )}
+          aria-hidden="true"
+        />
+      )
     );
 
     const content = (
       <>
-        {icon && <span className="mr-2 inline-flex items-center">{icon}</span>}
-        <span>{children}</span>
+        {icon && <span className="mr-2 inline-flex items-center shrink-0">{icon}</span>}
+        <span className="inline-flex items-center justify-center gap-1.5 whitespace-nowrap">{children}</span>
         {arrowElement}
       </>
     );
