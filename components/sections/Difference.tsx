@@ -34,7 +34,7 @@ const principles = [
     title: "One Connected Team",
     description: "Strategy, design and engineering working as one.",
     icon: Users,
-    defaultBadge: "bg-white border border-[#E8DFD8] text-[#EC5D17]",
+    defaultBadge: "bg-[#FCEDE6] border border-[#E8DFD8] text-[#EC5D17]",
     hoverBadge: "bg-[#111111] text-[#EC5D17] ring-2 ring-[#EC5D17]/30 shadow-sm"
   },
   {
@@ -44,7 +44,7 @@ const principles = [
     title: "Creative + Technical",
     description: "Designers who understand code. Engineers with an eye for design.",
     icon: Lightbulb,
-    defaultBadge: "bg-white border border-[#E8DFD8] text-[#EC5D17]",
+    defaultBadge: "bg-[#FCEDE6] border border-[#E8DFD8] text-[#EC5D17]",
     hoverBadge: "bg-[#111111] text-[#EC5D17] ring-2 ring-[#EC5D17]/30 shadow-sm"
   },
   {
@@ -54,7 +54,7 @@ const principles = [
     title: "Business-Centered",
     description: "Every solution is built around real business outcomes.",
     icon: Target,
-    defaultBadge: "bg-white border border-[#E8DFD8] text-[#EC5D17]",
+    defaultBadge: "bg-[#FCEDE6] border border-[#E8DFD8] text-[#EC5D17]",
     hoverBadge: "bg-[#111111] text-[#EC5D17] ring-2 ring-[#EC5D17]/30 shadow-sm"
   },
   {
@@ -64,7 +64,7 @@ const principles = [
     title: "End-to-End Continuity",
     description: "From discovery to deployment, our senior team stays with you.",
     icon: Layers,
-    defaultBadge: "bg-white border border-[#E8DFD8] text-[#EC5D17]",
+    defaultBadge: "bg-[#FCEDE6] border border-[#E8DFD8] text-[#EC5D17]",
     hoverBadge: "bg-[#111111] text-[#EC5D17] ring-2 ring-[#EC5D17]/30 shadow-sm"
   },
   {
@@ -74,7 +74,7 @@ const principles = [
     title: "Transparent Process",
     description: "Clear two-week milestones, transparent deliverables, zero ambiguity.",
     icon: TransparentProcessIcon,
-    defaultBadge: "bg-white border border-[#E8DFD8] text-[#EC5D17]",
+    defaultBadge: "bg-[#FCEDE6] border border-[#E8DFD8] text-[#EC5D17]",
     hoverBadge: "bg-[#111111] text-[#EC5D17] ring-2 ring-[#EC5D17]/30 shadow-sm"
   },
   {
@@ -84,7 +84,7 @@ const principles = [
     title: "Human Collaboration",
     description: "Direct collaboration with senior practitioners. Zero account layers.",
     icon: Heart,
-    defaultBadge: "bg-white border border-[#E8DFD8] text-[#EC5D17]",
+    defaultBadge: "bg-[#FCEDE6] border border-[#E8DFD8] text-[#EC5D17]",
     hoverBadge: "bg-[#111111] text-[#EC5D17] ring-2 ring-[#EC5D17]/30 shadow-sm"
   }
 ];
@@ -354,7 +354,7 @@ const PrincipleItem: React.FC<PrincipleItemProps> = ({
               isHovered
                 ? item.hoverBadge
                 : isMuted
-                ? "bg-white text-[#666666] border border-[#E8DFD8]"
+                ? "bg-[#FAF7F5] text-[#666666] border border-[#E8DFD8]"
                 : item.defaultBadge
             }`}
           >
@@ -411,7 +411,7 @@ export const Difference: React.FC = () => {
     <section
       id="difference"
       aria-labelledby="difference-heading"
-      className="relative bg-[#FCEDE6] text-[#111111] py-20 sm:py-28 lg:py-32 border-b border-[#E8DFD8] overflow-hidden"
+      className="relative bg-white text-[#111111] py-20 sm:py-28 lg:py-32 border-b border-[#E8DFD8] overflow-hidden"
     >
       <Container size="default" className="relative z-10 w-full max-w-[1320px]">
         {/* Section Header (Centered) */}
@@ -432,7 +432,7 @@ export const Difference: React.FC = () => {
               description="A disciplined creative technology approach engineered to eliminate agency ambiguity, align creative storytelling with code, and protect commercial outcomes."
             />
 
-            <div className="mt-5 inline-flex items-center gap-2 text-xs font-mono text-[#EC5D17] bg-white px-4 py-1.5 rounded-md border border-[#E8DFD8]">
+            <div className="mt-5 inline-flex items-center gap-2 text-xs font-mono text-[#EC5D17] bg-[#FCEDE6] px-4 py-1.5 rounded-md border border-[#EC5D17]/20">
               <span className="w-2 h-2 rounded-full bg-[#EC5D17]" />
               <span className="font-bold tracking-wider">SIX GUIDING PRINCIPLES</span>
             </div>
