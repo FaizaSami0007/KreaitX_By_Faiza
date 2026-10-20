@@ -19,7 +19,7 @@ export const Services: React.FC = () => {
               title={
                 <>
                   Everything your business needs to{" "}
-                  <span className="font-display font-bold text-[#E76F51]">
+                  <span className="font-display font-bold text-[#CA6702]">
                     move forward
                   </span>
                   .
@@ -31,10 +31,10 @@ export const Services: React.FC = () => {
             <div className="shrink-0">
               <Link
                 href="/solutions"
-                className="group inline-flex items-center text-sm font-sans font-bold text-[#34312F] hover:text-[#E76F51] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E76F51]"
+                className="group inline-flex items-center text-sm font-sans font-bold text-[#34312F] hover:text-[#CA6702] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#CA6702]"
               >
                 <span>View All Capabilities</span>
-                <ArrowRight className="ml-1.5 h-4 w-4 text-[#E76F51] transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="ml-1.5 h-4 w-4 text-[#CA6702] transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
           </div>
@@ -50,21 +50,21 @@ export const Services: React.FC = () => {
               <StaggerItem key={service.id} className={colSpan}>
                 <Link
                   href={`/solutions/${service.id}`}
-                  className="group flex flex-col justify-between h-full rounded-xl bg-white p-6 sm:p-8 border border-[#E5E1DA] shadow-2xs transition-all duration-200 hover:-translate-y-0.5 hover:border-[#E76F51] relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E76F51]"
+                  className="group flex flex-col justify-between h-full rounded-xl bg-white p-6 sm:p-8 border border-[#E5E1DA] shadow-2xs transition-all duration-200 hover:-translate-y-0.5 hover:border-[#CA6702] relative overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#CA6702]"
                 >
                   <div>
                     {/* Top Row: Category + Number */}
                     <div className="flex items-center justify-between text-xs font-sans text-[#6B6560] mb-5">
-                      <span className="px-2.5 py-0.5 rounded-md bg-[#FBE9E3] text-[#E76F51] border border-[#E5E1DA] font-mono font-semibold uppercase tracking-wider text-[11px]">
+                      <span className="px-2.5 py-0.5 rounded-md bg-[#FFF0E0] text-[#CA6702] border border-[#E5E1DA] font-mono font-semibold uppercase tracking-wider text-[11px]">
                         {service.category}
                       </span>
-                      <span className="font-display font-bold text-base text-[#34312F] group-hover:text-[#E76F51] transition-colors">
+                      <span className="font-display font-bold text-base text-[#34312F] group-hover:text-[#CA6702] transition-colors">
                         {service.number}
                       </span>
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-xl sm:text-2xl font-display font-bold text-[#34312F] tracking-tight group-hover:text-[#E76F51] transition-colors">
+                    <h3 className="text-xl sm:text-2xl font-display font-bold text-[#34312F] tracking-tight group-hover:text-[#CA6702] transition-colors">
                       {service.title}
                     </h3>
 
@@ -93,9 +93,9 @@ export const Services: React.FC = () => {
                     <span className="font-medium text-[#34312F]">
                       {service.deliverables.length} Deliverables
                     </span>
-                    <span className="inline-flex items-center font-bold text-[#34312F] group-hover:text-[#E76F51] transition-all duration-200">
+                    <span className="inline-flex items-center font-bold text-[#34312F] group-hover:text-[#CA6702] transition-all duration-200">
                       Explore Service
-                      <ArrowUpRight className="ml-1 h-3.5 w-3.5 text-[#E76F51] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                      <ArrowUpRight className="ml-1 h-3.5 w-3.5 text-[#CA6702] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </span>
                   </div>
                 </Link>

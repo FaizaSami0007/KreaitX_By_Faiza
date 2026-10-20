@@ -16,8 +16,8 @@ export const Hero: React.FC = () => {
           <div className="max-w-4xl mx-auto flex flex-col items-center">
             
             {/* 1. Eyebrow Badge — Reference UI pill design with 100% exact content preserved */}
-            <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#E76F51] px-4 py-1.5 rounded-md bg-[#FBE9E3] border border-[#E5E1DA] mb-6 shadow-2xs">
-              <span className="w-2 h-2 rounded-full bg-[#E76F51]" aria-hidden="true" />
+            <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#CA6702] px-4 py-1.5 rounded-md bg-[#FFF0E0] border border-[#E5E1DA] mb-6 shadow-2xs">
+              <span className="w-2 h-2 rounded-full bg-[#CA6702]" aria-hidden="true" />
               <span>
                 KREAITX STUDIO <span className="text-[#6B6560] mx-0.5">•</span> CREATIVE TECHNOLOGY
               </span>
@@ -27,7 +27,7 @@ export const Hero: React.FC = () => {
             <h1 className="font-display text-[clamp(2.5rem,5.5vw,4.75rem)] font-bold text-[#34312F] tracking-tight leading-[1.08] max-w-3xl">
               Creative vision.{" "}
               <br className="hidden sm:inline" />
-              <span className="font-display font-bold text-[#E76F51]">
+              <span className="font-display font-bold text-[#CA6702]">
                 Engineered for impact
               </span>
               .
@@ -58,10 +58,10 @@ export const Hero: React.FC = () => {
 
               <Link
                 href="/work"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 min-h-[48px] rounded-lg text-sm font-semibold text-[#34312F] bg-white hover:bg-[#F7F5F0] hover:text-[#E76F51] border border-[#E5E1DA] transition-all duration-200 w-full sm:w-auto shadow-xs group"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 min-h-[48px] rounded-lg text-sm font-semibold text-[#34312F] bg-white hover:bg-[#F7F5F0] hover:text-[#CA6702] border border-[#E5E1DA] transition-all duration-200 w-full sm:w-auto shadow-xs group"
               >
                 <span>Explore Selected Work</span>
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 text-[#34312F] group-hover:text-[#E76F51]" />
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 text-[#34312F] group-hover:text-[#CA6702]" />
               </Link>
             </div>
 

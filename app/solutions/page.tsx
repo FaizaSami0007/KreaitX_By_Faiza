@@ -98,13 +98,13 @@ export default function SolutionsPage() {
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#E76F51] px-3.5 py-1.5 rounded-md bg-[#FBE9E3] border border-[#E5E1DA] mb-6">
-                <span className="w-2 h-2 rounded-full bg-[#E76F51]" />
+              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#CA6702] px-3.5 py-1.5 rounded-md bg-[#FFF0E0] border border-[#E5E1DA] mb-6">
+                <span className="w-2 h-2 rounded-full bg-[#CA6702]" />
                 <span>Capabilities × Solutions Architecture</span>
               </span>
               <h1 className="font-display text-[clamp(2rem,4.5vw,3.75rem)] font-bold text-[#34312F] tracking-tight leading-[1.08]">
                 Creative &amp; digital capabilities,{" "}
-                <span className="font-display font-bold text-[#E76F51]">
+                <span className="font-display font-bold text-[#CA6702]">
                   connected
                 </span>.
               </h1>
@@ -118,7 +118,7 @@ export default function SolutionsPage() {
                 </Button>
                 <a
                   href="#connected-capabilities"
-                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-lg text-sm font-semibold text-[#34312F] bg-white hover:bg-[#F7F5F0] hover:text-[#E76F51] border border-[#E5E1DA] transition-all duration-200 w-full sm:w-auto shadow-xs"
+                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-lg text-sm font-semibold text-[#34312F] bg-white hover:bg-[#F7F5F0] hover:text-[#CA6702] border border-[#E5E1DA] transition-all duration-200 w-full sm:w-auto shadow-xs"
                 >
                   Explore All 7 Services ↓
                 </a>

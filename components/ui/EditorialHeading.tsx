@@ -40,7 +40,7 @@ export const EditorialHeading: React.FC<EditorialHeadingProps> = ({
       {accentWord && title.includes(accentWord) ? (
         <>
           {title.split(accentWord)[0]}
-          <span className="font-display font-bold text-[#E76F51]">
+          <span className="font-display font-bold text-[#CA6702]">
             {accentWord}
           </span>
           {title.split(accentWord)[1]}

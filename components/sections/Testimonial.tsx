@@ -17,7 +17,7 @@ export const Testimonial: React.FC = () => {
               title={
                 <>
                   Why ambitious businesses choose a{" "}
-                  <span className="font-display font-bold text-[#E76F51]">
+                  <span className="font-display font-bold text-[#CA6702]">
                     connected partner
                   </span>
                   .
@@ -31,12 +31,12 @@ export const Testimonial: React.FC = () => {
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {trustPrinciples.map((item, idx) => (
             <StaggerItem key={item.title}>
-              <div className="group rounded-xl bg-white p-6 sm:p-8 lg:p-10 border border-[#E5E1DA] shadow-sm hover:border-[#E76F51] h-full flex flex-col justify-between transition-all duration-200">
+              <div className="group rounded-xl bg-white p-6 sm:p-8 lg:p-10 border border-[#E5E1DA] shadow-sm hover:border-[#CA6702] h-full flex flex-col justify-between transition-all duration-200">
                 <div>
-                  <span className="text-xs font-mono font-bold text-[#E76F51] px-3 py-1 rounded-md bg-[#FBE9E3] border border-[#E5E1DA] inline-block mb-4 uppercase tracking-wider">
+                  <span className="text-xs font-mono font-bold text-[#CA6702] px-3 py-1 rounded-md bg-[#FFF0E0] border border-[#E5E1DA] inline-block mb-4 uppercase tracking-wider">
                     Principle 0{idx + 1}
                   </span>
-                  <h3 className="text-2xl font-display font-bold text-[#34312F] tracking-tight mb-3 group-hover:text-[#E76F51] transition-colors">
+                  <h3 className="text-2xl font-display font-bold text-[#34312F] tracking-tight mb-3 group-hover:text-[#CA6702] transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-base text-[#6B6560] leading-relaxed font-sans font-normal">
@@ -46,8 +46,8 @@ export const Testimonial: React.FC = () => {
 
                 <div className="mt-8 pt-6 border-t border-[#E5E1DA] flex items-center justify-between text-xs sm:text-sm text-[#6B6560]">
                   <span className="font-medium text-[#34312F]">Studio Standard</span>
-                  <span className="inline-flex items-center gap-1.5 text-[#E76F51] font-semibold">
-                    <CheckCircle2 className="h-4 w-4 text-[#E76F51]" />
+                  <span className="inline-flex items-center gap-1.5 text-[#CA6702] font-semibold">
+                    <CheckCircle2 className="h-4 w-4 text-[#CA6702]" />
                     KreaitX Practice
                   </span>
                 </div>

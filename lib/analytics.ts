@@ -91,8 +91,8 @@ export function trackEvent(
     if (process.env.NODE_ENV !== "production") {
       console.log(
         `%c[KreaitX Analytics]%c ${eventName}`,
-        "color: #FFFFFF; font-weight: bold; background: #E76F51; padding: 2px 6px; border-radius: 4px;",
-        "color: #E76F51; font-weight: bold;",
+        "color: #FFFFFF; font-weight: bold; background: #CA6702; padding: 2px 6px; border-radius: 4px;",
+        "color: #CA6702; font-weight: bold;",
         cleanParams
       );
     }

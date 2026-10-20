@@ -10,10 +10,12 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          orange: "#E76F51",
-          terracotta: "#E76F51",
-          "orange-hover": "#D45A3C",
-          "terracotta-hover": "#D45A3C",
+          orange: "#CA6702",
+          amber: "#CA6702",
+          terracotta: "#CA6702",
+          "orange-hover": "#B25902",
+          "amber-hover": "#B25902",
+          "terracotta-hover": "#B25902",
           porcelain: "#F7F5F0",
           charcoal: "#34312F",
           "warm-charcoal": "#34312F",
@@ -23,29 +25,30 @@ const config: Config = {
           gray: "#6B6560",
           "warm-gray": "#6B6560",
           border: "#E5E1DA",
-          tint: "#FBE9E3",
-          "pale-terracotta": "#FBE9E3",
+          tint: "#FFF0E0",
+          "pale-amber": "#FFF0E0",
+          "pale-terracotta": "#FFF0E0",
           // Semantic mappings
           primary: "#34312F",
           secondary: "#6B6560",
-          accent: "#E76F51",
+          accent: "#CA6702",
           canvas: "#F7F5F0",
           surface: "#FFFFFF",
-          "surface-alt": "#FBE9E3",
+          "surface-alt": "#FFF0E0",
           dark: "#34312F",
           "border-dark": "rgba(255, 255, 255, 0.12)",
           // Aliases for component continuity
-          purple: "#E76F51",
+          purple: "#CA6702",
           "purple-deep": "#34312F",
           plum: "#34312F",
           cream: "#F7F5F0",
           "cream-soft": "#F7F5F0",
-          "cream-light": "#FBE9E3",
+          "cream-light": "#FFF0E0",
           lavender: "#FFFFFF",
           navy: "#34312F",
           deep: "#34312F",
-          cyan: "#E76F51",
-          "cyan-soft": "#FBE9E3",
+          cyan: "#CA6702",
+          "cyan-soft": "#FFF0E0",
           "blue-muted": "#6B6560",
           body: "#34312F",
           steel: "#6B6560"
@@ -79,7 +82,7 @@ const config: Config = {
         "card-hover": "0 12px 28px -6px rgba(17, 17, 17, 0.1), 0 0 0 1px #E5E1DA",
         "brand-card": "0 4px 16px -4px rgba(17, 17, 17, 0.06)",
         "brand-hover": "0 12px 28px -6px rgba(17, 17, 17, 0.1)",
-        "brand-button": "0 2px 8px rgba(231, 111, 81, 0.25)"
+        "brand-button": "0 2px 8px rgba(202, 103, 2, 0.25)"
       }
     }
   },

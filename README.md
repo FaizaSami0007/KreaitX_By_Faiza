@@ -7,13 +7,13 @@ Core narrative:
 **Ideas → Strategy → Creativity → Technology → Impact**
 
 ## Locked color system
-- Terracotta: `#E76F51` — Primary brand color, important accents, selected backgrounds, calls to action
+- Burnt Amber: `#CA6702` — Primary brand accent, highlights, buttons, links, and selected decorative elements
 - Porcelain: `#F7F5F0` — Main page background and calm content surfaces
 - Deep Warm Charcoal: `#34312F` — Primary text, headings, footer, and important dark interface elements
 - Warm Gray: `#6B6560` — Secondary text and muted labels
 - Soft Border: `#E5E1DA` — Borders and subtle dividers
 - Pure White: `#FFFFFF` — Selective card surfaces where additional separation is needed
-- Pale Terracotta: `#FBE9E3` — Restrained terracotta-tinted surfaces and subtle highlights
+- Pale Amber: `#FFF0E0` — Restrained amber-tinted surfaces and subtle highlights
 
 Do not add random gradients, neon colors or excessive glassmorphism.
 

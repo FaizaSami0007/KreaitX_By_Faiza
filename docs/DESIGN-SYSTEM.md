@@ -84,7 +84,7 @@ CHARCOAL FOOTER (#0B0F19)
 ## 5. UI Components
 
 ### Buttons
-- **Primary**: Terracotta background (`#E76F51`), White text, subtle `translateY(-2px)` on hover.
+- **Primary**: Burnt Amber background (`#CA6702`), White text, subtle `translateY(-2px)` on hover.
 - **Secondary**: Porcelain background (`#F7F5F0`), Soft Border (`#E5E1DA`), Deep Warm Charcoal text (`#34312F`).
 - **Dark**: Deep Warm Charcoal background (`#34312F`), Porcelain text (`#F7F5F0`).
 - **White**: Solid White background, Dark Blue text for dark hero and CTA sections.

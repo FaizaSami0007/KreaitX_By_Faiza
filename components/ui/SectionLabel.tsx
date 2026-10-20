@@ -21,7 +21,7 @@ export const SectionLabel: React.FC<SectionLabelProps> = ({
         <span
           className={cn(
             "font-mono text-xs sm:text-sm font-bold tracking-tight",
-            "text-[#E76F51]"
+            "text-[#CA6702]"
           )}
         >
           {number}
@@ -30,14 +30,14 @@ export const SectionLabel: React.FC<SectionLabelProps> = ({
       <span
         className={cn(
           "w-4 h-[2px] rounded-full",
-          "bg-[#E76F51]"
+          "bg-[#CA6702]"
         )}
         aria-hidden="true"
       />
       <span
         className={cn(
           "text-xs font-sans font-bold uppercase tracking-[0.16em]",
-          "text-[#E76F51]"
+          "text-[#CA6702]"
         )}
       >
         {label}
