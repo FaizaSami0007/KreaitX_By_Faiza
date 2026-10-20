@@ -36,7 +36,7 @@ export const CTASection: React.FC<CTASectionProps> = ({
                 <span>Next Step</span>
               </span>
 
-              <h2 className="font-display text-[clamp(1.85rem,4.5vw,3.75rem)] font-bold text-[#111111] tracking-tight leading-[1.12]">
+              <h2 className="font-display text-[clamp(1.65rem,3.2vw,2.75rem)] font-bold text-[#111111] tracking-tight leading-[1.14]">
                 Ready to build{" "}
                 <span className="font-display font-bold text-[#EC5D17]">
                   what&apos;s next
@@ -44,7 +44,7 @@ export const CTASection: React.FC<CTASectionProps> = ({
                 ?
               </h2>
 
-              <p className="mt-6 text-base sm:text-lg text-[#666666] leading-relaxed font-sans font-normal max-w-2xl">
+              <p className="mt-5 text-[15px] sm:text-base text-[#666666] leading-relaxed font-sans font-normal max-w-2xl">
                 Tell us what you&apos;re working on. We&apos;ll evaluate the opportunity, technical scope, and practical delivery timeline together.
               </p>
 

@@ -65,7 +65,7 @@ export const EditorialTrustSection: React.FC = () => {
             <Reveal delay={0.12} yOffset={18}>
               <h2
                 id="editorial-positioning-heading"
-                className="text-[clamp(28px,3.8vw,48px)] font-display font-bold text-[#111111] tracking-[-0.025em] leading-[1.12]"
+                className="text-[clamp(22px,2.6vw,36px)] font-display font-bold text-[#111111] tracking-[-0.025em] leading-[1.14]"
               >
                 Ambitious brands need coherence,{" "}
                 <span className="font-display font-bold text-[#EC5D17]">

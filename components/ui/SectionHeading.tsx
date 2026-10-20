@@ -54,7 +54,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
 
       <h2
         className={cn(
-          "font-display text-[clamp(26px,3.2vw,44px)] font-bold tracking-tight leading-[1.12]",
+          "font-display text-[clamp(22px,2.6vw,36px)] font-bold tracking-tight leading-[1.14]",
           isDark ? "text-white" : "text-[#111111]"
         )}
       >
@@ -64,7 +64,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
       {description && (
         <p
           className={cn(
-            "mt-3 sm:mt-4 text-base sm:text-lg leading-relaxed max-w-2xl font-sans font-normal",
+            "mt-3 sm:mt-4 text-[15px] sm:text-base leading-relaxed max-w-2xl font-sans font-normal",
             isDark ? "text-[#E8DFD8]" : "text-[#666666]"
           )}
         >

@@ -65,7 +65,7 @@ export const SolutionServiceSection: React.FC<SolutionServiceSectionProps> = ({
                 <Reveal delay={0.12} yOffset={16}>
                   <h2
                     id={`${service.id}-heading`}
-                    className={`font-display text-[clamp(26px,3.5vw,46px)] font-bold tracking-tight leading-[1.14] ${
+                    className={`font-display text-[clamp(22px,2.6vw,36px)] font-bold tracking-tight leading-[1.14] ${
                       isDark ? "text-white" : "text-[#111111]"
                     }`}
                   >

@@ -102,13 +102,13 @@ export default function SolutionsPage() {
                 <span className="w-2 h-2 rounded-full bg-[#EC5D17]" />
                 <span>Capabilities × Solutions Architecture</span>
               </span>
-              <h1 className="font-display text-[clamp(2rem,4.5vw,3.75rem)] font-bold text-[#111111] tracking-tight leading-[1.08]">
+              <h1 className="font-display text-[clamp(1.75rem,3.5vw,3rem)] font-bold text-[#111111] tracking-tight leading-[1.08]">
                 Creative &amp; digital capabilities,{" "}
                 <span className="font-display font-bold text-[#EC5D17]">
                   connected
                 </span>.
               </h1>
-              <p className="mt-6 text-lg sm:text-xl text-[#666666] leading-relaxed font-sans font-normal max-w-2xl">
+              <p className="mt-5 text-base sm:text-lg text-[#666666] leading-relaxed font-sans font-normal max-w-2xl">
                 We organize our capabilities around your business challenges rather than isolated deliverables. Discover how each discipline integrates seamlessly into your broader growth engine.
               </p>
 

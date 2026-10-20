@@ -67,7 +67,7 @@ export const IdeasToImpactSection: React.FC = () => {
           <Reveal delay={0.12} yOffset={18}>
             <h2
               id="ideas-to-impact-heading"
-              className="text-[clamp(44px,6vw,84px)] font-display font-bold text-[#111111] tracking-[-0.035em] leading-[1.02] text-center"
+              className="text-[clamp(32px,4.5vw,60px)] font-display font-bold text-[#111111] tracking-[-0.03em] leading-[1.08] text-center"
             >
               From ideas to{" "}
               <span className="font-display font-bold text-[#EC5D17]">
@@ -78,7 +78,7 @@ export const IdeasToImpactSection: React.FC = () => {
 
           {/* Body Copy */}
           <Reveal delay={0.2} yOffset={16}>
-            <p className="text-base sm:text-lg text-[#666666] leading-[1.7] font-sans font-normal max-w-2xl mx-auto text-center">
+            <p className="text-[15px] sm:text-base text-[#666666] leading-[1.7] font-sans font-normal max-w-2xl mx-auto text-center">
               We blend strategy, creativity and technology to build digital experiences that look exceptional and perform even better.
             </p>
           </Reveal>

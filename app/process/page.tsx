@@ -53,13 +53,13 @@ export default function ProcessPage() {
                 <span className="w-2 h-2 rounded-full bg-[#EC5D17]" />
                 <span>Methodology &amp; Standards</span>
               </span>
-              <h1 className="font-display text-[clamp(2rem,4.5vw,3.75rem)] font-bold text-[#111111] tracking-tight leading-[1.08]">
+              <h1 className="font-display text-[clamp(1.75rem,3.5vw,3rem)] font-bold text-[#111111] tracking-tight leading-[1.08]">
                 Clear milestones.{" "}
                 <span className="font-display font-bold text-[#EC5D17]">
                   Zero ambiguity
                 </span>.
               </h1>
-              <p className="mt-6 text-lg sm:text-xl text-[#666666] leading-relaxed font-sans font-normal max-w-2xl">
+              <p className="mt-5 text-base sm:text-lg text-[#666666] leading-relaxed font-sans font-normal max-w-2xl">
                 We believe exceptional work happens when clients understand exactly what comes next. Our six-stage process bridges strategic rigor, creative exploration, and production reliability.
               </p>
 
@@ -100,7 +100,7 @@ export default function ProcessPage() {
                       </span>
                     </div>
 
-                    <h2 className="font-display text-3xl sm:text-4xl font-bold text-[#111111] tracking-tight">
+                    <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#111111] tracking-tight">
                       {stage.title}
                     </h2>
 

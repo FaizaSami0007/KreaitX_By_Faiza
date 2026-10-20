@@ -24,7 +24,7 @@ export const Hero: React.FC = () => {
             </span>
 
             {/* 2. Main Display Headline — Reference UI large centered display typography with 100% exact wording preserved */}
-            <h1 className="font-display text-[clamp(2.5rem,5.5vw,4.75rem)] font-bold text-[#111111] tracking-tight leading-[1.08] max-w-3xl">
+            <h1 className="font-display text-[clamp(2.15rem,4.5vw,3.85rem)] font-bold text-[#111111] tracking-tight leading-[1.08] max-w-3xl">
               Creative vision.{" "}
               <br className="hidden sm:inline" />
               <span className="font-display font-bold text-[#EC5D17]">
@@ -34,7 +34,7 @@ export const Hero: React.FC = () => {
             </h1>
 
             {/* 3. Supporting Paragraph — Reference UI centered comfortable line-width with 100% exact text preserved */}
-            <p className="mt-6 text-lg sm:text-xl text-[#666666] leading-relaxed font-sans font-normal max-w-2xl">
+            <p className="mt-6 text-base sm:text-lg text-[#666666] leading-relaxed font-sans font-normal max-w-2xl">
               We bring brand strategy, creative production and digital engineering together to build meaningful digital experiences and help ambitious businesses grow.
             </p>
 
