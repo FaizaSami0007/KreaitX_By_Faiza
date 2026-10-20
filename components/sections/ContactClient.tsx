@@ -214,7 +214,7 @@ export const ContactClient: React.FC = () => {
       </section>
 
       {/* Main Form & Contact Information Grid */}
-      <section id="inquiry-form" className="bg-[#F7F5F0] py-16 sm:py-24 border-b border-[#E5E1DA]">
+      <section id="inquiry-form" className="bg-white py-16 sm:py-24 border-b border-[#E5E1DA]">
         <Container size="default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             {/* Left: Interactive Form */}
