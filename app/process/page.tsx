@@ -80,7 +80,7 @@ export default function ProcessPage() {
       </section>
 
       {/* Six Stage Detailed Deep Dive */}
-      <section id="process-breakdown" className="bg-[#FCEDE6] py-20 sm:py-28 border-b border-[#E8DFD8]">
+      <section id="process-breakdown" className="bg-white py-20 sm:py-28 border-b border-[#E8DFD8]">
         <Container size="default">
           <div className="space-y-12 sm:space-y-16">
             {processStages.map((stage, idx) => (
