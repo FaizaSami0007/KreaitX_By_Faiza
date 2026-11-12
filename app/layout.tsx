@@ -105,7 +105,7 @@ const jsonLd = {
       legalName: siteConfig.legalName,
       description: siteConfig.description,
       url: siteConfig.url,
-      logo: `${siteConfig.url}/favicon.ico`,
+      logo: `${siteConfig.url}/images/kreaitx-logo.png`,
       address: {
         "@type": "PostalAddress",
         addressLocality: siteConfig.location.city,
@@ -162,7 +162,7 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className="flex min-h-screen flex-col bg-white font-sans text-[#3A4454] antialiased selection:bg-[#3047D5] selection:text-white"
+        className="flex min-h-screen flex-col bg-white font-sans text-[#3A4454] antialiased selection:bg-[#4364EF] selection:text-white"
       >
         <GoogleAnalytics />
         <Navbar />

@@ -9,26 +9,32 @@ export const size = {
 
 export const contentType = "image/png";
 
+const symbolBase64 =
+  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAm0lEQVR42mNgGAWjYBQMRuCc8v4/FnyTCmb8J8WAH+ianZLfN9PFcgIGfaGL5fgMdEl5f5sulpNiMM0sx2UBXS1Ht2hALKdrnA96yweFA3A74l0VTS0kMiTe0tS3RDki9f1Rmgb1oCoF8av98IeuKZ2aNeEfcgxycNjPQo22AMW+INsMoKJfWKrfv6SGoFPy29BBUViNglEw6AEAc3bphl+wH3UAAAAASUVORK5CYII=";
+
 export default function Icon() {
   return new ImageResponse(
     (
       <div
         style={{
-          fontSize: 18,
-          background: "#10172A",
           width: "100%",
           height: "100%",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          color: "#FFFFFF",
-          fontWeight: 800,
-          borderRadius: 8,
-          border: "1px solid rgba(48, 71, 213, 0.4)",
+          background: "#FFFFFF",
+          borderRadius: 6,
         }}
       >
-        <span style={{ color: "#FFFFFF" }}>K</span>
-        <span style={{ color: "#3047D5" }}>X</span>
+        {/* Official KreaitX Geometric Symbol */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={symbolBase64}
+          alt="KreaitX"
+          width={28}
+          height={28}
+          style={{ objectFit: "contain" }}
+        />
       </div>
     ),
     {

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Linkedin, Instagram, Twitter, Github } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { servicesData, siteConfig } from "@/data/siteData";
+import { Logo } from "@/components/ui/Logo";
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -21,13 +22,10 @@ export const Footer: React.FC = () => {
           <div className="col-span-2 lg:col-span-4 space-y-3.5">
             <Link
               href="/"
-              className="inline-flex items-center text-xl font-display font-bold tracking-tight text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3047D5] group"
+              className="inline-flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3047D5] rounded-md"
               aria-label="KreaitX — Home"
             >
-              <span>Kreait</span>
-              <span className="text-[#3047D5] font-extrabold transition-transform duration-200 group-hover:scale-105">
-                X
-              </span>
+              <Logo variant="footer" />
             </Link>
 
             <p className="text-xs text-[#C5CCDC] leading-relaxed max-w-xs font-sans">
@@ -41,7 +39,7 @@ export const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="KreaitX on LinkedIn"
-                className="w-8 h-8 rounded-full bg-white/10 border border-white/15 text-white hover:text-white hover:bg-[#3047D5] hover:border-[#3047D5] transition-all duration-200 flex items-center justify-center shadow-xs"
+                className="w-8 h-8 rounded-full bg-white/10 border border-white/15 text-white hover:text-white hover:bg-[#4364EF] hover:border-[#4364EF] transition-all duration-200 flex items-center justify-center shadow-xs"
               >
                 <Linkedin className="h-3.5 w-3.5" />
               </a>
@@ -50,7 +48,7 @@ export const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="KreaitX on Instagram"
-                className="w-8 h-8 rounded-full bg-white/10 border border-white/15 text-white hover:text-white hover:bg-[#3047D5] hover:border-[#3047D5] transition-all duration-200 flex items-center justify-center shadow-xs"
+                className="w-8 h-8 rounded-full bg-white/10 border border-white/15 text-white hover:text-white hover:bg-[#4364EF] hover:border-[#4364EF] transition-all duration-200 flex items-center justify-center shadow-xs"
               >
                 <Instagram className="h-3.5 w-3.5" />
               </a>
@@ -59,7 +57,7 @@ export const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="KreaitX on X"
-                className="w-8 h-8 rounded-full bg-white/10 border border-white/15 text-white hover:text-white hover:bg-[#3047D5] hover:border-[#3047D5] transition-all duration-200 flex items-center justify-center shadow-xs"
+                className="w-8 h-8 rounded-full bg-white/10 border border-white/15 text-white hover:text-white hover:bg-[#4364EF] hover:border-[#4364EF] transition-all duration-200 flex items-center justify-center shadow-xs"
               >
                 <Twitter className="h-3.5 w-3.5" />
               </a>
@@ -68,7 +66,7 @@ export const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="KreaitX on GitHub"
-                className="w-8 h-8 rounded-full bg-white/10 border border-white/15 text-white hover:text-white hover:bg-[#3047D5] hover:border-[#3047D5] transition-all duration-200 flex items-center justify-center shadow-xs"
+                className="w-8 h-8 rounded-full bg-white/10 border border-white/15 text-white hover:text-white hover:bg-[#4364EF] hover:border-[#4364EF] transition-all duration-200 flex items-center justify-center shadow-xs"
               >
                 <Github className="h-3.5 w-3.5" />
               </a>
@@ -77,7 +75,7 @@ export const Footer: React.FC = () => {
 
           {/* Solutions Col */}
           <div className="col-span-1 lg:col-span-3 space-y-3">
-            <p className="text-xs font-mono font-bold uppercase tracking-[0.16em] text-[#3047D5]">
+            <p className="text-xs font-mono font-bold uppercase tracking-[0.16em] text-[#4364EF]">
               Solutions
             </p>
             <ul className="space-y-2 text-xs font-sans">
@@ -85,7 +83,7 @@ export const Footer: React.FC = () => {
                 <li key={service.id}>
                   <Link
                     href={`/solutions/${service.id}`}
-                    className="text-[#C5CCDC] hover:text-[#3047D5] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5"
+                    className="text-[#C5CCDC] hover:text-[#4364EF] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5"
                   >
                     {service.title}
                   </Link>
@@ -96,32 +94,32 @@ export const Footer: React.FC = () => {
 
           {/* Company Col */}
           <div className="col-span-1 lg:col-span-2 space-y-3">
-            <p className="text-xs font-mono font-bold uppercase tracking-[0.16em] text-[#3047D5]">
+            <p className="text-xs font-mono font-bold uppercase tracking-[0.16em] text-[#4364EF]">
               Company
             </p>
             <ul className="space-y-2 text-xs font-sans">
               <li>
-                <Link href="/about" className="text-[#C5CCDC] hover:text-[#3047D5] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
+                <Link href="/about" className="text-[#C5CCDC] hover:text-[#4364EF] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/work" className="text-[#C5CCDC] hover:text-[#3047D5] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
+                <Link href="/work" className="text-[#C5CCDC] hover:text-[#4364EF] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
                   Work
                 </Link>
               </li>
               <li>
-                <Link href="/process" className="text-[#C5CCDC] hover:text-[#3047D5] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
+                <Link href="/process" className="text-[#C5CCDC] hover:text-[#4364EF] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
                   Process
                 </Link>
               </li>
               <li>
-                <Link href="/insights" className="text-[#C5CCDC] hover:text-[#3047D5] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
+                <Link href="/insights" className="text-[#C5CCDC] hover:text-[#4364EF] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
                   Insights
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-[#C5CCDC] hover:text-[#3047D5] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
+                <Link href="/contact" className="text-[#C5CCDC] hover:text-[#4364EF] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
                   Contact
                 </Link>
               </li>
@@ -130,14 +128,14 @@ export const Footer: React.FC = () => {
 
           {/* Connect Col */}
           <div className="col-span-2 lg:col-span-3 space-y-3">
-            <p className="text-xs font-mono font-bold uppercase tracking-[0.16em] text-[#3047D5]">
+            <p className="text-xs font-mono font-bold uppercase tracking-[0.16em] text-[#4364EF]">
               Connect
             </p>
             <div className="text-xs font-sans space-y-1.5 text-[#C5CCDC]">
               <p>
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="font-medium text-white hover:text-[#3047D5] transition-colors no-underline"
+                  className="font-medium text-white hover:text-[#4364EF] transition-colors no-underline"
                 >
                   {siteConfig.contact.email}
                 </a>

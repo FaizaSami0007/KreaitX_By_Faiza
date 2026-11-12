@@ -38,21 +38,21 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
     const variantStyles = {
       primary:
-        "bg-[#3047D5] hover:bg-[#2538B8] text-white shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#3047D5]",
+        "bg-[#4364EF] hover:bg-[#3252DB] text-white shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#4364EF]",
       navy:
         "bg-[#10172A] hover:bg-[#1E293B] text-white hover:-translate-y-0.5 focus-visible:ring-[#10172A]",
       cyan:
-        "bg-[#3047D5] hover:bg-[#2538B8] text-white font-semibold shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#3047D5]",
+        "bg-[#4364EF] hover:bg-[#3252DB] text-white font-semibold shadow-brand-button hover:-translate-y-0.5 focus-visible:ring-[#4364EF]",
       gradient:
         "bg-[#10172A] hover:bg-[#1E293B] text-white hover:-translate-y-0.5 focus-visible:ring-[#10172A]",
       secondary:
-        "bg-white text-[#10172A] border border-[#C5CCDC] hover:border-[#3047D5] hover:bg-[#F7F8FC] hover:-translate-y-0.5 shadow-subtle focus-visible:ring-[#3047D5]",
+        "bg-white text-[#10172A] border border-[#C5CCDC] hover:border-[#4364EF] hover:bg-[#F7F8FC] hover:-translate-y-0.5 shadow-subtle focus-visible:ring-[#4364EF]",
       outline:
-        "bg-transparent text-[#10172A] border border-[#C5CCDC] hover:border-[#3047D5] hover:bg-white hover:-translate-y-0.5 focus-visible:ring-[#3047D5]",
+        "bg-transparent text-[#10172A] border border-[#C5CCDC] hover:border-[#4364EF] hover:bg-white hover:-translate-y-0.5 focus-visible:ring-[#4364EF]",
       dark:
         "bg-[#10172A] text-white hover:bg-[#1E293B] hover:-translate-y-0.5 focus-visible:ring-[#10172A]",
       ghost:
-        "bg-transparent text-[#10172A] hover:text-[#3047D5] hover:bg-[#F7F8FC] focus-visible:ring-[#3047D5]",
+        "bg-transparent text-[#10172A] hover:text-[#4364EF] hover:bg-[#F7F8FC] focus-visible:ring-[#4364EF]",
       white:
         "bg-white text-[#10172A] border border-[#C5CCDC] hover:border-[#3047D5] hover:-translate-y-0.5 shadow-subtle focus-visible:ring-[#3047D5]"
     };

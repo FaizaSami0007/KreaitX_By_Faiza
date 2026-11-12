@@ -10,13 +10,14 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          // Official 2026 Brand Color Palette
+          // Official 2026 Brand Color Palette (Synchronized with Official KreaitX Logo)
           white: "#FFFFFF",
           "cool-gray": "#F7F8FC",
           "light-gray": "#F7F8FC",
-          blue: "#3047D5",
-          "royal-blue": "#3047D5",
-          "royal-blue-hover": "#2538B8",
+          blue: "#4364EF",
+          "royal-blue": "#4364EF",
+          "royal-blue-hover": "#3252DB",
+          "logo-blue": "#4364EF",
           navy: "#10172A",
           "deep-navy": "#10172A",
           slate: "#3A4454",
@@ -106,7 +107,7 @@ const config: Config = {
         "card-hover": "0 12px 28px -6px rgba(16, 23, 42, 0.08), 0 0 0 1px #C5CCDC",
         "brand-card": "0 4px 16px -4px rgba(16, 23, 42, 0.05)",
         "brand-hover": "0 12px 28px -6px rgba(16, 23, 42, 0.08)",
-        "brand-button": "0 2px 10px rgba(48, 71, 213, 0.28)"
+        "brand-button": "0 2px 10px rgba(67, 100, 239, 0.28)"
       }
     }
   },
