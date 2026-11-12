@@ -1,23 +1,34 @@
-import { ServiceItem, ProjectCaseStudy, ProcessStage, InsightArticle, NavItem } from "@/types";
+import {
+  ServiceItem,
+  ProjectCaseStudy,
+  ProcessStage,
+  InsightArticle,
+  NavItem,
+  LeaderProfile,
+  AdvisorProfile,
+  ProfileWorkItem,
+  PackageService
+} from "@/types";
 
 export const siteConfig = {
   name: "KreaitX",
-  legalName: "KreaitX Creative Technology",
-  tagline: "Ideas, engineered into impact.",
-  descriptor: "Creative Technology & Digital Growth",
-  positioning: "One connected creative technology partner for businesses that need ideas, execution and digital growth under one roof.",
-  description: "KreaitX combines strategy, creativity and technology to help businesses build stronger brands, digital experiences and meaningful growth.",
+  legalName: "KreaitX",
+  tagline: "We Design Growth.",
+  descriptor: "Brand Films · Proof-Driven Marketing",
+  positioning: "KreaitX produces brand films and marketing that help capable companies be seen for what they are, and win the clients, contracts and investment that follow.",
+  description: "KreaitX is a brand film and marketing studio. We identify the proof a business already has, shape it into one clear claim, and produce the films, design and campaigns that make that claim credible.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://kreaitx.com",
   location: {
     city: "Peshawar",
     country: "Pakistan",
-    formatted: "Peshawar, Khyber Pakhtunkhwa, Pakistan",
-    timezone: "PKT (UTC+5)"
+    formatted: "Khyber Pakhtunkhwa, Pakistan",
+    reach: "Serving clients worldwide and in the United States",
+    timezone: "PKT (UTC+5) / US Timezone Friendly"
   },
   contact: {
-    email: "contact@kreaitx.com",
-    inquiries: "projects@kreaitx.com",
-    officeNote: "Available for worldwide client collaborations and local strategic partnerships."
+    email: "mehboobakbar@kreaitx.com",
+    inquiries: "mehboobakbar@kreaitx.com",
+    officeNote: "Serving clients worldwide with scheduling arranged in your time zone and fixed invoicing in USD."
   },
   social: {
     linkedin: "https://linkedin.com/company/kreaitx",
@@ -456,3 +467,198 @@ export const trustPrinciples = [
     description: "You work directly with the designers, directors, and developers crafting your solution without intermediaries."
   }
 ];
+
+// ============================================================================
+// OFFICIAL KREAITX COMPANY PROFILE 2026 EDITORIAL DATA
+// ============================================================================
+
+export const companyFacts = [
+  { label: "FOUNDED", value: "2025" },
+  { label: "FOCUS", value: "Brand films and marketing" },
+  { label: "MODEL", value: "Core team and specialist network" },
+  { label: "CLIENTS", value: "Worldwide" }
+];
+
+export const theChallengeWeSolve = [
+  {
+    title: "Hidden proof",
+    description: "Results, credentials and client praise exist but are never captured or presented."
+  },
+  {
+    title: "Generic messaging",
+    description: "The company sounds like every competitor: quality, innovation, excellence."
+  },
+  {
+    title: "Lost opportunities",
+    description: "Less capable competitors win deals and investment by presenting more convincingly."
+  }
+];
+
+export const approachStages = [
+  {
+    number: "01",
+    title: "Consultation",
+    description: "A 15-minute call to understand your business, your buyers and your goals. No cost."
+  },
+  {
+    number: "02",
+    title: "Audit and proposal",
+    description: "Your X-Ray Audit, a single claim to own, and a fixed-price proposal."
+  },
+  {
+    number: "03",
+    title: "Production and delivery",
+    description: "Films, design and campaigns built to prove that claim, with structured review rounds."
+  }
+];
+
+export const xrayAuditAreas = [
+  { area: "Substance", question: "Is real proof available, and is it being used?" },
+  { area: "Message", question: "Does the business own one clear, defensible claim?" },
+  { area: "Perception", question: "Does the presentation match the real quality of the work?" },
+  { area: "Consistency", question: "Is the claim the same across every channel?" },
+  { area: "Competition", question: "Where are competitors presenting more convincingly?" },
+  { area: "Visibility", question: "Is the proof reaching the people who make decisions?" }
+];
+
+export const profilePackages: PackageService[] = [
+  {
+    category: "ASSESSMENT",
+    title: "X-Ray Audit",
+    pricing: "Complimentary",
+    features: [
+      "Credibility Gap Report",
+      "Assessment across six areas",
+      "Two to three immediate recommendations"
+    ],
+    ctaText: "Request an audit",
+    ctaHref: "/contact?package=x-ray-audit"
+  },
+  {
+    category: "PRODUCTION",
+    title: "Brand Film",
+    pricing: "Fixed-price quote in USD",
+    features: [
+      "Positioning claim and creative brief",
+      "Script, pre-production and filming",
+      "Primary film with edits for social channels"
+    ],
+    ctaText: "Request a quote",
+    ctaHref: "/contact?package=brand-film"
+  },
+  {
+    category: "CREDIBILITY",
+    title: "Proof Pack",
+    pricing: "Fixed-price quote in USD",
+    features: [
+      "Client testimonial videos",
+      "Founder or subject-expert film",
+      "Case study design for web and presentations"
+    ],
+    ctaText: "Request a quote",
+    ctaHref: "/contact?package=proof-pack"
+  },
+  {
+    category: "PARTNERSHIP",
+    title: "Growth Retainer",
+    pricing: "Fixed monthly retainer",
+    features: [
+      "Monthly film and content production",
+      "Campaign management and placement",
+      "Quarterly assessment and report"
+    ],
+    ctaText: "Request a quote",
+    ctaHref: "/contact?package=growth-retainer"
+  }
+];
+
+export const profileRealWork: ProfileWorkItem[] = [
+  {
+    category: "STREAMING · DOCUMENTARY",
+    title: "Prime Video",
+    description: "Edited the official trailer for the documentary When Does Freedom Begin."
+  },
+  {
+    category: "AI · CLIMATE TECHNOLOGY",
+    title: "ToltHawk",
+    description: "Global brand introduction film for an AI-powered flood and water monitoring company."
+  },
+  {
+    category: "GOVERNMENT · PUBLIC SERVICE",
+    title: "Khyber Pakhtunkhwa Livestock Department",
+    description: "Film for the Ehsaas Beizuba mobile veterinary service."
+  },
+  {
+    category: "DOCUMENTARY · FIELD PRODUCTION",
+    title: "2020 Swat floods",
+    description: "On-the-ground filming and coverage of the floods in Swat."
+  }
+];
+
+export const otherClients = [
+  "HUB47",
+  "RaideIT",
+  "KAIT",
+  "KPEF",
+  "ESEF",
+  "Hashoo Foundation"
+];
+
+export const whyKreaitXPillars = [
+  {
+    title: "Diagnosis before production",
+    description: "A complimentary X-Ray Audit before any commitment."
+  },
+  {
+    title: "Every piece supports one claim",
+    description: "Work measured by deals, investment and trust, not likes."
+  },
+  {
+    title: "Measurable progress",
+    description: "Quarterly re-assessment with a clear before and after."
+  },
+  {
+    title: "International quality, efficient cost",
+    description: "Led by a filmmaker with nine years of experience."
+  }
+];
+
+export const leadershipData: {
+  founder: LeaderProfile;
+  advisors: AdvisorProfile[];
+} = {
+  founder: {
+    name: "Mehboob Akbar",
+    role: "Founder and Chief Executive Officer",
+    bio: "Filmmaker and creative technologist with nine years of experience in film, documentary and brand content.",
+    image: "/team/mehboob-akbar.jpg",
+    achievements: [
+      "Editor of the official trailer for the Prime Video documentary When Does Freedom Begin",
+      "Global brand film for ToltHawk, an AI flood monitoring company",
+      "Film for the Khyber Pakhtunkhwa Livestock Department",
+      "Field coverage of the 2020 Swat floods",
+      "Creative work for HUB47, RaideIT, KAIT, KPEF, ESEF and Hashoo Foundation"
+    ]
+  },
+  advisors: [
+    {
+      name: "Khurshid Alam",
+      role: "Chairman of the Board",
+      organization: "KAIT Consulting, Dubai",
+      experience: "Founder and CEO of KAIT Consulting, Dubai. Over 20 years in enterprise strategy, digital transformation and startup mentoring."
+    },
+    {
+      name: "Nadeem Ullah",
+      role: "Sales and Marketing Advisor",
+      organization: "Based in Dubai",
+      experience: "Product marketer based in Dubai, focused on marketing, digital growth and innovation."
+    },
+    {
+      name: "Kalim Ullah",
+      role: "Finance and Management Advisor",
+      organization: "Based in Dubai",
+      experience: "Senior Financial Accountant and business analyst in Dubai, specialising in financial controls, ERP and AI automation."
+    }
+  ]
+};
+

@@ -5,6 +5,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/ui/Reveal";
 import { CTASection } from "@/components/sections/CTASection";
+import { ApproachSection } from "@/components/sections/ApproachSection";
 import { processStages, siteConfig } from "@/data/siteData";
 
 export const metadata: Metadata = {
@@ -78,6 +79,9 @@ export default function ProcessPage() {
           </Reveal>
         </Container>
       </section>
+
+      {/* Official Executive Approach from Company Profile 2026 */}
+      <ApproachSection />
 
       {/* Six Stage Detailed Deep Dive */}
       <section id="process-breakdown" className="bg-white py-20 sm:py-28 border-b border-[#C5CCDC]">

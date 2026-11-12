@@ -182,16 +182,16 @@ export const ContactClient: React.FC = () => {
             <div className="max-w-3xl mx-auto flex flex-col items-center">
               <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#3047D5] px-3.5 py-1.5 rounded-md bg-[#F7F8FC] border border-[#C5CCDC] mb-6 shadow-2xs">
                 <span className="w-2 h-2 rounded-full bg-[#3047D5]" />
-                <span>Direct Collaboration × Global Partnerships</span>
+                <span>07 — CONTACT</span>
               </span>
-              <h1 className="font-display text-[clamp(1.75rem,3.5vw,3rem)] font-bold text-[#10172A] tracking-tight leading-[1.08]">
-                Let&apos;s Create{" "}
+              <h1 className="font-display text-[clamp(2rem,4.5vw,3.5rem)] font-extrabold text-[#10172A] tracking-tight leading-[1.08]">
+                Let&apos;s find the proof{" "}
                 <span className="font-display font-bold text-[#3047D5]">
-                  Together
+                  you already have
                 </span>.
               </h1>
               <p className="mt-5 text-base sm:text-lg text-[#6A7180] leading-relaxed font-sans font-normal max-w-2xl">
-                Tell us what you&apos;re building. We&apos;ll help turn your ideas into real commercial opportunities, clear technical scopes, and actionable next steps.
+                Choose the starting point that suits you. Every conversation is confidential and carries no obligation.
               </p>
 
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">

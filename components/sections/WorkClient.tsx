@@ -7,6 +7,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { CTASection } from "@/components/sections/CTASection";
+import { SelectedWorkEditorial } from "@/components/sections/SelectedWorkEditorial";
 import { projectCaseStudies } from "@/data/siteData";
 
 const categories = ["All Projects", "Healthcare & MedTech", "Luxury Retail & Design", "Financial Technology"];
@@ -55,6 +56,9 @@ export const WorkClient: React.FC = () => {
           </Reveal>
         </Container>
       </section>
+
+      {/* Official Media & Public Service Work from Company Profile */}
+      <SelectedWorkEditorial />
 
       {/* Filter Bar */}
       <section id="projects-feed" className="bg-[#F7F8FC] border-b border-[#C5CCDC] py-4 sticky top-[65px] z-30 shadow-xs">
