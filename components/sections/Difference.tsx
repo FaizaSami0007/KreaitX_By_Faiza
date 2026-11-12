@@ -1,504 +1,112 @@
 "use client";
 
-import React, { useState } from "react";
-import { Users, Lightbulb, Target, Layers, Heart } from "lucide-react";
+import React from "react";
+import Link from "next/link";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
-
-// Clean icon for 05: Transparent Process (overlapping rectangles)
-const TransparentProcessIcon: React.FC<{ className?: string }> = ({
-  className = "h-5 w-5 stroke-[1.5]"
-}) => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="1.5"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={className}
-    aria-hidden="true"
-  >
-    <rect x="3" y="4" width="12" height="12" rx="2" />
-    <rect x="9" y="8" width="12" height="12" rx="2" />
-  </svg>
-);
-
-// KreaitX Minimal Principles: Royal Blue (#3047D5), Cool Light Gray (#F7F8FC), Deep Navy (#10172A)
-const principles = [
-  {
-    id: "01",
-    number: "01",
-    column: 1 as const,
-    title: "One Connected Team",
-    description: "Strategy, design and engineering working as one.",
-    icon: Users,
-    defaultBadge: "bg-[#F7F8FC] border border-[#C5CCDC] text-[#3047D5]",
-    hoverBadge: "bg-[#10172A] text-[#3047D5] ring-2 ring-[#3047D5]/30 shadow-sm"
-  },
-  {
-    id: "02",
-    number: "02",
-    column: 2 as const,
-    title: "Creative + Technical",
-    description: "Designers who understand code. Engineers with an eye for design.",
-    icon: Lightbulb,
-    defaultBadge: "bg-[#F7F8FC] border border-[#C5CCDC] text-[#3047D5]",
-    hoverBadge: "bg-[#10172A] text-[#3047D5] ring-2 ring-[#3047D5]/30 shadow-sm"
-  },
-  {
-    id: "03",
-    number: "03",
-    column: 3 as const,
-    title: "Business-Centered",
-    description: "Every solution is built around real business outcomes.",
-    icon: Target,
-    defaultBadge: "bg-[#F7F8FC] border border-[#C5CCDC] text-[#3047D5]",
-    hoverBadge: "bg-[#10172A] text-[#3047D5] ring-2 ring-[#3047D5]/30 shadow-sm"
-  },
-  {
-    id: "04",
-    number: "04",
-    column: 1 as const,
-    title: "End-to-End Continuity",
-    description: "From discovery to deployment, our senior team stays with you.",
-    icon: Layers,
-    defaultBadge: "bg-[#F7F8FC] border border-[#C5CCDC] text-[#3047D5]",
-    hoverBadge: "bg-[#10172A] text-[#3047D5] ring-2 ring-[#3047D5]/30 shadow-sm"
-  },
-  {
-    id: "05",
-    number: "05",
-    column: 2 as const,
-    title: "Transparent Process",
-    description: "Clear two-week milestones, transparent deliverables, zero ambiguity.",
-    icon: TransparentProcessIcon,
-    defaultBadge: "bg-[#F7F8FC] border border-[#C5CCDC] text-[#3047D5]",
-    hoverBadge: "bg-[#10172A] text-[#3047D5] ring-2 ring-[#3047D5]/30 shadow-sm"
-  },
-  {
-    id: "06",
-    number: "06",
-    column: 3 as const,
-    title: "Human Collaboration",
-    description: "Direct collaboration with senior practitioners. Zero account layers.",
-    icon: Heart,
-    defaultBadge: "bg-[#F7F8FC] border border-[#C5CCDC] text-[#3047D5]",
-    hoverBadge: "bg-[#10172A] text-[#3047D5] ring-2 ring-[#3047D5]/30 shadow-sm"
-  }
-];
-
-const getColumn = (id: string): 1 | 2 | 3 => {
-  if (id === "01" || id === "04") return 1;
-  if (id === "03" || id === "06") return 3;
-  return 2;
-};
-
-// Central Connecting Diagram styled in Royal Blue & Deep Navy corporate palette
-const ConnectingTimelineGraphic: React.FC<{ activeColumn: 1 | 2 | 3 | null }> = ({ activeColumn }) => {
-  const isCol1Active = activeColumn === 1;
-  const isCol2Active = activeColumn === 2;
-  const isCol3Active = activeColumn === 3;
-  const hasActive = activeColumn !== null;
-
-  return (
-    <div
-      className="w-full my-6 lg:my-10 overflow-hidden select-none pointer-events-none hidden md:block"
-      aria-hidden="true"
-    >
-      <svg
-        viewBox="0 0 1200 120"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="w-full h-auto max-h-[110px]"
-        preserveAspectRatio="xMidYMid meet"
-      >
-        {/* Central horizontal line connecting left to right */}
-        <line
-          x1="220"
-          y1="60"
-          x2="980"
-          y2="60"
-          stroke="#C5CCDC"
-          strokeWidth="1.5"
-          className="transition-opacity duration-300"
-        />
-
-        {/* LEFT CONVERGENCE (Col 1: Items 01 & 04) */}
-        <g
-          className={`transition-opacity duration-300 ${
-            !hasActive
-              ? "opacity-80"
-              : isCol1Active
-              ? "opacity-100"
-              : "opacity-35"
-          }`}
-        >
-          <path
-            d="M 120 16 C 120 48, 165 60, 220 60"
-            stroke="#3047D5"
-            strokeWidth={isCol1Active ? "2.5" : "1.5"}
-            strokeLinecap="round"
-            className="transition-all duration-300"
-          />
-          <path
-            d="M 120 104 C 120 72, 165 60, 220 60"
-            stroke="#10172A"
-            strokeWidth={isCol1Active ? "2.5" : "1.5"}
-            strokeLinecap="round"
-            className="transition-all duration-300"
-          />
-          {/* Left node with accent core */}
-          <circle
-            cx="220"
-            cy="60"
-            r={isCol1Active ? "6.5" : "5"}
-            fill="#10172A"
-            className="transition-all duration-300"
-          />
-          <circle
-            cx="220"
-            cy="60"
-            r={isCol1Active ? "3" : "2"}
-            fill="#3047D5"
-            className="transition-all duration-300"
-          />
-          {/* Floating accent dots on left */}
-          <circle
-            cx="150"
-            cy="30"
-            r={isCol1Active ? "3.5" : "2.5"}
-            fill="#3047D5"
-            className="transition-all duration-300"
-          />
-          <circle
-            cx="150"
-            cy="90"
-            r={isCol1Active ? "3.5" : "2.5"}
-            fill="#10172A"
-            className="transition-all duration-300"
-          />
-        </g>
-
-        {/* CENTER INTERSECTION (Col 2: Items 02 & 05) */}
-        <g
-          className={`transition-opacity duration-300 ${
-            !hasActive
-              ? "opacity-80"
-              : isCol2Active
-              ? "opacity-100"
-              : "opacity-35"
-          }`}
-        >
-          <line
-            x1="600"
-            y1="26"
-            x2="600"
-            y2="94"
-            stroke="#3047D5"
-            strokeWidth={isCol2Active ? "2.5" : "1.5"}
-            strokeLinecap="round"
-            className="transition-all duration-300"
-          />
-          {/* Center node */}
-          <circle
-            cx="600"
-            cy="60"
-            r={isCol2Active ? "7" : "5"}
-            fill="#3047D5"
-            className="transition-all duration-300"
-          />
-          <circle
-            cx="600"
-            cy="26"
-            r={isCol2Active ? "3.5" : "2.5"}
-            fill="#10172A"
-            className="transition-all duration-300"
-          />
-          <circle
-            cx="600"
-            cy="94"
-            r={isCol2Active ? "3.5" : "2.5"}
-            fill="#3047D5"
-            className="transition-all duration-300"
-          />
-        </g>
-
-        {/* RIGHT DIVERGENCE (Col 3: Items 03 & 06) */}
-        <g
-          className={`transition-opacity duration-300 ${
-            !hasActive
-              ? "opacity-80"
-              : isCol3Active
-              ? "opacity-100"
-              : "opacity-35"
-          }`}
-        >
-          <circle
-            cx="980"
-            cy="60"
-            r={isCol3Active ? "6.5" : "5"}
-            fill="#10172A"
-            className="transition-all duration-300"
-          />
-          <circle
-            cx="980"
-            cy="60"
-            r={isCol3Active ? "3" : "2"}
-            fill="#3047D5"
-            className="transition-all duration-300"
-          />
-          <path
-            d="M 980 60 C 1035 60, 1080 48, 1080 16"
-            stroke="#3047D5"
-            strokeWidth={isCol3Active ? "2.5" : "1.5"}
-            strokeLinecap="round"
-            className="transition-all duration-300"
-          />
-          <path
-            d="M 980 60 C 1035 60, 1080 72, 1080 104"
-            stroke="#10172A"
-            strokeWidth={isCol3Active ? "2.5" : "1.5"}
-            strokeLinecap="round"
-            className="transition-all duration-300"
-          />
-          {/* Floating accent dots on right */}
-          <circle
-            cx="1050"
-            cy="30"
-            r={isCol3Active ? "3.5" : "2.5"}
-            fill="#3047D5"
-            className="transition-all duration-300"
-          />
-          <circle
-            cx="1050"
-            cy="90"
-            r={isCol3Active ? "3.5" : "2.5"}
-            fill="#10172A"
-            className="transition-all duration-300"
-          />
-        </g>
-      </svg>
-    </div>
-  );
-};
-
-// Individual Principle Item
-interface PrincipleItemProps {
-  item: (typeof principles)[0];
-  index: number;
-  isHovered: boolean;
-  hasActive: boolean;
-  onHoverStart: () => void;
-  onHoverEnd: () => void;
-}
-
-const PrincipleItem: React.FC<PrincipleItemProps> = ({
-  item,
-  index,
-  isHovered,
-  hasActive,
-  onHoverStart,
-  onHoverEnd
-}) => {
-  const IconComp = item.icon;
-  const isMuted = hasActive && !isHovered;
-
-  return (
-    <Reveal delay={0.08 * (index % 3)} yOffset={16}>
-      <div
-        role="button"
-        tabIndex={0}
-        onMouseEnter={onHoverStart}
-        onFocus={onHoverStart}
-        onMouseLeave={onHoverEnd}
-        onBlur={onHoverEnd}
-        onClick={() => {
-          if (isHovered) {
-            onHoverEnd();
-          } else {
-            onHoverStart();
-          }
-        }}
-        onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            if (isHovered) {
-              onHoverEnd();
-            } else {
-              onHoverStart();
-            }
-          }
-        }}
-        className={`group flex flex-col items-start text-left cursor-pointer transition-opacity duration-300 select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3047D5] rounded-xl p-2 -m-2 ${
-          isMuted ? "opacity-40" : "opacity-100"
-        }`}
-      >
-        {/* Top Row: Underlined Serif Number + Circular Icon Badge in Brand Colors */}
-        <div className="flex items-center gap-3.5 mb-3.5">
-          <span
-            className={`font-mono text-sm sm:text-base font-bold tracking-tight pb-0.5 leading-none transition-all duration-300 ${
-              isHovered
-                ? "text-[#3047D5] border-b-2 border-[#3047D5]"
-                : isMuted
-                ? "text-[#6A7180]/60 border-b border-[#C5CCDC]"
-                : "text-[#10172A] border-b-[1.5px] border-[#3047D5]/40"
-            }`}
-          >
-            {item.number}
-          </span>
-
-          <div
-            className={`w-9 sm:w-10 h-9 sm:h-10 rounded-lg flex items-center justify-center transition-all duration-300 ${
-              isHovered
-                ? item.hoverBadge
-                : isMuted
-                ? "bg-[#F7F8FC] text-[#6A7180] border border-[#C5CCDC]"
-                : item.defaultBadge
-            }`}
-          >
-            <IconComp
-              className={`h-4.5 w-4.5 sm:h-5 sm:w-5 transition-colors duration-300 ${
-                isHovered
-                  ? "text-[#3047D5]"
-                  : isMuted
-                  ? "text-[#6A7180]"
-                  : "text-inherit"
-              }`}
-            />
-          </div>
-        </div>
-
-        {/* Title */}
-        <h3
-          className={`text-base sm:text-lg lg:text-[19px] font-display font-bold tracking-tight mb-2 transition-colors duration-300 ${
-            isHovered
-              ? "text-[#3047D5]"
-              : isMuted
-              ? "text-[#6A7180]"
-              : "text-[#10172A]"
-          }`}
-        >
-          {item.title}
-        </h3>
-
-        {/* Description */}
-        <p
-          className={`text-[13px] sm:text-[14px] leading-relaxed font-sans font-normal max-w-[320px] transition-colors duration-300 ${
-            isHovered
-              ? "text-[#10172A] font-medium"
-              : isMuted
-              ? "text-[#6A7180]/70"
-              : "text-[#6A7180]"
-          }`}
-        >
-          {item.description}
-        </p>
-      </div>
-    </Reveal>
-  );
-};
+import { differentiators } from "@/data/siteData";
 
 export const Difference: React.FC = () => {
-  const [hoveredId, setHoveredId] = useState<string | null>(null);
-  const topPrinciples = principles.slice(0, 3);
-  const bottomPrinciples = principles.slice(3, 6);
-  const activeColumn = hoveredId ? getColumn(hoveredId) : null;
-  const hasActive = hoveredId !== null;
-
   return (
-    <section
-      id="difference"
-      aria-labelledby="difference-heading"
-      className="relative bg-white text-[#10172A] min-h-screen flex flex-col justify-center py-16 sm:py-20 lg:py-24 border-b border-[#C5CCDC] overflow-hidden"
-    >
-      <Container size="default" className="relative z-10 w-full max-w-[1320px] my-auto">
-        {/* Section Header (Centered) */}
+    <section id="approach" className="relative overflow-hidden bg-[#F7F8FC] py-20 sm:py-24 lg:py-28 border-b border-[#C5CCDC]">
+      <Container size="default" className="relative z-10">
+        
+        {/* Section Header */}
         <Reveal yOffset={16}>
-          <div className="flex flex-col items-center text-center mx-auto max-w-3xl mb-10 sm:mb-14 lg:mb-16">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-14 sm:mb-16">
             <SectionHeading
-              align="center"
-              eyebrow="Studio Philosophy"
+              eyebrow="Our Approach & Standards"
               title={
                 <>
-                  How we operate.{" "}
+                  Built on discipline.{" "}
                   <span className="font-display font-bold text-[#3047D5]">
-                    Why it matters
+                    Engineered for credibility
                   </span>
                   .
                 </>
               }
-              description="A disciplined creative technology approach engineered to eliminate agency ambiguity, align creative storytelling with code, and protect commercial outcomes."
+              description="A clear, human approach to creative technology. We eliminate handoff friction and agency bureaucracy so your vision reaches production without translation loss."
             />
 
-            <div className="mt-5 inline-flex items-center gap-2 text-xs font-mono text-[#3047D5] bg-[#F7F8FC] px-4 py-1.5 rounded-md border border-[#3047D5]/20">
-              <span className="w-2 h-2 rounded-full bg-[#3047D5]" />
-              <span className="font-bold tracking-wider">SIX GUIDING PRINCIPLES</span>
+            <div className="shrink-0">
+              <Link
+                href="/process"
+                className="group inline-flex items-center text-sm font-sans font-bold text-[#10172A] hover:text-[#3047D5] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3047D5]"
+              >
+                <span>Explore Full 6-Stage Methodology</span>
+                <ArrowRight className="ml-1.5 h-4 w-4 text-[#3047D5] transition-transform group-hover:translate-x-1" />
+              </Link>
             </div>
           </div>
         </Reveal>
 
-        {/* Desktop & Tablet Layout */}
-        <div
-          className="hidden md:block"
-          onMouseLeave={() => setHoveredId(null)}
-        >
-          {/* Top Row: 01, 02, 03 */}
-          <div className="grid grid-cols-3 gap-8 lg:gap-14">
-            {topPrinciples.map((item, idx) => (
-              <PrincipleItem
-                key={item.id}
-                item={item}
-                index={idx}
-                isHovered={hoveredId === item.id}
-                hasActive={hasActive}
-                onHoverStart={() => setHoveredId(item.id)}
-                onHoverEnd={() => setHoveredId(null)}
-              />
-            ))}
-          </div>
+        {/* 6 Structured Differentiator Columns with Thin Dividers (Following Company Profile Editorial Standards) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          {differentiators.map((diff, index) => (
+            <Reveal key={diff.number} yOffset={20}>
+              <div className="h-full rounded-xl bg-white p-6 sm:p-8 border border-[#C5CCDC] shadow-2xs hover:border-[#3047D5] transition-all duration-200 flex flex-col justify-between group">
+                <div>
+                  {/* Top Bar: Number & Micro Indicator */}
+                  <div className="flex items-center justify-between pb-4 mb-4 border-b border-[#C5CCDC]/60">
+                    <span className="text-xs font-mono font-bold text-[#3047D5] tracking-wider">
+                      {diff.number}
+                    </span>
+                    <span className="text-[11px] font-mono uppercase tracking-[0.16em] text-[#6A7180]">
+                      Standard 0{index + 1}
+                    </span>
+                  </div>
 
-          {/* Central Connecting Graphic Line in Minimal Palette */}
-          <ConnectingTimelineGraphic activeColumn={activeColumn} />
+                  {/* Title & Summary */}
+                  <h3 className="text-xl font-display font-bold text-[#10172A] tracking-tight group-hover:text-[#3047D5] transition-colors">
+                    {diff.title}
+                  </h3>
+                  <p className="mt-2 text-sm font-sans font-medium text-[#3047D5]">
+                    {diff.summary}
+                  </p>
 
-          {/* Bottom Row: 04, 05, 06 */}
-          <div className="grid grid-cols-3 gap-8 lg:gap-14">
-            {bottomPrinciples.map((item, idx) => (
-              <PrincipleItem
-                key={item.id}
-                item={item}
-                index={idx + 3}
-                isHovered={hoveredId === item.id}
-                hasActive={hasActive}
-                onHoverStart={() => setHoveredId(item.id)}
-                onHoverEnd={() => setHoveredId(null)}
-              />
-            ))}
-          </div>
-        </div>
+                  {/* Detailed Description */}
+                  <p className="mt-3.5 text-sm text-[#6A7180] leading-relaxed font-sans">
+                    {diff.description}
+                  </p>
+                </div>
 
-        {/* Mobile Layout (< md): Clean Responsive Editorial Stack */}
-        <div
-          className="md:hidden space-y-10"
-          onMouseLeave={() => setHoveredId(null)}
-        >
-          {principles.map((item, idx) => (
-            <div key={item.id} className="relative">
-              <PrincipleItem
-                item={item}
-                index={idx}
-                isHovered={hoveredId === item.id}
-                hasActive={hasActive}
-                onHoverStart={() => setHoveredId(item.id)}
-                onHoverEnd={() => setHoveredId(null)}
-              />
-              {idx < principles.length - 1 && (
-                <div className="pt-8 border-b border-[#C5CCDC]" />
-              )}
-            </div>
+                {/* Subtle Checkmark footer */}
+                <div className="mt-6 pt-4 border-t border-[#C5CCDC]/40 flex items-center gap-2 text-xs font-mono text-[#10172A]">
+                  <CheckCircle2 className="h-3.5 w-3.5 text-[#3047D5]" />
+                  <span>KreaitX Core Principle</span>
+                </div>
+              </div>
+            </Reveal>
           ))}
         </div>
+
+        {/* Highlighted Value Statement (Follow Page 2 / Page 6 of Company Profile) */}
+        <Reveal yOffset={20}>
+          <div className="mt-12 sm:mt-16 rounded-xl bg-white border border-[#C5CCDC] p-6 sm:p-10 shadow-xs flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+            <div className="space-y-1.5 max-w-2xl">
+              <span className="text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-[#3047D5] block">
+                The KreaitX Distinction
+              </span>
+              <h4 className="text-lg sm:text-xl font-display font-bold text-[#10172A] tracking-tight">
+                No account layers. Direct collaboration with the practitioners building your work.
+              </h4>
+              <p className="text-sm text-[#6A7180] font-sans">
+                Ambitious companies don&apos;t need bloated agency hierarchies. You work directly with senior creative directors, cinematographers, and principal software engineers.
+              </p>
+            </div>
+
+            <Link
+              href="/about"
+              className="inline-flex items-center justify-center text-sm font-bold text-white bg-[#10172A] hover:bg-[#1E293B] px-6 py-3 rounded-lg transition-all duration-200 shrink-0 shadow-xs"
+            >
+              <span>Learn About Our Studio</span>
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </div>
+        </Reveal>
+
       </Container>
     </section>
   );

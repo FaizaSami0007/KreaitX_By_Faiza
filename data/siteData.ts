@@ -3,21 +3,21 @@ import { ServiceItem, ProjectCaseStudy, ProcessStage, InsightArticle, NavItem } 
 export const siteConfig = {
   name: "KreaitX",
   legalName: "KreaitX Creative Technology",
-  tagline: "Ideas, engineered into impact.",
-  descriptor: "Creative Technology & Digital Growth",
-  positioning: "One connected creative technology partner for businesses that need ideas, execution and digital growth under one roof.",
-  description: "KreaitX combines strategy, creativity and technology to help businesses build stronger brands, digital experiences and meaningful growth.",
+  tagline: "We Design Growth.",
+  descriptor: "Brand Films · Proof-Driven Marketing · Digital Solutions",
+  positioning: "KreaitX produces brand films and marketing that help capable companies be seen for what they are, and win the clients, contracts and investment that follow.",
+  description: "KreaitX produces brand films, digital engineering, and proof-driven marketing to help capable companies win clients, contracts, and investment.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://kreaitx.com",
   location: {
     city: "Peshawar",
     country: "Pakistan",
-    formatted: "Peshawar, Khyber Pakhtunkhwa, Pakistan",
+    formatted: "Khyber Pakhtunkhwa, Pakistan",
     timezone: "PKT (UTC+5)"
   },
   contact: {
-    email: "contact@kreaitx.com",
-    inquiries: "projects@kreaitx.com",
-    officeNote: "Available for worldwide client collaborations and local strategic partnerships."
+    email: "mehboobakbar@kreaitx.com",
+    inquiries: "mehboobakbar@kreaitx.com",
+    officeNote: "Serving clients worldwide from Khyber Pakhtunkhwa, Pakistan."
   },
   social: {
     linkedin: "https://linkedin.com/company/kreaitx",
