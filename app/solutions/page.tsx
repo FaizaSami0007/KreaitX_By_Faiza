@@ -94,31 +94,31 @@ export default function SolutionsPage() {
       />
       
       {/* Services Page Hero — Pure White #FFFFFF Canvas */}
-      <section className="relative bg-white text-[#111111] py-20 lg:py-28 border-b border-[#E8DFD8] overflow-hidden">
+      <section className="relative bg-white text-[#10172A] py-20 lg:py-28 border-b border-[#C5CCDC] overflow-hidden">
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#EC5D17] px-3.5 py-1.5 rounded-md bg-[#FCEDE6] border border-[#E8DFD8] mb-6">
-                <span className="w-2 h-2 rounded-full bg-[#EC5D17]" />
+              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#3047D5] px-3.5 py-1.5 rounded-md bg-[#F7F8FC] border border-[#C5CCDC] mb-6">
+                <span className="w-2 h-2 rounded-full bg-[#3047D5]" />
                 <span>Capabilities × Solutions Architecture</span>
               </span>
-              <h1 className="font-display text-[clamp(1.75rem,3.5vw,3rem)] font-bold text-[#111111] tracking-tight leading-[1.08]">
+              <h1 className="font-display text-[clamp(1.75rem,3.5vw,3rem)] font-bold text-[#10172A] tracking-tight leading-[1.08]">
                 Creative &amp; digital capabilities,{" "}
-                <span className="font-display font-bold text-[#EC5D17]">
+                <span className="font-display font-bold text-[#3047D5]">
                   connected
                 </span>.
               </h1>
-              <p className="mt-5 text-base sm:text-lg text-[#666666] leading-relaxed font-sans font-normal max-w-2xl">
+              <p className="mt-5 text-base sm:text-lg text-[#6A7180] leading-relaxed font-sans font-normal max-w-2xl">
                 We organize our capabilities around your business challenges rather than isolated deliverables. Discover how each discipline integrates seamlessly into your broader growth engine.
               </p>
 
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-                <Button href="/contact" variant="primary" size="md" withArrow className="w-full sm:w-auto min-h-[48px] font-bold">
+                <Button href="/contact" variant="primary" size="md" withArrow className="w-full sm:w-auto min-h-[48px] font-bold shadow-brand-button">
                   Start a Project
                 </Button>
                 <a
                   href="#connected-capabilities"
-                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-lg text-sm font-semibold text-[#111111] bg-white hover:bg-[#FCEDE6] hover:text-[#EC5D17] border border-[#E8DFD8] transition-all duration-200 w-full sm:w-auto shadow-xs"
+                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-lg text-sm font-semibold text-[#10172A] bg-white hover:bg-[#F7F8FC] hover:text-[#3047D5] border border-[#C5CCDC] hover:border-[#3047D5] transition-all duration-200 w-full sm:w-auto shadow-xs"
                 >
                   Explore All 7 Services ↓
                 </a>

@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
   children: React.ReactNode;
-  variant?: "default" | "outline" | "gradient" | "purple" | "cyan" | "dark" | "muted" | "navy";
+  variant?: "default" | "outline" | "gradient" | "purple" | "cyan" | "dark" | "muted" | "navy" | "porcelain";
   size?: "sm" | "md";
   className?: string;
   withDot?: boolean;
@@ -18,15 +18,15 @@ export const Badge: React.FC<BadgeProps> = ({
   ...props
 }) => {
   const variantStyles = {
-    default: "bg-[#FCEDE6] text-[#EC5D17] border border-[#EC5D17]/20",
-    gradient: "bg-[#111111] text-white border border-white/10",
-    outline: "bg-transparent text-[#666666] border border-[#E8DFD8]",
-    purple: "bg-[#EC5D17] text-white border border-[#EC5D17]",
-    cyan: "bg-[#FCEDE6] text-[#EC5D17] border border-[#EC5D17]/30",
-    dark: "bg-[#111111] text-white border border-white/10",
-    muted: "bg-[#FCEDE6] text-[#666666] border border-[#E8DFD8]",
-    navy: "bg-[#111111] text-white border border-white/10",
-    porcelain: "bg-[#FCEDE6] text-[#111111] border border-[#E8DFD8]"
+    default: "bg-[#F7F8FC] text-[#3047D5] border border-[#3047D5]/20",
+    gradient: "bg-[#10172A] text-white border border-white/10",
+    outline: "bg-transparent text-[#6A7180] border border-[#C5CCDC]",
+    purple: "bg-[#3047D5] text-white border border-[#3047D5]",
+    cyan: "bg-[#F7F8FC] text-[#3047D5] border border-[#3047D5]/30",
+    dark: "bg-[#10172A] text-white border border-white/10",
+    muted: "bg-[#F7F8FC] text-[#6A7180] border border-[#C5CCDC]",
+    navy: "bg-[#10172A] text-white border border-white/10",
+    porcelain: "bg-[#F7F8FC] text-[#10172A] border border-[#C5CCDC]"
   };
 
   const sizeStyles = {
@@ -45,7 +45,7 @@ export const Badge: React.FC<BadgeProps> = ({
       {...props}
     >
       {withDot && (
-        <span className="h-1.5 w-1.5 rounded-full bg-[#EC5D17]" />
+        <span className="h-1.5 w-1.5 rounded-full bg-[#3047D5]" />
       )}
       {children}
     </span>

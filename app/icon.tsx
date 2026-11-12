@@ -15,7 +15,7 @@ export default function Icon() {
       <div
         style={{
           fontSize: 18,
-          background: "#111111",
+          background: "#10172A",
           width: "100%",
           height: "100%",
           display: "flex",
@@ -24,11 +24,11 @@ export default function Icon() {
           color: "#FFFFFF",
           fontWeight: 800,
           borderRadius: 8,
-          border: "1px solid rgba(236, 93, 23, 0.4)",
+          border: "1px solid rgba(48, 71, 213, 0.4)",
         }}
       >
         <span style={{ color: "#FFFFFF" }}>K</span>
-        <span style={{ color: "#EC5D17" }}>X</span>
+        <span style={{ color: "#3047D5" }}>X</span>
       </div>
     ),
     {

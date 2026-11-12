@@ -147,18 +147,18 @@ export default async function InsightArticlePage({ params }: PageProps) {
       />
 
       {/* Breadcrumb Navigation Bar */}
-      <div className="bg-[#FCEDE6] border-b border-[#E8DFD8] py-3.5 text-xs font-sans text-[#666666]">
+      <div className="bg-[#F7F8FC] border-b border-[#C5CCDC] py-3.5 text-xs font-sans text-[#6A7180]">
         <Container size="default">
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 flex-wrap">
-            <Link href="/" className="hover:text-[#EC5D17] transition-colors">
+            <Link href="/" className="hover:text-[#3047D5] transition-colors">
               Home
             </Link>
-            <ChevronRight className="h-3.5 w-3.5 text-[#666666]/60" />
-            <Link href="/insights" className="hover:text-[#EC5D17] transition-colors">
+            <ChevronRight className="h-3.5 w-3.5 text-[#6A7180]/60" />
+            <Link href="/insights" className="hover:text-[#3047D5] transition-colors">
               Insights
             </Link>
-            <ChevronRight className="h-3.5 w-3.5 text-[#666666]/60" />
-            <span className="text-[#111111] font-semibold truncate max-w-xs sm:max-w-md">
+            <ChevronRight className="h-3.5 w-3.5 text-[#6A7180]/60" />
+            <span className="text-[#10172A] font-semibold truncate max-w-xs sm:max-w-md">
               {article.title}
             </span>
           </nav>
@@ -166,50 +166,50 @@ export default async function InsightArticlePage({ params }: PageProps) {
       </div>
 
       {/* Article Header Hero — Pure White #FFFFFF Canvas */}
-      <section className="relative overflow-hidden bg-white text-[#111111] py-16 sm:py-20 lg:py-24 border-b border-[#E8DFD8]">
+      <section className="relative overflow-hidden bg-white text-[#10172A] py-16 sm:py-20 lg:py-24 border-b border-[#C5CCDC]">
         <Container size="default" className="relative z-10">
           <div className="max-w-3xl mx-auto space-y-6">
             <Reveal yOffset={12}>
               <div className="flex flex-wrap items-center gap-3">
-                <span className="px-3.5 py-1.5 rounded-md bg-[#FCEDE6] text-[#EC5D17] border border-[#E8DFD8] text-xs font-semibold uppercase tracking-wider">
+                <span className="px-3.5 py-1.5 rounded-md bg-[#F7F8FC] text-[#3047D5] border border-[#C5CCDC] text-xs font-semibold uppercase tracking-wider">
                   {article.category}
                 </span>
-                <span className="text-xs font-sans text-[#666666] font-medium flex items-center gap-1.5">
-                  <Calendar className="h-3.5 w-3.5 text-[#EC5D17]" />
+                <span className="text-xs font-sans text-[#6A7180] font-medium flex items-center gap-1.5">
+                  <Calendar className="h-3.5 w-3.5 text-[#3047D5]" />
                   {article.publishDate}
                 </span>
-                <span className="text-xs font-sans text-[#666666] font-medium flex items-center gap-1.5">
-                  <Clock className="h-3.5 w-3.5 text-[#EC5D17]" />
+                <span className="text-xs font-sans text-[#6A7180] font-medium flex items-center gap-1.5">
+                  <Clock className="h-3.5 w-3.5 text-[#3047D5]" />
                   {article.readTime}
                 </span>
               </div>
             </Reveal>
 
             <Reveal delay={0.08} yOffset={16}>
-              <h1 className="font-display text-3xl sm:text-5xl lg:text-[52px] font-bold text-[#111111] tracking-tight leading-[1.12]">
+              <h1 className="font-display text-3xl sm:text-5xl lg:text-[52px] font-bold text-[#10172A] tracking-tight leading-[1.12]">
                 {article.title}
               </h1>
             </Reveal>
 
             <Reveal delay={0.14} yOffset={14}>
-              <p className="text-lg sm:text-xl text-[#666666] leading-relaxed font-sans font-normal">
+              <p className="text-lg sm:text-xl text-[#6A7180] leading-relaxed font-sans font-normal">
                 {article.excerpt}
               </p>
             </Reveal>
 
             {/* Author / Studio attribution bar */}
             <Reveal delay={0.2} yOffset={12}>
-              <div className="pt-6 border-t border-[#E8DFD8] flex items-center justify-between text-xs text-[#666666]">
+              <div className="pt-6 border-t border-[#C5CCDC] flex items-center justify-between text-xs text-[#6A7180]">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-lg bg-white border border-[#E8DFD8] text-[#EC5D17] flex items-center justify-center font-display font-bold text-xs">
+                  <div className="w-8 h-8 rounded-lg bg-white border border-[#C5CCDC] text-[#3047D5] flex items-center justify-center font-display font-bold text-xs">
                     KX
                   </div>
                   <div>
-                    <span className="font-semibold text-[#111111] block">KreaitX Editorial</span>
-                    <span className="text-[#666666]">Creative Technology &amp; Digital Growth</span>
+                    <span className="font-semibold text-[#10172A] block">KreaitX Editorial</span>
+                    <span className="text-[#6A7180]">Creative Technology &amp; Digital Growth</span>
                   </div>
                 </div>
-                <div className="hidden sm:block text-[#666666]">
+                <div className="hidden sm:block text-[#6A7180]">
                   Published in Peshawar, Pakistan
                 </div>
               </div>
@@ -219,22 +219,22 @@ export default async function InsightArticlePage({ params }: PageProps) {
       </section>
 
       {/* Article Long-Form Body */}
-      <section className="bg-white py-16 sm:py-24 border-b border-[#E8DFD8]">
+      <section className="bg-white py-16 sm:py-24 border-b border-[#C5CCDC]">
         <Container size="default">
           <div className="max-w-3xl mx-auto space-y-10">
             {/* Key Takeaways Callout Box */}
-            <div className="rounded-xl bg-[#FCEDE6] border border-[#E8DFD8] p-7 sm:p-9 shadow-2xs">
-              <span className="text-xs font-sans uppercase tracking-wider text-[#EC5D17] font-bold block mb-4 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#EC5D17]" />
+            <div className="rounded-xl bg-[#F7F8FC] border border-[#C5CCDC] p-7 sm:p-9 shadow-2xs">
+              <span className="text-xs font-sans uppercase tracking-wider text-[#3047D5] font-bold block mb-4 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#3047D5]" />
                 Executive Summary &amp; Core Takeaways
               </span>
               <ul className="space-y-3.5">
                 {article.keyTakeaways.map((takeaway) => (
                   <li
                     key={takeaway}
-                    className="flex items-start gap-3 text-sm sm:text-base text-[#111111] font-medium"
+                    className="flex items-start gap-3 text-sm sm:text-base text-[#10172A] font-medium"
                   >
-                    <CheckCircle2 className="h-5 w-5 text-[#EC5D17] shrink-0 mt-0.5" />
+                    <CheckCircle2 className="h-5 w-5 text-[#3047D5] shrink-0 mt-0.5" />
                     <span className="leading-relaxed">{takeaway}</span>
                   </li>
                 ))}
@@ -242,7 +242,7 @@ export default async function InsightArticlePage({ params }: PageProps) {
             </div>
 
             {/* Article Content Paragraphs */}
-            <div className="prose prose-slate max-w-none space-y-6 text-base sm:text-lg text-[#666666] leading-relaxed font-sans font-normal">
+            <div className="prose prose-slate max-w-none space-y-6 text-base sm:text-lg text-[#6A7180] leading-relaxed font-sans font-normal">
               {article.content.map((paragraph, pIdx) => (
                 <p key={pIdx} className="leading-[1.75]">
                   {paragraph}
@@ -251,13 +251,13 @@ export default async function InsightArticlePage({ params }: PageProps) {
             </div>
 
             {/* In-Article Cross Link to Solutions */}
-            <div className="pt-8 border-t border-[#E8DFD8]">
-              <div className="p-6 rounded-xl bg-[#333333] text-white flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="pt-8 border-t border-[#C5CCDC]">
+              <div className="p-6 rounded-xl bg-[#10172A] text-white flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div>
                   <h3 className="text-lg font-display font-bold text-white mb-1">
                     Ready to engineer these principles into your business?
                   </h3>
-                  <p className="text-xs text-[#E8DFD8] font-sans">
+                  <p className="text-xs text-[#C5CCDC] font-sans">
                     Explore our integrated services across branding, video production, and web platforms.
                   </p>
                 </div>
@@ -266,7 +266,7 @@ export default async function InsightArticlePage({ params }: PageProps) {
                   variant="primary"
                   size="sm"
                   withArrow
-                  className="shrink-0 font-bold"
+                  className="shrink-0 font-bold shadow-brand-button"
                 >
                   Explore Solutions
                 </Button>
@@ -277,21 +277,21 @@ export default async function InsightArticlePage({ params }: PageProps) {
       </section>
 
       {/* Article Pagination Switcher */}
-      <section className="bg-[#FCEDE6] py-12 sm:py-16 border-b border-[#E8DFD8]">
+      <section className="bg-[#F7F8FC] py-12 sm:py-16 border-b border-[#C5CCDC]">
         <Container size="default">
           <div className="max-w-3xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
             <Link
               href={`/insights/${prevArticle.slug}`}
-              className="group flex items-center gap-3 text-left w-full sm:w-auto p-4 rounded-xl bg-white hover:border-[#EC5D17] border border-[#E8DFD8] transition-colors shadow-2xs"
+              className="group flex items-center gap-3 text-left w-full sm:w-auto p-4 rounded-xl bg-white hover:border-[#3047D5] border border-[#C5CCDC] transition-colors shadow-2xs"
             >
-              <div className="w-9 h-9 rounded-lg bg-[#FCEDE6] text-[#111111] group-hover:bg-[#111111] group-hover:text-[#EC5D17] flex items-center justify-center shrink-0 transition-colors">
+              <div className="w-9 h-9 rounded-lg bg-[#F7F8FC] text-[#10172A] group-hover:bg-[#10172A] group-hover:text-[#3047D5] flex items-center justify-center shrink-0 transition-colors">
                 <ArrowLeft className="h-4 w-4" />
               </div>
               <div>
-                <span className="text-xs uppercase tracking-wider font-semibold text-[#666666] block">
+                <span className="text-xs uppercase tracking-wider font-semibold text-[#6A7180] block">
                   Previous Essay
                 </span>
-                <span className="text-xs sm:text-sm font-display font-bold text-[#111111] group-hover:text-[#EC5D17] transition-colors truncate max-w-[200px] block">
+                <span className="text-xs sm:text-sm font-display font-bold text-[#10172A] group-hover:text-[#3047D5] transition-colors truncate max-w-[200px] block">
                   {prevArticle.title}
                 </span>
               </div>
@@ -299,24 +299,24 @@ export default async function InsightArticlePage({ params }: PageProps) {
 
             <Link
               href="/insights"
-              className="px-5 py-2.5 rounded-lg text-xs font-sans font-semibold text-[#666666] hover:text-[#111111] bg-white hover:bg-[#FCEDE6] border border-[#E8DFD8] shadow-2xs transition-colors"
+              className="px-5 py-2.5 rounded-lg text-xs font-sans font-semibold text-[#6A7180] hover:text-[#10172A] bg-white hover:bg-[#F7F8FC] border border-[#C5CCDC] shadow-2xs transition-colors"
             >
               All Essays
             </Link>
 
             <Link
               href={`/insights/${nextArticle.slug}`}
-              className="group flex items-center gap-3 text-right w-full sm:w-auto justify-end p-4 rounded-xl bg-white hover:border-[#EC5D17] border border-[#E8DFD8] transition-colors shadow-2xs"
+              className="group flex items-center gap-3 text-right w-full sm:w-auto justify-end p-4 rounded-xl bg-white hover:border-[#3047D5] border border-[#C5CCDC] transition-colors shadow-2xs"
             >
               <div>
-                <span className="text-xs uppercase tracking-wider font-semibold text-[#666666] block">
+                <span className="text-xs uppercase tracking-wider font-semibold text-[#6A7180] block">
                   Next Essay
                 </span>
-                <span className="text-xs sm:text-sm font-display font-bold text-[#111111] group-hover:text-[#EC5D17] transition-colors truncate max-w-[200px] block">
+                <span className="text-xs sm:text-sm font-display font-bold text-[#10172A] group-hover:text-[#3047D5] transition-colors truncate max-w-[200px] block">
                   {nextArticle.title}
                 </span>
               </div>
-              <div className="w-9 h-9 rounded-lg bg-[#FCEDE6] text-[#111111] group-hover:bg-[#111111] group-hover:text-[#EC5D17] flex items-center justify-center shrink-0 transition-colors">
+              <div className="w-9 h-9 rounded-lg bg-[#F7F8FC] text-[#10172A] group-hover:bg-[#10172A] group-hover:text-[#3047D5] flex items-center justify-center shrink-0 transition-colors">
                 <ArrowRight className="h-4 w-4" />
               </div>
             </Link>

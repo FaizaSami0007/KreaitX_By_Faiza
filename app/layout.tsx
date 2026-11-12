@@ -162,7 +162,7 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className="flex min-h-screen flex-col bg-white font-sans text-[#111111] antialiased selection:bg-[#EC5D17] selection:text-white"
+        className="flex min-h-screen flex-col bg-white font-sans text-[#3A4454] antialiased selection:bg-[#3047D5] selection:text-white"
       >
         <GoogleAnalytics />
         <Navbar />

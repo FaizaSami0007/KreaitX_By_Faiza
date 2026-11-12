@@ -56,20 +56,20 @@ export const Navbar: React.FC = () => {
         className={cn(
           "sticky top-0 z-40 w-full transition-all duration-200 bg-white/95 backdrop-blur-md",
           scrolled
-            ? "border-b border-[#E8DFD8] shadow-sm py-3"
-            : "border-b border-[#E8DFD8]/80 py-4"
+            ? "border-b border-[#C5CCDC] shadow-sm py-3"
+            : "border-b border-[#C5CCDC]/60 py-4"
         )}
       >
         <Container size="default">
           <nav className="flex items-center justify-between" aria-label="Main Navigation">
-            {/* Clickable Logo with Brand Orange Accent */}
+            {/* Clickable Logo with Royal Blue Accent */}
             <Link
               href="/"
-              className="group flex items-center gap-0.5 text-2xl font-display font-bold tracking-tight text-[#111111] transition-opacity duration-200 hover:opacity-90 cursor-pointer min-h-[44px] min-w-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#EC5D17] focus-visible:ring-offset-2 rounded-md px-1 items-center"
+              className="group flex items-center gap-0.5 text-2xl font-display font-bold tracking-tight text-[#10172A] transition-opacity duration-200 hover:opacity-90 cursor-pointer min-h-[44px] min-w-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3047D5] focus-visible:ring-offset-2 rounded-md px-1 items-center"
               aria-label="KreaitX — Home"
             >
               <span>Kreait</span>
-              <span className="text-[#EC5D17] font-extrabold transition-transform duration-200 group-hover:scale-105">
+              <span className="text-[#3047D5] font-extrabold transition-transform duration-200 group-hover:scale-105">
                 X
               </span>
             </Link>
@@ -83,16 +83,16 @@ export const Navbar: React.FC = () => {
                     key={item.href}
                     href={item.href}
                     className={cn(
-                      "relative px-3.5 py-2 text-[14px] font-sans transition-all duration-180 min-h-[40px] flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#EC5D17] rounded-md",
+                      "relative px-3.5 py-2 text-[14px] font-sans transition-all duration-180 min-h-[40px] flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3047D5] rounded-md",
                       isActive
-                        ? "text-[#EC5D17] font-semibold"
-                        : "text-[#666666] hover:text-[#111111] hover:bg-[#FCEDE6]/70 font-medium"
+                        ? "text-[#3047D5] font-semibold"
+                        : "text-[#6A7180] hover:text-[#10172A] hover:bg-[#F7F8FC] font-medium"
                     )}
                     aria-current={isActive ? "page" : undefined}
                   >
                     <span>{item.label}</span>
                     {isActive && (
-                      <span className="absolute bottom-1 left-3.5 right-3.5 h-[2px] bg-[#EC5D17] rounded-full" aria-hidden="true" />
+                      <span className="absolute bottom-1 left-3.5 right-3.5 h-[2px] bg-[#3047D5] rounded-full" aria-hidden="true" />
                     )}
                   </Link>
                 );
@@ -103,7 +103,7 @@ export const Navbar: React.FC = () => {
             <div className="hidden lg:flex items-center gap-3">
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center text-[14px] font-sans font-medium text-white bg-[#111111] hover:bg-[#EC5D17] px-5 py-2.5 min-h-[42px] rounded-lg transition-all duration-200 shadow-subtle active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#EC5D17] focus-visible:ring-offset-2"
+                className="group inline-flex items-center justify-center text-[14px] font-sans font-medium text-white bg-[#3047D5] hover:bg-[#2538B8] px-5 py-2.5 min-h-[42px] rounded-lg transition-all duration-200 shadow-brand-button active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3047D5] focus-visible:ring-offset-2"
               >
                 <span>Start a Project</span>
                 <ArrowRight className="ml-2 h-4 w-4 text-white/90 transition-transform duration-200 group-hover:translate-x-1" />
@@ -114,14 +114,14 @@ export const Navbar: React.FC = () => {
             <div className="flex items-center gap-2.5 lg:hidden">
               <Link
                 href="/contact"
-                className="inline-flex sm:hidden text-xs font-semibold text-white bg-[#111111] hover:bg-[#EC5D17] px-3.5 py-2 rounded-md min-h-[40px] items-center justify-center shadow-subtle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#EC5D17]"
+                className="inline-flex sm:hidden text-xs font-semibold text-white bg-[#3047D5] hover:bg-[#2538B8] px-3.5 py-2 rounded-md min-h-[40px] items-center justify-center shadow-brand-button focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3047D5]"
               >
                 Inquire
               </Link>
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(true)}
-                className="inline-flex items-center justify-center p-2 min-h-[40px] min-w-[40px] rounded-md text-[#111111] hover:bg-white border border-[#E8DFD8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#EC5D17] focus-visible:ring-offset-2"
+                className="inline-flex items-center justify-center p-2 min-h-[40px] min-w-[40px] rounded-md text-[#10172A] hover:bg-[#F7F8FC] border border-[#C5CCDC] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3047D5] focus-visible:ring-offset-2"
                 aria-expanded={mobileMenuOpen}
                 aria-controls="mobile-menu-drawer"
                 aria-label="Open navigation menu"
@@ -144,29 +144,29 @@ export const Navbar: React.FC = () => {
           aria-label="Mobile Navigation Menu"
         >
           {/* Top Bar matching header */}
-          <div className="flex items-center justify-between px-6 py-4 border-b border-[#E8DFD8] bg-white shrink-0">
+          <div className="flex items-center justify-between px-6 py-4 border-b border-[#C5CCDC] bg-white shrink-0">
             <Link
               href="/"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center gap-0.5 text-2xl font-display font-bold tracking-tight text-[#111111]"
+              className="flex items-center gap-0.5 text-2xl font-display font-bold tracking-tight text-[#10172A]"
               aria-label="KreaitX — Home"
             >
               <span>Kreait</span>
-              <span className="text-[#EC5D17] font-extrabold">X</span>
+              <span className="text-[#3047D5] font-extrabold">X</span>
             </Link>
 
             <div className="flex items-center gap-2">
               <Link
                 href="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="inline-flex text-xs font-semibold text-white bg-[#111111] hover:bg-[#EC5D17] px-3.5 py-2 rounded-md min-h-[38px] items-center justify-center shadow-subtle"
+                className="inline-flex text-xs font-semibold text-white bg-[#3047D5] hover:bg-[#2538B8] px-3.5 py-2 rounded-md min-h-[38px] items-center justify-center shadow-brand-button"
               >
                 Talk
               </Link>
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-[#111111] hover:bg-white border border-[#E8DFD8] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#EC5D17]"
+                className="inline-flex items-center justify-center p-2 rounded-md text-[#10172A] hover:bg-[#F7F8FC] border border-[#C5CCDC] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3047D5]"
                 aria-label="Close navigation menu"
               >
                 <X className="h-5 w-5" />
@@ -177,7 +177,7 @@ export const Navbar: React.FC = () => {
           {/* Scrollable Navigation Body */}
           <div className="flex-1 overflow-y-auto px-6 py-6 pb-[max(2rem,env(safe-area-inset-bottom,0px))] flex flex-col justify-between">
             <div className="flex flex-col space-y-2">
-              <span className="text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-[#EC5D17] px-1 pb-1">
+              <span className="text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-[#3047D5] px-1 pb-1">
                 MENU NAVIGATION
               </span>
               
@@ -191,8 +191,8 @@ export const Navbar: React.FC = () => {
                     className={cn(
                       "flex items-center justify-between px-4 py-3 min-h-[46px] text-base rounded-lg transition-all duration-150 active:scale-[0.99]",
                       isActive
-                        ? "bg-[#FCEDE6] text-[#EC5D17] font-semibold border border-[#EC5D17]/30"
-                        : "text-[#111111] hover:bg-[#FCEDE6]/50 font-medium border border-[#E8DFD8] bg-white"
+                        ? "bg-[#F7F8FC] text-[#3047D5] font-semibold border border-[#3047D5]/30"
+                        : "text-[#10172A] hover:bg-[#F7F8FC] font-medium border border-[#C5CCDC] bg-white"
                     )}
                   >
                     <div className="flex items-center gap-3">
@@ -201,7 +201,7 @@ export const Navbar: React.FC = () => {
                     <ArrowRight
                       className={cn(
                         "h-4 w-4 transition-transform",
-                        isActive ? "text-[#EC5D17]" : "text-[#666666]"
+                        isActive ? "text-[#3047D5]" : "text-[#6A7180]"
                       )}
                     />
                   </Link>
@@ -210,20 +210,20 @@ export const Navbar: React.FC = () => {
             </div>
 
             {/* Bottom Action & Location Info */}
-            <div className="mt-8 pt-6 border-t border-[#E8DFD8] flex flex-col gap-4">
+            <div className="mt-8 pt-6 border-t border-[#C5CCDC] flex flex-col gap-4">
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center text-sm font-semibold text-white bg-[#111111] hover:bg-[#EC5D17] px-6 py-3 min-h-[46px] rounded-lg transition-all duration-200 shadow-subtle"
+                className="group inline-flex items-center justify-center text-sm font-semibold text-white bg-[#3047D5] hover:bg-[#2538B8] px-6 py-3 min-h-[46px] rounded-lg transition-all duration-200 shadow-brand-button"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span>Start a Project</span>
                 <ArrowRight className="ml-2 h-4 w-4 text-white/90 transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
 
-              <div className="mt-2 text-xs text-[#666666] space-y-1">
-                <p className="font-semibold text-[#111111]">KreaitX Creative Technology</p>
+              <div className="mt-2 text-xs text-[#6A7180] space-y-1">
+                <p className="font-semibold text-[#10172A]">KreaitX Creative Technology</p>
                 <p>{siteConfig.location.formatted}</p>
-                <p className="text-[#EC5D17] font-medium">{siteConfig.contact.email}</p>
+                <p className="text-[#3047D5] font-medium">{siteConfig.contact.email}</p>
               </div>
             </div>
           </div>

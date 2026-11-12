@@ -33,14 +33,14 @@ export const EditorialHeading: React.FC<EditorialHeadingProps> = ({
       className={cn(
         "font-display font-semibold tracking-tight",
         sizeClasses[size],
-        isDark ? "text-white" : "text-[#111111]",
+        isDark ? "text-white" : "text-[#10172A]",
         className
       )}
     >
       {accentWord && title.includes(accentWord) ? (
         <>
           {title.split(accentWord)[0]}
-          <span className="font-display font-bold text-[#EC5D17]">
+          <span className="font-display font-bold text-[#3047D5]">
             {accentWord}
           </span>
           {title.split(accentWord)[1]}
