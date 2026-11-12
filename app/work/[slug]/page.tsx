@@ -242,20 +242,20 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
         </Container>
       </section>
 
-      {/* Measured Business Impact Showcase */}
-      <section className="bg-[#10172A] text-white py-14 sm:py-16 border-b border-white/10 relative overflow-hidden">
+      {/* Measured Business Impact Showcase — Clean Light Surface */}
+      <section className="bg-[#F7F8FC] py-14 sm:py-16 border-b border-[#C5CCDC] relative overflow-hidden">
         <Container size="default" className="relative z-10">
           <div className="max-w-4xl mx-auto">
-            <div className="rounded-xl bg-white/5 border border-white/10 p-8 sm:p-12 flex flex-col md:flex-row md:items-center justify-between gap-8">
+            <div className="rounded-xl bg-white border border-[#C5CCDC] p-8 sm:p-12 flex flex-col md:flex-row md:items-center justify-between gap-8 shadow-xs">
               <div className="space-y-3">
                 <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#3047D5] font-bold">
                   <TrendingUp className="h-4 w-4 text-[#3047D5]" />
                   <span>Verified Commercial Transformation</span>
                 </div>
-                <h2 className="text-2xl sm:text-3xl font-display font-bold text-white tracking-tight">
+                <h2 className="text-2xl sm:text-3xl font-display font-bold text-[#10172A] tracking-tight">
                   Measured Business Impact
                 </h2>
-                <p className="text-xl sm:text-2xl font-sans font-normal text-[#C5CCDC] leading-relaxed">
+                <p className="text-xl sm:text-2xl font-sans font-normal text-[#3A4454] leading-relaxed">
                   {project.impact}
                 </p>
               </div>
@@ -424,7 +424,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
                     <Link
                       key={s}
                       href={`/solutions/${slug}`}
-                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-md text-xs font-sans font-semibold text-[#10172A] bg-white hover:bg-[#10172A] hover:text-[#3047D5] border border-[#C5CCDC] shadow-2xs transition-colors duration-150"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-md text-xs font-sans font-semibold text-[#10172A] bg-white hover:text-[#3047D5] hover:border-[#3047D5] border border-[#C5CCDC] shadow-2xs transition-colors duration-150"
                     >
                       <span>{s}</span>
                       <ArrowRight className="h-3 w-3" />
@@ -445,7 +445,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
               href={`/work/${prevProject.slug}`}
               className="group flex items-center gap-3 text-left w-full sm:w-auto p-4 rounded-xl hover:bg-[#F7F8FC] border border-transparent hover:border-[#C5CCDC] transition-all duration-150"
             >
-              <div className="w-10 h-10 rounded-lg bg-[#F7F8FC] text-[#10172A] group-hover:bg-[#10172A] group-hover:text-[#3047D5] flex items-center justify-center shrink-0 transition-colors">
+              <div className="w-10 h-10 rounded-lg bg-[#F7F8FC] text-[#10172A] group-hover:bg-[#3047D5] group-hover:text-white flex items-center justify-center shrink-0 transition-colors">
                 <ArrowLeft className="h-4 w-4" />
               </div>
               <div>
@@ -477,7 +477,7 @@ export default async function CaseStudyDetailPage({ params }: PageProps) {
                   {nextProject.title}
                 </span>
               </div>
-              <div className="w-10 h-10 rounded-lg bg-[#F7F8FC] text-[#10172A] group-hover:bg-[#10172A] group-hover:text-[#3047D5] flex items-center justify-center shrink-0 transition-colors">
+              <div className="w-10 h-10 rounded-lg bg-[#F7F8FC] text-[#10172A] group-hover:bg-[#3047D5] group-hover:text-white flex items-center justify-center shrink-0 transition-colors">
                 <ArrowRight className="h-4 w-4" />
               </div>
             </Link>

@@ -81,10 +81,10 @@ export const FeaturedWork: React.FC = () => {
                         {/* Challenge & Strategic Impact Cards */}
                         <div className="mt-6 pt-5 border-t border-[#C5CCDC] grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                           <div className="p-3.5 rounded-lg bg-[#F7F8FC] border border-[#C5CCDC]">
-                            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#10172A] block mb-1">
+                            <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#6A7180] block mb-1">
                               The Challenge
                             </span>
-                            <span className="text-xs text-[#6A7180] leading-relaxed block">
+                            <span className="text-xs text-[#3A4454] leading-relaxed block">
                               {project.challenge}
                             </span>
                           </div>
@@ -142,7 +142,7 @@ export const FeaturedWork: React.FC = () => {
                             {project.deliverables.map((item) => (
                               <li
                                 key={item}
-                                className="flex items-center gap-2.5 text-sm font-medium text-[#10172A]"
+                                className="flex items-center gap-2.5 text-sm font-medium text-[#3A4454]"
                               >
                                 <CheckCircle2 className="h-4 w-4 text-[#3047D5] shrink-0" />
                                 <span>{item}</span>

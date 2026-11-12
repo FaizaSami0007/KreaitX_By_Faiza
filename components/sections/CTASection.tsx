@@ -13,6 +13,7 @@ export interface CTASectionProps {
 }
 
 export const CTASection: React.FC<CTASectionProps> = ({ bg, className }) => {
+  void bg;
   return (
     <section className={`bg-white py-20 sm:py-24 lg:py-28 border-t border-[#C5CCDC] relative ${className || ""}`}>
       <Container size="default" className="relative z-10 max-w-[1320px]">
