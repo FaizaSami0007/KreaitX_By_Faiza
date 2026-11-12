@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
           <div className="col-span-2 lg:col-span-4 space-y-3.5">
             <Link
               href="/"
-              className="inline-flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3047D5] rounded-md"
+              className="inline-flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4364EF] rounded-md"
               aria-label="KreaitX — Home"
             >
               <Logo variant="footer" />
