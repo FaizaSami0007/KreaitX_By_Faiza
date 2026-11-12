@@ -103,7 +103,7 @@ export const Navbar: React.FC = () => {
                 href="/contact"
                 className="group inline-flex items-center justify-center text-[14px] font-sans font-medium text-white bg-[#4364EF] hover:bg-[#3252DB] px-5 py-2.5 min-h-[42px] rounded-lg transition-all duration-200 shadow-brand-button active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4364EF] focus-visible:ring-offset-2"
               >
-                <span>Book a Consultation</span>
+                <span>Start a Project</span>
                 <ArrowRight className="ml-2 h-4 w-4 text-white/90 transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
             </div>
@@ -213,7 +213,7 @@ export const Navbar: React.FC = () => {
                 className="group inline-flex items-center justify-center text-sm font-semibold text-white bg-[#4364EF] hover:bg-[#3252DB] px-6 py-3 min-h-[46px] rounded-lg transition-all duration-200 shadow-brand-button"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <span>Book a Consultation</span>
+                <span>Start a Project</span>
                 <ArrowRight className="ml-2 h-4 w-4 text-white/90 transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
 

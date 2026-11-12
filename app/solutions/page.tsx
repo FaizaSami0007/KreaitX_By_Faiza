@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { ConnectedCapabilitiesSection } from "@/components/sections/ConnectedCapabilitiesSection";
 import { SolutionServiceSection } from "@/components/sections/SolutionServiceSection";
-import { ServicesPricingSection } from "@/components/sections/ServicesPricingSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { servicesData, siteConfig } from "@/data/siteData";
 
@@ -146,9 +145,6 @@ export default function SolutionsPage() {
           />
         );
       })}
-
-      {/* Defined Scope & Fixed Pricing from Company Profile 2026 */}
-      <ServicesPricingSection />
 
       {/* Conversion Banner */}
       <CTASection />

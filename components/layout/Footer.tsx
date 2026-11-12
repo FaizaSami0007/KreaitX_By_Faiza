@@ -29,7 +29,7 @@ export const Footer: React.FC = () => {
             </Link>
 
             <p className="text-xs text-[#C5CCDC] leading-relaxed max-w-xs font-sans">
-              We Design Growth. Brand films and marketing that help capable companies win the clients, contracts and investment that follow.
+              Creative technology &amp; digital growth partner for modern brands.
             </p>
 
             {/* Social Icons */}

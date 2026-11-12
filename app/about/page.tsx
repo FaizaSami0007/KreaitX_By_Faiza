@@ -7,7 +7,6 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/ui/Reveal";
 import { CTASection } from "@/components/sections/CTASection";
-import { LeadershipSection } from "@/components/sections/LeadershipSection";
 import { siteConfig } from "@/data/siteData";
 
 export const metadata: Metadata = {
@@ -288,9 +287,6 @@ export default function AboutPage() {
           </div>
         </Container>
       </section>
-
-      {/* Official Leadership & Advisory Board */}
-      <LeadershipSection />
 
       {/* Conversion CTA */}
       <CTASection />

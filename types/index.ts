@@ -67,34 +67,3 @@ export interface ContactFormData {
   projectTimeline: string;
   projectDetails: string;
 }
-
-export interface LeaderProfile {
-  name: string;
-  role: string;
-  bio: string;
-  image?: string;
-  achievements?: string[];
-}
-
-export interface AdvisorProfile {
-  name: string;
-  role: string;
-  organization?: string;
-  location?: string;
-  experience: string;
-}
-
-export interface ProfileWorkItem {
-  category: string;
-  title: string;
-  description: string;
-}
-
-export interface PackageService {
-  category: string;
-  title: string;
-  pricing: string;
-  features: string[];
-  ctaText: string;
-  ctaHref: string;
-}
