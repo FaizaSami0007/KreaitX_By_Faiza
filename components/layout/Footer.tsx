@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { Linkedin, Instagram, Twitter, Github } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { servicesData, siteConfig } from "@/data/siteData";
+import { siteConfig } from "@/data/siteData";
 import { Logo } from "@/components/ui/Logo";
 
 export const Footer: React.FC = () => {
@@ -29,7 +29,7 @@ export const Footer: React.FC = () => {
             </Link>
 
             <p className="text-xs text-[#C5CCDC] leading-relaxed max-w-xs font-sans">
-              Creative technology &amp; digital growth partner for modern brands.
+              We Design Growth. Brand films &amp; proof-driven marketing helping capable companies communicate their real strength.
             </p>
 
             {/* Social Icons */}
@@ -76,19 +76,34 @@ export const Footer: React.FC = () => {
           {/* Solutions Col */}
           <div className="col-span-1 lg:col-span-3 space-y-3">
             <p className="text-xs font-mono font-bold uppercase tracking-[0.16em] text-[#4364EF]">
-              Solutions
+              Core Offerings
             </p>
             <ul className="space-y-2 text-xs font-sans">
-              {servicesData.map((service) => (
-                <li key={service.id}>
-                  <Link
-                    href={`/solutions/${service.id}`}
-                    className="text-[#C5CCDC] hover:text-[#4364EF] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5"
-                  >
-                    {service.title}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link href="/solutions#x-ray-audit" className="text-[#C5CCDC] hover:text-[#4364EF] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
+                  X-Ray Audit (Complimentary)
+                </Link>
+              </li>
+              <li>
+                <Link href="/solutions#brand-film" className="text-[#C5CCDC] hover:text-[#4364EF] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
+                  Brand Film
+                </Link>
+              </li>
+              <li>
+                <Link href="/solutions#proof-pack" className="text-[#C5CCDC] hover:text-[#4364EF] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
+                  Proof Pack
+                </Link>
+              </li>
+              <li>
+                <Link href="/solutions#growth-retainer" className="text-[#C5CCDC] hover:text-[#4364EF] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
+                  Growth Retainer
+                </Link>
+              </li>
+              <li>
+                <Link href="/solutions" className="text-[#6A7180] hover:text-white hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5 font-mono text-[11px]">
+                  All Capabilities →
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -104,13 +119,23 @@ export const Footer: React.FC = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/work" className="text-[#C5CCDC] hover:text-[#4364EF] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
-                  Work
+                <Link href="/process" className="text-[#C5CCDC] hover:text-[#4364EF] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
+                  Our Approach
                 </Link>
               </li>
               <li>
-                <Link href="/process" className="text-[#C5CCDC] hover:text-[#4364EF] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
-                  Process
+                <Link href="/work" className="text-[#C5CCDC] hover:text-[#4364EF] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
+                  Selected Work
+                </Link>
+              </li>
+              <li>
+                <Link href="/why-kreaitx" className="text-[#C5CCDC] hover:text-[#4364EF] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
+                  Why KreaitX
+                </Link>
+              </li>
+              <li>
+                <Link href="/leadership" className="text-[#C5CCDC] hover:text-[#4364EF] hover:translate-x-0.5 transition-all duration-180 inline-block py-0.5">
+                  Leadership
                 </Link>
               </li>
               <li>
@@ -140,8 +165,22 @@ export const Footer: React.FC = () => {
                   {siteConfig.contact.email}
                 </a>
               </p>
-              <p>{siteConfig.location.formatted}</p>
-              <p>Timezone: {siteConfig.location.timezone}</p>
+              <p>
+                <a
+                  href="https://www.kreaitx.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#C5CCDC] hover:text-[#4364EF] transition-colors"
+                >
+                  www.kreaitx.com
+                </a>
+              </p>
+              <p className="text-[#6A7180] pt-1">
+                Khyber Pakhtunkhwa, Pakistan · Serving clients worldwide
+              </p>
+              <p className="text-[#6A7180]">
+                Advisory Board: Dubai, UAE
+              </p>
             </div>
           </div>
         </div>

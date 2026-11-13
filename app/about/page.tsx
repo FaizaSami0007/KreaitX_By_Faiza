@@ -1,69 +1,47 @@
 import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, Cpu, Users, Layers, MapPin } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
-import { Reveal, StaggerContainer, StaggerItem } from "@/components/ui/Reveal";
+import { Reveal } from "@/components/ui/Reveal";
 import { CTASection } from "@/components/sections/CTASection";
-import { siteConfig } from "@/data/siteData";
+import { credibilityGapChallenge, siteConfig } from "@/data/siteData";
 
 export const metadata: Metadata = {
-  title: "About KreaitX — Creative Technology Studio",
-  description: "Learn how KreaitX unites brand strategy, cinematic production, and software engineering under one roof in Peshawar, Pakistan.",
+  title: "About KreaitX — Brand Film & Proof-Driven Marketing Studio",
+  description:
+    "Founded in 2025, KreaitX helps capable companies overcome the credibility gap with cinematic brand films and proof-driven positioning.",
   alternates: {
-    canonical: `${siteConfig.url}/about`
+    canonical: `${siteConfig.url}/about`,
   },
   openGraph: {
-    title: "About KreaitX — Creative Technology Studio",
-    description: "Learn how KreaitX unites brand strategy, cinematic production, and software engineering under one roof in Peshawar, Pakistan.",
+    title: "About KreaitX — Brand Film & Proof-Driven Marketing Studio",
+    description:
+      "Founded in 2025, KreaitX helps capable companies overcome the credibility gap with cinematic brand films and proof-driven positioning.",
     url: `${siteConfig.url}/about`,
     type: "website",
-    siteName: siteConfig.name
-  }
+    siteName: siteConfig.name,
+  },
 };
 
-const values = [
+const aboutValues = [
   {
-    title: "Connected Over Isolated",
-    description: "We reject the idea that branding, filming, and coding belong in disconnected silos. The strongest digital experiences are conceived, directed, and engineered together."
+    title: "Evidence Over Invention",
+    description: "We don't invent clever marketing claims. We uncover the verified proof your company already has and build your presentation strictly around it.",
   },
   {
-    title: "Human Craft in the Age of Noise",
-    description: "While others rely on automated templates and superficial shortcuts, we prioritize typographic hierarchy, deep user empathy, and thoughtful architectural restraint."
+    title: "Discernment Over Volume",
+    description: "More content will not close your credibility gap. We focus on producing fewer, higher-impact assets that convince high-value decision-makers.",
   },
   {
-    title: "Business Impact Over Vanity Metrics",
-    description: "A visually stunning website or video that doesn't convert users or clarify value is not a victory. Everything we build is judged by its contribution to client growth."
+    title: "Direct Practitioner Access",
+    description: "You work directly with the creative directors, cinematographers, and brand strategists creating your work. Zero account layers or translation loss.",
   },
   {
-    title: "Peshawar Craftsmanship, Global Caliber",
-    description: "We are proud to build and scale from Peshawar, Khyber Pakhtunkhwa — proving that world-class creative technology and disciplined execution flourish anywhere talent and dedication meet."
-  }
-];
-
-const collaborationPillars = [
-  {
-    icon: Users,
-    title: "Direct Senior Practitioners",
-    description: "You collaborate directly with senior designers, directors, and developers. Zero account layers, zero translation loss."
+    title: "Guaranteed Fixed USD Pricing",
+    description: "Every engagement begins with a defined scope and a fixed price in USD. No hidden fees, unexpected overages, or open-ended hourly billing.",
   },
-  {
-    icon: Cpu,
-    title: "Disciplined Sprint Cadence",
-    description: "Milestones are divided into predictable two-week sprints with transparent deliverables and scheduled review sessions."
-  },
-  {
-    icon: Layers,
-    title: "Production-Grade Engineering",
-    description: "Every asset and code module is engineered for longevity, high performance, and compliance with modern WCAG standards."
-  },
-  {
-    icon: ShieldCheck,
-    title: "Complete Intellectual Property",
-    description: "Upon project completion, 100% of source files, design tokens, video masters, and code belong entirely to your company."
-  }
 ];
 
 export const dynamic = "force-static";
@@ -83,212 +61,210 @@ export default function AboutPage() {
       address: {
         "@type": "PostalAddress",
         addressLocality: siteConfig.location.city,
-        addressCountry: siteConfig.location.country
+        addressCountry: siteConfig.location.country,
       },
       contactPoint: {
         "@type": "ContactPoint",
         email: siteConfig.contact.email,
-        contactType: "customer service"
-      }
-    }
+        contactType: "customer service",
+      },
+    },
   };
 
   return (
     <>
-      {/* Structured Data Script */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* About Page Hero — Pure White Canvas */}
+      {/* Hero Section */}
       <section className="relative bg-white text-[#10172A] py-20 lg:py-28 border-b border-[#C5CCDC] overflow-hidden">
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#3047D5] px-3.5 py-1.5 rounded-md bg-[#F7F8FC] border border-[#C5CCDC] mb-6">
+              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-[0.16em] text-[#3047D5] px-3.5 py-1.5 rounded-md bg-[#F7F8FC] border border-[#C5CCDC] mb-6 shadow-2xs">
                 <span className="w-2 h-2 rounded-full bg-[#3047D5]" />
-                <span>Studio Story &amp; Philosophy</span>
+                <span>01 // About KreaitX</span>
               </span>
-              <h1 className="font-display text-[clamp(1.75rem,3.5vw,3rem)] font-bold text-[#10172A] tracking-tight leading-[1.08]">
-                Where creative vision meets{" "}
-                <span className="font-display font-bold text-[#3047D5]">
-                  technical reality
-                </span>.
+
+              <h1 className="font-display text-[clamp(2.2rem,4.5vw,3.75rem)] font-extrabold text-[#10172A] tracking-tight leading-[1.06]">
+                Proof first. <br />
+                <span className="text-[#3047D5]">Production second.</span>
               </h1>
-              <p className="mt-5 text-base sm:text-lg text-[#6A7180] leading-relaxed font-sans font-normal max-w-2xl">
-                KreaitX was founded with a singular conviction: businesses deserve a unified partner capable of shaping their brand narrative, filming their visual story, and engineering their digital infrastructure under one roof.
+
+              <p className="mt-5 text-base sm:text-lg text-[#3A4454] leading-relaxed font-sans font-normal max-w-2xl">
+                KreaitX is a brand film and proof-driven marketing studio founded in 2025. We help capable companies communicate their real capabilities more convincingly by identifying the proof they already possess, defining one clear positioning claim, and producing the films, design, and marketing needed to communicate that claim to clients, partners, and investors.
               </p>
 
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-                <Button href="/contact" variant="primary" size="md" withArrow className="w-full sm:w-auto min-h-[48px] font-bold shadow-brand-button">
-                  Start a Project
+                <Button href="/contact" variant="primary" size="md" withArrow className="font-bold shadow-brand-button">
+                  Book a Consultation
                 </Button>
-                <a
-                  href="#studio-story"
-                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-lg text-sm font-semibold text-[#10172A] bg-white hover:bg-[#F7F8FC] hover:text-[#3047D5] border border-[#C5CCDC] hover:border-[#3047D5] transition-all duration-200 w-full sm:w-auto shadow-2xs"
+                <Link
+                  href="/work"
+                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-lg text-sm font-semibold text-[#10172A] bg-white hover:bg-[#F7F8FC] hover:text-[#3047D5] border border-[#C5CCDC] hover:border-[#3047D5] transition-all duration-200"
                 >
-                  Discover Our Story ↓
-                </a>
+                  <span>Explore Selected Work</span>
+                  <ArrowRight className="ml-1.5 h-4 w-4 text-[#3047D5]" />
+                </Link>
               </div>
             </div>
           </Reveal>
         </Container>
       </section>
 
-      {/* The Story & Origin */}
-      <section id="studio-story" className="bg-[#F7F8FC] py-20 sm:py-28 border-b border-[#C5CCDC]">
+      {/* 4 Company Origin Stats (Exact from PDF Page 2) */}
+      <section className="bg-[#F7F8FC] py-14 sm:py-18 border-b border-[#C5CCDC]">
         <Container size="default">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            <div className="lg:col-span-5">
-              <span className="text-xs font-sans font-bold uppercase tracking-wider text-[#3047D5] mb-3 block flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#3047D5]" />
-                01 — THE ORIGIN
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="p-6 rounded-xl bg-white border border-[#C5CCDC] shadow-2xs">
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#6A7180] block">
+                Founded
               </span>
-              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#10172A] tracking-tight leading-tight">
-                Creative + IT: <br />
-                <span className="text-[#3047D5]">
-                  The genesis of KreaitX.
-                </span>
-              </h2>
-
-              <div className="mt-8 p-6 rounded-xl bg-white border border-[#C5CCDC] space-y-3 shadow-xs">
-                <div className="text-xs font-sans uppercase tracking-wider text-[#6A7180] font-bold flex items-center gap-1.5">
-                  <MapPin className="h-4 w-4 text-[#3047D5]" />
-                  Headquarters &amp; Origins
-                </div>
-                <div className="text-xl font-display font-bold text-[#10172A]">
-                  {siteConfig.location.formatted}
-                </div>
-                <p className="text-sm text-[#6A7180] leading-relaxed font-sans">
-                  Collaborating with forward-thinking local enterprises and international clients seeking unified creative and digital solutions.
-                </p>
-              </div>
+              <span className="text-3xl font-display font-bold text-[#10172A] mt-2 block">
+                2025
+              </span>
+              <p className="text-xs text-[#6A7180] mt-1 font-sans">
+                Brand film &amp; proof-driven studio
+              </p>
             </div>
 
-            <div className="lg:col-span-7 space-y-6 text-base sm:text-lg text-[#6A7180] leading-relaxed font-sans font-normal">
-              <p>
-                The name <strong className="text-[#10172A] font-bold">KreaitX</strong> is a deliberate fusion of <strong className="text-[#3047D5] font-bold">Creative</strong> and <strong className="text-[#10172A] font-bold">IT</strong>. For years, businesses have been forced to choose between creative agencies that lack engineering depth and technical software houses that treat design and marketing as an afterthought.
+            <div className="p-6 rounded-xl bg-white border border-[#C5CCDC] shadow-2xs">
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#6A7180] block">
+                Core Focus
+              </span>
+              <span className="text-xl font-display font-bold text-[#3047D5] mt-2 block leading-tight">
+                Brand Films
+              </span>
+              <p className="text-xs text-[#6A7180] mt-1 font-sans">
+                &amp; Proof-driven marketing
               </p>
-              <p>
-                When brand designers, cinematographers, and developers work in separate silos, the customer experience fragments. Strategy gets diluted, timelines drag out, and the end product feels disconnected from the business objective.
+            </div>
+
+            <div className="p-6 rounded-xl bg-white border border-[#C5CCDC] shadow-2xs">
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#6A7180] block">
+                Delivery Model
+              </span>
+              <span className="text-lg font-display font-bold text-[#10172A] mt-2 block leading-snug">
+                Core + Network
+              </span>
+              <p className="text-xs text-[#6A7180] mt-1 font-sans">
+                Specialist creative practitioners
               </p>
-              <p>
-                KreaitX bridges this divide. We assemble multidisciplinary teams under one roof in Peshawar to deliver seamless brand identity, cinematic video production, performance marketing, and bespoke web platforms.
+            </div>
+
+            <div className="p-6 rounded-xl bg-white border border-[#C5CCDC] shadow-2xs">
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#6A7180] block">
+                Geographic Reach
+              </span>
+              <span className="text-3xl font-display font-bold text-[#10172A] mt-2 block">
+                Worldwide
+              </span>
+              <p className="text-xs text-[#6A7180] mt-1 font-sans">
+                US, Middle East, and global clients
               </p>
             </div>
           </div>
         </Container>
       </section>
 
-      {/* Core Studio Values */}
-      <section className="bg-[#10172A] py-20 sm:py-28 border-b border-white/10 text-white">
-        <Container size="default">
-          <Reveal yOffset={16}>
-            <div className="max-w-3xl mb-16">
-              <SectionHeading
-                theme="dark"
-                eyebrow="Our Philosophy"
-                title={
-                  <>
-                    Values that govern{" "}
-                    <span className="text-[#3047D5]">
-                      how we work
-                    </span>.
-                  </>
-                }
-                description="We guide every client engagement with disciplined principles designed to prioritize authenticity, craft, and tangible commercial success."
-              />
-            </div>
-          </Reveal>
-
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {values.map((v, i) => (
-              <StaggerItem key={v.title}>
-                <div className="group rounded-xl bg-white/5 p-8 sm:p-10 border border-white/10 hover:border-[#3047D5]/50 transition-colors h-full flex flex-col justify-between">
-                  <div>
-                    <span className="font-mono text-xs font-bold text-[#3047D5] px-3 py-1 rounded-md bg-white/5 border border-white/10 inline-block mb-4">
-                      Principle 0{i + 1}
-                    </span>
-                    <h3 className="text-2xl font-display font-bold text-white tracking-tight mb-3 group-hover:text-[#3047D5] transition-colors">
-                      {v.title}
-                    </h3>
-                    <p className="text-base text-[#C5CCDC] leading-relaxed font-sans font-normal">
-                      {v.description}
-                    </p>
-                  </div>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </Container>
-      </section>
-
-      {/* Working Methodology & Client Collaboration */}
+      {/* The Credibility Gap Challenge */}
       <section className="bg-white py-20 sm:py-28 border-b border-[#C5CCDC]">
         <Container size="default">
-          <div className="max-w-3xl mb-16">
-            <span className="text-xs font-sans font-bold uppercase tracking-widest text-[#3047D5] mb-3 block flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#3047D5]" />
-              Client Collaboration
+          <div className="max-w-3xl mb-12 sm:mb-16">
+            <span className="text-xs font-mono font-bold uppercase tracking-[0.16em] text-[#3047D5] block mb-2">
+              The Problem We Solve
             </span>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[#10172A] tracking-tight leading-tight">
-              How We Collaborate
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-[#10172A] tracking-tight">
+              Most capable companies have a credibility gap.
             </h2>
-            <p className="mt-4 text-base sm:text-lg text-[#6A7180] leading-relaxed font-sans font-normal">
-              A partnership model built on clarity, accountability, and direct access to practitioners.
+            <p className="mt-3 text-base text-[#6A7180] font-sans">
+              They do excellent work, but their external presence does not reflect it. Their website looks like everyone else&apos;s. Their credentials are buried in PDF proposals. Their best client results are never filmed. We fix this:
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {collaborationPillars.map((pillar) => {
-              const Icon = pillar.icon;
-              return (
-                <div
-                  key={pillar.title}
-                  className="rounded-xl bg-[#F7F8FC] border border-[#C5CCDC] p-6 sm:p-7 hover:border-[#3047D5] transition-colors flex flex-col justify-between"
-                >
-                  <div>
-                    <div className="w-10 h-10 rounded-lg bg-[#F7F8FC] text-[#3047D5] flex items-center justify-center mb-5 border border-[#C5CCDC]">
-                      <Icon className="h-5 w-5" />
-                    </div>
-                    <h3 className="text-lg font-display font-bold text-[#10172A] mb-2">
-                      {pillar.title}
-                    </h3>
-                    <p className="text-sm text-[#6A7180] font-sans leading-relaxed">
-                      {pillar.description}
-                    </p>
-                  </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {credibilityGapChallenge.map((item, idx) => (
+              <div
+                key={item.title}
+                className="p-8 rounded-xl bg-[#F7F8FC] border border-[#C5CCDC] hover:border-[#3047D5] transition-all duration-200 shadow-2xs flex flex-col justify-between"
+              >
+                <div>
+                  <span className="text-xs font-mono font-bold text-[#3047D5] uppercase tracking-wider block mb-3">
+                    0{idx + 1} · Failure Mode
+                  </span>
+                  <h3 className="text-2xl font-display font-bold text-[#10172A] tracking-tight">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-sm sm:text-base text-[#6A7180] leading-relaxed font-sans">
+                    {item.description}
+                  </p>
                 </div>
-              );
-            })}
+
+                <div className="mt-6 pt-4 border-t border-[#C5CCDC]/60 text-xs font-mono text-[#10172A] flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#3047D5]" />
+                  <span>Solved through proof</span>
+                </div>
+              </div>
+            ))}
           </div>
 
-          {/* Link to Process page */}
-          <div className="mt-12 p-6 sm:p-8 rounded-xl bg-[#10172A] border border-white/10 text-white flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
-            <div>
-              <span className="text-xs font-mono uppercase tracking-widest text-[#3047D5] font-bold block mb-1">
-                6-Stage Precision
+          {/* Centerpiece Statement Banner */}
+          <div className="mt-14 sm:mt-20 rounded-2xl bg-[#10172A] text-white p-8 sm:p-12 lg:p-16">
+            <div className="max-w-3xl">
+              <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#4364EF] block mb-3">
+                Core Conviction
               </span>
-              <h3 className="text-xl sm:text-2xl font-display font-bold text-white">
-                Interested in our step-by-step sprint delivery?
-              </h3>
-              <p className="text-sm text-[#C5CCDC] font-sans mt-1">
-                Explore our full Discover, Strategy, Create, Build, Launch, and Grow phases.
+              <blockquote className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-snug">
+                &ldquo;More content will not close this gap. <br className="hidden sm:inline" />
+                <span className="text-[#4364EF]">Better evidence will.</span>&rdquo;
+              </blockquote>
+              <p className="mt-4 text-sm sm:text-base text-[#C5CCDC] font-sans leading-relaxed">
+                When prospective enterprise clients or investors review your company, they do not want to wade through generic fluff or empty taglines. They want to see undeniable proof of technical capability, customer praise, and real-world outcomes.
               </p>
             </div>
-            <Link
-              href="/process"
-              className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-lg text-sm font-sans font-semibold text-white bg-[#3047D5] hover:bg-[#2538B8] shrink-0 transition-colors shadow-brand-button"
-            >
-              <span>Explore Process</span>
-              <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
-            </Link>
           </div>
         </Container>
       </section>
 
-      {/* Conversion CTA */}
+      {/* Our Operating Values */}
+      <section className="bg-[#F7F8FC] py-20 sm:py-28 border-b border-[#C5CCDC]">
+        <Container size="default">
+          <div className="max-w-3xl mb-12 sm:mb-16">
+            <span className="text-xs font-mono font-bold uppercase tracking-[0.16em] text-[#3047D5] block mb-2">
+              Our Principles
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-[#10172A] tracking-tight">
+              How we approach our work.
+            </h2>
+            <p className="mt-3 text-base text-[#6A7180] font-sans">
+              The four foundational standards that guide every brand film, design decision, and client relationship:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {aboutValues.map((val) => (
+              <div
+                key={val.title}
+                className="p-8 rounded-xl bg-white border border-[#C5CCDC] shadow-2xs hover:border-[#3047D5] transition-all duration-200"
+              >
+                <div className="flex items-center gap-2 mb-3">
+                  <CheckCircle2 className="h-5 w-5 text-[#3047D5]" />
+                  <h3 className="text-xl font-display font-bold text-[#10172A]">
+                    {val.title}
+                  </h3>
+                </div>
+                <p className="text-sm sm:text-base text-[#6A7180] leading-relaxed font-sans">
+                  {val.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Final Action CTA */}
       <CTASection />
     </>
   );

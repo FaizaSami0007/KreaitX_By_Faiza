@@ -12,6 +12,42 @@ export interface ServiceItem {
   featured?: boolean;
 }
 
+export interface CoreOffering {
+  id: string;
+  number: string;
+  tag: string;
+  title: string;
+  pricingLabel: string;
+  pricingNote?: string;
+  description: string;
+  features: string[];
+  ctaLabel: string;
+  ctaType: "audit" | "quote" | "consultation";
+}
+
+export interface XRayAuditArea {
+  id: string;
+  area: string;
+  question: string;
+  businessValue: string;
+}
+
+export interface LeaderProfile {
+  name: string;
+  title: string;
+  bio: string;
+  image: string;
+  experienceYears: number;
+  trackRecord: string[];
+}
+
+export interface AdvisorProfile {
+  name: string;
+  role: string;
+  location: string;
+  bio: string;
+}
+
 export interface ProjectCaseStudy {
   id: string;
   title: string;
@@ -59,11 +95,13 @@ export interface NavItem {
 }
 
 export interface ContactFormData {
+  inquiryType?: "consultation" | "quote" | "audit";
   fullName: string;
   email: string;
   companyName: string;
-  selectedServices: string[];
-  budgetRange: string;
-  projectTimeline: string;
+  websiteUrl?: string;
+  selectedServices?: string[];
+  budgetRange?: string;
+  projectTimeline?: string;
   projectDetails: string;
 }

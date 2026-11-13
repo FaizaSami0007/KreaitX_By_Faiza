@@ -7,9 +7,15 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { CTASection } from "@/components/sections/CTASection";
-import { projectCaseStudies } from "@/data/siteData";
+import { projectCaseStudies, clientRoster } from "@/data/siteData";
 
-const categories = ["All Projects", "Healthcare & MedTech", "Luxury Retail & Design", "Financial Technology"];
+const categories = [
+  "All Projects",
+  "Documentary & Streaming",
+  "AI & Technology",
+  "Government & Public Service",
+  "Crisis & Relief"
+];
 
 export const WorkClient: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("All Projects");
@@ -17,7 +23,15 @@ export const WorkClient: React.FC = () => {
   const filteredProjects =
     selectedCategory === "All Projects"
       ? projectCaseStudies
-      : projectCaseStudies.filter((p) => p.industry.toLowerCase().includes(selectedCategory.toLowerCase()) || selectedCategory.toLowerCase().includes(p.industry.toLowerCase()));
+      : projectCaseStudies.filter((p) => {
+          const ind = p.industry.toLowerCase();
+          const cat = selectedCategory.toLowerCase();
+          if (cat.includes("documentary") && ind.includes("documentary")) return true;
+          if (cat.includes("ai") && (ind.includes("ai") || ind.includes("climate"))) return true;
+          if (cat.includes("government") && (ind.includes("government") || ind.includes("public"))) return true;
+          if (cat.includes("crisis") && ind.includes("crisis")) return true;
+          return ind.includes(cat);
+        });
 
   return (
     <>
@@ -259,6 +273,39 @@ export const WorkClient: React.FC = () => {
                   </div>
                 </div>
               </article>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Client Roster & Institutional References (Page 5 of PDF) */}
+      <section className="bg-[#F7F8FC] py-16 sm:py-20 border-b border-[#C5CCDC]">
+        <Container size="default">
+          <div className="max-w-2xl mx-auto text-center mb-10">
+            <span className="text-xs font-mono font-bold uppercase tracking-[0.16em] text-[#3047D5] block mb-2">
+              Verified Client References
+            </span>
+            <h3 className="text-2xl sm:text-3xl font-display font-bold text-[#10172A] tracking-tight">
+              Trusted by Ambitious Brands &amp; Public Institutions
+            </h3>
+            <p className="mt-2 text-sm text-[#6A7180] font-sans">
+              Selected clients, enterprise partners, and public sector organizations that have collaborated with KreaitX:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {clientRoster.map((client) => (
+              <div
+                key={client}
+                className="p-5 rounded-xl bg-white border border-[#C5CCDC] shadow-2xs flex flex-col items-center justify-center text-center min-h-[90px] hover:border-[#3047D5] transition-colors"
+              >
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#10172A] block">
+                  {client}
+                </span>
+                <span className="text-[10px] text-[#6A7180] mt-1 font-mono">
+                  Verified Client
+                </span>
+              </div>
             ))}
           </div>
         </Container>

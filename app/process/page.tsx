@@ -1,77 +1,81 @@
 import React from "react";
 import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowRight, CheckCircle2, Check } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
-import { Reveal, StaggerContainer, StaggerItem } from "@/components/ui/Reveal";
+import { Reveal } from "@/components/ui/Reveal";
 import { CTASection } from "@/components/sections/CTASection";
-import { processStages, siteConfig } from "@/data/siteData";
+import { threeStepApproach, xrayAuditAreas, siteConfig } from "@/data/siteData";
 
 export const metadata: Metadata = {
-  title: "Our Process — Disciplined Creative Technology",
-  description: "Explore KreaitX's six-stage methodology from discovery to sustainable digital growth. Clear milestones, structured client collaboration, and transparent outputs.",
+  title: "Our Approach — Three Stages & The X-Ray Audit Framework | KreaitX",
+  description:
+    "Explore KreaitX's three-stage engagement model and the six-area X-Ray Audit framework designed to deliver clarity before commitment.",
   alternates: {
-    canonical: `${siteConfig.url}/process`
+    canonical: `${siteConfig.url}/process`,
   },
   openGraph: {
-    title: "Our Process — Disciplined Creative Technology",
-    description: "Explore KreaitX's six-stage methodology from discovery to sustainable digital growth. Clear milestones, structured client collaboration, and transparent outputs.",
+    title: "Our Approach — Three Stages & The X-Ray Audit Framework | KreaitX",
+    description:
+      "Explore KreaitX's three-stage engagement model and the six-area X-Ray Audit framework designed to deliver clarity before commitment.",
     url: `${siteConfig.url}/process`,
     type: "website",
-    siteName: siteConfig.name
-  }
+    siteName: siteConfig.name,
+  },
 };
+
+export const dynamic = "force-static";
 
 export default function ProcessPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    "name": "KreaitX Six-Stage Creative Technology Methodology",
-    "description": "Our transparent, disciplined process bridging discovery, architecture, prototyping, production, QA, and growth.",
-    "step": processStages.map((stage, idx) => ({
+    name: "KreaitX Three-Stage Proof-Driven Engagement Model",
+    description: "Our disciplined three-stage approach and six-area X-Ray Audit framework.",
+    step: threeStepApproach.map((stage, idx) => ({
       "@type": "HowToStep",
-      "position": idx + 1,
-      "name": stage.title,
-      "text": stage.description
-    }))
+      position: idx + 1,
+      name: `Stage ${stage.number}: ${stage.title}`,
+      text: stage.description,
+    })),
   };
 
   return (
     <>
-      {/* Schema.org HowTo Microdata */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Process Page Hero — Pure White #FFFFFF Canvas */}
+      {/* Hero Section */}
       <section className="relative bg-white text-[#10172A] py-20 lg:py-28 border-b border-[#C5CCDC] overflow-hidden">
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#3047D5] px-3.5 py-1.5 rounded-md bg-[#F7F8FC] border border-[#C5CCDC] mb-6">
+              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-[0.16em] text-[#3047D5] px-3.5 py-1.5 rounded-md bg-[#F7F8FC] border border-[#C5CCDC] mb-6 shadow-2xs">
                 <span className="w-2 h-2 rounded-full bg-[#3047D5]" />
-                <span>Methodology &amp; Standards</span>
+                <span>02 // Our Approach</span>
               </span>
-              <h1 className="font-display text-[clamp(1.75rem,3.5vw,3rem)] font-bold text-[#10172A] tracking-tight leading-[1.08]">
-                Clear milestones.{" "}
-                <span className="font-display font-bold text-[#3047D5]">
-                  Zero ambiguity
-                </span>.
+
+              <h1 className="font-display text-[clamp(2.2rem,4.5vw,3.75rem)] font-extrabold text-[#10172A] tracking-tight leading-[1.06]">
+                Clarity before commitment. <br />
+                <span className="text-[#3047D5]">Results without friction.</span>
               </h1>
-              <p className="mt-5 text-base sm:text-lg text-[#6A7180] leading-relaxed font-sans font-normal max-w-2xl">
-                We believe exceptional work happens when clients understand exactly what comes next. Our six-stage process bridges strategic rigor, creative exploration, and production reliability.
+
+              <p className="mt-5 text-base sm:text-lg text-[#3A4454] leading-relaxed font-sans font-normal max-w-2xl">
+                A simple, disciplined engagement model designed to deliver clarity before commitment and results without friction. We believe you should always know exactly what you will receive and what it will cost before work begins.
               </p>
 
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
-                <Button href="/contact" variant="primary" size="md" withArrow className="w-full sm:w-auto min-h-[48px] font-bold shadow-brand-button">
-                  Start a Project
+                <Button href="/contact?type=audit" variant="primary" size="md" withArrow className="font-bold shadow-brand-button">
+                  Request Complimentary Audit
                 </Button>
                 <a
-                  href="#process-breakdown"
-                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-lg text-sm font-semibold text-[#10172A] bg-white hover:bg-[#F7F8FC] hover:text-[#3047D5] border border-[#C5CCDC] hover:border-[#3047D5] transition-all duration-200 w-full sm:w-auto shadow-xs"
+                  href="#x-ray-audit"
+                  className="inline-flex items-center justify-center px-6 py-3 min-h-[48px] rounded-lg text-sm font-semibold text-[#10172A] bg-white hover:bg-[#F7F8FC] hover:text-[#3047D5] border border-[#C5CCDC] hover:border-[#3047D5] transition-all duration-200"
                 >
-                  Explore 6 Stages ↓
+                  Explore X-Ray Audit Framework ↓
                 </a>
               </div>
             </div>
@@ -79,89 +83,63 @@ export default function ProcessPage() {
         </Container>
       </section>
 
-      {/* Six Stage Detailed Deep Dive */}
-      <section id="process-breakdown" className="bg-white py-20 sm:py-28 border-b border-[#C5CCDC]">
+      {/* The 3 Official Stages Deep Dive */}
+      <section className="bg-[#F7F8FC] py-20 sm:py-28 border-b border-[#C5CCDC]">
         <Container size="default">
-          <div className="space-y-12 sm:space-y-16">
-            {processStages.map((stage, idx) => (
+          <div className="max-w-3xl mb-12 sm:mb-16">
+            <span className="text-xs font-mono font-bold uppercase tracking-[0.16em] text-[#3047D5] block mb-2">
+              Engagement Lifecycle
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-[#10172A] tracking-tight">
+              Three stages. Zero ambiguity.
+            </h2>
+            <p className="mt-3 text-base text-[#6A7180] font-sans">
+              From the first conversation to final delivery, our process is transparent, structured, and predictable:
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {threeStepApproach.map((stage) => (
               <div
                 key={stage.number}
-                className="rounded-xl bg-white border border-[#C5CCDC] shadow-xs hover:border-[#3047D5] transition-all duration-200 p-6 sm:p-10 lg:p-14"
+                className="rounded-2xl bg-white border border-[#C5CCDC] p-8 sm:p-12 shadow-2xs hover:border-[#3047D5] transition-all duration-200"
               >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
-                  {/* Left Column: Stage Identity & Narrative */}
-                  <div className="lg:col-span-5 space-y-4">
-                    <div className="flex items-center gap-3">
-                      <span className="font-display text-sm font-bold text-[#3047D5] bg-[#F7F8FC] border border-[#C5CCDC] px-3 py-1 rounded-md">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                  
+                  {/* Left Stage Indicator */}
+                  <div className="lg:col-span-4 space-y-2">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-mono font-bold text-[#3047D5] bg-[#F7F8FC] border border-[#C5CCDC] px-3 py-1 rounded-md">
                         Stage {stage.number}
                       </span>
-                      <span className="text-xs font-sans uppercase text-[#6A7180] tracking-wider font-semibold">
-                        Phase 0{idx + 1} of 06
+                      <span className="text-xs font-mono text-[#6A7180] bg-[#F7F8FC] border border-[#C5CCDC] px-2.5 py-1 rounded-md">
+                        {stage.duration}
                       </span>
                     </div>
-
-                    <h2 className="font-display text-2xl sm:text-3xl font-bold text-[#10172A] tracking-tight">
+                    <h3 className="text-2xl sm:text-3xl font-display font-bold text-[#10172A] tracking-tight">
                       {stage.title}
-                    </h2>
+                    </h3>
+                  </div>
 
-                    <p className="text-base font-semibold text-[#3047D5]">
-                      {stage.tagline}
-                    </p>
-
-                    <p className="text-base text-[#6A7180] leading-relaxed font-sans font-normal pt-2">
+                  {/* Right Stage Narrative & Outputs */}
+                  <div className="lg:col-span-8 space-y-5">
+                    <p className="text-base text-[#3A4454] leading-relaxed font-sans">
                       {stage.description}
                     </p>
 
-                    <div className="pt-4">
-                      <span className="text-xs font-sans uppercase tracking-wider text-[#6A7180] font-bold block mb-2.5">
-                        Key Phase Milestones
-                      </span>
-                      <div className="flex flex-wrap gap-2">
-                        {stage.milestones.map((ms) => (
-                          <span
-                            key={ms}
-                            className="px-3.5 py-1.5 rounded-md bg-[#F7F8FC] border border-[#C5CCDC] text-xs font-medium text-[#10172A] hover:border-[#3047D5] transition-colors"
-                          >
-                            {ms}
-                          </span>
-                        ))}
+                    <div className="p-4 rounded-xl bg-[#F7F8FC] border border-[#C5CCDC] flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-[#3047D5] shrink-0 mt-0.5" />
+                      <div>
+                        <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#10172A] block">
+                          Expected Deliverable / Output:
+                        </span>
+                        <p className="text-sm text-[#3A4454] mt-0.5 font-sans">
+                          {stage.output}
+                        </p>
                       </div>
                     </div>
                   </div>
 
-                  {/* Right Column: Collaboration Matrix */}
-                  <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 bg-[#F7F8FC] p-6 sm:p-8 rounded-xl border border-[#C5CCDC]">
-                    {/* What client provides */}
-                    <div className="rounded-lg bg-white p-6 border border-[#C5CCDC] shadow-2xs flex flex-col justify-between">
-                      <div>
-                        <span className="text-xs font-sans uppercase tracking-wider text-[#6A7180] font-bold block mb-2">
-                          01 • What You Provide
-                        </span>
-                        <p className="text-sm text-[#6A7180] leading-relaxed font-sans">
-                          {stage.clientInput}
-                        </p>
-                      </div>
-                      <div className="mt-4 pt-4 border-t border-[#C5CCDC] text-xs text-[#6A7180] font-medium">
-                        Input &amp; Review Touchpoint
-                      </div>
-                    </div>
-
-                    {/* What KreaitX delivers */}
-                    <div className="rounded-lg bg-white p-6 border border-[#C5CCDC] shadow-2xs flex flex-col justify-between">
-                      <div>
-                        <span className="text-xs font-sans uppercase tracking-wider text-[#3047D5] font-bold block mb-2">
-                          02 • What KreaitX Delivers
-                        </span>
-                        <p className="text-sm text-[#10172A] leading-relaxed font-medium">
-                          {stage.kreaitxOutput}
-                        </p>
-                      </div>
-                      <div className="mt-4 pt-4 border-t border-[#C5CCDC] text-xs text-[#3047D5] font-semibold flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#3047D5]" />
-                        <span>Verified Output Document</span>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             ))}
@@ -169,74 +147,90 @@ export default function ProcessPage() {
         </Container>
       </section>
 
-      {/* Uncertainty Reduction Section — Dark Theme Contrast */}
-      <section className="bg-[#10172A] py-20 sm:py-28 border-b border-white/10 text-white">
+      {/* The X-Ray Audit Framework (Page 3 of PDF) */}
+      <section id="x-ray-audit" className="bg-white py-20 sm:py-28 border-b border-[#C5CCDC]">
         <Container size="default">
-          <Reveal yOffset={16}>
-            <div className="max-w-3xl mb-16">
-              <SectionHeading
-                theme="dark"
-                eyebrow="Collaboration Standards"
-                title={
-                  <>
-                    How we make working together{" "}
-                    <span className="text-[#3047D5]">
-                      calm and predictable
-                    </span>.
-                  </>
-                }
-                description="We eliminate traditional agency friction through structured communication, weekly check-ins, and direct access to craft leads."
-              />
+          <div className="max-w-3xl mb-12 sm:mb-16">
+            <span className="text-xs font-mono font-bold uppercase tracking-[0.16em] text-[#3047D5] block mb-2">
+              Diagnostic Framework
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-[#10172A] tracking-tight">
+              The X-Ray Audit Framework
+            </h2>
+            <p className="mt-3 text-base text-[#6A7180] font-sans">
+              Before producing any film or marketing asset, we assess six areas of your current presence to identify where your credibility is being lost:
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {xrayAuditAreas.map((area, idx) => (
+              <div
+                key={area.id}
+                className="p-8 rounded-2xl bg-[#F7F8FC] border border-[#C5CCDC] hover:border-[#3047D5] transition-all duration-200 shadow-2xs flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between pb-3.5 mb-3.5 border-b border-[#C5CCDC]">
+                    <span className="text-xs font-mono font-bold text-[#3047D5] uppercase tracking-wider">
+                      Area 0{idx + 1}
+                    </span>
+                    <span className="text-xs font-mono text-[#10172A] font-bold">
+                      {area.area}
+                    </span>
+                  </div>
+
+                  <p className="text-base font-display font-bold text-[#10172A] leading-snug">
+                    &ldquo;{area.question}&rdquo;
+                  </p>
+
+                  <p className="mt-4 text-xs sm:text-sm text-[#6A7180] leading-relaxed font-sans">
+                    {area.businessValue}
+                  </p>
+                </div>
+
+                <div className="mt-6 pt-4 border-t border-[#C5CCDC]/60 flex items-center gap-1.5 text-xs font-mono text-[#3047D5]">
+                  <Check className="h-3.5 w-3.5" />
+                  <span>Assessed in X-Ray Report</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Complimentary Audit Banner (Exact from PDF Page 3 footer) */}
+          <div className="mt-14 p-8 sm:p-12 rounded-2xl bg-[#10172A] text-white">
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
+              <div className="max-w-2xl space-y-2">
+                <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#4364EF] block">
+                  Complimentary Diagnostic
+                </span>
+                <h3 className="text-2xl sm:text-3xl font-display font-bold tracking-tight">
+                  Request a complimentary X-Ray Audit for your company.
+                </h3>
+                <p className="text-sm text-[#C5CCDC] font-sans">
+                  We review your current brand, messaging, and digital assets. You receive a detailed Credibility Gap Report within 3 to 5 business days with actionable recommendations. Zero cost, no commitment.
+                </p>
+              </div>
+
+              <div className="shrink-0 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                <Link
+                  href="/contact?type=audit"
+                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-sm font-bold text-white bg-[#4364EF] hover:bg-[#3252DB] transition-colors shadow-brand-button"
+                >
+                  <span>Request X-Ray Audit</span>
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+                <a
+                  href={`mailto:${siteConfig.contact.email}?subject=X-Ray%20Audit%20Request`}
+                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-sm font-bold text-white bg-white/10 hover:bg-white/15 border border-white/20 transition-colors"
+                >
+                  Email Directly
+                </a>
+              </div>
             </div>
-          </Reveal>
-
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <StaggerItem>
-              <div className="rounded-xl bg-white/5 p-8 border border-white/10 hover:border-[#3047D5]/50 transition-colors h-full">
-                <span className="h-10 w-10 rounded-lg bg-white/5 text-[#3047D5] flex items-center justify-center mb-6 font-display text-sm font-bold border border-white/10">
-                  01
-                </span>
-                <h3 className="text-2xl font-display font-bold text-white tracking-tight mb-2.5">
-                  No Middleman Lag
-                </h3>
-                <p className="text-base text-[#C5CCDC] leading-relaxed font-sans font-normal">
-                  You communicate directly with the designers, directors, and developers doing the work, eliminating telephone-game misunderstandings.
-                </p>
-              </div>
-            </StaggerItem>
-
-            <StaggerItem>
-              <div className="rounded-xl bg-white/5 p-8 border border-white/10 hover:border-[#3047D5]/50 transition-colors h-full">
-                <span className="h-10 w-10 rounded-lg bg-white/5 text-[#3047D5] flex items-center justify-center mb-6 font-display text-sm font-bold border border-white/10">
-                  02
-                </span>
-                <h3 className="text-2xl font-display font-bold text-white tracking-tight mb-2.5">
-                  Weekly Async &amp; Sync Loops
-                </h3>
-                <p className="text-base text-[#C5CCDC] leading-relaxed font-sans font-normal">
-                  Clear weekly loom summaries and milestone reviews give your internal stakeholders full visibility without excessive meeting fatigue.
-                </p>
-              </div>
-            </StaggerItem>
-
-            <StaggerItem>
-              <div className="rounded-xl bg-white/5 p-8 border border-white/10 hover:border-[#3047D5]/50 transition-colors h-full">
-                <span className="h-10 w-10 rounded-lg bg-white/5 text-[#3047D5] flex items-center justify-center mb-6 font-display text-sm font-bold border border-white/10">
-                  03
-                </span>
-                <h3 className="text-2xl font-display font-bold text-white tracking-tight mb-2.5">
-                  Fixed Milestones, Clear Scopes
-                </h3>
-                <p className="text-base text-[#C5CCDC] leading-relaxed font-sans font-normal">
-                  Every deliverable is clearly scoped before kick-off. No surprise invoices, hidden tech debt, or unexpected scope creep.
-                </p>
-              </div>
-            </StaggerItem>
-          </StaggerContainer>
+          </div>
         </Container>
       </section>
 
-      {/* Conversion CTA */}
+      {/* Final Action CTA */}
       <CTASection />
     </>
   );
