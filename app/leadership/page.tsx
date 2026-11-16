@@ -63,7 +63,7 @@ export default function LeadershipPage() {
             <div className="max-w-3xl mx-auto flex flex-col items-center">
               <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-[0.16em] text-[#3047D5] px-3.5 py-1.5 rounded-md bg-[#F7F8FC] border border-[#C5CCDC] mb-6 shadow-2xs">
                 <span className="w-2 h-2 rounded-full bg-[#3047D5]" />
-                <span>06 // Leadership &amp; Advisory</span>
+                <span>Leadership &amp; Advisory</span>
               </span>
 
               <h1 className="font-display text-[clamp(2.2rem,4.5vw,3.75rem)] font-extrabold text-[#10172A] tracking-tight leading-[1.06]">

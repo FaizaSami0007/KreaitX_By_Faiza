@@ -19,7 +19,7 @@ export const LeadershipSection: React.FC = () => {
               <div className="inline-flex items-center gap-2 mb-4">
                 <span className="w-2 h-2 rounded-full bg-[#3047D5]" aria-hidden="true" />
                 <span className="text-xs sm:text-[13px] font-mono font-bold uppercase tracking-[0.16em] text-[#3047D5]">
-                  06 // Leadership &amp; Advisory
+                  Leadership &amp; Advisory
                 </span>
               </div>
               <h2 className="font-display text-[clamp(2.1rem,4.2vw,3.5rem)] font-extrabold text-[#10172A] tracking-tight leading-[1.08]">
