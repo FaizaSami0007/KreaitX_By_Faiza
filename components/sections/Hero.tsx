@@ -19,15 +19,6 @@ export const Hero: React.FC = () => {
             
             {/* Left Content Column */}
             <div className="lg:col-span-7 flex flex-col items-start text-left">
-              
-              {/* Category Eyebrow */}
-              <div className="inline-flex items-center gap-2 mb-4">
-                <span className="w-2 h-2 rounded-full bg-[#3047D5]" aria-hidden="true" />
-                <span className="text-xs sm:text-[13px] font-mono font-bold uppercase tracking-[0.16em] text-[#3047D5]">
-                  Brand Films <span className="text-[#6A7180] mx-1">·</span> Proof-Driven Marketing
-                </span>
-              </div>
-
               {/* Display Headline */}
               <h1 className="font-display text-[clamp(2.75rem,5.5vw,4.85rem)] font-extrabold text-[#10172A] tracking-tight leading-[1.03]">
                 We Design <br />

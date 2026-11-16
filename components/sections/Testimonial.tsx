@@ -13,7 +13,6 @@ export const Testimonial: React.FC = () => {
           <div className="max-w-3xl mb-16 sm:mb-20">
             <SectionHeading
               theme="light"
-              eyebrow="Working Principles"
               title={
                 <>
                   Why ambitious businesses choose a{" "}

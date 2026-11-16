@@ -9,7 +9,6 @@ interface SectionHeadingProps {
   theme?: "light" | "dark";
   className?: string;
   eyebrowColor?: string;
-  withGradientEyebrow?: boolean;
 }
 
 export const SectionHeading: React.FC<SectionHeadingProps> = ({
@@ -20,7 +19,6 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
   theme = "light",
   className,
   eyebrowColor,
-  withGradientEyebrow = true
 }) => {
   const isDark = theme === "dark";
 
@@ -35,21 +33,14 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
       )}
     >
       {eyebrow && (
-        <div className="mb-3.5 inline-flex items-center gap-2">
-          <span
-            className={cn(
-              "inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-semibold uppercase tracking-[0.14em] transition-colors",
-              withGradientEyebrow
-                ? isDark
-                  ? "bg-[#10172A] text-white border border-white/10"
-                  : "bg-[#F7F8FC] text-[#3047D5] border border-[#3047D5]/20"
-                : eyebrowColor || (isDark ? "text-[#3047D5]" : "text-[#3047D5]")
-            )}
-          >
-            <span className={cn("h-1.5 w-1.5 rounded-full", "bg-[#3047D5]")} aria-hidden="true" />
-            {eyebrow}
-          </span>
-        </div>
+        <span
+          className={cn(
+            "mb-3 text-xs font-mono font-bold uppercase tracking-[0.16em]",
+            eyebrowColor || (isDark ? "text-[#4364EF]" : "text-[#3047D5]")
+          )}
+        >
+          {eyebrow}
+        </span>
       )}
 
       <h2

@@ -28,13 +28,6 @@ export const ConnectedCapabilitiesSection: React.FC = () => {
           
           {/* Left Column */}
           <div className="lg:col-span-5 flex flex-col items-start text-left space-y-6 sm:space-y-7 sticky top-28">
-            <Reveal delay={0.05} yOffset={12}>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-white border border-[#C5CCDC] text-[#3047D5] text-xs font-mono font-bold uppercase tracking-wider shadow-2xs">
-                <span className="h-1.5 w-1.5 rounded-full bg-[#3047D5]" />
-                <span>CONNECTED CAPABILITIES</span>
-              </div>
-            </Reveal>
-
             <Reveal delay={0.12} yOffset={18}>
               <h2
                 id="connected-capabilities-heading"

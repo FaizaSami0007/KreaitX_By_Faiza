@@ -18,7 +18,6 @@ export const ProcessSection: React.FC = () => {
         <Reveal yOffset={16}>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-16 sm:mb-20">
             <SectionHeading
-              eyebrow="Disciplined Methodology"
               title={
                 <>
                   From idea to impact,{" "}

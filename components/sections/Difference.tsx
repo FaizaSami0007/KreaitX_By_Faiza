@@ -17,7 +17,6 @@ export const Difference: React.FC = () => {
         <Reveal yOffset={16}>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-14 sm:mb-16">
             <SectionHeading
-              eyebrow="Our Approach & Standards"
               title={
                 <>
                   Built on discipline.{" "}

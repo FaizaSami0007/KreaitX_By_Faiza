@@ -15,7 +15,6 @@ export const Services: React.FC = () => {
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-14 sm:mb-16">
             <SectionHeading
               theme="light"
-              eyebrow="Connected Capabilities"
               title={
                 <>
                   Everything your business needs to{" "}
