@@ -73,24 +73,30 @@ export const Navbar: React.FC = () => {
             </Link>
 
             {/* Desktop Navigation Links */}
-            <div className="hidden lg:flex items-center gap-1 xl:gap-2">
+            <div className="hidden lg:flex items-center justify-center gap-0.5 xl:gap-2 mx-auto">
               {navItems.map((item) => {
-                const isActive = pathname === item.href;
+                const isActive =
+                  pathname === item.href ||
+                  (item.href !== "/" && pathname.startsWith(item.href + "/"));
+
                 return (
                   <Link
                     key={item.href}
                     href={item.href}
                     className={cn(
-                      "relative px-3.5 py-2 text-[14px] font-sans transition-all duration-180 min-h-[40px] flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4364EF] rounded-md",
+                      "relative px-2.5 xl:px-3.5 py-2 text-[13px] xl:text-[14px] font-sans transition-all duration-150 min-h-[40px] flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3047D5] rounded-md",
                       isActive
-                        ? "text-[#4364EF] font-semibold"
+                        ? "text-[#3047D5] font-semibold"
                         : "text-[#6A7180] hover:text-[#10172A] hover:bg-[#F7F8FC] font-medium"
                     )}
                     aria-current={isActive ? "page" : undefined}
                   >
                     <span>{item.label}</span>
                     {isActive && (
-                      <span className="absolute bottom-1 left-3.5 right-3.5 h-[2px] bg-[#4364EF] rounded-full" aria-hidden="true" />
+                      <span
+                        className="absolute bottom-1 left-2.5 right-2.5 xl:left-3.5 xl:right-3.5 h-[2px] bg-[#3047D5] rounded-full"
+                        aria-hidden="true"
+                      />
                     )}
                   </Link>
                 );
@@ -98,10 +104,10 @@ export const Navbar: React.FC = () => {
             </div>
 
             {/* Desktop Action CTA */}
-            <div className="hidden lg:flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-3 shrink-0">
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center text-[14px] font-sans font-medium text-white bg-[#4364EF] hover:bg-[#3252DB] px-5 py-2.5 min-h-[42px] rounded-lg transition-all duration-200 shadow-brand-button active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4364EF] focus-visible:ring-offset-2"
+                className="group inline-flex items-center justify-center text-[13px] xl:text-[14px] font-sans font-medium text-white bg-[#3047D5] hover:bg-[#2538B0] px-4 xl:px-5 py-2.5 min-h-[42px] rounded-lg transition-all duration-200 shadow-brand-button active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3047D5] focus-visible:ring-offset-2"
               >
                 <span>Start a Project</span>
                 <ArrowRight className="ml-2 h-4 w-4 text-white/90 transition-transform duration-200 group-hover:translate-x-1" />
@@ -112,14 +118,14 @@ export const Navbar: React.FC = () => {
             <div className="flex items-center gap-2.5 lg:hidden">
               <Link
                 href="/contact"
-                className="inline-flex sm:hidden text-xs font-semibold text-white bg-[#4364EF] hover:bg-[#3252DB] px-3.5 py-2 rounded-md min-h-[40px] items-center justify-center shadow-brand-button focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4364EF]"
+                className="inline-flex sm:hidden text-xs font-semibold text-white bg-[#3047D5] hover:bg-[#2538B0] px-3.5 py-2 rounded-md min-h-[40px] items-center justify-center shadow-brand-button focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3047D5]"
               >
                 Inquire
               </Link>
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(true)}
-                className="inline-flex items-center justify-center p-2 min-h-[40px] min-w-[40px] rounded-md text-[#10172A] hover:bg-[#F7F8FC] border border-[#C5CCDC] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4364EF] focus-visible:ring-offset-2"
+                className="inline-flex items-center justify-center p-2 min-h-[40px] min-w-[40px] rounded-md text-[#10172A] hover:bg-[#F7F8FC] border border-[#C5CCDC] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3047D5] focus-visible:ring-offset-2"
                 aria-expanded={mobileMenuOpen}
                 aria-controls="mobile-menu-drawer"
                 aria-label="Open navigation menu"
@@ -156,14 +162,14 @@ export const Navbar: React.FC = () => {
               <Link
                 href="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="inline-flex text-xs font-semibold text-white bg-[#4364EF] hover:bg-[#3252DB] px-3.5 py-2 rounded-md min-h-[38px] items-center justify-center shadow-brand-button"
+                className="inline-flex text-xs font-semibold text-white bg-[#3047D5] hover:bg-[#2538B0] px-3.5 py-2 rounded-md min-h-[38px] items-center justify-center shadow-brand-button"
               >
                 Talk
               </Link>
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}
-                className="inline-flex items-center justify-center p-2 rounded-md text-[#10172A] hover:bg-[#F7F8FC] border border-[#C5CCDC] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4364EF]"
+                className="inline-flex items-center justify-center p-2 rounded-md text-[#10172A] hover:bg-[#F7F8FC] border border-[#C5CCDC] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3047D5]"
                 aria-label="Close navigation menu"
               >
                 <X className="h-5 w-5" />
@@ -174,12 +180,15 @@ export const Navbar: React.FC = () => {
           {/* Scrollable Navigation Body */}
           <div className="flex-1 overflow-y-auto px-6 py-6 pb-[max(2rem,env(safe-area-inset-bottom,0px))] flex flex-col justify-between">
             <div className="flex flex-col space-y-2">
-              <span className="text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-[#4364EF] px-1 pb-1">
+              <span className="text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-[#3047D5] px-1 pb-1">
                 MENU NAVIGATION
               </span>
               
               {navItems.map((item) => {
-                const isActive = pathname === item.href;
+                const isActive =
+                  pathname === item.href ||
+                  (item.href !== "/" && pathname.startsWith(item.href + "/"));
+
                 return (
                   <Link
                     key={item.href}
@@ -188,7 +197,7 @@ export const Navbar: React.FC = () => {
                     className={cn(
                       "flex items-center justify-between px-4 py-3 min-h-[46px] text-base rounded-lg transition-all duration-150 active:scale-[0.99]",
                       isActive
-                        ? "bg-[#F7F8FC] text-[#4364EF] font-semibold border border-[#4364EF]/30"
+                        ? "bg-[#F7F8FC] text-[#3047D5] font-semibold border border-[#3047D5]/30"
                         : "text-[#10172A] hover:bg-[#F7F8FC] font-medium border border-[#C5CCDC] bg-white"
                     )}
                   >
@@ -198,7 +207,7 @@ export const Navbar: React.FC = () => {
                     <ArrowRight
                       className={cn(
                         "h-4 w-4 transition-transform",
-                        isActive ? "text-[#4364EF]" : "text-[#6A7180]"
+                        isActive ? "text-[#3047D5]" : "text-[#6A7180]"
                       )}
                     />
                   </Link>
@@ -210,7 +219,7 @@ export const Navbar: React.FC = () => {
             <div className="mt-8 pt-6 border-t border-[#C5CCDC] flex flex-col gap-4">
               <Link
                 href="/contact"
-                className="group inline-flex items-center justify-center text-sm font-semibold text-white bg-[#4364EF] hover:bg-[#3252DB] px-6 py-3 min-h-[46px] rounded-lg transition-all duration-200 shadow-brand-button"
+                className="group inline-flex items-center justify-center text-sm font-semibold text-white bg-[#3047D5] hover:bg-[#2538B0] px-6 py-3 min-h-[46px] rounded-lg transition-all duration-200 shadow-brand-button"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span>Start a Project</span>
@@ -220,7 +229,7 @@ export const Navbar: React.FC = () => {
               <div className="mt-2 text-xs text-[#6A7180] space-y-1">
                 <p className="font-semibold text-[#10172A]">KreaitX Creative Technology</p>
                 <p>{siteConfig.location.formatted}</p>
-                <p className="text-[#4364EF] font-medium">{siteConfig.contact.email}</p>
+                <p className="text-[#3047D5] font-medium">{siteConfig.contact.email}</p>
               </div>
             </div>
           </div>
