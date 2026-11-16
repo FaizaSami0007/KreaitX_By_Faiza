@@ -43,10 +43,10 @@ export const siteConfig = {
 };
 
 export const navItems: NavItem[] = [
+  { label: "About", href: "/about" },
+  { label: "Approach", href: "/process" },
   { label: "Solutions", href: "/solutions" },
   { label: "Work", href: "/work" },
-  { label: "Approach", href: "/process" },
-  { label: "About", href: "/about" },
   { label: "Why KreaitX", href: "/why-kreaitx" },
   { label: "Leadership", href: "/leadership" },
   { label: "Contact", href: "/contact" }
