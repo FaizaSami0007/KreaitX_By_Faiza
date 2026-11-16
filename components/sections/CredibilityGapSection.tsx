@@ -50,9 +50,9 @@ export const CredibilityGapSection: React.FC = () => {
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-[#C5CCDC]/60 flex items-center gap-2 text-xs font-mono text-[#6A7180]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#10172A]" />
-                    <span>Cost of inaction: Competitor advantage</span>
+                  <div className="mt-6 pt-4 border-t border-[#C5CCDC]/60 flex items-center justify-between text-xs font-mono text-[#6A7180]">
+                    <span>Commercial Risk</span>
+                    <span className="text-[#10172A] font-semibold">Competitor Advantage</span>
                   </div>
                 </div>
               </StaggerItem>
@@ -64,12 +64,12 @@ export const CredibilityGapSection: React.FC = () => {
         <Reveal yOffset={20}>
           <div className="mt-12 sm:mt-16 rounded-xl bg-[#10172A] text-white p-8 sm:p-12 lg:p-14 relative overflow-hidden shadow-sm">
             <div className="relative z-10 max-w-3xl">
-              <span className="text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-[#4364EF] block mb-3">
+              <span className="text-[11px] font-mono font-bold uppercase tracking-[0.2em] text-[#3047D5] block mb-3">
                 Core Principle
               </span>
               <blockquote className="font-display text-2xl sm:text-3xl lg:text-[32px] font-bold tracking-tight leading-snug">
                 &ldquo;More content will not close this gap. <br className="hidden sm:inline" />
-                <span className="text-[#4364EF]">Better evidence will.</span>&rdquo;
+                <span className="text-[#3047D5]">Better evidence will.</span>&rdquo;
               </blockquote>
               <p className="mt-4 text-sm sm:text-base text-[#C5CCDC] font-sans leading-relaxed">
                 Producing endless blog posts, generic social graphics, and superficial videos only dilutes your positioning. High-value clients decide based on verifiable proof of past capability.

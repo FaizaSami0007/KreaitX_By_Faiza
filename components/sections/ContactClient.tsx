@@ -323,12 +323,14 @@ export const ContactClient: React.FC = () => {
 
                     {/* Mode Description Bar */}
                     <div className="p-4 rounded-xl bg-[#F7F8FC] border border-[#C5CCDC] mb-6">
-                      <div className="flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-[#3047D5]" />
+                      <div className="flex items-center justify-between">
                         <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#10172A]">
                           {inquiryType === "consultation" && "Booking 30-Minute Consultation Call"}
                           {inquiryType === "quote" && "Requesting Guaranteed Fixed USD Proposal"}
                           {inquiryType === "audit" && "Requesting Complimentary 6-Area X-Ray Audit"}
+                        </span>
+                        <span className="text-[11px] font-mono text-[#3047D5] font-semibold">
+                          Active Selection
                         </span>
                       </div>
                       <p className="text-xs text-[#6A7180] mt-1 font-sans">

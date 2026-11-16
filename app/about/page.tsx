@@ -197,9 +197,9 @@ export default function AboutPage() {
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-[#C5CCDC]/60 text-xs font-mono text-[#10172A] flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#3047D5]" />
-                  <span>Solved through proof</span>
+                <div className="mt-6 pt-4 border-t border-[#C5CCDC]/60 text-xs font-mono text-[#10172A] flex items-center justify-between">
+                  <span className="text-[#6A7180]">Studio Resolution</span>
+                  <span className="text-[#3047D5] font-semibold">Solved Through Proof</span>
                 </div>
               </div>
             ))}
@@ -208,12 +208,12 @@ export default function AboutPage() {
           {/* Centerpiece Statement Banner */}
           <div className="mt-14 sm:mt-20 rounded-2xl bg-[#10172A] text-white p-8 sm:p-12 lg:p-16">
             <div className="max-w-3xl">
-              <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#4364EF] block mb-3">
+              <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#3047D5] block mb-3">
                 Core Conviction
               </span>
               <blockquote className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-snug">
                 &ldquo;More content will not close this gap. <br className="hidden sm:inline" />
-                <span className="text-[#4364EF]">Better evidence will.</span>&rdquo;
+                <span className="text-[#3047D5]">Better evidence will.</span>&rdquo;
               </blockquote>
               <p className="mt-4 text-sm sm:text-base text-[#C5CCDC] font-sans leading-relaxed">
                 When prospective enterprise clients or investors review your company, they do not want to wade through generic fluff or empty taglines. They want to see undeniable proof of technical capability, customer praise, and real-world outcomes.

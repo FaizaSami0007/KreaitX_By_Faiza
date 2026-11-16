@@ -194,7 +194,7 @@ export default function ProcessPage() {
           <div className="mt-14 p-8 sm:p-12 rounded-2xl bg-[#10172A] text-white">
             <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
               <div className="max-w-2xl space-y-2">
-                <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#4364EF] block">
+                <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#3047D5] block">
                   Complimentary Diagnostic
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-display font-bold tracking-tight">
@@ -208,7 +208,7 @@ export default function ProcessPage() {
               <div className="shrink-0 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
                 <Link
                   href="/contact?type=audit"
-                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-sm font-bold text-white bg-[#4364EF] hover:bg-[#3252DB] transition-colors shadow-brand-button"
+                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-sm font-bold text-white bg-[#3047D5] hover:bg-[#2538B0] transition-colors shadow-brand-button"
                 >
                   <span>Request X-Ray Audit</span>
                   <ArrowRight className="ml-2 h-4 w-4" />

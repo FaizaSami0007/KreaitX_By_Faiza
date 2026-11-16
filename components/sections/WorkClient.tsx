@@ -148,8 +148,7 @@ export const WorkClient: React.FC = () => {
                     {/* Left: Challenge, Strategy, Execution */}
                     <div className="lg:col-span-7 space-y-8">
                       <div>
-                        <h3 className="text-xs font-sans uppercase tracking-wider text-[#3047D5] font-bold mb-2 flex items-center gap-1.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#3047D5]" />
+                        <h3 className="text-xs font-mono uppercase tracking-wider text-[#3047D5] font-bold mb-2">
                           Project Summary
                         </h3>
                         <p className="text-lg text-[#10172A] font-sans font-normal leading-relaxed">

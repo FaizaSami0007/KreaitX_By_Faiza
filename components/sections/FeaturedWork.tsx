@@ -128,13 +128,17 @@ export const FeaturedWork: React.FC = () => {
                       }`}
                     >
                       <div className="relative z-10 space-y-5">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-white text-[#10172A] text-xs font-mono border border-[#C5CCDC]">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#3047D5]" />
-                          <span>Case Study Blueprint // 0{index + 1}</span>
+                        <div className="flex items-center justify-between pb-3 border-b border-[#C5CCDC]">
+                          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#3047D5]">
+                            Execution Blueprint
+                          </span>
+                          <span className="text-xs font-mono text-[#6A7180]">
+                            Client: <strong className="text-[#10172A]">{project.client}</strong>
+                          </span>
                         </div>
 
                         <div className="space-y-3">
-                          <p className="text-xs font-mono uppercase tracking-wider text-[#3047D5] font-bold">
+                          <p className="text-xs font-mono uppercase tracking-wider text-[#10172A] font-bold">
                             Key Deliverables &amp; Craft
                           </p>
                           <ul className="space-y-2.5">
@@ -150,8 +154,8 @@ export const FeaturedWork: React.FC = () => {
                           </ul>
                         </div>
 
-                        <div className="pt-4 border-t border-[#3047D5]/20 flex items-center justify-between text-xs text-[#6A7180]">
-                          <span>Client: <strong className="text-[#10172A]">{project.client}</strong></span>
+                        <div className="pt-3 border-t border-[#C5CCDC]/60 flex items-center justify-between text-xs text-[#6A7180]">
+                          <span className="font-mono text-[11px] text-[#6A7180]">KreaitX Studio Delivery</span>
                           <span className="font-bold text-[#3047D5]">Verified Outcome</span>
                         </div>
                       </div>

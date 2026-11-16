@@ -9,6 +9,7 @@ import { threeStepApproach, xrayAuditAreas } from "@/data/siteData";
 
 export const ApproachSection: React.FC = () => {
   const [activeArea, setActiveArea] = useState<string>(xrayAuditAreas[0]?.id || "substance");
+  const selectedAreaData = xrayAuditAreas.find((a) => a.id === activeArea) || xrayAuditAreas[0];
 
   return (
     <section className="bg-[#F7F8FC] py-20 sm:py-24 lg:py-28 border-b border-[#C5CCDC] text-[#10172A] relative overflow-hidden">
@@ -123,6 +124,31 @@ export const ApproachSection: React.FC = () => {
                 );
               })}
             </div>
+
+            {/* Active Area Diagnostic Assessment Panel */}
+            {selectedAreaData && (
+              <div className="mt-6 p-5 sm:p-6 rounded-xl bg-[#F7F8FC] border border-[#3047D5]/30">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                  <div className="space-y-1">
+                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#3047D5]">
+                      Active Diagnostic Assessment · Area {selectedAreaData.area}
+                    </span>
+                    <h4 className="text-sm sm:text-base font-display font-bold text-[#10172A]">
+                      &ldquo;{selectedAreaData.question}&rdquo;
+                    </h4>
+                    <p className="text-xs sm:text-sm text-[#3A4454] font-sans leading-relaxed max-w-3xl">
+                      {selectedAreaData.businessValue} We audit historical project collateral, testimonials, and verified technical outcomes to eliminate hidden capability loss.
+                    </p>
+                  </div>
+                  <Link
+                    href={`/contact?type=audit&area=${encodeURIComponent(selectedAreaData.area)}`}
+                    className="inline-flex items-center text-xs font-mono font-bold text-[#3047D5] hover:underline shrink-0"
+                  >
+                    <span>Audit This Area →</span>
+                  </Link>
+                </div>
+              </div>
+            )}
 
             {/* Audit Request Banner */}
             <div className="mt-8 pt-8 border-t border-[#C5CCDC] flex flex-col sm:flex-row items-center justify-between gap-4 bg-[#F7F8FC] p-6 rounded-xl">

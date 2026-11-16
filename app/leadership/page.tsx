@@ -179,7 +179,9 @@ export default function LeadershipPage() {
                     <span className="text-xs font-mono font-semibold text-[#6A7180] uppercase tracking-wider">
                       {advisor.location}
                     </span>
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#3047D5]" />
+                    <span className="text-xs font-mono font-bold text-[#3047D5]">
+                      Advisory
+                    </span>
                   </div>
 
                   <h3 className="text-2xl font-display font-bold text-[#10172A] tracking-tight">

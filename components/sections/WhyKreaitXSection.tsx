@@ -91,11 +91,14 @@ export const WhyKreaitXSection: React.FC = () => {
             {/* 5 Situations Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
               {targetAudience.situations.map((sit, idx) => (
-                <div key={sit.title} className="p-4 rounded-xl bg-[#F7F8FC] border border-[#C5CCDC]">
+                <div
+                  key={sit.title}
+                  className="p-4 rounded-xl bg-[#F7F8FC] border border-[#C5CCDC] hover:border-[#3047D5] hover:bg-white hover:shadow-2xs transition-all duration-200 group"
+                >
                   <span className="text-xs font-mono font-bold text-[#3047D5] block mb-1">
                     Situation 0{idx + 1}
                   </span>
-                  <h4 className="text-sm font-display font-bold text-[#10172A] leading-snug">
+                  <h4 className="text-sm font-display font-bold text-[#10172A] leading-snug group-hover:text-[#3047D5] transition-colors">
                     {sit.title}
                   </h4>
                   <p className="mt-2 text-xs text-[#6A7180] font-sans leading-relaxed">
@@ -110,7 +113,7 @@ export const WhyKreaitXSection: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {targetAudience.usWorkingModel.map((model) => (
                   <div key={model.label} className="flex items-start gap-3">
-                    <span className="w-2 h-2 rounded-full bg-[#3047D5] mt-1.5 shrink-0" />
+                    <CheckCircle2 className="h-4 w-4 text-[#3047D5] mt-0.5 shrink-0" />
                     <div>
                       <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#10172A] block">
                         {model.label}

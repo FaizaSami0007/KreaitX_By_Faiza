@@ -101,7 +101,9 @@ export default function WhyKreaitXPage() {
                     <span className="text-sm font-mono font-bold text-[#3047D5]">
                       Differentiator {diff.number}
                     </span>
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#10172A]" />
+                    <span className="text-xs font-mono font-bold text-[#10172A]">
+                      Core Standard
+                    </span>
                   </div>
 
                   <h2 className="text-2xl font-display font-bold text-[#10172A] tracking-tight">
@@ -179,7 +181,7 @@ export default function WhyKreaitXPage() {
             {targetAudience.situations.map((sit, idx) => (
               <div
                 key={sit.title}
-                className="p-6 sm:p-8 rounded-xl bg-white border border-[#C5CCDC] flex flex-col md:flex-row md:items-center justify-between gap-4 shadow-2xs"
+                className="p-6 sm:p-8 rounded-xl bg-white border border-[#C5CCDC] hover:border-[#3047D5] hover:shadow-xs transition-all duration-200 flex flex-col md:flex-row md:items-center justify-between gap-4 shadow-2xs group"
               >
                 <div className="flex items-start gap-4">
                   <span className="text-base font-mono font-bold text-[#3047D5] bg-[#F7F8FC] border border-[#C5CCDC] px-3 py-1 rounded-md shrink-0">
@@ -213,7 +215,7 @@ export default function WhyKreaitXPage() {
         <Container size="default">
           <div className="rounded-2xl bg-[#10172A] text-white p-8 sm:p-12 lg:p-16">
             <div className="max-w-3xl mb-10">
-              <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#4364EF] block mb-2">
+              <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#3047D5] block mb-2">
                 International Delivery
               </span>
               <h2 className="text-3xl sm:text-4xl font-display font-bold tracking-tight">
@@ -227,7 +229,7 @@ export default function WhyKreaitXPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-6 border-t border-white/10">
               {targetAudience.usWorkingModel.map((model) => (
                 <div key={model.label} className="p-5 rounded-xl bg-white/5 border border-white/10">
-                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#4364EF] block mb-1.5">
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#3047D5] block mb-1.5">
                     {model.label}
                   </span>
                   <p className="text-sm text-white/90 font-sans leading-relaxed">

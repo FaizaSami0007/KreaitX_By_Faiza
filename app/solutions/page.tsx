@@ -213,7 +213,7 @@ export default function SolutionsPage() {
         <Container size="default">
           <div className="rounded-2xl bg-[#10172A] text-white p-8 sm:p-12 lg:p-16">
             <div className="max-w-3xl">
-              <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#4364EF] block mb-3">
+              <span className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#3047D5] block mb-3">
                 Commercial Transparency
               </span>
               <h2 className="text-3xl sm:text-4xl font-display font-bold tracking-tight">
@@ -225,7 +225,7 @@ export default function SolutionsPage() {
               <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
                 <Link
                   href="/contact?type=quote"
-                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-sm font-bold text-white bg-[#4364EF] hover:bg-[#3252DB] transition-colors shadow-brand-button"
+                  className="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-sm font-bold text-white bg-[#3047D5] hover:bg-[#2538B0] transition-colors shadow-brand-button"
                 >
                   <span>Request a Fixed USD Proposal</span>
                   <ArrowRight className="ml-2 h-4 w-4" />

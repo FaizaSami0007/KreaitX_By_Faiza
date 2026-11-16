@@ -120,7 +120,9 @@ export const LeadershipSection: React.FC = () => {
                     <span className="text-[11px] font-mono text-[#6A7180] uppercase tracking-wider">
                       {advisor.location}
                     </span>
-                    <span className="w-2 h-2 rounded-full bg-[#3047D5]" />
+                    <span className="text-xs font-mono text-[#3047D5] font-semibold">
+                      Advisory
+                    </span>
                   </div>
 
                   <h4 className="text-lg font-display font-bold text-[#10172A] tracking-tight group-hover:text-[#3047D5] transition-colors">

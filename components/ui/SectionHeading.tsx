@@ -36,7 +36,7 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
         <span
           className={cn(
             "mb-3 text-xs font-mono font-bold uppercase tracking-[0.16em]",
-            eyebrowColor || (isDark ? "text-[#4364EF]" : "text-[#3047D5]")
+            eyebrowColor || "text-[#3047D5]"
           )}
         >
           {eyebrow}
