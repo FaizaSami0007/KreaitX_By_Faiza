@@ -40,10 +40,6 @@ export const WorkClient: React.FC = () => {
         <Container size="default" className="relative z-10 w-full text-center">
           <Reveal yOffset={16}>
             <div className="max-w-3xl mx-auto flex flex-col items-center">
-              <span className="inline-flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#3047D5] px-3.5 py-1.5 rounded-md bg-[#F7F8FC] border border-[#C5CCDC] mb-6 shadow-2xs">
-                <span className="w-2 h-2 rounded-full bg-[#3047D5]" />
-                <span>Portfolio × Selected Case Studies</span>
-              </span>
               <h1 className="font-display text-[clamp(1.75rem,3.5vw,3rem)] font-bold text-[#10172A] tracking-tight leading-[1.08]">
                 Real projects.{" "}
                 <span className="font-display font-bold text-[#3047D5]">

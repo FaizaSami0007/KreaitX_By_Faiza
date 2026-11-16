@@ -198,18 +198,6 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       <section className="relative overflow-hidden bg-white text-[#10172A] py-16 sm:py-24 lg:py-28 border-b border-[#C5CCDC]">
         <Container size="default" className="relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <Reveal yOffset={12}>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-[#F7F8FC] border border-[#C5CCDC]">
-                <span className="font-mono text-xs font-bold text-[#3047D5]">
-                  {service.number}
-                </span>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#3047D5]" />
-                <span className="text-xs font-sans font-bold uppercase tracking-wider text-[#10172A]">
-                  {service.category}
-                </span>
-              </div>
-            </Reveal>
-
             <Reveal delay={0.08} yOffset={16}>
               <h1 className="font-display text-4xl sm:text-6xl lg:text-[64px] font-bold text-[#10172A] tracking-tight leading-[1.08]">
                 {service.title}{" "}
